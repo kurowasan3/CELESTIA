@@ -1,0 +1,108 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  235
+ ],
+ "items": [
+  {
+   "t": "circle",
+   "at": [
+    170,
+    115
+   ],
+   "r": 100.0,
+   "style": "dash"
+  },
+  {
+   "t": "circle",
+   "at": [
+    170,
+    115
+   ],
+   "r": 50.0,
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    70.0,
+    115
+   ],
+   "to": [
+    220.0,
+    115
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    170,
+    115
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    129
+   ],
+   "text": "C",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "ball",
+   "at": [
+    70.0,
+    115
+   ],
+   "r": 8,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    58.0,
+    101
+   ],
+   "text": "A（M）",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "ball",
+   "at": [
+    220.0,
+    115
+   ],
+   "r": 12,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    236.0,
+    99
+   ],
+   "text": "B（2M）",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    105
+   ],
+   "text": "d",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  }
+ ]
+}

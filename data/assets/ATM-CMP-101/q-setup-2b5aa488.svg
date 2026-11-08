@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" width="340" height="220" font-family="'Times New Roman', serif">
+<line x1="30" y1="110" x2="320" y2="110" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<polyline points="30,110 30.56,108.9 31.12,107.84 31.69,106.82 32.25,105.89 32.81,105.05 33.38,104.34 33.94,103.76 34.5,103.34 35.06,103.09 35.62,103 36.19,103.09 36.75,103.34 37.31,103.76 37.88,104.34 38.44,105.05 39,105.89 39.56,106.82 40.12,107.84 40.69,108.9 41.25,110 41.81,111.1 42.38,112.16 42.94,113.18 43.5,114.11 44.06,114.95 44.62,115.66 45.19,116.24 45.75,116.66 46.31,116.91 46.88,117 47.44,116.91 48,116.66 48.56,116.24 49.12,115.66 49.69,114.95 50.25,114.11 50.81,113.18 51.38,112.16 51.94,111.1 52.5,110 53.06,108.9 53.62,107.84 54.19,106.82 54.75,105.89 55.31,105.05 55.88,104.34 56.44,103.76 57,103.34 57.56,103.09 58.12,103 58.69,103.09 59.25,103.34 59.81,103.76 60.38,104.34 60.94,105.05 61.5,105.89 62.06,106.82 62.62,107.84 63.19,108.9 63.75,110 64.31,111.1 64.88,112.16 65.44,113.18 66,114.11 66.56,114.95 67.12,115.66 67.69,116.24 68.25,116.66 68.81,116.91 69.38,117 69.94,116.91 70.5,116.66 71.06,116.24 71.62,115.66 72.19,114.95 72.75,114.11 73.31,113.18 73.88,112.16 74.44,111.1 75,110 75.56,108.9 76.12,107.84 76.69,106.82 77.25,105.89 77.81,105.05 78.38,104.34 78.94,103.76 79.5,103.34 80.06,103.09 80.62,103 81.19,103.09 81.75,103.34 82.31,103.76 82.88,104.34 83.44,105.05 84,105.89 84.56,106.82 85.12,107.84 85.69,108.9 86.25,110 86.81,111.1 87.38,112.16 87.94,113.18 88.5,114.11 89.06,114.95 89.62,115.66 90.19,116.24 90.75,116.66 91.31,116.91 91.88,117 92.44,116.91 93,116.66 93.56,116.24 94.12,115.66 94.69,114.95 95.25,114.11 95.81,113.18 96.38,112.16 96.94,111.1 97.5,110 98.06,108.9 98.62,107.84 99.19,106.82 99.75,105.89 100.31,105.05 100.88,104.34 101.44,103.76 102,103.34 102.56,103.09 103.12,103 103.69,103.09 104.25,103.34 104.81,103.76 105.38,104.34 105.94,105.05 106.5,105.89 107.06,106.82 107.62,107.84 108.19,108.9 108.75,110 109.31,111.1 109.88,112.16 110.44,113.18 111,114.11 111.56,114.95 112.12,115.66 112.69,116.24 113.25,116.66 113.81,116.91 114.38,117 114.94,116.91 115.5,116.66 116.06,116.24 116.62,115.66 117.19,114.95 117.75,114.11 118.31,113.18 118.88,112.16 119.44,111.1 120,110" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<g class="f-ink" data-dir="0" data-len="32">
+<line x1="120" y1="110" x2="142" y2="110" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="152,110 142,114.66 142,105.34" fill="currentColor"/>
+</g>
+<text x="70" y="90" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">λ</text>
+<circle cx="170" cy="110" r="7" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<text x="138" y="134" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">電子 m</text>
+<g class="f-ink" data-dir="50" data-len="110">
+<line x1="170" y1="110" x2="234.28" y2="33.4" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="240.71,25.74 237.85,36.39 230.71,30.4" fill="currentColor"/>
+<text x="248.42" y="16.54" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">λ'</text>
+</g>
+<path d="M204,110 A34,34 0 0 0 191.85,83.95" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="210.78" y="90.98" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">φ</text>
+<g class="f-vel" data-dir="-35" data-len="95">
+<line x1="170" y1="110" x2="239.63" y2="158.75" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="247.82,164.49 236.95,162.57 242.3,154.93" fill="currentColor"/>
+<text x="257.65" y="171.37" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+</g>
+<path d="M206.04,135.24 A44,44 0 0 0 214,110" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="222.45" y="126.54" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">α</text>
+</svg>

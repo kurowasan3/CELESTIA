@@ -1,0 +1,111 @@
+{
+ "id": "WAV-SPD-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "音の速さ・波長・こだま",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "空気中の音の速さを $340\\,\\mathrm{m/s}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "振動数 $425\\,\\mathrm{Hz}$ のおんさが出す音の波長を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "崖に向かって立ち，手をたたいたところ，$2.0\\,\\mathrm s$ 後にこだまが聞こえた．崖までの距離を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "気温が上がり，音の速さが $346\\,\\mathrm{m/s}$ になった．同じおんさを鳴らしたとき，音の振動数を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) のときの音の波長を，有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$0.80\\,\\mathrm m$",
+    "grading": "0.8 [m]"
+   },
+   {
+    "id": "2",
+    "tex": "$340\\,\\mathrm m$",
+    "grading": "340 [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$425\\,\\mathrm{Hz}$（変わらない）",
+    "grading": "425 [Hz]"
+   },
+   {
+    "id": "4",
+    "tex": "$0.81\\,\\mathrm m$",
+    "grading": "0.81 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\lambda=\\dfrac Vf=\\dfrac{340}{425}=0.80\\,\\mathrm m$．\n\n(2) 音は崖まで行って戻るので，往復の距離が $340\\times2.0=680\\,\\mathrm m$．崖までは $\\dfrac{680}2=340\\,\\mathrm m$．\n\n(3) 音の振動数は音源（おんさ）の振動数で決まり，空気の温度にはよらない．$425\\,\\mathrm{Hz}$．\n\n(4) $\\lambda=\\dfrac{346}{425}=0.814\\cdots\\fallingdotseq0.81\\,\\mathrm m$．音速が大きくなった分，波長が長くなる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "音の速さは媒質（空気の温度）で，振動数は音源で決まる．波長はその結果 $\\lambda=\\dfrac Vf$．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [
+  "wave-speed"
+ ],
+ "misconceptions": [
+  "MC-WAVE-SPEED-FREQ"
+ ],
+ "tags": [
+  "音速",
+  "こだま",
+  "波長"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

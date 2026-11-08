@@ -1,0 +1,136 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  230
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    200
+   ],
+   "to": [
+    350,
+    200
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "sine",
+   "from": [
+    40,
+    130
+   ],
+   "to": [
+    340,
+    130
+   ],
+   "amp": 70,
+   "cycles": 0.9,
+   "func": "cos",
+   "style": "thick"
+  },
+  {
+   "t": "ball",
+   "at": [
+    42,
+    52
+   ],
+   "r": 7,
+   "phys": "body:ball"
+  },
+  {
+   "t": "text",
+   "at": [
+    42,
+    32
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 14
+  },
+  {
+   "t": "dot",
+   "at": [
+    206.67,
+    200.0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    206.67,
+    214
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 14
+  },
+  {
+   "t": "dot",
+   "at": [
+    317.78,
+    95.0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    331.78,
+    101.0
+   ],
+   "text": "C",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    60
+   ],
+   "to": [
+    40,
+    200
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    46,
+    130
+   ],
+   "text": "10 m",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    317.78,
+    95.0
+   ],
+   "to": [
+    317.78,
+    200
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    311.78,
+    150
+   ],
+   "text": "7.5 m",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  }
+ ]
+}

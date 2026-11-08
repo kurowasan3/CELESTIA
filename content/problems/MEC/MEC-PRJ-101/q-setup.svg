@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240" font-family="'Times New Roman', serif">
+<line x1="20" y1="220" x2="350" y2="220" stroke="currentColor" stroke-width="2"/>
+<polygon points="40,220 340,220 340,80.11" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6" data-phys="incline"/>
+<line x1="40" y1="220" x2="340" y2="80.11" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<polyline points="155.11,137.8 156.72,137.82 158.32,137.86 159.93,137.94 161.53,138.06 163.14,138.2 164.75,138.38 166.35,138.58 167.96,138.82 169.56,139.1 171.17,139.4 172.78,139.74 174.38,140.1 175.99,140.5 177.59,140.94 179.2,141.4 180.81,141.9 182.41,142.42 184.02,142.98 185.62,143.58 187.23,144.2 188.84,144.86 190.44,145.54 192.05,146.26 193.65,147.02 195.06,147.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" data-phys="trajectory"/>
+<polyline points="155.11,137.8 153.5,137.82 151.9,137.86 150.29,137.94 148.69,138.06 147.08,138.2 145.47,138.38 143.87,138.58 142.26,138.82 140.66,139.1 139.05,139.4 137.44,139.74 135.84,140.1 134.23,140.5 132.63,140.94 131.02,141.4 129.41,141.9 127.81,142.42 126.2,142.98 124.6,143.58 122.99,144.2 121.38,144.86 119.78,145.54 118.17,146.26 116.57,147.02 114.96,147.8 113.35,148.62 111.75,149.46 110.14,150.34 108.54,151.26 106.93,152.2 105.32,153.18 103.72,154.18 102.11,155.22 100.51,156.3 98.9,157.4 97.29,158.54 95.69,159.7 94.08,160.9 92.48,162.14 90.87,163.4 89.26,164.7 87.66,166.02 86.05,167.38 84.45,168.78 82.84,170.2 81.23,171.66 79.63,173.14 78.02,174.66 76.42,176.22 74.81,177.8 73.2,179.42 71.6,181.06 69.99,182.74 68.39,184.46 66.78,186.2 65.17,187.98 63.57,189.78 61.96,191.62 60.36,193.5 58.75,195.4 57.14,197.34 55.54,199.3 53.93,201.3 52.33,203.34 50.72,205.4 49.11,207.5 47.51,209.62 45.9,211.78 44.3,213.98 42.69,216.2 41.08,218.46 40,220" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" data-phys="trajectory"/>
+<circle cx="40" cy="220" r="5" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4" data-phys="body:ball"/>
+<g class="f-vel" data-phys="velocity:v0" data-dir="55" data-len="70">
+<line x1="40" y1="220" x2="74.41" y2="170.85" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="80.15,162.66 78.23,173.53 70.59,168.18" fill="currentColor"/>
+<text x="87.03" y="152.83" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₀</text>
+</g>
+<path d="M74,220 A34,34 0 0 0 70.81,205.63" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="82.96" y="210.48" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">α</text>
+<path d="M90,220 A50,50 0 0 0 68.68,179.04" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="85.34" y="177.72" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<circle cx="195.05" cy="147.7" r="3" fill="currentColor"/>
+<text x="197.05" y="163.7" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<text x="32" y="233" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+</svg>

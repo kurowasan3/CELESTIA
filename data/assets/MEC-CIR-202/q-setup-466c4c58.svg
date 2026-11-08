@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" font-family="'Times New Roman', serif">
+<line x1="100" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="100,20 200,20 200,30 100,30" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="150" y1="30" x2="150" y2="180" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="150" y1="30" x2="271.24" y2="100" stroke="currentColor" stroke-width="1.2"/>
+<polygon points="271.24,100 270.78,98.08 269.4,96.18 267.11,94.31 263.93,92.48 259.88,90.7 255,89 249.32,87.38 242.88,85.86 235.73,84.44 227.93,83.15 219.54,81.98 210.62,80.95 201.24,80.06 191.47,79.33 181.38,78.75 171.05,78.33 160.57,78.08 150,78 139.43,78.08 128.95,78.33 118.62,78.75 108.53,79.33 98.76,80.06 89.38,80.95 80.46,81.98 72.07,83.15 64.27,84.44 57.12,85.86 50.68,87.38 45,89 40.12,90.7 36.07,92.48 32.89,94.31 30.6,96.18 29.22,98.08 28.76,100 29.22,101.92 30.6,103.82 32.89,105.69 36.07,107.52 40.12,109.3 45,111 50.68,112.62 57.12,114.14 64.27,115.56 72.07,116.85 80.46,118.02 89.38,119.05 98.76,119.94 108.53,120.67 118.62,121.25 128.95,121.67 139.43,121.92 150,122 160.57,121.92 171.05,121.67 181.38,121.25 191.47,120.67 201.24,119.94 210.62,119.05 219.54,118.02 227.93,116.85 235.73,115.56 242.88,114.14 249.32,112.62 255,111 259.88,109.3 263.93,107.52 267.11,105.69 269.4,103.82 270.78,101.92" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="271.24" cy="100" r="9" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<text x="271.24" y="81" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+<path d="M150,70 A40,40 0 0 0 184.64,50" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="175" y="73.3" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<text x="220.62" y="55" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">l</text>
+<text x="138" y="42" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+</svg>

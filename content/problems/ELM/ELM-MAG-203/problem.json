@@ -1,0 +1,134 @@
+{
+ "id": "ELM-MAG-203",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "直線電流のそばの長方形コイルが受ける力と磁束",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中の紙面内に，十分に長い直線の導線 P があり，上向きに一定の電流 $I_1$ が流れている．P と同じ平面内に，P に平行な辺の長さ $a$，垂直な辺の長さ $b$ の長方形の1巻きコイル ABCD を，P に近い辺 AB が P から距離 $x$ になるように置き，コイルに一定の電流 $I_2$ を流す．辺 AB の電流は P と同じ向き（上向き）である．電流 $I_1,\\ I_2$ は電源によってつねに一定に保たれ，コイルの自己インダクタンスは無視する．真空の透磁率を $\\mu_0$ とし，必要なら $\\displaystyle\\int\\frac{dx}{x}=\\log x+C$ を用いよ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "辺 AB が P の電流から受ける力の大きさ $F_{\\rm AB}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "コイル全体が受ける力の大きさ $F(x)$ を求め，その向きを答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "コイルを向きを変えずにゆっくりと動かし，$x=d$ から $x=2d$ まで P から遠ざけた．このとき外力がした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "コイルが位置 $x$ にあるとき，P の電流がつくる磁場がコイルを貫く磁束 $\\Phi(x)$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(3) の $W$ を，$I_2$ と $\\Phi(d)$，$\\Phi(2d)$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "鉛直な長い直線導線 P に上向きの電流 I₁。右に距離 x 離れて、縦 a・横 b の長方形コイルがあり、P に近い辺 AB に上向きの電流 I₂ が流れる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F_{\\rm AB}=\\dfrac{\\mu_0I_1I_2a}{2\\pi x}$",
+    "grading": "F_AB：μ_0 I_1 I_2 a/(2π x)"
+   },
+   {
+    "id": "2",
+    "tex": "$F(x)=\\dfrac{\\mu_0I_1I_2ab}{2\\pi x(x+b)}$，P に近づく向き（引力）",
+    "grading": "F：μ_0 I_1 I_2 a b/(2π x(x+b))"
+   },
+   {
+    "id": "3",
+    "tex": "$W=\\dfrac{\\mu_0I_1I_2a}{2\\pi}\\log\\dfrac{2(d+b)}{2d+b}$",
+    "grading": "W：μ_0 I_1 I_2 a/(2π) log(2(d+b)/(2d+b))"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Phi(x)=\\dfrac{\\mu_0I_1a}{2\\pi}\\log\\dfrac{x+b}{x}$",
+    "grading": "Φ：μ_0 I_1 a/(2π) log((x+b)/x)"
+   },
+   {
+    "id": "5",
+    "tex": "$W=I_2\\{\\Phi(d)-\\Phi(2d)\\}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} AB の位置の磁束密度は $\\dfrac{\\mu_0I_1}{2\\pi x}$．$F_{\\rm AB}=I_2\\cdot\\dfrac{\\mu_0I_1}{2\\pi x}\\cdot a$．同じ向きの電流なので P に引かれる．\n\n\\textbf{(2)} 辺 CD（距離 $x+b$）の電流は下向きで，P から遠ざかる向きに $\\dfrac{\\mu_0I_1I_2a}{2\\pi(x+b)}$ の力を受ける．辺 BC と DA は，同じ磁場の中を逆向きに電流が流れるので，受ける力は打ち消し合う．よって\n\\[F(x)=\\frac{\\mu_0I_1I_2a}{2\\pi}\\left(\\frac1x-\\frac1{x+b}\\right)=\\frac{\\mu_0I_1I_2ab}{2\\pi x(x+b)}\\]\n近い辺の力のほうが大きいので，P に近づく向き（引力）．\n\n\\textbf{(3)} ゆっくり動かすので外力は $F(x)$ とつり合い，向きは P から遠ざかる向き．\n\\[W=\\int_d^{2d}F(x)\\,dx=\\frac{\\mu_0I_1I_2a}{2\\pi}\\Bigl[\\log x-\\log(x+b)\\Bigr]_d^{2d}=\\frac{\\mu_0I_1I_2a}{2\\pi}\\log\\frac{2(d+b)}{2d+b}\\]\n\n\\textbf{(4)} 距離 $s$ の位置の幅 $ds$，長さ $a$ の細長い部分を貫く磁束は $\\dfrac{\\mu_0I_1}{2\\pi s}a\\,ds$．$s=x$ から $x+b$ まで足して $\\Phi(x)=\\dfrac{\\mu_0I_1a}{2\\pi}\\log\\dfrac{x+b}{x}$．\n\n\\textbf{(5)} $\\Phi(d)-\\Phi(2d)=\\dfrac{\\mu_0I_1a}{2\\pi}\\left(\\log\\dfrac{d+b}{d}-\\log\\dfrac{2d+b}{2d}\\right)=\\dfrac{\\mu_0I_1a}{2\\pi}\\log\\dfrac{2(d+b)}{2d+b}$ なので $W=I_2\\{\\Phi(d)-\\Phi(2d)\\}$．\n電流が一定のとき，コイルが受ける力は，コイルを貫く磁束が増える向き（ここでは P に近づく向き）にはたらき，その仕事は $I_2\\times$（磁束の変化）になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "向かい合う2辺の力の差が合力．力を距離で積分した仕事は「電流 × 貫く磁束の変化」に等しい．"
+ },
+ "concepts": [
+  "lorentz-force",
+  "work-energy"
+ ],
+ "laws": [
+  "straight-current-field",
+  "current-force"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "直線電流",
+  "電流が受ける力",
+  "磁束",
+  "積分"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

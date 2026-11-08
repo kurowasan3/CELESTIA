@@ -1,0 +1,160 @@
+{
+ "id": "MEC-FRC-103",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-02",
+ "topic": "斜め上に引く力と垂直抗力・最大摩擦力（動かすのに必要な力を最小にする引く角度）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "あらい水平な床の上に質量 $m$ の物体を置き，水平と角 $\\theta$ $(0<\\theta<90^\\circ)$ をなす斜め上向きに大きさ $F$ の力を加えて引く．物体と床の間の静止摩擦係数を $\\mu$，重力加速度の大きさを $g$ とし，物体が床から浮き上がったり回転したりすることはないとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "物体が静止しているとき，物体が床から受ける垂直抗力の大きさ $N$ を $m$，$g$，$F$，$\\theta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$F$ を 0 から少しずつ大きくしていくと，$F=F_0$ を超えたところで物体は動き出した．$F_0$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\mu=0.75$ とする．引く角度 $\\theta$ を変えると $F_0$ も変わる．$F_0$ が最小になるときの $\\tan\\theta$ の値と，$F_0$ の最小値を $m$，$g$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "あらい水平な床の上の質量 m の物体を、水平と角 θ の斜め上向きに力 F で引く",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "動き出す直前に物体にはたらく4力：重力 mg（下）、垂直抗力 N（上、mg より小さい）、引く力 F₀（斜め上）、最大摩擦力 μN（左）",
+   "caption": "動き出す直前の力のつり合い（図は $\\theta=30^\\circ$，$\\mu=0.50$ の場合）．$F$ の鉛直成分のぶん，$N$ は $mg$ より小さい",
+   "physics": {
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 90
+     },
+     {
+      "name": "F",
+      "dir_deg": 30
+     },
+     {
+      "name": "f",
+      "dir_deg": 180
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$N=mg-F\\sin\\theta$",
+    "grading": "N：m g-F sin(θ)"
+   },
+   {
+    "id": "2",
+    "tex": "$F_0=\\dfrac{\\mu mg}{\\cos\\theta+\\mu\\sin\\theta}$",
+    "grading": "F_0：μ m g/(cos(θ)+μ sin(θ))"
+   },
+   {
+    "id": "3",
+    "tex": "$\\tan\\theta=0.75$ のとき最小で，最小値は $\\dfrac35mg=0.60\\,mg$",
+    "grading": "tanθ：3/4 ; F_0の最小値：3m g/5"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "物体には重力 $mg$，引く力 $F$，垂直抗力 $N$，静止摩擦力 $f$ がはたらく．\n\n(1) 鉛直方向のつり合い $N+F\\sin\\theta=mg$ より $N=mg-F\\sin\\theta$．$F$ が物体を少し持ち上げるぶん，垂直抗力は $mg$ より小さい．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(2) 動き出す直前には，静止摩擦力が最大摩擦力 $\\mu N$ に達する．水平方向のつり合い $F_0\\cos\\theta=\\mu N=\\mu(mg-F_0\\sin\\theta)$ より\n$F_0=\\dfrac{\\mu mg}{\\cos\\theta+\\mu\\sin\\theta}$．\n（このとき $N=mg-F_0\\sin\\theta=\\dfrac{mg\\cos\\theta}{\\cos\\theta+\\mu\\sin\\theta}>0$ で，確かに浮き上がらない．）\n\n(3) 分母を合成する．$\\tan\\varphi=\\mu$ となる角 $\\varphi$ を使うと $\\cos\\theta+\\mu\\sin\\theta=\\sqrt{1+\\mu^2}\\cos(\\theta-\\varphi)$．これは $\\theta=\\varphi$ のとき最大値 $\\sqrt{1+\\mu^2}$ をとるので，$F_0$ は $\\tan\\theta=\\mu=0.75$ のとき最小で\n$F_0=\\dfrac{\\mu mg}{\\sqrt{1+\\mu^2}}=\\dfrac{0.75}{1.25}mg=\\dfrac35mg$．\n水平に引く（$F_0=0.75\\,mg$）より，少し上向きに引くほうが小さな力で動かせる．垂直抗力が減って最大摩擦力が小さくなる効果が，水平成分が減る効果より大きいからである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "斜めに引くと垂直抗力が $mg$ より小さくなり，最大摩擦力 $\\mu N$ も小さくなる．動き出す直前は「静止摩擦力 $=\\mu N$」でつり合いの式を立てる．"
+ },
+ "concepts": [
+  "normal-force",
+  "static-friction",
+  "force-decomposition",
+  "equilibrium"
+ ],
+ "laws": [
+  "friction-law",
+  "newton-1st"
+ ],
+ "misconceptions": [
+  "MC-NORMAL-EQ-MG",
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "摩擦",
+  "垂直抗力",
+  "力の分解",
+  "最小値"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

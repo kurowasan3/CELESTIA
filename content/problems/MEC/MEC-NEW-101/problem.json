@@ -1,0 +1,172 @@
+{
+ "id": "MEC-NEW-101",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "運動方程式と慣性（力を取り去った後の運動）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上に静止している質量 $2.0\\,\\mathrm{kg}$ の物体に，水平右向きに大きさ $6.0\\,\\mathrm N$ の一定の力を $4.0\\,\\mathrm s$ 間加え続け，その後，力を取り去った．空気抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "力を加えている間の物体の加速度の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "力を加え始めてから $4.0\\,\\mathrm s$ 後の物体の速さを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "力を取り去ってから $2.0\\,\\mathrm s$ 後の物体の速さを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "ある生徒は「力を取り去ると，物体はしだいに遅くなって止まる」と考えた．この考えの誤りを説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな水平面上の質量 2.0 kg の物体を、水平右向きに 6.0 N の力で引く",
+   "caption": "",
+   "physics": {
+    "forces": [
+     {
+      "name": "F",
+      "dir_deg": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "力を加えている間に物体にはたらく力：重力 mg と垂直抗力 N は同じ大きさでつり合い、水平右向きの力 F だけが残る",
+   "caption": "鉛直方向はつり合い，合力は水平右向きの $F$",
+   "physics": {
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 90
+     },
+     {
+      "name": "F",
+      "dir_deg": 0
+     }
+    ],
+    "netForce": {
+     "dir_deg": 0
+    },
+    "equalLength": [
+     [
+      "force:mg",
+      "force:N"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$3.0\\,\\mathrm{m/s^2}$",
+    "grading": "3 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$12\\,\\mathrm{m/s}$",
+    "grading": "12 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$12\\,\\mathrm{m/s}$",
+    "grading": "12 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "力を取り去った後は，水平方向の力がはたらかない（重力と垂直抗力はつり合う）ので，加速度は 0．物体は慣性によって $12\\,\\mathrm{m/s}$ の等速直線運動を続ける．物体が遅くなるのは摩擦力や空気抵抗がはたらく場合で，「運動を続けるには力が必要」なのではない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(1) 運動方程式 $ma=F$ より $a=\\dfrac{6.0}{2.0}=3.0\\,\\mathrm{m/s^2}$．重力と垂直抗力は鉛直方向でつり合っているので，水平方向の運動には関係しない．\n\n(2) $v=at=3.0\\times4.0=12\\,\\mathrm{m/s}$．\n\n(3) 力を取り去った後は合力が 0 なので加速度も 0．速度は変わらず $12\\,\\mathrm{m/s}$．\n\n(4) 慣性の法則：合力が 0 の物体は，静止し続けるか等速直線運動を続ける．力は「速度を変える（加速度を生む）」原因であって，「速度を保つ」ために必要なものではない．日常で物体が止まるのは，摩擦力などの力がはたらいているからである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "力は速度ではなく加速度を決める（$ma=F$）．合力が 0 なら加速度が 0，つまり速度はそのまま．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "force-concept",
+  "acceleration-concept"
+ ],
+ "laws": [
+  "newton-2nd",
+  "newton-1st"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動方程式",
+  "慣性の法則",
+  "誤概念"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

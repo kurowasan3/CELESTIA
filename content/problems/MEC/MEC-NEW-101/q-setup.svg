@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 170" width="340" height="170" font-family="'Times New Roman', serif">
+<line x1="20" y1="130" x2="320" y2="130" stroke="currentColor" stroke-width="2"/>
+<polygon points="20,130 320,130 320,138 20,138" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(130,130) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-32" y="-44" width="64" height="44" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="130" y="108" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">2.0 kg</text>
+<g class="f-force" data-phys="force:F" data-dir="0" data-len="70">
+<line x1="162" y1="108" x2="222" y2="108" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="232,108 222,112.66 222,103.34" fill="currentColor"/>
+<text x="262" y="108" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">6.0 N</text>
+</g>
+</svg>

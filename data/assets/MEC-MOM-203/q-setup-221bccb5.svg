@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 190" width="340" height="190" font-family="'Times New Roman', serif">
+<line x1="20" y1="170" x2="320" y2="170" stroke="currentColor" stroke-width="2"/>
+<g transform="translate(170,158) rotate(0)" data-phys="body:cart" data-angle="0">
+<rect x="-100" y="-24" width="200" height="24" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-12" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+</g>
+<circle cx="100" cy="164" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="240" cy="164" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g transform="translate(86,134) rotate(0)" data-phys="body:person" data-angle="0">
+<rect x="-11" y="-48" width="22" height="48" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-24" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+</g>
+<g class="f-vel" data-phys="velocity:u" data-dir="0" data-len="50">
+<line x1="106" y1="72" x2="146" y2="72" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="156,72 146,76.66 146,67.34" fill="currentColor"/>
+<text x="176" y="72" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">u</text>
+</g>
+<text x="190" y="54" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">台車に対する速さ</text>
+</svg>

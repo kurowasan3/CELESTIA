@@ -1,0 +1,165 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  200
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    40,
+    70
+   ],
+   "to": [
+    250,
+    70
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    150
+   ],
+   "to": [
+    250,
+    150
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    70
+   ],
+   "to": [
+    40,
+    150
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    146,
+    148
+   ],
+   "w": 12,
+   "h": 76,
+   "phys": "body:piston"
+  },
+  {
+   "t": "spring",
+   "from": [
+    152,
+    110
+   ],
+   "to": [
+    330,
+    110
+   ],
+   "coils": 9,
+   "amp": 8
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     330,
+     60
+    ],
+    [
+     345,
+     60
+    ],
+    [
+     345,
+     160
+    ],
+    [
+     330,
+     160
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "text",
+   "at": [
+    90,
+    110
+   ],
+   "text": "気体",
+   "size": 13,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    240,
+    50
+   ],
+   "text": "真空",
+   "size": 13,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    240,
+    92
+   ],
+   "text": "k",
+   "size": 14,
+   "italic": true,
+   "anchor": "middle"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    90,
+    170
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    90,
+    170
+   ],
+   "dir": 180,
+   "len": 50,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    90,
+    186
+   ],
+   "text": "L",
+   "size": 14,
+   "italic": true,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    160,
+    168
+   ],
+   "text": "S",
+   "size": 14,
+   "italic": true,
+   "anchor": "middle"
+  }
+ ]
+}

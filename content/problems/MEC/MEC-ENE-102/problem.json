@@ -1,0 +1,124 @@
+{
+ "id": "MEC-ENE-102",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "なめらかな曲面上の運動と力学的エネルギー保存（速さは高さだけで決まる）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のような，なめらかな曲面がある．床からの高さ $10\\,\\mathrm m$ の点 A に小球を置き，静かに放した．B は曲面の最下点（床の高さ）で，C は高さ $7.5\\,\\mathrm m$ の点である．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，空気抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小球が B を通過するときの速さを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "小球が C を通過するときの速さを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "小球を質量が2倍の小球にとりかえて同じことをすると，B を通過するときの速さはもとの何倍になるか．"
+     },
+     {
+      "id": "4",
+      "tex": "もとの小球を，A から曲面に沿って下向きに速さ $7.0\\,\\mathrm{m/s}$ で打ち出すと，B を通過するときの速さはいくらか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな曲面。左端の点 A は高さ 10 m、中央の最下点 B は床の高さ、右側の点 C は高さ 7.5 m。A に小球を置く",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$14\\,\\mathrm{m/s}$",
+    "grading": "14 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$7.0\\,\\mathrm{m/s}$",
+    "grading": "7 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$1$ 倍（変わらない）",
+    "grading": "1倍"
+   },
+   {
+    "id": "4",
+    "tex": "$7\\sqrt5\\,\\mathrm{m/s}\\fallingdotseq16\\,\\mathrm{m/s}$",
+    "grading": "7sqrt(5) [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "曲面はなめらかなので，垂直抗力は運動の向きと垂直で仕事をしない．仕事をするのは重力だけなので，力学的エネルギーが保存する：$\\dfrac12mv^2+mgh=$ 一定．\n\n(1) $mg\\times10=\\dfrac12mv_{\\mathrm B}^2$ より $v_{\\mathrm B}=\\sqrt{2\\times9.8\\times10}=\\sqrt{196}=14\\,\\mathrm{m/s}$．\n\n(2) $mg\\times10=\\dfrac12mv_{\\mathrm C}^2+mg\\times7.5$ より $v_{\\mathrm C}=\\sqrt{2\\times9.8\\times2.5}=\\sqrt{49}=7.0\\,\\mathrm{m/s}$．\n\n(3) 式の両辺に $m$ があり約せるので，速さは質量によらない．1倍．（曲面の形にもよらず，高さの差だけで決まる．）\n\n(4) $\\dfrac12m\\times7.0^2+mg\\times10=\\dfrac12mv^2$ より $v^2=49+196=245$，$v=7\\sqrt5\\fallingdotseq16\\,\\mathrm{m/s}$．打ち出す向きは関係しない（運動エネルギーは速さだけで決まる）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "なめらかな面では垂直抗力は仕事をしないので，力学的エネルギーが保存する．速さは高さの差で決まり，質量にも面の形にもよらない．"
+ },
+ "concepts": [
+  "mechanical-energy",
+  "work-energy"
+ ],
+ "laws": [
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力学的エネルギー保存",
+  "曲面"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,175 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  260
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    240,
+    20
+   ],
+   "to": [
+    240,
+    230
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     250,
+     20
+    ],
+    [
+     240,
+     20
+    ],
+    [
+     240,
+     230
+    ],
+    [
+     250,
+     230
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    230
+   ],
+   "to": [
+    240,
+    230
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    140,
+    230
+   ],
+   "to": [
+    240.00000000000003,
+    56.794919243112275
+   ],
+   "style": "thick",
+   "phys": "rod"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    190.0,
+    143.4
+   ],
+   "dir": 270,
+   "len": 50,
+   "style": "force",
+   "phys": "force:Mg",
+   "label": "Mg",
+   "labelPos": "end",
+   "labelOffset": [
+    -14,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    215.0,
+    100.1
+   ],
+   "dir": 270,
+   "len": 50,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg",
+   "labelPos": "end",
+   "labelOffset": [
+    14,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140,
+    230
+   ],
+   "dir": 90,
+   "len": 100,
+   "style": "force",
+   "phys": "force:N",
+   "label": "N",
+   "labelPos": "end",
+   "labelOffset": [
+    0,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140,
+    230
+   ],
+   "dir": 0,
+   "len": 36.08,
+   "style": "force",
+   "phys": "force:f",
+   "label": "f",
+   "labelPos": "end",
+   "labelOffset": [
+    4,
+    10
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    240.0,
+    56.79
+   ],
+   "dir": 180,
+   "len": 36.08,
+   "style": "force",
+   "phys": "force:R",
+   "label": "R",
+   "labelPos": "end",
+   "labelOffset": [
+    0,
+    -6
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    128,
+    240
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    248.00000000000003,
+    72.79491924311228
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  }
+ ]
+}

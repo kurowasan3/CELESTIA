@@ -1,0 +1,126 @@
+{
+ "id": "ATM-BHR-101",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "ボーアの量子条件から水素型イオンのエネルギー準位とスペクトル",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "原子番号 $Z$ の原子核（電荷 $+Ze$）のまわりを，電子（質量 $m$，電荷 $-e$）が1個だけ，原子核を中心とする半径 $r$ の等速円運動（速さ $v$）をしている（水素型原子）．原子核は静止しているとみなす．クーロンの法則の比例定数を $k_0$，プランク定数を $h$ とし，電子の軌道の1周の長さが電子のド・ブロイ波長の $n$ 倍（$n=1,2,3,\\dots$）になる軌道だけが許されるとする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "許される軌道の半径 $r_n$ を，$n$，$h$，$k_0$，$m$，$Z$，$e$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "無限遠を位置エネルギーの基準として，軌道 $n$ にある電子のエネルギー $E_n$ を，$n$，$h$，$k_0$，$m$，$Z$，$e$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "水素原子（$Z=1$）では $E_n=-\\dfrac{13.6}{n^2}\\ \\mathrm{eV}$ となる．電子が $n=3$ から $n=2$ に移るときに出る光の波長は何 m か．$hc=1.24\\times10^{-6}\\ \\mathrm{eV\\cdot m}$ として，有効数字3桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "ヘリウムイオン $\\mathrm{He}^+$（$Z=2$）が出す光のうち，(3) の光とちょうど同じ波長になるものがある．その遷移で，移った先の準位が $n=4$ であるとき，移る前の準位 $n$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "基底状態の $\\mathrm{He}^+$ から電子を取り去るのに必要な最小のエネルギーは何 eV か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$r_n=\\dfrac{n^2h^2}{4\\pi^2k_0mZe^2}$",
+    "grading": "r_n：n^2h^2/(4π^2k_0 m Z e^2)"
+   },
+   {
+    "id": "2",
+    "tex": "$E_n=-\\dfrac{2\\pi^2k_0^2mZ^2e^4}{n^2h^2}$",
+    "grading": "E_n：-2π^2k_0^2 m Z^2e^4/(n^2h^2)"
+   },
+   {
+    "id": "3",
+    "tex": "$6.56\\times10^{-7}\\ \\mathrm m$",
+    "grading": "6.56*10^(-7) [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$n=6$",
+    "grading": "6"
+   },
+   {
+    "id": "5",
+    "tex": "$54.4\\ \\mathrm{eV}$",
+    "grading": "54.4 [eV]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 運動方程式（クーロン力が向心力）と量子条件：\n\\[ m\\frac{v^2}r=\\frac{k_0Ze^2}{r^2},\\qquad 2\\pi r=n\\frac h{mv} \\]\n第2式から $v=\\dfrac{nh}{2\\pi mr}$．第1式 $mv^2r=k_0Ze^2$ に代入して $\\dfrac{n^2h^2}{4\\pi^2mr}=k_0Ze^2$，よって $r_n=\\dfrac{n^2h^2}{4\\pi^2k_0mZe^2}$．\n\n(2) 運動エネルギー $\\dfrac12mv^2=\\dfrac{k_0Ze^2}{2r}$，位置エネルギー $-\\dfrac{k_0Ze^2}r$．和は $E=-\\dfrac{k_0Ze^2}{2r_n}=-\\dfrac{2\\pi^2k_0^2mZ^2e^4}{n^2h^2}$．\n\n(3) $\\Delta E=13.6\\left(\\dfrac14-\\dfrac19\\right)=13.6\\times\\dfrac5{36}\\fallingdotseq1.889\\ \\mathrm{eV}$．$\\lambda=\\dfrac{hc}{\\Delta E}=\\dfrac{1.24\\times10^{-6}}{1.889}\\fallingdotseq6.56\\times10^{-7}\\ \\mathrm m$（赤色，バルマー系列の $\\mathrm H_\\alpha$ 線）．\n\n(4) (2) より $E_n\\propto\\dfrac{Z^2}{n^2}=\\left(\\dfrac Zn\\right)^2$．$\\mathrm{He}^+$ の準位 $n$ は水素の準位 $\\dfrac n2$ と同じエネルギー．水素の $3\\to2$ に対応するのは $\\mathrm{He}^+$ の $6\\to4$．確かめると $\\Delta E=4\\times13.6\\left(\\dfrac1{16}-\\dfrac1{36}\\right)=13.6\\times\\dfrac5{36}$ で一致する．移る前は $n=6$．\n\n(5) $Z^2=4$ 倍：$4\\times13.6=54.4\\ \\mathrm{eV}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "「力のつり合い（円運動）」と「量子条件 $2\\pi r=n\\lambda$」の2式から $r_n$，$E_n$ が決まる．エネルギーは $(Z/n)^2$ に比例する．"
+ },
+ "concepts": [
+  "bohr-model",
+  "matter-wave",
+  "circular-motion",
+  "coulomb-field"
+ ],
+ "laws": [
+  "bohr-levels",
+  "de-broglie",
+  "coulomb-law",
+  "photon-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ボーア模型",
+  "エネルギー準位",
+  "水素型イオン",
+  "スペクトル"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

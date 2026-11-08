@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 250" width="340" height="250" font-family="'Times New Roman', serif">
+<line x1="20" y1="170" x2="320" y2="170" stroke="currentColor" stroke-width="2"/>
+<polygon points="20,170 320,170 320,180 20,180" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(150,170) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-35" y="-44" width="70" height="44" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<g class="f-force" data-phys="force:mg" data-dir="270" data-len="90">
+<line x1="150" y1="148" x2="150" y2="228" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="150,238 145.34,228 154.66,228" fill="currentColor"/>
+<text x="166" y="244" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">mg</text>
+</g>
+<g class="f-force" data-phys="force:N" data-dir="90" data-len="69.84">
+<line x1="150" y1="148" x2="150" y2="88.16" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="150,78.16 154.66,88.16 145.34,88.16" fill="currentColor"/>
+<text x="150" y="66.16" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">N</text>
+</g>
+<g class="f-force" data-phys="force:F" data-dir="30" data-len="40.32">
+<line x1="150" y1="148" x2="176.26" y2="132.84" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="184.92,127.84 178.59,136.88 173.93,128.8" fill="currentColor"/>
+<text x="195.31" y="121.84" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F₀</text>
+</g>
+<g class="f-force" data-phys="force:f" data-dir="180" data-len="34.92">
+<line x1="115" y1="170" x2="90.08" y2="170" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="80.08,170 90.08,165.34 90.08,174.66" fill="currentColor"/>
+<text x="62.08" y="158" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">μN</text>
+</g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 215" width="300" height="215" font-family="'Times New Roman', serif">
+<line x1="20" y1="190" x2="186" y2="190" stroke="currentColor" stroke-width="2"/>
+<polygon points="186,190 186,162 285,162 285,190" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="130" cy="120" r="70" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<line x1="186" y1="162" x2="130" y2="120" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<g class="f-force" data-phys="force:Mg" data-dir="270" data-len="36">
+<line x1="130" y1="120" x2="130" y2="146" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="130,156 125.34,146 134.66,146" fill="currentColor"/>
+<text x="114" y="168" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">Mg</text>
+</g>
+<g class="f-force" data-phys="force:F1" data-dir="0" data-len="48">
+<line x1="130" y1="120" x2="168" y2="120" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="178,120 168,124.66 168,115.34" fill="currentColor"/>
+<text x="196" y="110" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F₁</text>
+</g>
+<g class="f-force" data-phys="force:R" data-dir="143.13" data-len="60">
+<line x1="186" y1="162" x2="146" y2="132" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="138,126 148.8,128.27 143.2,135.73" fill="currentColor"/>
+<text x="169.2" y="134.4" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">R</text>
+</g>
+<text x="118" y="132" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<text x="192" y="174" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">K</text>
+</svg>

@@ -1,0 +1,143 @@
+{
+ "id": "MSY-BSP-101",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "ばねでつながれた2物体の一方に弾丸が撃ち込まれた後の運動",
+ "course": "物理",
+ "level": 3,
+ "minutes": 18,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上で，質量 $M$ の物体 A と質量 $M$ の物体 B を，ばね定数 $k$ の軽いばねでつなぎ，ばねを自然長にして静止させた．質量 $m$ の弾丸を，ばねの軸に沿って左から速さ $v$ で A に撃ち込んだところ，弾丸は瞬間的に A の中で止まった．以後，弾丸と A を一体（質量 $m+M$）として扱う．右向きを正とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "弾丸が止まった直後の A の速さ $u$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "全体の重心の速度 $V_{\\mathrm G}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ばねの縮みの最大値 $x_{\\mathrm m}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "弾丸が止まってから，ばねの縮みが初めて最大になるまでの時間 $t_1$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "その後の運動で，B の速度の最大値 $v_{\\mathrm B}$ と，A（弾丸を含む）の速度の最小値 $v_{\\mathrm A}$ を求めよ．A は左向きに動くことがあるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな水平面上で、ばねでつながれた質量 M の物体 A と B。左から質量 m の弾丸が速さ v で A に向かう",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$u=\\dfrac{mv}{m+M}$",
+    "grading": "u：m v/(m+M)"
+   },
+   {
+    "id": "2",
+    "tex": "$V_{\\mathrm G}=\\dfrac{mv}{m+2M}$",
+    "grading": "V_G：m v/(m+2M)"
+   },
+   {
+    "id": "3",
+    "tex": "$x_{\\mathrm m}=mv\\sqrt{\\dfrac{M}{k(m+M)(m+2M)}}$",
+    "grading": "x_m：m v sqrt(M/(k(m+M)(m+2M)))"
+   },
+   {
+    "id": "4",
+    "tex": "$t_1=\\dfrac{\\pi}{2}\\sqrt{\\dfrac{M(m+M)}{k(m+2M)}}$",
+    "grading": "t_1：(π/2)sqrt(M(m+M)/(k(m+2M)))"
+   },
+   {
+    "id": "5",
+    "tex": "$v_{\\mathrm B}=\\dfrac{2mv}{m+2M}$，$v_{\\mathrm A}=\\dfrac{m^2v}{(m+M)(m+2M)}$．$v_{\\mathrm A}>0$ なので A は左向きには動かない",
+    "grading": "v_B：2m v/(m+2M) ; v_A：m^2 v/((m+M)(m+2M))"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 撃ち込みは瞬間的で，その間ばねはまだ縮んでいない．弾丸と A について運動量保存：$mv=(m+M)u$ より $u=\\dfrac{mv}{m+M}$．\n\n(2) その後は全体に水平方向の外力がないので，全運動量 $mv$ は一定．$V_{\\mathrm G}=\\dfrac{mv}{m+2M}$ で，重心は等速度運動をする．\n\n(3) 縮みが最大のとき，A と B の速度は等しく（相対速度 $0$），ともに $V_{\\mathrm G}$．撃ち込み後の力学的エネルギー保存：\\[\\frac12(m+M)u^2=\\frac12(m+2M)V_{\\mathrm G}^2+\\frac12kx_{\\mathrm m}^2\\] \\[\\frac12kx_{\\mathrm m}^2=\\frac{m^2v^2}{2}\\left(\\frac1{m+M}-\\frac1{m+2M}\\right)=\\frac{m^2v^2M}{2(m+M)(m+2M)}\\] よって $x_{\\mathrm m}=mv\\sqrt{\\dfrac{M}{k(m+M)(m+2M)}}$．\n\n(4) 重心とともに動く立場では，A と B は重心のまわりで単振動する．A の重心からの変位を $X_{\\mathrm A}$ とすると，ばねの伸びの変化 $X_{\\mathrm B}-X_{\\mathrm A}=-\\dfrac{m+2M}{M}X_{\\mathrm A}$ なので，A の運動方程式は \\[(m+M)\\ddot X_{\\mathrm A}=-k\\frac{m+2M}{M}X_{\\mathrm A}\\] 角振動数 $\\omega=\\sqrt{\\dfrac{k(m+2M)}{M(m+M)}}$．自然長から最大の縮みまでは $\\dfrac14$ 周期なので \\[t_1=\\frac{\\pi}{2\\omega}=\\frac{\\pi}{2}\\sqrt{\\frac{M(m+M)}{k(m+2M)}}\\]\n\n(5) 重心から見ると，A ははじめ速度 $u-V_{\\mathrm G}$，B は $-V_{\\mathrm G}$ で，それぞれ単振動するので速度は $\\pm$ その値の間を変化する．ばねが自然長に戻った瞬間（$t=2t_1$）に \\[v_{\\mathrm B}=V_{\\mathrm G}+V_{\\mathrm G}=\\frac{2mv}{m+2M},\\qquad v_{\\mathrm A}=V_{\\mathrm G}-(u-V_{\\mathrm G})=2V_{\\mathrm G}-u\\] \\[v_{\\mathrm A}=\\frac{2mv}{m+2M}-\\frac{mv}{m+M}=\\frac{m^2v}{(m+M)(m+2M)}>0\\] よって A は左向きには動かない（ばねが自然長に戻るたびに A は最も遅く，B は最も速くなる）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "衝突の瞬間は運動量保存．その後は「重心の等速度運動」と「重心から見た単振動」に分けて考える．縮み最大は相対速度 0．"
+ },
+ "concepts": [
+  "momentum-conservation",
+  "simple-harmonic-motion",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "momentum-conservation",
+  "energy-conservation",
+  "hooke-law",
+  "shm-period",
+  "center-of-mass"
+ ],
+ "misconceptions": [
+  "MC-KE-ALWAYS-CONSERVED"
+ ],
+ "tags": [
+  "運動量保存",
+  "重心",
+  "単振動",
+  "2物体",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

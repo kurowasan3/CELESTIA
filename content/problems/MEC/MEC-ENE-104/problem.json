@@ -1,0 +1,126 @@
+{
+ "id": "MEC-ENE-104",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "机の端から滑り落ちる一様な鎖（重心で考える位置エネルギーと，変化する摩擦力の仕事）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $L$，質量 $m$ の一様な鎖を，水平な机の上に机の縁と垂直に置き，長さ $a$ の部分を縁から鉛直に垂らして，手で押さえて静止させる．手をはなすと，鎖は縁に沿って滑らかに向きを変えながら滑り落ちていく．机の縁はなめらかで，縁で向きを変えることによる力学的エネルギーの損失はなく，鎖のどの部分も同じ速さで動くとする．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "机の上面がなめらかなとき，鎖の上端が机の縁を離れる瞬間の鎖の速さ $v_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "机の上面があらく，鎖と机の間の静止摩擦係数が $\\mu$ のとき，手をはなすと鎖が滑り出すための $a$ の条件を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の条件のもとで鎖が滑り出した．鎖と机の間の動摩擦係数を $\\mu'$ とする．垂れた部分の長さが $a$ から $L$ になるまでに，動摩擦力が鎖にした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の場合に，鎖の上端が机の縁を離れる瞬間の鎖の速さ $v_2$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平な机の上に置いた長さ L の一様な鎖。机の上に長さ L−a、縁から鉛直に長さ a が垂れている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_1=\\sqrt{\\dfrac{g(L^2-a^2)}{L}}$",
+    "grading": "v_1：sqrt((L^2-a^2)g/L)"
+   },
+   {
+    "id": "2",
+    "tex": "$a>\\dfrac{\\mu L}{1+\\mu}$"
+   },
+   {
+    "id": "3",
+    "tex": "$W=-\\dfrac{\\mu'mg(L-a)^2}{2L}$"
+   },
+   {
+    "id": "4",
+    "tex": "$v_2=\\sqrt{\\dfrac{g\\{(L^2-a^2)-\\mu'(L-a)^2\\}}{L}}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　鎖の各部分は形を変えながら動くが，位置エネルギーは「各部分の質量 × $g$ × その部分の重心の高さ」の和で求められる．机の上面を高さの基準にする．単位長さあたりの質量は $\\dfrac mL$．\n\n\\textbf{(1)}　垂れた部分の長さが $x$ のとき，その部分の質量は $\\dfrac mLx$，重心は上面から $\\dfrac x2$ 下にあるので，位置エネルギーは\n\\[ U(x)=-\\frac mLx\\cdot g\\cdot\\frac x2=-\\frac{mg}{2L}x^2 \\]\n（机の上の部分は 0）．はじめ $x=a$，縁を離れる瞬間 $x=L$．机も縁もなめらかなので力学的エネルギーが保存する：\n\\[ -\\frac{mga^2}{2L}=\\frac12mv_1^2-\\frac{mgL^2}{2L}\\quad\\Longrightarrow\\quad v_1=\\boldsymbol{\\sqrt{\\frac{g(L^2-a^2)}{L}}}. \\]\n\n\\textbf{(2)}　静止していられるのは，垂れた部分の重力 $\\dfrac mLag$ を，机の上の部分にはたらく静止摩擦力で支えられるとき．机の上の部分の垂直抗力は $\\dfrac mL(L-a)g$ なので，最大摩擦力は $\\mu\\dfrac mL(L-a)g$．滑り出す条件は\n\\[ \\frac mLag>\\mu\\frac mL(L-a)g\\quad\\Longleftrightarrow\\quad\\boldsymbol{a>\\frac{\\mu L}{1+\\mu}}. \\]\n\n\\textbf{(3)}　垂れた部分が $x$ のとき，動摩擦力の大きさは $\\mu'\\dfrac mL(L-x)g$ で，$x$ とともに小さくなる．鎖が $\\Delta x$ 進む間の仕事は $-\\mu'\\dfrac{mg}{L}(L-x)\\Delta x$．これを $x=a$ から $L$ まで足し合わせる（$F$-$x$ グラフの三角形の面積）：\n\\[ W=-\\frac{\\mu'mg}{L}\\int_a^L(L-x)\\,dx=\\boldsymbol{-\\frac{\\mu'mg(L-a)^2}{2L}}. \\]\n（摩擦力は $x=a$ で $\\mu'\\frac mL(L-a)g$，$x=L$ で 0 と直線的に減るので，平均の大きさ $\\frac12\\mu'\\frac mL(L-a)g$ に距離 $L-a$ を掛けても同じ．）\n\n\\textbf{(4)}　力学的エネルギーの変化 ＝ 動摩擦力の仕事：\n\\[ \\Bigl(\\frac12mv_2^2-\\frac{mgL}{2}\\Bigr)-\\Bigl(-\\frac{mga^2}{2L}\\Bigr)=-\\frac{\\mu'mg(L-a)^2}{2L} \\]\nより\n\\[ v_2=\\boldsymbol{\\sqrt{\\frac{g\\{(L^2-a^2)-\\mu'(L-a)^2\\}}{L}}}. \\]\n（$\\mu'<\\mu$ と (2) の条件 $a>\\mu(L-a)$ から $L^2-a^2=(L-a)(L+a)>\\mu'(L-a)^2$ となり，根号の中は正．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "形の変わる物体の位置エネルギーは，部分ごとの重心の高さで計算する．大きさが変わる摩擦力の仕事は，力と移動距離のグラフの面積で求める．"
+ },
+ "concepts": [
+  "mechanical-energy",
+  "work-energy",
+  "static-friction"
+ ],
+ "laws": [
+  "energy-conservation",
+  "work-energy-theorem",
+  "friction-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力学的エネルギー",
+  "鎖",
+  "重心",
+  "変化する力の仕事",
+  "摩擦"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

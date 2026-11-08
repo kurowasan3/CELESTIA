@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 220" width="390" height="220" font-family="'Times New Roman', serif">
+<g data-phys="battery:E">
+<line x1="50" y1="190" x2="50" y2="125" stroke="currentColor" stroke-width="1.6"/>
+<line x1="50" y1="115" x2="50" y2="50" stroke="currentColor" stroke-width="1.6"/>
+<line x1="64" y1="115" x2="36" y2="115" stroke="currentColor" stroke-width="1.6"/>
+<line x1="57" y1="125" x2="43" y2="125" stroke="currentColor" stroke-width="3"/>
+<text x="70" y="120" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">E</text>
+</g>
+<polyline points="50,50 90,50" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="90" cy="50" r="3" fill="currentColor"/>
+<line x1="90" y1="50" x2="124" y2="34" stroke="currentColor" stroke-width="2"/>
+<circle cx="130" cy="50" r="3" fill="currentColor"/>
+<text x="108" y="22" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">S</text>
+<polyline points="130,50 150,50" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:R₁">
+<line x1="150" y1="50" x2="167" y2="50" stroke="currentColor" stroke-width="1.6"/>
+<line x1="213" y1="50" x2="230" y2="50" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="167,57 213,57 213,43 167,43" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="190" y="32" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">R₁</text>
+</g>
+<polyline points="230,50 330,50" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="260" cy="50" r="3" fill="currentColor"/>
+<polyline points="260,50 260,90" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<path d="M260,90 A7.5,7.5 0 0 1 260,105" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<path d="M260,105 A7.5,7.5 0 0 1 260,120" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<path d="M260,120 A7.5,7.5 0 0 1 260,135" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<path d="M260,135 A7.5,7.5 0 0 1 260,150" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<polyline points="260,150 260,190" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="250" y="120" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+<g data-phys="resistor:R₂">
+<line x1="330" y1="50" x2="330" y2="97" stroke="currentColor" stroke-width="1.6"/>
+<line x1="330" y1="143" x2="330" y2="190" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="323,97 323,143 337,143 337,97" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="344" y="120" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">R₂</text>
+</g>
+<polyline points="50,190 330,190" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="260" cy="190" r="3" fill="currentColor"/>
+</svg>

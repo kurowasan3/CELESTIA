@@ -1,0 +1,78 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  260,
+  200
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     70,
+     20
+    ],
+    [
+     190,
+     20
+    ],
+    [
+     190,
+     30
+    ],
+    [
+     70,
+     30
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    70,
+    30
+   ],
+   "to": [
+    190,
+    30
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "spring",
+   "from": [
+    130,
+    30
+   ],
+   "to": [
+    130,
+    125
+   ],
+   "coils": 8,
+   "amp": 8
+  },
+  {
+   "t": "block",
+   "at": [
+    130,
+    160
+   ],
+   "w": 44,
+   "h": 35,
+   "label": "",
+   "phys": "body:block"
+  },
+  {
+   "t": "text",
+   "at": [
+    160,
+    143
+   ],
+   "text": "0.50 kg",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  }
+ ]
+}

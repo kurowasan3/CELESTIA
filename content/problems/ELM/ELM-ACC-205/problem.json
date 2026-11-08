@@ -1,0 +1,133 @@
+{
+ "id": "ELM-ACC-205",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "磁場中で回転するコイル（交流発電機）とトルク・仕事",
+ "course": "物理",
+ "level": 3,
+ "minutes": 18,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "磁束密度 $B$ の一様な磁場の中で，面積 $S$，巻数 $N$ のコイルを，磁場に垂直な軸のまわりに一定の角速度 $\\omega$ で回転させる．時刻 $t=0$ にコイルの面は磁場に垂直であった．コイルの両端を（スリップリングとブラシを通して）抵抗値 $R$ の抵抗につなぐ．コイルの抵抗と自己インダクタンス，摩擦は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "時刻 $t$ にコイル1巻きを貫く磁束 $\\Phi(t)$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "時刻 $t$ の誘導起電力 $V(t)$ を求めよ（$t$ が小さいとき正になる向きを正とする）．"
+     },
+     {
+      "id": "3",
+      "tex": "抵抗で消費される電力の時間平均 $\\overline P$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "コイルを一定の角速度で回し続けるために加える外力のモーメントの大きさ $\\tau(t)$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "コイルが1回転する間に外力がする仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "角速度を $2$ 倍にすると，$\\overline P$ は何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\Phi(t)=BS\\cos\\omega t$",
+    "grading": "Φ：B S cos(ω t)"
+   },
+   {
+    "id": "2",
+    "tex": "$V(t)=NBS\\omega\\sin\\omega t$",
+    "grading": "V：N B S ω sin(ω t)"
+   },
+   {
+    "id": "3",
+    "tex": "$\\overline P=\\dfrac{(NBS\\omega)^2}{2R}$",
+    "grading": "P：(N B S ω)^2/(2R)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\tau(t)=\\dfrac{N^2B^2S^2\\omega}{R}\\sin^2\\omega t$",
+    "grading": "τ：N^2 B^2 S^2 ω sin(ω t)^2/R"
+   },
+   {
+    "id": "5",
+    "tex": "$W=\\dfrac{\\pi N^2B^2S^2\\omega}{R}$",
+    "grading": "W：π N^2 B^2 S^2 ω/R"
+   },
+   {
+    "id": "6",
+    "tex": "$4$ 倍",
+    "grading": "4倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} コイルの面の法線と磁場のなす角が $\\omega t$ なので $\\Phi=BS\\cos\\omega t$．\n\n\\textbf{(2)} $V=-N\\dfrac{d\\Phi}{dt}=NBS\\omega\\sin\\omega t$．最大値 $NBS\\omega$ の正弦波交流．\n\n\\textbf{(3)} $P(t)=\\dfrac{V^2}{R}=\\dfrac{(NBS\\omega)^2}{R}\\sin^2\\omega t$．$\\sin^2\\omega t=\\dfrac{1-\\cos2\\omega t}{2}$ の平均は $\\dfrac12$ なので $\\overline P=\\dfrac{(NBS\\omega)^2}{2R}$（実効値 $\\dfrac{NBS\\omega}{\\sqrt2}$ で $\\dfrac{V_{\\rm e}^2}{R}$ と同じ）．\n\n\\textbf{(4)} 誘導電流が流れるコイルは，磁場から回転を妨げる向きの力のモーメントを受ける．一定の角速度を保つ外力のモーメント $\\tau$ の仕事率 $\\tau\\omega$ は，抵抗の消費電力に等しい（エネルギー保存）：$\\tau\\omega=P(t)$ より\n\\[\\tau(t)=\\frac{N^2B^2S^2\\omega}{R}\\sin^2\\omega t\\]\n（長方形コイルの辺が受ける力 $NIBl$ から直接求めても同じ結果になる．）\n\n\\textbf{(5)} $W=\\overline P\\times\\dfrac{2\\pi}\\omega=\\dfrac{\\pi N^2B^2S^2\\omega}{R}$．\n\n\\textbf{(6)} $\\overline P\\propto\\omega^2$ なので $4$ 倍．起電力の最大値が $2$ 倍になるため．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$\\Phi=BS\\cos\\omega t$ を時間で微分すると正弦波の起電力．外力の仕事率＝電気の消費電力で，力のモーメントが求まる．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "ac-circuit",
+  "electric-power",
+  "torque"
+ ],
+ "laws": [
+  "faraday-law",
+  "rms-value",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流の発生",
+  "発電機",
+  "回転するコイル",
+  "エネルギー保存"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

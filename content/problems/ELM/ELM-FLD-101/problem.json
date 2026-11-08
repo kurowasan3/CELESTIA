@@ -1,0 +1,109 @@
+{
+ "id": "ELM-FLD-101",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-01",
+ "topic": "クーロンの法則と点電荷のつくる電場（数値）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 5,
+ "format": [
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中で，電気量 $q_1=+2.0\\times10^{-6}\\,\\mathrm C$ の点電荷 A と，電気量 $q_2=-3.0\\times10^{-6}\\,\\mathrm C$ の点電荷 B を，距離 $0.30\\,\\mathrm m$ だけ離して固定した．クーロンの法則の比例定数を $k=9.0\\times10^{9}\\,\\mathrm{N\\cdot m^2/C^2}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A が B から受ける静電気力の大きさ $F$ は何 N か．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) の力は引力か，斥力か．"
+     },
+     {
+      "id": "3",
+      "tex": "A が B の位置につくる電場の強さ $E$ は何 N/C か．また，その向きを答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "A，B の電気量はそのままで，距離を $3$ 倍の $0.90\\,\\mathrm m$ にした．静電気力の大きさははじめの何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F=0.60\\,\\mathrm N$",
+    "grading": "F：0.6 [N]"
+   },
+   {
+    "id": "2",
+    "tex": "引力"
+   },
+   {
+    "id": "3",
+    "tex": "$E=2.0\\times10^{5}\\,\\mathrm{N/C}$，向きは A から B へ向かう向き（A から遠ざかる向き）",
+    "grading": "E：2*10^5"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac19$ 倍",
+    "grading": "(1/9)倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) クーロンの法則より \\[F=k\\frac{|q_1||q_2|}{r^2}=9.0\\times10^{9}\\times\\frac{(2.0\\times10^{-6})(3.0\\times10^{-6})}{(0.30)^2}=0.60\\,\\mathrm N\\]\n\n(2) 正と負の電荷なので，たがいに引き合う（引力）．\n\n(3) 点電荷 $q_1$ が距離 $r$ の点につくる電場は $E=k\\dfrac{q_1}{r^2}=9.0\\times10^{9}\\times\\dfrac{2.0\\times10^{-6}}{(0.30)^2}=2.0\\times10^{5}\\,\\mathrm{N/C}$．$q_1>0$ なので向きは A から遠ざかる向き，つまり A から B へ向かう向き．\n\n　確かめ：B（$q_2<0$）が受ける力は $q_2E$ で，大きさ $3.0\\times10^{-6}\\times2.0\\times10^{5}=0.60\\,\\mathrm N$（(1) と同じ．作用・反作用），向きは電場と逆の A 向き（引力）．\n\n(4) 力は距離の2乗に反比例するので $\\dfrac1{3^2}=\\dfrac19$ 倍．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "静電気力は $F=k\\dfrac{|q_1q_2|}{r^2}$．電場は「$+1\\,\\mathrm C$ が受ける力」で，正電荷から湧き出す向き．"
+ },
+ "concepts": [
+  "coulomb-field"
+ ],
+ "laws": [
+  "coulomb-law",
+  "point-charge-field"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "クーロンの法則",
+  "電場",
+  "点電荷"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

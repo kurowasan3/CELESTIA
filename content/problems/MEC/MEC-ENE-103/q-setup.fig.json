@@ -1,0 +1,196 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  200
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    30,
+    150
+   ],
+   "to": [
+    330,
+    150
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     22,
+     40
+    ],
+    [
+     30,
+     40
+    ],
+    [
+     30,
+     158
+    ],
+    [
+     22,
+     158
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     330,
+     40
+    ],
+    [
+     338,
+     40
+    ],
+    [
+     338,
+     158
+    ],
+    [
+     330,
+     158
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "spring",
+   "from": [
+    30,
+    132
+   ],
+   "to": [
+    70,
+    132
+   ],
+   "coils": 7,
+   "amp": 7
+  },
+  {
+   "t": "block",
+   "at": [
+    88,
+    150
+   ],
+   "w": 36,
+   "h": 36,
+   "label": "",
+   "phys": "body:block"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     170,
+     150
+    ],
+    [
+     250,
+     150
+    ],
+    [
+     250,
+     158
+    ],
+    [
+     170,
+     158
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    150
+   ],
+   "to": [
+    250,
+    150
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    170
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 14
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    170
+   ],
+   "text": "Q",
+   "italic": false,
+   "size": 14
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    138
+   ],
+   "text": "0.30 m",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "spring",
+   "from": [
+    270,
+    132
+   ],
+   "to": [
+    330,
+    132
+   ],
+   "coils": 8,
+   "amp": 7
+  },
+  {
+   "t": "text",
+   "at": [
+    50,
+    112
+   ],
+   "text": "ばね1",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    112
+   ],
+   "text": "ばね2",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    88,
+    186
+   ],
+   "text": "0.50 kg",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

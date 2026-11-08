@@ -1,0 +1,133 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  240
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    200
+   ],
+   "to": [
+    320,
+    200
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     40,
+     200
+    ],
+    [
+     300,
+     200
+    ],
+    [
+     300,
+     49.89
+    ]
+   ],
+   "style": "hatch",
+   "phys": "incline"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    200
+   ],
+   "to": [
+    300,
+    49.89
+   ],
+   "style": "ground",
+   "phys": "surface"
+  },
+  {
+   "t": "arc",
+   "at": [
+    40,
+    200
+   ],
+   "r": 34,
+   "from": 0,
+   "to": 30,
+   "label": "θ",
+   "labelGap": 12
+  },
+  {
+   "t": "block",
+   "at": [
+    170,
+    124.94
+   ],
+   "w": 44,
+   "h": 30,
+   "angle": 30,
+   "label": "",
+   "phys": "body:block"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    162.5,
+    111.95
+   ],
+   "dir": 270,
+   "len": 62,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg",
+   "labelOffset": [
+    14,
+    -4
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    162.5,
+    111.95
+   ],
+   "dir": 120,
+   "len": 86.59,
+   "style": "force",
+   "phys": "force:N",
+   "label": "N"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    162.5,
+    111.95
+   ],
+   "dir": 0,
+   "len": 65.79,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F₂"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    162.5,
+    111.95
+   ],
+   "dir": 210,
+   "len": 25.98,
+   "style": "force",
+   "phys": "force:f",
+   "label": "μN",
+   "labelOffset": [
+    -8,
+    4
+   ]
+  }
+ ]
+}

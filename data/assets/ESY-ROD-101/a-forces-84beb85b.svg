@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260" font-family="'Times New Roman', serif">
+<line x1="60" y1="50" x2="340" y2="211.66" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<line x1="340" y1="211.66" x2="60" y2="211.66" stroke="currentColor" stroke-width="2"/>
+<line x1="60" y1="211.66" x2="60" y2="50" stroke="currentColor" stroke-width="1.2"/>
+<path d="M305.36,191.66 A40,40 0 0 0 300,211.66" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="290.74" y="198.46" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<circle cx="204.5" cy="123.03" r="9" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-force" data-phys="force:mg" data-dir="270" data-len="70">
+<line x1="204.5" y1="123.03" x2="204.5" y2="183.03" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="204.5,193.03 199.84,183.03 209.16,183.03" fill="currentColor"/>
+<text x="204.5" y="205.03" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">mg</text>
+</g>
+<g class="f-force" data-phys="force:N" data-dir="60" data-len="80.83">
+<line x1="204.5" y1="123.03" x2="239.91" y2="61.69" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="244.91,53.03 243.95,64.02 235.88,59.36" fill="currentColor"/>
+<text x="250.91" y="42.64" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">N</text>
+</g>
+<g class="f-force" data-phys="force:F" data-dir="180" data-len="40.41">
+<line x1="204.5" y1="123.03" x2="174.09" y2="123.03" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="164.09,123.03 174.09,118.37 174.09,127.69" fill="currentColor"/>
+<text x="148.09" y="123.03" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F</text>
+</g>
+</svg>

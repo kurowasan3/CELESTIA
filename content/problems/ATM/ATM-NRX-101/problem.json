@@ -1,0 +1,115 @@
+{
+ "id": "ATM-NRX-101",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "α崩壊・β崩壊の回数と核反応式",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "原子核の崩壊や核反応の前後で，質量数の和と原子番号（電荷）の和は保存される．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "α崩壊を1回すると，原子核の質量数 $A$ と原子番号 $Z$ はそれぞれいくら変化するか．"
+     },
+     {
+      "id": "2",
+      "tex": "β崩壊（$\\beta^-$崩壊）を1回すると，$A$ と $Z$ はそれぞれいくら変化するか．"
+     },
+     {
+      "id": "3",
+      "tex": "$^{238}_{\\ 92}\\mathrm U$ は，α崩壊とβ崩壊をくり返して安定な $^{206}_{\\ 82}\\mathrm{Pb}$ になる．α崩壊は何回起こるか．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) で，β崩壊は何回起こるか．"
+     },
+     {
+      "id": "5",
+      "tex": "核反応 $^{14}_{\\ 7}\\mathrm N+{}^4_2\\mathrm{He}\\to{}^{17}_{\\ 8}\\mathrm O+\\mathrm X$ の粒子 X は何か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$A$ は $4$ 減り，$Z$ は $2$ 減る",
+    "grading": "ΔA：-4 ; ΔZ：-2"
+   },
+   {
+    "id": "2",
+    "tex": "$A$ は変わらず，$Z$ は $1$ 増える",
+    "grading": "ΔA：0 ; ΔZ：1"
+   },
+   {
+    "id": "3",
+    "tex": "$8$ 回",
+    "grading": "8 [回]"
+   },
+   {
+    "id": "4",
+    "tex": "$6$ 回",
+    "grading": "6 [回]"
+   },
+   {
+    "id": "5",
+    "tex": "陽子（$^1_1\\mathrm H$）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) α粒子は $^4_2\\mathrm{He}$ なので，$A$ が $4$，$Z$ が $2$ 減る．\n\n(2) 原子核の中の中性子1個が陽子に変わり電子が出る．$A$ は変わらず $Z$ が $1$ 増える．\n\n(3) 質量数を変えるのはα崩壊だけ：$238-206=32=4\\times8$ より $8$ 回．\n\n(4) α崩壊8回で $Z$ は $92-16=76$ になる．$82$ にするには $Z$ を $6$ 増やす必要があり，β崩壊は $6$ 回．\n\n(5) X の質量数 $14+4-17=1$，原子番号 $7+2-8=1$．X は $^1_1\\mathrm H$（陽子）．ラザフォードが初めて人工的に原子核を変えた反応である．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "まず質量数の変化でα崩壊の回数を決め，次に原子番号の差をβ崩壊で合わせる．"
+ },
+ "concepts": [
+  "nuclear-decay"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "α崩壊",
+  "β崩壊",
+  "核反応式"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

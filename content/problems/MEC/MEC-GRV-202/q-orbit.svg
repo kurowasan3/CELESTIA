@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" width="360" height="230" font-family="'Times New Roman', serif">
+<polygon points="340,115 339.39,105.78 337.57,96.62 334.55,87.61 330.35,78.8 325.01,70.27 318.56,62.08 311.06,54.3 302.57,46.97 293.14,40.17 282.85,33.93 271.77,28.31 260,23.35 247.62,19.09 234.72,15.55 221.41,12.78 207.78,10.78 193.94,9.57 180,9.17 166.06,9.57 152.22,10.78 138.59,12.78 125.28,15.55 112.38,19.09 100,23.35 88.23,28.31 77.15,33.93 66.86,40.17 57.43,46.97 48.94,54.3 41.44,62.08 34.99,70.27 29.65,78.8 25.45,87.61 22.43,96.62 20.61,105.78 20,115 20.61,124.22 22.43,133.38 25.45,142.39 29.65,151.2 34.99,159.73 41.44,167.92 48.94,175.7 57.43,183.03 66.86,189.83 77.15,196.07 88.23,201.69 100,206.65 112.38,210.91 125.28,214.45 138.59,217.22 152.22,219.22 166.06,220.43 180,220.83 193.94,220.43 207.78,219.22 221.41,217.22 234.72,214.45 247.62,210.91 260,206.65 271.77,201.69 282.85,196.07 293.14,189.83 302.57,183.03 311.06,175.7 318.56,167.92 325.01,159.73 330.35,151.2 334.55,142.39 337.57,133.38 339.39,124.22" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="60" cy="115" r="40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 4"/>
+<circle cx="60" cy="115" r="9" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<text x="62" y="137" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">太陽</text>
+<circle cx="20" cy="115" r="3" fill="currentColor"/>
+<text x="10" y="105" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<circle cx="340" cy="115" r="3" fill="currentColor"/>
+<text x="344" y="103" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">Q</text>
+<text x="106" y="151" font-size="11" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">地球の軌道</text>
+</svg>

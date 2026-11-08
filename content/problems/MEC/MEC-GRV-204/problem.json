@@ -1,0 +1,148 @@
+{
+ "id": "MEC-GRV-204",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "円軌道から楕円軌道への乗り移り（遷移軌道）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $M$ の地球の中心 O から距離 $r$ の円軌道を，人工衛星が回っている．点 P で人工衛星を瞬間的に加速して速度の向きを変えずに速さを $v_{\\mathrm P}$ にしたところ，人工衛星は O から最も遠い点 Q までの距離が $3r$ の楕円軌道に移った．万有引力定数を $G$ とし，人工衛星の質量は地球に比べて十分小さいとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-orbit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "加速する前の円軌道での速さ $v_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$v_{\\mathrm P}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "点 Q での速さ $v_{\\mathrm Q}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "人工衛星が P から Q まで移動するのにかかる時間 $t_{\\mathrm{PQ}}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "点 Q で再び瞬間的に加速して，半径 $3r$ の円軌道に移りたい．Q で速さを何倍にすればよいか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-orbit",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-orbit.svg",
+   "alt": "地球を中心とする半径 r の円軌道と半径 3r の円軌道。点 P（距離 r）で内側の円に接し、点 Q（距離 3r）で外側の円に接する楕円軌道",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_0=\\sqrt{\\dfrac{GM}{r}}$",
+    "grading": "v_0：sqrt(G M/r)"
+   },
+   {
+    "id": "2",
+    "tex": "$v_{\\mathrm P}=\\sqrt{\\dfrac{3GM}{2r}}$",
+    "grading": "v_P：sqrt(3G M/(2r))"
+   },
+   {
+    "id": "3",
+    "tex": "$v_{\\mathrm Q}=\\sqrt{\\dfrac{GM}{6r}}$",
+    "grading": "v_Q：sqrt(G M/(6r))"
+   },
+   {
+    "id": "4",
+    "tex": "$t_{\\mathrm{PQ}}=2\\sqrt2\\,\\pi\\sqrt{\\dfrac{r^3}{GM}}$",
+    "grading": "t_{PQ}：2sqrt(2)π sqrt(r^3/(G M))"
+   },
+   {
+    "id": "5",
+    "tex": "$\\sqrt2$ 倍",
+    "grading": "sqrt(2)倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "人工衛星の質量を $m$ とする．\n\n(1) 円運動の運動方程式 $m\\dfrac{v_0^2}{r}=G\\dfrac{Mm}{r^2}$ より $v_0=\\sqrt{\\dfrac{GM}{r}}$．\n\n(2)(3) P，Q では速度が O からの向きに垂直なので，面積速度一定（ケプラーの第2法則）から $rv_{\\mathrm P}=3rv_{\\mathrm Q}$．力学的エネルギー保存：\\[\\frac12mv_{\\mathrm P}^2-\\frac{GMm}{r}=\\frac12mv_{\\mathrm Q}^2-\\frac{GMm}{3r}\\] $v_{\\mathrm Q}=\\dfrac{v_{\\mathrm P}}3$ を代入すると $\\dfrac12v_{\\mathrm P}^2\\cdot\\dfrac89=\\dfrac{2GM}{3r}$ より \\[v_{\\mathrm P}=\\sqrt{\\frac{3GM}{2r}},\\qquad v_{\\mathrm Q}=\\sqrt{\\frac{GM}{6r}}\\] $v_{\\mathrm P}=\\sqrt{\\dfrac32}\\,v_0\\approx1.22v_0$ で，円軌道の速さより大きく，脱出速度 $\\sqrt2\\,v_0$ より小さい．\n\n(4) 楕円の長軸は $r+3r=4r$ で，半長軸は $2r$．ケプラーの第3法則を，半径 $r$ の円軌道（周期 $T_0=2\\pi\\sqrt{r^3/(GM)}$）と比べると，楕円軌道の周期は $T_0\\times2^{3/2}$．P から Q までは半周期なので \\[t_{\\mathrm{PQ}}=\\frac12\\cdot2\\pi\\sqrt{\\frac{(2r)^3}{GM}}=2\\sqrt2\\,\\pi\\sqrt{\\frac{r^3}{GM}}\\]\n\n(5) 半径 $3r$ の円軌道の速さは $\\sqrt{\\dfrac{GM}{3r}}$．\\[\\sqrt{\\frac{GM}{3r}}\\div\\sqrt{\\frac{GM}{6r}}=\\sqrt2\\] Q でも加速が必要．2回加速して外側の円軌道に移るが，最終的な速さ $\\sqrt{GM/(3r)}$ は初めの $v_0$ より小さい（外側の円軌道ほど遅い）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "楕円軌道の近点・遠点では「面積速度一定＋力学的エネルギー保存」で速さが決まる．周期は半長軸を使った第3法則．"
+ },
+ "simulation": {
+  "id": "mech.gravitation",
+  "preset": {
+   "r0": 2,
+   "vratio": 1.22
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "universal-gravitation",
+  "circular-motion",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "universal-gravitation",
+  "kepler-2nd",
+  "kepler-3rd",
+  "gravitational-potential",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "人工衛星",
+  "楕円軌道",
+  "ケプラーの法則",
+  "遷移軌道"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

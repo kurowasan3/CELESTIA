@@ -1,0 +1,137 @@
+{
+ "id": "ELM-CAP-105",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "スイッチの切りかえをくり返すコンデンサーの電圧（漸化式と極限）とジュール熱",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "起電力 $E$ の電池，電気容量 $C_1$，$C_2$ のコンデンサー $\\mathrm C_1$，$\\mathrm C_2$，切りかえスイッチ S を図のようにつないだ．S を a 側にすると $\\mathrm C_1$ が電池につながり，b 側にすると $\\mathrm C_1$ と $\\mathrm C_2$ が並列につながる．はじめ，どちらのコンデンサーも電荷をもたない．導線にはわずかな抵抗があり，S を切りかえるたびに十分に時間をおく．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "S を a 側にしたあと b 側にした．$\\mathrm C_2$ の電圧 $V_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) で S を a 側から b 側にしたときに，導線で発生したジュール熱 $J_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "このあと「S を a 側にしてから b 側にする」操作をくり返す．(1) を1回目として，$n$ 回目に b 側にしたあとの $\\mathrm C_2$ の電圧 $V_n$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$C_1=C_2$ のとき，$V_n\\geqq0.9E$ となる最小の $n$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "操作を限りなくくり返し，最後に S を a 側にした状態になるまでに，回路全体で発生したジュール熱の合計 $J$ を求めよ．ただし，最初に $\\mathrm C_1$ を充電したときの熱も含める．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "電池 E の正極は端子 a につながる。切りかえスイッチ S は C₁ の上側の極板につながり、a 側か b 側に倒せる。端子 b は C₂ の上側の極板につながる。電池の負極、C₁ と C₂ の下側の極板は共通の導線でつながる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V_1=\\dfrac{C_1E}{C_1+C_2}$",
+    "grading": "V_1：C_1 E/(C_1+C_2)"
+   },
+   {
+    "id": "2",
+    "tex": "$J_1=\\dfrac{C_1C_2E^2}{2(C_1+C_2)}$",
+    "grading": "J_1：C_1 C_2 E^2/(2(C_1+C_2))"
+   },
+   {
+    "id": "3",
+    "tex": "$V_n=E\\left\\{1-\\left(\\dfrac{C_2}{C_1+C_2}\\right)^n\\right\\}$",
+    "grading": "V_n：E(1-(C_2/(C_1+C_2))^n)"
+   },
+   {
+    "id": "4",
+    "tex": "$n=4$",
+    "grading": "4 [回]"
+   },
+   {
+    "id": "5",
+    "tex": "$J=\\dfrac12(C_1+C_2)E^2$",
+    "grading": "J：(C_1+C_2)E^2/2"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) a 側で $\\mathrm C_1$ は電気量 $C_1E$．b 側にすると，$\\mathrm C_1$ と $\\mathrm C_2$ の上側の極板の電気量の和 $C_1E$ が保存され，電圧が等しくなる：$(C_1+C_2)V_1=C_1E$，$V_1=\\dfrac{C_1E}{C_1+C_2}$．\n\n(2) 静電エネルギーの減少分が熱になる：\\[J_1=\\frac12C_1E^2-\\frac12(C_1+C_2)V_1^2=\\frac12C_1E^2\\left(1-\\frac{C_1}{C_1+C_2}\\right)=\\frac{C_1C_2E^2}{2(C_1+C_2)}\\]\n\n(3) $n-1$ 回目のあと $\\mathrm C_2$ の電圧は $V_{n-1}$．a 側で $\\mathrm C_1$ は再び $C_1E$ になり，b 側にすると $(C_1+C_2)V_n=C_1E+C_2V_{n-1}$．$r=\\dfrac{C_2}{C_1+C_2}$ とおくと $V_n-E=r(V_{n-1}-E)$，$V_0=0$ なので \\[V_n=E(1-r^n)=E\\left\\{1-\\left(\\frac{C_2}{C_1+C_2}\\right)^n\\right\\}\\]\n\n(4) $r=\\dfrac12$．$1-\\left(\\dfrac12\\right)^n\\geqq0.9$ $\\iff$ $2^n\\geqq10$ なので $n=4$（$V_3=0.875E$，$V_4=0.9375E$）．\n\n(5) $V_n\\to E$ なので，最後は $\\mathrm C_1$，$\\mathrm C_2$ ともに電圧 $E$：静電エネルギーは $\\dfrac12(C_1+C_2)E^2$．この間に電池から送り出された電気量は，両方のコンデンサーの上側の極板の電気量 $(C_1+C_2)E$ に等しいので，電池の仕事は $(C_1+C_2)E^2$．差が熱：$J=(C_1+C_2)E^2-\\dfrac12(C_1+C_2)E^2=\\dfrac12(C_1+C_2)E^2$．（1回ずつの熱を足し上げても同じ結果になる．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "切りかえのたびに「つながった極板の電気量の和」を保存して漸化式を立てる．熱の合計は個々の過程を追わず，電池の仕事 $-$ 静電エネルギーで求める．"
+ },
+ "concepts": [
+  "capacitor"
+ ],
+ "laws": [
+  "capacitance",
+  "capacitor-energy",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "コンデンサー",
+  "電荷保存",
+  "漸化式",
+  "ジュール熱",
+  "スイッチ切りかえ"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

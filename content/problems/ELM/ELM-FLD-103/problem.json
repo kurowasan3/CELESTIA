@@ -1,0 +1,128 @@
+{
+ "id": "ELM-FLD-103",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-01",
+ "topic": "電位のグラフから電場の強さ・向きと電子の運動を読み取る",
+ "course": "物理",
+ "level": 2,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$x$ 軸に沿った電場があり，電場は $x$ 成分だけをもつ．$x$ 軸上の電位 $V$ と位置 $x$ の関係は図のグラフのようになった（$x\\geqq0.40\\,\\mathrm m$ では $V=0$）．電気素量を $e=1.6\\times10^{-19}\\,\\mathrm C$ とし，重力は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$0<x<0.10\\,\\mathrm m$ の区間の電場の強さ $E_1$ は何 V/m か．また，その向きは $x$ 軸の正の向き・負の向きのどちらか．"
+     },
+     {
+      "id": "2",
+      "tex": "$0.20\\,\\mathrm m<x<0.40\\,\\mathrm m$ の区間の電場の強さ $E_2$ は何 V/m か．また，その向きを答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$x=0$ に電子（電気量 $-e$）を静かに置いたところ，電子は $x$ 軸の正の向きに動き出した．$x=0.15\\,\\mathrm m$ を通過するときの電子の運動エネルギー $K$ は何 J か．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の電子が到達する $x$ の最大値は何 m か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "電位 V と位置 x のグラフ。x=0 で 0 V から直線的に増えて x=0.10 m で 30 V、0.20 m までは 30 V で一定、そこから直線的に減って x=0.40 m で 0 V、その先は 0 V",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$E_1=3.0\\times10^{2}\\,\\mathrm{V/m}$，$x$ 軸の負の向き",
+    "grading": "E_1：300"
+   },
+   {
+    "id": "2",
+    "tex": "$E_2=1.5\\times10^{2}\\,\\mathrm{V/m}$，$x$ 軸の正の向き",
+    "grading": "E_2：150"
+   },
+   {
+    "id": "3",
+    "tex": "$K=4.8\\times10^{-18}\\,\\mathrm J$（$30\\,\\mathrm{eV}$）",
+    "grading": "K：4.8*10^(-18) [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$0.40\\,\\mathrm m$",
+    "grading": "0.4 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "一様な電場では $E=\\dfrac{(\\text{電位差})}{(\\text{距離})}$ で，電場は電位が下がる向きを向く（$E_x=-\\dfrac{\\Delta V}{\\Delta x}$，グラフの傾きの符号を変えたもの）．\n\n(1) $E_1=\\dfrac{30}{0.10}=3.0\\times10^{2}\\,\\mathrm{V/m}$．$x$ が増えると電位が上がるので，電場は $x$ 軸の負の向き．$x=0$ では $V=0$ だが電場は $0$ ではない．\n\n(2) $E_2=\\dfrac{30}{0.20}=1.5\\times10^{2}\\,\\mathrm{V/m}$．電位が下がる $x$ 軸の正の向き．（$0.10<x<0.20$ では $V$ が一定なので電場は $0$．）\n\n(3) 電子の位置エネルギーは $U=(-e)V$．エネルギー保存より $K=(-e)\\cdot0-(-e)\\cdot30=e\\times30=1.6\\times10^{-19}\\times30=4.8\\times10^{-18}\\,\\mathrm J$．電子（負電荷）は電位の高い方へ加速される．\n\n(4) $0.20<x<0.40$ では電場が $+x$ 向きなので，電子は $-x$ 向きの力を受けて減速する．$K=e(V-0)$ が $0$ になるのは $V=0$ の点，つまり $x=0.40\\,\\mathrm m$．そこで一瞬止まり，引き返す．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電場の強さは電位のグラフの傾きの大きさ，向きは電位が下がる向き．電荷の運動はエネルギー保存 $\\frac12mv^2+qV=$ 一定で追う．"
+ },
+ "concepts": [
+  "coulomb-field"
+ ],
+ "laws": [
+  "uniform-field-potential",
+  "energy-conservation"
+ ],
+ "misconceptions": [
+  "MC-POTENTIAL-FIELD"
+ ],
+ "tags": [
+  "電位",
+  "電場",
+  "グラフ",
+  "電子"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

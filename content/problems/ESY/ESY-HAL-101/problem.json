@@ -1,0 +1,128 @@
+{
+ "id": "ESY-HAL-101",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "ホール効果：電位差と電荷の担い手の符号",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "幅 $w$（$y$ 方向），厚さ $d$（$z$ 方向）の直方体の導体板を $x$ 軸に沿って置き，$x$ 軸の正の向きに電流 $I$ を流す．さらに $z$ 軸の正の向きに磁束密度 $B$ の一様な磁場をかける．電流を担うのは電気量 $-e$ の電子で，その数密度（単位体積あたりの個数）は $n$ である．電子はすべて同じ速さで $x$ 方向に動くものとし，十分に時間がたった後を考える．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電子の速さ $v$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "電子が磁場から受けるローレンツ力の向きを答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "電子が板の中をまっすぐ進むとき，$y$ 方向に生じている電場の強さ $E_{\\rm H}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$y=0$ の面と $y=w$ の面の間の電位差の大きさ $V_{\\rm H}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$y=0$ の面と $y=w$ の面のうち，電位が高いのはどちらか．"
+     },
+     {
+      "id": "6",
+      "tex": "電流を担うのが電気量 $+e$ の粒子（ホール）である半導体で同じ実験をすると，電位が高いのはどちらの面か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=\\dfrac{I}{enwd}$",
+    "grading": "v：I/(e n w d)"
+   },
+   {
+    "id": "2",
+    "tex": "$y$ 軸の負の向き"
+   },
+   {
+    "id": "3",
+    "tex": "$E_{\\rm H}=\\dfrac{IB}{enwd}$",
+    "grading": "E_H：I B/(e n w d)"
+   },
+   {
+    "id": "4",
+    "tex": "$V_{\\rm H}=\\dfrac{IB}{end}$",
+    "grading": "V_H：I B/(e n d)"
+   },
+   {
+    "id": "5",
+    "tex": "$y=w$ の面"
+   },
+   {
+    "id": "6",
+    "tex": "$y=0$ の面"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 断面積 $wd$ を1秒間に通る電子は $nvwd$ 個なので $I=envwd$，$v=\\dfrac{I}{enwd}$．\n\n(2) 電子は電流と逆の $x$ 軸の負の向きに動く．ローレンツ力は $(-e)\\vec v\\times\\vec B$ で，$\\vec v=(-v,0,0)$，$\\vec B=(0,0,B)$ のとき $\\vec v\\times\\vec B=(0,vB,0)$ だから，力は $(0,-evB,0)$：$y$ 軸の負の向き．\n\n(3) 電子が $y=0$ の面にたまり，$y=w$ の面は電子が不足して正に帯電する．その電荷がつくる電場の力がローレンツ力とつり合うと，電子はまっすぐ進む：$eE_{\\rm H}=evB$，$E_{\\rm H}=vB=\\dfrac{IB}{enwd}$．\n\n(4) $V_{\\rm H}=E_{\\rm H}w=\\dfrac{IB}{end}$．幅 $w$ によらず，厚さ $d$ が薄く，$n$ が小さいほど大きい（半導体で大きく現れる）．\n\n(5) 負電荷が $y=0$ の面にたまるので，$y=w$ の面の電位が高い．\n\n(6) 正の粒子は $x$ 軸の正の向きに動き，$e\\vec v\\times\\vec B$ はやはり $y$ 軸の負の向き．正電荷が $y=0$ の面にたまるので，$y=0$ の面の電位が高くなる．電位差の向きから，電流を担う粒子の電荷の符号がわかる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電荷の符号が変わると速度の向きも変わるので，ローレンツ力の向きは同じ．たまる電荷の符号が変わり，電位差の向きが逆になる．"
+ },
+ "concepts": [
+  "lorentz-force",
+  "coulomb-field"
+ ],
+ "laws": [
+  "lorentz-force",
+  "uniform-field-potential"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ホール効果",
+  "ローレンツ力",
+  "半導体",
+  "電位差"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

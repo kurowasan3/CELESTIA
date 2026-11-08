@@ -1,0 +1,130 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  260,
+  220
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     50,
+     30
+    ],
+    [
+     210,
+     30
+    ],
+    [
+     210,
+     190
+    ],
+    [
+     50,
+     190
+    ]
+   ],
+   "style": "none"
+  },
+  {
+   "t": "dot",
+   "at": [
+    90,
+    70
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    160,
+    60
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    120,
+    120
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    180,
+    150
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    80,
+    160
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    150,
+    105
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    120,
+    120
+   ],
+   "dir": 30,
+   "len": 40,
+   "style": "velocity",
+   "phys": "vel:v",
+   "label": "v"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    120,
+    120
+   ],
+   "dir": 0,
+   "len": 34.64,
+   "style": "component",
+   "phys": "comp:vx",
+   "label": "vₓ",
+   "labelPos": "end",
+   "labelOffset": [
+    4,
+    6
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    130,
+    206
+   ],
+   "text": "L",
+   "size": 14
+  },
+  {
+   "t": "text",
+   "at": [
+    36,
+    110
+   ],
+   "text": "L",
+   "size": 14
+  },
+  {
+   "t": "text",
+   "at": [
+    224,
+    110
+   ],
+   "text": "壁 X",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

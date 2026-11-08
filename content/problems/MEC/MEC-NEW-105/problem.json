@@ -1,0 +1,170 @@
+{
+ "id": "MEC-NEW-105",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "動滑車でつながれた机上の物体とおもり（糸の長さ一定から決まる加速度の関係）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な机の上に質量 $m$ の物体 A を置き，A につけた軽い糸を机の端の定滑車にかけて鉛直に下ろし，質量 $M$ のおもり B をつるした軽い動滑車にかけてから，糸の他端を天井の点 C に固定する．動滑車の両側の糸は鉛直である．A を手で支えて全体を静止させておき，静かに手をはなす．滑車はなめらかに回り，重力加速度の大きさを $g$ とする．はじめ，机はなめらかであるとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A の加速度の大きさ $a_{\\mathrm A}$ は，B の加速度の大きさ $a_{\\mathrm B}$ の何倍か．"
+     },
+     {
+      "id": "2",
+      "tex": "$a_{\\mathrm B}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "糸の張力の大きさ $T$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "机があらく，A と机の間の静止摩擦係数が $\\mu$，動摩擦係数が $\\mu'$ の場合を考える．手をはなしたときに A が動き出すための条件を求めよ．また，動き出した後の $a_{\\mathrm B}$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "机の上の物体 A（質量 m）から糸を机の端の定滑車にかけて下ろし、おもり B（質量 M）をつるした動滑車を通して、天井の点 C に固定する",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "A は糸から張力 T を受ける。動滑車と B をまとめた物体は、上向きの張力 T を2本と、下向きの重力 Mg を受ける",
+   "caption": "1本の軽い糸の張力はどこでも $T$．動滑車には上向きに $2T$ がはたらく",
+   "physics": {
+    "forces": [
+     {
+      "name": "TA",
+      "dir_deg": 0
+     },
+     {
+      "name": "T1",
+      "dir_deg": 90
+     },
+     {
+      "name": "T2",
+      "dir_deg": 90
+     },
+     {
+      "name": "Mg",
+      "dir_deg": 270
+     }
+    ],
+    "equalLength": [
+     [
+      "force:TA",
+      "force:T1",
+      "force:T2"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2$ 倍",
+    "grading": "2倍"
+   },
+   {
+    "id": "2",
+    "tex": "$a_{\\mathrm B}=\\dfrac{Mg}{M+4m}$",
+    "grading": "a_B：M g/(M+4m)"
+   },
+   {
+    "id": "3",
+    "tex": "$T=\\dfrac{2mMg}{M+4m}$",
+    "grading": "T：2m M g/(M+4m)"
+   },
+   {
+    "id": "4",
+    "tex": "動き出す条件は $M>2\\mu m$．動き出した後は $a_{\\mathrm B}=\\dfrac{(M-2\\mu'm)g}{M+4m}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　A が右へ距離 $x$ 動くと，定滑車から下の糸が $x$ だけ長くなる．この長さは動滑車の両側の2本に等しく分けられるので，動滑車（と B）は $\\dfrac x2$ だけ下がる．速度・加速度も同じ関係で，$a_{\\mathrm A}=2a_{\\mathrm B}$，つまり $\\boldsymbol 2$ 倍．\n\n\\textbf{(2)(3)}　A は右向き，B は下向きを正とする．動滑車は軽いので，動滑車と B をまとめて考えると，上向きに $2T$，下向きに $Mg$ がはたらく．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "\\[ \\text{A}：m\\cdot2a_{\\mathrm B}=T,\\qquad \\text{B}：Ma_{\\mathrm B}=Mg-2T. \\]\n$T=2ma_{\\mathrm B}$ を代入して $(M+4m)a_{\\mathrm B}=Mg$．よって\n\\[ a_{\\mathrm B}=\\boldsymbol{\\frac{Mg}{M+4m}},\\qquad T=2ma_{\\mathrm B}=\\boldsymbol{\\frac{2mMg}{M+4m}}. \\]\n（検算：B が $h$ 下がると A は $2h$ 動き，速さは $v_{\\mathrm A}=2v_{\\mathrm B}$．力学的エネルギー保存 $Mgh=\\frac12Mv_{\\mathrm B}^2+\\frac12m(2v_{\\mathrm B})^2$ より $v_{\\mathrm B}^2=\\dfrac{2Mgh}{M+4m}=2a_{\\mathrm B}h$ で一致．）\n\n\\textbf{(4)}　A が静止したままなら，B も静止し，$2T=Mg$ より $T=\\dfrac{Mg}{2}$．これを支える静止摩擦力は $\\dfrac{Mg}{2}$ で，最大摩擦力 $\\mu mg$ を超えると動き出す：$\\dfrac{Mg}{2}>\\mu mg$ より $\\boldsymbol{M>2\\mu m}$．\n動き出した後は，A に左向きの動摩擦力 $\\mu'mg$ がはたらく：\n\\[ m\\cdot2a_{\\mathrm B}=T-\\mu'mg,\\qquad Ma_{\\mathrm B}=Mg-2T. \\]\n$T$ を消去して $(M+4m)a_{\\mathrm B}=(M-2\\mu'm)g$，$a_{\\mathrm B}=\\boldsymbol{\\dfrac{(M-2\\mu'm)g}{M+4m}}$．（$\\mu'<\\mu$ より $M>2\\mu m>2\\mu'm$ なので $a_{\\mathrm B}>0$．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "動滑車では「おもりの変位はひもの送り出し量の半分」．加速度の関係（拘束条件）を運動方程式と組み合わせ，軽い滑車には $2T$ がはたらくことを使う．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "static-friction"
+ ],
+ "laws": [
+  "newton-2nd",
+  "friction-law",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動方程式",
+  "動滑車",
+  "拘束条件",
+  "摩擦"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

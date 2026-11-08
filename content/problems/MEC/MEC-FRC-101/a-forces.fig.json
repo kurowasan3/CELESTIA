@@ -1,0 +1,49 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  260,
+  220
+ ],
+ "items": [
+  {
+   "t": "block",
+   "at": [
+    130,
+    140
+   ],
+   "w": 44,
+   "h": 35,
+   "label": "",
+   "phys": "body:block"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    130,
+    105
+   ],
+   "dir": 90,
+   "len": 60,
+   "style": "force",
+   "phys": "force:kx",
+   "label": "kx",
+   "labelPos": "mid",
+   "labelOffset": [
+    8,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    130,
+    122.5
+   ],
+   "dir": 270,
+   "len": 60,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg"
+  }
+ ]
+}

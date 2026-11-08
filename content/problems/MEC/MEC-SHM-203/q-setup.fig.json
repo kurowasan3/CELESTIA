@@ -1,0 +1,141 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  160
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    30,
+    40
+   ],
+   "to": [
+    30,
+    130
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     40
+    ],
+    [
+     30,
+     40
+    ],
+    [
+     30,
+     130
+    ],
+    [
+     20,
+     130
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    130
+   ],
+   "to": [
+    350,
+    130
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "spring",
+   "from": [
+    30,
+    112
+   ],
+   "to": [
+    220,
+    112
+   ],
+   "coils": 9,
+   "amp": 8
+  },
+  {
+   "t": "block",
+   "at": [
+    240,
+    130
+   ],
+   "w": 40,
+   "h": 36,
+   "label": "m",
+   "phys": "body:block"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    60
+   ],
+   "to": [
+    150,
+    138
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    50
+   ],
+   "text": "O（自然長）",
+   "italic": false,
+   "size": 11,
+   "anchor": "middle"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    150,
+    76
+   ],
+   "dir": 0,
+   "len": 70,
+   "style": "thin",
+   "phys": "displacement:A",
+   "label": "A",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -12
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    145
+   ],
+   "text": "あらい面",
+   "italic": false,
+   "size": 11,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    95,
+    92
+   ],
+   "text": "k",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  }
+ ]
+}

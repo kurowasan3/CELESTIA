@@ -1,0 +1,136 @@
+{
+ "id": "ATM-PHG-101",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "光電効果のグラフ（K₀–振動数）からプランク定数と仕事関数",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ある金属Aに振動数 $f$ の光を当て，飛び出す電子の運動エネルギーの最大値 $K_0$ を測ったところ，図のような直線のグラフが得られた．グラフは点 $(5.0\\times10^{14}\\ \\mathrm{Hz},\\ 0)$ と点 $(10.0\\times10^{14}\\ \\mathrm{Hz},\\ 2.0\\ \\mathrm{eV})$ を通る．電気素量を $e=1.6\\times10^{-19}\\ \\mathrm{C}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "金属Aの限界振動数 $f_0$ は何 Hz か．"
+     },
+     {
+      "id": "2",
+      "tex": "グラフの傾きから，プランク定数 $h$ は何 J$\\cdot$s か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "金属Aの仕事関数 $W$ は何 eV か．"
+     },
+     {
+      "id": "4",
+      "tex": "仕事関数が $3.0\\ \\mathrm{eV}$ の金属Bで同じ測定をすると，グラフはどのようになるか．グラフの傾きと，金属Bの限界振動数 $f_0'$ を答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "横軸が光の振動数 f（単位 10の14乗 Hz），縦軸が電子の運動エネルギーの最大値 K₀（eV）のグラフ．直線は f=5.0 で横軸と交わり，f=10.0 で K₀=2.0 eV を通る右上がりの直線．",
+   "caption": "金属Aの $K_0$ と振動数 $f$ の関係"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f_0=5.0\\times10^{14}\\ \\mathrm{Hz}$",
+    "grading": "5.0*10^14 [Hz]"
+   },
+   {
+    "id": "2",
+    "tex": "$h=6.4\\times10^{-34}\\ \\mathrm{J\\cdot s}$",
+    "grading": "6.4*10^(-34)"
+   },
+   {
+    "id": "3",
+    "tex": "$W=2.0\\ \\mathrm{eV}$",
+    "grading": "2.0 [eV]"
+   },
+   {
+    "id": "4",
+    "tex": "傾きは金属Aと同じ（平行な直線）で，$f_0'=7.5\\times10^{14}\\ \\mathrm{Hz}$",
+    "grading": "f_0'：7.5*10^14 [Hz]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $K_0=0$ となる横軸の切片：$f_0=5.0\\times10^{14}\\ \\mathrm{Hz}$．\n\n(2) $K_0=hf-W$ なので，グラフの傾きが $h$．傾きは $\\dfrac{2.0\\ \\mathrm{eV}}{(10.0-5.0)\\times10^{14}\\ \\mathrm{Hz}}=4.0\\times10^{-15}\\ \\mathrm{eV\\cdot s}$．$1\\ \\mathrm{eV}=1.6\\times10^{-19}\\ \\mathrm J$ より $h=4.0\\times10^{-15}\\times1.6\\times10^{-19}=6.4\\times10^{-34}\\ \\mathrm{J\\cdot s}$．\n\n(3) $W=hf_0=4.0\\times10^{-15}\\ \\mathrm{eV\\cdot s}\\times5.0\\times10^{14}\\ \\mathrm{Hz}=2.0\\ \\mathrm{eV}$．（グラフを左に延ばしたときの縦軸の切片が $-W$ になる．）\n\n(4) 傾き $h$ は金属によらない定数なので，金属Bのグラフは金属Aと平行な直線になる．$f_0'=\\dfrac{W'}h=\\dfrac{3.0}{4.0\\times10^{-15}}=7.5\\times10^{14}\\ \\mathrm{Hz}$ で，右へずれる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$K_0=hf-W$ のグラフ：傾き $h$（どの金属でも同じ），横軸の切片 $f_0$，縦軸の切片 $-W$．"
+ },
+ "simulation": {
+  "id": "atom.photoelectric",
+  "preset": {
+   "f": 10,
+   "W": 2.0,
+   "I": 0.6,
+   "V": 0
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "photon"
+ ],
+ "laws": [
+  "photoelectric-equation",
+  "photon-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "光電効果",
+  "グラフ",
+  "プランク定数",
+  "仕事関数"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

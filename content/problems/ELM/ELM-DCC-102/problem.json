@@ -1,0 +1,142 @@
+{
+ "id": "ELM-DCC-102",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "端子電圧と電流のグラフから電池の起電力・内部抵抗を求める（最大電力）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "起電力 $E$，内部抵抗 $r$ の電池に，可変抵抗 R，電流計 A，電圧計 V を図1のようにつないだ．R の値を変えながら，電池の端子電圧 $V$ と電流 $I$ を測ると，図2の直線のグラフが得られた．電流計・電圧計は理想的（電流計の抵抗は $0$，電圧計には電流が流れない）とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電池の起電力 $E$ は何 V か．"
+     },
+     {
+      "id": "2",
+      "tex": "電池の内部抵抗 $r$ は何 $\\Omega$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "電流が $1.0\\,\\mathrm A$ になるのは，R の抵抗値が何 $\\Omega$ のときか．"
+     },
+     {
+      "id": "4",
+      "tex": "R での消費電力が最大になる R の抵抗値と，そのときの消費電力を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "図1：起電力 E と内部抵抗 r の電池（破線の枠）に、電流計 A と可変抵抗 R を直列につなぎ、電池の両端に電圧計 V をつないだ回路",
+   "caption": ""
+  },
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "図2：端子電圧 V [V] と電流 I [A] のグラフ。I=0 で 1.5 V、I=0.60 A で 1.2 V を通り、I=3.0 A で 0 になる右下がりの直線",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$E=1.5\\,\\mathrm V$",
+    "grading": "E：1.5 [V]"
+   },
+   {
+    "id": "2",
+    "tex": "$r=0.50\\,\\Omega$",
+    "grading": "r：0.5 [Ω]"
+   },
+   {
+    "id": "3",
+    "tex": "$1.0\\,\\Omega$",
+    "grading": "R：1 [Ω]"
+   },
+   {
+    "id": "4",
+    "tex": "$R=0.50\\,\\Omega$ のとき最大で，$1.125\\,\\mathrm W\\ (\\fallingdotseq1.1\\,\\mathrm W)$",
+    "grading": "R：0.5 [Ω] ; P：9/8 [W]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "端子電圧は $V=E-rI$（電池の中の抵抗 $r$ で $rI$ だけ電圧が下がる）．グラフは切片 $E$，傾き $-r$ の直線．\n\n(1) $I=0$ のときの $V$ が起電力：$E=1.5\\,\\mathrm V$．\n\n(2) 傾きの大きさ：$r=\\dfrac{1.5-1.2}{0.60}=0.50\\,\\Omega$．（$I=3.0\\,\\mathrm A$ で $V=0$ になるのは R $=0$，つまり短絡したとき：$\\dfrac{E}{r}=3.0\\,\\mathrm A$．）\n\n(3) $I=\\dfrac E{R+r}$ より $R=\\dfrac{1.5}{1.0}-0.50=1.0\\,\\Omega$．\n\n(4) $P=RI^2=\\dfrac{E^2R}{(R+r)^2}=\\dfrac{E^2}{\\left(\\sqrt R-\\dfrac r{\\sqrt R}\\right)^2+4r}$．分母が最小になるのは $\\sqrt R=\\dfrac r{\\sqrt R}$，つまり $R=r=0.50\\,\\Omega$．このとき $P=\\dfrac{E^2}{4r}=\\dfrac{1.5^2}{4\\times0.50}=1.125\\,\\mathrm W$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "端子電圧 $V=E-rI$ は「切片 $E$，傾き $-r$」の直線．外部抵抗の電力は $R=r$ で最大．"
+ },
+ "concepts": [
+  "ohm-law-use",
+  "electric-power"
+ ],
+ "laws": [
+  "ohm-law",
+  "kirchhoff-2nd",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "内部抵抗",
+  "起電力",
+  "端子電圧",
+  "グラフ",
+  "最大電力"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

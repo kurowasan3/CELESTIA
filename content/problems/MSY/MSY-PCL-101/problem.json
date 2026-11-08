@@ -1,0 +1,136 @@
+{
+ "id": "MSY-PCL-101",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "振り子の小球どうしの弾性衝突",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "synthesis"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "同じ長さの軽い糸で，同じ質量の小球 A，B を天井からつるし，最下点で A と B が接するようにした．A を最下点から高さ $0.40\\,\\mathrm m$ の位置まで糸を張ったまま持ち上げ，静かに放したところ，A は最下点で静止している B と弾性衝突（反発係数 $1$）した．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，空気抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "衝突の直前の A の速さ $v_0$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "衝突の直後の A の速さ $v_{\\mathrm A}$ と B の速さ $v_{\\mathrm B}$ はそれぞれ何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "衝突の後，B は最下点から何 $\\mathrm m$ の高さまで上がるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "天井から同じ長さの糸でつるした小球 A と B。A を最下点から 0.40 m の高さまで持ち上げ、B は最下点で静止している",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_0=2.8\\,\\mathrm{m/s}$",
+    "grading": "v_0：2.8 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$v_{\\mathrm A}=0\\,\\mathrm{m/s}$，$v_{\\mathrm B}=2.8\\,\\mathrm{m/s}$",
+    "grading": "v_A：0 [m/s] ; v_B：2.8 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$0.40\\,\\mathrm m$",
+    "grading": "0.4 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 糸の張力は運動の向きに垂直で仕事をしないので，力学的エネルギーが保存する．\\[\\frac12mv_0^2=mg\\times0.40\\quad\\Longrightarrow\\quad v_0=\\sqrt{2\\times9.8\\times0.40}=\\sqrt{7.84}=2.8\\,\\mathrm{m/s}\\]\n\n(2) 衝突の直前・直後では，水平方向の運動量が保存する：$mv_0=mv_{\\mathrm A}+mv_{\\mathrm B}$．反発係数 $1$：$v_{\\mathrm B}-v_{\\mathrm A}=v_0$．2式から $v_{\\mathrm A}=0$，$v_{\\mathrm B}=v_0=2.8\\,\\mathrm{m/s}$．同じ質量の弾性衝突では，速度が入れかわる．\n\n(3) B についての力学的エネルギー保存：$\\dfrac12mv_{\\mathrm B}^2=mgH$ より $H=0.40\\,\\mathrm m$．A がもっていた力学的エネルギーがそのまま B に移る．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "振り子の運動は力学的エネルギー保存，衝突の瞬間は運動量保存と反発係数．場面ごとに使う法則を切りかえる．"
+ },
+ "simulation": {
+  "id": "mech.collision",
+  "preset": {
+   "m1": 1,
+   "m2": 1,
+   "v1": 2.8,
+   "v2": 0,
+   "e": 1
+  },
+  "locked": [
+   "e"
+  ],
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "mechanical-energy",
+  "momentum-conservation",
+  "restitution"
+ ],
+ "laws": [
+  "energy-conservation",
+  "momentum-conservation",
+  "restitution"
+ ],
+ "misconceptions": [
+  "MC-PENDULUM-MASS"
+ ],
+ "tags": [
+  "力学的エネルギー保存",
+  "弾性衝突",
+  "振り子",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  200
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    170
+   ],
+   "to": [
+    280,
+    170
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    150,
+    170
+   ],
+   "w": 80,
+   "h": 120,
+   "label": "M",
+   "phys": "body:box"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    70
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -12
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    95,
+    70
+   ],
+   "to": [
+    95,
+    170
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    86,
+    120.0
+   ],
+   "text": "h",
+   "italic": true,
+   "size": 15,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    110.0,
+    184
+   ],
+   "to": [
+    190.0,
+    184
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    194
+   ],
+   "text": "a",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    204.0,
+    110.0
+   ],
+   "text": "b",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  }
+ ]
+}

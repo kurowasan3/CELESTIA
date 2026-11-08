@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240" font-family="'Times New Roman', serif">
+<polygon points="20,80 220,80 220,230 20,230" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="20" y1="80" x2="220" y2="80" stroke="currentColor" stroke-width="2"/>
+<polyline points="80,76 216,76 224,84 224,160" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="80,74 217,74 226,83 226,160" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g class="f-ink" data-dir="0" data-len="70">
+<line x1="150" y1="56" x2="210" y2="56" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="220,56 210,60.66 210,51.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="180" data-len="70">
+<line x1="150" y1="56" x2="90" y2="56" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="80,56 90,51.34 90,60.66" fill="currentColor"/>
+</g>
+<text x="150" y="42" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L − a</text>
+<g class="f-ink" data-dir="90" data-len="40">
+<line x1="250" y1="120" x2="250" y2="90" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="250,80 254.66,90 245.34,90" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="270" data-len="40">
+<line x1="250" y1="120" x2="250" y2="150" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="250,160 245.34,150 254.66,150" fill="currentColor"/>
+</g>
+<text x="264" y="120" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">a</text>
+</svg>

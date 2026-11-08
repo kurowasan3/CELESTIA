@@ -1,0 +1,133 @@
+{
+ "id": "WAV-CON-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "振動数を変えたときの波の速さ・波長と媒質の動き",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 6,
+ "format": [
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "張力が一定になるように張った長いロープの一端を手で上下に単振動させ，ロープに正弦波を送った．手の振動数が $f$ のとき，波長は $\\lambda$ であった．ロープ上の1点には印が付けてある．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "ロープの張力を変えずに，手の振動数だけを $2f$ にした．波の速さは何倍になるか．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) のとき，波長は何倍になるか．"
+     },
+     {
+      "id": "3",
+      "tex": "振動数 $f$ のとき，波が1周期の間に進む距離を $\\lambda$ を用いて表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "振動数 $f$ のとき，ロープ上の印は，1周期の間に波の進む向きに正味どれだけ移動するか．"
+     },
+     {
+      "id": "5",
+      "tex": "手の振動数を変えずに波の速さを大きくするには，どうすればよいか．1つ答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1$ 倍（変わらない）",
+    "grading": "1倍",
+    "wrong": [
+     {
+      "value": "2倍",
+      "misconception": "MC-WAVE-SPEED-FREQ"
+     }
+    ]
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac12$ 倍",
+    "grading": "(1/2)倍"
+   },
+   {
+    "id": "3",
+    "tex": "$\\lambda$",
+    "grading": "λ"
+   },
+   {
+    "id": "4",
+    "tex": "$0$（その場で上下に振動するだけ）",
+    "grading": "0",
+    "wrong": [
+     {
+      "value": "λ",
+      "misconception": "MC-WAVE-MEDIUM-MOVES"
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "tex": "ロープの張力を大きくする（または，同じ張力で単位長さあたりの質量が小さいロープに替える）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) ロープを伝わる波の速さは，ロープの張力と単位長さあたりの質量（媒質の性質）で決まり，波源の振動数にはよらない．よって $1$ 倍．\n\n(2) $v=f\\lambda$ で $v$ が一定なので，$f$ を $2$ 倍にすると $\\lambda$ は $\\dfrac12$ 倍．「振動数を上げると速く伝わる」のではなく，「波が詰まる」．\n\n(3) 1周期 $T=\\dfrac1f$ の間に進む距離は $vT=f\\lambda\\cdot\\dfrac1f=\\lambda$．これが波長の意味でもある．\n\n(4) 波が運ぶのは振動の状態（とエネルギー）で，媒質そのものは運ばない．横波では印はその場で上下に振動するだけなので，1周期後にはもとの位置にもどり，正味の移動は $0$．\n\n(5) 弦（ロープ）の波の速さは $v=\\sqrt{\\dfrac S\\rho}$（$S$：張力，$\\rho$：線密度）なので，張力を大きくするか，線密度の小さいロープを使う．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "波の速さは媒質で決まり，振動数は波源で決まる．波長は $\\lambda=\\dfrac vf$ として後から決まる．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [
+  "wave-speed"
+ ],
+ "misconceptions": [
+  "MC-WAVE-SPEED-FREQ",
+  "MC-WAVE-MEDIUM-MOVES"
+ ],
+ "tags": [
+  "波の基本量",
+  "誤概念",
+  "媒質"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

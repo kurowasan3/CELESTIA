@@ -1,0 +1,132 @@
+{
+ "id": "MEC-REL-101",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-01",
+ "topic": "落下する小球と投げ上げた小球の空中での出会い（相対運動で見る）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "地面から高さ $H$ の点から小球 A を静かに放すと同時に，A の真下の地面から小球 B を鉛直上向きに速さ $v_0$ で投げ上げた．重力加速度の大きさを $g$ とし，空気抵抗と小球の大きさは無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A から見た B の加速度（相対加速度）の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "A と B が出会うまでの時間 $t_1$ を求めよ（B が地面に落ちる前に出会うとする）．"
+     },
+     {
+      "id": "3",
+      "tex": "B が上昇している間に A と出会うための，$v_0$ の条件を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$H=19.6\\,\\mathrm m$，$v_0=19.6\\,\\mathrm{m/s}$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，A と B が出会う点の地面からの高さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "地面から高さ H の点にある小球 A と、その真下の地面から鉛直上向きに速さ v₀ で投げ上げる小球 B",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "velocity:v0",
+      "dir_deg": 90
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$0$（A から見ると，B は速さ $v_0$ で等速直線運動をする）",
+    "grading": "0 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$t_1=\\dfrac{H}{v_0}$",
+    "grading": "t_1：H/v_0"
+   },
+   {
+    "id": "3",
+    "tex": "$v_0>\\sqrt{gH}$"
+   },
+   {
+    "id": "4",
+    "tex": "$14.7\\,\\mathrm m$",
+    "grading": "14.7 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "鉛直上向きを正とする．\n\n(1) A も B も加速度は $-g$（同じ）．相対加速度は $(-g)-(-g)=0$．A から見た B の初速度は $v_0-0=v_0$（上向き）なので，A から見ると B は速さ $v_0$ で一直線に近づいてくる．\n\n(2) A から見た B は，はじめ距離 $H$ だけ下にあり，速さ $v_0$ で等速で近づくから $t_1=\\dfrac{H}{v_0}$．\n（地面から見て解くと：A の高さ $H-\\frac12gt^2$，B の高さ $v_0t-\\frac12gt^2$ が等しくなる時刻として $H=v_0t_1$．$\\frac12gt^2$ が両辺で消えることが，相対加速度 0 の表れ．）\n\n(3) B が最高点に達する時刻は $\\dfrac{v_0}{g}$．上昇中に出会うには $t_1<\\dfrac{v_0}{g}$，すなわち $\\dfrac{H}{v_0}<\\dfrac{v_0}{g}$ より $v_0^2>gH$，$v_0>\\sqrt{gH}$．\n\n(4) $t_1=\\dfrac{19.6}{19.6}=1.0\\,\\mathrm s$．このとき A は $\\dfrac12\\times9.8\\times1.0^2=4.9\\,\\mathrm m$ 落ちているので，高さは $19.6-4.9=14.7\\,\\mathrm m$．（$v_0^2=384>gH=192$ なので，B は上昇中で，B の速度は $19.6-9.8\\times1.0=9.8\\,\\mathrm{m/s}$ 上向き．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "同じ重力だけを受ける2物体の相対加速度は 0．一方から見れば，もう一方は等速直線運動をする．"
+ },
+ "concepts": [
+  "uniform-acceleration",
+  "acceleration-concept"
+ ],
+ "laws": [
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "相対運動",
+  "鉛直投げ上げ",
+  "自由落下"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

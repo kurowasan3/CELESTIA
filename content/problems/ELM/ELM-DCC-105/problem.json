@@ -1,0 +1,148 @@
+{
+ "id": "ELM-DCC-105",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "つり合っていないホイートストンブリッジ（橋の抵抗を流れる電流と合成抵抗）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "内部抵抗の無視できる起電力 $E$ の電池と，抵抗 $R_1$〜$R_5$ を図のようにつないだ（$R_5$ は C と D を結ぶ）．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$R_5$ に電流が流れないための条件を，$R_4$ を $R_1$，$R_2$，$R_3$ で表す式で答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "以下，$E=12\\,\\mathrm V$，$R_1=2.0\\,\\Omega$，$R_2=4.0\\,\\Omega$，$R_3=4.0\\,\\Omega$，$R_4=2.0\\,\\Omega$，$R_5=2.0\\,\\Omega$ とする．$R_5$ を外したとき，C と D の間の電位差は何 V か．"
+     },
+     {
+      "id": "3",
+      "tex": "$R_5$ をつないだとき，$R_5$ を流れる電流の大きさは何 A か．また，向きは C→D，D→C のどちらか．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) のとき，電池を流れる電流は何 A か．"
+     },
+     {
+      "id": "5",
+      "tex": "(3) のとき，A と B の間の合成抵抗は何 $\\Omega$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "電池 E の正極側が点 A、負極側が点 B。A から B へ、R₁ と R₂ を直列にした枝（間の点 C）と、R₃ と R₄ を直列にした枝（間の点 D）が並列につながり、C と D の間を R₅ が結ぶ",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$R_4=\\dfrac{R_2R_3}{R_1}$（$R_1R_4=R_2R_3$）",
+    "grading": "R_4：R_2 R_3/R_1"
+   },
+   {
+    "id": "2",
+    "tex": "$4.0\\,\\mathrm V$",
+    "grading": "4 [V]"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac67\\,\\mathrm A\\ (\\fallingdotseq0.86\\,\\mathrm A)$，C→D の向き",
+    "grading": "6/7 [A]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{30}7\\,\\mathrm A\\ (\\fallingdotseq4.3\\,\\mathrm A)$",
+    "grading": "30/7 [A]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac{14}5\\,\\Omega=2.8\\,\\Omega$",
+    "grading": "14/5 [Ω]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "B の電位を $0$，A の電位を $E$ とする．\n\n(1) $R_5$ に電流が流れないなら，$R_1$ と $R_2$，$R_3$ と $R_4$ はそれぞれ同じ電流が流れる直列で，C，D の電位は $\\dfrac{R_2}{R_1+R_2}E$，$\\dfrac{R_4}{R_3+R_4}E$．これらが等しい条件は $R_2(R_3+R_4)=R_4(R_1+R_2)$，つまり $R_1R_4=R_2R_3$，$R_4=\\dfrac{R_2R_3}{R_1}$．\n\n(2) $V_{\\mathrm C}=\\dfrac{4}{6}\\times12=8.0\\,\\mathrm V$，$V_{\\mathrm D}=\\dfrac26\\times12=4.0\\,\\mathrm V$．電位差は $4.0\\,\\mathrm V$（C の方が高い）．（$2.0\\times2.0\\neq4.0\\times4.0$ なので，つり合っていない．）\n\n(3) C，D の電位を $x$，$y$ とし，C と D でキルヒホッフの第1法則（流れこむ電流 $=$ 流れ出る電流）を書く：\\[\\text{C：}\\ \\frac{12-x}{2}=\\frac x4+\\frac{x-y}2,\\qquad \\text{D：}\\ \\frac{12-y}4+\\frac{x-y}2=\\frac y2\\]整理すると $5x-2y=24$，$-2x+5y=12$．解いて $x=\\dfrac{48}7\\,\\mathrm V$，$y=\\dfrac{36}7\\,\\mathrm V$．$R_5$ の電流は $\\dfrac{x-y}{2}=\\dfrac67\\,\\mathrm A$ で，電位の高い C から D へ流れる．\n\n(4) A から出る電流は $R_1$ と $R_3$ の電流の和：$\\dfrac{12-x}{2}+\\dfrac{12-y}{4}=\\dfrac{18}7+\\dfrac{12}7=\\dfrac{30}7\\,\\mathrm A$．（B に入る電流 $\\dfrac x4+\\dfrac y2=\\dfrac{12}7+\\dfrac{18}7$ と一致する．）\n\n(5) $\\dfrac{E}{I}=12\\div\\dfrac{30}7=\\dfrac{14}5=2.8\\,\\Omega$．"
+    }
+   ]
+  },
+  {
+   "id": "note",
+   "kind": "note",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "別の見方（テブナンの定理）：$R_5$ を外したときの C-D 間の電圧 $4.0\\,\\mathrm V$ と，電池を導線に置きかえて C-D 間から見た抵抗 $\\dfrac{2\\cdot4}{2+4}+\\dfrac{4\\cdot2}{4+2}=\\dfrac83\\,\\Omega$ から，$I_5=\\dfrac{4.0}{8/3+2.0}=\\dfrac67\\,\\mathrm A$ とも求められる（高校範囲外の考え方）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "ブリッジは直列・並列に分解できない → 節点の電位を未知数にしてキルヒホッフの第1法則を連立する．つり合いの条件は「C と D が等電位」．"
+ },
+ "concepts": [
+  "series-parallel",
+  "current-conservation",
+  "ohm-law-use"
+ ],
+ "laws": [
+  "kirchhoff-1st",
+  "kirchhoff-2nd",
+  "ohm-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ホイートストンブリッジ",
+  "キルヒホッフの法則",
+  "合成抵抗",
+  "直流回路"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

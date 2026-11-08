@@ -1,0 +1,129 @@
+{
+ "id": "ATM-XRY-101",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "X線の最短波長とブラッグ反射",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "X線管で，陰極から出た電子（初速 0 とする）を電圧 $V$ で加速して陽極に当てると，連続X線と固有X線が発生した．プランク定数を $h=6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$，光の速さを $c=3.0\\times10^{8}\\ \\mathrm{m/s}$，電気素量を $e=1.6\\times10^{-19}\\ \\mathrm C$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "連続X線の最短波長 $\\lambda_{\\mathrm{min}}$ を，$h$，$c$，$e$，$V$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$V=3.0\\times10^4\\ \\mathrm V$ のときの $\\lambda_{\\mathrm{min}}$ は何 m か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "このX線管から出る，波長 $\\lambda=1.5\\times10^{-10}\\ \\mathrm m$ の固有X線を，格子面の間隔 $d=2.5\\times10^{-10}\\ \\mathrm m$ の結晶に当てる．格子面と入射X線のなす角を $\\theta$ とすると，1次の強い反射が起こるときの $\\sin\\theta$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) で，$\\theta$ を $0^\\circ$ から $90^\\circ$ まで変えていくと，何次の反射まで観測されるか．"
+     },
+     {
+      "id": "5",
+      "tex": "加速電圧を $6.0\\times10^4\\ \\mathrm V$ にすると，$\\lambda_{\\mathrm{min}}$ は何倍になるか．"
+     },
+     {
+      "id": "6",
+      "tex": "(5) のとき，(3) の固有X線の1次の反射が起こる角 $\\theta$ は変わるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\lambda_{\\mathrm{min}}=\\dfrac{hc}{eV}$",
+    "grading": "λ_{min}：h c/(e V)"
+   },
+   {
+    "id": "2",
+    "tex": "$4.1\\times10^{-11}\\ \\mathrm m$",
+    "grading": "4.1*10^(-11) [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$\\sin\\theta=0.30$",
+    "grading": "0.30"
+   },
+   {
+    "id": "4",
+    "tex": "3次まで",
+    "grading": "3"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac12$ 倍",
+    "grading": "(1/2)倍"
+   },
+   {
+    "id": "6",
+    "tex": "変わらない．固有X線の波長は陽極の金属原子のエネルギー準位の差で決まり，加速電圧によらないから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 電子1個の運動エネルギー $eV$ がすべて1個のX線光子のエネルギーになるとき，波長が最も短い：$eV=\\dfrac{hc}{\\lambda_{\\mathrm{min}}}$ より $\\lambda_{\\mathrm{min}}=\\dfrac{hc}{eV}$．\n\n(2) $\\lambda_{\\mathrm{min}}=\\dfrac{6.6\\times10^{-34}\\times3.0\\times10^8}{1.6\\times10^{-19}\\times3.0\\times10^4}=\\dfrac{1.98\\times10^{-25}}{4.8\\times10^{-15}}\\fallingdotseq4.1\\times10^{-11}\\ \\mathrm m$．\n\n(3) 隣り合う格子面で反射したX線の経路差は $2d\\sin\\theta$．これが波長の整数倍のとき強め合う（ブラッグの条件 $2d\\sin\\theta=n\\lambda$）．$n=1$：$\\sin\\theta=\\dfrac{\\lambda}{2d}=\\dfrac{1.5\\times10^{-10}}{5.0\\times10^{-10}}=0.30$．\n\n(4) $\\sin\\theta=\\dfrac{n\\lambda}{2d}=0.30n\\le1$ より $n\\le3.3$．$n=3$（$\\sin\\theta=0.90$）まで．\n\n(5) $\\lambda_{\\mathrm{min}}\\propto\\dfrac1V$ なので $\\dfrac12$ 倍．\n\n(6) 固有X線は，陽極の原子の内側の電子が抜けた穴に外側の電子が移るときに出る．その波長は原子のエネルギー準位の差で決まるので，加速電圧を変えても（固有X線が出る限り）変わらない．よって $\\theta$ も変わらない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "連続X線の最短波長は「電子1個のエネルギーがすべて光子1個に」．固有X線の波長は陽極の原子で決まる．"
+ },
+ "concepts": [
+  "photon",
+  "light-interference"
+ ],
+ "laws": [
+  "photon-energy",
+  "interference-condition"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "X線",
+  "ブラッグ反射",
+  "固有X線"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

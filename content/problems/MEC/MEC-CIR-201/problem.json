@@ -1,0 +1,151 @@
+{
+ "id": "MEC-CIR-201",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "等速円運動の角速度・周期・加速度",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上で，質量 $0.50\\,\\mathrm{kg}$ の小球に軽い糸をつけ，糸の他端を点 O に固定した．小球は O を中心とする半径 $2.0\\,\\mathrm m$ の円周上を，速さ $4.0\\,\\mathrm{m/s}$ で等速円運動している．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "角速度 $\\omega$ は何 $\\mathrm{rad/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "周期 $T$ は何 $\\mathrm s$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "加速度の大きさ $a$ は何 $\\mathrm{m/s^2}$ か．また，その向きを答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "糸の張力の大きさ $S$ は何 $\\mathrm N$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "vector",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "上から見た図。点 O を中心とする半径 r の円周上の小球。速度 v は円の接線方向、糸の張力 S は中心 O の向き",
+   "caption": "上から見た図",
+   "physics": {
+    "forces": [
+     {
+      "name": "S",
+      "dir_deg": 270
+     }
+    ],
+    "netForce": {
+     "dir_deg": 270
+    },
+    "vectors": [
+     {
+      "name": "velocity:v",
+      "dir_deg": 180
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\omega=2.0\\,\\mathrm{rad/s}$",
+    "grading": "ω：2 [rad/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$T=\\pi\\,\\mathrm s\\approx3.1\\,\\mathrm s$",
+    "grading": "T：π [s]"
+   },
+   {
+    "id": "3",
+    "tex": "$a=8.0\\,\\mathrm{m/s^2}$，円の中心 O の向き",
+    "grading": "a：8 [m/s^2]"
+   },
+   {
+    "id": "4",
+    "tex": "$S=4.0\\,\\mathrm N$",
+    "grading": "S：4 [N]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $v=r\\omega$ より $\\omega=\\dfrac vr=\\dfrac{4.0}{2.0}=2.0\\,\\mathrm{rad/s}$．\n\n(2) $T=\\dfrac{2\\pi}{\\omega}=\\dfrac{2\\pi}{2.0}=\\pi\\,\\mathrm s\\approx3.1\\,\\mathrm s$．\n\n(3) $a=\\dfrac{v^2}{r}=\\dfrac{4.0^2}{2.0}=8.0\\,\\mathrm{m/s^2}$（$r\\omega^2$ でも同じ）．速さは一定でも速度の向きが変わり続けるので加速度があり，その向きは円の中心向き．\n\n(4) 水平面内で中心向きにはたらく力は糸の張力だけ（重力と垂直抗力は鉛直方向でつり合う）．運動方程式 $ma=S$ より $S=0.50\\times8.0=4.0\\,\\mathrm N$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "等速円運動の加速度は中心向きで大きさ $v^2/r=r\\omega^2$．その加速度をつくる力（向心力）は，実際にはたらく力（ここでは張力）．"
+ },
+ "simulation": {
+  "id": "mech.circular",
+  "preset": {
+   "r": 2,
+   "v": 4
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "circular-motion"
+ ],
+ "laws": [
+  "centripetal-acceleration",
+  "newton-2nd"
+ ],
+ "misconceptions": [
+  "MC-FLY-OUTWARD"
+ ],
+ "tags": [
+  "等速円運動",
+  "向心力",
+  "角速度"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

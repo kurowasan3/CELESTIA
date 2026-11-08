@@ -1,0 +1,161 @@
+{
+ "id": "ELM-IND-204",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "磁場の領域を通過する正方形コイル（一定の速さ・自由な運動）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，滑らかな水平面（紙面）上の $0\\le x\\le2a$ の領域にだけ，紙面の表から裏に向かう（鉛直下向きの）磁束密度 $B$ の一様な磁場がある．1辺の長さ $a$，抵抗 $R$，質量 $m$ の正方形の1巻きコイルが，辺を $x$ 軸に平行・垂直に保ったまま $x$ 軸の正の向きに進む．コイルの自己インダクタンスは無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "text",
+    "tex": "\\textbf{I}　外力を加えて，コイルを一定の速さ $v$ で動かす．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "（I）コイルの右の辺が磁場に入ってから左の辺が磁場に入るまでの間，コイルを流れる電流の大きさ $I$ を求めよ．また，電流の向きは紙面上で時計回りか，反時計回りか．"
+     },
+     {
+      "id": "2",
+      "tex": "（I）コイル全体が磁場の中にある間の電流の大きさを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "（I）コイルが磁場に入り始めてから完全に出るまでに，外力がした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "\\textbf{II}　次に，外力を加えず，右の辺が $x=0$ に達した瞬間の速さが $v_0$ となるようにコイルを進ませた．右の辺が磁場に入ってから距離 $s\\ (0<s<a)$ 進んだときの速さ $v(s)$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "（II）コイルが磁場の領域を完全に通り抜けるための $v_0$ の条件を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "（II）(5) の条件のもとで，通り抜けた後のコイルの速さ $v_1$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "0≦x≦2a の帯状の領域に紙面の表から裏へ向かう磁場。1辺 a の正方形コイルが x 軸の正の向きに進み、右の辺が x=0 に達したところ",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "velocity:v",
+      "dir_deg": 0
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I=\\dfrac{Bav}{R}$，反時計回り",
+    "grading": "I：B a v/R"
+   },
+   {
+    "id": "2",
+    "tex": "$0$",
+    "grading": "0"
+   },
+   {
+    "id": "3",
+    "tex": "$W=\\dfrac{2B^2a^3v}{R}$",
+    "grading": "W：2B^2 a^3 v/R"
+   },
+   {
+    "id": "4",
+    "tex": "$v(s)=v_0-\\dfrac{B^2a^2}{mR}s$",
+    "grading": "v：v_0-B^2 a^2 s/(m R)"
+   },
+   {
+    "id": "5",
+    "tex": "$v_0>\\dfrac{2B^2a^3}{mR}$",
+    "grading": "v_0>2B^2 a^3/(m R)"
+   },
+   {
+    "id": "6",
+    "tex": "$v_1=v_0-\\dfrac{2B^2a^3}{mR}$",
+    "grading": "v_1：v_0-2B^2 a^3/(m R)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 磁場の中にあるのは右の辺だけ．起電力 $vBa$，電流 $I=\\dfrac{Bav}{R}$．紙面の表から裏への磁束が増えるので，誘導電流は紙面の裏から表への磁場をつくる向き，つまり\\textbf{反時計回り}．\n\n\\textbf{(2)} 領域の幅 $2a$ はコイルの幅 $a$ より広いので，コイル全体が磁場の中にある時間がある．このとき磁束は変化しないので電流は $0$（左右の辺の起電力が打ち消し合う，と見てもよい）．\n\n\\textbf{(3)} 入るときと出るときに，それぞれ距離 $a$ の間だけ電流が流れ，運動を妨げる力 $IaB=\\dfrac{B^2a^2v}{R}$ を受ける．一定の速さなので外力も同じ大きさ．$W=2\\times\\dfrac{B^2a^2v}{R}\\times a=\\dfrac{2B^2a^3v}{R}$（すべてジュール熱になる）．\n\n\\textbf{(4)} 速さ $v$ のとき，コイルは $\\dfrac{B^2a^2v}{R}$ の力で減速される：$m\\dfrac{\\Delta v}{\\Delta t}=-\\dfrac{B^2a^2}{R}v$．$v\\Delta t=\\Delta s$ なので $m\\Delta v=-\\dfrac{B^2a^2}{R}\\Delta s$．速さは進んだ距離に比例して減る：$v(s)=v_0-\\dfrac{B^2a^2}{mR}s$．\n\n\\textbf{(5)} 速さが減るのは，入るときの距離 $a$ と出るときの距離 $a$ の合計 $2a$ の間だけ（全体が磁場の中にある間は力を受けず等速）．通り抜けるには，速さが $0$ になる前に合計 $2a$ 進めばよい：$v_0-\\dfrac{B^2a^2}{mR}\\cdot2a>0$，すなわち $v_0>\\dfrac{2B^2a^3}{mR}$．\n\n\\textbf{(6)} $v_1=v_0-\\dfrac{2B^2a^3}{mR}$．エネルギーで確かめると，失われた運動エネルギー $\\dfrac12m(v_0^2-v_1^2)$ がジュール熱になっている．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "磁束が変化するのは辺が境界を横切る間だけ．速さに比例する抵抗力では，速さは時間ではなく\\textbf{距離}に比例して減る．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "lorentz-force",
+  "equation-of-motion"
+ ],
+ "laws": [
+  "faraday-law",
+  "motional-emf",
+  "current-force",
+  "joule-heat"
+ ],
+ "misconceptions": [
+  "MC-INDUCTION-FLUX"
+ ],
+ "tags": [
+  "電磁誘導",
+  "コイル",
+  "磁場の領域",
+  "レンツの法則"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

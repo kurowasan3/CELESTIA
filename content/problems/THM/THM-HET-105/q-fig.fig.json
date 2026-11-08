@@ -1,0 +1,65 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  180
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    140
+   ],
+   "to": [
+    320,
+    140
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    230,
+    140
+   ],
+   "w": 80,
+   "h": 56,
+   "label": "M",
+   "phys": "body:block"
+  },
+  {
+   "t": "ball",
+   "at": [
+    70,
+    112
+   ],
+   "r": 6,
+   "label": "m",
+   "phys": "body:bullet"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    82,
+    112
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "velocity",
+   "phys": "vel:v",
+   "label": "v",
+   "labelPos": "mid"
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    160
+   ],
+   "text": "なめらかな水平面",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

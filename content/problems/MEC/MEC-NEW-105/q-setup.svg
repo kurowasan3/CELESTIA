@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 260" width="330" height="260" font-family="'Times New Roman', serif">
+<polygon points="20,80 200,80 200,250 20,250" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="20" y1="80" x2="200" y2="80" stroke="currentColor" stroke-width="2"/>
+<line x1="200" y1="80" x2="212" y2="68" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="212" cy="68" r="12" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="212" cy="68" r="3" fill="currentColor"/>
+<polygon points="236,10 300,10 300,20 236,20" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="236" y1="20" x2="300" y2="20" stroke="currentColor" stroke-width="2"/>
+<polyline points="130,56 212,56" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="224,68 224,170" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="256,20 256,170" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="240" cy="170" r="16" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="240" cy="170" r="3" fill="currentColor"/>
+<line x1="240" y1="170" x2="240" y2="208" stroke="currentColor" stroke-width="1.2"/>
+<g transform="translate(100,80) rotate(0)" data-phys="body:A" data-angle="0">
+<rect x="-30" y="-40" width="60" height="40" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-20" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<g transform="translate(240,238) rotate(0)" data-phys="body:B" data-angle="0">
+<rect x="-18" y="-30" width="36" height="30" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-15" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<text x="100" y="28" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+<text x="266" y="226" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+<text x="268" y="32" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">C</text>
+</svg>

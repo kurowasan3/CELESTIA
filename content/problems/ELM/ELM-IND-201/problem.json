@@ -1,0 +1,123 @@
+{
+ "id": "ELM-IND-201",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "ファラデーの電磁誘導の法則（数値）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "巻数 $N=200$ のコイルの両端に抵抗値 $3.0\\ \\Omega$ の抵抗をつないだ．コイルを貫く磁束が，$0.10\\ \\mathrm{s}$ の間に一定の割合で $2.0\\times10^{-3}\\ \\mathrm{Wb}$ から $5.0\\times10^{-3}\\ \\mathrm{Wb}$ に増加した．コイルの抵抗と自己インダクタンスは無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "磁束の変化 $\\Delta\\Phi$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "コイルに生じる誘導起電力の大きさ $V$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "抵抗を流れる電流の大きさ $I$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "この $0.10\\ \\mathrm{s}$ の間に抵抗で発生するジュール熱 $Q$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "その後，磁束が $5.0\\times10^{-3}\\ \\mathrm{Wb}$ のまま変化しなくなった．このときの電流の大きさ $I'$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\Delta\\Phi=3.0\\times10^{-3}\\ \\mathrm{Wb}$",
+    "grading": "ΔΦ：3.0*10^(-3) [Wb]"
+   },
+   {
+    "id": "2",
+    "tex": "$V=6.0\\ \\mathrm{V}$",
+    "grading": "V：6.0 [V]"
+   },
+   {
+    "id": "3",
+    "tex": "$I=2.0\\ \\mathrm{A}$",
+    "grading": "I：2.0 [A]"
+   },
+   {
+    "id": "4",
+    "tex": "$Q=1.2\\ \\mathrm{J}$",
+    "grading": "Q：1.2 [J]"
+   },
+   {
+    "id": "5",
+    "tex": "$I'=0\\ \\mathrm{A}$",
+    "grading": "I'：0 [A]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\Delta\\Phi=5.0\\times10^{-3}-2.0\\times10^{-3}=3.0\\times10^{-3}\\ \\mathrm{Wb}$．\n\n(2) ファラデーの法則 $V=N\\dfrac{\\Delta\\Phi}{\\Delta t}=200\\times\\dfrac{3.0\\times10^{-3}}{0.10}=6.0\\ \\mathrm{V}$．\n\n(3) $I=\\dfrac VR=\\dfrac{6.0}{3.0}=2.0\\ \\mathrm{A}$．\n\n(4) $Q=VIt=6.0\\times2.0\\times0.10=1.2\\ \\mathrm{J}$．\n\n(5) 誘導起電力は磁束の\\textbf{変化}で生じる．磁束が大きくても変化しなければ起電力は $0$ で，電流は流れない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "誘導起電力は磁束そのものではなく，磁束の時間変化の割合 $N\\dfrac{\\Delta\\Phi}{\\Delta t}$ で決まる．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "electric-power"
+ ],
+ "laws": [
+  "faraday-law",
+  "ohm-law",
+  "joule-heat"
+ ],
+ "misconceptions": [
+  "MC-INDUCTION-FLUX"
+ ],
+ "tags": [
+  "電磁誘導",
+  "ファラデーの法則",
+  "ジュール熱"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

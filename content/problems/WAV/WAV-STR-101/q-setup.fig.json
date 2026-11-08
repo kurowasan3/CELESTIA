@@ -1,0 +1,133 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  215
+ ],
+ "items": [
+  {
+   "t": "block",
+   "at": [
+    38,
+    125
+   ],
+   "w": 30,
+   "h": 45,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    142
+   ],
+   "text": "電磁おんさ",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "line",
+   "from": [
+    53,
+    100
+   ],
+   "to": [
+    330,
+    100
+   ],
+   "style": "thin",
+   "phys": "string"
+  },
+  {
+   "t": "sine",
+   "from": [
+    53,
+    100
+   ],
+   "to": [
+    330,
+    100
+   ],
+   "amp": 18,
+   "cycles": 1.5,
+   "func": "sin",
+   "mirror": true,
+   "style": "dash",
+   "phys": "mode"
+  },
+  {
+   "t": "circle",
+   "at": [
+    340,
+    110
+   ],
+   "r": 10
+  },
+  {
+   "t": "line",
+   "from": [
+    350,
+    110
+   ],
+   "to": [
+    350,
+    160
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "block",
+   "at": [
+    350,
+    192
+   ],
+   "w": 30,
+   "h": 32,
+   "label": "M"
+  },
+  {
+   "t": "line",
+   "from": [
+    53,
+    62
+   ],
+   "to": [
+    330,
+    62
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    53,
+    55
+   ],
+   "to": [
+    53,
+    69
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    330,
+    55
+   ],
+   "to": [
+    330,
+    69
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    192,
+    48
+   ],
+   "text": "L"
+  }
+ ]
+}

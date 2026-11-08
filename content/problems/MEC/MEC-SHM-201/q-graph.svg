@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 225" width="380" height="225" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="310">
+<line x1="50" y1="110" x2="350" y2="110" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="360,110 350,114.66 350,105.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="190">
+<line x1="50" y1="205" x2="50" y2="25" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="50,15 54.66,25 45.34,25" fill="currentColor"/>
+</g>
+<polyline points="50,50 51.75,50.18 53.5,50.74 55.25,51.66 57,52.94 58.75,54.57 60.5,56.54 62.25,58.84 64,61.46 65.75,64.38 67.5,67.57 69.25,71.03 71,74.73 72.75,78.65 74.5,82.76 76.25,87.04 78,91.46 79.75,95.99 81.5,100.61 83.25,105.29 85,110 86.75,114.71 88.5,119.39 90.25,124.01 92,128.54 93.75,132.96 95.5,137.24 97.25,141.35 99,145.27 100.75,148.97 102.5,152.43 104.25,155.62 106,158.54 107.75,161.16 109.5,163.46 111.25,165.43 113,167.06 114.75,168.34 116.5,169.26 118.25,169.82 120,170 121.75,169.82 123.5,169.26 125.25,168.34 127,167.06 128.75,165.43 130.5,163.46 132.25,161.16 134,158.54 135.75,155.62 137.5,152.43 139.25,148.97 141,145.27 142.75,141.35 144.5,137.24 146.25,132.96 148,128.54 149.75,124.01 151.5,119.39 153.25,114.71 155,110 156.75,105.29 158.5,100.61 160.25,95.99 162,91.46 163.75,87.04 165.5,82.76 167.25,78.65 169,74.73 170.75,71.03 172.5,67.57 174.25,64.38 176,61.46 177.75,58.84 179.5,56.54 181.25,54.57 183,52.94 184.75,51.66 186.5,50.74 188.25,50.18 190,50 191.75,50.18 193.5,50.74 195.25,51.66 197,52.94 198.75,54.57 200.5,56.54 202.25,58.84 204,61.46 205.75,64.38 207.5,67.57 209.25,71.03 211,74.73 212.75,78.65 214.5,82.76 216.25,87.04 218,91.46 219.75,95.99 221.5,100.61 223.25,105.29 225,110 226.75,114.71 228.5,119.39 230.25,124.01 232,128.54 233.75,132.96 235.5,137.24 237.25,141.35 239,145.27 240.75,148.97 242.5,152.43 244.25,155.62 246,158.54 247.75,161.16 249.5,163.46 251.25,165.43 253,167.06 254.75,168.34 256.5,169.26 258.25,169.82 260,170 261.75,169.82 263.5,169.26 265.25,168.34 267,167.06 268.75,165.43 270.5,163.46 272.25,161.16 274,158.54 275.75,155.62 277.5,152.43 279.25,148.97 281,145.27 282.75,141.35 284.5,137.24 286.25,132.96 288,128.54 289.75,124.01 291.5,119.39 293.25,114.71 295,110 296.75,105.29 298.5,100.61 300.25,95.99 302,91.46 303.75,87.04 305.5,82.76 307.25,78.65 309,74.73 310.75,71.03 312.5,67.57 314.25,64.38 316,61.46 317.75,58.84 319.5,56.54 321.25,54.57 323,52.94 324.75,51.66 326.5,50.74 328.25,50.18 330,50" fill="none" stroke="currentColor" stroke-width="2.4"/>
+<line x1="50" y1="50" x2="190" y2="50" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="50" y1="170" x2="120" y2="170" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="120" y1="110" x2="120" y2="170" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="190" y1="50" x2="190" y2="110" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="260" y1="110" x2="260" y2="170" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="330" y1="50" x2="330" y2="110" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="120" y="98" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">π/10</text>
+<text x="190" y="124" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">π/5</text>
+<text x="260" y="98" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">3π/10</text>
+<text x="330" y="124" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">2π/5</text>
+<text x="44" y="50" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.10</text>
+<text x="44" y="170" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">−0.10</text>
+<text x="40" y="120" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<text x="366" y="124" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">t [s]</text>
+<text x="62" y="18" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">x [m]</text>
+</svg>

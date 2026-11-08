@@ -1,0 +1,142 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  450,
+  230
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    190
+   ],
+   "dir": 0,
+   "len": 330,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    190
+   ],
+   "dir": 90,
+   "len": 170,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    396,
+    190
+   ],
+   "text": "I [A]",
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    20
+   ],
+   "text": "V [V]",
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    202
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    40.0
+   ],
+   "to": [
+    360.0,
+    190
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    70.0
+   ],
+   "to": [
+    120.0,
+    70.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    120.0,
+    70.0
+   ],
+   "to": [
+    120.0,
+    190
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "dot",
+   "at": [
+    120.0,
+    70.0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    54,
+    40.0
+   ],
+   "text": "1.5",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    54,
+    70.0
+   ],
+   "text": "1.2",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    120.0,
+    206
+   ],
+   "text": "0.60",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    360.0,
+    206
+   ],
+   "text": "3.0",
+   "italic": false,
+   "size": 13
+  }
+ ]
+}

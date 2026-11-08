@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 270" width="380" height="270" font-family="'Times New Roman', serif">
+<polygon points="270,200 269.32,202.87 267.27,205.69 263.91,208.42 259.28,211 253.47,213.39 246.57,215.56 238.7,217.45 230,219.05 220.61,220.33 210.71,221.25 200.44,221.81 190,222 179.56,221.81 169.29,221.25 159.39,220.33 150,219.05 141.3,217.45 133.43,215.56 126.53,213.39 120.72,211 116.09,208.42 112.73,205.69 110.68,202.87 110,200 110.68,197.13 112.73,194.31 116.09,191.58 120.72,189 126.53,186.61 133.43,184.44 141.3,182.55 150,180.95 159.39,179.67 169.29,178.75 179.56,178.19 190,178 200.44,178.19 210.71,178.75 220.61,179.67 230,180.95 238.7,182.55 246.57,184.44 253.47,186.61 259.28,189 263.91,191.58 267.27,194.31 269.32,197.13" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(190,140) rotate(0)" data-angle="0">
+<rect x="-17" y="-50" width="34" height="50" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-25" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">N</text>
+</g>
+<g transform="translate(190,90) rotate(0)" data-angle="0">
+<rect x="-17" y="-50" width="34" height="50" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-25" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">S</text>
+</g>
+<line x1="190" y1="150" x2="190" y2="228" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="60" y1="228" x2="320" y2="228" stroke="currentColor" stroke-width="2"/>
+<text x="300" y="200" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">コイル</text>
+<text x="240" y="70" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">棒磁石</text>
+<g class="f-ink" data-dir="270" data-len="30">
+<line x1="120" y1="70" x2="120" y2="90" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="120,100 115.34,90 124.66,90" fill="currentColor"/>
+</g>
+<text x="120" y="28" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">真上から見る</text>
+</svg>

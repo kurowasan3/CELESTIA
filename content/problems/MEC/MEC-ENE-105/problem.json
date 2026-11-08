@@ -1,0 +1,169 @@
+{
+ "id": "MEC-ENE-105",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "あらい曲面に沿ってゆっくり引き上げる仕事（摩擦の仕事は水平距離だけで決まる）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，水平な床の点 A から，高さ $h$ の台の上の点 B まで，なめらかに曲がった坂がある．坂の面は鉛直面内にあって，A から B に向かって高さが単調に増え，A と B の水平距離は $d$ である．坂の面はあらく，質量 $m$ の小物体との間の動摩擦係数は $\\mu$ である．この小物体を，坂の面に沿った向きの力 $F$ で，A から B までゆっくり引き上げる．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "坂の傾きの角が $\\varphi$ の部分を，面に沿って微小な距離 $\\Delta s$ だけ引き上げる．この間に動摩擦力がする仕事を，その間の水平方向の移動距離 $\\Delta x$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "A から B まで引き上げる間に，力 $F$ がした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$m=2.0\\,\\mathrm{kg}$，$h=3.75\\,\\mathrm m$，$d=5.0\\,\\mathrm m$，$\\mu=0.25$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，$W$ の値を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "坂を，A と B を結ぶ平らな斜面（動摩擦係数は同じ $0.25$）にとりかえ，(3) の小物体を B に置いて静かに放したところ，小物体は斜面を滑り下りた．A に達したときの速さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "床の点 A から高さ h の台の上の点 B まで、なめらかに曲がった坂がある。A と B の水平距離は d。小物体を坂の面に沿った力 F で引き上げる",
+   "caption": ""
+  },
+  {
+   "id": "a-element",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-element.svg",
+   "alt": "傾き φ の部分で、ゆっくり引き上げられる小物体にはたらく4力：重力 mg、垂直抗力 N、引く力 F（面に沿って上向き）、動摩擦力 μN（面に沿って下向き）。右下に、面に沿った移動 Δs とその水平成分 Δx の直角三角形",
+   "caption": "ゆっくり動かすので4力はつり合い，$N=mg\\cos\\varphi$．$\\Delta s\\cos\\varphi=\\Delta x$（図は $\\varphi=30^\\circ$，$\\mu=0.25$）",
+   "physics": {
+    "angle_deg": 30,
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 120
+     },
+     {
+      "name": "F",
+      "dir_deg": 30
+     },
+     {
+      "name": "f",
+      "dir_deg": 210
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$-\\mu mg\\,\\Delta x$"
+   },
+   {
+    "id": "2",
+    "tex": "$W=mg(h+\\mu d)$",
+    "grading": "W：m g h+μ m g d"
+   },
+   {
+    "id": "3",
+    "tex": "$98\\,\\mathrm J$",
+    "grading": "98 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$7.0\\,\\mathrm{m/s}$",
+    "grading": "7 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　ゆっくり引き上げるので，小物体にはたらく力はつり合っている（加速度も，曲がった面に沿って回る向心加速度も無視できる）．面に垂直な方向のつり合いから $N=mg\\cos\\varphi$．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-element"
+    },
+    {
+     "type": "text",
+     "tex": "動摩擦力の大きさは $\\mu N=\\mu mg\\cos\\varphi$ で，向きは移動と逆．$\\Delta s\\cos\\varphi=\\Delta x$ なので，仕事は\n\\[ -\\mu mg\\cos\\varphi\\cdot\\Delta s=\\boldsymbol{-\\mu mg\\,\\Delta x}. \\]\n傾きによらず，水平方向の移動距離だけで決まる．\n\n\\textbf{(2)}　ゆっくり動かすので運動エネルギーは変わらない（$\\approx0$）．仕事と運動エネルギーの関係より，すべての力の仕事の和は 0：\n\\[ W+(-mgh)+\\Bigl(-\\mu mg\\sum\\Delta x\\Bigr)+0=0. \\]\n垂直抗力は移動と垂直で仕事をせず，$\\sum\\Delta x=d$ なので\n\\[ W=\\boldsymbol{mg(h+\\mu d)}. \\]\n坂の曲がり方によらず，高さ $h$ と水平距離 $d$ だけで決まる．\n\n\\textbf{(3)}　$W=2.0\\times9.8\\times(3.75+0.25\\times5.0)=19.6\\times5.0=98\\,\\mathrm J$．\n\n\\textbf{(4)}　平らな斜面では，滑り下りるときも $N=mg\\cos\\varphi$ が成り立つので，(1) と同じく動摩擦力の仕事は $-\\mu mgd$．（この斜面は $\\tan\\varphi=\\dfrac{3.75}{5.0}=0.75$ で，$\\mu=0.25$ より大きいので確かに滑り下りる．）\n\\[ \\frac12mv^2=mgh-\\mu mgd\\quad\\Longrightarrow\\quad v=\\sqrt{2g(h-\\mu d)}=\\sqrt{2\\times9.8\\times2.5}=7.0\\,\\mathrm{m/s}. \\]\n曲がった坂を速く滑り下りる場合は，面に沿って曲がるための向心力が必要になり $N\\ne mg\\cos\\varphi$ となるので，この簡単な関係は使えない．平らな斜面にとりかえたのはそのためである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "あらい面の動摩擦力の仕事は $-\\mu mg\\cos\\varphi\\cdot\\Delta s=-\\mu mg\\Delta x$．ゆっくり動かすなら面の形によらず「高さ」と「水平距離」だけで仕事が決まる．"
+ },
+ "concepts": [
+  "work-energy",
+  "normal-force",
+  "force-decomposition"
+ ],
+ "laws": [
+  "work-energy-theorem",
+  "friction-law",
+  "newton-1st"
+ ],
+ "misconceptions": [
+  "MC-NORMAL-EQ-MG"
+ ],
+ "tags": [
+  "仕事",
+  "摩擦",
+  "曲面",
+  "仕事と運動エネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

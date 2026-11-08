@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="500" height="240" font-family="'Times New Roman', serif">
+<g data-phys="battery:E₁ = 6.0 V">
+<line x1="60" y1="210" x2="60" y2="185" stroke="currentColor" stroke-width="1.6"/>
+<line x1="60" y1="175" x2="60" y2="150" stroke="currentColor" stroke-width="1.6"/>
+<line x1="74" y1="175" x2="46" y2="175" stroke="currentColor" stroke-width="1.6"/>
+<line x1="67" y1="185" x2="53" y2="185" stroke="currentColor" stroke-width="3"/>
+<text x="80" y="180" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">E₁ = 6.0 V</text>
+</g>
+<polyline points="60,150 60,130" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:R₁ = 2.0 Ω">
+<line x1="60" y1="130" x2="60" y2="116" stroke="currentColor" stroke-width="1.6"/>
+<line x1="60" y1="74" x2="60" y2="60" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="67,116 67,74 53,74 53,116" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="74" y="95" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">R₁ = 2.0 Ω</text>
+</g>
+<polyline points="60,60 60,40 360,40 360,60" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:R₃ = 2.0 Ω">
+<line x1="210" y1="40" x2="210" y2="102" stroke="currentColor" stroke-width="1.6"/>
+<line x1="210" y1="148" x2="210" y2="210" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="203,102 203,148 217,148 217,102" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="224" y="125" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">R₃ = 2.0 Ω</text>
+</g>
+<g data-phys="battery:E₂ = 4.0 V">
+<line x1="360" y1="210" x2="360" y2="185" stroke="currentColor" stroke-width="1.6"/>
+<line x1="360" y1="175" x2="360" y2="150" stroke="currentColor" stroke-width="1.6"/>
+<line x1="374" y1="175" x2="346" y2="175" stroke="currentColor" stroke-width="1.6"/>
+<line x1="367" y1="185" x2="353" y2="185" stroke="currentColor" stroke-width="3"/>
+<text x="380" y="180" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">E₂ = 4.0 V</text>
+</g>
+<polyline points="360,150 360,130" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:R₂ = 1.0 Ω">
+<line x1="360" y1="130" x2="360" y2="116" stroke="currentColor" stroke-width="1.6"/>
+<line x1="360" y1="74" x2="360" y2="60" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="367,116 367,74 353,74 353,116" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="374" y="95" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">R₂ = 1.0 Ω</text>
+</g>
+<polyline points="60,210 360,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="210" cy="40" r="3" fill="currentColor"/>
+<circle cx="210" cy="210" r="3" fill="currentColor"/>
+<text x="210" y="26" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<text x="210" y="226" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">Q</text>
+</svg>

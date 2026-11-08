@@ -1,0 +1,151 @@
+{
+ "id": "ESY-CYC-101",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "サイクロトロン：周期・軌道半径・最大エネルギー・加速の回数",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "サイクロトロンは，半径 $R_0$ の半円形の中空の2つの電極 D$_1$，D$_2$ を，狭いすきまをへだてて向かい合わせ，電極の面に垂直に磁束密度 $B$ の一様な磁場をかけた装置である．電極の内部には電場が無く，すきまには交流電圧をかけて，粒子がすきまを通るたびにちょうど電位差 $V$ で加速されるように調整する．質量 $m$，電気量 $q\\ (>0)$ の粒子を中心付近から初速 $0$ で加速し始める．すきまの幅と，すきまを通る時間は無視でき，相対論的な効果も考えない．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "粒子が電極の中で半円を描くのにかかる時間 $t_{\\rm h}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "交流電圧の周波数 $f$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "粒子がすきまを $n$ 回通過した直後の速さ $v_n$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "その後，電極の中で描く半円の半径 $r_n$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$r_{n+1}-r_n$ は $n$ が大きくなるとどうなるか．"
+     },
+     {
+      "id": "6",
+      "tex": "電極の縁（半径 $R_0$）から取り出すときの粒子の運動エネルギー $K$ を求めよ．"
+     },
+     {
+      "id": "7",
+      "tex": "$K$ を得るまでにすきまを通過する回数 $N$（整数になるものとする）と，中心から取り出すまでにかかる時間 $t_{\\rm tot}$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$t_{\\rm h}=\\dfrac{\\pi m}{qB}$",
+    "grading": "t_h：π m/(q B)"
+   },
+   {
+    "id": "2",
+    "tex": "$f=\\dfrac{qB}{2\\pi m}$",
+    "grading": "f：q B/(2π m)"
+   },
+   {
+    "id": "3",
+    "tex": "$v_n=\\sqrt{\\dfrac{2nqV}m}$",
+    "grading": "v_n：sqrt(2n q V/m)"
+   },
+   {
+    "id": "4",
+    "tex": "$r_n=\\dfrac1B\\sqrt{\\dfrac{2nmV}q}$",
+    "grading": "r_n：sqrt(2n m V/q)/B"
+   },
+   {
+    "id": "5",
+    "tex": "小さくなる（$\\sqrt{n+1}-\\sqrt n$ に比例して $0$ に近づく）"
+   },
+   {
+    "id": "6",
+    "tex": "$K=\\dfrac{q^2B^2R_0^2}{2m}$",
+    "grading": "K：q^2 B^2 R_0^2/(2m)"
+   },
+   {
+    "id": "7",
+    "tex": "$N=\\dfrac{qB^2R_0^2}{2mV}$，$t_{\\rm tot}=\\dfrac{\\pi BR_0^2}{2V}$",
+    "grading": "N：q B^2 R_0^2/(2m V) ; t_tot：π B R_0^2/(2V)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 電極の中では磁場だけがはたらき，等速円運動 $qvB=m\\dfrac{v^2}r$．周期 $\\dfrac{2\\pi m}{qB}$ は速さによらないので，半円の時間 $t_{\\rm h}=\\dfrac{\\pi m}{qB}$ もつねに同じ．\n\n\\textbf{(2)} 粒子は $t_{\\rm h}$ ごとにすきまを逆向きに通るので，電圧の向きも $t_{\\rm h}$ ごとに反転させる．周期 $2t_{\\rm h}$，$f=\\dfrac{qB}{2\\pi m}$（サイクロトロン周波数）．\n\n\\textbf{(3)} 1回の通過で $qV$ ずつ運動エネルギーが増える：$\\dfrac12mv_n^2=nqV$，$v_n=\\sqrt{\\dfrac{2nqV}m}$．\n\n\\textbf{(4)} $r_n=\\dfrac{mv_n}{qB}=\\dfrac1B\\sqrt{\\dfrac{2nmV}q}$．\n\n\\textbf{(5)} $r_n\\propto\\sqrt n$ なので $r_{n+1}-r_n\\propto\\sqrt{n+1}-\\sqrt n=\\dfrac1{\\sqrt{n+1}+\\sqrt n}$．$n$ が大きいほど小さくなり，軌道の間隔は外側ほど詰まる．\n\n\\textbf{(6)} 半径 $R_0$ のとき $v=\\dfrac{qBR_0}m$．$K=\\dfrac12mv^2=\\dfrac{q^2B^2R_0^2}{2m}$．$V$ によらない．\n\n\\textbf{(7)} $NqV=K$ より $N=\\dfrac{qB^2R_0^2}{2mV}$．すきまの通過の間に半円を $N$ 回描くので $t_{\\rm tot}=Nt_{\\rm h}=\\dfrac{qB^2R_0^2}{2mV}\\cdot\\dfrac{\\pi m}{qB}=\\dfrac{\\pi BR_0^2}{2V}$．粒子の $m,\\ q$ によらない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "磁場中の周期が速さによらないので，一定の周波数の交流で何度も加速できる．取り出すエネルギーは電極の半径と磁場だけで決まる．"
+ },
+ "simulation": {
+  "id": "elm.lorentz",
+  "preset": {
+   "A": 1,
+   "Z": 1,
+   "v": 5,
+   "B": 0.5
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "lorentz-force",
+  "circular-motion",
+  "coulomb-field"
+ ],
+ "laws": [
+  "cyclotron-motion",
+  "lorentz-force",
+  "work-energy-theorem"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "サイクロトロン",
+  "ローレンツ力",
+  "円運動",
+  "加速器"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

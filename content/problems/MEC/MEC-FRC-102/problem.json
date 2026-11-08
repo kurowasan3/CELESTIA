@@ -1,0 +1,149 @@
+{
+ "id": "MEC-FRC-102",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-02",
+ "topic": "2本の糸でつるしたおもりの張力（力の分解とつり合い）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $2.0\\,\\mathrm{kg}$ のおもりを軽い糸でつるし，その糸の上端の結び目に2本の軽い糸1，2を結んで天井に固定した．おもりが静止したとき，糸1は鉛直と $30^\\circ$，糸2は鉛直と $60^\\circ$ の角をなしていた．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "糸1の張力の大きさ $T_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "糸2の張力の大きさ $T_2$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ある生徒は「2本の糸でおもりを支えているので，$T_1+T_2$ はおもりにはたらく重力の大きさに等しい」と考えた．この考えの誤りを説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "天井から2本の糸1、2でつるしたおもり。糸1は鉛直と30°、糸2は鉛直と60°の角をなす",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "結び目にはたらく3力：糸1の張力 T₁（鉛直から左へ30°）、糸2の張力 T₂（鉛直から右へ60°）、下の糸が引く力 mg（鉛直下向き）",
+   "caption": "結び目にはたらく3力のつり合い（$T_1:T_2:mg=\\sqrt3:1:2$）",
+   "physics": {
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "T1",
+      "dir_deg": 120
+     },
+     {
+      "name": "T2",
+      "dir_deg": 30
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_1=9.8\\sqrt3\\,\\mathrm N\\fallingdotseq17\\,\\mathrm N$",
+    "grading": "9.8sqrt(3) [N]"
+   },
+   {
+    "id": "2",
+    "tex": "$T_2=9.8\\,\\mathrm N$",
+    "grading": "9.8 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "張力は向きの違う力なので，つり合うのはベクトルとしての和．鉛直成分の和 $T_1\\cos30^\\circ+T_2\\cos60^\\circ$ が $mg$ に等しく，大きさの和 $T_1+T_2\\fallingdotseq27\\,\\mathrm N$ は $mg=19.6\\,\\mathrm N$ より大きい．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "結び目にはたらく力を考える．下の糸は結び目を $mg=2.0\\times9.8=19.6\\,\\mathrm N$ で下に引く．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "水平方向：$T_1\\sin30^\\circ=T_2\\sin60^\\circ$　より　$T_1=\\sqrt3\\,T_2$．\n\n鉛直方向：$T_1\\cos30^\\circ+T_2\\cos60^\\circ=mg$　に代入して　$\\dfrac32T_2+\\dfrac12T_2=2T_2=mg$．\n\n(2) $T_2=\\dfrac{mg}{2}=9.8\\,\\mathrm N$．\n\n(1) $T_1=\\sqrt3\\,T_2=9.8\\sqrt3\\fallingdotseq17\\,\\mathrm N$．\n（3力の矢印をつなぐと，$30^\\circ$，$60^\\circ$，$90^\\circ$ の直角三角形になる．斜辺が $mg$ なので $T_1=mg\\cos30^\\circ$，$T_2=mg\\sin30^\\circ$ と求めてもよい．）\n\n(3) $T_1+T_2=9.8(\\sqrt3+1)\\fallingdotseq27\\,\\mathrm N$ で，$mg=19.6\\,\\mathrm N$ より大きい．張力の水平成分どうしは打ち消し合うだけで，おもりを支えるのに役立つのは鉛直成分だけ．力のつり合いは，大きさの和ではなく，向きも含めたベクトルの和で考える．鉛直に近い糸1のほうが大きな張力を受けることにも注意．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "向きの違う力のつり合いは，水平・鉛直の成分ごとに（または矢印をつないだ三角形で）考える．大きさを足してはいけない．"
+ },
+ "concepts": [
+  "force-decomposition",
+  "equilibrium"
+ ],
+ "laws": [
+  "newton-1st"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力のつり合い",
+  "張力",
+  "力の分解"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

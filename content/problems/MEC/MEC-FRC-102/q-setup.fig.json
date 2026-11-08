@@ -1,0 +1,157 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  220
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     90,
+     30
+    ],
+    [
+     345,
+     30
+    ],
+    [
+     345,
+     40
+    ],
+    [
+     90,
+     40
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    90,
+    40
+   ],
+   "to": [
+    345,
+    40
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    130
+   ],
+   "to": [
+    118.04,
+    40
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    130
+   ],
+   "to": [
+    325.88,
+    40
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    130
+   ],
+   "to": [
+    170,
+    166
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "ball",
+   "at": [
+    170,
+    180
+   ],
+   "r": 14,
+   "phys": "body:ball"
+  },
+  {
+   "t": "text",
+   "at": [
+    194,
+    186
+   ],
+   "text": "2.0 kg",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    130
+   ],
+   "to": [
+    170,
+    44
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    170,
+    130
+   ],
+   "r": 34,
+   "from": 90,
+   "to": 120,
+   "label": "30°",
+   "labelGap": 14
+  },
+  {
+   "t": "arc",
+   "at": [
+    170,
+    130
+   ],
+   "r": 44,
+   "from": 30,
+   "to": 90,
+   "label": "60°",
+   "labelGap": 14
+  },
+  {
+   "t": "text",
+   "at": [
+    128,
+    70
+   ],
+   "text": "糸1",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    262,
+    66
+   ],
+   "text": "糸2",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  }
+ ]
+}

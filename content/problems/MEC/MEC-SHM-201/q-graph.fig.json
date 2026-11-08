@@ -1,0 +1,215 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  225
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    110
+   ],
+   "dir": 0,
+   "len": 310,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    205
+   ],
+   "dir": 90,
+   "len": 190,
+   "style": "thin"
+  },
+  {
+   "t": "sine",
+   "from": [
+    50,
+    110
+   ],
+   "to": [
+    330,
+    110
+   ],
+   "amp": 60,
+   "cycles": 2,
+   "func": "cos",
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    50
+   ],
+   "to": [
+    190,
+    50
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    170
+   ],
+   "to": [
+    120,
+    170
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    120,
+    110
+   ],
+   "to": [
+    120,
+    170
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    50
+   ],
+   "to": [
+    190,
+    110
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    260,
+    110
+   ],
+   "to": [
+    260,
+    170
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    330,
+    50
+   ],
+   "to": [
+    330,
+    110
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    120,
+    98
+   ],
+   "text": "π/10",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    190,
+    124
+   ],
+   "text": "π/5",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    98
+   ],
+   "text": "3π/10",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    124
+   ],
+   "text": "2π/5",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    44,
+    50
+   ],
+   "text": "0.10",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    44,
+    170
+   ],
+   "text": "−0.10",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    120
+   ],
+   "text": "O",
+   "italic": true,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    366,
+    124
+   ],
+   "text": "t [s]",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    62,
+    18
+   ],
+   "text": "x [m]",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  }
+ ]
+}

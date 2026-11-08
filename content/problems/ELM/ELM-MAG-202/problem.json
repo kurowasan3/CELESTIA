@@ -1,0 +1,132 @@
+{
+ "id": "ELM-MAG-202",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "2本の平行電流がつくる磁場の重ね合わせ",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中で，紙面に垂直な十分に長い2本の導線 P，Q が距離 $d$ 離れて平行に置かれている．P には大きさ $I$，Q には大きさ $2I$ の電流を，ともに紙面の裏から表の向きに流す．真空の透磁率を $\\mu_0$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "線分 PQ の中点 M での磁束密度の大きさ $B_{\\rm M}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "線分 PQ 上で磁束密度が $0$ になる点の，P からの距離 $x$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "次に，Q の電流の向きだけを逆（紙面の表から裏の向き）にした．直線 PQ 上で磁束密度が $0$ になる点はどこか．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) のとき，Q の長さ $l$ の部分が P の電流から受ける力の大きさ $F$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の力は，Q を P に近づける向きか，遠ざける向きか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "紙面に垂直な2本の導線 P と Q が距離 d 離れて並ぶ。P の電流は I、Q の電流は 2I で、どちらも紙面の裏から表の向き",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$B_{\\rm M}=\\dfrac{\\mu_0I}{\\pi d}$",
+    "grading": "B_M：μ_0 I/(π d)"
+   },
+   {
+    "id": "2",
+    "tex": "$x=\\dfrac d3$",
+    "grading": "x：d/3"
+   },
+   {
+    "id": "3",
+    "tex": "P に関して Q と反対側で，P から距離 $d$ の点"
+   },
+   {
+    "id": "4",
+    "tex": "$F=\\dfrac{\\mu_0I^2l}{\\pi d}$",
+    "grading": "F：μ_0 I^2 l/(π d)"
+   },
+   {
+    "id": "5",
+    "tex": "遠ざける向き（反発し合う）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "直線電流 $I$ が距離 $r$ につくる磁束密度は $\\dfrac{\\mu_0I}{2\\pi r}$．向きは右ねじの法則で，電流が紙面の裏から表へ向かうとき，磁場は反時計回り．\n\n(1) 同じ向きの電流がつくる磁場は，2本の間では逆向きになる．M では P による磁場は $\\dfrac{\\mu_0I}{2\\pi(d/2)}=\\dfrac{\\mu_0I}{\\pi d}$，Q による磁場は $\\dfrac{2\\mu_0I}{\\pi d}$ で逆向きなので $B_{\\rm M}=\\dfrac{2\\mu_0I}{\\pi d}-\\dfrac{\\mu_0I}{\\pi d}=\\dfrac{\\mu_0I}{\\pi d}$（向きは Q による磁場の向き）．\n\n(2) 2本の間では逆向きなので，大きさが等しい点で $0$：$\\dfrac{\\mu_0I}{2\\pi x}=\\dfrac{\\mu_0\\cdot2I}{2\\pi(d-x)}$ より $d-x=2x$，$x=\\dfrac d3$（電流の小さい P に近い）．2本の外側では同じ向きに強め合うので $0$ にならない．\n\n(3) 逆向きの電流では，2本の間で磁場が強め合い，外側で逆向きになる．外側で大きさが等しくなるのは，電流の小さい P の側．P に関して Q と反対側で P から距離 $y$ の点では $\\dfrac{\\mu_0I}{2\\pi y}=\\dfrac{2\\mu_0I}{2\\pi(y+d)}$ より $y+d=2y$，$y=d$．\n\n(4) Q の位置での P による磁束密度は $\\dfrac{\\mu_0I}{2\\pi d}$．$F=2I\\cdot\\dfrac{\\mu_0I}{2\\pi d}\\cdot l=\\dfrac{\\mu_0I^2l}{\\pi d}$．\n\n(5) 逆向きの電流は反発し合う（同じ向きなら引き合う）．よって Q を P から遠ざける向き．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "磁場はベクトルとして重ね合わせる．2本の間で打ち消すのは同じ向きの電流，外側で打ち消すのは逆向きの電流で，0 の点は電流の小さい導線に近い側にできる．"
+ },
+ "concepts": [
+  "lorentz-force"
+ ],
+ "laws": [
+  "straight-current-field",
+  "current-force"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "直線電流",
+  "磁場の重ね合わせ",
+  "平行電流"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

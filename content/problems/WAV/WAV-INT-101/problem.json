@@ -1,0 +1,131 @@
+{
+ "id": "WAV-INT-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "水面上の2波源の干渉と，波源の位相差による強め合う線のずれ",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水面上の2点 $\\mathrm S_1$，$\\mathrm S_2$（間隔 $d$）に波源があり，同じ振幅・同じ振動数で振動して，波長 $\\lambda$ の円形波を送り出している．波の減衰は無視する．線分 $\\mathrm S_1\\mathrm S_2$ の中点を M とし，線分上の点の位置を，M から $\\mathrm S_2$ に向かう向きを正とした座標 $x$ で表す．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "2つの波源が同位相で振動しているとき，線分 $\\mathrm S_1\\mathrm S_2$ 上（両端を除く）で波が強め合う点の位置 $x$ を，整数 $m$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$d=2.2\\lambda$ で同位相のとき，水面上にできる強め合う点を連ねた線（$\\mathrm S_1\\mathrm S_2$ と交わるもの）は何本あるか．"
+     },
+     {
+      "id": "3",
+      "tex": "$d=2.2\\lambda$ で，2つの波源を逆位相で振動させると，強め合う線は何本になるか．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\mathrm S_2$ の振動が $\\mathrm S_1$ の振動より位相が $\\delta\\ (0<\\delta<\\pi)$ だけ遅れているとき，線分 $\\mathrm S_1\\mathrm S_2$ 上で M に最も近い強め合う点は，M からどちらの波源の向きに，どれだけずれた位置にあるか．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\lambda=2.0\\,\\mathrm{cm}$，$\\delta=\\dfrac\\pi2$ のとき，(4) のずれの大きさを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$x=\\dfrac{m\\lambda}2$（$m$ は整数，$|x|<\\dfrac d2$）"
+   },
+   {
+    "id": "2",
+    "tex": "$5$ 本",
+    "grading": "5本"
+   },
+   {
+    "id": "3",
+    "tex": "$4$ 本",
+    "grading": "4本"
+   },
+   {
+    "id": "4",
+    "tex": "$\\mathrm S_2$ の向きに $\\dfrac{\\delta\\lambda}{4\\pi}$",
+    "grading": "δλ/(4π)"
+   },
+   {
+    "id": "5",
+    "tex": "$0.25\\,\\mathrm{cm}$（$\\mathrm S_2$ の向き）",
+    "grading": "0.25 [cm]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 点 $x$ から $\\mathrm S_1$，$\\mathrm S_2$ までの距離は $l_1=\\dfrac d2+x$，$l_2=\\dfrac d2-x$．同位相の波源では，経路差 $|l_1-l_2|=|2x|$ が波長の整数倍のとき強め合う：$2x=m\\lambda$ より $\\boldsymbol{x=\\dfrac{m\\lambda}2}$．線分上には $\\dfrac\\lambda2$ おきに強め合う点（定常波の腹）が並ぶ．\n\n\\textbf{(2)} 強め合う線は $|l_1-l_2|=|m|\\lambda$ の双曲線で，線分と交わるには $|m|\\lambda<d=2.2\\lambda$．$m=0,\\pm1,\\pm2$ の $\\boldsymbol5$ 本．\n\n\\textbf{(3)} 逆位相では強め合いの条件が $|l_1-l_2|=\\left(m+\\dfrac12\\right)\\lambda$ に変わる．$\\left|m+\\dfrac12\\right|<2.2$ を満たすのは $m+\\dfrac12=\\pm\\dfrac12,\\ \\pm\\dfrac32$ の $\\boldsymbol4$ 本．（$\\pm\\dfrac52\\lambda>d$ は不可．）中央の M は弱め合う点になる．\n\n\\textbf{(4)} 波数 $k=\\dfrac{2\\pi}\\lambda$，角振動数 $\\omega$ として，点 $x$ に届く2つの波の位相は $\\omega t-kl_1$ と $\\omega t-\\delta-kl_2$．位相差\n\\[ (\\omega t-kl_1)-(\\omega t-\\delta-kl_2)=k(l_2-l_1)+\\delta=-2kx+\\delta \\]\nが $2\\pi$ の整数倍のとき強め合う．$-2kx+\\delta=-2\\pi m$ より $x=\\dfrac{\\delta\\lambda}{4\\pi}+\\dfrac{m\\lambda}2$．$0<\\delta<\\pi$ では，M に最も近いのは $m=0$ の $x=\\dfrac{\\delta\\lambda}{4\\pi}\\ \\left(<\\dfrac\\lambda4\\right)$ で，\n\\[ \\boldsymbol{\\mathrm S_2\\ \\text{の向きに}\\ \\frac{\\delta\\lambda}{4\\pi}} \\]\n遅れて出た $\\mathrm S_2$ の波が近い距離で届くことで，遅れを取りもどす点が強め合う．強め合う線全体が $\\mathrm S_2$ 側にずれる．\n\n\\textbf{(5)} $\\dfrac{(\\pi/2)\\times2.0}{4\\pi}=\\boldsymbol{0.25\\,\\mathrm{cm}}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "強め合う条件は「2つの波の位相差が $2\\pi$ の整数倍」．同位相なら経路差 $m\\lambda$，逆位相なら $(m+\\frac12)\\lambda$，位相差 $\\delta$ があれば経路差 $\\dfrac{\\delta}{2\\pi}\\lambda$ の分だけ条件がずれる．"
+ },
+ "simulation": {
+  "id": "wave.interference",
+  "preset": {
+   "d": 2.2,
+   "lambda": 1,
+   "f": 0.8,
+   "phase": 0
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "interference",
+  "superposition"
+ ],
+ "laws": [
+  "interference-condition",
+  "superposition"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "干渉",
+  "水面波",
+  "位相差",
+  "双曲線"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

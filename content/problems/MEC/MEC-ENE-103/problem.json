@@ -1,0 +1,128 @@
+{
+ "id": "MEC-ENE-103",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "ばねで打ち出した物体とあらい区間の往復（摩擦による損失は通った道のりに比例）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な床の左右に壁があり，左の壁にばね1，右の壁にばね2（どちらもばね定数 $98\\,\\mathrm{N/m}$ の軽いばね）が取りつけてある．床は長さ $0.30\\,\\mathrm m$ の区間 PQ だけがあらく，物体との間の動摩擦係数は $0.25$ で，ほかの部分はなめらかである．質量 $0.50\\,\\mathrm{kg}$ の小物体をばね1に押しつけて，ばね1を自然の長さから $0.10\\,\\mathrm m$ 縮め，静かに放した．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "物体がばね1から離れるときの速さを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "物体が区間 PQ を通り抜けて Q を通過するときの速さを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ばね2の縮みの最大値を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "物体は最終的にどこに止まるか．Q からの距離で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左の壁のばね1に押しつけた 0.50 kg の物体。床の中央に長さ 0.30 m のあらい区間 PQ があり、右の壁にばね2がある",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1.4\\,\\mathrm{m/s}$",
+    "grading": "1.4 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$0.70\\,\\mathrm{m/s}$",
+    "grading": "0.7 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$5.0\\times10^{-2}\\,\\mathrm m$（$5.0\\,\\mathrm{cm}$）",
+    "grading": "0.05 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "区間 PQ 内の，Q から P の向きに $0.10\\,\\mathrm m$ の点",
+    "grading": "0.1 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "なめらかな部分では力学的エネルギーが保存し，あらい区間では動摩擦力 $\\mu'mg=0.25\\times0.50\\times9.8=1.225\\,\\mathrm N$ が負の仕事をする．\n\n(1) 弾性エネルギーがすべて運動エネルギーになる：$\\dfrac12\\times98\\times0.10^2=\\dfrac12\\times0.50\\times v_1^2$．左辺は $0.49\\,\\mathrm J$ で，$v_1^2=1.96$，$v_1=1.4\\,\\mathrm{m/s}$．\n\n(2) PQ を通る間に動摩擦力がする仕事は $-1.225\\times0.30=-0.3675\\,\\mathrm J$．\n$\\dfrac12\\times0.50\\times v_2^2=0.49-0.3675=0.1225\\,\\mathrm J$ より $v_2^2=0.49$，$v_2=0.70\\,\\mathrm{m/s}$．\n\n(3) $\\dfrac12\\times98\\times x^2=0.1225$ より $x^2=2.5\\times10^{-3}$，$x=5.0\\times10^{-2}\\,\\mathrm m$．\n\n(4) 摩擦で失われるエネルギーは，あらい区間を通った道のりに比例する．はじめの $0.49\\,\\mathrm J$ をすべて失うまでに，あらい区間を通る道のりの合計 $s$ は\n$1.225\\times s=0.49$ より $s=0.40\\,\\mathrm m$．\n1回目に PQ を通り抜けるのに $0.30\\,\\mathrm m$ 使い，ばね2ではね返されて Q から再び PQ に入り，残り $0.10\\,\\mathrm m$ 進んで止まる．よって，Q から P の向きに $0.10\\,\\mathrm m$ の点（P からは $0.20\\,\\mathrm m$）．\n（止まった点では，ばねの力もはたらかず，速さ 0 の物体には動摩擦力もはたらかないので，そのまま静止する．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "動摩擦力の仕事は「$-\\mu'mg\\times$ 通った道のり」．往復しても打ち消されず，道のりの合計で損失が決まる．"
+ },
+ "concepts": [
+  "work-energy",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "work-energy-theorem",
+  "hooke-law",
+  "friction-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "仕事と運動エネルギー",
+  "ばね",
+  "摩擦",
+  "往復運動"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

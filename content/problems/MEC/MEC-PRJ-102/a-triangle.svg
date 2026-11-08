@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 290" width="260" height="290" font-family="'Times New Roman', serif">
+<g class="f-vel" data-phys="velocity:v0" data-dir="60" data-len="140">
+<line x1="70" y1="190" x2="135" y2="77.42" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="140,68.76 139.04,79.75 130.96,75.09" fill="currentColor"/>
+</g>
+<g class="f-comp" data-phys="component:gt" data-dir="270" data-len="161.66">
+<line x1="140" y1="68.76" x2="140" y2="220.42" stroke="currentColor" stroke-width="2.2" stroke-dasharray="5 4"/>
+<polygon points="140,230.42 135.34,220.42 144.66,220.42" fill="currentColor"/>
+</g>
+<g class="f-vel" data-phys="velocity:v1" data-dir="330" data-len="80.83">
+<line x1="70" y1="190" x2="131.34" y2="225.42" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="140,230.42 129.01,229.45 133.67,221.38" fill="currentColor"/>
+</g>
+<text x="89" y="125.38" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₀</text>
+<text x="162" y="149.59" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">gt₁</text>
+<text x="97" y="226.2" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₁</text>
+<polyline points="76,179.61 86.39,185.61 80.39,196" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<path d="M140,206.41 A24,24 0 0 0 119.22,218.41" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="123.5" y="201.83" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+</svg>

@@ -1,0 +1,164 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  205
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    30,
+    100
+   ],
+   "dir": 0,
+   "len": 305,
+   "style": "thin",
+   "phys": "axis:x",
+   "label": "x"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     290,
+     40
+    ],
+    [
+     305,
+     40
+    ],
+    [
+     305,
+     160
+    ],
+    [
+     290,
+     160
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    290,
+    40
+   ],
+   "to": [
+    290,
+    160
+   ],
+   "style": "ground",
+   "phys": "wall"
+  },
+  {
+   "t": "sine",
+   "from": [
+    40,
+    100
+   ],
+   "to": [
+    220,
+    100
+   ],
+   "amp": 26,
+   "cycles": 2,
+   "func": "sin",
+   "style": "thick",
+   "phys": "wave:incident"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    150,
+    52
+   ],
+   "dir": 0,
+   "len": 44,
+   "style": "velocity",
+   "label": "v"
+  },
+  {
+   "t": "text",
+   "at": [
+    120,
+    145
+   ],
+   "text": "入射波",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "dot",
+   "at": [
+    40,
+    100
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    116
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    298,
+    28
+   ],
+   "text": "壁（固定端）",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    180
+   ],
+   "to": [
+    290,
+    180
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    172
+   ],
+   "to": [
+    40,
+    188
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    290,
+    172
+   ],
+   "to": [
+    290,
+    188
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    165,
+    194
+   ],
+   "text": "L"
+  }
+ ]
+}

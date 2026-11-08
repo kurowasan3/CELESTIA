@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 180" width="340" height="180" font-family="'Times New Roman', serif">
+<line x1="20" y1="140" x2="320" y2="140" stroke="currentColor" stroke-width="2"/>
+<g transform="translate(230,140) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-40" y="-56" width="80" height="56" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-28" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+</g>
+<circle cx="70" cy="112" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4" data-phys="body:bullet"/>
+<text x="70" y="96" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+<g class="f-vel" data-phys="vel:v" data-dir="0" data-len="50">
+<line x1="82" y1="112" x2="122" y2="112" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="132,112 122,116.66 122,107.34" fill="currentColor"/>
+<text x="107" y="124" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+</g>
+<text x="170" y="160" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">なめらかな水平面</text>
+</svg>

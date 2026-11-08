@@ -1,0 +1,157 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  230
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    190
+   ],
+   "dir": 0,
+   "len": 290,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    190
+   ],
+   "dir": 90,
+   "len": 170,
+   "style": "thin"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     50,
+     190
+    ],
+    [
+     138,
+     62
+    ],
+    [
+     270,
+     62
+    ],
+    [
+     314,
+     190
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    62
+   ],
+   "to": [
+    138,
+    62
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    138,
+    62
+   ],
+   "to": [
+    138,
+    190
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    270,
+    62
+   ],
+   "to": [
+    270,
+    190
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    62
+   ],
+   "text": "8.0",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    138,
+    206
+   ],
+   "text": "4.0",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    206
+   ],
+   "text": "10",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    314,
+    206
+   ],
+   "text": "12",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    204
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    56,
+    16
+   ],
+   "text": "v [m/s]",
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    346,
+    206
+   ],
+   "text": "t [s]",
+   "size": 13,
+   "anchor": "end"
+  }
+ ]
+}

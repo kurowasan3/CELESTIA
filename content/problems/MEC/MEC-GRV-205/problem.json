@@ -1,0 +1,139 @@
+{
+ "id": "MEC-GRV-205",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "共通重心のまわりを回る連星の周期とエネルギー",
+ "course": "物理",
+ "level": 3,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $M$ の恒星 A と質量 $2M$ の恒星 B が，距離 $d$ を保ちながら，両者を結ぶ線分上の点 C を中心として同じ角速度 $\\omega$ で等速円運動をしている（連星）．A，B にはたらく力は互いの万有引力だけとし，万有引力定数を $G$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "点 C から A までの距離 $r_{\\mathrm A}$ と，C から B までの距離 $r_{\\mathrm B}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "角速度 $\\omega$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "公転周期 $T$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "A の速さ $v_{\\mathrm A}$ は B の速さ $v_{\\mathrm B}$ の何倍か．"
+     },
+     {
+      "id": "5",
+      "tex": "2つの恒星の運動エネルギーの和 $K$ と，万有引力による位置エネルギー $U$（無限遠を基準）を求め，力学的エネルギー $E=K+U$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "距離 d 離れた質量 M の恒星 A と質量 2M の恒星 B。両者を結ぶ線分上の点 C を中心にそれぞれ円軌道を描く",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$r_{\\mathrm A}=\\dfrac{2d}{3}$，$r_{\\mathrm B}=\\dfrac d3$",
+    "grading": "r_A：2d/3 ; r_B：d/3"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega=\\sqrt{\\dfrac{3GM}{d^3}}$",
+    "grading": "ω：sqrt(3G M/d^3)"
+   },
+   {
+    "id": "3",
+    "tex": "$T=2\\pi\\sqrt{\\dfrac{d^3}{3GM}}$",
+    "grading": "T：2π sqrt(d^3/(3G M))"
+   },
+   {
+    "id": "4",
+    "tex": "$2$ 倍",
+    "grading": "2倍"
+   },
+   {
+    "id": "5",
+    "tex": "$K=\\dfrac{GM^2}{d}$，$U=-\\dfrac{2GM^2}{d}$，$E=-\\dfrac{GM^2}{d}$",
+    "grading": "K：G M^2/d ; U：-2G M^2/d ; E：-G M^2/d"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) A，B が受ける万有引力は作用・反作用で大きさが等しい（$F=G\\dfrac{2M^2}{d^2}$）．同じ $\\omega$ で回るので，向心力について $Mr_{\\mathrm A}\\omega^2=2Mr_{\\mathrm B}\\omega^2$ より $r_{\\mathrm A}=2r_{\\mathrm B}$．$r_{\\mathrm A}+r_{\\mathrm B}=d$ から $r_{\\mathrm A}=\\dfrac{2d}3$，$r_{\\mathrm B}=\\dfrac d3$．C は2つの恒星の重心である．\n\n(2) A の運動方程式：\\[M\\cdot\\frac{2d}{3}\\omega^2=G\\frac{2M^2}{d^2}\\quad\\Longrightarrow\\quad\\omega=\\sqrt{\\frac{3GM}{d^3}}\\] 半径 $d$ の円で質量の和 $3M$ のまわりを回る場合と同じ形になる．\n\n(3) $T=\\dfrac{2\\pi}{\\omega}=2\\pi\\sqrt{\\dfrac{d^3}{3GM}}$．\n\n(4) $v=r\\omega$ で $\\omega$ が共通なので $\\dfrac{v_{\\mathrm A}}{v_{\\mathrm B}}=\\dfrac{r_{\\mathrm A}}{r_{\\mathrm B}}=2$．（運動量の大きさ $Mv_{\\mathrm A}=2Mv_{\\mathrm B}$ が等しく，重心は静止している．）\n\n(5) \\[K=\\frac12M\\left(\\frac{2d}3\\omega\\right)^2+\\frac12\\cdot2M\\left(\\frac d3\\omega\\right)^2=\\frac13Md^2\\omega^2=\\frac{GM^2}{d}\\] \\[U=-G\\frac{M\\cdot2M}{d}=-\\frac{2GM^2}{d},\\qquad E=K+U=-\\frac{GM^2}{d}\\] $K=-\\dfrac U2$，$E=\\dfrac U2<0$ で，1つの天体の円軌道と同じ関係が成り立つ．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "連星は共通重心のまわりを同じ角速度で回る．万有引力は作用・反作用なので，半径は質量に反比例する．"
+ },
+ "concepts": [
+  "universal-gravitation",
+  "circular-motion"
+ ],
+ "laws": [
+  "universal-gravitation",
+  "newton-3rd",
+  "centripetal-acceleration",
+  "center-of-mass",
+  "gravitational-potential"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "連星",
+  "重心",
+  "万有引力",
+  "等速円運動"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

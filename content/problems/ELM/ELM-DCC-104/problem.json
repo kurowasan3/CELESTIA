@@ -1,0 +1,142 @@
+{
+ "id": "ELM-DCC-104",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "非直線抵抗（電球）の電流-電圧特性と回路の電流（グラフと連立）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "graph-read",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電球 L に加える電圧 $V$ と流れる電流 $I$ の関係は図2のグラフのようになり，この曲線は $I=0.10\\sqrt V$（$I$ の単位は A，$V$ の単位は V）で表される．図1のように，L と抵抗値 $R=10\\,\\Omega$ の抵抗を，内部抵抗の無視できる起電力 $E$ の電池に直列につないだ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$E=6.0\\,\\mathrm V$ とする．L に加わる電圧を $V$，流れる電流を $I$ として，$V$ と $I$ の間に回路から成り立つ関係式を書け．また，L に加わる電圧と流れる電流を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$E=6.0\\,\\mathrm V$ のまま，L と同じ電球をもう1個，L と直列に加えた．1個の電球に加わる電圧と流れる電流を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(1)，(2) の電球の抵抗値（$V/I$）をそれぞれ $R_1$，$R_2$ とする．$R_1$，$R_2$ を求めよ．また，両者が異なる理由を簡単に説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(1) の回路で $E$ だけを変えたところ，L の消費電力が $0.10\\,\\mathrm W$ になった．このときの $E$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "図1：電池 E、抵抗 R = 10 Ω、電球 L を直列につないだ回路",
+   "caption": ""
+  },
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "図2：電球の電流 I [A] と電圧 V [V] のグラフ。原点から上に凸に増える曲線で、V=1 で 0.10 A、V=4 で 0.20 A を通り、V=6 で約 0.245 A。横軸 0〜6 V、縦軸 0〜0.25 A に方眼",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$E=V+RI$ すなわち $6.0=V+10I$．$V=4.0\\,\\mathrm V$，$I=0.20\\,\\mathrm A$",
+    "grading": "V：4 [V] ; I：0.2 [A]"
+   },
+   {
+    "id": "2",
+    "tex": "電圧 $2.25\\,\\mathrm V\\ (\\fallingdotseq2.3\\,\\mathrm V)$，電流 $0.15\\,\\mathrm A$",
+    "grading": "V：2.25 [V] ; I：0.15 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "$R_1=20\\,\\Omega$，$R_2=15\\,\\Omega$．電圧・電流が大きいほど消費電力が大きくフィラメントの温度が高くなり，金属の抵抗率が大きくなるから",
+    "grading": "R_1：20 [Ω] ; R_2：15 [Ω]"
+   },
+   {
+    "id": "4",
+    "tex": "$E=2.0\\,\\mathrm V$",
+    "grading": "E：2 [V]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "電球の抵抗は一定ではないので，「回路の式（直線）」と「電球の特性（曲線）」を連立する．グラフ上では，回路の式の直線と特性曲線の交点が答え．\n\n(1) キルヒホッフの第2法則：$E=V+RI$，つまり $I=\\dfrac{6.0-V}{10}$（$V$ 軸を $6.0\\,\\mathrm V$，$I$ 軸を $0.60\\,\\mathrm A$ で切る直線）．$I=0.10\\sqrt V$ と連立して $6.0=V+\\sqrt V$．$\\sqrt V=x$ とおくと $x^2+x-6=0$，$x=2$．よって $V=4.0\\,\\mathrm V$，$I=0.20\\,\\mathrm A$（グラフの点 $(4,\\,0.20)$）．\n\n(2) 2個の電球には同じ電流が流れ，電圧も等しい：$6.0=2V+10I=2V+\\sqrt V$．$2x^2+x-6=0$ より $x=\\dfrac32$．$V=2.25\\,\\mathrm V$，$I=0.15\\,\\mathrm A$．（グラフでは直線 $I=\\dfrac{6.0-2V}{10}$ との交点．）\n\n(3) $R_1=\\dfrac{4.0}{0.20}=20\\,\\Omega$，$R_2=\\dfrac{2.25}{0.15}=15\\,\\Omega$．(1) の電球の消費電力 $0.80\\,\\mathrm W$ は (2) の $0.34\\,\\mathrm W$ より大きく，フィラメントの温度が高い．金属は温度が高いほど抵抗率が大きいので $R_1>R_2$．（$V/I$ が一定でないので，電球はオームの法則に従わない．）\n\n(4) $P=VI=0.10\\,V^{3/2}=0.10$ より $V=1.0\\,\\mathrm V$，$I=0.10\\,\\mathrm A$．$E=V+RI=1.0+10\\times0.10=2.0\\,\\mathrm V$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "非直線抵抗は「回路の式（直線）」と「特性曲線」の交点で決まる．電球の抵抗は温度とともに大きくなる．"
+ },
+ "concepts": [
+  "series-parallel",
+  "electric-power",
+  "ohm-law-use"
+ ],
+ "laws": [
+  "kirchhoff-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "非直線抵抗",
+  "電球",
+  "特性曲線",
+  "グラフ",
+  "直流回路"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 175" width="360" height="175" font-family="'Times New Roman', serif">
+<line x1="10" y1="150" x2="350" y2="150" stroke="currentColor" stroke-width="2"/>
+<g transform="translate(200,150) rotate(0)" data-phys="body:plank" data-angle="0">
+<rect x="-130" y="-16" width="260" height="16" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-8" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+</g>
+<g transform="translate(90,134) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-17" y="-26" width="34" height="26" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-13" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+</g>
+<g class="f-vel" data-phys="velocity:v0" data-dir="0" data-len="50">
+<line x1="110" y1="100" x2="150" y2="100" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="160,100 150,104.66 150,95.34" fill="currentColor"/>
+<text x="182" y="100" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₀</text>
+</g>
+<text x="260" y="122" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">上面はあらい</text>
+<text x="300" y="164" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">水平面はなめらか</text>
+</svg>

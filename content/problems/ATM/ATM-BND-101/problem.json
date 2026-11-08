@@ -1,0 +1,122 @@
+{
+ "id": "ATM-BND-101",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "重水素の結合エネルギーと D-D 核融合のエネルギー配分",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "calc",
+  "derivation"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "陽子，中性子，重陽子（$^2_1\\mathrm H$ の原子核），ヘリウム3の原子核（$^3_2\\mathrm{He}$）の質量を，それぞれ $m_{\\mathrm p}=1.0073\\ \\mathrm u$，$m_{\\mathrm n}=1.0087\\ \\mathrm u$，$m_{\\mathrm D}=2.0136\\ \\mathrm u$，$m_{\\mathrm{He}}=3.0150\\ \\mathrm u$ とする．$1\\ \\mathrm u$ の質量に相当するエネルギーを $931\\ \\mathrm{MeV}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "重陽子の質量欠損は何 u か．"
+     },
+     {
+      "id": "2",
+      "tex": "重陽子の結合エネルギーは何 MeV か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "重陽子の核子1個あたりの結合エネルギーは何 MeV か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "核融合反応 $^2_1\\mathrm H+{}^2_1\\mathrm H\\to{}^3_2\\mathrm{He}+{}^1_0\\mathrm n$ で放出されるエネルギー $Q$ は何 MeV か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の反応で，反応前の2個の重陽子の運動エネルギーと運動量は無視できるとする．放出されたエネルギーがすべて生成粒子の運動エネルギーになるとき，中性子の運動エネルギーは何 MeV か．$^3_2\\mathrm{He}$ と中性子の質量の比を $3:1$ として，有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$0.0024\\ \\mathrm u$",
+    "grading": "0.0024"
+   },
+   {
+    "id": "2",
+    "tex": "$2.2\\ \\mathrm{MeV}$",
+    "grading": "結合エネルギー（MeV）：2.2"
+   },
+   {
+    "id": "3",
+    "tex": "$1.1\\ \\mathrm{MeV}$",
+    "grading": "核子1個あたり（MeV）：1.1"
+   },
+   {
+    "id": "4",
+    "tex": "$3.3\\ \\mathrm{MeV}$",
+    "grading": "Q（MeV）：3.3"
+   },
+   {
+    "id": "5",
+    "tex": "$2.4\\ \\mathrm{MeV}$",
+    "grading": "中性子（MeV）：2.4"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\Delta m=m_{\\mathrm p}+m_{\\mathrm n}-m_{\\mathrm D}=1.0073+1.0087-2.0136=0.0024\\ \\mathrm u$．\n\n(2) $0.0024\\times931\\fallingdotseq2.2\\ \\mathrm{MeV}$．\n\n(3) 核子は2個なので $\\dfrac{2.23}2\\fallingdotseq1.1\\ \\mathrm{MeV}$．（$^4\\mathrm{He}$ の約 $7\\ \\mathrm{MeV}$ と比べてとても小さく，重陽子は壊れやすい．）\n\n(4) 反応前の質量 $2\\times2.0136=4.0272\\ \\mathrm u$，反応後 $3.0150+1.0087=4.0237\\ \\mathrm u$．減った質量 $0.0035\\ \\mathrm u$ がエネルギーになる：$Q=0.0035\\times931\\fallingdotseq3.3\\ \\mathrm{MeV}$．\n\n(5) 運動量保存より，$^3\\mathrm{He}$ と中性子の運動量は大きさ $p$ が等しく逆向き．運動エネルギー $\\dfrac{p^2}{2M}$ は質量に反比例するので，中性子：$^3\\mathrm{He}=3:1$．中性子は $\\dfrac34Q=\\dfrac34\\times3.26\\fallingdotseq2.4\\ \\mathrm{MeV}$．軽い粒子ほど多くのエネルギーをもらう．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "質量の減少分 × $c^2$ が放出エネルギー．2粒子に分かれるときは運動量保存から，運動エネルギーは質量の逆比に分配される．"
+ },
+ "concepts": [
+  "mass-energy",
+  "momentum-conservation"
+ ],
+ "laws": [
+  "mass-energy",
+  "momentum-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "結合エネルギー",
+  "質量欠損",
+  "核融合",
+  "運動量保存"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

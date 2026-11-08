@@ -1,0 +1,132 @@
+{
+ "id": "ELM-ACC-204",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "LC 回路の電気振動と，途中でつなぐコンデンサー",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電気容量 $C$ のコンデンサー C$_1$ を電圧 $V_0$ に充電し，時刻 $t=0$ にスイッチを閉じて，自己インダクタンス $L$ のコイルにつないだ．回路の抵抗は無視でき，電磁波の放射も考えない．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電気振動の周期 $T$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "回路を流れる電流の最大値 $I_{\\max}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "C$_1$ の電圧が初めて $\\dfrac{V_0}2$ になる時刻 $t_1$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "時刻 $t_1$ の電流の大きさ $I_1$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "電流が初めて最大になった瞬間に，別のスイッチを閉じて，帯電していない電気容量 $C$ のコンデンサー C$_2$ を C$_1$ に並列につないだ．その後の電気振動の周期 $T'$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(5) の後，コンデンサーの電圧の最大値 $V'$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T=2\\pi\\sqrt{LC}$",
+    "grading": "T：2π sqrt(L C)"
+   },
+   {
+    "id": "2",
+    "tex": "$I_{\\max}=V_0\\sqrt{\\dfrac CL}$",
+    "grading": "I_max：V_0 sqrt(C/L)"
+   },
+   {
+    "id": "3",
+    "tex": "$t_1=\\dfrac\\pi3\\sqrt{LC}$",
+    "grading": "t_1：π sqrt(L C)/3"
+   },
+   {
+    "id": "4",
+    "tex": "$I_1=\\dfrac{\\sqrt3}2V_0\\sqrt{\\dfrac CL}$",
+    "grading": "I_1：sqrt(3)V_0 sqrt(C/L)/2"
+   },
+   {
+    "id": "5",
+    "tex": "$T'=2\\pi\\sqrt{2LC}$",
+    "grading": "T'：2π sqrt(2L C)"
+   },
+   {
+    "id": "6",
+    "tex": "$V'=\\dfrac{V_0}{\\sqrt2}$",
+    "grading": "V'：V_0/sqrt(2)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "C$_1$ の電気量を $q$，電流を $i=-\\dfrac{\\Delta q}{\\Delta t}$（放電の向きを正）とすると，回路の式は $\\dfrac qC=L\\dfrac{\\Delta i}{\\Delta t}$．これはばね振り子と同じ形で，$q$ は角振動数 $\\omega=\\dfrac1{\\sqrt{LC}}$ の単振動をする：$q=CV_0\\cos\\omega t$，$i=\\omega CV_0\\sin\\omega t$．\n\n\\textbf{(1)} $T=\\dfrac{2\\pi}\\omega=2\\pi\\sqrt{LC}$．\n\n\\textbf{(2)} エネルギー保存 $\\dfrac12CV_0^2=\\dfrac12LI_{\\max}^2$ より $I_{\\max}=V_0\\sqrt{\\dfrac CL}$（$=\\omega CV_0$）．\n\n\\textbf{(3)} 電圧 $\\dfrac qC=V_0\\cos\\omega t=\\dfrac{V_0}2$ となる最初の時刻は $\\omega t_1=\\dfrac\\pi3$，$t_1=\\dfrac\\pi3\\sqrt{LC}$．\n\n\\textbf{(4)} $\\dfrac12CV_0^2=\\dfrac12C\\left(\\dfrac{V_0}2\\right)^2+\\dfrac12LI_1^2$ より $I_1=\\dfrac{\\sqrt3}2V_0\\sqrt{\\dfrac CL}$（$=I_{\\max}\\sin\\dfrac\\pi3$）．\n\n\\textbf{(5)} 電流が最大の瞬間，C$_1$ の電圧は $0$．C$_2$ も電圧 $0$ なので，つないでも電荷は移動せず，エネルギーも失われない．その後は C$_1$ と C$_2$ の並列（合成容量 $2C$）とコイルの振動になる：$T'=2\\pi\\sqrt{2LC}$．\n\n\\textbf{(6)} このときのエネルギーはすべてコイルにあり $\\dfrac12LI_{\\max}^2=\\dfrac12CV_0^2$．電圧が最大のとき電流は $0$ で，エネルギーはすべて合成容量 $2C$ にある：$\\dfrac12(2C)V'^2=\\dfrac12CV_0^2$ より $V'=\\dfrac{V_0}{\\sqrt2}$．\n（もし電圧の最大の瞬間に帯電していない C$_2$ をつなぐと，電荷が急に移動して導線でエネルギーが失われる．電流最大の瞬間を選んだのがポイント．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "LC 回路は単振動と同じ．電気量 $q$ が位置，電流が速度，$L$ が質量，$\\dfrac1C$ がばね定数に当たる．エネルギー保存 $\\dfrac{q^2}{2C}+\\dfrac12Li^2=$ 一定を使う．"
+ },
+ "concepts": [
+  "ac-circuit",
+  "capacitor",
+  "simple-harmonic-motion"
+ ],
+ "laws": [
+  "capacitor-energy",
+  "shm-period",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電気振動",
+  "LC回路",
+  "エネルギー保存",
+  "単振動"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

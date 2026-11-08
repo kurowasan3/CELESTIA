@@ -1,0 +1,116 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  220
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    30,
+    110
+   ],
+   "to": [
+    320,
+    110
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "sine",
+   "from": [
+    30,
+    110
+   ],
+   "to": [
+    120,
+    110
+   ],
+   "amp": 7,
+   "cycles": 4
+  },
+  {
+   "t": "arrow",
+   "from": [
+    120,
+    110
+   ],
+   "dir": 0,
+   "len": 32,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    70,
+    90
+   ],
+   "text": "λ",
+   "size": 15
+  },
+  {
+   "t": "ball",
+   "at": [
+    170,
+    110
+   ],
+   "r": 7,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    138,
+    134
+   ],
+   "text": "電子 m",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "arrow",
+   "from": [
+    170,
+    110
+   ],
+   "dir": 50,
+   "len": 110,
+   "style": "thin",
+   "label": "λ'"
+  },
+  {
+   "t": "arc",
+   "at": [
+    170,
+    110
+   ],
+   "r": 34,
+   "from": 0,
+   "to": 50,
+   "label": "φ"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    170,
+    110
+   ],
+   "dir": -35,
+   "len": 95,
+   "style": "velocity",
+   "label": "v"
+  },
+  {
+   "t": "arc",
+   "at": [
+    170,
+    110
+   ],
+   "r": 44,
+   "from": -35,
+   "to": 0,
+   "label": "α"
+  }
+ ]
+}

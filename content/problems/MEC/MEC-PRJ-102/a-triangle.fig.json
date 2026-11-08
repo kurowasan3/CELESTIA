@@ -1,0 +1,95 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  260,
+  290
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    70,
+    190
+   ],
+   "dir": 60,
+   "len": 140,
+   "style": "velocity",
+   "phys": "velocity:v0"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140.0,
+    68.76
+   ],
+   "dir": 270,
+   "len": 161.66,
+   "style": "component",
+   "phys": "component:gt"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    70,
+    190
+   ],
+   "dir": 330,
+   "len": 80.83,
+   "style": "velocity",
+   "phys": "velocity:v1"
+  },
+  {
+   "t": "text",
+   "at": [
+    89.0,
+    125.38
+   ],
+   "text": "v₀"
+  },
+  {
+   "t": "text",
+   "at": [
+    162.0,
+    149.59
+   ],
+   "text": "gt₁"
+  },
+  {
+   "t": "text",
+   "at": [
+    97.0,
+    226.2
+   ],
+   "text": "v₁"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     76.0,
+     179.61
+    ],
+    [
+     86.39,
+     185.61
+    ],
+    [
+     80.39,
+     196.0
+    ]
+   ]
+  },
+  {
+   "t": "arc",
+   "at": [
+    140.0,
+    230.41
+   ],
+   "r": 24,
+   "from": 90,
+   "to": 150,
+   "label": "θ",
+   "labelGap": 9
+  }
+ ]
+}

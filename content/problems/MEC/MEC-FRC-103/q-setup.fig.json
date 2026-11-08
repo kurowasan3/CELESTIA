@@ -1,0 +1,99 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  190
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    160
+   ],
+   "to": [
+    320,
+    160
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     160
+    ],
+    [
+     320,
+     160
+    ],
+    [
+     320,
+     170
+    ],
+    [
+     20,
+     170
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "block",
+   "at": [
+    140,
+    160
+   ],
+   "w": 70,
+   "h": 44,
+   "label": "",
+   "phys": "body:block"
+  },
+  {
+   "t": "text",
+   "at": [
+    118,
+    150
+   ],
+   "text": "m",
+   "size": 15
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140,
+    138
+   ],
+   "dir": 30,
+   "len": 120,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F"
+  },
+  {
+   "t": "line",
+   "from": [
+    140,
+    138
+   ],
+   "to": [
+    270,
+    138
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    140,
+    138
+   ],
+   "r": 60,
+   "from": 0,
+   "to": 30,
+   "label": "θ",
+   "labelGap": 10
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "id": "MEC-KIN-101",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-01",
+ "topic": "等加速度直線運動の基本（速さ・変位・時間を含まない式）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "まっすぐな道路を速さ $10\\,\\mathrm{m/s}$ で走っていた自動車が，時刻 $t=0$ から一定の加速度 $2.0\\,\\mathrm{m/s^2}$ で加速した．自動車が進む向きを正とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "時刻 $t=5.0\\,\\mathrm s$ における自動車の速さを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$t=0$ から $t=5.0\\,\\mathrm s$ までに自動車が進んだ距離を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "自動車の速さが $30\\,\\mathrm{m/s}$ になるまでに，$t=0$ から進んだ距離を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "直線道路を右向きに速さ 10 m/s で走る自動車。加速度 2.0 m/s² も右向き",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "velocity:v0",
+      "dir_deg": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "a-vt",
+   "role": "answer",
+   "kind": "graph",
+   "format": "svg",
+   "src": "a-vt.svg",
+   "alt": "速度 v と時刻 t のグラフ。t=0 で 10 m/s、t=5.0 s で 20 m/s の右上がりの直線。直線と t 軸の間の台形に斜線があり、その面積が 75 m",
+   "caption": "$v$-$t$ グラフと $t$ 軸の間の面積が変位を表す"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$20\\,\\mathrm{m/s}$",
+    "grading": "20 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$75\\,\\mathrm m$",
+    "grading": "75 [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$2.0\\times10^2\\,\\mathrm m$",
+    "grading": "200 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "初速度 $v_0=10\\,\\mathrm{m/s}$，加速度 $a=2.0\\,\\mathrm{m/s^2}$ の等加速度直線運動．\n\n(1) $v=v_0+at=10+2.0\\times5.0=20\\,\\mathrm{m/s}$．\n\n(2) $x=v_0t+\\dfrac12at^2=10\\times5.0+\\dfrac12\\times2.0\\times5.0^2=50+25=75\\,\\mathrm m$．$v$-$t$ グラフの台形の面積 $\\dfrac{(10+20)\\times5.0}{2}=75\\,\\mathrm m$ としても求められる．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-vt"
+    },
+    {
+     "type": "text",
+     "tex": "(3) 時間がわからないので，時間を含まない式 $v^2-v_0^2=2ax$ を使う．$30^2-10^2=2\\times2.0\\times x$ より $x=\\dfrac{800}{4.0}=2.0\\times10^2\\,\\mathrm m$．（$v=v_0+at$ から $t=10\\,\\mathrm s$ を求めて $x=v_0t+\\frac12at^2$ に入れても同じ．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "等加速度運動の3つの式 $v=v_0+at$，$x=v_0t+\\frac12at^2$，$v^2-v_0^2=2ax$ を，わかっている量とわからない量で使い分ける．変位は $v$-$t$ グラフの面積．"
+ },
+ "concepts": [
+  "uniform-acceleration",
+  "acceleration-concept"
+ ],
+ "laws": [
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "等加速度運動",
+  "v-tグラフ"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

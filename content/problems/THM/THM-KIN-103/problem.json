@@ -1,0 +1,104 @@
+{
+ "id": "THM-KIN-103",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "温度の異なる2つの容器の気体を混ぜる（内部エネルギーの保存）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 10,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "断熱材でできた容器 A（容積 $V_1$）と容器 B（容積 $V_2$）が，コックのついた細い管でつながれている．はじめコックは閉じていて，A には単原子分子理想気体が $n_1\\,\\mathrm{mol}$，温度 $T_1$ で，B には同じ種類の気体が $n_2\\,\\mathrm{mol}$，温度 $T_2$ で入っている．コックを開いて十分に時間がたつと，全体が一様な状態になった．気体定数を $R$ とし，管の容積は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "コックを開く前の，A と B の気体の内部エネルギーの和 $U$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "コックを開いた後の温度 $T$ を，$n_1$，$n_2$，$T_1$，$T_2$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "はじめの A，B の圧力をそれぞれ $P_1$，$P_2$ とする．コックを開いた後の圧力 $P$ を，$P_1$，$P_2$，$V_1$，$V_2$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$U=\\dfrac32R(n_1T_1+n_2T_2)$",
+    "grading": "U：3R(n_1 T_1+n_2 T_2)/2"
+   },
+   {
+    "id": "2",
+    "tex": "$T=\\dfrac{n_1T_1+n_2T_2}{n_1+n_2}$",
+    "grading": "T：(n_1 T_1+n_2 T_2)/(n_1+n_2)"
+   },
+   {
+    "id": "3",
+    "tex": "$P=\\dfrac{P_1V_1+P_2V_2}{V_1+V_2}$",
+    "grading": "P：(P_1 V_1+P_2 V_2)/(V_1+V_2)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 単原子分子理想気体の内部エネルギーは $\\dfrac32nRT$ なので $U=\\dfrac32R(n_1T_1+n_2T_2)$．\n\n(2) 容器は断熱（$Q=0$）で，容器全体の体積は変わらないので気体は外に仕事をしない（$W=0$）．よって内部エネルギーの和は保存する：\\[\\frac32(n_1+n_2)RT=\\frac32R(n_1T_1+n_2T_2)\\quad\\therefore\\ T=\\frac{n_1T_1+n_2T_2}{n_1+n_2}\\]\n\n(3) 状態方程式 $P(V_1+V_2)=(n_1+n_2)RT=R(n_1T_1+n_2T_2)=P_1V_1+P_2V_2$．よって $P=\\dfrac{P_1V_1+P_2V_2}{V_1+V_2}$．\n\n分子運動論でみると，$U$ は分子の運動エネルギーの和で，混ざっても和は変わらない．$PV=\\dfrac23U$ なので圧力×体積の和も保存する．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "断熱・全体積一定 → $Q=0$，$W=0$ → 内部エネルギーの和が保存．単原子分子では $PV=\\dfrac23U$．"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "first-law",
+  "ideal-gas"
+ ],
+ "laws": [
+  "internal-energy",
+  "ideal-gas-law",
+  "first-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "内部エネルギー",
+  "気体の混合",
+  "断熱容器"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

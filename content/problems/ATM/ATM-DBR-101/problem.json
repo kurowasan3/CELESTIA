@@ -1,0 +1,144 @@
+{
+ "id": "ATM-DBR-101",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "電子線の回折（物質波）と同じエネルギーの光子との比較",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止していた電子（質量 $m$，電荷 $-e$）を電圧 $V$ で加速し，結晶の表面に垂直に当てた．結晶の表面には原子が間隔 $d$ で一列に並んでいるとみなし，各原子で散乱された電子波が干渉して，入射方向と逆向きから角 $\\theta$ だけ傾いた向きに強く散乱される（図）．プランク定数を $h=6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$，$m=9.1\\times10^{-31}\\ \\mathrm{kg}$，$e=1.6\\times10^{-19}\\ \\mathrm C$，光の速さを $c=3.0\\times10^8\\ \\mathrm{m/s}$ とし，電子の運動は非相対論的に扱う．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "加速された電子のド・ブロイ波長 $\\lambda$ を，$h$，$m$，$e$，$V$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$V=150\\ \\mathrm V$ のときの $\\lambda$ は何 m か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "隣り合う原子で散乱された電子波の経路差を考えて，強く散乱される条件を $d$，$\\theta$，$\\lambda$，整数 $n$ で表せ．また，$V=150\\ \\mathrm V$ のとき1次の強い散乱が $\\sin\\theta=0.46$ の向きに観測された．$d$ は何 m か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "加速電圧を $600\\ \\mathrm V$ にすると，1次の強い散乱が起こる向きの $\\sin\\theta$ はいくらになるか．"
+     },
+     {
+      "id": "5",
+      "tex": "電子の運動エネルギー $eV$ と同じエネルギーをもつ光子の波長 $\\lambda_{\\mathrm{ph}}$ は，電子のド・ブロイ波長 $\\lambda$ の何倍か．$m$，$c$，$e$，$V$ で表せ．"
+     },
+     {
+      "id": "6",
+      "tex": "$V=150\\ \\mathrm V$ のとき，(5) の倍率を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平な結晶表面に原子が間隔dで並ぶ．電子線は上から表面に垂直に入射し，散乱された電子波は上向きの鉛直方向から角θ傾いた向きに出ていく．",
+   "caption": "結晶表面での電子線の散乱"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\lambda=\\dfrac h{\\sqrt{2meV}}$",
+    "grading": "λ：h/sqrt(2m e V)"
+   },
+   {
+    "id": "2",
+    "tex": "$1.0\\times10^{-10}\\ \\mathrm m$",
+    "grading": "1.0*10^(-10) [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$d\\sin\\theta=n\\lambda$，$d=2.2\\times10^{-10}\\ \\mathrm m$",
+    "grading": "d：2.2*10^(-10) [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\sin\\theta=0.23$",
+    "grading": "0.23"
+   },
+   {
+    "id": "5",
+    "tex": "$\\sqrt{\\dfrac{2mc^2}{eV}}$ 倍",
+    "grading": "sqrt(2m c^2/(e V))倍"
+   },
+   {
+    "id": "6",
+    "tex": "$83$ 倍",
+    "grading": "83倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\dfrac12mv^2=eV$ より運動量 $p=mv=\\sqrt{2meV}$．$\\lambda=\\dfrac hp=\\dfrac h{\\sqrt{2meV}}$．\n\n(2) $\\sqrt{2meV}=\\sqrt{2\\times9.1\\times10^{-31}\\times1.6\\times10^{-19}\\times150}\\fallingdotseq6.61\\times10^{-24}\\ \\mathrm{kg\\cdot m/s}$，$\\lambda=\\dfrac{6.6\\times10^{-34}}{6.61\\times10^{-24}}\\fallingdotseq1.0\\times10^{-10}\\ \\mathrm m$．\n\n(3) 入射波は表面に垂直なので，原子の位置で位相がそろっている．角 $\\theta$ の向きに散乱される波の，隣り合う原子からの経路差は $d\\sin\\theta$．強め合う条件は $d\\sin\\theta=n\\lambda$．$n=1$ で $d=\\dfrac{\\lambda}{\\sin\\theta}=\\dfrac{1.0\\times10^{-10}}{0.46}\\fallingdotseq2.2\\times10^{-10}\\ \\mathrm m$．\n\n(4) $\\lambda\\propto\\dfrac1{\\sqrt V}$ なので，$V$ が4倍で $\\lambda$ は $\\dfrac12$ 倍．$\\sin\\theta=\\dfrac\\lambda d$ も $\\dfrac12$ 倍で $0.23$．\n\n(5) $\\lambda_{\\mathrm{ph}}=\\dfrac{hc}{eV}$．$\\dfrac{\\lambda_{\\mathrm{ph}}}{\\lambda}=\\dfrac{hc}{eV}\\cdot\\dfrac{\\sqrt{2meV}}h=c\\sqrt{\\dfrac{2m}{eV}}=\\sqrt{\\dfrac{2mc^2}{eV}}$．\n\n(6) $\\sqrt{\\dfrac{2\\times9.1\\times10^{-31}\\times(3.0\\times10^8)^2}{1.6\\times10^{-19}\\times150}}=\\sqrt{6.8\\times10^3}\\fallingdotseq83$ 倍．$mc^2$（約 $0.51\\ \\mathrm{MeV}$）は $eV$ よりずっと大きいので，同じエネルギーなら電子の波長は光子よりはるかに短い．これが電子顕微鏡の分解能が高い理由である．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$p=\\sqrt{2mK}$，$\\lambda=\\dfrac hp$．回折の条件は光の回折格子と同じ形 $d\\sin\\theta=n\\lambda$．"
+ },
+ "concepts": [
+  "matter-wave",
+  "light-interference"
+ ],
+ "laws": [
+  "de-broglie",
+  "interference-condition"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "物質波",
+  "ド・ブロイ波長",
+  "電子線回折"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

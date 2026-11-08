@@ -1,0 +1,111 @@
+{
+ "id": "ELM-CAP-101",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "電気量・静電エネルギー・合成容量の基本計算",
+ "course": "物理",
+ "level": 0,
+ "minutes": 5,
+ "format": [
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電気容量 $2.0\\,\\mu\\mathrm F$ のコンデンサー $\\mathrm C_1$ と，電気容量 $3.0\\,\\mu\\mathrm F$ のコンデンサー $\\mathrm C_2$ がある．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\mathrm C_1$ を電圧 $6.0\\,\\mathrm V$ の電池につないで十分に充電した．たまった電気量 $Q$ は何 C か．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) のとき，$\\mathrm C_1$ にたくわえられた静電エネルギー $U$ は何 J か．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\mathrm C_1$ と $\\mathrm C_2$ を並列に接続したときの合成容量は何 $\\mu$F か．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\mathrm C_1$ と $\\mathrm C_2$ を直列に接続したときの合成容量は何 $\\mu$F か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Q=1.2\\times10^{-5}\\,\\mathrm C$",
+    "grading": "Q：1.2*10^(-5) [C]"
+   },
+   {
+    "id": "2",
+    "tex": "$U=3.6\\times10^{-5}\\,\\mathrm J$",
+    "grading": "U：3.6*10^(-5) [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$5.0\\,\\mu\\mathrm F$",
+    "grading": "5 [μF]"
+   },
+   {
+    "id": "4",
+    "tex": "$1.2\\,\\mu\\mathrm F$",
+    "grading": "1.2 [μF]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $Q=CV=2.0\\times10^{-6}\\times6.0=1.2\\times10^{-5}\\,\\mathrm C$．\n\n(2) $U=\\dfrac12CV^2=\\dfrac12\\times2.0\\times10^{-6}\\times6.0^2=3.6\\times10^{-5}\\,\\mathrm J$．（$\\dfrac12QV$ でも同じ．）\n\n(3) 並列では電圧が共通で電気量が足し合わされるので，$C=C_1+C_2=5.0\\,\\mu\\mathrm F$．\n\n(4) 直列では電気量が共通で電圧が足し合わされるので，$\\dfrac1C=\\dfrac1{C_1}+\\dfrac1{C_2}=\\dfrac12+\\dfrac13=\\dfrac56$，$C=1.2\\,\\mu\\mathrm F$．（直列の合成容量は，どちらの容量よりも小さい．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$Q=CV$，$U=\\frac12CV^2$．並列は容量の和，直列は逆数の和．（抵抗と逆になる．）"
+ },
+ "concepts": [
+  "capacitor"
+ ],
+ "laws": [
+  "capacitance",
+  "capacitor-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "コンデンサー",
+  "電気容量",
+  "静電エネルギー",
+  "合成容量"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

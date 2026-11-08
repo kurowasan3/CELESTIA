@@ -1,0 +1,138 @@
+{
+ "id": "MEC-MOM-204",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "床ではね返り続けるボールの全時間と床からの力積",
+ "course": "物理",
+ "level": 3,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "高さ $h$ の位置から質量 $m$ の小球を静かに放した．小球は水平な床と反発係数 $e$（$0<e<1$）の衝突をくり返し，やがて床の上で静止した．重力加速度の大きさを $g$ とし，空気抵抗と衝突にかかる時間は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "1回目の衝突の直後の小球の速さ $v_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "1回目の衝突から2回目の衝突までの時間 $t_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "放してから静止するまでの時間 $T$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "放してから静止するまでに小球が動いた道のりの合計 $S$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "放してから静止するまでに，小球が床から受けた力積の大きさの合計 $J$ を，$m$，$g$，$h$，$e$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平な床から高さ h の位置にある小球を静かに放す",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_1=e\\sqrt{2gh}$",
+    "grading": "v_1：e sqrt(2g h)"
+   },
+   {
+    "id": "2",
+    "tex": "$t_1=2e\\sqrt{\\dfrac{2h}{g}}$",
+    "grading": "t_1：2e sqrt(2h/g)"
+   },
+   {
+    "id": "3",
+    "tex": "$T=\\dfrac{1+e}{1-e}\\sqrt{\\dfrac{2h}{g}}$",
+    "grading": "T：(1+e)/(1-e) sqrt(2h/g)"
+   },
+   {
+    "id": "4",
+    "tex": "$S=\\dfrac{1+e^2}{1-e^2}\\,h$",
+    "grading": "S：(1+e^2)h/(1-e^2)"
+   },
+   {
+    "id": "5",
+    "tex": "$J=\\dfrac{1+e}{1-e}\\,m\\sqrt{2gh}$",
+    "grading": "J：(1+e)m sqrt(2g h)/(1-e)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "床に当たる直前の速さを $v_0=\\sqrt{2gh}$，落下にかかる時間を $t_0=\\sqrt{\\dfrac{2h}{g}}$ とする．\n\n(1) 衝突のたびに速さは $e$ 倍になる：$v_1=ev_0=e\\sqrt{2gh}$．\n\n(2) 速さ $v_1$ で投げ上げて同じ高さに戻るまでの時間：$t_1=\\dfrac{2v_1}{g}=2e\\sqrt{\\dfrac{2h}{g}}=2et_0$．\n\n(3) $n$ 回目の衝突の後は速さ $e^nv_0$ なので，次の衝突までの時間は $2e^nt_0$．等比級数の和をとると \\[T=t_0+2t_0(e+e^2+\\cdots)=t_0+\\frac{2et_0}{1-e}=\\frac{1+e}{1-e}\\sqrt{\\frac{2h}{g}}\\] 衝突は無限回起こるが，その合計の時間は有限である．\n\n(4) $n$ 回目の衝突の後に上がる高さは $e^{2n}h$ で，上り下りで $2e^{2n}h$．\\[S=h+2h(e^2+e^4+\\cdots)=h+\\frac{2e^2h}{1-e^2}=\\frac{1+e^2}{1-e^2}h\\]\n\n(5) 小球の運動量は，放したとき $0$，最後も $0$ で，変化は $0$．この間に重力から受けた力積は下向きに $mgT$ なので，床から受けた力積の合計は上向きに $mgT$．\\[J=mgT=\\frac{1+e}{1-e}\\,m\\sqrt{2gh}\\] （各衝突の力積 $m(1+e)e^{n-1}v_0$ の和 $\\dfrac{(1+e)mv_0}{1-e}$ とも一致する．）\n\n時間平均すると，床が小球に及ぼす力は $J/T=mg$ で，静止しているときと同じになる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "速さが毎回 $e$ 倍になるので，時間・道のりは等比級数．全体では運動量の変化が $0$ なので，床からの力積＝重力の力積．"
+ },
+ "concepts": [
+  "restitution",
+  "momentum-conservation",
+  "uniform-acceleration"
+ ],
+ "laws": [
+  "restitution",
+  "impulse-momentum",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "反発係数",
+  "力積",
+  "等比級数",
+  "鉛直投げ上げ"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

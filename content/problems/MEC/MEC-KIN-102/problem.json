@@ -1,0 +1,125 @@
+{
+ "id": "MEC-KIN-102",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-01",
+ "topic": "電車の v-t グラフから加速度・移動距離・平均の速さを読む",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "駅を出発した電車が，まっすぐな線路上を走って次の駅に止まった．図は，電車の速度 $v$（進む向きを正）と，出発してからの時刻 $t$ の関係を表したグラフである．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$0\\le t\\le4.0\\,\\mathrm s$ における電車の加速度を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$10\\,\\mathrm s\\le t\\le12\\,\\mathrm s$ における電車の加速度を求めよ（向きは符号で表せ）．"
+     },
+     {
+      "id": "3",
+      "tex": "$t=0$ から $t=12\\,\\mathrm s$ までに電車が進んだ距離を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$t=0$ から $t=12\\,\\mathrm s$ までの平均の速さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "速度 v と時刻 t のグラフ。t=0 で 0、t=4.0 s まで直線的に増えて 8.0 m/s、t=10 s まで 8.0 m/s で一定、t=12 s で直線的に 0 に戻る台形",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2.0\\,\\mathrm{m/s^2}$",
+    "grading": "2 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$-4.0\\,\\mathrm{m/s^2}$（進む向きと逆向きに大きさ $4.0\\,\\mathrm{m/s^2}$）",
+    "grading": "-4 [m/s^2]"
+   },
+   {
+    "id": "3",
+    "tex": "$72\\,\\mathrm m$",
+    "grading": "72 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$6.0\\,\\mathrm{m/s}$",
+    "grading": "6 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "加速度は $v$-$t$ グラフの傾き，進んだ距離はグラフと $t$ 軸の間の面積．\n\n(1) 傾き $=\\dfrac{8.0-0}{4.0-0}=2.0\\,\\mathrm{m/s^2}$．\n\n(2) 傾き $=\\dfrac{0-8.0}{12-10}=-4.0\\,\\mathrm{m/s^2}$．負なので，加速度は進む向きと逆向き（減速）．\n\n(3) 台形の面積：$\\dfrac12\\times4.0\\times8.0+(10-4.0)\\times8.0+\\dfrac12\\times(12-10)\\times8.0=16+48+8=72\\,\\mathrm m$．（台形の公式 $\\dfrac{(6.0+12)\\times8.0}{2}=72\\,\\mathrm m$ でもよい．）\n\n(4) 平均の速さ $=\\dfrac{\\text{進んだ距離}}{\\text{かかった時間}}=\\dfrac{72}{12}=6.0\\,\\mathrm{m/s}$．最高速度 $8.0\\,\\mathrm{m/s}$ と $0$ の平均 $4.0\\,\\mathrm{m/s}$ ではない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$v$-$t$ グラフの「傾き＝加速度」「面積＝変位」．平均の速さは変位を時間で割る．"
+ },
+ "concepts": [
+  "acceleration-concept",
+  "uniform-acceleration"
+ ],
+ "laws": [
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "v-tグラフ",
+  "等加速度運動",
+  "グラフの読み取り"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

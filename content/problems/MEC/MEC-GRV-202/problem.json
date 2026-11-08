@@ -1,0 +1,124 @@
+{
+ "id": "MEC-GRV-202",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "彗星の楕円軌道とケプラーの法則",
+ "course": "物理",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ある彗星は太陽を1つの焦点とする楕円軌道を回っている．太陽にもっとも近い点 P（近日点）での太陽からの距離は $1.0$ 天文単位，もっとも遠い点 Q（遠日点）での距離は $7.0$ 天文単位である．地球は太陽のまわりを半径 $1.0$ 天文単位の円軌道で，周期 $1.0$ 年で回っているとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-orbit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "彗星の軌道の半長軸（長半径）$a$ は何天文単位か．"
+     },
+     {
+      "id": "2",
+      "tex": "彗星の公転周期 $T$ は何年か．"
+     },
+     {
+      "id": "3",
+      "tex": "点 P での彗星の速さ $v_{\\mathrm P}$ は，点 Q での速さ $v_{\\mathrm Q}$ の何倍か．"
+     },
+     {
+      "id": "4",
+      "tex": "彗星の速さが最も大きいのは軌道上のどこか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-orbit",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-orbit.svg",
+   "alt": "太陽を焦点とする細長い楕円軌道。太陽に最も近い点 P は 1.0 天文単位、最も遠い点 Q は 7.0 天文単位。太陽のまわりに半径 1.0 天文単位の地球の円軌道も描いてある",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$a=4.0$ 天文単位",
+    "grading": "a：4"
+   },
+   {
+    "id": "2",
+    "tex": "$T=8.0$ 年",
+    "grading": "T：8"
+   },
+   {
+    "id": "3",
+    "tex": "$7.0$ 倍",
+    "grading": "7倍"
+   },
+   {
+    "id": "4",
+    "tex": "近日点 P．面積速度が一定なので，太陽からの距離が最も小さい点で速さが最も大きい．（P では位置エネルギーが最も小さく，運動エネルギーが最も大きいと考えてもよい．）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 長軸の長さは $PQ=1.0+7.0=8.0$ 天文単位なので $a=4.0$ 天文単位．\n\n(2) ケプラーの第3法則 $\\dfrac{T^2}{a^3}=$ 一定 を，同じ太陽のまわりを回る地球（$a=1$，$T=1$）と比べる．\\[T^2=4.0^3=64\\quad\\Longrightarrow\\quad T=8.0\\ \\text{年}\\] 楕円軌道では半径の代わりに半長軸を使う．\n\n(3) P と Q では速度が太陽からの向きに垂直なので，面積速度は $\\dfrac12rv$．ケプラーの第2法則より \\[\\frac12\\cdot1.0\\cdot v_{\\mathrm P}=\\frac12\\cdot7.0\\cdot v_{\\mathrm Q}\\quad\\Longrightarrow\\quad\\frac{v_{\\mathrm P}}{v_{\\mathrm Q}}=7.0\\]\n\n(4) 面積速度一定より，太陽に近いほど速い．よって近日点 P で最大．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "楕円軌道では，周期は半長軸で決まり（第3法則），速さは面積速度一定（第2法則）で比べる．"
+ },
+ "concepts": [
+  "universal-gravitation"
+ ],
+ "laws": [
+  "kepler-3rd",
+  "kepler-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ケプラーの法則",
+  "楕円軌道",
+  "面積速度"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "id": "MEC-GRV-201",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "万有引力の大きさの変わり方と作用・反作用",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "万有引力について，次の問いに答えよ．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "質量 $m_1$，$m_2$ の2物体が距離 $r$ だけ離れている．$m_1$ を3倍にし，距離を2倍にすると，万有引力の大きさは何倍になるか．"
+     },
+     {
+      "id": "2",
+      "tex": "地球が月を引く万有引力の大きさを $F_1$，月が地球を引く万有引力の大きさを $F_2$ とする．地球の質量は月の約80倍である．$F_1$ と $F_2$ の大小を答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "質量が地球の2倍，半径が地球の2倍の惑星がある．この惑星の表面での重力加速度の大きさは，地球の表面での値の何倍か．惑星や地球の自転の影響は無視する．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac34$ 倍",
+    "grading": "(3/4)倍"
+   },
+   {
+    "id": "2",
+    "tex": "$F_1=F_2$（大きさは等しい）"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac12$ 倍",
+    "grading": "(1/2)倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "万有引力の法則 $F=G\\dfrac{m_1m_2}{r^2}$ を使う．\n\n(1) 分子が3倍，分母が $2^2=4$ 倍になるので $\\dfrac34$ 倍．\n\n(2) $F_1$ と $F_2$ は作用・反作用の関係にあり，大きさは等しく $G\\dfrac{Mm}{r^2}$ で同じ式になる．地球の質量が大きくても，地球が受ける力が大きいわけではない．同じ大きさの力でも，質量の小さい月のほうが加速度が大きい（地球の約80倍）ので，月が地球のまわりを回っているように見える．\n\n(3) 表面での重力加速度は $mg=G\\dfrac{Mm}{R^2}$ より $g=\\dfrac{GM}{R^2}$．$M$ が2倍，$R^2$ が4倍なので $\\dfrac24=\\dfrac12$ 倍．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "万有引力は質量の積に比例し，距離の2乗に反比例する．2物体が及ぼし合う万有引力は作用・反作用で，大きさは等しい．"
+ },
+ "concepts": [
+  "universal-gravitation"
+ ],
+ "laws": [
+  "universal-gravitation",
+  "newton-3rd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "万有引力",
+  "作用・反作用",
+  "重力加速度"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

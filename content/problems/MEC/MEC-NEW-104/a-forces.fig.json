@@ -1,0 +1,118 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  220
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    170
+   ],
+   "to": [
+    320,
+    170
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     170
+    ],
+    [
+     320,
+     170
+    ],
+    [
+     320,
+     178
+    ],
+    [
+     20,
+     178
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "block",
+   "at": [
+    160,
+    170
+   ],
+   "w": 240,
+   "h": 16,
+   "label": "",
+   "phys": "body:board"
+  },
+  {
+   "t": "block",
+   "at": [
+    200,
+    120
+   ],
+   "w": 40,
+   "h": 28,
+   "label": "A",
+   "phys": "body:A"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    200,
+    120
+   ],
+   "dir": 0,
+   "len": 48,
+   "style": "force",
+   "phys": "force:fA",
+   "label": "μ′mg",
+   "labelOffset": [
+    14,
+    -10
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    200,
+    154
+   ],
+   "dir": 180,
+   "len": 48,
+   "style": "force",
+   "phys": "force:fB",
+   "label": "μ′mg",
+   "labelOffset": [
+    -14,
+    -10
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    280,
+    162
+   ],
+   "dir": 0,
+   "len": 44,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F"
+  },
+  {
+   "t": "text",
+   "at": [
+    100,
+    162
+   ],
+   "text": "B",
+   "size": 14
+  }
+ ]
+}

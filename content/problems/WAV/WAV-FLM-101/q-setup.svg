@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 225" width="360" height="225" font-family="'Times New Roman', serif">
+<polygon points="20,140 340,140 340,220 20,220" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="20" y1="100" x2="340" y2="100" stroke="currentColor" stroke-width="2" data-phys="boundary"/>
+<line x1="20" y1="140" x2="340" y2="140" stroke="currentColor" stroke-width="2"/>
+<line x1="120" y1="25" x2="120" y2="140" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<g class="f-cur" data-phys="ray:in" data-dir="320" data-len="90">
+<line x1="51.06" y1="42.15" x2="112.34" y2="93.57" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="120,100 109.35,97.15 115.34,90" fill="currentColor"/>
+</g>
+<g class="f-cur" data-phys="ray:out" data-dir="303.72" data-len="48.09">
+<line x1="120" y1="100" x2="141.15" y2="131.68" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="146.7,140 137.27,134.27 145.02,129.09" fill="currentColor"/>
+</g>
+<g class="f-cur" data-phys="ray:r1" data-dir="40" data-len="80">
+<line x1="120" y1="100" x2="173.62" y2="55" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="181.28,48.58 176.62,58.58 170.63,51.43" fill="currentColor"/>
+</g>
+<g class="f-cur" data-phys="ray:r2-film" data-dir="56.28" data-len="48.09">
+<line x1="146.69" y1="140" x2="167.84" y2="108.32" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="173.39,100 171.71,110.91 163.96,105.73" fill="currentColor"/>
+</g>
+<g class="f-cur" data-phys="ray:r2" data-dir="40" data-len="80">
+<line x1="173.39" y1="100" x2="227.01" y2="55" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="234.67,48.58 230.01,58.58 224.02,51.43" fill="currentColor"/>
+</g>
+<path d="M120,70 A30,30 0 0 0 97.02,80.72" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="102.25" y="61.94" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<line x1="40" y1="100" x2="40" y2="140" stroke="currentColor" stroke-width="1.2"/>
+<text x="30" y="120" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d</text>
+<text x="300" y="60" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">空気</text>
+<text x="280" y="120" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">薄膜（屈折率 n）</text>
+<text x="270" y="185" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">ガラス（屈折率 1.50）</text>
+</svg>

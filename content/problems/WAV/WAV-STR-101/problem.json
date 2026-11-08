@@ -1,0 +1,149 @@
+{
+ "id": "WAV-STR-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "電磁おんさで振動させた弦の定常波と，その音に共鳴する閉管",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "numeric",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，振動数 $f$ で振動する電磁おんさに弦の一端を付け，弦を水平に張って滑車にかけ，他端に質量 $M$ のおもりをつるした．おんさから滑車までの弦の長さは $L$，弦の線密度（単位長さあたりの質量）は $\\rho$，重力加速度の大きさは $g$ である．張力 $S$ の弦を伝わる横波の速さは $\\sqrt{\\dfrac S\\rho}$ で与えられる．おんさの位置と滑車の位置は，定常波の節とみなしてよい．このとき，弦には腹が3個の定常波ができた．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$f$ を，$L$，$M$，$g$，$\\rho$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "おもりの質量を変えて，腹が2個の定常波をつくりたい．おもりの質量をいくらにすればよいか．"
+     },
+     {
+      "id": "3",
+      "tex": "$L=1.2\\,\\mathrm m$，$\\rho=4.9\\times10^{-4}\\,\\mathrm{kg/m}$，$M=0.50\\,\\mathrm{kg}$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，弦を伝わる波の速さを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) のとき，おんさの振動数 $f$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(3) のとき，弦から出る音を，一端を閉じた管（閉管）の開口端の近くで聞かせる．音の速さを $340\\,\\mathrm{m/s}$ とし，開口端補正を無視して，共鳴する最も短い管の長さを求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "おもりを (2) の質量に替えて腹が2個の定常波をつくった．弦から出る音に共鳴する最も短い閉管の長さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左の電磁おんさから右の滑車まで長さ L の弦を水平に張り、滑車の先に質量 M のおもりをつるす。弦には腹が3個の定常波ができている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f=\\dfrac3{2L}\\sqrt{\\dfrac{Mg}\\rho}$",
+    "grading": "f：(3/(2L))sqrt(M g/ρ)"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac94M$",
+    "grading": "9M/4"
+   },
+   {
+    "id": "3",
+    "tex": "$1.0\\times10^2\\,\\mathrm{m/s}$",
+    "grading": "100 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$125\\,\\mathrm{Hz}$",
+    "grading": "125 [Hz]"
+   },
+   {
+    "id": "5",
+    "tex": "$0.68\\,\\mathrm m$",
+    "grading": "0.68 [m]"
+   },
+   {
+    "id": "6",
+    "tex": "$0.68\\,\\mathrm m$（変わらない）",
+    "grading": "0.68 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 張力は $S=Mg$，速さ $v=\\sqrt{\\dfrac{Mg}\\rho}$．腹が3個なので $L=3\\cdot\\dfrac\\lambda2$，$\\lambda=\\dfrac{2L}3$．\n\\[ f=\\frac v\\lambda=\\boldsymbol{\\frac3{2L}\\sqrt{\\frac{Mg}\\rho}} \\]\n\n\\textbf{(2)} 振動数はおんさで決まり，$f$ のまま．腹が $n$ 個のとき $f=\\dfrac n{2L}\\sqrt{\\dfrac{M_ng}\\rho}$ より $M_n\\propto\\dfrac1{n^2}$．$M_2=\\left(\\dfrac32\\right)^2M=\\boldsymbol{\\dfrac94M}$．（張力を大きくすると波が速くなり，波長が長くなって腹が減る．）\n\n\\textbf{(3)} $v=\\sqrt{\\dfrac{0.50\\times9.8}{4.9\\times10^{-4}}}=\\sqrt{1.0\\times10^4}=1.0\\times10^2\\,\\mathrm{m/s}$．\n\n\\textbf{(4)} $\\lambda=\\dfrac{2\\times1.2}3=0.80\\,\\mathrm m$，$f=\\dfrac{100}{0.80}=125\\,\\mathrm{Hz}$．\n\n\\textbf{(5)} 空気中の音は振動数 $125\\,\\mathrm{Hz}$ のまま，波長が $\\lambda_{\\text{音}}=\\dfrac{340}{125}=2.72\\,\\mathrm m$ になる（弦の波長 $0.80\\,\\mathrm m$ ではない）．閉管の基本振動は管の長さ $=\\dfrac{\\lambda_{\\text{音}}}4$ なので $\\dfrac{2.72}4=0.68\\,\\mathrm m$．\n\n\\textbf{(6)} 腹が2個になっても，弦の振動数はおんさの振動数 $125\\,\\mathrm{Hz}$ のまま（変わったのは弦の波の速さと波長：$v=150\\,\\mathrm{m/s}$，$\\lambda=1.2\\,\\mathrm m$）．音の振動数も波長も変わらないので，最も短い閉管は $\\boldsymbol{0.68\\,\\mathrm m}$ のまま．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "振動数は波源（おんさ）が決め，波の速さは媒質（張力と線密度，空気）が決める．弦の波と空気中の音は振動数が同じで，波長は別物．"
+ },
+ "concepts": [
+  "string-resonance",
+  "wave-basics"
+ ],
+ "laws": [
+  "string-modes",
+  "pipe-modes",
+  "wave-speed"
+ ],
+ "misconceptions": [
+  "MC-WAVE-SPEED-FREQ"
+ ],
+ "tags": [
+  "弦の振動",
+  "メルデの実験",
+  "閉管",
+  "共鳴"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,168 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  240
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    200
+   ],
+   "to": [
+    320,
+    200
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    200
+   ],
+   "to": [
+    300,
+    49.89
+   ],
+   "style": "ground",
+   "phys": "surface"
+  },
+  {
+   "t": "arc",
+   "at": [
+    40,
+    200
+   ],
+   "r": 34,
+   "from": 0,
+   "to": 30,
+   "label": "φ",
+   "labelGap": 12
+  },
+  {
+   "t": "block",
+   "at": [
+    170,
+    124.94
+   ],
+   "w": 44,
+   "h": 30,
+   "angle": 30,
+   "label": "",
+   "phys": "body:block"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    162.5,
+    111.95
+   ],
+   "dir": 270,
+   "len": 80,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg",
+   "labelOffset": [
+    16,
+    -4
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    162.5,
+    111.95
+   ],
+   "dir": 120,
+   "len": 69.28,
+   "style": "force",
+   "phys": "force:N",
+   "label": "N"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    162.5,
+    111.95
+   ],
+   "dir": 30,
+   "len": 57.32,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    162.5,
+    111.95
+   ],
+   "dir": 210,
+   "len": 17.32,
+   "style": "force",
+   "phys": "force:f",
+   "label": "μN",
+   "labelOffset": [
+    -8,
+    4
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    200
+   ],
+   "to": [
+    290,
+    200
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    200
+   ],
+   "to": [
+    290,
+    165.36
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    290,
+    200
+   ],
+   "to": [
+    290,
+    165.36
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    172
+   ],
+   "text": "Δs",
+   "size": 14
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    214
+   ],
+   "text": "Δx",
+   "size": 14
+  }
+ ]
+}

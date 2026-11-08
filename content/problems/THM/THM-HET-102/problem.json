@@ -1,0 +1,102 @@
+{
+ "id": "THM-HET-102",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-01",
+ "topic": "熱量計による金属の比熱の測定（容器の熱容量を含める）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "experiment"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "熱容量 $60\\,\\mathrm{J/K}$ の断熱された熱量計に，質量 $0.200\\,\\mathrm{kg}$ の水が入っており，全体の温度は $20.0^\\circ\\mathrm C$ である．これに，$100.0^\\circ\\mathrm C$ に熱した質量 $0.100\\,\\mathrm{kg}$ の金属球を入れてかき混ぜたところ，全体の温度は $25.0^\\circ\\mathrm C$ になった．水の比熱を $4.2\\times10^3\\,\\mathrm{J/(kg\\cdot K)}$ とし，熱は外部に逃げないものとする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "水と熱量計が得た熱量の和 $Q$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "金属の比熱 $c$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "熱量計の熱容量を無視して（水だけが熱を得たとして）計算すると，金属の比熱はいくらと見積もられるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Q=4.5\\times10^3\\,\\mathrm J$",
+    "grading": "Q：4500 [J]"
+   },
+   {
+    "id": "2",
+    "tex": "$c=6.0\\times10^2\\,\\mathrm{J/(kg\\cdot K)}$",
+    "grading": "c：600 [J/(kg·K)]"
+   },
+   {
+    "id": "3",
+    "tex": "$5.6\\times10^2\\,\\mathrm{J/(kg\\cdot K)}$（真の値より小さく見積もってしまう）",
+    "grading": "560 [J/(kg·K)]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 水の熱容量は $0.200\\times4.2\\times10^3=840\\,\\mathrm{J/K}$．熱量計と合わせて $840+60=900\\,\\mathrm{J/K}$ が $5.0\\,\\mathrm K$ 上がったので $Q=900\\times5.0=4500\\,\\mathrm J$．\n\n(2) 金属球は $100.0-25.0=75.0\\,\\mathrm K$ 下がった．失った熱量＝得た熱量より \\[0.100\\times c\\times75.0=4500\\quad\\therefore\\ c=600\\,\\mathrm{J/(kg\\cdot K)}\\]\n\n(3) 得た熱量を $840\\times5.0=4200\\,\\mathrm J$ とすると $c'=\\dfrac{4200}{0.100\\times75.0}=560\\,\\mathrm{J/(kg\\cdot K)}$．容器が受け取った分を数え落とすので，比熱は小さめに出る．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "失った熱量＝得た熱量．熱を受け取るのは水だけでなく容器もなので，容器の熱容量も足し合わせる．"
+ },
+ "concepts": [
+  "heat-temperature"
+ ],
+ "laws": [
+  "heat-capacity"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "比熱",
+  "熱量の保存",
+  "熱量計",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

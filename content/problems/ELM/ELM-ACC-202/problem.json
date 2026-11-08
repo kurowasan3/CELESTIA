@@ -1,0 +1,128 @@
+{
+ "id": "ELM-ACC-202",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "コイル・コンデンサーのリアクタンスと周波数",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "角周波数 $\\omega=500\\ \\mathrm{rad/s}$，電圧の実効値 $10\\ \\mathrm{V}$ の交流電源に，(a) 自己インダクタンス $0.10\\ \\mathrm{H}$ のコイルだけをつないだ場合と，(b) 電気容量 $40\\ \\mu\\mathrm{F}$ のコンデンサーだけをつないだ場合を考える．コイルの抵抗は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "(a) のコイルのリアクタンス $X_L$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(a) の電流の実効値 $I_{\\rm a}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(a) で，電流の位相は電源電圧の位相に比べてどうなっているか．"
+     },
+     {
+      "id": "4",
+      "tex": "(a) で，コイルが消費する電力の時間平均 $\\overline P$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(b) の電流の実効値 $I_{\\rm b}$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "電源の電圧の実効値は変えずに，角周波数だけを $2$ 倍にした．(a)，(b) の電流の実効値は，それぞれもとの何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$X_L=50\\ \\Omega$",
+    "grading": "X_L：50 [Ω]"
+   },
+   {
+    "id": "2",
+    "tex": "$I_{\\rm a}=0.20\\ \\mathrm{A}$",
+    "grading": "I_a：0.20 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac\\pi2$ 遅れている"
+   },
+   {
+    "id": "4",
+    "tex": "$\\overline P=0\\ \\mathrm{W}$",
+    "grading": "P：0 [W]"
+   },
+   {
+    "id": "5",
+    "tex": "$I_{\\rm b}=0.20\\ \\mathrm{A}$",
+    "grading": "I_b：0.20 [A]"
+   },
+   {
+    "id": "6",
+    "tex": "(a) $\\dfrac12$ 倍，(b) $2$ 倍",
+    "grading": "(a)：(1/2)倍 ; (b)：2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $X_L=\\omega L=500\\times0.10=50\\ \\Omega$．\n\n(2) $I_{\\rm a}=\\dfrac{10}{50}=0.20\\ \\mathrm{A}$．\n\n(3) コイルの電圧 $L\\dfrac{\\Delta i}{\\Delta t}$ は電流の変化の割合に比例するので，電圧は電流より $\\dfrac\\pi2$ 進む．つまり電流は電圧より $\\dfrac\\pi2$ \\textbf{遅れる}．\n\n(4) 電流と電圧の位相が $\\dfrac\\pi2$ ずれているので，電力 $vi$ は正と負を同じだけくり返し，平均は $0$．コイルはエネルギーを蓄えては電源に返すだけで，消費しない．\n\n(5) $X_C=\\dfrac1{\\omega C}=\\dfrac1{500\\times40\\times10^{-6}}=50\\ \\Omega$．$I_{\\rm b}=\\dfrac{10}{50}=0.20\\ \\mathrm{A}$（電流は電圧より $\\dfrac\\pi2$ 進む）．\n\n(6) $X_L=\\omega L$ は $2$ 倍になるので (a) の電流は $\\dfrac12$ 倍．$X_C=\\dfrac1{\\omega C}$ は $\\dfrac12$ 倍になるので (b) の電流は $2$ 倍．コイルは高い周波数の電流を通しにくく，コンデンサーは通しやすい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$X_L=\\omega L$ は周波数に比例，$X_C=\\dfrac1{\\omega C}$ は反比例．どちらも電圧と電流の位相が $\\dfrac\\pi2$ ずれるので平均の消費電力は 0．"
+ },
+ "concepts": [
+  "ac-circuit"
+ ],
+ "laws": [
+  "ac-reactance",
+  "rms-value"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流",
+  "リアクタンス",
+  "位相"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

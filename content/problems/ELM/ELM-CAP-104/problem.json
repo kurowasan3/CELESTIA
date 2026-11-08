@@ -1,0 +1,146 @@
+{
+ "id": "ELM-CAP-104",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "平行板コンデンサーへの金属板・誘電体の挿入（電池の仕事と外力の仕事）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "面積 $S$ の2枚の極板を間隔 $d$ で平行に置いたコンデンサーがある．極板間は真空で，真空の誘電率を $\\varepsilon_0$ とする．厚さ $\\dfrac d2$，面積 $S$ の板を，極板と平行に，極板間にすき間なく重なるように差し込むことができる（図は板を差し込んだ状態）．極板の端の影響は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "コンデンサーを電圧 $V$ の電池につないで十分に時間がたってから，電池につないだまま，電荷をもたない金属板をゆっくり差し込んだ．差し込んだあとの電気容量 $C_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) で金属板を差し込む間に，電池がした仕事 $W_{\\mathrm B}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(1) で金属板を差し込む間に，外力がした仕事 $W_{\\mathrm F}$ を求めよ．また，その符号から，金属板は極板間に引き込まれるか押し出されるかを答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "次に，はじめの状態（板なし）にもどして電圧 $V$ の電池で充電し，電池を外した．そのあと，比誘電率 $3$ の誘電体の板をゆっくり差し込んだ．差し込んだあとの極板間の電圧 $V^\\prime$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) で，静電エネルギーは差し込む前の何倍になったか．"
+     },
+     {
+      "id": "6",
+      "tex": "(4) で誘電体を差し込む間に，外力がした仕事 $W$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "間隔 d の平行板コンデンサーを電圧 V の電池につなぎ、極板間に厚さ d/2 の板（斜線）を極板と平行に差し込んだ状態",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$C_1=\\dfrac{2\\varepsilon_0S}{d}$",
+    "grading": "C_1：2ε_0 S/d"
+   },
+   {
+    "id": "2",
+    "tex": "$W_{\\mathrm B}=\\dfrac{\\varepsilon_0SV^2}{d}$",
+    "grading": "W_B：ε_0 S V^2/d"
+   },
+   {
+    "id": "3",
+    "tex": "$W_{\\mathrm F}=-\\dfrac{\\varepsilon_0SV^2}{2d}$．負なので，金属板は極板間に引き込まれる",
+    "grading": "W_F：-ε_0 S V^2/(2d)"
+   },
+   {
+    "id": "4",
+    "tex": "$V^\\prime=\\dfrac23V$",
+    "grading": "2V/3"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac23$ 倍",
+    "grading": "(2/3)倍"
+   },
+   {
+    "id": "6",
+    "tex": "$W=-\\dfrac{\\varepsilon_0SV^2}{6d}$",
+    "grading": "W：-ε_0 S V^2/(6d)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "はじめの電気容量を $C_0=\\dfrac{\\varepsilon_0S}d$ とおく．\n\n(1) 金属板の内部は電場 $0$（等電位）なので，金属板の部分は導線と同じ．残りの真空部分の厚さは $\\dfrac d2$ で，$C_1=\\dfrac{\\varepsilon_0S}{d/2}=\\dfrac{2\\varepsilon_0S}d$．（金属板の位置によらない．）\n\n(2) 電圧 $V$ は一定で，電気量は $C_0V$ から $2C_0V$ に増える．電池は電気量 $\\Delta Q=C_0V$ を電圧 $V$ で送り出すので $W_{\\mathrm B}=\\Delta Q\\cdot V=C_0V^2=\\dfrac{\\varepsilon_0SV^2}d$．\n\n(3) ゆっくり動かすので，エネルギーの収支は $\\Delta U=W_{\\mathrm B}+W_{\\mathrm F}$．$\\Delta U=\\dfrac12(2C_0)V^2-\\dfrac12C_0V^2=\\dfrac12C_0V^2$ なので \\[W_{\\mathrm F}=\\frac12C_0V^2-C_0V^2=-\\frac{\\varepsilon_0SV^2}{2d}\\]外力の仕事が負 → 外力は板を引き止める向きにはたらいていた → 板は極板間に引き込まれる．\n\n(4) 電池を外したので電気量 $Q=C_0V$ は一定．誘電体の部分（厚さ $\\frac d2$，誘電率 $3\\varepsilon_0$）と真空の部分（厚さ $\\frac d2$）の直列と考えて \\[\\frac1{C_2}=\\frac{d/2}{\\varepsilon_0S}+\\frac{d/2}{3\\varepsilon_0S}=\\frac{2d}{3\\varepsilon_0S},\\qquad C_2=\\frac32C_0\\]$V^\\prime=\\dfrac Q{C_2}=\\dfrac23V$．\n\n(5) $U=\\dfrac{Q^2}{2C}$ で $Q$ 一定，$C$ が $\\dfrac32$ 倍なので $\\dfrac23$ 倍．\n\n(6) 電池がないので $W=\\Delta U=\\left(\\dfrac23-1\\right)\\dfrac12C_0V^2=-\\dfrac16C_0V^2=-\\dfrac{\\varepsilon_0SV^2}{6d}$．誘電体も極板間に引き込まれる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電池につないだまま → $V$ 一定で，エネルギーの収支に電池の仕事 $QV$ が入る．電池を外す → $Q$ 一定．金属板は「その厚さの分だけ間隔が減る」，誘電体は「直列のコンデンサー」．"
+ },
+ "concepts": [
+  "capacitor"
+ ],
+ "laws": [
+  "capacitance",
+  "capacitor-energy",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "コンデンサー",
+  "誘電体",
+  "金属板",
+  "静電エネルギー",
+  "仕事"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

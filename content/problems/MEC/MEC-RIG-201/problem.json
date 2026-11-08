@@ -1,0 +1,142 @@
+{
+ "id": "MEC-RIG-201",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "シーソーのつり合いと支点が支える力",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量の無視できる板を，中央の支点で支えたシーソーがある．支点から左に $1.5\\,\\mathrm m$ の位置に質量 $40\\,\\mathrm{kg}$ の子ども A が座っている．質量 $30\\,\\mathrm{kg}$ の子ども B が支点の右側に座って，板を水平に静止させたい．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "B は支点から右に何 $\\mathrm m$ の位置に座ればよいか．"
+     },
+     {
+      "id": "2",
+      "tex": "このとき，支点が板を支える力の大きさ $N$ は何 $\\mathrm N$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "中央の支点で支えた板の、支点から左 1.5 m に 40 kg の A、右 x の位置に 30 kg の B が座る",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "板にはたらく力：A から下向き 40g、B から下向き 30g、支点から上向き N。支点のまわりの力のモーメントがつり合う",
+   "caption": "支点のまわりの力のモーメントの和が $0$",
+   "physics": {
+    "equilibrium": true,
+    "torque": {
+     "about": [
+      190,
+      130
+     ]
+    },
+    "forces": [
+     {
+      "name": "WA",
+      "dir_deg": 270
+     },
+     {
+      "name": "WB",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 90
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2.0\\,\\mathrm m$",
+    "grading": "2 [m]"
+   },
+   {
+    "id": "2",
+    "tex": "$N=686\\,\\mathrm N\\ (\\approx6.9\\times10^2\\,\\mathrm N)$",
+    "grading": "N：686 [N]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(1) 支点のまわりの力のモーメントのつり合い（反時計回りの $40\\times9.8\\times1.5$ と時計回りの $30\\times9.8\\times x$ が等しい）：\\[40\\times9.8\\times1.5=30\\times9.8\\times x\\quad\\Longrightarrow\\quad x=2.0\\,\\mathrm m\\] 軽い B のほうが支点から遠くに座る．\n\n(2) 鉛直方向の力のつり合い：$N=(40+30)\\times9.8=686\\,\\mathrm N$．支点は2人の重さの合計を支える．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "力のモーメント＝力の大きさ×腕の長さ．回転しない条件は「支点のまわりのモーメントの和が 0」，動かない条件は「力の和が 0」．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium"
+ ],
+ "laws": [
+  "torque-equilibrium"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力のモーメント",
+  "てこ",
+  "つり合い"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

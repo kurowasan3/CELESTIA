@@ -1,0 +1,114 @@
+{
+ "id": "ESY-MSP-101",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "電場で加速したイオンの磁場中の円運動（数値）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "比電荷（電気量と質量の比）が $\\dfrac qm=1.0\\times10^8\\ \\mathrm{C/kg}$ の正イオンを，静止した状態から電位差 $V=200\\ \\mathrm{V}$ で加速し，磁束密度 $B=0.020\\ \\mathrm{T}$ の一様な磁場に，磁場に垂直に入射させた．重力は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "加速された後のイオンの速さ $v$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "磁場の中での円運動の半径 $r$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "円運動の周期 $T$ を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "4",
+      "tex": "加速の電位差だけを $4$ 倍にすると，半径は何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=2.0\\times10^5\\ \\mathrm{m/s}$",
+    "grading": "v：2.0*10^5 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$r=0.10\\ \\mathrm{m}$",
+    "grading": "r：0.10 [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$T=\\pi\\times10^{-6}\\ \\mathrm{s}\\ (\\fallingdotseq3.1\\times10^{-6}\\ \\mathrm{s})$",
+    "grading": "T：π*10^(-6) [s]"
+   },
+   {
+    "id": "4",
+    "tex": "$2$ 倍",
+    "grading": "2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 電場がする仕事 $qV$ が運動エネルギーになる：$\\dfrac12mv^2=qV$ より $v=\\sqrt{2\\dfrac qmV}=\\sqrt{2\\times1.0\\times10^8\\times200}=2.0\\times10^5\\ \\mathrm{m/s}$．\n\n(2) $m\\dfrac{v^2}r=qvB$ より $r=\\dfrac{v}{(q/m)B}=\\dfrac{2.0\\times10^5}{1.0\\times10^8\\times0.020}=0.10\\ \\mathrm{m}$．\n\n(3) $T=\\dfrac{2\\pi r}v=\\dfrac{2\\pi}{(q/m)B}=\\dfrac{2\\pi}{2.0\\times10^6}=\\pi\\times10^{-6}\\ \\mathrm{s}$．\n\n(4) $v\\propto\\sqrt V$，$r\\propto v$ なので $r\\propto\\sqrt V$．$\\sqrt4=2$ 倍．（質量分析器では，この関係から比電荷の違うイオンを分ける．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "加速はエネルギー保存 $qV=\\dfrac12mv^2$，磁場中はローレンツ力が向心力 $qvB=m\\dfrac{v^2}r$．"
+ },
+ "concepts": [
+  "lorentz-force",
+  "circular-motion",
+  "coulomb-field"
+ ],
+ "laws": [
+  "work-energy-theorem",
+  "lorentz-force",
+  "cyclotron-motion"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ローレンツ力",
+  "加速電圧",
+  "比電荷",
+  "質量分析"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

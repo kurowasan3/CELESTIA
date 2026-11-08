@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" width="360" height="250" font-family="'Times New Roman', serif">
+<polygon points="260,50 255,50.09 250,50.38 245,50.84 240,51.5 235,52.34 230,53.38 225,54.59 220,56 215,57.59 210,59.38 205,61.34 200,63.5 195,65.84 190,68.38 185,71.09 180,74 175,77.09 170,80.38 165,83.84 160,87.5 155,91.34 150,95.38 145,99.59 140,104 135,108.59 130,113.38 125,118.34 120,123.5 115,128.84 110,134.38 105,140.09 100,146 95,152.09 90,158.38 85,164.84 80,171.5 75,178.34 70,185.38 65,192.59 60,200 260,200" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="20" y1="200" x2="340" y2="200" stroke="currentColor" stroke-width="2"/>
+<line x1="260" y1="50" x2="330" y2="50" stroke="currentColor" stroke-width="2"/>
+<polygon points="260,50 330,50 330,200 260,200" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="260,50 258,50.02 256,50.06 254,50.13 252,50.24 250,50.38 248,50.54 246,50.73 244,50.96 242,51.22 240,51.5 238,51.81 236,52.16 234,52.53 232,52.94 230,53.37 228,53.84 226,54.33 224,54.86 222,55.41 220,56 218,56.61 216,57.26 214,57.93 212,58.64 210,59.38 208,60.14 206,60.94 204,61.76 202,62.62 200,63.5 198,64.42 196,65.36 194,66.34 192,67.34 190,68.38 188,69.44 186,70.54 184,71.66 182,72.82 180,74 178,75.22 176,76.46 174,77.74 172,79.04 170,80.38 168,81.74 166,83.14 164,84.56 162,86.02 160,87.5 158,89.02 156,90.56 154,92.14 152,93.74 150,95.38 148,97.04 146,98.74 144,100.46 142,102.22 140,104 138,105.82 136,107.66 134,109.54 132,111.44 130,113.38 128,115.34 126,117.34 124,119.36 122,121.42 120,123.5 118,125.62 116,127.76 114,129.94 112,132.14 110,134.38 108,136.64 106,138.94 104,141.26 102,143.62 100,146 98,148.42 96,150.86 94,153.34 92,155.84 90,158.38 88,160.94 86,163.54 84,166.16 82,168.82 80,171.5 78,174.22 76,176.96 74,179.74 72,182.54 70,185.38 68,188.24 66,191.14 64,194.06 62,197.02 60,200" fill="none" stroke="currentColor" stroke-width="2.4" data-phys="trajectory"/>
+<g transform="translate(160,87.5) rotate(-36.87)" data-phys="body:block" data-angle="36.87">
+<rect x="-12" y="-16" width="24" height="16" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<g class="f-force" data-phys="force:F" data-dir="36.87" data-len="40">
+<line x1="164.8" y1="73.9" x2="188.8" y2="55.9" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="196.8,49.9 191.6,59.63 186,52.17" fill="currentColor"/>
+<text x="206.4" y="42.7" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F</text>
+</g>
+<text x="50" y="214" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<text x="260" y="36" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<g class="f-ink" data-dir="90" data-len="75">
+<line x1="350" y1="125" x2="350" y2="60" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="350,50 354.66,60 345.34,60" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="270" data-len="75">
+<line x1="350" y1="125" x2="350" y2="190" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="350,200 345.34,190 354.66,190" fill="currentColor"/>
+</g>
+<text x="340" y="125" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">h</text>
+<g class="f-ink" data-dir="0" data-len="100">
+<line x1="160" y1="226" x2="250" y2="226" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="260,226 250,230.66 250,221.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="180" data-len="100">
+<line x1="160" y1="226" x2="70" y2="226" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,226 70,221.34 70,230.66" fill="currentColor"/>
+</g>
+<text x="160" y="240" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d</text>
+</svg>

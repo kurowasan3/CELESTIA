@@ -1,0 +1,145 @@
+{
+ "id": "MEC-SHM-201",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "変位と時刻のグラフから読む単振動",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上で，ばね定数 $k$ の軽いばねにつけた質量 $0.50\\,\\mathrm{kg}$ の物体が単振動をしている．つり合いの位置を原点とし，右向きを正として，物体の変位 $x$ と時刻 $t$ の関係をグラフにすると図のようになった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "振幅 $A$ と周期 $T$ を答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "角振動数 $\\omega$ は何 $\\mathrm{rad/s}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "物体の速さの最大値 $v_{\\mathrm{max}}$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "ばね定数 $k$ は何 $\\mathrm{N/m}$ か．"
+     },
+     {
+      "id": "5",
+      "tex": "時刻 $t=\\dfrac{\\pi}{10}\\,\\mathrm s$ における物体の加速度を，向きを正負の符号で表して答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "変位 x と時刻 t のグラフ。t = 0 で x = 0.10 m の余弦曲線で、x は 0.10 m と −0.10 m の間を変化し、t = π/5 s で再び 0.10 m に戻る。横軸の目盛りは π/10、π/5、3π/10、2π/5",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$A=0.10\\,\\mathrm m$，$T=\\dfrac{\\pi}{5}\\,\\mathrm s\\ (\\approx0.63\\,\\mathrm s)$",
+    "grading": "A：0.1 [m] ; T：π/5 [s]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega=10\\,\\mathrm{rad/s}$",
+    "grading": "ω：10 [rad/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$v_{\\mathrm{max}}=1.0\\,\\mathrm{m/s}$",
+    "grading": "v_{max}：1 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$k=50\\,\\mathrm{N/m}$",
+    "grading": "k：50 [N/m]"
+   },
+   {
+    "id": "5",
+    "tex": "$+10\\,\\mathrm{m/s^2}$（正の向きに $10\\,\\mathrm{m/s^2}$）",
+    "grading": "10 [m/s^2]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) グラフの山の高さから $A=0.10\\,\\mathrm m$．$t=0$ の山から次の山までが1周期で $T=\\dfrac{\\pi}{5}\\,\\mathrm s$．\n\n(2) $\\omega=\\dfrac{2\\pi}{T}=\\dfrac{2\\pi}{\\pi/5}=10\\,\\mathrm{rad/s}$．\n\n(3) 速さはつり合いの位置（$x=0$，グラフが $t$ 軸を横切るところ）で最大：$v_{\\mathrm{max}}=A\\omega=0.10\\times10=1.0\\,\\mathrm{m/s}$．グラフの傾きが速度なので，傾きが最も急な点である．\n\n(4) $\\omega=\\sqrt{\\dfrac km}$ より $k=m\\omega^2=0.50\\times10^2=50\\,\\mathrm{N/m}$．\n\n(5) $t=\\dfrac{\\pi}{10}\\,\\mathrm s=\\dfrac T2$ では $x=-A=-0.10\\,\\mathrm m$（左端）．単振動の加速度は $a=-\\omega^2x$ なので \\[a=-10^2\\times(-0.10)=+10\\,\\mathrm{m/s^2}\\] 端では速度は $0$ だが，加速度の大きさは最大で，向きは中心（正の向き）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$x$–$t$ グラフから $A$ と $T$ を読めば，$\\omega=2\\pi/T$，$v_{\\mathrm{max}}=A\\omega$，$a=-\\omega^2x$，$k=m\\omega^2$ がすべて決まる．"
+ },
+ "simulation": {
+  "id": "mech.spring",
+  "preset": {
+   "m": 0.5,
+   "k": 50,
+   "A": 0.1
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "simple-harmonic-motion"
+ ],
+ "laws": [
+  "shm-period",
+  "hooke-law"
+ ],
+ "misconceptions": [
+  "MC-ACCEL-ZERO-AT-TOP"
+ ],
+ "tags": [
+  "単振動",
+  "グラフ読解",
+  "ばね振り子"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

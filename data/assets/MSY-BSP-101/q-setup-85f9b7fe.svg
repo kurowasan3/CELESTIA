@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" width="400" height="150" font-family="'Times New Roman', serif">
+<line x1="10" y1="120" x2="390" y2="120" stroke="currentColor" stroke-width="2"/>
+<circle cx="40" cy="102" r="4" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-vel" data-phys="velocity:v" data-dir="0" data-len="40">
+<line x1="50" y1="102" x2="80" y2="102" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="90,102 80,106.66 80,97.34" fill="currentColor"/>
+<text x="70" y="90" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+</g>
+<text x="40" y="88" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+<g transform="translate(150,120) rotate(0)" data-phys="body:A" data-angle="0">
+<rect x="-20" y="-36" width="40" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<polyline points="170,102 180.8,102 183.24,109 188.13,95 193.01,109 197.9,95 202.79,109 207.67,95 212.56,109 217.44,95 222.33,109 227.21,95 232.1,109 236.99,95 241.87,109 246.76,95 249.2,102 260,102" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<g transform="translate(280,120) rotate(0)" data-phys="body:B" data-angle="0">
+<rect x="-20" y="-36" width="40" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<text x="150" y="134" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+<text x="280" y="134" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+<text x="215" y="84" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">k</text>
+</svg>

@@ -1,0 +1,146 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  220
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     50,
+     180
+    ],
+    [
+     50,
+     120
+    ],
+    [
+     250,
+     60
+    ],
+    [
+     250,
+     180
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    180
+   ],
+   "dir": 0,
+   "len": 260,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    180
+   ],
+   "dir": 90,
+   "len": 160,
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    120
+   ],
+   "to": [
+    250,
+    60
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    60
+   ],
+   "to": [
+    250,
+    60
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    120
+   ],
+   "text": "10",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    60
+   ],
+   "text": "20",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    196
+   ],
+   "text": "5.0",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    194
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    56,
+    16
+   ],
+   "text": "v [m/s]",
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    316,
+    196
+   ],
+   "text": "t [s]",
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    152
+   ],
+   "text": "面積 75 m",
+   "italic": false,
+   "size": 14
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  320,
+  215
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    100,
+    30
+   ],
+   "to": [
+    200,
+    30
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     100,
+     20
+    ],
+    [
+     200,
+     20
+    ],
+    [
+     200,
+     30
+    ],
+    [
+     100,
+     30
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    30
+   ],
+   "to": [
+    150,
+    180
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    30
+   ],
+   "to": [
+    271.2435565298214,
+    100.00000000000001
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    100.00000000000001
+   ],
+   "to": [
+    271.2435565298214,
+    100.00000000000001
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "ball",
+   "at": [
+    271.24,
+    100.0
+   ],
+   "r": 7,
+   "label": ""
+  },
+  {
+   "t": "arrow",
+   "from": [
+    271.24,
+    100.0
+   ],
+   "dir": 150,
+   "len": 84,
+   "style": "force",
+   "phys": "force:S",
+   "label": "S",
+   "labelPos": "mid",
+   "labelOffset": [
+    4,
+    -10
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    271.24,
+    100.0
+   ],
+   "dir": 270,
+   "len": 42,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg",
+   "labelPos": "end"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    261.24,
+    172.0
+   ],
+   "dir": 180,
+   "len": 70,
+   "style": "component",
+   "label": "合力（向心力）",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    30
+   ],
+   "italic": false
+  },
+  {
+   "t": "text",
+   "at": [
+    138,
+    42
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  }
+ ]
+}

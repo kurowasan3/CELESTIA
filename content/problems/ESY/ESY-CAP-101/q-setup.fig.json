@@ -1,0 +1,187 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  220
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    60,
+    60
+   ],
+   "to": [
+    330,
+    60
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    160
+   ],
+   "to": [
+    330,
+    160
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60,
+     60
+    ],
+    [
+     60,
+     105
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    42,
+    105
+   ],
+   "to": [
+    78,
+    105
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    42,
+    115
+   ],
+   "to": [
+    78,
+    115
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60,
+     115
+    ],
+    [
+     60,
+     160
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    36,
+    110
+   ],
+   "text": "C",
+   "italic": true,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    50
+   ],
+   "to": [
+    200,
+    170
+   ],
+   "style": "thick",
+   "phys": "rod"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    200,
+    110
+   ],
+   "dir": 0,
+   "len": 55,
+   "style": "force",
+   "label": "F",
+   "labelPos": "end",
+   "phys": "force:F"
+  },
+  {
+   "t": "text",
+   "at": [
+    212,
+    182
+   ],
+   "text": "m",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    188,
+    135
+   ],
+   "text": "l",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    85
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    160,
+    85
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    135
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    160,
+    135
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    190,
+    205
+   ],
+   "text": "磁場 B（鉛直上向き＝紙面の裏から表）",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

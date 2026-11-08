@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="380" height="230" font-family="'Times New Roman', serif">
+<g data-phys="battery:E">
+<line x1="40" y1="200" x2="40" y2="135" stroke="currentColor" stroke-width="1.6"/>
+<line x1="40" y1="125" x2="40" y2="60" stroke="currentColor" stroke-width="1.6"/>
+<line x1="54" y1="125" x2="26" y2="125" stroke="currentColor" stroke-width="1.6"/>
+<line x1="47" y1="135" x2="33" y2="135" stroke="currentColor" stroke-width="3"/>
+<text x="60" y="130" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">E</text>
+</g>
+<polyline points="40,60 140,60" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="140" cy="60" r="3" fill="currentColor"/>
+<circle cx="200" cy="60" r="3" fill="currentColor"/>
+<text x="140" y="44" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">a</text>
+<text x="200" y="44" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">b</text>
+<line x1="170" y1="100" x2="144" y2="64" stroke="currentColor" stroke-width="1.2" data-phys="switch"/>
+<circle cx="170" cy="100" r="3" fill="currentColor"/>
+<text x="186" y="104" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">S</text>
+<polyline points="170,100 170,131" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="152" y1="131" x2="188" y2="131" stroke="currentColor" stroke-width="2.4"/>
+<line x1="152" y1="149" x2="188" y2="149" stroke="currentColor" stroke-width="2.4"/>
+<polyline points="170,149 170,200" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="146" y="140" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">C₁</text>
+<polyline points="200,60 300,60 300,121" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="282" y1="121" x2="318" y2="121" stroke="currentColor" stroke-width="2.4"/>
+<line x1="282" y1="139" x2="318" y2="139" stroke="currentColor" stroke-width="2.4"/>
+<polyline points="300,139 300,200" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="324" y="130" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">C₂</text>
+<polyline points="40,200 300,200" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</svg>

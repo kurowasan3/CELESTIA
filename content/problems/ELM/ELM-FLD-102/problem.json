@@ -1,0 +1,146 @@
+{
+ "id": "ELM-FLD-102",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-01",
+ "topic": "等量の正電荷2つがつくる電場と電位（電場が 0 でも電位は 0 でない）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$xy$ 平面上の点 A$(-a,\\,0)$ と点 B$(a,\\,0)$ に，どちらも電気量 $+Q\\ (Q>0)$ の点電荷を固定した．原点を O，$y$ 軸上の点 $(0,\\,\\sqrt3\\,a)$ を P とする（AP $=$ BP $=2a$）．クーロンの法則の比例定数を $k$ とし，電位の基準は無限遠とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "O での電場の強さ $E_{\\mathrm O}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "O での電位 $V_{\\mathrm O}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "P での電場の強さ $E_{\\mathrm P}$ を求め，その向きを答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "P での電位 $V_{\\mathrm P}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "電気量 $q\\ (>0)$ の点電荷を，P から O まで $y$ 軸に沿ってゆっくり運ぶのに外力がする仕事 $W$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "x 軸上の点 A(−a, 0) と B(a, 0) に +Q の点電荷。原点 O、y 軸上の点 P(0, √3a)。AP と BP はともに 2a で、三角形 ABP は正三角形",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$E_{\\mathrm O}=0$",
+    "grading": "E_O：0"
+   },
+   {
+    "id": "2",
+    "tex": "$V_{\\mathrm O}=\\dfrac{2kQ}{a}$",
+    "grading": "V_O：2k Q/a"
+   },
+   {
+    "id": "3",
+    "tex": "$E_{\\mathrm P}=\\dfrac{\\sqrt3\\,kQ}{4a^2}$，向きは $y$ 軸の正の向き（O から P へ向かう向き）",
+    "grading": "E_P：sqrt(3)k Q/(4a^2)"
+   },
+   {
+    "id": "4",
+    "tex": "$V_{\\mathrm P}=\\dfrac{kQ}{a}$",
+    "grading": "V_P：k Q/a"
+   },
+   {
+    "id": "5",
+    "tex": "$W=\\dfrac{kQq}{a}$",
+    "grading": "W：k Q q/a"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) A の電荷が O につくる電場は $+x$ 向き，B の電荷がつくる電場は $-x$ 向きで，大きさはどちらも $k\\dfrac Q{a^2}$．打ち消し合って $E_{\\mathrm O}=0$．\n\n(2) 電位はスカラーなので足すだけ：$V_{\\mathrm O}=k\\dfrac Qa+k\\dfrac Qa=\\dfrac{2kQ}a$．電場が $0$ でも電位は $0$ ではない．\n\n(3) 各電荷が P につくる電場の大きさは $k\\dfrac Q{(2a)^2}=\\dfrac{kQ}{4a^2}$．向きは A→P，B→P の向きで，三角形 ABP は正三角形なので，どちらも $x$ 軸と $60^\\circ$ をなす．$x$ 成分は打ち消し合い，$y$ 成分が残る：\\[E_{\\mathrm P}=2\\times\\frac{kQ}{4a^2}\\sin60^\\circ=\\frac{\\sqrt3\\,kQ}{4a^2}\\]向きは $+y$．\n\n(4) $V_{\\mathrm P}=k\\dfrac Q{2a}\\times2=\\dfrac{kQ}a$．\n\n(5) ゆっくり運ぶとき，外力の仕事は位置エネルギーの増加に等しい：$W=q(V_{\\mathrm O}-V_{\\mathrm P})=q\\left(\\dfrac{2kQ}a-\\dfrac{kQ}a\\right)=\\dfrac{kQq}a$．O は電場 $0$ の点だが，そこへ運ぶには仕事が要る（電場 $0$ と電位 $0$ は別のこと）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電場はベクトルの和（対称性で成分が消える），電位はスカラーの和．電場 $0$ の点でも電位は $0$ とは限らない．"
+ },
+ "simulation": {
+  "id": "elm.charges",
+  "preset": {
+   "q1": 2,
+   "q2": 2,
+   "d": 1
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "coulomb-field"
+ ],
+ "laws": [
+  "point-charge-field",
+  "point-charge-potential"
+ ],
+ "misconceptions": [
+  "MC-POTENTIAL-FIELD"
+ ],
+ "tags": [
+  "電場",
+  "電位",
+  "点電荷",
+  "重ね合わせ"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

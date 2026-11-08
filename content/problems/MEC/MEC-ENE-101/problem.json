@@ -1,0 +1,166 @@
+{
+ "id": "MEC-ENE-101",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "仕事の定義（力と移動の向きのなす角，負の仕事，仕事と運動エネルギー）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "あらい水平な床の上で，静止していた質量 $10\\,\\mathrm{kg}$ の物体に，水平と $60^\\circ$ をなす斜め上向きに大きさ $20\\,\\mathrm N$ の一定の力を加えて，床に沿って右向きに $5.0\\,\\mathrm m$ 動かした．物体が床から受ける動摩擦力の大きさは $6.0\\,\\mathrm N$ で一定であった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$20\\,\\mathrm N$ の力が物体にした仕事を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "重力が物体にした仕事を求めよ（垂直抗力がした仕事も同じ値になる）．"
+     },
+     {
+      "id": "3",
+      "tex": "動摩擦力が物体にした仕事を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$5.0\\,\\mathrm m$ 動いた瞬間の物体の速さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "あらい水平な床の上の 10 kg の物体に、水平と 60° の斜め上向きに 20 N の力を加え、右へ 5.0 m 動かす",
+   "caption": "",
+   "physics": {
+    "forces": [
+     {
+      "name": "F",
+      "dir_deg": 60
+     }
+    ]
+   }
+  },
+  {
+   "id": "a-decomp",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-decomp.svg",
+   "alt": "力 F を移動の向き（水平）の成分 F cos60° と、それに垂直な成分 F sin60° に分解した図",
+   "caption": "仕事をするのは移動の向きの成分 $F\\cos60^\\circ$ だけ",
+   "physics": {
+    "vectors": [
+     {
+      "name": "force:F",
+      "dir_deg": 60
+     }
+    ],
+    "decompositions": [
+     {
+      "of": "force:F",
+      "into": [
+       "component:Fx",
+       "component:Fy"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$50\\,\\mathrm J$",
+    "grading": "50 [J]"
+   },
+   {
+    "id": "2",
+    "tex": "$0\\,\\mathrm J$",
+    "grading": "0 [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$-30\\,\\mathrm J$",
+    "grading": "-30 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$2.0\\,\\mathrm{m/s}$",
+    "grading": "2 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "一定の力 $F$ が，力と角 $\\theta$ をなす向きに距離 $x$ の移動をさせたときの仕事は $W=Fx\\cos\\theta$．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-decomp"
+    },
+    {
+     "type": "text",
+     "tex": "(1) $W_F=20\\times5.0\\times\\cos60^\\circ=50\\,\\mathrm J$．移動の向きの成分 $20\\cos60^\\circ=10\\,\\mathrm N$ だけが仕事をする．\n\n(2) 重力（下向き）も垂直抗力（上向き）も移動の向きと垂直（$\\cos90^\\circ=0$）なので，仕事は $0\\,\\mathrm J$．\n\n(3) 動摩擦力は移動と逆向き（$\\theta=180^\\circ$）：$W_f=6.0\\times5.0\\times\\cos180^\\circ=-30\\,\\mathrm J$．\n\n(4) 運動エネルギーの変化は，されたすべての仕事の和に等しい：$\\dfrac12\\times10\\times v^2-0=50+0+0+(-30)=20\\,\\mathrm J$．よって $v^2=4.0$，$v=2.0\\,\\mathrm{m/s}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "仕事は「力の移動方向の成分 × 移動距離」．移動に垂直な力の仕事は 0，逆向きの力の仕事は負．運動エネルギーの変化は仕事の総和．"
+ },
+ "concepts": [
+  "work-energy"
+ ],
+ "laws": [
+  "work-energy-theorem"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "仕事",
+  "運動エネルギー",
+  "摩擦"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" width="300" height="260" font-family="'Times New Roman', serif">
+<line x1="240" y1="20" x2="240" y2="230" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="250,20 240,20 240,230 250,230" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="20" y1="230" x2="240" y2="230" stroke="currentColor" stroke-width="2"/>
+<line x1="140" y1="230" x2="240" y2="56.79" stroke="currentColor" stroke-width="2.4" data-phys="rod"/>
+<path d="M176,230 A36,36 0 0 0 158,198.82" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="179.84" y="207" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<circle cx="215" cy="100.1" r="7" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<text x="197" y="92.1" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+<text x="128" y="220" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<text x="226" y="52.79" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<text x="194" y="166.72" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">x</text>
+</svg>

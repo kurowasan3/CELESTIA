@@ -1,0 +1,182 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  470,
+  220
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    180
+   ],
+   "dir": 0,
+   "len": 360,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    180
+   ],
+   "dir": 90,
+   "len": 150,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    416,
+    180
+   ],
+   "text": "x [m]",
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    42,
+    30
+   ],
+   "text": "V [V]",
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    42,
+    192
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    180.0
+   ],
+   "to": [
+    130.0,
+    80.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    130.0,
+    80.0
+   ],
+   "to": [
+    210.0,
+    80.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    210.0,
+    80.0
+   ],
+   "to": [
+    370.0,
+    180.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    370.0,
+    180.0
+   ],
+   "to": [
+    394.0,
+    180.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    80.0
+   ],
+   "to": [
+    130.0,
+    80.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    130.0,
+    80.0
+   ],
+   "to": [
+    130.0,
+    180
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    210.0,
+    80.0
+   ],
+   "to": [
+    210.0,
+    180
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    44,
+    80.0
+   ],
+   "text": "30",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    130.0,
+    196
+   ],
+   "text": "0.10",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    210.0,
+    196
+   ],
+   "text": "0.20",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    370.0,
+    196
+   ],
+   "text": "0.40",
+   "italic": false,
+   "size": 13
+  }
+ ]
+}

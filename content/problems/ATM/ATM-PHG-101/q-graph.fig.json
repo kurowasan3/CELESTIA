@@ -1,0 +1,155 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  370,
+  235
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    200
+   ],
+   "dir": 0,
+   "len": 290,
+   "style": "thin",
+   "phys": "axis:f"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    200
+   ],
+   "dir": 90,
+   "len": 180,
+   "style": "thin",
+   "phys": "axis:K"
+  },
+  {
+   "t": "text",
+   "at": [
+    355,
+    220
+   ],
+   "text": "f [×10¹⁴ Hz]",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    68,
+    18
+   ],
+   "text": "K₀ [eV]",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    50,
+    212
+   ],
+   "text": "O",
+   "italic": true,
+   "size": 13
+  },
+  {
+   "t": "line",
+   "from": [
+    160,
+    200
+   ],
+   "to": [
+    330.0,
+    64.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "dot",
+   "at": [
+    160,
+    200
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    260,
+    120
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    260,
+    200
+   ],
+   "to": [
+    260,
+    120
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    120
+   ],
+   "to": [
+    260,
+    120
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    160,
+    216
+   ],
+   "text": "5.0",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    216
+   ],
+   "text": "10.0",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    48,
+    120
+   ],
+   "text": "2.0",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    296.0,
+    74
+   ],
+   "text": "金属A",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  }
+ ]
+}

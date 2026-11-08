@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" width="340" height="220" font-family="'Times New Roman', serif">
+<line x1="40" y1="180" x2="320" y2="180" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<circle cx="60" cy="170" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="100" cy="170" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="140" cy="170" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="180" cy="170" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="220" cy="170" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="260" cy="170" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="300" cy="170" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-ink" data-dir="-90" data-len="125">
+<line x1="140" y1="30" x2="140" y2="145" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="140,155 135.34,145 144.66,145" fill="currentColor"/>
+</g>
+<text x="128" y="50" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">電子線</text>
+<line x1="180" y1="170" x2="180" y2="50" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<g class="f-ink" data-dir="60" data-len="130">
+<line x1="180" y1="170" x2="240" y2="66.08" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="245,57.42 244.04,68.41 235.96,63.75" fill="currentColor"/>
+</g>
+<path d="M205,126.7 A50,50 0 0 0 180,120" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="195.79" y="111.08" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<line x1="180" y1="190" x2="220" y2="190" stroke="currentColor" stroke-width="1.2"/>
+<text x="200" y="204" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d</text>
+</svg>

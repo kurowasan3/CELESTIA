@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" width="300" height="250" font-family="'Times New Roman', serif">
+<circle cx="150" cy="130" r="3" fill="currentColor"/>
+<g class="f-force" data-phys="force:T1" data-dir="120" data-len="86.6">
+<line x1="150" y1="130" x2="111.7" y2="63.66" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="106.7,55 115.74,61.33 107.66,65.99" fill="currentColor"/>
+<text x="100.7" y="44.61" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">T₁</text>
+</g>
+<g class="f-force" data-phys="force:T2" data-dir="30" data-len="50">
+<line x1="150" y1="130" x2="184.64" y2="110" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="193.3,105 186.97,114.04 182.31,105.96" fill="currentColor"/>
+<text x="203.69" y="99" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">T₂</text>
+</g>
+<g class="f-force" data-phys="force:mg" data-dir="270" data-len="100">
+<line x1="150" y1="130" x2="150" y2="220" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="150,230 145.34,220 154.66,220" fill="currentColor"/>
+<text x="150" y="242" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">mg</text>
+</g>
+<line x1="150" y1="130" x2="150" y2="30" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+</svg>

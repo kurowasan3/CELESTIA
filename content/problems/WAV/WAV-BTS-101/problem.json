@@ -1,0 +1,112 @@
+{
+ "id": "WAV-BTS-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "おんさと弦のうなりから弦の振動数を決める",
+ "course": "物理",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "振動数 $440\\,\\mathrm{Hz}$ のおんさ A と，長さ $0.50\\,\\mathrm m$ の弦 B の基本振動の音を同時に鳴らすと，1秒間に4回のうなりが聞こえた．次に，弦 B の張力を少し大きくして同時に鳴らすと，うなりは1秒間に2回になった．弦の長さは変えないものとする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "張力を変える前の弦 B の振動数を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "張力を大きくした後の弦 B の振動数を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "弦 B の張力をさらに大きくしていくと，うなりが聞こえなくなった．このときの張力は，最初の張力の何倍か．"
+     },
+     {
+      "id": "4",
+      "tex": "張力を変える前に，弦 B を伝わる波の速さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$436\\,\\mathrm{Hz}$",
+    "grading": "436 [Hz]"
+   },
+   {
+    "id": "2",
+    "tex": "$438\\,\\mathrm{Hz}$",
+    "grading": "438 [Hz]"
+   },
+   {
+    "id": "3",
+    "tex": "$\\left(\\dfrac{110}{109}\\right)^2\\fallingdotseq1.02$ 倍",
+    "grading": "(110/109)^2倍"
+   },
+   {
+    "id": "4",
+    "tex": "$436\\,\\mathrm{m/s}$",
+    "grading": "436 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) うなりの回数は振動数の差なので，弦の振動数は $440\\pm4\\,\\mathrm{Hz}$，すなわち $444$ か $436\\,\\mathrm{Hz}$．弦の振動数は $f=\\dfrac1{2L}\\sqrt{\\dfrac S\\rho}$ で，張力 $S$ を大きくすると大きくなる．張力を大きくしてうなりが減った（$440\\,\\mathrm{Hz}$ に近づいた）ので，もとは $440$ より小さい $436\\,\\mathrm{Hz}$．\n\n（もとが $444\\,\\mathrm{Hz}$ なら，張力を上げるとうなりは増えるはず．）\n\n(2) $440-2=438\\,\\mathrm{Hz}$．\n\n(3) うなりが消えるのは弦の振動数が $440\\,\\mathrm{Hz}$ のとき．$f\\propto\\sqrt S$ より $\\dfrac{S'}{S}=\\left(\\dfrac{440}{436}\\right)^2=\\left(\\dfrac{110}{109}\\right)^2\\fallingdotseq1.02$ 倍．\n\n(4) 基本振動では $\\lambda=2L=1.0\\,\\mathrm m$．$v=f\\lambda=436\\times1.0=436\\,\\mathrm{m/s}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "うなりの回数 $=|f_1-f_2|$ だけでは大小がわからない．条件を少し変えたときに，うなりが増えるか減るかで決める．"
+ },
+ "concepts": [
+  "beats",
+  "string-resonance"
+ ],
+ "laws": [
+  "beat-frequency",
+  "string-modes"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "うなり",
+  "弦の振動",
+  "おんさ"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

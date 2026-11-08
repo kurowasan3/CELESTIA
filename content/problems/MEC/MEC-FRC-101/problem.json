@@ -1,0 +1,149 @@
+{
+ "id": "MEC-FRC-101",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-02",
+ "topic": "ばねの弾性力とフックの法則（直列につないだばねの伸び）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "軽いばねの上端を天井に固定し，下端に質量 $0.50\\,\\mathrm{kg}$ のおもりをつるしたところ，ばねは自然の長さから $4.9\\,\\mathrm{cm}$ 伸びて，おもりは静止した．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "このばねのばね定数を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "おもりを質量 $1.0\\,\\mathrm{kg}$ のものにとりかえると，ばねの伸びは何 $\\mathrm{cm}$ になるか．"
+     },
+     {
+      "id": "3",
+      "tex": "このばねと同じばねを2本用意し，縦につないで（直列につないで）天井からつるし，下端に質量 $0.50\\,\\mathrm{kg}$ のおもりをつるした．2本のばね全体の伸びは何 $\\mathrm{cm}$ になるか．ばねの質量は無視する．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "天井からつるした軽いばねの下端に、質量 0.50 kg のおもりが静止している",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "おもりにはたらく力：ばねの弾性力 kx（上向き）と重力 mg（下向き）。同じ大きさでつり合う",
+   "caption": "おもりだけを取り出して，はたらく2力をかく（つり合っている）",
+   "physics": {
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "kx",
+      "dir_deg": 90
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     }
+    ],
+    "equalLength": [
+     [
+      "force:kx",
+      "force:mg"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1.0\\times10^2\\,\\mathrm{N/m}$",
+    "grading": "100 [N/m]"
+   },
+   {
+    "id": "2",
+    "tex": "$9.8\\,\\mathrm{cm}$",
+    "grading": "9.8 [cm]"
+   },
+   {
+    "id": "3",
+    "tex": "$9.8\\,\\mathrm{cm}$",
+    "grading": "9.8 [cm]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(1) おもりにはたらく弾性力 $kx$ と重力 $mg$ がつり合う：$kx=mg$．$x=4.9\\,\\mathrm{cm}=0.049\\,\\mathrm m$ だから\n$k=\\dfrac{mg}{x}=\\dfrac{0.50\\times9.8}{0.049}=1.0\\times10^2\\,\\mathrm{N/m}$．\n\n(2) 伸びは力（＝重さ）に比例する（フックの法則）．$x=\\dfrac{1.0\\times9.8}{1.0\\times10^2}=0.098\\,\\mathrm m=9.8\\,\\mathrm{cm}$．\n\n(3) 下のばねはおもりを支えるので，弾性力の大きさは $mg$．上のばねは「下のばね＋おもり」を支えるが，ばねは軽いので，その弾性力もやはり $mg$．どちらのばねにも $mg$ の力がかかり，それぞれ $4.9\\,\\mathrm{cm}$ ずつ伸びる．全体の伸びは $4.9\\times2=9.8\\,\\mathrm{cm}$．（力が2本に分かれて半分ずつになる，と考えるのは誤り．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "静止しているおもりでは弾性力 $kx$ と重力 $mg$ がつり合う．軽いばねは，どこでも同じ大きさの力で両端を引く．"
+ },
+ "concepts": [
+  "force-concept",
+  "equilibrium"
+ ],
+ "laws": [
+  "hooke-law",
+  "newton-1st"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ばね",
+  "フックの法則",
+  "力のつり合い"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

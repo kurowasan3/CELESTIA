@@ -1,0 +1,112 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  260
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    60,
+    50
+   ],
+   "to": [
+    340,
+    211.65807537309522
+   ],
+   "style": "ground",
+   "phys": "surface"
+  },
+  {
+   "t": "line",
+   "from": [
+    340,
+    211.65807537309522
+   ],
+   "to": [
+    60,
+    211.65807537309522
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    211.65807537309522
+   ],
+   "to": [
+    60,
+    50
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "arc",
+   "at": [
+    340,
+    211.65807537309522
+   ],
+   "r": 40,
+   "from": 150,
+   "to": 180,
+   "label": "θ"
+  },
+  {
+   "t": "ball",
+   "at": [
+    204.5,
+    123.03
+   ],
+   "r": 9
+  },
+  {
+   "t": "arrow",
+   "from": [
+    370,
+    200
+   ],
+   "dir": 90,
+   "len": 70,
+   "style": "thin",
+   "label": "B",
+   "labelPos": "end"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    30,
+    200
+   ],
+   "dir": 90,
+   "len": 70,
+   "style": "thin",
+   "label": "B",
+   "labelPos": "end"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    124.0,
+    54.62
+   ],
+   "dir": -30,
+   "len": 50,
+   "style": "velocity",
+   "label": "v",
+   "labelPos": "mid",
+   "phys": "velocity:v"
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    245
+   ],
+   "text": "磁場 B は鉛直上向き（図の矢印）",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

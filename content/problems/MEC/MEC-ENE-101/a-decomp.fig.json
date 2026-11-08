@@ -1,0 +1,77 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  200
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    80,
+    160
+   ],
+   "dir": 60,
+   "len": 120,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    80,
+    160
+   ],
+   "dir": 0,
+   "len": 60,
+   "style": "component",
+   "phys": "component:Fx",
+   "label": "F cos60°",
+   "labelOffset": [
+    36,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    80,
+    160
+   ],
+   "dir": 90,
+   "len": 103.92,
+   "style": "component",
+   "phys": "component:Fy",
+   "label": "F sin60°",
+   "labelOffset": [
+    -30,
+    10
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    140,
+    160
+   ],
+   "to": [
+    140,
+    56.08
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    80,
+    56.08
+   ],
+   "to": [
+    140,
+    56.08
+   ],
+   "style": "dash"
+  }
+ ]
+}

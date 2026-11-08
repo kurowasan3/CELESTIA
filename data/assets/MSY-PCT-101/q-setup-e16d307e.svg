@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 230" width="330" height="230" font-family="'Times New Roman', serif">
+<line x1="10" y1="210" x2="320" y2="210" stroke="currentColor" stroke-width="2"/>
+<g transform="translate(150,196) rotate(0)" data-phys="body:cart" data-angle="0">
+<rect x="-60" y="-34" width="120" height="34" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-17" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+</g>
+<circle cx="110" cy="203" r="7" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="190" cy="203" r="7" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<line x1="150" y1="162" x2="150" y2="45" stroke="currentColor" stroke-width="2.4"/>
+<line x1="150" y1="45" x2="250" y2="45" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="150" cy="45" r="3" fill="currentColor"/>
+<circle cx="250" cy="45" r="9" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<text x="250" y="26" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+<path d="M150,145 A100,100 0 0 0 250,45" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="200" y="35" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">l</text>
+</svg>

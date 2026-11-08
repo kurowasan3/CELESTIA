@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" width="360" height="220" font-family="'Times New Roman', serif">
+<polygon points="90,30 345,30 345,40 90,40" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="90" y1="40" x2="345" y2="40" stroke="currentColor" stroke-width="2"/>
+<line x1="170" y1="130" x2="118.04" y2="40" stroke="currentColor" stroke-width="2.4"/>
+<line x1="170" y1="130" x2="325.88" y2="40" stroke="currentColor" stroke-width="2.4"/>
+<line x1="170" y1="130" x2="170" y2="166" stroke="currentColor" stroke-width="2.4"/>
+<circle cx="170" cy="180" r="14" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4" data-phys="body:ball"/>
+<text x="194" y="186" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">2.0 kg</text>
+<line x1="170" y1="130" x2="170" y2="44" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M170,96 A34,34 0 0 0 153,100.56" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="157.58" y="83.64" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">30°</text>
+<path d="M208.11,108 A44,44 0 0 0 170,86" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="199" y="79.77" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">60°</text>
+<text x="128" y="70" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">糸1</text>
+<text x="262" y="66" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">糸2</text>
+</svg>

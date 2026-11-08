@@ -1,0 +1,163 @@
+{
+ "id": "ELM-CAP-103",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "RC 回路の充電電流のグラフから抵抗・電気容量・ジュール熱を求める",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "graph-read",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "起電力 $E=6.0\\,\\mathrm V$ の電池（内部抵抗は無視できる），抵抗 R，はじめ電荷をもたないコンデンサー C，スイッチ S を図1のようにつないだ．時刻 $t=0$ に S を閉じると，回路を流れる電流 $I$ は図2のように変化した．図2の破線は，$t=0$ でのグラフの接線で，$t=0.20\\,\\mathrm s$ で $t$ 軸と交わる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "R の抵抗値は何 k$\\Omega$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "C の電気容量は何 $\\mu$F か．ただし，$t=0$ での接線が $t$ 軸と交わる時刻は $RC$ に等しい．"
+     },
+     {
+      "id": "3",
+      "tex": "十分に時間がたったときに C にたまっている電気量 $Q$ は何 C か．また，$Q$ は図2のどの部分の面積に等しいか．"
+     },
+     {
+      "id": "4",
+      "tex": "C の極板間の電圧が $2.0\\,\\mathrm V$ になった瞬間の電流は何 mA か．"
+     },
+     {
+      "id": "5",
+      "tex": "S を閉じてから十分に時間がたつまでに，R で発生したジュール熱は何 J か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "図1：電池 E、抵抗 R、コンデンサー C、スイッチ S を直列につないだ回路",
+   "caption": ""
+  },
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "図2：電流 I [mA] と時刻 t [s] のグラフ。t=0 で 3.0 mA、時間とともに減って 0 に近づく曲線。t=0 での接線（破線）は t=0.20 s で t 軸と交わる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2.0\\,\\mathrm{k\\Omega}$",
+    "grading": "R：2 [kΩ]"
+   },
+   {
+    "id": "2",
+    "tex": "$1.0\\times10^{2}\\,\\mu\\mathrm F$",
+    "grading": "C：100 [μF]"
+   },
+   {
+    "id": "3",
+    "tex": "$Q=6.0\\times10^{-4}\\,\\mathrm C$．グラフと $t$ 軸（および $I$ 軸）で囲まれた部分の面積",
+    "grading": "Q：6*10^(-4) [C]"
+   },
+   {
+    "id": "4",
+    "tex": "$2.0\\,\\mathrm{mA}$",
+    "grading": "2 [mA]"
+   },
+   {
+    "id": "5",
+    "tex": "$1.8\\times10^{-3}\\,\\mathrm J$",
+    "grading": "1.8*10^(-3) [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $t=0$ ではコンデンサーの電荷が $0$ なので極板間の電圧も $0$．電池の電圧はすべて R にかかる：$R=\\dfrac E{I_0}=\\dfrac{6.0}{3.0\\times10^{-3}}=2.0\\times10^{3}\\,\\Omega$．\n\n(2) $RC=0.20\\,\\mathrm s$ より $C=\\dfrac{0.20}{2.0\\times10^{3}}=1.0\\times10^{-4}\\,\\mathrm F=1.0\\times10^{2}\\,\\mu\\mathrm F$．\n\n(3) 十分に時間がたつと電流が $0$ になり，R の電圧も $0$．C の電圧は $E$ なので $Q=CE=1.0\\times10^{-4}\\times6.0=6.0\\times10^{-4}\\,\\mathrm C$．$I=\\dfrac{\\Delta q}{\\Delta t}$ より，$I$-$t$ グラフの面積は流れた電気量，つまり C にたまった電気量．\n\n(4) $RI=E-V_C$ より $I=\\dfrac{6.0-2.0}{2.0\\times10^{3}}=2.0\\times10^{-3}\\,\\mathrm A=2.0\\,\\mathrm{mA}$．\n\n(5) 電池がした仕事は $QE=CE^2=3.6\\times10^{-3}\\,\\mathrm J$，C の静電エネルギーは $\\dfrac12CE^2=1.8\\times10^{-3}\\,\\mathrm J$．差の $1.8\\times10^{-3}\\,\\mathrm J$ が R のジュール熱．（R の値によらず，電池の仕事のちょうど半分が熱になる．）\n\n十分に時間がたつと電流は $0$ になる．極板の間（絶縁体）を電流が流れ続けるわけではない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "S を閉じた直後のコンデンサーは「電圧 0」，十分に時間がたつと「電流 0」．$I$-$t$ グラフの面積は電気量．"
+ },
+ "simulation": {
+  "id": "elm.rc",
+  "preset": {
+   "E": 6,
+   "R": 2,
+   "C": 100,
+   "mode": 1
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "capacitor",
+  "electric-power"
+ ],
+ "laws": [
+  "capacitance",
+  "capacitor-energy",
+  "ohm-law",
+  "joule-heat"
+ ],
+ "misconceptions": [
+  "MC-CAP-CURRENT"
+ ],
+ "tags": [
+  "コンデンサー",
+  "RC回路",
+  "グラフ",
+  "ジュール熱"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

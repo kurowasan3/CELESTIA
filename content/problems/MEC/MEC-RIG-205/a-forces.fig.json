@@ -1,0 +1,137 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  215
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    190
+   ],
+   "to": [
+    186.0,
+    190
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     186.0,
+     190
+    ],
+    [
+     186.0,
+     162.0
+    ],
+    [
+     285,
+     162.0
+    ],
+    [
+     285,
+     190
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "circle",
+   "at": [
+    130,
+    120
+   ],
+   "r": 70,
+   "style": "solid"
+  },
+  {
+   "t": "line",
+   "from": [
+    186.0,
+    162.0
+   ],
+   "to": [
+    130,
+    120
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    130,
+    120
+   ],
+   "dir": 270,
+   "len": 36,
+   "style": "force",
+   "phys": "force:Mg",
+   "label": "Mg",
+   "labelPos": "end",
+   "labelOffset": [
+    -16,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    130,
+    120
+   ],
+   "dir": 0,
+   "len": 48,
+   "style": "force",
+   "phys": "force:F1",
+   "label": "F₁",
+   "labelPos": "end",
+   "labelOffset": [
+    6,
+    -10
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    186.0,
+    162.0
+   ],
+   "dir": 143.13,
+   "len": 60,
+   "style": "force",
+   "phys": "force:R",
+   "label": "R",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    118,
+    132
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    192.0,
+    174.0
+   ],
+   "text": "K",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  }
+ ]
+}

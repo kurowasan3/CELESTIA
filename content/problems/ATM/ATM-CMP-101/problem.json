@@ -1,0 +1,135 @@
+{
+ "id": "ATM-CMP-101",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "コンプトン効果の導出と散乱X線・反跳電子",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "波長 $\\lambda$ のX線光子が，静止している電子（質量 $m$）に衝突し，入射方向と角 $\\varphi$ をなす向きに波長 $\\lambda'$ のX線光子として散乱された．電子は入射方向と角 $\\alpha$ をなす向きに速さ $v$ ではね飛ばされた（図）．プランク定数を $h$，光の速さを $c$ とし，電子の運動は非相対論的に扱ってよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "エネルギー保存の式と，入射方向およびそれに垂直な方向の運動量保存の式を書け．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) の3式から $v$ と $\\alpha$ を消去し，$\\lambda'-\\lambda$ を $h$，$m$，$c$，$\\varphi$ で表せ．ただし $\\lambda'$ と $\\lambda$ の差は小さいとして，$\\dfrac{\\lambda'}{\\lambda}+\\dfrac{\\lambda}{\\lambda'}\\fallingdotseq2$ と近似せよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\dfrac{h}{mc}=2.43\\times10^{-12}\\ \\mathrm m$ とする．$\\lambda=6.00\\times10^{-11}\\ \\mathrm m$ のX線が $\\varphi=90^\\circ$ の向きに散乱されたときの $\\lambda'$ は何 m か．有効数字3桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) と同じX線が $\\varphi=180^\\circ$ の向きに散乱されたとき，はね飛ばされた電子の運動エネルギーは何 eV か．$hc=1.24\\times10^{-6}\\ \\mathrm{eV\\cdot m}$ として，有効数字3桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "波長 $5.0\\times10^{-7}\\ \\mathrm m$ の可視光で同じ実験をしたとき，波長の変化の割合 $\\dfrac{\\lambda'-\\lambda}{\\lambda}$ の最大値を有効数字2桁で求めよ．また，この結果からわかることを述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左から波長λのX線光子が右向きに進み，静止した電子に当たる．散乱X線（波長λ'）は入射方向から上側に角φの向きへ，電子は下側に角αの向きへ速さvで進む．",
+   "caption": "コンプトン散乱"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{hc}{\\lambda}=\\dfrac{hc}{\\lambda'}+\\dfrac12mv^2$，$\\dfrac h\\lambda=\\dfrac h{\\lambda'}\\cos\\varphi+mv\\cos\\alpha$，$0=\\dfrac h{\\lambda'}\\sin\\varphi-mv\\sin\\alpha$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\lambda'-\\lambda=\\dfrac h{mc}(1-\\cos\\varphi)$",
+    "grading": "λ'-λ：h(1-cos(φ))/(m c)"
+   },
+   {
+    "id": "3",
+    "tex": "$\\lambda'=6.24\\times10^{-11}\\ \\mathrm m$",
+    "grading": "6.24*10^(-11) [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$1.55\\times10^{3}\\ \\mathrm{eV}$",
+    "grading": "1.55*10^3 [eV]"
+   },
+   {
+    "id": "5",
+    "tex": "$9.7\\times10^{-6}$．可視光では波長の変化が小さすぎて観測できない（コンプトン効果は波長の短いX線で目立つ）．",
+    "grading": "9.7*10^(-6)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 光子のエネルギーは $\\dfrac{hc}\\lambda$，運動量の大きさは $\\dfrac h\\lambda$．\n\\[ \\frac{hc}{\\lambda}=\\frac{hc}{\\lambda'}+\\frac12mv^2,\\qquad \\frac h\\lambda=\\frac h{\\lambda'}\\cos\\varphi+mv\\cos\\alpha,\\qquad 0=\\frac h{\\lambda'}\\sin\\varphi-mv\\sin\\alpha \\]\n\n(2) 運動量の2式を $mv\\cos\\alpha=\\dfrac h\\lambda-\\dfrac h{\\lambda'}\\cos\\varphi$，$mv\\sin\\alpha=\\dfrac h{\\lambda'}\\sin\\varphi$ として2乗して加える：\n\\[ m^2v^2=h^2\\left(\\frac1{\\lambda^2}+\\frac1{\\lambda'^2}-\\frac{2\\cos\\varphi}{\\lambda\\lambda'}\\right) \\]\nエネルギーの式から $m^2v^2=2mhc\\left(\\dfrac1\\lambda-\\dfrac1{\\lambda'}\\right)=2mhc\\dfrac{\\lambda'-\\lambda}{\\lambda\\lambda'}$．両辺に $\\lambda\\lambda'$ を掛けて等しいとおくと\n\\[ 2mc(\\lambda'-\\lambda)=h\\left(\\frac{\\lambda'}{\\lambda}+\\frac{\\lambda}{\\lambda'}-2\\cos\\varphi\\right)\\fallingdotseq2h(1-\\cos\\varphi) \\]\nよって $\\lambda'-\\lambda=\\dfrac h{mc}(1-\\cos\\varphi)$．\n\n(3) $\\cos90^\\circ=0$ より $\\lambda'=\\lambda+\\dfrac h{mc}=6.00\\times10^{-11}+0.243\\times10^{-11}\\fallingdotseq6.24\\times10^{-11}\\ \\mathrm m$．\n\n(4) $\\varphi=180^\\circ$ では $\\lambda'=\\lambda+\\dfrac{2h}{mc}=6.486\\times10^{-11}\\ \\mathrm m$．電子の運動エネルギーは光子が失ったエネルギーに等しい：\n\\[ K=hc\\left(\\frac1\\lambda-\\frac1{\\lambda'}\\right)=1.24\\times10^{-6}\\times\\left(\\frac1{6.00\\times10^{-11}}-\\frac1{6.486\\times10^{-11}}\\right)\\fallingdotseq1.55\\times10^{3}\\ \\mathrm{eV} \\]\n（$1.55\\ \\mathrm{keV}$ は電子の静止エネルギー約 $511\\ \\mathrm{keV}$ よりずっと小さいので，非相対論的に扱ってよい．）\n\n(5) 変化が最大なのは $\\varphi=180^\\circ$ のとき：$\\dfrac{2h/(mc)}{\\lambda}=\\dfrac{4.86\\times10^{-12}}{5.0\\times10^{-7}}\\fallingdotseq9.7\\times10^{-6}$．$\\lambda'-\\lambda$ は入射光の波長によらず $\\dfrac h{mc}$ 程度なので，波長の長い可視光では相対的な変化がごく小さく観測できない．X線のように波長が $\\dfrac h{mc}$ に近いほど目立つ．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "光子を運動量 $\\dfrac h\\lambda$ の粒子とみなし，電子との弾性衝突としてエネルギーと運動量（2方向）の保存を立てる．"
+ },
+ "concepts": [
+  "photon",
+  "momentum-conservation"
+ ],
+ "laws": [
+  "photon-energy",
+  "momentum-conservation",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "コンプトン効果",
+  "光子の運動量",
+  "X線"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

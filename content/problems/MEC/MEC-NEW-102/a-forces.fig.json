@@ -1,0 +1,163 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  320,
+  250
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     90
+    ],
+    [
+     230,
+     90
+    ],
+    [
+     230,
+     230
+    ],
+    [
+     20,
+     230
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    90
+   ],
+   "to": [
+    230,
+    90
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    90
+   ],
+   "to": [
+    244,
+    74
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "circle",
+   "at": [
+    244,
+    74
+   ],
+   "r": 12,
+   "style": "solid"
+  },
+  {
+   "t": "dot",
+   "at": [
+    244,
+    74
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     140,
+     62
+    ],
+    [
+     244,
+     62
+    ]
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     256,
+     74
+    ],
+    [
+     256,
+     160
+    ]
+   ]
+  },
+  {
+   "t": "block",
+   "at": [
+    110,
+    90
+   ],
+   "w": 60,
+   "h": 40,
+   "label": "A",
+   "phys": "body:A"
+  },
+  {
+   "t": "block",
+   "at": [
+    256,
+    192
+   ],
+   "w": 36,
+   "h": 32,
+   "label": "B",
+   "phys": "body:B"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140,
+    78
+   ],
+   "dir": 0,
+   "len": 45,
+   "style": "force",
+   "phys": "force:TA",
+   "label": "T"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    256,
+    160
+   ],
+   "dir": 90,
+   "len": 45,
+   "style": "force",
+   "phys": "force:TB",
+   "label": "T",
+   "labelOffset": [
+    14,
+    10
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    256,
+    176
+   ],
+   "dir": 270,
+   "len": 62,
+   "style": "force",
+   "phys": "force:mgB",
+   "label": "mg",
+   "labelOffset": [
+    18,
+    -4
+   ]
+  }
+ ]
+}

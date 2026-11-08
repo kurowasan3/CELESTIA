@@ -1,0 +1,243 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  520,
+  250
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    130
+   ],
+   "dir": 0,
+   "len": 450,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    240
+   ],
+   "dir": 90,
+   "len": 220,
+   "style": "thin"
+  },
+  {
+   "t": "sine",
+   "from": [
+    60,
+    130
+   ],
+   "to": [
+    480,
+    130
+   ],
+   "amp": 90,
+   "cycles": 1.5,
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    40
+   ],
+   "to": [
+    130,
+    40
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    220
+   ],
+   "to": [
+    270,
+    220
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    40
+   ],
+   "text": "10",
+   "italic": false,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    220
+   ],
+   "text": "−10",
+   "italic": false,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    142
+   ],
+   "text": "0",
+   "italic": false,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    130,
+    126
+   ],
+   "to": [
+    130,
+    134
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    130,
+    146
+   ],
+   "text": "5",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    126
+   ],
+   "to": [
+    200,
+    134
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    146
+   ],
+   "text": "10",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    270,
+    126
+   ],
+   "to": [
+    270,
+    134
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    146
+   ],
+   "text": "15",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    340,
+    126
+   ],
+   "to": [
+    340,
+    134
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    340,
+    146
+   ],
+   "text": "20",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    410,
+    126
+   ],
+   "to": [
+    410,
+    134
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    410,
+    146
+   ],
+   "text": "25",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    480,
+    126
+   ],
+   "to": [
+    480,
+    134
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    480,
+    146
+   ],
+   "text": "30",
+   "italic": false
+  },
+  {
+   "t": "text",
+   "at": [
+    515,
+    116
+   ],
+   "text": "t [ms]",
+   "italic": true,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    70,
+    14
+   ],
+   "text": "v [V]",
+   "italic": true,
+   "anchor": "start"
+  }
+ ]
+}

@@ -1,0 +1,119 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  320,
+  280
+ ],
+ "items": [
+  {
+   "t": "circle",
+   "at": [
+    150,
+    150
+   ],
+   "r": 100,
+   "style": "solid",
+   "width": 2
+  },
+  {
+   "t": "dot",
+   "at": [
+    150,
+    150
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    136,
+    152
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 14
+  },
+  {
+   "t": "dot",
+   "at": [
+    150,
+    50
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    36
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 14
+  },
+  {
+   "t": "spring",
+   "from": [
+    150,
+    50
+   ],
+   "to": [
+    243.97,
+    184.2
+   ],
+   "coils": 9,
+   "amp": 6
+  },
+  {
+   "t": "ball",
+   "at": [
+    243.97,
+    184.2
+   ],
+   "r": 7,
+   "phys": "body:ring"
+  },
+  {
+   "t": "text",
+   "at": [
+    261.97,
+    190.2
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    150
+   ],
+   "to": [
+    243.97,
+    184.2
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    150
+   ],
+   "to": [
+    150,
+    50
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    138,
+    100.0
+   ],
+   "text": "R",
+   "size": 15
+  }
+ ]
+}

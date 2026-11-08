@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" width="320" height="280" font-family="'Times New Roman', serif">
+<circle cx="150" cy="150" r="100" fill="none" stroke="currentColor" stroke-width="2"/>
+<circle cx="150" cy="150" r="3" fill="currentColor"/>
+<text x="136" y="152" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<circle cx="150" cy="50" r="3" fill="currentColor"/>
+<text x="150" y="36" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<polyline points="150,50 156.88,59.83 154.2,66.45 168.48,65.93 163.11,79.18 177.39,78.66 172.02,91.91 186.3,91.39 180.93,104.63 195.22,104.11 189.84,117.36 204.13,116.84 198.75,130.09 213.04,129.57 207.67,142.81 221.95,142.29 216.58,155.54 230.86,155.02 225.49,168.27 239.77,167.75 237.09,174.37 243.97,184.2" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<circle cx="243.97" cy="184.2" r="7" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4" data-phys="body:ring"/>
+<text x="261.97" y="190.2" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<line x1="150" y1="150" x2="243.97" y2="184.2" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="150" y1="150" x2="150" y2="50" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="138" y="100" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">R</text>
+</svg>

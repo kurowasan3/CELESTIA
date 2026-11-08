@@ -1,0 +1,166 @@
+{
+ "id": "MEC-FRC-105",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-02",
+ "topic": "なめらかな円環に通した小環とばねのつり合い（力の三角形と三角形 OAP の相似）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "鉛直面内に，中心 O，半径 $R$ のなめらかな円環を固定し，質量 $m$ の小環 P を通す．円環の最高点 A に，ばね定数 $k$，自然の長さ $L_0$ $(L_0<2R)$ の軽いばねの一端を固定し，他端を P につないだところ，P は円環の最下点以外の点で静止した．このときの AP の長さを $l$ とする．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "P にはたらく3つの力の向きは，三角形 OAP の3辺の向きと一致する．このことを用いて，ばねの弾性力の大きさ $F$ を $m$，$g$，$R$，$l$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "P が円環から受ける垂直抗力の大きさ $N$ と，その向き（円の中心向きか，外向きか）を答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$l$ を $k$，$R$，$L_0$，$m$，$g$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "最下点以外にこのようなつり合いの位置があるための条件を，$k$，$R$，$L_0$，$m$，$g$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "鉛直面内の半径 R の円環。最高点 A にばねの一端を固定し、他端を円環に通した小環 P につなぐ。P は最下点より上の右側で静止",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "P にはたらく3力：重力 mg（下、AO の向き）、弾性力 F（P から A の向き）、垂直抗力 N（O から P の向き、外向き）。3力の三角形は三角形 OAP と相似",
+   "caption": "$mg\\parallel\\overrightarrow{\\mathrm{AO}}$，$F\\parallel\\overrightarrow{\\mathrm{PA}}$，$N\\parallel\\overrightarrow{\\mathrm{OP}}$：力の三角形は △OAP と相似",
+   "physics": {
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "F",
+      "dir_deg": 125.0
+     },
+     {
+      "name": "N",
+      "dir_deg": 340.0
+     }
+    ],
+    "equalLength": [
+     [
+      "force:mg",
+      "force:N"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F=\\dfrac{mgl}{R}$",
+    "grading": "F：m g l/R"
+   },
+   {
+    "id": "2",
+    "tex": "$N=mg$，向きは円の中心から遠ざかる向き（外向き）",
+    "grading": "N：m g"
+   },
+   {
+    "id": "3",
+    "tex": "$l=\\dfrac{kRL_0}{kR-mg}$",
+    "grading": "l：k R L_0/(k R-m g)"
+   },
+   {
+    "id": "4",
+    "tex": "$k(2R-L_0)>2mg$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　P にはたらくのは，重力 $mg$（鉛直下向き），ばねの弾性力 $F$，垂直抗力 $N$（円環はなめらかなので OP の方向）の3力．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　つり合っているので，3力の矢印をつなぐと閉じた三角形になる．A は O の真上なので $mg$ は $\\overrightarrow{\\mathrm{AO}}$ の向き．弾性力は AP の方向，垂直抗力は OP の方向．よって力の三角形は △OAP と相似で，\n\\[ \\frac{mg}{\\mathrm{AO}}=\\frac{F}{\\mathrm{AP}}=\\frac{N}{\\mathrm{OP}},\\qquad\\text{すなわち}\\qquad\\frac{mg}{R}=\\frac{F}{l}=\\frac{N}{R}. \\]\nよって $F=\\boldsymbol{\\dfrac{mgl}{R}}$．三角形の向きの対応 $\\overrightarrow{\\mathrm{AO}}+\\overrightarrow{\\mathrm{OP}}+\\overrightarrow{\\mathrm{PA}}=\\vec 0$ から，$F$ は $\\overrightarrow{\\mathrm{PA}}$ の向き（ばねは伸びて P を A へ引く）．\n\n\\textbf{(2)}　同じ比から $N=\\boldsymbol{mg}$．向きは $\\overrightarrow{\\mathrm{OP}}$，つまり円の\\textbf{中心から遠ざかる向き}．P の位置によらず $N=mg$ になるのが面白い点．\n\n\\textbf{(3)}　ばねは伸びているので $F=k(l-L_0)$．(1) と合わせて\n\\[ k(l-L_0)=\\frac{mg}{R}l\\quad\\Longrightarrow\\quad l=\\boldsymbol{\\frac{kRL_0}{kR-mg}}. \\]\n\n\\textbf{(4)}　$l$ が正であるためには $kR>mg$．このとき $l>L_0$ で，ばねが伸びていることとも合う．さらに P が最下点でない（AP が直径より短い）ためには $l<2R$：\n\\[ \\frac{kRL_0}{kR-mg}<2R\\quad\\Longleftrightarrow\\quad kL_0<2kR-2mg\\quad\\Longleftrightarrow\\quad\\boldsymbol{k(2R-L_0)>2mg}. \\]\nこの式が成り立てば $kR>mg+\\dfrac{kL_0}{2}>mg$ も自動的に成り立つ．（最下点 $l=2R$ は，左右の対称性からいつもつり合いの位置である．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "3力のつり合いでは，力の矢印は閉じた三角形をつくる．その三角形が図形の三角形と相似なら，辺の比がそのまま力の比になる．"
+ },
+ "concepts": [
+  "equilibrium",
+  "normal-force",
+  "force-decomposition"
+ ],
+ "laws": [
+  "hooke-law",
+  "newton-1st"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力のつり合い",
+  "ばね",
+  "円環",
+  "相似"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

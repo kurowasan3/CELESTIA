@@ -1,0 +1,137 @@
+{
+ "id": "ELM-ACC-201",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "交流電圧のグラフから周波数・実効値・電力を読む",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "抵抗値 $5.0\\ \\Omega$ の抵抗に交流電源をつないだ．図は，抵抗の両端の電圧 $v$ の時間変化を表している．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "交流の周波数 $f$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "角周波数 $\\omega$ を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "3",
+      "tex": "電圧の実効値 $V_{\\rm e}$ を求めよ（根号を残してよい）．"
+     },
+     {
+      "id": "4",
+      "tex": "抵抗を流れる電流の最大値 $I_0$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "抵抗の消費電力の時間平均 $\\overline P$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "抵抗の両端の電圧 v [V] と時刻 t [ms] のグラフ。正弦波で、最大値 10 V、t=0 で 0 から増え始め、t=20 ms で1周期となり、t=30 ms まで描かれている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f=50\\ \\mathrm{Hz}$",
+    "grading": "f：50 [Hz]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega=100\\pi\\ \\mathrm{rad/s}$",
+    "grading": "ω：100π [rad/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$V_{\\rm e}=5\\sqrt2\\ \\mathrm{V}\\ (\\fallingdotseq7.1\\ \\mathrm{V})$",
+    "grading": "V_e：5sqrt(2) [V]"
+   },
+   {
+    "id": "4",
+    "tex": "$I_0=2.0\\ \\mathrm{A}$",
+    "grading": "I_0：2.0 [A]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\overline P=10\\ \\mathrm{W}$",
+    "grading": "P：10 [W]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) グラフから周期 $T=20\\ \\mathrm{ms}=0.020\\ \\mathrm{s}$．$f=\\dfrac1T=50\\ \\mathrm{Hz}$．\n\n(2) $\\omega=2\\pi f=100\\pi\\ \\mathrm{rad/s}$．\n\n(3) 最大値 $V_0=10\\ \\mathrm{V}$．正弦波交流の実効値は $V_{\\rm e}=\\dfrac{V_0}{\\sqrt2}=5\\sqrt2\\ \\mathrm{V}$．\n\n(4) 抵抗では電流と電圧は同位相．$I_0=\\dfrac{V_0}R=\\dfrac{10}{5.0}=2.0\\ \\mathrm{A}$．\n\n(5) $\\overline P=\\dfrac{V_{\\rm e}^2}{R}=\\dfrac{50}{5.0}=10\\ \\mathrm{W}$（$=\\dfrac12V_0I_0$）．最大値どうしの積 $V_0I_0=20\\ \\mathrm{W}$ ではないことに注意．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "グラフからは周期と最大値を読む．電力の平均は実効値で計算すれば，直流と同じ式になる．"
+ },
+ "concepts": [
+  "ac-circuit",
+  "electric-power"
+ ],
+ "laws": [
+  "rms-value",
+  "ohm-law",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流",
+  "実効値",
+  "グラフ",
+  "消費電力"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

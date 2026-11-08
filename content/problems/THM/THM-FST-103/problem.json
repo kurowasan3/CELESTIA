@@ -1,0 +1,137 @@
+{
+ "id": "THM-FST-103",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "おもりの役をするピストンの下の気体の定圧加熱（熱の行き先の内訳）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "鉛直に立てたシリンダーに，断面積 $S$，質量 $M$ のピストンで単原子分子理想気体が閉じこめられている．ピストンはなめらかに動き，外は圧力 $P_0$ の大気である．中のヒーターで気体をゆっくり加熱したところ，ピストンは $h$ だけ上昇した．重力加速度の大きさを $g$ とし，シリンダーとピストンは断熱材でできているとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "気体の圧力 $P$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "気体が外にした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "気体が吸収した熱量 $Q$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "吸収した熱量 $Q$ のうち，ピストンの位置エネルギーの増加になった割合を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "鉛直なシリンダー（断面積 S）に質量 M のピストンがあり，下に気体とヒーター，上は圧力 P₀ の大気。ピストンが h だけ上昇する",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$P=P_0+\\dfrac{Mg}{S}$",
+    "grading": "P：P_0+M g/S"
+   },
+   {
+    "id": "2",
+    "tex": "$W=(P_0S+Mg)h$",
+    "grading": "W：(P_0 S+M g)h"
+   },
+   {
+    "id": "3",
+    "tex": "$Q=\\dfrac52(P_0S+Mg)h$",
+    "grading": "Q：5(P_0 S+M g)h/2"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{2Mg}{5(P_0S+Mg)}$",
+    "grading": "2M g/(5(P_0 S+M g))"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) ピストンのつり合い $PS=P_0S+Mg$ より $P=P_0+\\dfrac{Mg}{S}$．ゆっくり加熱すればつり合いが保たれ，圧力は一定（定圧変化）．\n\n(2) $W=P\\Delta V=PSh=(P_0S+Mg)h$．\n\n(3) $\\Delta U=\\dfrac32nR\\Delta T=\\dfrac32P\\Delta V=\\dfrac32(P_0S+Mg)h$．$Q=\\Delta U+W=\\dfrac52(P_0S+Mg)h$．\n\n(4) 気体の仕事 $W$ は，大気を押しのける仕事 $P_0Sh$ と，ピストンを持ち上げる仕事 $Mgh$（位置エネルギーの増加）に分かれる．割合は $\\dfrac{Mgh}{Q}=\\dfrac{2Mg}{5(P_0S+Mg)}$．\n\n$Q$ の内訳：内部エネルギー $\\dfrac35$，大気を押す仕事 $\\dfrac25\\cdot\\dfrac{P_0S}{P_0S+Mg}$，ピストンの位置エネルギー $\\dfrac25\\cdot\\dfrac{Mg}{P_0S+Mg}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "ピストンのつり合いから圧力が一定と分かる．定圧なら $W=P\\Delta V$，$Q=\\dfrac52P\\Delta V$（単原子分子）．"
+ },
+ "simulation": {
+  "id": "thermo.pv",
+  "preset": {
+   "proc": 1,
+   "ratio": 2
+  },
+  "show": "after-attempt",
+  "locked": [
+   "proc"
+  ]
+ },
+ "concepts": [
+  "first-law",
+  "equilibrium"
+ ],
+ "laws": [
+  "first-law",
+  "molar-heat",
+  "internal-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "定圧変化",
+  "ピストンのつり合い",
+  "熱力学第1法則"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

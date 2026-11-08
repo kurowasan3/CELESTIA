@@ -1,0 +1,158 @@
+{
+ "id": "MEC-CIR-202",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "円すい振り子の張力と周期",
+ "course": "物理",
+ "level": 2,
+ "minutes": 10,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $l$ の軽い糸の上端を天井の点 P に固定し，下端に質量 $m$ の小球をつけた．小球は，糸が鉛直線と一定の角 $\\theta$ をなすようにして，水平面内で等速円運動（円すい振り子）をしている．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "糸の張力の大きさ $S$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "小球の円運動の角速度 $\\omega$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "円運動の周期 $T$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$l=0.40\\,\\mathrm m$，$\\theta=60^\\circ$，$m=0.10\\,\\mathrm{kg}$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，$\\omega$ と $S$ の値を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "天井の点 P からつるした長さ l の糸と小球。糸は鉛直線と角 θ をなし、小球は水平面内で円運動をする",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "小球にはたらく力：糸の向きの張力 S と鉛直下向きの重力 mg。合力は水平で円の中心を向く",
+   "caption": "2力の合力が水平な向心力になる",
+   "physics": {
+    "forces": [
+     {
+      "name": "S",
+      "dir_deg": 150
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     }
+    ],
+    "netForce": {
+     "dir_deg": 180
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$S=\\dfrac{mg}{\\cos\\theta}$",
+    "grading": "S：m g/cos(θ)"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega=\\sqrt{\\dfrac{g}{l\\cos\\theta}}$",
+    "grading": "ω：sqrt(g/(l cos(θ)))"
+   },
+   {
+    "id": "3",
+    "tex": "$T=2\\pi\\sqrt{\\dfrac{l\\cos\\theta}{g}}$",
+    "grading": "T：2π sqrt(l cos(θ)/g)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\omega=7.0\\,\\mathrm{rad/s}$，$S=1.96\\,\\mathrm N\\ (\\approx2.0\\,\\mathrm N)$",
+    "grading": "ω：7 [rad/s] ; S：1.96 [N]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "小球にはたらく力は張力 $S$ と重力 $mg$ の2つだけ．円の半径は $r=l\\sin\\theta$，中心は小球と同じ高さにある．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(1) 鉛直方向は加速度 $0$ なので力がつり合う：$S\\cos\\theta=mg$ より $S=\\dfrac{mg}{\\cos\\theta}$．\n\n(2) 水平方向（中心向き）の運動方程式：\\[mr\\omega^2=S\\sin\\theta\\quad\\Longrightarrow\\quad m\\,l\\sin\\theta\\,\\omega^2=\\frac{mg}{\\cos\\theta}\\sin\\theta\\] よって $\\omega=\\sqrt{\\dfrac{g}{l\\cos\\theta}}$．（$\\tan\\theta=\\dfrac{r\\omega^2}{g}$ と見てもよい．）\n\n(3) $T=\\dfrac{2\\pi}{\\omega}=2\\pi\\sqrt{\\dfrac{l\\cos\\theta}{g}}$．$l\\cos\\theta$ は P から円の面までの高さ $h$ なので，周期は $h$ だけで決まり，質量によらない．\n\n(4) $l\\cos\\theta=0.40\\times\\dfrac12=0.20\\,\\mathrm m$．$\\omega=\\sqrt{\\dfrac{9.8}{0.20}}=\\sqrt{49}=7.0\\,\\mathrm{rad/s}$．$S=\\dfrac{0.10\\times9.8}{1/2}=1.96\\,\\mathrm N$．\n\n注意：「遠心力」と「向心力」を両方書き込んで小球にはたらく力を3つにしてはいけない．地上から見ると，張力と重力の合力そのものが向心力である．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "円すい振り子は「鉛直方向はつり合い，水平方向は円運動の運動方程式」．周期は支点からの高さ $l\\cos\\theta$ で決まる．"
+ },
+ "concepts": [
+  "circular-motion",
+  "force-decomposition"
+ ],
+ "laws": [
+  "centripetal-acceleration",
+  "newton-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "円すい振り子",
+  "等速円運動",
+  "力の分解"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

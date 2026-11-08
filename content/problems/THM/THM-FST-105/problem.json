@@ -1,0 +1,138 @@
+{
+ "id": "THM-FST-105",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "ばねつきピストンの気体の加熱（P∝V の変化での仕事・熱量とモル比熱）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 18,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平に置いたシリンダー（断面積 $S$）に，なめらかに動くピストンで $n\\,\\mathrm{mol}$ の単原子分子理想気体が閉じこめられている．ピストンの外側は真空で，ピストンはばね定数 $k$ のばねで右側の壁とつながれている．ばねは，ピストンがシリンダーの底（左端）に接するときに自然の長さになるように取りつけてある．はじめ気柱の長さは $L$ でつり合っていた．この気体をゆっくり加熱し，気柱の長さを $2L$ にした．気体定数を $R$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "はじめの気体の温度 $T_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "加熱後の温度 $T_2$ を $T_1$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "この間に気体が外にした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "この間に気体が吸収した熱量 $Q$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "この変化での気体のモル比熱 $C$（$1\\,\\mathrm{mol}$ の温度を $1\\,\\mathrm K$ 上げる熱量）を $R$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "水平なシリンダー（断面積 S）の左側に長さ L の気柱。ピストンの右側は真空で，ピストンはばね定数 k のばねで右の壁につながれている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_1=\\dfrac{kL^2}{nR}$",
+    "grading": "T_1：k L^2/(n R)"
+   },
+   {
+    "id": "2",
+    "tex": "$T_2=4T_1$",
+    "grading": "T_2：4T_1"
+   },
+   {
+    "id": "3",
+    "tex": "$W=\\dfrac32kL^2$",
+    "grading": "W：3k L^2/2"
+   },
+   {
+    "id": "4",
+    "tex": "$Q=6kL^2$",
+    "grading": "Q：6k L^2"
+   },
+   {
+    "id": "5",
+    "tex": "$C=2R$",
+    "grading": "C：2R"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　気柱の長さが $x$ のとき，ばねの縮みは $x$ で，ピストンのつり合いより $PS=kx$．はじめ $P_1=\\dfrac{kL}{S}$，$V_1=SL$ なので，状態方程式から $T_1=\\dfrac{P_1V_1}{nR}=\\dfrac{kL^2}{nR}$．\n\n\\textbf{(2)}　$PV=\\dfrac{kx}{S}\\cdot Sx=kx^2$ なので $T\\propto x^2$．長さが $2$ 倍で $T_2=4T_1$．\n\n\\textbf{(3)}　$P=\\dfrac{k}{S^2}V$ で圧力は体積に比例し，$P$-$V$ 図では原点を通る直線．仕事は台形の面積：\\[W=\\frac12(P_1+P_2)(V_2-V_1)=\\frac12\\left(\\frac{kL}{S}+\\frac{2kL}{S}\\right)SL=\\frac32kL^2\\] これはばねの弾性エネルギーの増加 $\\dfrac12k(2L)^2-\\dfrac12kL^2$ に等しい（外は真空なので，気体の仕事はすべてばねにたくわえられる）．\n\n\\textbf{(4)}　$\\Delta U=\\dfrac32nR(T_2-T_1)=\\dfrac32\\cdot3kL^2=\\dfrac92kL^2$．$Q=\\Delta U+W=6kL^2$．\n\n\\textbf{(5)}　$nR(T_2-T_1)=3kL^2$ なので，$C=\\dfrac{Q}{n(T_2-T_1)}=\\dfrac{6kL^2}{3kL^2/R}=2R$．一般に $P\\propto V$ の変化では $W=\\dfrac12nR\\Delta T$ なので，$C=\\dfrac32R+\\dfrac12R=2R$（定積 $\\dfrac32R$ と定圧 $\\dfrac52R$ の間）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "ピストンのつり合いから $P\\propto V$．仕事は $P$-$V$ 図の台形の面積（＝ばねのエネルギーの増加），$\\Delta U$ は $PV$ の変化で求める．"
+ },
+ "concepts": [
+  "first-law",
+  "equilibrium",
+  "ideal-gas"
+ ],
+ "laws": [
+  "first-law",
+  "hooke-law",
+  "internal-energy",
+  "ideal-gas-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ばねつきピストン",
+  "P∝V",
+  "モル比熱",
+  "熱力学第1法則"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

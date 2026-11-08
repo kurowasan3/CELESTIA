@@ -1,0 +1,167 @@
+{
+ "id": "ELM-LOR-202",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "直交する電場と磁場の中の粒子（サイクロイド運動）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，$xy$ 平面（紙面）内に，$y$ 軸の正の向きに強さ $E$ の一様な電場と，紙面の裏から表に向かう磁束密度 $B$ の一様な磁場がある．質量 $m$，電気量 $q\\ (>0)$ の粒子を原点 O に静かに置いたところ，粒子は $xy$ 平面内を運動した．重力は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "粒子の速度が $x$ 軸の正の向きで大きさ $u$ のとき，粒子にはたらく力の合力が $0$ になった．$u$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "粒子の速度 $\\vec v$ を $\\vec v=\\vec u+\\vec w$（$\\vec u$ は (1) の速度）と分けると，$\\vec w$ は磁場だけがある場合と同じ運動方程式にしたがう．このことから，粒子の運動は「速さ $u$ の等速直線運動」と「半径 $R$ の等速円運動」の合成になることを示し，$R$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "粒子の $y$ 座標の最大値 $y_{\\max}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "粒子の速さの最大値 $v_{\\max}$ を求め，その値がエネルギー保存の関係と矛盾しないことを確かめよ．"
+     },
+     {
+      "id": "5",
+      "tex": "粒子が O を出てから初めて $x$ 軸上に戻る点の $x$ 座標 $x_1$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "粒子の速度の $x$ 成分の時間平均 $\\overline{v_x}$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "xy 平面に y 軸の正の向きの電場 E と、紙面の裏から表へ向かう磁場 B。原点 O に粒子が静止している",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "field:E",
+      "dir_deg": 90
+     }
+    ]
+   }
+  },
+  {
+   "id": "a-path",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-path.svg",
+   "alt": "粒子の軌跡はサイクロイド。高さ 2R まで上がり、x 軸上の x=2πR の点に戻ることを繰り返す",
+   "caption": "粒子の軌跡（サイクロイド）"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$u=\\dfrac EB$",
+    "grading": "u：E/B"
+   },
+   {
+    "id": "2",
+    "tex": "$R=\\dfrac{mE}{qB^2}$",
+    "grading": "R：m E/(q B^2)"
+   },
+   {
+    "id": "3",
+    "tex": "$y_{\\max}=\\dfrac{2mE}{qB^2}$",
+    "grading": "y_max：2m E/(q B^2)"
+   },
+   {
+    "id": "4",
+    "tex": "$v_{\\max}=\\dfrac{2E}{B}$",
+    "grading": "v_max：2E/B"
+   },
+   {
+    "id": "5",
+    "tex": "$x_1=\\dfrac{2\\pi mE}{qB^2}$",
+    "grading": "x_1：2π m E/(q B^2)"
+   },
+   {
+    "id": "6",
+    "tex": "$\\overline{v_x}=\\dfrac EB$",
+    "grading": "E/B"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-path"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 速度 $u$（$+x$）の粒子が受けるローレンツ力は，フレミングの左手の法則で $-y$ の向き，大きさ $quB$．電場の力 $qE$（$+y$）とつり合うのは $quB=qE$，$u=\\dfrac EB$．\n\n\\textbf{(2)} 運動方程式 $m\\dfrac{d\\vec v}{dt}=q\\vec E+q\\vec v\\times\\vec B$ に $\\vec v=\\vec u+\\vec w$ を入れると，$\\vec u$ は一定で $q\\vec E+q\\vec u\\times\\vec B=\\vec 0$ だから $m\\dfrac{d\\vec w}{dt}=q\\vec w\\times\\vec B$．これは磁場だけの中の運動なので，$\\vec w$ は大きさ一定で角速度 $\\omega=\\dfrac{qB}{m}$ で回る．はじめ $\\vec v=\\vec 0$ なので $\\vec w=-\\vec u$，大きさ $u$．よって粒子は，速さ $u$ で $+x$ に動く点のまわりを，半径 $R=\\dfrac{u}{\\omega}=\\dfrac{mE}{qB^2}$ の等速円運動をする．\n\n\\textbf{(3)} 円の中心は高さ $R$ を保って動くので，$y_{\\max}=2R=\\dfrac{2mE}{qB^2}$．\n\n\\textbf{(4)} $\\vec w$ が $\\vec u$ と同じ向きになるとき（最高点）$v_{\\max}=2u=\\dfrac{2E}{B}$．\\textbf{確かめ}：ローレンツ力は仕事をしないので，電場の力の仕事が運動エネルギーになる．$qE\\,y_{\\max}=qE\\cdot\\dfrac{2mE}{qB^2}=\\dfrac{2mE^2}{B^2}$，$\\dfrac12mv_{\\max}^2=\\dfrac12m\\cdot\\dfrac{4E^2}{B^2}=\\dfrac{2mE^2}{B^2}$ で一致する．\n\n\\textbf{(5)} 円運動の1周期 $T=\\dfrac{2\\pi m}{qB}$ ごとに $y=0$，速さ $0$ の状態に戻る．その間に中心は $uT$ 進むので $x_1=uT=\\dfrac{2\\pi mE}{qB^2}$（$=2\\pi R$）．軌跡はサイクロイド（転がる円の周上の点の軌跡）．\n\n\\textbf{(6)} 円運動の部分は1周期で平均 $0$ なので $\\overline{v_x}=u=\\dfrac EB$．粒子は電場の向きではなく，電場と磁場の両方に垂直な向きに流される（$E\\times B$ ドリフト）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電場の力を打ち消す速度 $u=E/B$ で動く点から見ると，磁場だけの等速円運動．軌跡は「並進＋円運動」のサイクロイド．"
+ },
+ "concepts": [
+  "lorentz-force",
+  "circular-motion",
+  "coulomb-field"
+ ],
+ "laws": [
+  "lorentz-force",
+  "cyclotron-motion",
+  "work-energy-theorem"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ローレンツ力",
+  "サイクロイド",
+  "電場と磁場",
+  "ドリフト"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

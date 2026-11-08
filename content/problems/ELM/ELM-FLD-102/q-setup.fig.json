@@ -1,0 +1,197 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    30,
+    200
+   ],
+   "to": [
+    340,
+    200
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    180,
+    230
+   ],
+   "to": [
+    180,
+    30
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    110,
+    200
+   ],
+   "to": [
+    180,
+    78.76
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    250,
+    200
+   ],
+   "to": [
+    180,
+    78.76
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "circle",
+   "at": [
+    110,
+    200
+   ],
+   "r": 11,
+   "style": "fill"
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    200
+   ],
+   "text": "+Q",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "circle",
+   "at": [
+    250,
+    200
+   ],
+   "r": 11,
+   "style": "fill"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    200
+   ],
+   "text": "+Q",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "dot",
+   "at": [
+    180,
+    200
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    192,
+    214
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "dot",
+   "at": [
+    180,
+    78.76
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    194,
+    68.76
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    226
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    226
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    145,
+    188
+   ],
+   "text": "a"
+  },
+  {
+   "t": "text",
+   "at": [
+    215,
+    188
+   ],
+   "text": "a"
+  },
+  {
+   "t": "text",
+   "at": [
+    126,
+    132
+   ],
+   "text": "2a"
+  },
+  {
+   "t": "text",
+   "at": [
+    234,
+    132
+   ],
+   "text": "2a"
+  },
+  {
+   "t": "text",
+   "at": [
+    332,
+    214
+   ],
+   "text": "x"
+  },
+  {
+   "t": "text",
+   "at": [
+    194,
+    36
+   ],
+   "text": "y"
+  }
+ ]
+}

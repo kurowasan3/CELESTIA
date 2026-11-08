@@ -1,0 +1,163 @@
+{
+ "id": "MEC-NEW-102",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "机の上の物体とつり下げたおもり（糸でつながれた2物体の運動方程式）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかで水平な机の上に質量 $M$ の物体 A を置き，A に軽い糸をつけて，机の端に固定した軽い滑車にかけ，糸の他端に質量 $m$ のおもり B をつるす．A を手で支えて全体を静止させておき，静かに手をはなした．滑車はなめらかに回り，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A，B の加速度の大きさ $a$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "糸の張力の大きさ $T$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$M=m=1.0\\,\\mathrm{kg}$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，手をはなしてから $2.0\\,\\mathrm s$ 後の B の速さを求めよ（A は机の端に達しないとする）．"
+     },
+     {
+      "id": "4",
+      "tex": "ある生徒は「B はおもりの重さで糸を引くので，糸の張力の大きさは $mg$ に等しい」と考えた．この考えの誤りを説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな水平な机の上の物体 A（質量 M）から糸を机の端の滑車にかけ、おもり B（質量 m）をつるす",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "A にはたらく水平な力は糸の張力 T（右向き）だけ。B には上向きの張力 T と、それより大きい下向きの重力 mg がはたらく",
+   "caption": "運動方向の力だけをかいた図．B では $mg>T$ で，合力は下向き",
+   "physics": {
+    "forces": [
+     {
+      "name": "TA",
+      "dir_deg": 0
+     },
+     {
+      "name": "TB",
+      "dir_deg": 90
+     },
+     {
+      "name": "mgB",
+      "dir_deg": 270
+     }
+    ],
+    "equalLength": [
+     [
+      "force:TA",
+      "force:TB"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$a=\\dfrac{mg}{M+m}$",
+    "grading": "a：m g/(M+m)"
+   },
+   {
+    "id": "2",
+    "tex": "$T=\\dfrac{Mmg}{M+m}$",
+    "grading": "T：M m g/(M+m)"
+   },
+   {
+    "id": "3",
+    "tex": "$9.8\\,\\mathrm{m/s}$",
+    "grading": "9.8 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "B は下向きに加速しているので，B にはたらく力は下向きの $mg$ のほうが上向きの $T$ より大きい（$mg-T=ma>0$）．$T=mg$ になるのは B が静止しているか等速で動くときだけ．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "A，B は糸でつながっているので，加速度の大きさは等しい．A は右向き，B は下向きを正とし，それぞれについて運動方程式を立てる．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "物体 A：$Ma=T$\n物体 B：$ma=mg-T$\n\n(1) 2式を加えると $(M+m)a=mg$ より $a=\\dfrac{mg}{M+m}$．\n（A と B をまとめて1つの物体とみると，質量 $M+m$ を力 $mg$ が動かすと考えてもよい．）\n\n(2) $T=Ma=\\dfrac{Mmg}{M+m}$．\n\n(3) $a=\\dfrac{1.0\\times9.8}{2.0}=4.9\\,\\mathrm{m/s^2}$．$v=at=4.9\\times2.0=9.8\\,\\mathrm{m/s}$．\n\n(4) (2) より $T=\\dfrac{M}{M+m}mg<mg$．B は加速しながら下がるので，B にはたらく力の合力は下向きでなければならない．糸が $mg$ で引いたら B は等速になってしまう．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "糸でつながった物体は，物体ごとに運動方程式を立てて連立する．張力は運動の結果として決まり，加速しているおもりでは $T\\ne mg$．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "force-concept"
+ ],
+ "laws": [
+  "newton-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動方程式",
+  "張力",
+  "連結された物体"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

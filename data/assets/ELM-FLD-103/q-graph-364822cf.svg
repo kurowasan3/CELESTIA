@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 220" width="470" height="220" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="360">
+<line x1="50" y1="180" x2="400" y2="180" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="410,180 400,184.66 400,175.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="150">
+<line x1="50" y1="180" x2="50" y2="40" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="50,30 54.66,40 45.34,40" fill="currentColor"/>
+</g>
+<text x="416" y="180" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">x [m]</text>
+<text x="42" y="30" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">V [V]</text>
+<text x="42" y="192" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<line x1="50" y1="180" x2="130" y2="80" stroke="currentColor" stroke-width="2.4"/>
+<line x1="130" y1="80" x2="210" y2="80" stroke="currentColor" stroke-width="2.4"/>
+<line x1="210" y1="80" x2="370" y2="180" stroke="currentColor" stroke-width="2.4"/>
+<line x1="370" y1="180" x2="394" y2="180" stroke="currentColor" stroke-width="2.4"/>
+<line x1="50" y1="80" x2="130" y2="80" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="130" y1="80" x2="130" y2="180" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="210" y1="80" x2="210" y2="180" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="44" y="80" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">30</text>
+<text x="130" y="196" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.10</text>
+<text x="210" y="196" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.20</text>
+<text x="370" y="196" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.40</text>
+</svg>

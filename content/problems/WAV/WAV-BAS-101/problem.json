@@ -1,0 +1,160 @@
+{
+ "id": "WAV-BAS-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "媒質の1点の y-t グラフを読む",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$x$ 軸の正の向きに速さ $2.0\\,\\mathrm{m/s}$ で進む正弦波がある．図は，原点 O（$x=0$）にある媒質の変位 $y$ と時刻 $t$ の関係を表したグラフである．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "振幅を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "周期を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "振動数を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "波長を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "時刻 $t=1.0\\,\\mathrm s$ に，原点の媒質は $y$ 軸の正・負どちらの向きに動いているか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "sim-plot",
+   "sim": {
+    "id": "wave.traveling",
+    "preset": {
+     "A": 0.1,
+     "lambda": 4,
+     "f": 0.5,
+     "dir": 1,
+     "xP": 0
+    }
+   },
+   "plot": {
+    "x": "t",
+    "y": [
+     "yP"
+    ]
+   },
+   "alt": "原点の媒質の変位 y と時刻 t のグラフ。t=0 で y=0 から増え始め、t=0.5 s で山 0.10 m、t=1.0 s で 0、t=1.5 s で谷 −0.10 m、t=2.0 s で 0 にもどる。これを t=6 s までくり返す正弦曲線"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$0.10\\,\\mathrm m$",
+    "grading": "0.1 [m]"
+   },
+   {
+    "id": "2",
+    "tex": "$2.0\\,\\mathrm s$",
+    "grading": "2 [s]"
+   },
+   {
+    "id": "3",
+    "tex": "$0.50\\,\\mathrm{Hz}$",
+    "grading": "0.5 [Hz]"
+   },
+   {
+    "id": "4",
+    "tex": "$4.0\\,\\mathrm m$",
+    "grading": "4 [m]"
+   },
+   {
+    "id": "5",
+    "tex": "$y$ 軸の負の向き"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 変位の最大値を読んで $0.10\\,\\mathrm m$．\n\n(2) $y$-$t$ グラフで同じ形がくり返す時間（$t=0$ から $t=2.0\\,\\mathrm s$ まで）が周期で，$T=2.0\\,\\mathrm s$．\n\n(3) $f=\\dfrac1T=\\dfrac1{2.0}=0.50\\,\\mathrm{Hz}$．\n\n(4) $y$-$t$ グラフからは波長は読めない．速さを使って $\\lambda=vT=2.0\\times2.0=4.0\\,\\mathrm m$．\n\n(5) $t=1.0\\,\\mathrm s$ の直後に $y$ が負になっていく（グラフが右下がり）ので，媒質は $y$ 軸の負の向きに動いている．このとき変位は $0$ で，速さは最大．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$y$-$x$ グラフからは波長，$y$-$t$ グラフからは周期が読める．もう一方は $v=f\\lambda=\\dfrac\\lambda T$ で求める．$y$-$t$ グラフの傾きはその点の媒質の速度．"
+ },
+ "simulation": {
+  "id": "wave.traveling",
+  "preset": {
+   "A": 0.1,
+   "lambda": 4,
+   "f": 0.5,
+   "dir": 1,
+   "xP": 0
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [
+  "wave-speed"
+ ],
+ "misconceptions": [
+  "MC-WAVE-MEDIUM-MOVES"
+ ],
+ "tags": [
+  "波形",
+  "グラフ",
+  "y-t グラフ",
+  "波の基本量"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

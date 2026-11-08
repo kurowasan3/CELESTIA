@@ -1,0 +1,137 @@
+{
+ "id": "MSY-SPS-101",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "斜面をすべり降りた物体がばねを縮める",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "synthesis"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな曲面上の，水平面から高さ $0.40\\,\\mathrm m$ の点から，質量 $0.50\\,\\mathrm{kg}$ の小物体を静かにすべらせた．曲面はなめらかな水平面になめらかにつながっており，水平面の先には，ばね定数 $98\\,\\mathrm{N/m}$ の軽いばねの一端が壁に固定されている．小物体はばねの他端に当たってばねを縮め，やがてばねから離れた．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "水平面に達したときの小物体の速さ $v$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "ばねの縮みの最大値 $x$ は何 $\\mathrm m$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "ばねが小物体に及ぼす力の大きさの最大値 $F$ は何 $\\mathrm N$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "小物体がばねに触れてから離れるまでの時間 $t$ は何 $\\mathrm s$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "高さ 0.40 m のなめらかな曲面上の小物体。曲面は水平面につながり、水平面の先にばね定数 98 N/m のばねが壁に固定されている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=2.8\\,\\mathrm{m/s}$",
+    "grading": "v：2.8 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$x=0.20\\,\\mathrm m$",
+    "grading": "x：0.2 [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$F=19.6\\,\\mathrm N\\ (\\approx20\\,\\mathrm N)$",
+    "grading": "F：19.6 [N]"
+   },
+   {
+    "id": "4",
+    "tex": "$t=\\dfrac{\\pi}{14}\\,\\mathrm s\\ (\\approx0.22\\,\\mathrm s)$",
+    "grading": "t：π/14 [s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 力学的エネルギー保存：$mgh=\\dfrac12mv^2$ より $v=\\sqrt{2\\times9.8\\times0.40}=2.8\\,\\mathrm{m/s}$．\n\n(2) 位置エネルギーがすべて弾性エネルギーになる：\\[mgh=\\frac12kx^2\\quad\\Longrightarrow\\quad x=\\sqrt{\\frac{2\\times0.50\\times9.8\\times0.40}{98}}=\\sqrt{0.040}=0.20\\,\\mathrm m\\]\n\n(3) 縮みが最大のとき弾性力も最大：$F=kx=98\\times0.20=19.6\\,\\mathrm N$．\n\n(4) ばねに触れている間，小物体はばね振り子として単振動をする．触れてから離れるまでは，自然長の位置から縮んで戻ってくるまでの半周期：\\[t=\\frac12\\cdot2\\pi\\sqrt{\\frac mk}=\\pi\\sqrt{\\frac{0.50}{98}}=\\frac{\\pi}{14}\\,\\mathrm s\\] この時間は，当たる速さ（すべらせる高さ）によらない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "エネルギーの移り変わり「位置エネルギー → 運動エネルギー → 弾性エネルギー」と，ばねに触れている間の単振動を組み合わせる．"
+ },
+ "simulation": {
+  "id": "mech.spring",
+  "preset": {
+   "m": 0.5,
+   "k": 98,
+   "A": 0.2
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "mechanical-energy",
+  "simple-harmonic-motion"
+ ],
+ "laws": [
+  "energy-conservation",
+  "hooke-law",
+  "shm-period"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力学的エネルギー保存",
+  "ばね",
+  "単振動",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

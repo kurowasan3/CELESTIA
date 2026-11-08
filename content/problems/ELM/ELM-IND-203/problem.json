@@ -1,0 +1,159 @@
+{
+ "id": "ELM-IND-203",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "初速を与えた導体棒の減速（電気量・距離・ジュール熱）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "鉛直上向きで磁束密度 $B=1.0\\ \\mathrm{T}$ の一様な磁場の中に，間隔 $l=0.50\\ \\mathrm{m}$ の平行な導体レールを水平に置き，一端を抵抗値 $R=2.0\\ \\Omega$ の抵抗でつないだ．レールの上に質量 $m=0.20\\ \\mathrm{kg}$ の導体棒をレールに垂直に置き，レールに沿って初速 $v_0=2.0\\ \\mathrm{m/s}$ を与えたところ，棒はしだいに減速して止まった．抵抗以外の電気抵抗，摩擦，回路の自己インダクタンスは無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "動き始めた直後の電流の大きさ $I_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "動き始めた直後の棒の加速度の大きさ $a_0$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "棒の速さが $1.0\\ \\mathrm{m/s}$ になるまでに抵抗で発生したジュール熱 $Q_1$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "棒が止まるまでに抵抗を通過した電気量 $q$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "棒が止まるまでに進んだ距離 $x$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "抵抗 R をつないだ間隔 l の水平な平行レールの上に導体棒があり、右向きに初速 v₀ で動き出す。磁場は鉛直上向き（紙面の裏から表）",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "velocity:v0",
+      "dir_deg": 0
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I_0=0.50\\ \\mathrm{A}$",
+    "grading": "I_0：0.50 [A]"
+   },
+   {
+    "id": "2",
+    "tex": "$a_0=1.25\\ \\mathrm{m/s^2}$",
+    "grading": "a_0：1.25 [m/s^2]"
+   },
+   {
+    "id": "3",
+    "tex": "$Q_1=0.30\\ \\mathrm{J}$",
+    "grading": "Q_1：0.30 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$q=0.80\\ \\mathrm{C}$",
+    "grading": "q：0.80 [C]"
+   },
+   {
+    "id": "5",
+    "tex": "$x=3.2\\ \\mathrm{m}$",
+    "grading": "x：3.2 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 起電力 $V=v_0Bl=2.0\\times1.0\\times0.50=1.0\\ \\mathrm{V}$．$I_0=\\dfrac VR=0.50\\ \\mathrm{A}$．\n\n(2) 棒は運動を妨げる向きに $I_0lB=0.50\\times0.50\\times1.0=0.25\\ \\mathrm{N}$ の力を受ける．$a_0=\\dfrac{0.25}{0.20}=1.25\\ \\mathrm{m/s^2}$．\n\n(3) 外力も摩擦もないので，減った運動エネルギーがすべてジュール熱になる：$Q_1=\\dfrac12\\times0.20\\times(2.0^2-1.0^2)=0.30\\ \\mathrm{J}$．\n\n(4) 棒の運動方程式 $m\\dfrac{\\Delta v}{\\Delta t}=-IlB$ の両辺に $\\Delta t$ をかけて足し合わせると，力積と運動量の関係 $0-mv_0=-Blq$（$q=\\sum I\\Delta t$）．$q=\\dfrac{mv_0}{Bl}=\\dfrac{0.20\\times2.0}{1.0\\times0.50}=0.80\\ \\mathrm{C}$．\n\n(5) 電流は $I=\\dfrac{Blv}{R}$ なので $q=\\sum I\\Delta t=\\dfrac{Bl}{R}\\sum v\\Delta t=\\dfrac{Blx}{R}$（回路の磁束の変化 $Blx$ を $R$ で割ったもの）．$x=\\dfrac{qR}{Bl}=\\dfrac{0.80\\times2.0}{0.50}=3.2\\ \\mathrm{m}$．\n\n速さは時間に対して指数関数的に減り，止まるまでに無限の時間がかかるが，進む距離は有限で，速さは距離に比例して減る：$v=v_0-\\dfrac{B^2l^2}{mR}s$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "力積＝運動量の変化から通過した電気量，電気量＝磁束の変化÷抵抗から距離．時間を追わなくても求まる．"
+ },
+ "simulation": {
+  "id": "elm.induction",
+  "preset": {
+   "F": 0,
+   "v0": 2,
+   "B": 1,
+   "l": 0.5,
+   "R": 2,
+   "m": 0.2
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "lorentz-force",
+  "electric-power"
+ ],
+ "laws": [
+  "motional-emf",
+  "current-force",
+  "impulse-momentum",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電磁誘導",
+  "導体棒",
+  "力積",
+  "電気量"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

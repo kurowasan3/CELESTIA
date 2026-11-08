@@ -1,0 +1,123 @@
+{
+ "id": "THM-HET-104",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-01",
+ "topic": "ヒーターによる加熱で容器の熱容量と熱の逃げを決める（温度上昇率の比較と冷却）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "experiment"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "熱容量 $C$（未知）の容器に比熱 $c$ の水を入れ，一定の電力 $H$（未知）のヒーターで加熱する．はじめ水と容器の温度は室温 $T_0$ に等しく，水と容器の温度はつねに等しいとする．水温が $T$ のとき，容器から周囲へは単位時間あたり $k(T-T_0)$（$k$ は正の定数）の熱が逃げる．\n\\textbf{実験1}　水の質量を $m$ として加熱を始めた直後の温度上昇率（単位時間あたりの温度上昇）は $\\alpha_1$ であった．\n\\textbf{実験2}　水を $2m$ にかえ，再び室温 $T_0$ から加熱を始めた直後の温度上昇率は $\\alpha_2$ であった．加熱を続けると，水温はしだいに一定の温度 $T_{\\mathrm f}$ に近づいた．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "容器の熱容量 $C$ を，$m$，$c$，$\\alpha_1$，$\\alpha_2$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "ヒーターの電力 $H$ を，$m$，$c$，$\\alpha_1$，$\\alpha_2$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$k$ を，$m$，$c$，$\\alpha_1$，$\\alpha_2$，$T_0$，$T_{\\mathrm f}$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "実験2で，水温の上昇率が $\\dfrac{\\alpha_2}{2}$ になるときの水温を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "実験2で水温がほぼ $T_{\\mathrm f}$ になったときヒーターを切った．切った直後の水温の下降率（単位時間あたりの温度低下）を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$C=\\dfrac{mc(2\\alpha_2-\\alpha_1)}{\\alpha_1-\\alpha_2}$",
+    "grading": "C：m c (2α_2-α_1)/(α_1-α_2)"
+   },
+   {
+    "id": "2",
+    "tex": "$H=\\dfrac{mc\\alpha_1\\alpha_2}{\\alpha_1-\\alpha_2}$",
+    "grading": "H：m c α_1 α_2/(α_1-α_2)"
+   },
+   {
+    "id": "3",
+    "tex": "$k=\\dfrac{mc\\alpha_1\\alpha_2}{(\\alpha_1-\\alpha_2)(T_{\\mathrm f}-T_0)}$",
+    "grading": "k：m c α_1 α_2/((α_1-α_2)(T_f-T_0))"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{T_0+T_{\\mathrm f}}{2}$",
+    "grading": "(T_0+T_f)/2"
+   },
+   {
+    "id": "5",
+    "tex": "$\\alpha_2$（加熱し始めた直後の上昇率と同じ）",
+    "grading": "α_2"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{考え方}　全体の熱容量を $C_{\\text{全}}$ とすると，単位時間のエネルギー収支は \\[C_{\\text{全}}\\frac{\\Delta T}{\\Delta t}=H-k(T-T_0)\\] 加熱し始めた直後は $T=T_0$ で熱は逃げないので，上昇率は $H/C_{\\text{全}}$ だけで決まる．\n\n\\textbf{(1)(2)}　$H=(C+mc)\\alpha_1=(C+2mc)\\alpha_2$．$C$ について解くと $C(\\alpha_1-\\alpha_2)=mc(2\\alpha_2-\\alpha_1)$ より \\[C=\\frac{mc(2\\alpha_2-\\alpha_1)}{\\alpha_1-\\alpha_2}\\] このとき $C+2mc=\\dfrac{mc\\alpha_1}{\\alpha_1-\\alpha_2}$ なので $H=(C+2mc)\\alpha_2=\\dfrac{mc\\alpha_1\\alpha_2}{\\alpha_1-\\alpha_2}$．\n\n\\textbf{(3)}　温度が一定になったとき，加えた熱と逃げる熱がつり合う：$H=k(T_{\\mathrm f}-T_0)$．よって $k=\\dfrac{H}{T_{\\mathrm f}-T_0}=\\dfrac{mc\\alpha_1\\alpha_2}{(\\alpha_1-\\alpha_2)(T_{\\mathrm f}-T_0)}$．\n\n\\textbf{(4)}　上昇率は $\\dfrac{H-k(T-T_0)}{C+2mc}=\\alpha_2\\left(1-\\dfrac{T-T_0}{T_{\\mathrm f}-T_0}\\right)$．これが $\\dfrac{\\alpha_2}{2}$ になるのは $T=\\dfrac{T_0+T_{\\mathrm f}}{2}$ のとき．\n\n\\textbf{(5)}　ヒーターを切ると $C_{\\text{全}}\\dfrac{\\Delta T}{\\Delta t}=-k(T_{\\mathrm f}-T_0)=-H$．よって下降率は $\\dfrac{H}{C+2mc}=\\alpha_2$．$T_{\\mathrm f}$ では「逃げる熱」がちょうどヒーターの電力に等しいので，ヒーターを切ると加熱し始めと同じ割合で冷え始める．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "加熱し始め（$T=T_0$）は熱が逃げないので上昇率は $H/C_{\\text{全}}$．水の量を変えた2回の実験から $C$ と $H$ が決まり，一定温度では「入る熱＝逃げる熱」．"
+ },
+ "concepts": [
+  "heat-temperature",
+  "electric-power"
+ ],
+ "laws": [
+  "heat-capacity",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "熱容量",
+  "ジュール熱",
+  "熱の逃げ",
+  "実験",
+  "条件の逆算"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

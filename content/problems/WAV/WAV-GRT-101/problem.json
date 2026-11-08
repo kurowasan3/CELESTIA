@@ -1,0 +1,119 @@
+{
+ "id": "WAV-GRT-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "回折格子の明線の数と位置，スペクトルの重なり",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$1.0\\,\\mathrm{mm}$ あたり $500$ 本の溝を刻んだ回折格子に，波長 $600\\,\\mathrm{nm}$ の単色光を垂直に当て，格子と平行に $1.0\\,\\mathrm m$ 離して置いた十分に大きいスクリーンに明線を映した．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "格子定数（隣り合う溝の間隔）は何 $\\mu\\mathrm m$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "1次の明線の回折角を $\\theta_1$ とする．$\\sin\\theta_1$ の値を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "スクリーン上に現れる明線は，0次を含めて何本か．"
+     },
+     {
+      "id": "4",
+      "tex": "スクリーン上で，0次の明線から1次の明線までの距離を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "光源を白色光（波長 $400\\,\\mathrm{nm}$ から $700\\,\\mathrm{nm}$）に替えた．2次のスペクトルと3次のスペクトルは重なるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2.0\\,\\mu\\mathrm m$",
+    "grading": "2 [μm]"
+   },
+   {
+    "id": "2",
+    "tex": "$0.30$",
+    "grading": "0.3"
+   },
+   {
+    "id": "3",
+    "tex": "$7$ 本",
+    "grading": "7本"
+   },
+   {
+    "id": "4",
+    "tex": "$0.31\\,\\mathrm m$",
+    "grading": "0.31 [m]"
+   },
+   {
+    "id": "5",
+    "tex": "重なる（2次の赤 $2\\times700=1400\\,\\mathrm{nm}$ が，3次の紫 $3\\times400=1200\\,\\mathrm{nm}$ より大きい）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $d=\\dfrac{1.0\\times10^{-3}}{500}=2.0\\times10^{-6}\\,\\mathrm m=2.0\\,\\mu\\mathrm m$．\n\n(2) 明線の条件 $d\\sin\\theta=m\\lambda$ より $\\sin\\theta_1=\\dfrac{600\\times10^{-9}}{2.0\\times10^{-6}}=0.30$．\n\n(3) $\\sin\\theta_m=0.30m<1$ より $m\\le3$．$m=0,\\pm1,\\pm2,\\pm3$ の $7$ 本．\n\n(4) $\\tan\\theta_1=\\dfrac{0.30}{\\sqrt{1-0.30^2}}=\\dfrac{0.30}{0.954}=0.314\\cdots$ なので，距離は $1.0\\times0.314\\fallingdotseq0.31\\,\\mathrm m$．回折格子では角が大きく，$\\tan\\theta\\fallingdotseq\\sin\\theta$ の近似（$0.30\\,\\mathrm m$）は使えない．\n\n(5) $\\sin\\theta=\\dfrac{m\\lambda}d$ なので，角は $m\\lambda$ の大小で決まる．2次のスペクトルは $m\\lambda=800$〜$1400\\,\\mathrm{nm}$，3次は $1200$〜$2100\\,\\mathrm{nm}$ に相当し，$1200$〜$1400\\,\\mathrm{nm}$ の範囲で重なる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回折格子の明線は $d\\sin\\theta=m\\lambda$．$\\sin\\theta<1$ から次数の上限が決まる．角が大きいので，スクリーン上の位置は $L\\tan\\theta$ で求める．"
+ },
+ "concepts": [
+  "light-interference",
+  "interference"
+ ],
+ "laws": [
+  "interference-condition"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "回折格子",
+  "干渉",
+  "スペクトル"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

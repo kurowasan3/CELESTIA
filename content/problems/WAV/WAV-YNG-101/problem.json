@@ -1,0 +1,145 @@
+{
+ "id": "WAV-YNG-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "ヤングの実験：薄板の挿入と光源の移動による干渉縞のずれ",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，単スリット $\\mathrm S_0$，間隔 $d$ の複スリット $\\mathrm S_1$，$\\mathrm S_2$，スクリーンを平行に並べ，$\\mathrm S_0$ に波長 $\\lambda$ の単色光を当てた．$\\mathrm S_0$ から複スリットまでの距離は $l$，複スリットからスクリーンまでの距離は $L$ で，はじめ $\\mathrm S_0$ は $\\mathrm S_1$，$\\mathrm S_2$ から等距離にある．スクリーン上の点 O は $\\mathrm S_1$，$\\mathrm S_2$ から等距離の点で，O から $\\mathrm S_1$ の側に向かう向きを正として，スクリーン上の位置を $x$ で表す．$l$，$L$ は $d$，$|x|$ および後に出てくる $s$ より十分大きいとする．空気の屈折率は $1$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "隣り合う明線の間隔 $\\Delta x$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\mathrm S_1$ の直後に，厚さ $t$，屈折率 $n$ の薄い透明板をスリット面に平行に置いた．光は板を垂直に通過するとしてよい．中央の明線（2つの光の光路差が $0$ の明線）の位置 $x$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\lambda=600\\,\\mathrm{nm}$，$n=1.5$，$t=6.0\\,\\mu\\mathrm m$ のとき，(2) で干渉縞は明線何本分ずれたか．"
+     },
+     {
+      "id": "4",
+      "tex": "薄板を取り除き，$\\mathrm S_0$ をスリット面内で $\\mathrm S_1$ の側（$x$ の正の向き）に小さな距離 $s$ だけ動かした．中央の明線の位置 $x$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "薄板を (2) のように $\\mathrm S_1$ の直後に置いたまま，$\\mathrm S_0$ を $\\mathrm S_1$ の側に動かして，中央の明線を O にもどしたい．(3) の数値と $l=0.20\\,\\mathrm m$，$d=0.30\\,\\mathrm{mm}$ のとき，$\\mathrm S_0$ を動かす距離は何 mm か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左から単スリット S₀、複スリット S₁（上）と S₂（下）、スクリーンの順に並ぶ。S₀ から複スリットまで l、複スリットからスクリーンまで L、スリット間隔 d。S₁ の直後に薄板。スクリーン上の点 O から S₁ 側（上）を x の正の向きとする",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\Delta x=\\dfrac{L\\lambda}d$",
+    "grading": "Δx：Lλ/d"
+   },
+   {
+    "id": "2",
+    "tex": "$x=\\dfrac{(n-1)tL}{d}$（$\\mathrm S_1$ の側）",
+    "grading": "x：(n-1)t L/d"
+   },
+   {
+    "id": "3",
+    "tex": "$5$ 本分",
+    "grading": "5本"
+   },
+   {
+    "id": "4",
+    "tex": "$x=-\\dfrac{sL}{l}$（$\\mathrm S_2$ の側）",
+    "grading": "x：-s L/l"
+   },
+   {
+    "id": "5",
+    "tex": "$2.0\\,\\mathrm{mm}$",
+    "grading": "2 [mm]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "スクリーン上の点 $x$ について，$\\mathrm S_2$ を通る経路と $\\mathrm S_1$ を通る経路の差は $\\mathrm S_2\\mathrm P-\\mathrm S_1\\mathrm P\\fallingdotseq\\dfrac{dx}L$（$x>0$ は $\\mathrm S_1$ に近い側）．\n\n\\textbf{(1)} $\\dfrac{dx}L=m\\lambda$ が明線なので $\\boldsymbol{\\Delta x=\\dfrac{L\\lambda}d}$．\n\n\\textbf{(2)} 板の中の光路は $nt$ なので，$\\mathrm S_1$ を通る光の光路が $(n-1)t$ だけ長くなる．中央の明線は2つの光路が等しい点：\n\\[ \\mathrm S_1\\mathrm P+(n-1)t=\\mathrm S_2\\mathrm P\\iff\\frac{dx}L=(n-1)t\\iff \\boldsymbol{x=\\frac{(n-1)tL}{d}} \\]\n光路が長くなった $\\mathrm S_1$ の側に，縞全体がずれる．\n\n\\textbf{(3)} ずれた本数は $\\dfrac{x}{\\Delta x}=\\dfrac{(n-1)t}\\lambda=\\dfrac{0.5\\times6.0\\times10^{-6}}{600\\times10^{-9}}=\\boldsymbol5$ 本分．\n\n\\textbf{(4)} $\\mathrm S_0$ が $\\mathrm S_1$ の側に $s$ 動くと，$\\mathrm S_0\\mathrm S_2-\\mathrm S_0\\mathrm S_1\\fallingdotseq\\dfrac{ds}l$（$\\mathrm S_1$ を通る経路が短くなる）．中央の明線では全体の経路が等しいので\n\\[ \\mathrm S_0\\mathrm S_1+\\mathrm S_1\\mathrm P=\\mathrm S_0\\mathrm S_2+\\mathrm S_2\\mathrm P\\iff\\frac{dx}L=-\\frac{ds}l\\iff\\boldsymbol{x=-\\frac{sL}{l}} \\]\n光源を動かした向きと逆（$\\mathrm S_2$ の側）に縞がずれる．（$\\mathrm S_0$，スリットの中点，中央の明線がほぼ一直線に並ぶ．）\n\n\\textbf{(5)} (2) と (4) のずれを打ち消す：$\\dfrac{(n-1)tL}d=\\dfrac{sL}l$ より\n\\[ s=\\frac{(n-1)tl}d=\\frac{0.5\\times6.0\\times10^{-6}\\times0.20}{0.30\\times10^{-3}}=2.0\\times10^{-3}\\,\\mathrm m=\\boldsymbol{2.0\\,\\mathrm{mm}} \\]"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "中央の明線は「光源から2つのスリットを通ってスクリーンに至る光路の長さが等しい点」．板を入れれば光路が $(n-1)t$ 増え，光源を動かせばスリットまでの光路差 $\\dfrac{ds}l$ が生じる．"
+ },
+ "simulation": {
+  "id": "optics.double-slit",
+  "preset": {
+   "lambda": 600,
+   "d": 0.3,
+   "L": 1.5
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "light-interference",
+  "interference"
+ ],
+ "laws": [
+  "young-fringe",
+  "interference-condition"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ヤングの実験",
+  "干渉",
+  "光路差",
+  "薄板"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

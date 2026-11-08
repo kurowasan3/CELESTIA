@@ -1,0 +1,123 @@
+{
+ "id": "THM-FST-101",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "断熱変化で温度は変わるか（断熱膨張・断熱圧縮）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "concept",
+  "written",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ある生徒は「断熱変化では熱が出入りしないのだから，気体の温度は変わらない」と考えた．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "気体を断熱的に膨張させると，気体の温度はどうなるか．熱力学第1法則 $Q=\\Delta U+W$（$W$ は気体が外にした仕事）を使って理由とともに答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "自転車の空気入れのピストンをすばやく押し込むと，筒の先が熱くなる．その理由を説明せよ．"
+     },
+     {
+      "id": "3",
+      "tex": "断熱膨張で気体が外に $300\\,\\mathrm J$ の仕事をした．気体の内部エネルギーの変化 $\\Delta U$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "断熱圧縮で気体が外から $200\\,\\mathrm J$ の仕事をされた．気体の内部エネルギーの変化 $\\Delta U$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "温度は下がる．$Q=0$ なので $\\Delta U=-W$．膨張では $W>0$ だから $\\Delta U<0$ で，内部エネルギー（温度）が下がる．"
+   },
+   {
+    "id": "2",
+    "tex": "すばやい圧縮は熱が逃げる時間がなくほぼ断熱圧縮になり，外からされた仕事の分だけ空気の内部エネルギーが増えて温度が上がるから．"
+   },
+   {
+    "id": "3",
+    "tex": "$\\Delta U=-300\\,\\mathrm J$",
+    "grading": "ΔU：-300 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta U=+200\\,\\mathrm J$",
+    "grading": "ΔU：200 [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 断熱では $Q=0$ なので $\\Delta U=-W$．膨張では気体がピストンを押して外に仕事をする（$W>0$）ので，その分のエネルギーを内部エネルギーから出す．理想気体の内部エネルギーは温度だけで決まるので，温度が下がる．「熱が出入りしない」ことと「温度が変わらない」ことは別である（温度が変わらないのは等温変化）．\n\n(2) 圧縮では気体が外から仕事をされる（$W<0$）．すばやく押せば熱が逃げる前に圧縮が終わるので，$\\Delta U=-W>0$ となり温度が上がる．\n\n(3) $\\Delta U=-W=-300\\,\\mathrm J$（$300\\,\\mathrm J$ 減少）．\n\n(4) 気体がした仕事は $W=-200\\,\\mathrm J$．$\\Delta U=-W=+200\\,\\mathrm J$（$200\\,\\mathrm J$ 増加）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "断熱 $Q=0$ でも仕事のやりとりがあれば $\\Delta U=-W$ だけ内部エネルギー（温度）が変わる．"
+ },
+ "simulation": {
+  "id": "thermo.pv",
+  "preset": {
+   "proc": 3,
+   "ratio": 2
+  },
+  "show": "after-attempt",
+  "locked": [
+   "proc"
+  ]
+ },
+ "concepts": [
+  "first-law"
+ ],
+ "laws": [
+  "first-law",
+  "adiabatic"
+ ],
+ "misconceptions": [
+  "MC-ADIABATIC-TEMP"
+ ],
+ "tags": [
+  "断熱変化",
+  "熱力学第1法則",
+  "誤概念"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

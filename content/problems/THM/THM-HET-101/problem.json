@@ -1,0 +1,99 @@
+{
+ "id": "THM-HET-101",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-01",
+ "topic": "熱容量と比熱（アルミニウムと水）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 5,
+ "format": [
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $140\\,\\mathrm g$ のアルミニウムの容器がある．アルミニウムの比熱を $0.90\\,\\mathrm{J/(g\\cdot K)}$，水の比熱を $4.2\\,\\mathrm{J/(g\\cdot K)}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "この容器の熱容量 $C$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "この容器の温度を $20^\\circ\\mathrm C$ から $50^\\circ\\mathrm C$ まで上げるのに必要な熱量 $Q$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2)と同じ熱量を質量 $90\\,\\mathrm g$ の水に与えると，水の温度は何 $\\mathrm K$ 上がるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$C=1.26\\times10^2\\,\\mathrm{J/K}$",
+    "grading": "C：126 [J/K]"
+   },
+   {
+    "id": "2",
+    "tex": "$Q=3.78\\times10^3\\,\\mathrm J$",
+    "grading": "Q：3780 [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$10\\,\\mathrm K$",
+    "grading": "10 [K]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 熱容量は「全体を $1\\,\\mathrm K$ 上げるのに必要な熱量」で，$C=mc=140\\times0.90=126\\,\\mathrm{J/K}$．\n\n(2) 温度差は $50-20=30\\,\\mathrm K$（セルシウス温度の差と絶対温度の差は同じ）．$Q=C\\Delta T=126\\times30=3780\\,\\mathrm J$．\n\n(3) 水の熱容量は $90\\times4.2=378\\,\\mathrm{J/K}$．$\\Delta T=\\dfrac{3780}{378}=10\\,\\mathrm K$．\n\n同じ熱量でも，水はアルミニウムよりずっと温まりにくい（比熱が約 $4.7$ 倍）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$Q=mc\\Delta T=C\\Delta T$．熱容量 $C=mc$ は物体全体の，比熱 $c$ は $1\\,\\mathrm g$ あたりの温まりにくさ．"
+ },
+ "concepts": [
+  "heat-temperature"
+ ],
+ "laws": [
+  "heat-capacity"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "比熱",
+  "熱容量"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

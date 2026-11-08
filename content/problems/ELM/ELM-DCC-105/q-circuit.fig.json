@@ -1,0 +1,218 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  440,
+  260
+ ],
+ "items": [
+  {
+   "t": "battery",
+   "from": [
+    40,
+    230
+   ],
+   "to": [
+    40,
+    50
+   ],
+   "label": "E",
+   "plus": "to",
+   "labelSide": 1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     40,
+     50
+    ],
+    [
+     320,
+     50
+    ],
+    [
+     320,
+     60
+    ]
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     160,
+     50
+    ],
+    [
+     160,
+     60
+    ]
+   ]
+  },
+  {
+   "t": "resistor",
+   "from": [
+    160,
+    60
+   ],
+   "to": [
+    160,
+    140
+   ],
+   "label": "R₁",
+   "labelSide": 1
+  },
+  {
+   "t": "resistor",
+   "from": [
+    160,
+    140
+   ],
+   "to": [
+    160,
+    220
+   ],
+   "label": "R₂",
+   "labelSide": 1
+  },
+  {
+   "t": "resistor",
+   "from": [
+    320,
+    60
+   ],
+   "to": [
+    320,
+    140
+   ],
+   "label": "R₃",
+   "labelSide": -1
+  },
+  {
+   "t": "resistor",
+   "from": [
+    320,
+    140
+   ],
+   "to": [
+    320,
+    220
+   ],
+   "label": "R₄",
+   "labelSide": -1
+  },
+  {
+   "t": "resistor",
+   "from": [
+    160,
+    140
+   ],
+   "to": [
+    320,
+    140
+   ],
+   "label": "R₅",
+   "labelSide": 1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     160,
+     220
+    ],
+    [
+     160,
+     230
+    ]
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     320,
+     220
+    ],
+    [
+     320,
+     230
+    ],
+    [
+     40,
+     230
+    ]
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    160,
+    50
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    160,
+    140
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    320,
+    140
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    160,
+    230
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    160,
+    36
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    160,
+    246
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    128
+   ],
+   "text": "C",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    332,
+    128
+   ],
+   "text": "D",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    100,
+    40
+   ],
+   "to": [
+    100,
+    220
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    40
+   ],
+   "to": [
+    200,
+    220
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    220
+   ],
+   "to": [
+    200,
+    220
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    150,
+    130
+   ],
+   "w": 98,
+   "h": 16,
+   "label": "M",
+   "phys": "body:piston"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    178
+   ],
+   "text": "気体",
+   "size": 13,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "spring",
+   "from": [
+    125,
+    212
+   ],
+   "to": [
+    175,
+    212
+   ],
+   "coils": 5,
+   "amp": 4
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    236
+   ],
+   "text": "ヒーター",
+   "size": 11,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    70
+   ],
+   "text": "大気 P₀",
+   "size": 13,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    222,
+    130
+   ],
+   "dir": 90,
+   "len": 34,
+   "style": "thin",
+   "label": "h",
+   "labelPos": "mid",
+   "labelOffset": [
+    8,
+    0
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    96
+   ],
+   "to": [
+    236,
+    96
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    130
+   ],
+   "to": [
+    236,
+    130
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    84,
+    122
+   ],
+   "text": "S",
+   "size": 14,
+   "italic": true,
+   "anchor": "middle"
+  }
+ ]
+}

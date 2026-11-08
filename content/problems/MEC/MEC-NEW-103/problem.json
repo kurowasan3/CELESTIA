@@ -1,0 +1,163 @@
+{
+ "id": "MEC-NEW-103",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "エレベーター内の体重計の読み（v-t グラフから加速度を読んで垂直抗力を求める）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "エレベーターの床に体重計を置き，質量 $50\\,\\mathrm{kg}$ の人がその上に乗った．エレベーターは時刻 $t=0$ に1階を出発して上昇し，上の階で止まった．図は，鉛直上向きを正としたエレベーターの速度 $v$ と時刻 $t$ の関係を表す．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，体重計は人を押す力の大きさ（$\\mathrm N$）を示すものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$0<t<2.0\\,\\mathrm s$ におけるエレベーターの加速度を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$0<t<2.0\\,\\mathrm s$ における体重計の示す値を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$6.0\\,\\mathrm s<t<8.0\\,\\mathrm s$ における体重計の示す値を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$t=0$ から $t=8.0\\,\\mathrm s$ までにエレベーターが上昇した高さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "上向きを正とした速度 v と時刻 t のグラフ。t=0 で 0、t=2.0 s まで直線的に増えて 2.0 m/s、t=6.0 s まで一定、t=8.0 s で直線的に 0 に戻る",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "0<t<2.0 s で人にはたらく力：体重計からの垂直抗力 N₁（上向き、540 N）と重力 mg（下向き、490 N）。加速度は上向き",
+   "caption": "加速度が上向きなので，合力も上向き（$N_1>mg$）",
+   "physics": {
+    "forces": [
+     {
+      "name": "N",
+      "dir_deg": 90
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     }
+    ],
+    "netForce": {
+     "dir_deg": 90
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "上向きに $1.0\\,\\mathrm{m/s^2}$",
+    "grading": "1 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$5.4\\times10^2\\,\\mathrm N$（$540\\,\\mathrm N$）",
+    "grading": "540 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "$4.4\\times10^2\\,\\mathrm N$（$440\\,\\mathrm N$）",
+    "grading": "440 [N]"
+   },
+   {
+    "id": "4",
+    "tex": "$12\\,\\mathrm m$",
+    "grading": "12 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) グラフの傾き：$\\dfrac{2.0-0}{2.0}=1.0\\,\\mathrm{m/s^2}$（正なので上向き）．\n\n(2) 人には重力 $mg$（下向き）と体重計からの垂直抗力 $N_1$（上向き）がはたらき，人はエレベーターと同じ加速度で動く．上向きを正として運動方程式 $ma=N_1-mg$ より\n$N_1=m(g+a)=50\\times(9.8+1.0)=540\\,\\mathrm N$．体重計は人を押す力 $N_1$ の反作用（人が体重計を押す力）を示し，大きさは等しい．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(3) $6.0\\,\\mathrm s<t<8.0\\,\\mathrm s$ の加速度は $\\dfrac{0-2.0}{2.0}=-1.0\\,\\mathrm{m/s^2}$（下向き）．$N_3=m(g+a)=50\\times(9.8-1.0)=440\\,\\mathrm N$．\n上昇中でも減速しているときは加速度が下向きで，体重計の値は $mg=490\\,\\mathrm N$ より小さい．値を決めるのは速度の向きではなく加速度の向き．\n\n(4) グラフの面積：$\\dfrac{(4.0+8.0)\\times2.0}{2}=12\\,\\mathrm m$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "体重計の値は垂直抗力 $N=m(g+a)$（上向き正）．速度ではなく加速度の向きで，$mg$ より大きいか小さいかが決まる．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "normal-force",
+  "acceleration-concept"
+ ],
+ "laws": [
+  "newton-2nd",
+  "newton-3rd",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [
+  "MC-NORMAL-EQ-MG"
+ ],
+ "tags": [
+  "エレベーター",
+  "垂直抗力",
+  "v-tグラフ",
+  "運動方程式"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

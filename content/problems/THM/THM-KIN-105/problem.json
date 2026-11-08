@@ -1,0 +1,124 @@
+{
+ "id": "THM-KIN-105",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "ヘリウムと酸素の混合気体（分子の速さ・内部エネルギー・比熱比から組成を決める）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 18,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ヘリウム He（単原子分子，分子量 $4.0$）$n_1\\,\\mathrm{mol}$ と酸素 $\\mathrm O_2$（2原子分子，分子量 $32$）$n_2\\,\\mathrm{mol}$ を混ぜた理想気体が，絶対温度 $T$ で容器に入っている．He の定積モル比熱は $\\dfrac32R$，$\\mathrm O_2$ の定積モル比熱は（分子の回転の運動エネルギーも含めて）$\\dfrac52R$ とする．$R$ は気体定数である．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "He 分子と $\\mathrm O_2$ 分子の二乗平均速度 $\\sqrt{\\overline{v^2}}$ の比（He / $\\mathrm O_2$）を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "混合気体の内部エネルギー $U$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "混合気体 $1\\,\\mathrm{mol}$ あたりの定積モル比熱 $C_V$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "混合気体の比熱比 $\\gamma=\\dfrac{C_p}{C_V}$ を $n_1$，$n_2$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "比熱比を測ったところ $\\gamma=\\dfrac32$ であった．$\\dfrac{n_2}{n_1}$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2\\sqrt2$",
+    "grading": "2sqrt(2)"
+   },
+   {
+    "id": "2",
+    "tex": "$U=\\dfrac{(3n_1+5n_2)RT}{2}$",
+    "grading": "U：(3n_1+5n_2)R T/2"
+   },
+   {
+    "id": "3",
+    "tex": "$C_V=\\dfrac{(3n_1+5n_2)R}{2(n_1+n_2)}$",
+    "grading": "C_V：(3n_1+5n_2)R/(2(n_1+n_2))"
+   },
+   {
+    "id": "4",
+    "tex": "$\\gamma=\\dfrac{5n_1+7n_2}{3n_1+5n_2}$",
+    "grading": "γ：(5n_1+7n_2)/(3n_1+5n_2)"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac{n_2}{n_1}=1$",
+    "grading": "1"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　同じ温度では，どちらの分子も並進運動の平均運動エネルギー $\\dfrac12m\\overline{v^2}=\\dfrac32kT$ が等しい．$\\sqrt{\\overline{v^2}}\\propto\\dfrac1{\\sqrt m}$ より比は $\\sqrt{\\dfrac{32}{4.0}}=2\\sqrt2$．\n\n\\textbf{(2)}　各成分の内部エネルギーの和：$U=\\dfrac32n_1RT+\\dfrac52n_2RT=\\dfrac{(3n_1+5n_2)RT}{2}$．\n\n\\textbf{(3)}　体積一定で温度を $\\Delta T$ 上げるのに必要な熱は $\\Delta U$．全物質量 $n_1+n_2$ で割って $C_V=\\dfrac{(3n_1+5n_2)R}{2(n_1+n_2)}$．\n\n\\textbf{(4)}　混合気体も $PV=(n_1+n_2)RT$ を満たすので，マイヤーの関係 $C_p=C_V+R$ が成り立つ．\\[C_p=\\frac{(3n_1+5n_2)R+2(n_1+n_2)R}{2(n_1+n_2)}=\\frac{(5n_1+7n_2)R}{2(n_1+n_2)},\\qquad\\gamma=\\frac{5n_1+7n_2}{3n_1+5n_2}\\]\n\n\\textbf{(5)}　$2(5n_1+7n_2)=3(3n_1+5n_2)$ より $n_1=n_2$，$\\dfrac{n_2}{n_1}=1$．（$\\gamma$ は He だけなら $\\dfrac53$，$\\mathrm O_2$ だけなら $\\dfrac75$ で，その間の値をとる．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "温度が同じなら並進の平均運動エネルギーは分子の種類によらない．内部エネルギー・熱容量は成分ごとの和，$C_p=C_V+R$ は混合気体でも成り立つ．"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "first-law"
+ ],
+ "laws": [
+  "kinetic-temperature",
+  "molar-heat",
+  "ideal-gas-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "気体分子運動論",
+  "混合気体",
+  "モル比熱",
+  "比熱比",
+  "2原子分子"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

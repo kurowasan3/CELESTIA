@@ -1,0 +1,124 @@
+{
+ "id": "MEC-MOM-202",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "力と時間のグラフから求める力積と速度",
+ "course": "物理",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上に静止している質量 $0.50\\,\\mathrm{kg}$ の物体に，時刻 $t=0$ から水平方向に一定の向きの力を加えた．力の大きさ $F$ は時刻 $t$ とともに図のように変化し，$t=0.40\\,\\mathrm s$ 以降は $0$ になった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$t=0$ から $t=0.40\\,\\mathrm s$ までに物体が受けた力積の大きさ $I$ は何 $\\mathrm{N\\cdot s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "$t=0.40\\,\\mathrm s$ における物体の速さ $v$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "$t=0.10\\,\\mathrm s$ における物体の速さ $v_1$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "$t=0$ から $t=0.40\\,\\mathrm s$ の間の平均の力の大きさ $\\bar F$ は何 $\\mathrm N$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "力 F と時刻 t のグラフ。0 から 0.10 s で 0 N から 40 N まで直線的に増え、0.30 s まで 40 N で一定、0.40 s で 0 N まで直線的に減る",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I=12\\,\\mathrm{N\\cdot s}$",
+    "grading": "I：12 [N·s]"
+   },
+   {
+    "id": "2",
+    "tex": "$v=24\\,\\mathrm{m/s}$",
+    "grading": "v：24 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$v_1=4.0\\,\\mathrm{m/s}$",
+    "grading": "v_1：4 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\bar F=30\\,\\mathrm N$",
+    "grading": "30 [N]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "$F$–$t$ グラフと $t$ 軸で囲まれた面積が力積である．\n\n(1) 台形の面積：\\[I=\\frac12\\times(0.20+0.40)\\times40=12\\,\\mathrm{N\\cdot s}\\]\n\n(2) 初めは静止しているので，$mv-0=I$ より $v=\\dfrac{12}{0.50}=24\\,\\mathrm{m/s}$．\n\n(3) $0\\le t\\le0.10\\,\\mathrm s$ の三角形の面積は $\\dfrac12\\times0.10\\times40=2.0\\,\\mathrm{N\\cdot s}$．$v_1=\\dfrac{2.0}{0.50}=4.0\\,\\mathrm{m/s}$．\n\n(4) 同じ力積を一定の力で与えると考えて $\\bar F=\\dfrac{I}{\\Delta t}=\\dfrac{12}{0.40}=30\\,\\mathrm N$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$F$–$t$ グラフの面積＝力積＝運動量の変化．力が変化しても面積で考えればよい．"
+ },
+ "concepts": [
+  "momentum-conservation"
+ ],
+ "laws": [
+  "impulse-momentum"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力積",
+  "グラフ読解",
+  "運動量"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "id": "WAV-DOP-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "風の中で動く反射板による反射音のドップラー効果とうなり",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，一直線上に，静止した音源 S と，そのすぐそばで静止した観測者 O，および反射板 R がある．S は振動数 $f_0$ の音を出し続けている．S から R の向きに一定の速さ $w$ の風が吹いている．静止した空気に対する音の速さを $V$ とし，$u+w<V$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "R が静止しているとき，O が聞く反射音の振動数を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "R が S に向かって一定の速さ $u$ で動いているとき，R が受けとる音の振動数 $f_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) のとき，R から O に向かう反射音の波長 $\\lambda_2$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(2) のとき，O が聞く反射音の振動数 $f_2$ を，$f_0$，$V$，$w$，$u$ を用いて表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$V=340\\,\\mathrm{m/s}$，$w=10\\,\\mathrm{m/s}$，$u=5.0\\,\\mathrm{m/s}$，$f_0=455\\,\\mathrm{Hz}$ のとき，O が聞く直接音と反射音による1秒あたりのうなりの回数を，有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左に静止した音源 S と観測者 O が並ぶ。右の反射板 R が速さ u で S に向かって左へ動く。風は S から R の向き（右向き）に速さ w で吹く",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f_0$",
+    "grading": "f_0"
+   },
+   {
+    "id": "2",
+    "tex": "$f_1=\\dfrac{V+w+u}{V+w}f_0$",
+    "grading": "f_1：(V+w+u)f_0/(V+w)"
+   },
+   {
+    "id": "3",
+    "tex": "$\\lambda_2=\\dfrac{V-w-u}{f_1}=\\dfrac{(V+w)(V-w-u)}{(V+w+u)f_0}$",
+    "grading": "λ_2：(V+w)(V-w-u)/((V+w+u)f_0)"
+   },
+   {
+    "id": "4",
+    "tex": "$f_2=\\dfrac{(V-w)(V+w+u)}{(V+w)(V-w-u)}f_0$",
+    "grading": "f_2：(V-w)(V+w+u)f_0/((V+w)(V-w-u))"
+   },
+   {
+    "id": "5",
+    "tex": "$14$ 回",
+    "grading": "14回"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "地面に対する音の速さは，風下（S→R）向きに $V+w$，風上（R→O）向きに $V-w$．\n\n\\textbf{(1)} 音源・反射板・観測者がすべて静止していれば，風があっても1秒間に出た波の数 $f_0$ がそのまま1秒間に届く（波長は向きによって変わるが，届く速さも同じ割合で変わる）．よって $\\boldsymbol{f_0}$．\n\n\\textbf{(2)} S→R 向きの音の波長は $\\lambda_1=\\dfrac{V+w}{f_0}$．R は速さ $V+w$ で来る波に向かって $u$ で進むので，1秒間に受けとる波の数は\n\\[ f_1=\\frac{(V+w)+u}{\\lambda_1}=\\boldsymbol{\\frac{V+w+u}{V+w}f_0} \\]\n\n\\textbf{(3)} R は振動数 $f_1$ の音源として，O に向かって $u$ で進みながら音を出す．O に向かう音は地面に対して $V-w$ で進むので，1秒間に出た $f_1$ 個の波は長さ $(V-w)-u$ に詰まる：\n\\[ \\lambda_2=\\boldsymbol{\\frac{V-w-u}{f_1}}=\\frac{(V+w)(V-w-u)}{(V+w+u)f_0} \\]\n\n\\textbf{(4)} O は静止しているので $f_2=\\dfrac{V-w}{\\lambda_2}=\\boldsymbol{\\dfrac{(V-w)(V+w+u)}{(V+w)(V-w-u)}f_0}$．\n（$w=0$ とすると，よく知られた $\\dfrac{V+u}{V-u}f_0$ にもどる．）\n\n\\textbf{(5)} $V+w=350$，$V-w=330$，$V+w+u=355$，$V-w-u=325$ より\n\\[ f_2=\\frac{330\\times355}{350\\times325}\\times455=468.6\\,\\mathrm{Hz} \\]\n直接音は (1) と同じ理由で $f_0=455\\,\\mathrm{Hz}$ で聞こえるので，うなりは $468.6-455=13.6\\fallingdotseq\\boldsymbol{14}$ 回．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "風があるときは，地面から見た音の速さ（$V\\pm w$）を使って「波長」と「受けとる速さ」を別々に考える．動く反射板は「観測者」として受けとり，「音源」として出し直す．"
+ },
+ "concepts": [
+  "doppler",
+  "beats"
+ ],
+ "laws": [
+  "doppler",
+  "beat-frequency",
+  "wave-speed"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "反射音",
+  "風",
+  "うなり"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

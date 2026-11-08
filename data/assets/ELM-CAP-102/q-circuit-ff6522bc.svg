@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" width="360" height="210" font-family="'Times New Roman', serif">
+<g data-phys="battery:10 V">
+<line x1="40" y1="170" x2="40" y2="125" stroke="currentColor" stroke-width="1.6"/>
+<line x1="40" y1="115" x2="40" y2="70" stroke="currentColor" stroke-width="1.6"/>
+<line x1="54" y1="115" x2="26" y2="115" stroke="currentColor" stroke-width="1.6"/>
+<line x1="47" y1="125" x2="33" y2="125" stroke="currentColor" stroke-width="3"/>
+<text x="60" y="120" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">10 V</text>
+</g>
+<polyline points="40,70 141,70" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="141" y1="52" x2="141" y2="88" stroke="currentColor" stroke-width="2.4"/>
+<line x1="159" y1="52" x2="159" y2="88" stroke="currentColor" stroke-width="2.4"/>
+<polyline points="159,70 260,70 260,111" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="242" y1="111" x2="278" y2="111" stroke="currentColor" stroke-width="2.4"/>
+<line x1="242" y1="129" x2="278" y2="129" stroke="currentColor" stroke-width="2.4"/>
+<polyline points="260,129 260,170 40,170" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="150" y="36" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">C₁ = 2.0 μF</text>
+<text x="284" y="120" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">C₂ = 3.0 μF</text>
+</svg>

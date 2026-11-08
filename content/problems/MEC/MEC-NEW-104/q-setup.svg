@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" width="340" height="220" font-family="'Times New Roman', serif">
+<line x1="20" y1="170" x2="320" y2="170" stroke="currentColor" stroke-width="2"/>
+<polygon points="20,170 320,170 320,178 20,178" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(160,170) rotate(0)" data-phys="body:board" data-angle="0">
+<rect x="-120" y="-16" width="240" height="16" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<g transform="translate(258,154) rotate(0)" data-phys="body:A" data-angle="0">
+<rect x="-20" y="-28" width="40" height="28" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-14" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<text x="120" y="162" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+<g class="f-force" data-phys="force:F" data-dir="0" data-len="44">
+<line x1="280" y1="162" x2="314" y2="162" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="324,162 314,166.66 314,157.34" fill="currentColor"/>
+<text x="336" y="162" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F</text>
+</g>
+<g class="f-ink" data-dir="0" data-len="120">
+<line x1="160" y1="196" x2="270" y2="196" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="280,196 270,200.66 270,191.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="180" data-len="120">
+<line x1="160" y1="196" x2="50" y2="196" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="40,196 50,191.34 50,200.66" fill="currentColor"/>
+</g>
+<text x="160" y="208" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+</svg>

@@ -1,0 +1,181 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    40,
+    200
+   ],
+   "to": [
+    360,
+    200
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    70,
+    230
+   ],
+   "to": [
+    70,
+    30
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    352,
+    214
+   ],
+   "text": "x",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    58,
+    36
+   ],
+   "text": "y",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    58,
+    212
+   ],
+   "text": "O",
+   "italic": true
+  },
+  {
+   "t": "ball",
+   "at": [
+    70,
+    200
+   ],
+   "r": 5
+  },
+  {
+   "t": "arrow",
+   "from": [
+    300,
+    160
+   ],
+   "dir": 90,
+   "len": 60,
+   "style": "thin",
+   "label": "E",
+   "labelPos": "end",
+   "phys": "field:E"
+  },
+  {
+   "t": "text",
+   "at": [
+    130,
+    60
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    175,
+    60
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    220,
+    60
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    130,
+    105
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    175,
+    105
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    220,
+    105
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    130,
+    150
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    175,
+    150
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    220,
+    150
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    30
+   ],
+   "text": "磁場 B（紙面の裏から表）",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

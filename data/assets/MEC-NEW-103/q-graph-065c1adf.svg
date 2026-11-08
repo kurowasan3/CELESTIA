@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" width="360" height="210" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="290">
+<line x1="50" y1="170" x2="330" y2="170" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="340,170 330,174.66 330,165.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="150">
+<line x1="50" y1="170" x2="50" y2="30" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="50,20 54.66,30 45.34,30" fill="currentColor"/>
+</g>
+<polyline points="50,170 114,70 242,70 306,170" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="50" y1="70" x2="114" y2="70" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="114" y1="70" x2="114" y2="170" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="242" y1="70" x2="242" y2="170" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="40" y="70" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">2.0</text>
+<text x="114" y="186" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">2.0</text>
+<text x="242" y="186" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">6.0</text>
+<text x="306" y="186" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">8.0</text>
+<text x="40" y="184" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<text x="56" y="16" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v [m/s]</text>
+<text x="346" y="186" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">t [s]</text>
+</svg>

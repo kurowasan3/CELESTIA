@@ -1,0 +1,131 @@
+{
+ "id": "MSY-PCT-101",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "台車につるした振り子：水平方向の運動量保存と最下点の張力",
+ "course": "物理",
+ "level": 3,
+ "minutes": 18,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平なレールの上に置いた質量 $M$ の台車に，長さ $l$ の軽い糸で質量 $m$ の小球をつるした．糸を水平に張った状態で小球を支え，台車と小球を静止させてから，小球を静かに放した．小球は台車にぶつからず，台車は回転しないものとする．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小球が最下点を通過するときの，小球の（レールに対する）速さ $v$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "このときの台車の速さ $V$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "このときの糸の張力の大きさ $S$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "小球を放してから，糸が初めて反対側で水平になるまでに，台車がレールに沿って動く距離 $d$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかなレール上の質量 M の台車の支柱に、長さ l の糸で質量 m の小球をつるし、糸を水平に張って支えている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=\\sqrt{\\dfrac{2Mgl}{M+m}}$",
+    "grading": "v：sqrt(2M g l/(M+m))"
+   },
+   {
+    "id": "2",
+    "tex": "$V=\\dfrac mM\\sqrt{\\dfrac{2Mgl}{M+m}}$",
+    "grading": "V：(m/M)sqrt(2M g l/(M+m))"
+   },
+   {
+    "id": "3",
+    "tex": "$S=mg\\left(3+\\dfrac{2m}{M}\\right)$",
+    "grading": "S：m g(3+2m/M)"
+   },
+   {
+    "id": "4",
+    "tex": "$d=\\dfrac{2ml}{M+m}$",
+    "grading": "d：2m l/(M+m)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "小球と台車を合わせた系に水平方向の外力ははたらかない（重力とレールの垂直抗力は鉛直）．よって水平方向の運動量の和は $0$ のまま．また，摩擦がなく，糸の張力は台車と小球に逆向きで，糸の長さが変わらないので張力の仕事の和は $0$．系の力学的エネルギーが保存する．\n\n(1)(2) 最下点では小球の速度は水平．小球と台車は逆向きに動き，$mv=MV$．エネルギー保存：\\[mgl=\\frac12mv^2+\\frac12MV^2=\\frac12mv^2\\left(1+\\frac mM\\right)\\] よって $v=\\sqrt{\\dfrac{2Mgl}{M+m}}$，$V=\\dfrac mMv=\\dfrac mM\\sqrt{\\dfrac{2Mgl}{M+m}}$．\n\n(3) 最下点では糸が鉛直なので，台車が糸から受ける力は鉛直で，台車の水平方向の加速度は $0$．このとき台車とともに動く立場は慣性系とみなせ，その立場では小球は支点を中心とする半径 $l$ の円運動をしている．台車に対する小球の速さは $v+V=v\\left(1+\\dfrac mM\\right)$ なので \\[S-mg=\\frac{m(v+V)^2}{l}=\\frac{m}{l}\\cdot\\frac{2Mgl}{M+m}\\cdot\\frac{(M+m)^2}{M^2}=\\frac{2mg(M+m)}{M}\\] \\[S=mg\\left(3+\\frac{2m}{M}\\right)\\] 台車が固定されている場合（$M\\to\\infty$）の $3mg$ より大きい．地面に対する速さ $v$ を使って $m\\dfrac{v^2}{l}$ としてはいけない．\n\n(4) 水平方向の運動量が常に $0$ なので，系の重心は水平方向に動かない．小球は台車に対して $2l$ 移動するので，台車の変位を $-d$ とすると小球の変位は $2l-d$．$m(2l-d)-Md=0$ より $d=\\dfrac{2ml}{M+m}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "水平方向の運動量保存＋力学的エネルギー保存で速さ．円運動の式には支点（台車）に対する相対速度を使う．"
+ },
+ "concepts": [
+  "momentum-conservation",
+  "mechanical-energy",
+  "circular-motion"
+ ],
+ "laws": [
+  "momentum-conservation",
+  "energy-conservation",
+  "centripetal-acceleration",
+  "center-of-mass"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動量保存",
+  "振り子",
+  "相対速度",
+  "重心",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

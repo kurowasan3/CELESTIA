@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250" width="520" height="250" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="450">
+<line x1="50" y1="130" x2="490" y2="130" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="500,130 490,134.66 490,125.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="220">
+<line x1="60" y1="240" x2="60" y2="30" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,20 64.66,30 55.34,30" fill="currentColor"/>
+</g>
+<polyline points="60,130 62.62,124.7 65.25,119.42 67.88,114.18 70.5,108.99 73.12,103.87 75.75,98.85 78.38,93.93 81,89.14 83.62,84.49 86.25,80 88.88,75.68 91.5,71.55 94.12,67.62 96.75,63.91 99.38,60.43 102,57.19 104.62,54.2 107.25,51.48 109.88,49.02 112.5,46.85 115.12,44.97 117.75,43.38 120.38,42.09 123,41.11 125.62,40.43 128.25,40.07 130.88,40.02 133.5,40.28 136.12,40.85 138.75,41.73 141.38,42.92 144,44.4 146.62,46.19 149.25,48.27 151.88,50.63 154.5,53.26 157.12,56.16 159.75,59.32 162.38,62.72 165,66.36 167.62,70.22 170.25,74.28 172.88,78.54 175.5,82.98 178.12,87.57 180.75,92.32 183.38,97.2 186,102.19 188.62,107.28 191.25,112.44 193.88,117.67 196.5,122.94 199.12,128.23 201.75,133.53 204.38,138.82 207,144.08 209.62,149.29 212.25,154.43 214.88,159.49 217.5,164.44 220.12,169.28 222.75,173.98 225.38,178.52 228,182.9 230.62,187.1 233.25,191.09 235.88,194.88 238.5,198.44 241.12,201.76 243.75,204.83 246.38,207.65 249,210.19 251.62,212.46 254.25,214.44 256.88,216.12 259.5,217.51 262.12,218.6 264.75,219.38 267.38,219.84 270,220 272.62,219.84 275.25,219.38 277.88,218.6 280.5,217.51 283.12,216.12 285.75,214.44 288.38,212.46 291,210.19 293.62,207.65 296.25,204.83 298.88,201.76 301.5,198.44 304.12,194.88 306.75,191.09 309.38,187.1 312,182.9 314.62,178.52 317.25,173.98 319.88,169.28 322.5,164.44 325.12,159.49 327.75,154.43 330.38,149.29 333,144.08 335.62,138.82 338.25,133.53 340.88,128.23 343.5,122.94 346.12,117.67 348.75,112.44 351.38,107.28 354,102.19 356.62,97.2 359.25,92.32 361.88,87.57 364.5,82.98 367.12,78.54 369.75,74.28 372.38,70.22 375,66.36 377.62,62.72 380.25,59.32 382.88,56.16 385.5,53.26 388.12,50.63 390.75,48.27 393.38,46.19 396,44.4 398.62,42.92 401.25,41.73 403.88,40.85 406.5,40.28 409.12,40.02 411.75,40.07 414.38,40.43 417,41.11 419.62,42.09 422.25,43.38 424.88,44.97 427.5,46.85 430.12,49.02 432.75,51.48 435.38,54.2 438,57.19 440.62,60.43 443.25,63.91 445.88,67.62 448.5,71.55 451.12,75.68 453.75,80 456.38,84.49 459,89.14 461.62,93.93 464.25,98.85 466.88,103.87 469.5,108.99 472.12,114.18 474.75,119.42 477.38,124.7 480,130" fill="none" stroke="currentColor" stroke-width="2.4"/>
+<line x1="60" y1="40" x2="130" y2="40" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="60" y1="220" x2="270" y2="220" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="52" y="40" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">10</text>
+<text x="52" y="220" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">−10</text>
+<text x="52" y="142" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0</text>
+<line x1="130" y1="126" x2="130" y2="134" stroke="currentColor" stroke-width="1.2"/>
+<text x="130" y="146" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">5</text>
+<line x1="200" y1="126" x2="200" y2="134" stroke="currentColor" stroke-width="1.2"/>
+<text x="200" y="146" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">10</text>
+<line x1="270" y1="126" x2="270" y2="134" stroke="currentColor" stroke-width="1.2"/>
+<text x="270" y="146" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">15</text>
+<line x1="340" y1="126" x2="340" y2="134" stroke="currentColor" stroke-width="1.2"/>
+<text x="340" y="146" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">20</text>
+<line x1="410" y1="126" x2="410" y2="134" stroke="currentColor" stroke-width="1.2"/>
+<text x="410" y="146" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">25</text>
+<line x1="480" y1="126" x2="480" y2="134" stroke="currentColor" stroke-width="1.2"/>
+<text x="480" y="146" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">30</text>
+<text x="515" y="116" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">t [ms]</text>
+<text x="70" y="14" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v [V]</text>
+</svg>

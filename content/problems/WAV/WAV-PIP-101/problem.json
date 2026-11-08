@@ -1,0 +1,135 @@
+{
+ "id": "WAV-PIP-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "気柱共鳴の実験から音速と開口端補正を求める",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，鉛直に立てたガラス管に水を入れ，管口の近くで振動数 $500\\,\\mathrm{Hz}$ のおんさを鳴らしながら水面をゆっくり下げていった．管口から水面までの長さ $l$ が $16.4\\,\\mathrm{cm}$ のとき初めて共鳴し，次に $51.0\\,\\mathrm{cm}$ のとき共鳴した．開口端補正は，どちらの共鳴でも同じとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-tube"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "音の波長は何 cm か．"
+     },
+     {
+      "id": "2",
+      "tex": "音の速さを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "開口端補正は何 cm か．"
+     },
+     {
+      "id": "4",
+      "tex": "さらに水面を下げたとき，次に共鳴する $l$ は何 cm か．"
+     },
+     {
+      "id": "5",
+      "tex": "2回目の共鳴（$l=51.0\\,\\mathrm{cm}$）のとき，管内で空気の密度の変化が最も大きい位置は，管口から何 cm のところか．すべて答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-tube",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-tube.svg",
+   "alt": "鉛直なガラス管に水が入っている。管口の上でおんさ（500 Hz）を鳴らす。管口から水面までの長さが l",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$69.2\\,\\mathrm{cm}$",
+    "grading": "69.2 [cm]"
+   },
+   {
+    "id": "2",
+    "tex": "$346\\,\\mathrm{m/s}$",
+    "grading": "346 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$0.9\\,\\mathrm{cm}$",
+    "grading": "0.9 [cm]"
+   },
+   {
+    "id": "4",
+    "tex": "$85.6\\,\\mathrm{cm}$",
+    "grading": "85.6 [cm]"
+   },
+   {
+    "id": "5",
+    "tex": "$16.4\\,\\mathrm{cm}$ と $51.0\\,\\mathrm{cm}$（水面）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 隣り合う共鳴の間で気柱は半波長だけ長くなる：$\\dfrac\\lambda2=51.0-16.4=34.6\\,\\mathrm{cm}$ より $\\lambda=69.2\\,\\mathrm{cm}$．開口端補正はこの差で打ち消し合う．\n\n(2) $V=f\\lambda=500\\times0.692=346\\,\\mathrm{m/s}$．\n\n(3) 1回目の共鳴では，管口より $\\Delta l$ だけ外にある腹から水面（節）までが $\\dfrac\\lambda4$：$l_1+\\Delta l=\\dfrac\\lambda4=17.3\\,\\mathrm{cm}$ より $\\Delta l=17.3-16.4=0.9\\,\\mathrm{cm}$．\n\n(4) $51.0+34.6=85.6\\,\\mathrm{cm}$．\n\n(5) 密度（圧力）の変化が最も大きいのは，空気の変位の節．2回目の共鳴では，水面（$51.0\\,\\mathrm{cm}$）と，そこから $\\dfrac\\lambda2$ 上の $51.0-34.6=16.4\\,\\mathrm{cm}$ が節．（管口付近の腹では，密度はほとんど変化しない．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "共鳴の間隔が半波長．開口端補正は差をとると消える．変位の節が密度変化の最大の点．"
+ },
+ "concepts": [
+  "string-resonance",
+  "wave-basics"
+ ],
+ "laws": [
+  "pipe-modes",
+  "wave-speed"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "気柱共鳴",
+  "開口端補正",
+  "実験",
+  "閉管"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

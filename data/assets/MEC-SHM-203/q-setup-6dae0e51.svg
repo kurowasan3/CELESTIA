@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" width="360" height="160" font-family="'Times New Roman', serif">
+<line x1="30" y1="40" x2="30" y2="130" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="20,40 30,40 30,130 20,130" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="30" y1="130" x2="350" y2="130" stroke="currentColor" stroke-width="2"/>
+<polyline points="30,112 42,112 46.61,120 55.83,104 65.06,120 74.28,104 83.5,120 92.72,104 101.94,120 111.17,104 120.39,120 129.61,104 138.83,120 148.06,104 157.28,120 166.5,104 175.72,120 184.94,104 194.17,120 203.39,104 208,112 220,112" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<g transform="translate(240,130) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-20" y="-36" width="40" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+</g>
+<line x1="150" y1="60" x2="150" y2="138" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="150" y="50" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O（自然長）</text>
+<g class="f-ink" data-phys="displacement:A" data-dir="0" data-len="70">
+<line x1="150" y1="76" x2="210" y2="76" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="220,76 210,80.66 210,71.34" fill="currentColor"/>
+<text x="185" y="76" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<text x="300" y="145" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">あらい面</text>
+<text x="95" y="92" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">k</text>
+</svg>

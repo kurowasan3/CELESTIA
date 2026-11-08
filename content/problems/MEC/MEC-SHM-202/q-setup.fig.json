@@ -1,0 +1,90 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  260,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    40,
+    230
+   ],
+   "to": [
+    220,
+    230
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "spring",
+   "from": [
+    130,
+    230
+   ],
+   "to": [
+    130,
+    140
+   ],
+   "coils": 8,
+   "amp": 10
+  },
+  {
+   "t": "block",
+   "at": [
+    130,
+    140
+   ],
+   "w": 110,
+   "h": 10,
+   "label": "",
+   "phys": "body:plate"
+  },
+  {
+   "t": "block",
+   "at": [
+    130,
+    130
+   ],
+   "w": 40,
+   "h": 30,
+   "label": "m",
+   "phys": "body:block"
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    124
+   ],
+   "text": "M",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    186,
+    128
+   ],
+   "to": [
+    178,
+    134
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    152,
+    190
+   ],
+   "text": "k",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  }
+ ]
+}

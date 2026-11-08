@@ -1,0 +1,74 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  130
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    100
+   ],
+   "to": [
+    320,
+    100
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    80,
+    100
+   ],
+   "w": 56,
+   "h": 28,
+   "label": "",
+   "phys": "body:car"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    112,
+    86
+   ],
+   "dir": 0,
+   "len": 70,
+   "style": "velocity",
+   "phys": "velocity:v0",
+   "label": "10 m/s",
+   "italic": false,
+   "labelOffset": [
+    26,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    112,
+    58
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "thin",
+   "label": "2.0 m/s²",
+   "italic": false,
+   "labelOffset": [
+    30,
+    0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    80,
+    118
+   ],
+   "text": "t = 0",
+   "size": 13
+  }
+ ]
+}

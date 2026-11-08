@@ -1,0 +1,181 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  280
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    60,
+    20
+   ],
+   "to": [
+    60,
+    250
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    150
+   ],
+   "dir": 90,
+   "len": 50,
+   "style": "current",
+   "label": "I₁",
+   "labelPos": "mid",
+   "phys": "current:I1"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     140,
+     60
+    ],
+    [
+     290,
+     60
+    ],
+    [
+     290,
+     200
+    ],
+    [
+     140,
+     200
+    ]
+   ],
+   "style": "none"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140,
+    160
+   ],
+   "dir": 90,
+   "len": 40,
+   "style": "current",
+   "label": "I₂",
+   "labelPos": "mid",
+   "phys": "current:I2",
+   "labelOffset": [
+    -26,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    290,
+    100
+   ],
+   "dir": 270,
+   "len": 40,
+   "style": "current"
+  },
+  {
+   "t": "text",
+   "at": [
+    130,
+    50
+   ],
+   "text": "A",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    130,
+    212
+   ],
+   "text": "B",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    212
+   ],
+   "text": "C",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    50
+   ],
+   "text": "D",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    310,
+    130.0
+   ],
+   "text": "a",
+   "italic": true,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    140,
+    230
+   ],
+   "to": [
+    290,
+    230
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    215.0,
+    242
+   ],
+   "text": "b",
+   "italic": true
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    32
+   ],
+   "to": [
+    140,
+    32
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    100.0,
+    22
+   ],
+   "text": "x",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    48,
+    30
+   ],
+   "text": "P",
+   "italic": true,
+   "anchor": "end"
+  }
+ ]
+}

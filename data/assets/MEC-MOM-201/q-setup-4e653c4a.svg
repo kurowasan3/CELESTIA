@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 170" width="320" height="170" font-family="'Times New Roman', serif">
+<line x1="270" y1="25" x2="270" y2="150" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="280,25 270,25 270,150 280,150" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<text x="40" y="60" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">衝突前</text>
+<text x="40" y="120" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">衝突後</text>
+<circle cx="240" cy="60" r="11" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-vel" data-phys="velocity:v1" data-dir="0" data-len="60">
+<line x1="165" y1="60" x2="215" y2="60" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="225,60 215,64.66 215,55.34" fill="currentColor"/>
+<text x="195" y="46" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">20 m/s</text>
+</g>
+<circle cx="240" cy="120" r="11" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-vel" data-phys="velocity:v2" data-dir="180" data-len="50">
+<line x1="225" y1="120" x2="185" y2="120" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="175,120 185,115.34 185,124.66" fill="currentColor"/>
+<text x="200" y="134" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">15 m/s</text>
+</g>
+</svg>

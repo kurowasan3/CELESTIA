@@ -1,0 +1,111 @@
+{
+ "id": "ELM-MAG-201",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "直線電流・円形電流がつくる磁場（数値）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中で，十分に長い直線の導線に $I=5.0\\ \\mathrm{A}$ の電流を流す．真空の透磁率を $\\mu_0=4\\pi\\times10^{-7}\\ \\mathrm{N/A^2}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "導線から $r=0.10\\ \\mathrm{m}$ 離れた点の磁束密度の大きさ $B$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "同じ導線で半径 $a=0.10\\ \\mathrm{m}$ の1巻きの円形コイルをつくり，$5.0\\ \\mathrm{A}$ の電流を流した．円の中心の磁束密度の大きさ $B'$ を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "3",
+      "tex": "はじめの直線の導線から $0.10\\ \\mathrm{m}$ 離れた位置に，別の長い導線を平行に置き，同じ向きに $2.0\\ \\mathrm{A}$ の電流を流した．この導線の長さ $1.0\\ \\mathrm{m}$ の部分が受ける力の大きさ $F$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "はじめの直線の導線を鉛直に立て，電流を下から上へ流した．真上から見ると，導線のまわりの磁場の向きは時計回りか，反時計回りか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$B=1.0\\times10^{-5}\\ \\mathrm{T}$",
+    "grading": "B：1.0*10^(-5) [T]"
+   },
+   {
+    "id": "2",
+    "tex": "$B'=\\pi\\times10^{-5}\\ \\mathrm{T}\\ (\\fallingdotseq3.1\\times10^{-5}\\ \\mathrm{T})$",
+    "grading": "B'：π*10^(-5) [T]"
+   },
+   {
+    "id": "3",
+    "tex": "$F=2.0\\times10^{-5}\\ \\mathrm{N}$",
+    "grading": "F：2.0*10^(-5) [N]"
+   },
+   {
+    "id": "4",
+    "tex": "反時計回り"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $B=\\dfrac{\\mu_0I}{2\\pi r}=\\dfrac{4\\pi\\times10^{-7}\\times5.0}{2\\pi\\times0.10}=1.0\\times10^{-5}\\ \\mathrm{T}$．\n\n(2) 円形電流の中心では $B'=\\dfrac{\\mu_0I}{2a}=\\dfrac{4\\pi\\times10^{-7}\\times5.0}{2\\times0.10}=\\pi\\times10^{-5}\\ \\mathrm{T}$．同じ距離でも，直線電流の $\\pi$ 倍の強さになる（円周上のどの部分の電流も，中心に同じ向きの磁場をつくるため）．\n\n(3) 2本目の導線の位置の磁束密度は (1) の $B$．電流が磁場から受ける力 $F=I'Bl=2.0\\times(1.0\\times10^{-5})\\times1.0=2.0\\times10^{-5}\\ \\mathrm{N}$（同じ向きの電流なので引き合う）．\n\n(4) 右ねじの法則：右ねじを電流の向き（上向き）に進めるとき，ねじを回す向きが磁場の向き．真上から見ると\\textbf{反時計回り}．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "直線電流は $B=\\dfrac{\\mu_0I}{2\\pi r}$，円形電流の中心は $B=\\dfrac{\\mu_0I}{2a}$．向きは右ねじの法則で決まる．"
+ },
+ "concepts": [
+  "lorentz-force"
+ ],
+ "laws": [
+  "straight-current-field",
+  "current-force"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "直線電流",
+  "円形電流",
+  "磁場",
+  "右ねじの法則"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 240" width="340" height="240" font-family="'Times New Roman', serif">
+<line x1="20" y1="200" x2="320" y2="200" stroke="currentColor" stroke-width="2"/>
+<polygon points="40,200 300,200 300,49.89" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6" data-phys="incline"/>
+<line x1="40" y1="200" x2="300" y2="49.89" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<path d="M74,200 A34,34 0 0 0 69.44,183" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="84.43" y="188.09" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<g transform="translate(170,124.94) rotate(-30)" data-phys="body:block" data-angle="30">
+<rect x="-22" y="-30" width="44" height="30" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<g class="f-force" data-phys="force:mg" data-dir="270" data-len="62">
+<line x1="162.5" y1="111.95" x2="162.5" y2="163.95" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="162.5,173.95 157.84,163.95 167.16,163.95" fill="currentColor"/>
+<text x="176.5" y="181.95" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">mg</text>
+</g>
+<g class="f-force" data-phys="force:N" data-dir="120" data-len="86.59">
+<line x1="162.5" y1="111.95" x2="124.21" y2="45.62" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="119.21,36.96 128.24,43.29 120.17,47.95" fill="currentColor"/>
+<text x="113.21" y="26.57" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">N</text>
+</g>
+<g class="f-force" data-phys="force:F" data-dir="0" data-len="65.79">
+<line x1="162.5" y1="111.95" x2="218.29" y2="111.95" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="228.29,111.95 218.29,116.61 218.29,107.29" fill="currentColor"/>
+<text x="240.29" y="111.95" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F₂</text>
+</g>
+<g class="f-force" data-phys="force:f" data-dir="210" data-len="25.98">
+<line x1="162.5" y1="111.95" x2="147.88" y2="120.39" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="140,124.94 145.76,116.72 150,124.07" fill="currentColor"/>
+<text x="121.61" y="134.94" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">μN</text>
+</g>
+</svg>

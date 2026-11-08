@@ -1,0 +1,160 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  220
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    60,
+    60
+   ],
+   "to": [
+    330,
+    60
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    160
+   ],
+   "to": [
+    330,
+    160
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "resistor",
+   "from": [
+    60,
+    60
+   ],
+   "to": [
+    60,
+    160
+   ],
+   "label": "R",
+   "labelSide": 1
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    50
+   ],
+   "to": [
+    170,
+    170
+   ],
+   "style": "thick",
+   "phys": "rod"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    170,
+    40
+   ],
+   "dir": 0,
+   "len": 45,
+   "style": "velocity",
+   "label": "v₀",
+   "labelPos": "end",
+   "phys": "velocity:v0"
+  },
+  {
+   "t": "text",
+   "at": [
+    158,
+    110
+   ],
+   "text": "l",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    182,
+    182
+   ],
+   "text": "m",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    220,
+    85
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    85
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    85
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    220,
+    135
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    135
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    135
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    190,
+    205
+   ],
+   "text": "磁場 B（鉛直上向き＝紙面の裏から表）",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

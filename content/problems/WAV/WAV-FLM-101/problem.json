@@ -1,0 +1,145 @@
+{
+ "id": "WAV-FLM-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "ガラス上の薄膜による反射光の干渉（反射防止膜）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，屈折率 $1.50$ のガラス板の表面に，屈折率 $n$，厚さ $d$ の透明な薄膜をつけた．空気（屈折率 $1$）中から波長 $\\lambda$ の光を入射角 $\\theta$ で当て，膜の上面で反射した光と，膜の下面で反射して上面から出てきた光の干渉を考える．(1)〜(4) では $1<n<1.50$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "2つの反射光の光路差を，$n$，$d$，$\\theta$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "反射光が強め合う条件を，正の整数 $m$ を用いて表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$n=1.38$ の膜を使い，垂直に入射する波長 $552\\,\\mathrm{nm}$ の光の反射を最も弱くしたい．膜の厚さの最小値は何 nm か．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の膜に入射角 $\\theta=60^\\circ$ で白色光を当てた．反射光が最も弱くなる波長は何 nm か．有効数字2桁で求めよ．ただし $552\\,\\mathrm{nm}$ に対して (3) で用いた条件（次数）と同じ次数の条件を考えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "膜を屈折率 $2.0$ の物質に替えた（$n>1.50$）．垂直に入射する波長 $552\\,\\mathrm{nm}$ の光の反射を最も強くする膜の厚さの最小値は何 nm か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "ray",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "空気から入射角 θ で入った光が、膜（屈折率 n、厚さ d）の上面で一部反射し、残りは屈折して膜の下面（ガラスとの境界）で反射し、上面から出る。2本の反射光は平行に進む",
+   "caption": "",
+   "physics": {
+    "refraction": {
+     "n1": 1,
+     "n2": 1.38,
+     "in": "ray:in",
+     "out": "ray:out"
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2d\\sqrt{n^2-\\sin^2\\theta}$",
+    "grading": "2d sqrt(n^2-sin(θ)^2)"
+   },
+   {
+    "id": "2",
+    "tex": "$2d\\sqrt{n^2-\\sin^2\\theta}=m\\lambda$（$m=1,2,3,\\dots$）"
+   },
+   {
+    "id": "3",
+    "tex": "$100\\,\\mathrm{nm}$",
+    "grading": "100 [nm]"
+   },
+   {
+    "id": "4",
+    "tex": "$4.3\\times10^2\\,\\mathrm{nm}$",
+    "grading": "430 [nm]"
+   },
+   {
+    "id": "5",
+    "tex": "$69\\,\\mathrm{nm}$",
+    "grading": "69 [nm]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 膜中の屈折角を $r$ とすると，$\\sin\\theta=n\\sin r$．2つの光の光路差は，よく知られているように $2nd\\cos r$（膜の中の往復の光路から，上面で反射した光が空気中で余分に進む光路を引いたもの）．\n\\[ 2nd\\cos r=2d\\sqrt{n^2-n^2\\sin^2r}=\\boldsymbol{2d\\sqrt{n^2-\\sin^2\\theta}} \\]\n\n\\textbf{(2)} 上面（空気→膜，$1<n$）でも下面（膜→ガラス，$n<1.50$）でも，屈折率の小さい側から大きい側への反射なので，どちらも位相が $\\pi$ ずれる．ずれが打ち消し合うので，光路差がそのまま効く：\n\\[ \\boldsymbol{2d\\sqrt{n^2-\\sin^2\\theta}=m\\lambda} \\]\n\n\\textbf{(3)} 弱め合う条件は $2nd=\\left(m-\\dfrac12\\right)\\lambda$．最小の厚さは $m=1$ で $d=\\dfrac{\\lambda}{4n}=\\dfrac{552}{4\\times1.38}=\\boldsymbol{100\\,\\mathrm{nm}}$．\n\n\\textbf{(4)} 同じ次数の弱め合う条件 $2d\\sqrt{n^2-\\sin^2\\theta}=\\dfrac{\\lambda'}2$ より\n\\[ \\lambda'=4d\\sqrt{n^2-\\sin^2\\theta}=400\\sqrt{1.38^2-0.75}=400\\times1.074\\cdots\\fallingdotseq\\boldsymbol{4.3\\times10^2\\,\\mathrm{nm}} \\]\n斜めに見ると光路差が小さくなるので，弱め合う波長は短い側（$552\\to430\\,\\mathrm{nm}$）にずれる．\n\n\\textbf{(5)} $n=2.0>1.50$ では，上面の反射は位相が $\\pi$ ずれるが，下面（膜→ガラス：大→小）の反射はずれない．条件が逆転し，強め合いは $2nd=\\left(m-\\dfrac12\\right)\\lambda$．最小は $d=\\dfrac\\lambda{4n}=\\dfrac{552}{8.0}=\\boldsymbol{69\\,\\mathrm{nm}}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "薄膜の干渉は「光路差 $2nd\\cos r$」と「反射での位相のずれ（屈折率の小→大で $\\pi$）が何回あるか」の2つで決まる．ずれが偶数回なら条件はそのまま，奇数回なら強め合いと弱め合いが入れかわる．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light",
+  "interference"
+ ],
+ "laws": [
+  "interference-condition",
+  "refraction-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "薄膜",
+  "干渉",
+  "反射防止膜",
+  "光路差",
+  "位相のずれ"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

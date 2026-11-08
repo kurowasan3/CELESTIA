@@ -1,0 +1,141 @@
+{
+ "id": "THM-FST-104",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "P–V 図上の三角形サイクル（斜めの過程の途中での吸熱・放熱の切り替わりと熱効率）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "graph-read"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$n\\,\\mathrm{mol}$ の単原子分子理想気体を，図のように A→B→C→A と変化させる熱機関がある．A→B は定積変化，B→C は $P$-$V$ 図上の直線で表される変化，C→A は定圧変化である．A の圧力・体積・温度を $P_0$，$V_0$，$T_0$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "1サイクルで気体が外にする正味の仕事 $W$ を，$P_0$，$V_0$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "B→C の間で気体の温度が最も高くなるときの体積と，そのときの温度を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "B→C の間で，気体が熱を吸収する過程から放出する過程に切り替わるときの体積を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "1サイクルで気体が吸収する熱量の和 $Q_{\\text{入}}$ を $P_0$，$V_0$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "この熱機関の熱効率 $e$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "P-V 図上の三角形のサイクル。A（V₀, P₀）から体積一定で B（V₀, 3P₀）へ，B から直線で C（3V₀, P₀）へ，C から圧力一定で A へ戻る（時計回り）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$W=2P_0V_0$",
+    "grading": "W：2P_0 V_0"
+   },
+   {
+    "id": "2",
+    "tex": "体積 $2V_0$，温度 $4T_0$",
+    "grading": "体積：2V_0 ; 温度：4T_0"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac52V_0$",
+    "grading": "5V_0/2"
+   },
+   {
+    "id": "4",
+    "tex": "$Q_{\\text{入}}=\\dfrac{15}{2}P_0V_0$",
+    "grading": "Q：15P_0 V_0/2"
+   },
+   {
+    "id": "5",
+    "tex": "$e=\\dfrac4{15}$",
+    "grading": "e：4/15"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　時計回りのサイクルなので，正味の仕事は三角形の面積：$W=\\dfrac12\\cdot2V_0\\cdot2P_0=2P_0V_0$．\n\n\\textbf{(2)}　B$(V_0,3P_0)$ と C$(3V_0,P_0)$ を通る直線は $P=4P_0-\\dfrac{P_0}{V_0}V$．\\[PV=4P_0V-\\frac{P_0}{V_0}V^2=-\\frac{P_0}{V_0}(V-2V_0)^2+4P_0V_0\\] は $V=2V_0$ で最大値 $4P_0V_0$．$T\\propto PV$，$P_0V_0=nRT_0$ より最高温度は $4T_0$．\n\n\\textbf{(3)}　体積が $V$ から $V+\\Delta V$ に変わるとき，$\\Delta U=\\dfrac32\\Delta(PV)$，$W=P\\Delta V$．直線上では $\\Delta(PV)=\\left(4P_0-\\dfrac{2P_0}{V_0}V\\right)\\Delta V$ なので \\[\\Delta Q=\\frac32\\left(4P_0-\\frac{2P_0V}{V_0}\\right)\\Delta V+\\left(4P_0-\\frac{P_0V}{V_0}\\right)\\Delta V=\\left(10P_0-\\frac{4P_0V}{V_0}\\right)\\Delta V\\] 膨張（$\\Delta V>0$）中に $\\Delta Q$ の符号が正から負に変わるのは $V=\\dfrac52V_0$．温度が最高になる $2V_0$ ではないことに注意（$2V_0$ から $\\dfrac52V_0$ の間は，温度が下がりながら熱を吸収する）．\n\n\\textbf{(4)}　A→B：$Q_{\\mathrm{AB}}=\\dfrac32(3P_0V_0-P_0V_0)=3P_0V_0$（吸熱）．\nB→($V=\\dfrac52V_0$)：$\\displaystyle\\int_{V_0}^{\\frac52V_0}\\left(10P_0-\\frac{4P_0V}{V_0}\\right)dV=15P_0V_0-\\frac{2P_0}{V_0}\\left(\\frac{25}{4}-1\\right)V_0^2=\\frac92P_0V_0$（吸熱）．\n（積分を使わなくても，B と $V=\\dfrac52V_0$ の点 $\\left(\\dfrac52V_0,\\dfrac32P_0\\right)$ の間で $\\Delta U=\\dfrac32\\left(\\dfrac{15}4-3\\right)P_0V_0=\\dfrac98P_0V_0$，$W=$ 台形の面積 $\\dfrac{27}8P_0V_0$ から $\\dfrac92P_0V_0$ を得る．）\n残りの区間と C→A（定圧圧縮）では放熱．よって $Q_{\\text{入}}=3P_0V_0+\\dfrac92P_0V_0=\\dfrac{15}2P_0V_0$．\n\n\\textbf{(5)}　$e=\\dfrac{W}{Q_{\\text{入}}}=\\dfrac{2}{15/2}=\\dfrac4{15}$．\n\n確かめ：$V=\\dfrac52V_0$ から C までの放熱 $\\dfrac12P_0V_0$，C→A の放熱 $\\dfrac52P_0(2V_0)=5P_0V_0$．$Q_{\\text{入}}-Q_{\\text{出}}=\\dfrac{15}2-\\dfrac{11}2=2$ $(\\times P_0V_0)=W$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "斜めの過程では $\\Delta Q=\\Delta U+P\\Delta V$ を体積の関数として調べ，符号の変わる点で吸熱と放熱を分ける．吸熱の切り替わりは温度の最高点とは一致しない．"
+ },
+ "concepts": [
+  "first-law",
+  "heat-engine",
+  "ideal-gas"
+ ],
+ "laws": [
+  "first-law",
+  "internal-energy",
+  "thermal-efficiency",
+  "ideal-gas-law"
+ ],
+ "misconceptions": [
+  "MC-HEAT-TEMP"
+ ],
+ "tags": [
+  "P-V図",
+  "熱効率",
+  "サイクル",
+  "吸熱と放熱の切り替わり"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

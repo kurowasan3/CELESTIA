@@ -1,0 +1,109 @@
+{
+ "id": "THM-KIN-101",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "分子の平均運動エネルギーと絶対温度",
+ "course": "物理",
+ "level": 0,
+ "minutes": 5,
+ "format": [
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "理想気体の分子1個あたりの並進運動の平均運動エネルギーは $\\dfrac32kT$ で表される（$k$ はボルツマン定数，$T$ は絶対温度）．$k=1.38\\times10^{-23}\\,\\mathrm{J/K}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$300\\,\\mathrm K$ の気体の分子1個の平均運動エネルギーを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "分子の平均運動エネルギーが(1)の2倍になる温度は何 $\\mathrm K$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "同じ温度の水素分子 $\\mathrm H_2$（分子量 $2$）と酸素分子 $\\mathrm O_2$（分子量 $32$）で，二乗平均速度 $\\sqrt{\\overline{v^2}}$ は，水素が酸素の何倍か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$6.21\\times10^{-21}\\,\\mathrm J$",
+    "grading": "6.21*10^(-21) [J]"
+   },
+   {
+    "id": "2",
+    "tex": "$600\\,\\mathrm K$",
+    "grading": "600 [K]"
+   },
+   {
+    "id": "3",
+    "tex": "$4$ 倍",
+    "grading": "4倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\dfrac32kT=1.5\\times1.38\\times10^{-23}\\times300=6.21\\times10^{-21}\\,\\mathrm J$．\n\n(2) 平均運動エネルギーは絶対温度に比例するので，$2\\times300=600\\,\\mathrm K$（$327^\\circ\\mathrm C$．セルシウス温度を2倍にするのではない）．\n\n(3) 同じ温度なら $\\dfrac12m\\overline{v^2}$ が等しいので，$\\sqrt{\\overline{v^2}}\\propto\\dfrac1{\\sqrt m}$．$\\sqrt{\\dfrac{32}{2}}=4$ 倍．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "温度は分子1個の平均運動エネルギーの目安：$\\dfrac12m\\overline{v^2}=\\dfrac32kT$．軽い分子ほど速い．"
+ },
+ "simulation": {
+  "id": "thermo.molecules",
+  "preset": {
+   "N": 120,
+   "T": 300,
+   "L": 5
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "kinetic-theory"
+ ],
+ "laws": [
+  "kinetic-temperature"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "気体分子運動論",
+  "絶対温度",
+  "二乗平均速度"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

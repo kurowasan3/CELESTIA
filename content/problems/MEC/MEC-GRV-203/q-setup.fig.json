@@ -1,0 +1,68 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  240,
+  240
+ ],
+ "items": [
+  {
+   "t": "circle",
+   "at": [
+    120,
+    170
+   ],
+   "r": 60,
+   "style": "solid",
+   "label": "地球"
+  },
+  {
+   "t": "line",
+   "from": [
+    120,
+    170
+   ],
+   "to": [
+    172,
+    200
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    152,
+    178
+   ],
+   "text": "R",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "ball",
+   "at": [
+    120,
+    104
+   ],
+   "r": 6,
+   "label": ""
+  },
+  {
+   "t": "arrow",
+   "from": [
+    120,
+    96
+   ],
+   "dir": 90,
+   "len": 60,
+   "style": "velocity",
+   "phys": "velocity:v0",
+   "label": "v₀",
+   "labelPos": "end",
+   "labelOffset": [
+    14,
+    6
+   ]
+  }
+ ]
+}

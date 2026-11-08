@@ -1,0 +1,366 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  450,
+  265
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    150,
+    30
+   ],
+   "to": [
+    150,
+    220
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    390,
+    30
+   ],
+   "to": [
+    390,
+    220
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    50
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    50
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    50
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    50
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    50
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    370,
+    50
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    370,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    130
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    130
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    130
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    130
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    130
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    370,
+    130
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    170
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    170
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    170
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    170
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    170
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    370,
+    170
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     30,
+     95
+    ],
+    [
+     150,
+     95
+    ],
+    [
+     150,
+     215
+    ],
+    [
+     30,
+     215
+    ]
+   ],
+   "style": "none"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    90,
+    80
+   ],
+   "dir": 0,
+   "len": 40,
+   "style": "velocity",
+   "label": "v",
+   "labelPos": "end",
+   "phys": "velocity:v"
+  },
+  {
+   "t": "text",
+   "at": [
+    18,
+    155
+   ],
+   "text": "a",
+   "italic": true
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    235
+   ],
+   "to": [
+    430,
+    235
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    250
+   ],
+   "text": "x=0",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    390,
+    250
+   ],
+   "text": "x=2a",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    425,
+    222
+   ],
+   "text": "x",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    20
+   ],
+   "text": "磁場 B（紙面の表から裏）",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

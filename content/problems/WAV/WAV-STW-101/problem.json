@@ -1,0 +1,143 @@
+{
+ "id": "WAV-STW-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "固定端で反射した波と入射波がつくる定常波",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，$x$ 軸上の $x=L$ の位置に壁があり，媒質の端は壁に固定されている（固定端）．$x<L$ の領域を，$x$ 軸の正の向きに進む入射波\n\\[ y_1=A\\sin2\\pi\\left(\\frac tT-\\frac x\\lambda\\right) \\]\nが壁に向かって進み，壁で反射する．反射による振幅の減少はないものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "反射波 $y_2$ を，$A$，$T$，$\\lambda$，$L$，$x$，$t$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "入射波と反射波の合成波 $y=y_1+y_2$ を，$x$ だけを含む因子と $t$ だけを含む因子の積の形で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "定常波の節の位置 $x$ を，整数 $m\\ (\\ge0)$ を用いて表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "定常波の腹の位置にある媒質の速さの最大値を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$L=3.0\\,\\mathrm m$，$\\lambda=0.80\\,\\mathrm m$ のとき，$0\\le x\\le L$ の範囲（壁の位置を含む）にある節の数を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(5) の数値のとき，原点 O（$x=0$）は定常波の腹か節か．また，壁を自由端に置き換えた場合はどうか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "waveform",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "x 軸の正の向きに進む入射波が、x=L にある壁（固定端）に向かう。原点 O から壁までの距離が L",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$y_2=-A\\sin2\\pi\\left(\\dfrac tT+\\dfrac x\\lambda-\\dfrac{2L}\\lambda\\right)$",
+    "grading": "y_2：-A sin(2π(t/T+x/λ-2L/λ))"
+   },
+   {
+    "id": "2",
+    "tex": "$y=2A\\sin\\dfrac{2\\pi(L-x)}{\\lambda}\\cos2\\pi\\left(\\dfrac tT-\\dfrac L\\lambda\\right)$",
+    "grading": "y：2A sin(2π(L-x)/λ)cos(2π(t/T-L/λ))"
+   },
+   {
+    "id": "3",
+    "tex": "$x=L-\\dfrac{m\\lambda}2$（$m=0,1,2,\\dots$）"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{4\\pi A}{T}$",
+    "grading": "4πA/T"
+   },
+   {
+    "id": "5",
+    "tex": "$8$ 個",
+    "grading": "8個"
+   },
+   {
+    "id": "6",
+    "tex": "固定端のとき腹，自由端のとき節"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 反射波は $x$ 軸の負の向きに進むので $y_2=B\\sin2\\pi\\left(\\dfrac tT+\\dfrac x\\lambda\\right)+\\cdots$ の形．固定端 $x=L$ では，どの時刻でも $y_1+y_2=0$ でなければならない．壁の位置で入射波の振動を逆位相にして送り返すと考えて，\n\\[ y_2(x,t)=-y_1\\!\\left(L,\\ t-\\frac{L-x}{v}\\right) \\]\n（壁から $x$ まで戻る時間 $\\dfrac{L-x}v$ だけ遅れる）．$v=\\dfrac\\lambda T$ を用いると\n\\[ y_2=-A\\sin2\\pi\\left(\\frac{t}{T}-\\frac{L-x}{\\lambda}-\\frac{L}{\\lambda}\\right)=\\boldsymbol{-A\\sin2\\pi\\left(\\frac tT+\\frac x\\lambda-\\frac{2L}\\lambda\\right)} \\]\n$x=L$ を代入すると $y_2=-A\\sin2\\pi\\left(\\dfrac tT-\\dfrac L\\lambda\\right)=-y_1$ で，たしかに $y_1+y_2=0$．\n\n\\textbf{(2)} $\\sin\\alpha-\\sin\\beta=2\\cos\\dfrac{\\alpha+\\beta}2\\sin\\dfrac{\\alpha-\\beta}2$ で，$\\alpha=2\\pi\\left(\\dfrac tT-\\dfrac x\\lambda\\right)$，$\\beta=2\\pi\\left(\\dfrac tT+\\dfrac x\\lambda-\\dfrac{2L}\\lambda\\right)$ とすると\n\\[ \\frac{\\alpha+\\beta}2=2\\pi\\left(\\frac tT-\\frac L\\lambda\\right),\\qquad \\frac{\\alpha-\\beta}2=\\frac{2\\pi(L-x)}\\lambda \\]\n\\[ y=\\boldsymbol{2A\\sin\\frac{2\\pi(L-x)}{\\lambda}\\cos2\\pi\\left(\\frac tT-\\frac L\\lambda\\right)} \\]\n位置 $x$ の媒質は振幅 $2A\\left|\\sin\\dfrac{2\\pi(L-x)}\\lambda\\right|$ で単振動する（定常波）．\n\n\\textbf{(3)} 節は振幅が $0$ の点：$\\sin\\dfrac{2\\pi(L-x)}\\lambda=0$ より $\\dfrac{2\\pi(L-x)}\\lambda=m\\pi$，すなわち $\\boldsymbol{x=L-\\dfrac{m\\lambda}2}$．壁（$m=0$）が節で，そこから $\\dfrac\\lambda2$ おき．腹は $x=L-\\dfrac{(2m+1)\\lambda}4$．\n\n\\textbf{(4)} 腹の点は振幅 $2A$，角振動数 $\\dfrac{2\\pi}T$ で単振動するので，速さの最大値は $2A\\cdot\\dfrac{2\\pi}T=\\boldsymbol{\\dfrac{4\\pi A}T}$．\n\n\\textbf{(5)} $x=3.0-0.40m\\ge0$ より $m\\le7.5$，$m=0,1,\\dots,7$ の $\\boldsymbol8$ 個．\n\n\\textbf{(6)} 固定端：$x=0$ が腹になる条件 $3.0=\\dfrac{(2m+1)\\times0.80}4$ は $m=7$ で成り立つので，O は\\textbf{腹}．\n自由端では反射波の符号が逆（$y_2=+A\\sin2\\pi(\\cdots)$）になり，壁が腹，節は $x=L-\\dfrac{(2m+1)\\lambda}4$ に移る．$m=7$ で $x=0$ となるので，O は\\textbf{節}．固定端と自由端では，腹と節の位置が入れかわる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "固定端では入射波と反射波の和が常に $0$．反射波は「壁で逆位相にして，壁からの距離の分だけ遅らせた波」．合成すると $\\sin(x\\text{ の式})\\times\\cos(t\\text{ の式})$ の定常波になる．"
+ },
+ "concepts": [
+  "superposition",
+  "wave-basics"
+ ],
+ "laws": [
+  "superposition",
+  "sine-wave"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "定常波",
+  "固定端反射",
+  "自由端反射",
+  "正弦波の式"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

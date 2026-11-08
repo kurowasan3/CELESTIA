@@ -1,0 +1,169 @@
+{
+ "id": "MEC-RIG-205",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "段差に引っかかった車輪を乗り上げさせる力",
+ "course": "物理",
+ "level": 3,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "半径 $r$，質量 $M$ の一様な円板形の車輪が，水平な床の上で高さ $h$（$0<h<r$）の段差に接して静止している．車輪に力を加えて，段差を乗り上げさせたい．車輪は段の角 K ですべらないものとし，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "車輪の中心 O に水平に力を加える．車輪が床から浮き上がるための力の大きさの最小値 $F_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) で車輪が床から浮き上がる瞬間に，段の角 K が車輪に及ぼす力の大きさ $R$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "車輪の最上点 T に水平に力を加える場合，車輪が浮き上がるための力の大きさの最小値 $F_2$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "最上点 T に加える力の向きを自由に選べるとき，車輪が浮き上がるための力の大きさの最小値 $F_3$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平な床の上の半径 r の車輪が、高さ h の段差の角 K に接している。中心 O に水平に力 F を加える。T は車輪の最上点",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "浮き上がる瞬間に車輪にはたらく力：中心の重力 Mg、中心に加えた水平な力 F1、段の角 K から中心 O に向かう力 R",
+   "caption": "3力はすべて中心 O を通る．図は $h=0.4r$ の場合",
+   "physics": {
+    "equilibrium": true,
+    "torque": {
+     "about": [
+      186.0,
+      162.0
+     ]
+    },
+    "forces": [
+     {
+      "name": "Mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "F1",
+      "dir_deg": 0
+     },
+     {
+      "name": "R",
+      "dir_deg": 143.13
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F_1=\\dfrac{Mg\\sqrt{h(2r-h)}}{r-h}$",
+    "grading": "F_1：M g sqrt(h(2r-h))/(r-h)"
+   },
+   {
+    "id": "2",
+    "tex": "$R=\\dfrac{Mgr}{r-h}$",
+    "grading": "R：M g r/(r-h)"
+   },
+   {
+    "id": "3",
+    "tex": "$F_2=Mg\\sqrt{\\dfrac{h}{2r-h}}$",
+    "grading": "F_2：M g sqrt(h/(2r-h))"
+   },
+   {
+    "id": "4",
+    "tex": "$F_3=Mg\\sqrt{\\dfrac{h}{2r}}$",
+    "grading": "F_3：M g sqrt(h/(2r))"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "浮き上がる瞬間には床からの垂直抗力が $0$ になり，車輪は角 K だけで支えられる．K からの力（大きさも向きもわからない）がモーメントに入らないように，K のまわりの力のモーメントを考える．\n\nO と K の高さの差は $r-h$，水平距離は $\\sqrt{r^2-(r-h)^2}=\\sqrt{h(2r-h)}$ である．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(1) 重力の K のまわりの腕の長さは $\\sqrt{h(2r-h)}$，O に加える水平な力の腕の長さは $r-h$．浮き上がるのは $F$ のモーメントが重力のモーメント以上のとき：\\[F_1(r-h)=Mg\\sqrt{h(2r-h)}\\quad\\Longrightarrow\\quad F_1=\\frac{Mg\\sqrt{h(2r-h)}}{r-h}\\]\n\n(2) 力のつり合いから，K の力は $F_1$ と $Mg$ の合力を打ち消す：\\[R=\\sqrt{F_1^2+(Mg)^2}=Mg\\sqrt{\\frac{h(2r-h)+(r-h)^2}{(r-h)^2}}=\\frac{Mgr}{r-h}\\] 3力が O で交わるので，$R$ は K から O の向きにはたらく．\n\n(3) T は K より $r+(r-h)=2r-h$ だけ高い．\\[F_2(2r-h)=Mg\\sqrt{h(2r-h)}\\quad\\Longrightarrow\\quad F_2=Mg\\sqrt{\\frac{h}{2r-h}}\\] 腕が長くなるので $F_1$ より小さい．\n\n(4) 力の大きさを最小にするには，腕の長さを最大にすればよい．それは力を KT に垂直に加えるときで，腕の長さは $\\mathrm{KT}=\\sqrt{h(2r-h)+(2r-h)^2}=\\sqrt{2r(2r-h)}$．\\[F_3\\sqrt{2r(2r-h)}=Mg\\sqrt{h(2r-h)}\\quad\\Longrightarrow\\quad F_3=Mg\\sqrt{\\frac{h}{2r}}\\]"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "浮き上がる瞬間は床の垂直抗力が 0．未知の力がはたらく段の角のまわりのモーメントで考え，力の大きさを小さくするには腕を長くする．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium",
+  "force-decomposition"
+ ],
+ "laws": [
+  "torque-equilibrium"
+ ],
+ "misconceptions": [
+  "MC-TORQUE-FORCE-ONLY"
+ ],
+ "tags": [
+  "剛体",
+  "力のモーメント",
+  "段差",
+  "最小の力"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

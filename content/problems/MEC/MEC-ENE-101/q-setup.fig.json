@@ -1,0 +1,123 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  200
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    140
+   ],
+   "to": [
+    320,
+    140
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     140
+    ],
+    [
+     320,
+     140
+    ],
+    [
+     320,
+     148
+    ],
+    [
+     20,
+     148
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "block",
+   "at": [
+    100,
+    140
+   ],
+   "w": 60,
+   "h": 40,
+   "label": "",
+   "phys": "body:block"
+  },
+  {
+   "t": "text",
+   "at": [
+    64,
+    124
+   ],
+   "text": "10 kg",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    100,
+    120
+   ],
+   "dir": 60,
+   "len": 90,
+   "style": "force",
+   "phys": "force:F",
+   "label": "20 N",
+   "italic": false,
+   "labelOffset": [
+    18,
+    0
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    120
+   ],
+   "to": [
+    170,
+    120
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    100,
+    120
+   ],
+   "r": 34,
+   "from": 0,
+   "to": 60,
+   "label": "60°",
+   "labelGap": 16
+  },
+  {
+   "t": "arrow",
+   "from": [
+    100,
+    172
+   ],
+   "dir": 0,
+   "len": 200,
+   "style": "thin",
+   "label": "移動 5.0 m",
+   "italic": false,
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    6
+   ]
+  }
+ ]
+}

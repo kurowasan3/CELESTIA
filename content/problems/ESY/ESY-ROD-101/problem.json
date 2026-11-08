@@ -1,0 +1,184 @@
+{
+ "id": "ESY-ROD-101",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "鉛直な磁場の中で斜面のレールを滑る導体棒（終端速度と垂直抗力）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平面と角 $\\theta$ をなす滑らかな斜面上に，間隔 $l$ の2本の平行な導体レールを斜面の最大傾斜の方向に沿って置き，上端を抵抗値 $R$ の抵抗でつないだ．全体に\\textbf{鉛直上向き}で磁束密度 $B$ の一様な磁場がかかっている．質量 $m$ の導体棒をレールに垂直（水平）に置いて静かに放すと，棒はレールに垂直なまま斜面を滑り下りた．抵抗以外の電気抵抗，回路の自己インダクタンスは無視し，重力加速度の大きさを $g$ とする．図は斜面の断面である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒が斜面に沿って速さ $v$ で滑り下りているとき，棒に生じる誘導起電力の大きさ $V$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "そのとき棒が磁場から受ける力の大きさ $F$ を求め，その向きを答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "そのときの棒の加速度の大きさ $a$（斜面に沿って下向きを正）を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "十分に時間がたつと，棒は一定の速さ $v_{\\rm f}$ で滑り下りるようになった．$v_{\\rm f}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "速さ $v_{\\rm f}$ で滑り下りているとき，棒がレールから受ける垂直抗力の大きさの和 $N$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "速さ $v_{\\rm f}$ で滑り下りているとき，抵抗の消費電力 $P$ を求め，それが重力の仕事率に等しいことを確かめよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平と角 θ をなす斜面の断面。斜面上にレールに垂直な導体棒（断面）があり、磁場 B は鉛直上向き",
+   "caption": "",
+   "physics": {
+    "angle_deg": 30
+   }
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "終端速度で滑り下りる棒にはたらく力：重力 mg（鉛直下向き）、垂直抗力 N（斜面に垂直）、磁場から受ける力 F（水平で斜面を上る側）。3力はつり合う",
+   "caption": "終端速度のときの力のつり合い",
+   "physics": {
+    "angle_deg": 30,
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 60
+     },
+     {
+      "name": "F",
+      "dir_deg": 180
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V=Blv\\cos\\theta$",
+    "grading": "V：B l v cos(θ)"
+   },
+   {
+    "id": "2",
+    "tex": "$F=\\dfrac{B^2l^2v\\cos\\theta}{R}$，水平で，斜面を上る側（棒の運動を妨げる側）の向き",
+    "grading": "F：B^2 l^2 v cos(θ)/R"
+   },
+   {
+    "id": "3",
+    "tex": "$a=g\\sin\\theta-\\dfrac{B^2l^2v\\cos^2\\theta}{mR}$",
+    "grading": "a：g sin(θ)-B^2 l^2 v cos(θ)^2/(m R)"
+   },
+   {
+    "id": "4",
+    "tex": "$v_{\\rm f}=\\dfrac{mgR\\sin\\theta}{B^2l^2\\cos^2\\theta}$",
+    "grading": "v_f：m g R sin(θ)/(B^2 l^2 cos(θ)^2)"
+   },
+   {
+    "id": "5",
+    "tex": "$N=\\dfrac{mg}{\\cos\\theta}$",
+    "grading": "N：m g/cos(θ)"
+   },
+   {
+    "id": "6",
+    "tex": "$P=\\dfrac{m^2g^2R\\sin^2\\theta}{B^2l^2\\cos^2\\theta}$",
+    "grading": "P：m^2 g^2 R sin(θ)^2/(B^2 l^2 cos(θ)^2)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 起電力に効くのは，速度のうち磁場に垂直な成分（水平成分）$v\\cos\\theta$．$V=Bl\\,v\\cos\\theta$．（回路の面を磁場に垂直な水平面に投影した面積が，1秒あたり $lv\\cos\\theta$ ずつ減る，と考えても同じ．）\n\n\\textbf{(2)} 電流 $I=\\dfrac VR=\\dfrac{Blv\\cos\\theta}{R}$．棒の電流は水平で，磁場は鉛直なので，力は水平：$F=IlB=\\dfrac{B^2l^2v\\cos\\theta}{R}$．レンツの法則より運動を妨げる向き，つまり水平で斜面を上る側を向く．\n\n\\textbf{(3)} 斜面に沿った成分：重力 $mg\\sin\\theta$（下向き），$F$ の成分 $F\\cos\\theta$（上向き）．$ma=mg\\sin\\theta-F\\cos\\theta$ より $a=g\\sin\\theta-\\dfrac{B^2l^2v\\cos^2\\theta}{mR}$．\n\n\\textbf{(4)} $a=0$ とおいて $v_{\\rm f}=\\dfrac{mgR\\sin\\theta}{B^2l^2\\cos^2\\theta}$．このとき $F\\cos\\theta=mg\\sin\\theta$，$F=mg\\tan\\theta$．\n\n\\textbf{(5)} 斜面に垂直な成分：$F$ は斜面に押しつける向きに $F\\sin\\theta$ の成分をもつ．$N=mg\\cos\\theta+F\\sin\\theta=mg\\cos\\theta+mg\\dfrac{\\sin^2\\theta}{\\cos\\theta}=\\dfrac{mg}{\\cos\\theta}$．（解答図のように，3力 $mg$，$N$，$F$ のつり合いの三角形からも直接わかる．磁場から受ける力が斜面を押すので，$N$ は $mg\\cos\\theta$ より大きい．）\n\n\\textbf{(6)} $P=RI^2=\\dfrac{(Blv_{\\rm f}\\cos\\theta)^2}{R}=\\dfrac{m^2g^2R\\sin^2\\theta}{B^2l^2\\cos^2\\theta}$．重力の仕事率は $mg\\sin\\theta\\cdot v_{\\rm f}=\\dfrac{m^2g^2R\\sin^2\\theta}{B^2l^2\\cos^2\\theta}$ で等しい．終端速度では，重力がした仕事がすべてジュール熱になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "鉛直な磁場では，速度の水平成分だけが起電力をつくり，磁場からの力は水平．斜面方向と斜面に垂直な方向に分けて，つり合いを考える．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "lorentz-force",
+  "force-decomposition",
+  "equilibrium"
+ ],
+ "laws": [
+  "motional-emf",
+  "current-force",
+  "newton-2nd",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電磁誘導",
+  "導体棒",
+  "斜面",
+  "終端速度",
+  "力の分解"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

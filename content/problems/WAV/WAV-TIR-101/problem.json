@@ -1,0 +1,133 @@
+{
+ "id": "WAV-TIR-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "水中の点光源と全反射：光が出てくる円の半径",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，屈折率 $\\dfrac43$ の水の中，水面から深さ $h$ の点 P に小さな光源がある．空気の屈折率を $1$ とする．光源から出た光のうち，水面上の半径 $r$ の円の内側に当たったものだけが空気中に出てくる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "水から空気へ向かう光の臨界角を $\\theta_{\\mathrm c}$ とする．$\\sin\\theta_{\\mathrm c}$ の値を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$r$ を $h$ を用いて表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$h=0.70\\,\\mathrm m$ のとき，$r$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "水の代わりに屈折率 $n\\ (>1)$ の液体を使うと，$r$ はどうなるか．$h$，$n$ を用いて表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "ray",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水面から深さ h の点 P に光源がある。P から水面へ臨界角 θc で進む光線が、水面上の半径 r の円の縁に当たる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac34$",
+    "grading": "3/4"
+   },
+   {
+    "id": "2",
+    "tex": "$r=\\dfrac{3h}{\\sqrt7}$",
+    "grading": "r：3h/sqrt(7)"
+   },
+   {
+    "id": "3",
+    "tex": "$0.79\\,\\mathrm m$",
+    "grading": "0.79 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$r=\\dfrac{h}{\\sqrt{n^2-1}}$",
+    "grading": "r：h/sqrt(n^2-1)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 屈折角が $90^\\circ$ になる入射角が臨界角：$\\dfrac43\\sin\\theta_{\\mathrm c}=1\\cdot\\sin90^\\circ$ より $\\sin\\theta_{\\mathrm c}=\\dfrac34$．\n\n(2) 入射角が $\\theta_{\\mathrm c}$ をこえる光は全反射して出てこない．円の縁には入射角 $\\theta_{\\mathrm c}$ で当たるので $r=h\\tan\\theta_{\\mathrm c}$．$\\cos\\theta_{\\mathrm c}=\\sqrt{1-\\dfrac9{16}}=\\dfrac{\\sqrt7}4$ より $\\tan\\theta_{\\mathrm c}=\\dfrac3{\\sqrt7}$，$r=\\dfrac{3h}{\\sqrt7}$．\n\n(3) $r=\\dfrac{3\\times0.70}{\\sqrt7}=\\dfrac{2.1}{2.645\\cdots}=0.793\\cdots\\fallingdotseq0.79\\,\\mathrm m$．\n\n(4) $\\sin\\theta_{\\mathrm c}=\\dfrac1n$，$\\tan\\theta_{\\mathrm c}=\\dfrac{1}{\\sqrt{n^2-1}}$ より $r=\\dfrac{h}{\\sqrt{n^2-1}}$．屈折率が大きいほど臨界角が小さくなり，円は小さくなる．（$n=\\dfrac43$ で (2) にもどる．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "屈折率の大きい媒質から小さい媒質へ進む光は，入射角が臨界角 $\\sin\\theta_{\\mathrm c}=\\dfrac{n_2}{n_1}$ をこえると全反射する．"
+ },
+ "simulation": {
+  "id": "optics.refraction",
+  "preset": {
+   "n1": 1.33,
+   "n2": 1.0,
+   "theta1": 45
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "refraction-light"
+ ],
+ "laws": [
+  "refraction-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "全反射",
+  "臨界角",
+  "屈折"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

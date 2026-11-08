@@ -1,0 +1,140 @@
+{
+ "id": "MEC-SHM-202",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "鉛直ばね上の板にのせた物体が離れる条件",
+ "course": "物理",
+ "level": 3,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ばね定数 $k$ の軽いばねを鉛直に立てて下端を床に固定し，上端に質量 $M$ の板を取り付けた．板の上に質量 $m$ の小物体をのせ，つり合いの位置からさらに $a$ だけ押し下げて静かに放した．重力加速度の大きさを $g$ とし，板と小物体は鉛直方向にだけ運動するものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "つり合いの位置でのばねの縮み $d_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "小物体が板から離れずに運動するとき，その単振動の周期 $T$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "最下点で小物体が板から受ける垂直抗力の大きさ $N_1$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "小物体が板から離れないための $a$ の条件を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$a$ が (4) の条件を満たさないとき，小物体はばねが自然長になった位置で板から離れる．その理由を述べ，離れる瞬間の速さ $v$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "床に立てたばね定数 k のばねの上端に質量 M の板があり、その上に質量 m の小物体がのっている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$d_0=\\dfrac{(M+m)g}{k}$",
+    "grading": "d_0：(M+m)g/k"
+   },
+   {
+    "id": "2",
+    "tex": "$T=2\\pi\\sqrt{\\dfrac{M+m}{k}}$",
+    "grading": "T：2π sqrt((M+m)/k)"
+   },
+   {
+    "id": "3",
+    "tex": "$N_1=mg+\\dfrac{mka}{M+m}$",
+    "grading": "N_1：m g+m k a/(M+m)"
+   },
+   {
+    "id": "4",
+    "tex": "$a\\le\\dfrac{(M+m)g}{k}$"
+   },
+   {
+    "id": "5",
+    "tex": "$v=\\sqrt{\\dfrac{ka^2}{M+m}-\\dfrac{(M+m)g^2}{k}}$",
+    "grading": "v：sqrt(k a^2/(M+m)-(M+m)g^2/k)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "つり合いの位置を原点に，鉛直上向きを正として変位を $x$ とする．\n\n(1) 板と小物体を合わせた重さとばねの弾性力がつり合う：$kd_0=(M+m)g$ より $d_0=\\dfrac{(M+m)g}{k}$．\n\n(2) 一体のときの運動方程式は，変位 $x$ でばねの縮みが $d_0-x$ なので \\[(M+m)\\alpha=k(d_0-x)-(M+m)g=-kx\\] 質量 $M+m$，ばね定数 $k$ の単振動で $T=2\\pi\\sqrt{\\dfrac{M+m}{k}}$．\n\n(3) 小物体の運動方程式は $m\\alpha=N-mg$．加速度は $\\alpha=-\\dfrac{k}{M+m}x$ で，最下点 $x=-a$ では上向きに最大 $\\dfrac{ka}{M+m}$．\\[N_1=mg+\\frac{mka}{M+m}\\]\n\n(4) 一般の位置で $N=m(g+\\alpha)=m\\left(g-\\dfrac{kx}{M+m}\\right)$．$N$ は最高点 $x=a$ で最小になる．$N\\ge0$ が最高点で成り立てばよいので \\[g-\\frac{ka}{M+m}\\ge0\\quad\\Longrightarrow\\quad a\\le\\frac{(M+m)g}{k}=d_0\\] すなわち，振幅がつり合いの位置でのばねの縮み以下ならよい．\n\n(5) 一体で動いている間，$N=0$ になるのは $\\alpha=-g$ のとき，つまり $x=d_0$ のとき．このときばねの縮みは $d_0-x=0$ で自然長．ばねの力が $0$ になると板も小物体も加速度 $-g$ で，それより上では板だけがばねに引かれて加速度が $-g$ より下向きに大きくなるので，小物体は離れる．\n\n離れる瞬間の速さは，単振動のエネルギー保存（$\\dfrac12(M+m)v^2+\\dfrac12kx^2=\\dfrac12ka^2$）で $x=d_0$ として \\[v=\\sqrt{\\frac{k}{M+m}(a^2-d_0^2)}=\\sqrt{\\frac{ka^2}{M+m}-\\frac{(M+m)g^2}{k}}\\]"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "接している2物体が離れる条件は「垂直抗力 $=0$」．板の上の物体では，加速度が $-g$ になる位置（ばねが自然長）が境目．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "normal-force",
+  "equation-of-motion"
+ ],
+ "laws": [
+  "hooke-law",
+  "shm-period",
+  "newton-2nd",
+  "energy-conservation"
+ ],
+ "misconceptions": [
+  "MC-NORMAL-EQ-MG"
+ ],
+ "tags": [
+  "単振動",
+  "鉛直ばね振り子",
+  "垂直抗力",
+  "離れる条件"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

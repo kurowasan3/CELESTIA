@@ -1,0 +1,86 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  200
+ ],
+ "items": [
+  {
+   "t": "battery",
+   "from": [
+    40,
+    160
+   ],
+   "to": [
+    40,
+    60
+   ],
+   "label": "10 V",
+   "plus": "to",
+   "labelSide": 1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     40,
+     60
+    ],
+    [
+     100,
+     60
+    ]
+   ]
+  },
+  {
+   "t": "resistor",
+   "from": [
+    100,
+    60
+   ],
+   "to": [
+    200,
+    60
+   ],
+   "label": "R = 20 Ω",
+   "labelSide": -1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     200,
+     60
+    ],
+    [
+     260,
+     60
+    ],
+    [
+     260,
+     160
+    ],
+    [
+     40,
+     160
+    ]
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    80,
+    160
+   ],
+   "dir": 180,
+   "len": 26,
+   "style": "current",
+   "label": "I",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    26
+   ]
+  }
+ ]
+}

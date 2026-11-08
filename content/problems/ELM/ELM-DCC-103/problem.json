@@ -1,0 +1,167 @@
+{
+ "id": "ELM-DCC-103",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "2つの電池を含む回路（キルヒホッフの法則）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "内部抵抗の無視できる起電力 $E_1=6.0\\,\\mathrm V$，$E_2=4.0\\,\\mathrm V$ の電池と，抵抗 $R_1=2.0\\,\\Omega$，$R_2=1.0\\,\\Omega$，$R_3=2.0\\,\\Omega$ を図のようにつないだ．$R_1$ を図の上向きに流れる電流を $I_1$，$R_2$ を上向きに流れる電流を $I_2$，$R_3$ を下向きに流れる電流を $I_3$ とする．点 Q の電位を $0$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$I_1$ は何 A か．"
+     },
+     {
+      "id": "2",
+      "tex": "$I_2$ は何 A か．"
+     },
+     {
+      "id": "3",
+      "tex": "$I_3$ は何 A か．"
+     },
+     {
+      "id": "4",
+      "tex": "点 P の電位は何 V か．"
+     },
+     {
+      "id": "5",
+      "tex": "$R_3$ での消費電力は何 W か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "上の導線の点 P と下の導線の点 Q の間に3本の枝が並ぶ。左の枝は E₁ = 6.0 V（正極が上）と R₁ = 2.0 Ω、中央の枝は R₃ = 2.0 Ω、右の枝は E₂ = 4.0 V（正極が上）と R₂ = 1.0 Ω",
+   "caption": ""
+  },
+  {
+   "id": "a-currents",
+   "role": "answer",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "a-currents.svg",
+   "alt": "点 P に左から 5/4 A、右から 1/2 A が流れこみ、R₃ を下向きに 7/4 A が流れ出る",
+   "caption": "分岐点 P で，流れこむ電流の和と流れ出る電流は等しい",
+   "physics": {
+    "junctions": [
+     {
+      "in": [
+       "current:I1",
+       "current:I2"
+      ],
+      "out": [
+       "current:I3"
+      ],
+      "values": {
+       "current:I1": 1.25,
+       "current:I2": 0.5,
+       "current:I3": 1.75
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I_1=\\dfrac54\\,\\mathrm A=1.25\\,\\mathrm A$",
+    "grading": "I_1：5/4 [A]"
+   },
+   {
+    "id": "2",
+    "tex": "$I_2=0.50\\,\\mathrm A$",
+    "grading": "I_2：1/2 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "$I_3=\\dfrac74\\,\\mathrm A=1.75\\,\\mathrm A$",
+    "grading": "I_3：7/4 [A]"
+   },
+   {
+    "id": "4",
+    "tex": "$3.5\\,\\mathrm V$",
+    "grading": "3.5 [V]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac{49}8\\,\\mathrm W\\fallingdotseq6.1\\,\\mathrm W$",
+    "grading": "49/8 [W]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "点 P の電位を $V$ とおくと，各枝の電流は（電池の正極側の電位は負極側より $E$ だけ高い）\\[I_1=\\frac{E_1-V}{R_1},\\quad I_2=\\frac{E_2-V}{R_2},\\quad I_3=\\frac{V}{R_3}\\]P でのキルヒホッフの第1法則 $I_1+I_2=I_3$ に代入して \\[\\frac{6.0-V}{2.0}+\\frac{4.0-V}{1.0}=\\frac V{2.0}\\quad\\Longrightarrow\\quad 7.0=2V,\\quad V=3.5\\,\\mathrm V\\]\n\n(1) $I_1=\\dfrac{6.0-3.5}{2.0}=1.25\\,\\mathrm A$．(2) $I_2=\\dfrac{4.0-3.5}{1.0}=0.50\\,\\mathrm A$．(3) $I_3=\\dfrac{3.5}{2.0}=1.75\\,\\mathrm A$（$=I_1+I_2$）．(4) $3.5\\,\\mathrm V$．\n\n(5) $R_3I_3^2=2.0\\times\\left(\\dfrac74\\right)^2=\\dfrac{49}8\\,\\mathrm W\\fallingdotseq6.1\\,\\mathrm W$．\n\n確かめ（エネルギー）：電池の供給する電力 $E_1I_1+E_2I_2=7.5+2.0=9.5\\,\\mathrm W$ と，抵抗の消費電力の和 $3.125+0.25+6.125=9.5\\,\\mathrm W$ が一致する．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-currents"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "未知の電位を1つおき，各枝の電流を電位で表してから分岐点で電流の和をとる（キルヒホッフの法則を連立するのと同じ）．"
+ },
+ "concepts": [
+  "series-parallel",
+  "current-conservation",
+  "ohm-law-use"
+ ],
+ "laws": [
+  "kirchhoff-1st",
+  "kirchhoff-2nd",
+  "ohm-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "キルヒホッフの法則",
+  "直流回路",
+  "電位"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

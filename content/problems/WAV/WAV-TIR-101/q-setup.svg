@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 215" width="360" height="215" font-family="'Times New Roman', serif">
+<polygon points="20,80 340,80 340,210 20,210" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="20" y1="80" x2="340" y2="80" stroke="currentColor" stroke-width="2" data-phys="boundary"/>
+<circle cx="180" cy="180" r="3" fill="currentColor"/>
+<text x="194" y="190" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<line x1="180" y1="180" x2="66.61" y2="80" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="180" y1="180" x2="293.39" y2="80" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="180" y1="80" x2="180" y2="180" stroke="currentColor" stroke-width="1.2"/>
+<text x="170" y="135" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">h</text>
+<path d="M205.5,157.51 A34,34 0 0 0 180,146" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="198.93" y="138.07" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θc</text>
+<line x1="180" y1="60" x2="293.39" y2="60" stroke="currentColor" stroke-width="1.2"/>
+<line x1="293.39" y1="52" x2="293.39" y2="68" stroke="currentColor" stroke-width="1.2"/>
+<text x="236.69" y="48" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">r</text>
+<text x="45" y="50" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">空気</text>
+<text x="45" y="195" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">水</text>
+</svg>

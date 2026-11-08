@@ -1,0 +1,141 @@
+{
+ "id": "MSY-FRP-101",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "あらい机の上をすべって飛び出す物体の落下点から摩擦係数を求める",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "experiment",
+  "synthesis"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "床からの高さ $H$ の水平な机の上で，質量 $m$ の小物体に机の端に向かう速さ $v_0$ を与えた．小物体は机の上のあらい部分を距離 $L$ だけすべったあと，机の端から水平に飛び出して床に落ちた．小物体と机の間の動摩擦係数を $\\mu$，重力加速度の大きさを $g$ とし，空気抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "机の端から飛び出すときの速さ $v_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "机の端から飛び出してから床に落ちるまでの時間 $t$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "机の端の真下の点から落下点までの水平距離 $D$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$v_0$，$L$，$H$ を変えずに，$D$ を測って $\\mu$ を求めたい．$\\mu$ を $v_0$，$L$，$H$，$D$，$g$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$v_0=3.0\\,\\mathrm{m/s}$，$L=0.50\\,\\mathrm m$，$H=0.80\\,\\mathrm m$，$g=9.8\\,\\mathrm{m/s^2}$ で，$D=0.80\\,\\mathrm m$ であった．$\\mu$ の値を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "床からの高さ H の机の上で、小物体が速さ v0 で机の端に向かう。机の端までのあらい部分の長さは L。端から飛び出した小物体は、端の真下から水平距離 D の点に落ちる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_1=\\sqrt{v_0^2-2\\mu gL}$",
+    "grading": "v_1：sqrt(v_0^2-2μ g L)"
+   },
+   {
+    "id": "2",
+    "tex": "$t=\\sqrt{\\dfrac{2H}{g}}$",
+    "grading": "t：sqrt(2H/g)"
+   },
+   {
+    "id": "3",
+    "tex": "$D=\\sqrt{\\dfrac{2H(v_0^2-2\\mu gL)}{g}}$",
+    "grading": "D：sqrt(2H(v_0^2-2μ g L)/g)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\mu=\\dfrac{v_0^2}{2gL}-\\dfrac{D^2}{4HL}$",
+    "grading": "μ：v_0^2/(2g L)-D^2/(4H L)"
+   },
+   {
+    "id": "5",
+    "tex": "$\\mu\\approx0.52$",
+    "grading": "μ：0.52"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 動摩擦力 $\\mu mg$ が距離 $L$ の間に負の仕事 $-\\mu mgL$ をする．仕事と運動エネルギーの関係より \\[\\frac12mv_1^2-\\frac12mv_0^2=-\\mu mgL\\quad\\Longrightarrow\\quad v_1=\\sqrt{v_0^2-2\\mu gL}\\]\n\n(2) 水平に飛び出すので，鉛直方向は初速 $0$ の自由落下：$H=\\dfrac12gt^2$ より $t=\\sqrt{\\dfrac{2H}{g}}$．\n\n(3) 水平方向は速さ $v_1$ の等速度運動：\\[D=v_1t=\\sqrt{\\frac{2H(v_0^2-2\\mu gL)}{g}}\\]\n\n(4) $D^2=\\dfrac{2H}{g}(v_0^2-2\\mu gL)$ を $\\mu$ について解くと \\[\\mu=\\frac{v_0^2}{2gL}-\\frac{D^2}{4HL}\\]\n\n(5) \\[\\frac{v_0^2}{2gL}=\\frac{3.0^2}{2\\times9.8\\times0.50}=\\frac{9.0}{9.8}\\approx0.918,\\qquad\\frac{D^2}{4HL}=\\frac{0.80^2}{4\\times0.80\\times0.50}=0.40\\] よって $\\mu\\approx0.918-0.40\\approx0.52$．（このとき $v_1\\approx2.0\\,\\mathrm{m/s}$，$t\\approx0.40\\,\\mathrm s$．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "すべる区間は「仕事と運動エネルギー」，飛び出した後は水平投射．落下距離から飛び出す速さがわかり，摩擦の仕事が逆算できる．"
+ },
+ "concepts": [
+  "work-energy",
+  "projectile-motion"
+ ],
+ "laws": [
+  "work-energy-theorem",
+  "friction-law",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [
+  "MC-PROJ-VX-CHANGES"
+ ],
+ "tags": [
+  "動摩擦",
+  "仕事と運動エネルギー",
+  "水平投射",
+  "融合",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

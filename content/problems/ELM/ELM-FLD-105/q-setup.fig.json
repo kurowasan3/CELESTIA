@@ -1,0 +1,84 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  230
+ ],
+ "items": [
+  {
+   "t": "circle",
+   "at": [
+    150,
+    115
+   ],
+   "r": 80,
+   "style": "solid"
+  },
+  {
+   "t": "circle",
+   "at": [
+    150,
+    115
+   ],
+   "r": 77,
+   "style": "solid"
+  },
+  {
+   "t": "circle",
+   "at": [
+    150,
+    115
+   ],
+   "r": 11,
+   "style": "fill"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    115
+   ],
+   "text": "+Q",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "arrow",
+   "from": [
+    150,
+    115
+   ],
+   "dir": 30,
+   "len": 77,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    196,
+    76
+   ],
+   "text": "R"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    140
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    252,
+    210
+   ],
+   "text": "導体球殻",
+   "italic": false,
+   "size": 13
+  }
+ ]
+}

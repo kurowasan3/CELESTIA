@@ -1,0 +1,115 @@
+{
+ "id": "MEC-MOM-201",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "壁ではね返るボールが受ける力積",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $0.15\\,\\mathrm{kg}$ のボールが，なめらかな鉛直の壁に垂直に速さ $20\\,\\mathrm{m/s}$ で当たり，同じ直線上を逆向きに速さ $15\\,\\mathrm{m/s}$ ではね返った．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "ボールが壁から受けた力積の大きさ $I$ は何 $\\mathrm{N\\cdot s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "ボールと壁が接触していた時間が $1.0\\times10^{-2}\\,\\mathrm{s}$ であったとすると，ボールが壁から受けた平均の力の大きさ $\\bar F$ は何 $\\mathrm N$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "同じ質量の粘土の球が同じ速さ $20\\,\\mathrm{m/s}$ で壁に当たり，はね返らずに壁にはりついた．粘土の球が壁から受けた力積の大きさ $I_2$ は何 $\\mathrm{N\\cdot s}$ か．はね返る場合と比べて大きいか小さいか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "壁に向かって速さ 20 m/s で進むボール（衝突前）と、逆向きに速さ 15 m/s ではね返るボール（衝突後）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I=5.25\\,\\mathrm{N\\cdot s}$",
+    "grading": "I：5.25 [N·s]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\bar F=525\\,\\mathrm N$",
+    "grading": "525 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "$I_2=3.0\\,\\mathrm{N\\cdot s}$．はね返る場合（$5.25\\,\\mathrm{N\\cdot s}$）より小さい",
+    "grading": "3 [N·s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "壁から離れる向きを正とする．力積は運動量の変化（後の運動量 − 前の運動量）に等しい．\n\n(1) 衝突前の速度は $-20\\,\\mathrm{m/s}$，衝突後は $+15\\,\\mathrm{m/s}$．\\[I=0.15\\times15-0.15\\times(-20)=0.15\\times35=5.25\\,\\mathrm{N\\cdot s}\\] 速さの差 $15-20$ ではなく，速度の差 $15-(-20)=35$ を使う．\n\n(2) $\\bar F\\Delta t=I$ より \\[\\bar F=\\frac{5.25}{1.0\\times10^{-2}}=525\\,\\mathrm N\\]\n\n(3) 衝突後の速度は $0$．\\[I_2=0-0.15\\times(-20)=3.0\\,\\mathrm{N\\cdot s}\\] はね返るボールは「止める」力積に加えて「逆向きに動かす」力積も受けるので，壁から受ける力積はより大きい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "力積＝運動量の変化．向きのある量なので，はね返りでは速度の符号が変わることに注意する．"
+ },
+ "concepts": [
+  "momentum-conservation"
+ ],
+ "laws": [
+  "impulse-momentum"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動量",
+  "力積",
+  "平均の力"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

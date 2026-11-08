@@ -1,0 +1,129 @@
+{
+ "id": "THM-FST-102",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "P–V 図を読んで定積変化と定圧変化の熱量を求める",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "一定量の単原子分子理想気体の状態を，図の $P$-$V$ 図のように A→B（定積変化），B→C（定圧変化）と変化させた．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "状態 C の絶対温度は，状態 A の絶対温度の何倍か．"
+     },
+     {
+      "id": "2",
+      "tex": "A→B→C の間に気体が外にした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "A→C の間の気体の内部エネルギーの変化 $\\Delta U$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "A→B，B→C の各過程で気体が吸収した熱量 $Q_{\\mathrm{AB}}$，$Q_{\\mathrm{BC}}$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "P-V 図。A（V=2.0×10⁻³ m³，P=1.0×10⁵ Pa）から体積一定で B（2.0×10⁻³ m³，3.0×10⁵ Pa）へ，B から圧力一定で C（5.0×10⁻³ m³，3.0×10⁵ Pa）へ変化する",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$7.5$ 倍",
+    "grading": "7.5倍"
+   },
+   {
+    "id": "2",
+    "tex": "$W=9.0\\times10^2\\,\\mathrm J$",
+    "grading": "W：900 [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$\\Delta U=1.95\\times10^3\\,\\mathrm J$",
+    "grading": "ΔU：1950 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$Q_{\\mathrm{AB}}=6.0\\times10^2\\,\\mathrm J$，$Q_{\\mathrm{BC}}=2.25\\times10^3\\,\\mathrm J$",
+    "grading": "Q_{AB}：600 [J] ; Q_{BC}：2250 [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "図より $P_{\\mathrm A}V_{\\mathrm A}=1.0\\times10^5\\times2.0\\times10^{-3}=200\\,\\mathrm J$，$P_{\\mathrm B}V_{\\mathrm B}=600\\,\\mathrm J$，$P_{\\mathrm C}V_{\\mathrm C}=3.0\\times10^5\\times5.0\\times10^{-3}=1500\\,\\mathrm J$．\n\n(1) $T\\propto PV$ なので $\\dfrac{1500}{200}=7.5$ 倍．\n\n(2) A→B は体積一定で仕事 $0$．B→C は $W=P\\Delta V=3.0\\times10^5\\times3.0\\times10^{-3}=900\\,\\mathrm J$（グラフの下の長方形の面積）．\n\n(3) $\\Delta U=\\dfrac32nR\\Delta T=\\dfrac32(P_{\\mathrm C}V_{\\mathrm C}-P_{\\mathrm A}V_{\\mathrm A})=\\dfrac32\\times1300=1950\\,\\mathrm J$．\n\n(4) A→B：$Q_{\\mathrm{AB}}=\\Delta U_{\\mathrm{AB}}=\\dfrac32(600-200)=600\\,\\mathrm J$．\nB→C：$\\Delta U_{\\mathrm{BC}}=\\dfrac32(1500-600)=1350\\,\\mathrm J$，$Q_{\\mathrm{BC}}=1350+900=2250\\,\\mathrm J$（$=\\dfrac52P\\Delta V$）．\n確かめ：$Q_{\\mathrm{AB}}+Q_{\\mathrm{BC}}=2850\\,\\mathrm J=\\Delta U+W$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$nRT=PV$ なので，温度・内部エネルギーは $P$-$V$ 図の座標の積 $PV$ から読める．仕事はグラフの下の面積．"
+ },
+ "concepts": [
+  "first-law",
+  "ideal-gas"
+ ],
+ "laws": [
+  "first-law",
+  "internal-energy",
+  "ideal-gas-law",
+  "molar-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "P-V図",
+  "定積変化",
+  "定圧変化",
+  "熱力学第1法則"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

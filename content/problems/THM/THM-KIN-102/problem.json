@@ -1,0 +1,112 @@
+{
+ "id": "THM-KIN-102",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "気体の圧力と密度から分子の速さを求める",
+ "course": "物理",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "体積 $V$ の容器に，質量 $m$ の分子 $N$ 個からなる理想気体が入っている．分子運動論によると，気体の圧力は $P=\\dfrac{Nm\\overline{v^2}}{3V}$ で表される（$\\overline{v^2}$ は分子の速さの2乗の平均）．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "気体の密度を $\\rho$ とするとき，$\\overline{v^2}$ を $P$ と $\\rho$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "圧力 $1.0\\times10^5\\,\\mathrm{Pa}$，密度 $1.2\\,\\mathrm{kg/m^3}$ の気体の二乗平均速度 $\\sqrt{\\overline{v^2}}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2)の気体を，体積を一定に保ったまま加熱し，絶対温度を $4$ 倍にした．このときの $\\sqrt{\\overline{v^2}}$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\overline{v^2}=\\dfrac{3P}{\\rho}$",
+    "grading": "3P/ρ"
+   },
+   {
+    "id": "2",
+    "tex": "$5.0\\times10^2\\,\\mathrm{m/s}$",
+    "grading": "500 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$1.0\\times10^3\\,\\mathrm{m/s}$",
+    "grading": "1000 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 密度は $\\rho=\\dfrac{Nm}{V}$ なので $P=\\dfrac13\\rho\\overline{v^2}$，よって $\\overline{v^2}=\\dfrac{3P}{\\rho}$．\n\n(2) $\\overline{v^2}=\\dfrac{3\\times1.0\\times10^5}{1.2}=2.5\\times10^5\\,\\mathrm{m^2/s^2}$ より $\\sqrt{\\overline{v^2}}=5.0\\times10^2\\,\\mathrm{m/s}$．\n\n(3) 体積一定なので密度は変わらず，圧力は温度に比例して $4$ 倍．$\\overline{v^2}$ も $4$ 倍で，$\\sqrt{\\overline{v^2}}$ は $2$ 倍の $1.0\\times10^3\\,\\mathrm{m/s}$．（$\\sqrt{\\overline{v^2}}\\propto\\sqrt T$ と考えてもよい．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$P=\\dfrac13\\rho\\overline{v^2}$．圧力と密度という目に見える量から，分子の速さがわかる．"
+ },
+ "simulation": {
+  "id": "thermo.molecules",
+  "preset": {
+   "N": 120,
+   "T": 300,
+   "L": 5
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "ideal-gas"
+ ],
+ "laws": [
+  "kinetic-pressure",
+  "kinetic-temperature"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "気体分子運動論",
+  "圧力",
+  "二乗平均速度"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

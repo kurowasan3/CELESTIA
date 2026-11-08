@@ -1,0 +1,92 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  165
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    130
+   ],
+   "to": [
+    360,
+    130
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "circle",
+   "at": [
+    55,
+    112
+   ],
+   "r": 13,
+   "label": "S"
+  },
+  {
+   "t": "circle",
+   "at": [
+    92,
+    112
+   ],
+   "r": 13,
+   "label": "O"
+  },
+  {
+   "t": "block",
+   "at": [
+    310,
+    130
+   ],
+   "w": 16,
+   "h": 74,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    310,
+    145
+   ],
+   "text": "R",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "arrow",
+   "from": [
+    298,
+    80
+   ],
+   "dir": 180,
+   "len": 48,
+   "style": "velocity",
+   "phys": "vel:R",
+   "label": "u"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140,
+    45
+   ],
+   "dir": 0,
+   "len": 90,
+   "style": "thin",
+   "phys": "wind"
+  },
+  {
+   "t": "text",
+   "at": [
+    185,
+    28
+   ],
+   "text": "風（速さ w）",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

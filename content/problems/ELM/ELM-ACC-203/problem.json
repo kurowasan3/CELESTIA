@@ -1,0 +1,152 @@
+{
+ "id": "ELM-ACC-203",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "RLC 直列回路のインピーダンス・位相・消費電力（数値）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "抵抗値 $R=40\\ \\Omega$ の抵抗，自己インダクタンス $L=0.10\\ \\mathrm{H}$ のコイル，電気容量 $C=100\\ \\mu\\mathrm{F}$ のコンデンサーを直列につなぎ，電圧 $v=V_0\\sin\\omega t$（$V_0=100\\ \\mathrm{V}$，$\\omega=500\\ \\mathrm{rad/s}$）の交流電源につないだ．十分に時間がたった後を考える．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "回路のインピーダンス $Z$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "電流の最大値 $I_0$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "電流の位相は電源電圧に比べて進んでいるか，遅れているか．"
+     },
+     {
+      "id": "4",
+      "tex": "電流と電源電圧の位相差を $\\phi$ とするとき，$\\tan\\phi$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "回路で消費される電力の時間平均 $\\overline P$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "コイルの両端の電圧の最大値 $V_{L0}$ を求めよ．"
+     },
+     {
+      "id": "7",
+      "tex": "電流の最大値が最も大きくなる角周波数 $\\omega_0$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Z=50\\ \\Omega$",
+    "grading": "Z：50 [Ω]"
+   },
+   {
+    "id": "2",
+    "tex": "$I_0=2.0\\ \\mathrm{A}$",
+    "grading": "I_0：2.0 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "遅れている"
+   },
+   {
+    "id": "4",
+    "tex": "$\\tan\\phi=\\dfrac34$",
+    "grading": "3/4"
+   },
+   {
+    "id": "5",
+    "tex": "$\\overline P=80\\ \\mathrm{W}$",
+    "grading": "P：80 [W]"
+   },
+   {
+    "id": "6",
+    "tex": "$V_{L0}=100\\ \\mathrm{V}$",
+    "grading": "V_L0：100 [V]"
+   },
+   {
+    "id": "7",
+    "tex": "$\\omega_0=100\\sqrt{10}\\ \\mathrm{rad/s}\\ (\\fallingdotseq3.2\\times10^2\\ \\mathrm{rad/s})$",
+    "grading": "ω_0：100sqrt(10) [rad/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $X_L=\\omega L=50\\ \\Omega$，$X_C=\\dfrac1{\\omega C}=\\dfrac1{500\\times1.0\\times10^{-4}}=20\\ \\Omega$．$Z=\\sqrt{R^2+(X_L-X_C)^2}=\\sqrt{40^2+30^2}=50\\ \\Omega$．\n\n(2) $I_0=\\dfrac{V_0}Z=\\dfrac{100}{50}=2.0\\ \\mathrm{A}$．\n\n(3)(4) 回転ベクトル（フェーザー）で，電流の向きを基準に $R$ の電圧 $RI_0=80\\ \\mathrm{V}$ を横に，コイルの電圧 $X_LI_0=100\\ \\mathrm{V}$ を $\\dfrac\\pi2$ 進めて，コンデンサーの電圧 $X_CI_0=40\\ \\mathrm{V}$ を $\\dfrac\\pi2$ 遅らせて描く．合成は横 $80$，縦 $60$ で大きさ $100\\ \\mathrm{V}=V_0$．$X_L>X_C$ なので電源電圧は電流より進む，つまり電流は\\textbf{遅れる}．$\\tan\\phi=\\dfrac{X_L-X_C}{R}=\\dfrac{30}{40}=\\dfrac34$．\n\n(5) 電力を消費するのは抵抗だけ：$\\overline P=\\dfrac12RI_0^2=\\dfrac12\\times40\\times2.0^2=80\\ \\mathrm{W}$．（$\\dfrac12V_0I_0\\cos\\phi=\\dfrac12\\times100\\times2.0\\times\\dfrac45=80\\ \\mathrm{W}$ と一致．）\n\n(6) $V_{L0}=X_LI_0=50\\times2.0=100\\ \\mathrm{V}$．電源電圧の最大値と同じ大きさになる．各素子の電圧の最大値は，位相がずれているので単純には足せない（$80+100+40\\ne100$）．\n\n(7) $X_L=X_C$ のとき $Z=R$ で最小：$\\omega_0=\\dfrac1{\\sqrt{LC}}=\\dfrac1{\\sqrt{0.10\\times1.0\\times10^{-4}}}=100\\sqrt{10}\\fallingdotseq3.2\\times10^2\\ \\mathrm{rad/s}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電圧は位相ごと（回転ベクトルで）足す．$X_L>X_C$ なら誘導性で電流が遅れ，電力を消費するのは抵抗だけ．"
+ },
+ "simulation": {
+  "id": "elm.rlc",
+  "preset": {
+   "V0": 10,
+   "f": 0.8,
+   "R": 4,
+   "L": 1,
+   "C": 0.1
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "ac-circuit",
+  "electric-power"
+ ],
+ "laws": [
+  "ac-reactance",
+  "resonance-frequency",
+  "rms-value"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流",
+  "RLC回路",
+  "インピーダンス",
+  "位相",
+  "力率"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

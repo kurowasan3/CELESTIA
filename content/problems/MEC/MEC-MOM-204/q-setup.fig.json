@@ -1,0 +1,86 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  240,
+  210
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    190
+   ],
+   "to": [
+    220,
+    190
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "ball",
+   "at": [
+    100,
+    40
+   ],
+   "r": 10,
+   "label": "m"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    40
+   ],
+   "to": [
+    150,
+    190
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    140,
+    40
+   ],
+   "to": [
+    160,
+    40
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    164,
+    115
+   ],
+   "text": "h",
+   "italic": true,
+   "size": 15,
+   "anchor": "start"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    100,
+    62
+   ],
+   "dir": 270,
+   "len": 40,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    100,
+    120
+   ],
+   "text": "静かに放す",
+   "italic": false,
+   "size": 11,
+   "anchor": "middle"
+  }
+ ]
+}

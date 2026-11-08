@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 250" width="380" height="250" font-family="'Times New Roman', serif">
+<line x1="40" y1="200" x2="360" y2="200" stroke="currentColor" stroke-width="1.2"/>
+<line x1="70" y1="230" x2="70" y2="30" stroke="currentColor" stroke-width="1.2"/>
+<text x="352" y="214" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">x</text>
+<text x="58" y="36" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">y</text>
+<text x="58" y="212" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<circle cx="70" cy="200" r="5" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-ink" data-phys="field:E" data-dir="90" data-len="60">
+<line x1="300" y1="160" x2="300" y2="110" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="300,100 304.66,110 295.34,110" fill="currentColor"/>
+<text x="300" y="88" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">E</text>
+</g>
+<text x="130" y="60" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="175" y="60" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="220" y="60" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="130" y="105" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="175" y="105" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="220" y="105" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="130" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="175" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="220" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="200" y="30" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">磁場 B（紙面の裏から表）</text>
+</svg>

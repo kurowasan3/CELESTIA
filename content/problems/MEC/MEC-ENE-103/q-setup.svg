@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" width="360" height="200" font-family="'Times New Roman', serif">
+<line x1="30" y1="150" x2="330" y2="150" stroke="currentColor" stroke-width="2"/>
+<polygon points="22,40 30,40 30,158 22,158" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="330,40 338,40 338,158 330,158" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="30,132 34.8,132 35.89,139 38.06,125 40.23,139 42.4,125 44.57,139 46.74,125 48.91,139 51.09,125 53.26,139 55.43,125 57.6,139 59.77,125 61.94,139 64.11,125 65.2,132 70,132" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<g transform="translate(88,150) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-18" y="-36" width="36" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<polygon points="170,150 250,150 250,158 170,158" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="170" y1="150" x2="250" y2="150" stroke="currentColor" stroke-width="2.4"/>
+<text x="170" y="170" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<text x="250" y="170" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">Q</text>
+<text x="210" y="138" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.30 m</text>
+<polyline points="270,132 277.2,132 278.62,139 281.48,125 284.32,139 287.18,125 290.02,139 292.88,125 295.73,139 298.57,125 301.43,139 304.27,125 307.12,139 309.98,125 312.82,139 315.68,125 318.52,139 321.38,125 322.8,132 330,132" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<text x="50" y="112" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">ばね1</text>
+<text x="300" y="112" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">ばね2</text>
+<text x="88" y="186" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.50 kg</text>
+</svg>

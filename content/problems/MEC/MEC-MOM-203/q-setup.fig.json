@@ -1,0 +1,89 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  190
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    170
+   ],
+   "to": [
+    320,
+    170
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    170,
+    158
+   ],
+   "w": 200,
+   "h": 24,
+   "label": "M",
+   "phys": "body:cart"
+  },
+  {
+   "t": "ball",
+   "at": [
+    100,
+    164
+   ],
+   "r": 6,
+   "label": ""
+  },
+  {
+   "t": "ball",
+   "at": [
+    240,
+    164
+   ],
+   "r": 6,
+   "label": ""
+  },
+  {
+   "t": "block",
+   "at": [
+    86,
+    134
+   ],
+   "w": 22,
+   "h": 48,
+   "label": "m",
+   "phys": "body:person"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    106,
+    72
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "velocity",
+   "phys": "velocity:u",
+   "label": "u",
+   "labelPos": "end",
+   "labelOffset": [
+    8,
+    0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    190,
+    54
+   ],
+   "text": "台車に対する速さ",
+   "italic": false,
+   "size": 11,
+   "anchor": "middle"
+  }
+ ]
+}

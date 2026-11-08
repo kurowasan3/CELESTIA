@@ -1,0 +1,139 @@
+{
+ "id": "THM-KIN-104",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "平面上を動く分子の気体（2次元の分子運動論とモル比熱）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "平面上の一辺 $L$ の正方形の領域（面積 $A=L^2$）の中を，質量 $m$ の分子 $N$ 個が平面内だけで運動している（2次元の気体）．分子は領域の縁（壁）と弾性衝突し，分子どうしは衝突しないものとする．分子の運動はどの向きにも偏らない．壁の単位長さあたりに分子が及ぼす平均の力を $f$ とし，これをこの気体の「圧力」とよぶ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "速度の $x$ 成分が $v_x$ の1個の分子が，$x$ 軸に垂直な壁 X（長さ $L$）に及ぼす平均の力の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "分子の速さの2乗の平均を $\\overline{v^2}=w$ とする．$f$ を $N$，$m$，$w$，$A$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "この気体が $fA=NkT$（$k$ はボルツマン定数，$T$ は絶対温度）を満たすとき，分子1個の平均運動エネルギーを $k$，$T$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "この気体 $1\\,\\mathrm{mol}$ の，面積一定でのモル比熱 $C_A$ を，気体定数 $R$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "この気体 $1\\,\\mathrm{mol}$ の，$f$ 一定でのモル比熱 $C_f$ を $R$ で表せ．また $\\dfrac{C_f}{C_A}$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "一辺 L の正方形の領域の中を分子が平面内で運動している。1つの分子の速度 v と，その x 成分 vₓ（右の壁 X に垂直な向き）を示す",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{mv_x^2}{L}$",
+    "grading": "m v_x^2/L"
+   },
+   {
+    "id": "2",
+    "tex": "$f=\\dfrac{Nmw}{2A}$",
+    "grading": "f：N m w/(2A)"
+   },
+   {
+    "id": "3",
+    "tex": "$kT$",
+    "grading": "k T"
+   },
+   {
+    "id": "4",
+    "tex": "$C_A=R$",
+    "grading": "C_A：R"
+   },
+   {
+    "id": "5",
+    "tex": "$C_f=2R$，$\\dfrac{C_f}{C_A}=2$",
+    "grading": "C_f：2R ; 比：2"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　1回の衝突で壁が受ける力積は $2mv_x$．同じ壁に当たる間隔は $\\dfrac{2L}{v_x}$ なので，平均の力は $2mv_x\\cdot\\dfrac{v_x}{2L}=\\dfrac{mv_x^2}{L}$．\n\n\\textbf{(2)}　$N$ 個で $\\dfrac{Nm\\overline{v_x^2}}{L}$．平面内では $\\overline{v^2}=\\overline{v_x^2}+\\overline{v_y^2}=2\\overline{v_x^2}$（3次元の $\\dfrac13$ ではなく $\\dfrac12$）．長さ $L$ で割って \\[f=\\frac{Nm\\overline{v^2}}{2L^2}=\\frac{Nmw}{2A}\\]\n\n\\textbf{(3)}　$fA=\\dfrac{Nm\\overline{v^2}}{2}=N\\cdot\\dfrac12m\\overline{v^2}$．これが $NkT$ に等しいので $\\dfrac12m\\overline{v^2}=kT$（自由度 $2$ なので，3次元の $\\dfrac32kT$ が $\\dfrac22kT$ になる）．\n\n\\textbf{(4)}　$1\\,\\mathrm{mol}$ の内部エネルギーは $U=N_{\\mathrm A}kT=RT$．面積一定では仕事をしないので $Q=\\Delta U=R\\Delta T$，$C_A=R$．\n\n\\textbf{(5)}　$f$ 一定で面積が $\\Delta A$ 増えると，気体がする仕事は $f\\Delta A=R\\Delta T$（$fA=RT$ より）．$Q=\\Delta U+W=2R\\Delta T$ なので $C_f=2R$，$\\dfrac{C_f}{C_A}=2$．（3次元の単原子分子では $\\dfrac{5/2}{3/2}=\\dfrac53$．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "3次元と同じ手順（力積 × 衝突回数 → 平均の力）．違いは $\\overline{v_x^2}=\\dfrac12\\overline{v^2}$ だけ．仕事は「圧力 × 面積の増加」．"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "first-law"
+ ],
+ "laws": [
+  "kinetic-pressure",
+  "kinetic-temperature",
+  "impulse-momentum",
+  "first-law",
+  "molar-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "気体分子運動論",
+  "2次元",
+  "モル比熱",
+  "比熱比"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

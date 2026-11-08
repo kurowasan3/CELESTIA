@@ -1,0 +1,119 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  320,
+  170
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    270,
+    25
+   ],
+   "to": [
+    270,
+    150
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     280,
+     25
+    ],
+    [
+     270,
+     25
+    ],
+    [
+     270,
+     150
+    ],
+    [
+     280,
+     150
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    60
+   ],
+   "text": "衝突前",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    120
+   ],
+   "text": "衝突後",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "ball",
+   "at": [
+    240,
+    60
+   ],
+   "r": 11,
+   "label": ""
+  },
+  {
+   "t": "arrow",
+   "from": [
+    165,
+    60
+   ],
+   "dir": 0,
+   "len": 60,
+   "style": "velocity",
+   "phys": "velocity:v1",
+   "label": "20 m/s",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -26
+   ],
+   "italic": false
+  },
+  {
+   "t": "ball",
+   "at": [
+    240,
+    120
+   ],
+   "r": 11,
+   "label": ""
+  },
+  {
+   "t": "arrow",
+   "from": [
+    225,
+    120
+   ],
+   "dir": 180,
+   "len": 50,
+   "style": "velocity",
+   "phys": "velocity:v2",
+   "label": "15 m/s",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    26
+   ],
+   "italic": false
+  }
+ ]
+}

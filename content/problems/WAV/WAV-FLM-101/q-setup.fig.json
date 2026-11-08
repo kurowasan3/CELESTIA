@@ -1,0 +1,185 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  225
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     140
+    ],
+    [
+     340,
+     140
+    ],
+    [
+     340,
+     220
+    ],
+    [
+     20,
+     220
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    100
+   ],
+   "to": [
+    340,
+    100
+   ],
+   "style": "ground",
+   "phys": "boundary"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    140
+   ],
+   "to": [
+    340,
+    140
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    120.0,
+    25
+   ],
+   "to": [
+    120.0,
+    140
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    51.06,
+    42.15
+   ],
+   "dir": 320.0,
+   "len": 90.0,
+   "style": "current",
+   "phys": "ray:in"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    120.0,
+    100.0
+   ],
+   "dir": 303.72,
+   "len": 48.09,
+   "style": "current",
+   "phys": "ray:out"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    120.0,
+    100.0
+   ],
+   "dir": 40.0,
+   "len": 80,
+   "style": "current",
+   "phys": "ray:r1"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    146.69,
+    140.0
+   ],
+   "dir": 56.28,
+   "len": 48.09,
+   "style": "current",
+   "phys": "ray:r2-film"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    173.39,
+    100.0
+   ],
+   "dir": 40.0,
+   "len": 80,
+   "style": "current",
+   "phys": "ray:r2"
+  },
+  {
+   "t": "arc",
+   "at": [
+    120.0,
+    100.0
+   ],
+   "r": 30,
+   "from": 90,
+   "to": 140.0,
+   "label": "θ",
+   "labelGap": 12
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    100
+   ],
+   "to": [
+    40,
+    140
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    30,
+    120
+   ],
+   "text": "d"
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    60
+   ],
+   "text": "空気",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    280,
+    120
+   ],
+   "text": "薄膜（屈折率 n）",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    185
+   ],
+   "text": "ガラス（屈折率 1.50）",
+   "italic": false,
+   "size": 11
+  }
+ ]
+}

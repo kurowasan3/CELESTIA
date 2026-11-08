@@ -1,0 +1,127 @@
+{
+ "id": "ELM-CAP-102",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "直列に充電した2つのコンデンサーを並列につなぎかえる（電荷保存とエネルギーの損失）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "calc",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電気容量 $C_1=2.0\\,\\mu\\mathrm F$，$C_2=3.0\\,\\mu\\mathrm F$ の，はじめ電荷をもたないコンデンサー $\\mathrm C_1$，$\\mathrm C_2$ を，図のように起電力 $10\\,\\mathrm V$ の電池に直列につなぎ，十分に時間がたった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\mathrm C_1$ にたまった電気量 $Q$ は何 C か．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\mathrm C_1$，$\\mathrm C_2$ の極板間の電圧 $V_1$，$V_2$ はそれぞれ何 V か．"
+     },
+     {
+      "id": "3",
+      "tex": "次に，2つのコンデンサーを回路から外し，正に帯電した極板どうし，負に帯電した極板どうしをつないで並列にした．十分に時間がたったときの電圧 $V$ は何 V か．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) のつなぎかえで失われた静電エネルギー（導線で発生したジュール熱）は何 J か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "起電力 10 V の電池に、C₁ = 2.0 μF と C₂ = 3.0 μF のコンデンサーを直列につないだ回路",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Q=1.2\\times10^{-5}\\,\\mathrm C$",
+    "grading": "Q：1.2*10^(-5) [C]"
+   },
+   {
+    "id": "2",
+    "tex": "$V_1=6.0\\,\\mathrm V$，$V_2=4.0\\,\\mathrm V$",
+    "grading": "V_1：6 [V] ; V_2：4 [V]"
+   },
+   {
+    "id": "3",
+    "tex": "$V=4.8\\,\\mathrm V$",
+    "grading": "V：4.8 [V]"
+   },
+   {
+    "id": "4",
+    "tex": "$2.4\\times10^{-6}\\,\\mathrm J$",
+    "grading": "2.4*10^(-6) [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 直列では，間にはさまれた導線部分（$\\mathrm C_1$ の右極板と $\\mathrm C_2$ の上極板）の電気量の和が $0$ のままなので，2つのコンデンサーの電気量は等しい．合成容量 $\\dfrac{C_1C_2}{C_1+C_2}=1.2\\,\\mu\\mathrm F$ より $Q=1.2\\times10^{-6}\\times10=1.2\\times10^{-5}\\,\\mathrm C$．\n\n(2) $V_1=\\dfrac Q{C_1}=\\dfrac{1.2\\times10^{-5}}{2.0\\times10^{-6}}=6.0\\,\\mathrm V$，$V_2=\\dfrac Q{C_2}=4.0\\,\\mathrm V$（和は $10\\,\\mathrm V$）．容量の小さい方に大きな電圧がかかる．\n\n(3) つないだ極板の電気量の和は保存される：正の極板どうしで $Q+Q=2.4\\times10^{-5}\\,\\mathrm C$．並列の合成容量は $5.0\\,\\mu\\mathrm F$ なので $V=\\dfrac{2.4\\times10^{-5}}{5.0\\times10^{-6}}=4.8\\,\\mathrm V$．\n\n(4) はじめ：$\\dfrac{Q^2}{2C_1}+\\dfrac{Q^2}{2C_2}=3.6\\times10^{-5}+2.4\\times10^{-5}=6.0\\times10^{-5}\\,\\mathrm J$．あと：$\\dfrac12(C_1+C_2)V^2=\\dfrac12\\times5.0\\times10^{-6}\\times4.8^2=5.76\\times10^{-5}\\,\\mathrm J$．失われたのは $6.0\\times10^{-5}-5.76\\times10^{-5}=2.4\\times10^{-6}\\,\\mathrm J$．電圧の違うコンデンサーをつなぐと，電荷が移動するときに必ずジュール熱が出る（導線の抵抗の大きさによらない）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "直列は電気量が共通．つなぎかえでは「孤立した極板の組の電気量の和」が保存される．エネルギーは保存されない（熱になる）．"
+ },
+ "concepts": [
+  "capacitor"
+ ],
+ "laws": [
+  "capacitance",
+  "capacitor-energy",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "コンデンサー",
+  "電荷保存",
+  "静電エネルギー",
+  "つなぎかえ"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

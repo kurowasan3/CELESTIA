@@ -1,0 +1,224 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  500,
+  240
+ ],
+ "items": [
+  {
+   "t": "battery",
+   "from": [
+    60,
+    210
+   ],
+   "to": [
+    60,
+    150
+   ],
+   "label": "E₁ = 6.0 V",
+   "plus": "to",
+   "labelSide": 1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60,
+     150
+    ],
+    [
+     60,
+     130
+    ]
+   ]
+  },
+  {
+   "t": "resistor",
+   "from": [
+    60,
+    130
+   ],
+   "to": [
+    60,
+    60
+   ],
+   "label": "R₁ = 2.0 Ω",
+   "labelSide": 1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60,
+     60
+    ],
+    [
+     60,
+     40
+    ],
+    [
+     360,
+     40
+    ],
+    [
+     360,
+     60
+    ]
+   ]
+  },
+  {
+   "t": "resistor",
+   "from": [
+    210,
+    40
+   ],
+   "to": [
+    210,
+    210
+   ],
+   "label": "R₃ = 2.0 Ω",
+   "labelSide": -1
+  },
+  {
+   "t": "battery",
+   "from": [
+    360,
+    210
+   ],
+   "to": [
+    360,
+    150
+   ],
+   "label": "E₂ = 4.0 V",
+   "plus": "to",
+   "labelSide": 1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     360,
+     150
+    ],
+    [
+     360,
+     130
+    ]
+   ]
+  },
+  {
+   "t": "resistor",
+   "from": [
+    360,
+    130
+   ],
+   "to": [
+    360,
+    60
+   ],
+   "label": "R₂ = 1.0 Ω",
+   "labelSide": 1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60,
+     210
+    ],
+    [
+     360,
+     210
+    ]
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    210,
+    40
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    210,
+    210
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    26
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    226
+   ],
+   "text": "Q",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "arrow",
+   "from": [
+    160,
+    32
+   ],
+   "dir": 0,
+   "len": 26,
+   "style": "current",
+   "label": "5/4 A",
+   "phys": "current:I1",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -24
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    262,
+    32
+   ],
+   "dir": 180,
+   "len": 26,
+   "style": "current",
+   "label": "1/2 A",
+   "phys": "current:I2",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    0
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    202,
+    52
+   ],
+   "dir": 270,
+   "len": 24,
+   "style": "current",
+   "label": "7/4 A",
+   "phys": "current:I3",
+   "labelPos": "mid",
+   "labelOffset": [
+    -22,
+    0
+   ],
+   "italic": false
+  }
+ ]
+}

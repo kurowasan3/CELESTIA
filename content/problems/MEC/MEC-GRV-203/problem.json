@@ -1,0 +1,127 @@
+{
+ "id": "MEC-GRV-203",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "鉛直に打ち上げた物体の最高点（一様な重力との比較）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "地球を半径 $R$ の一様な球とし，地表での重力加速度の大きさを $g$ とする．地球の自転と空気抵抗は無視し，万有引力による位置エネルギーの基準は無限遠とする．質量 $m$ の物体を地表から鉛直上向きに速さ $v_0=\\sqrt{gR}$ で打ち上げた．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "地表での物体の万有引力による位置エネルギー $U_0$ を，$m$，$g$，$R$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "物体が達する最高点の地表からの高さ $H$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "重力加速度が高さによらず $g$ のままであると考えて計算した最高点の高さ $H_1$ を求めよ．$H$ は $H_1$ の何倍か．"
+     },
+     {
+      "id": "4",
+      "tex": "最高点での物体の加速度の大きさ $g_H$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "半径 R の地球の表面から、物体を鉛直上向きに速さ v0 で打ち上げる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$U_0=-mgR$",
+    "grading": "U_0：-m g R"
+   },
+   {
+    "id": "2",
+    "tex": "$H=R$",
+    "grading": "H：R"
+   },
+   {
+    "id": "3",
+    "tex": "$H_1=\\dfrac R2$，$H$ は $H_1$ の $2$ 倍",
+    "grading": "H_1：R/2 ; 2倍"
+   },
+   {
+    "id": "4",
+    "tex": "$g_H=\\dfrac g4$",
+    "grading": "g_H：g/4"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "地球の質量を $M$ とすると，地表で $mg=G\\dfrac{Mm}{R^2}$ より $GM=gR^2$．\n\n(1) $U_0=-G\\dfrac{Mm}{R}=-\\dfrac{gR^2m}{R}=-mgR$．\n\n(2) 最高点（地球の中心から $r$）で速さ $0$．力学的エネルギー保存：\\[\\frac12m\\cdot gR-mgR=0-\\frac{mgR^2}{r}\\quad\\Longrightarrow\\quad\\frac{R^2}{r}=\\frac R2\\quad\\Longrightarrow\\quad r=2R\\] よって $H=r-R=R$．\n\n(3) 一様な重力なら $\\dfrac12mv_0^2=mgH_1$ より $H_1=\\dfrac{v_0^2}{2g}=\\dfrac R2$．$H=2H_1$ で2倍．高くなるほど重力が弱くなるので，同じ初速でも一様な場合より高く上がる．\n\n(4) 中心からの距離 $2R$ では，万有引力は距離の2乗に反比例するので $g_H=g\\left(\\dfrac{R}{2R}\\right)^2=\\dfrac g4$．\n\n地表付近（$H\\ll R$）なら $mgH$ で近似できるが，$R$ と同じくらいの高さでは $-\\dfrac{GMm}{r}$ を使わなければならない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "高さが地球の半径と同程度になると $mgh$ は使えない．位置エネルギー $-GMm/r$ と $GM=gR^2$ を使う．"
+ },
+ "concepts": [
+  "universal-gravitation",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "gravitational-potential",
+  "universal-gravitation",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "万有引力",
+  "位置エネルギー",
+  "力学的エネルギー保存"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

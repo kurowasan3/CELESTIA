@@ -1,0 +1,159 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  240
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    220
+   ],
+   "to": [
+    350,
+    220
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     40,
+     220
+    ],
+    [
+     340,
+     220
+    ],
+    [
+     340,
+     80.11
+    ]
+   ],
+   "style": "hatch",
+   "phys": "incline"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    220
+   ],
+   "to": [
+    340,
+    80.11
+   ],
+   "style": "ground",
+   "phys": "surface"
+  },
+  {
+   "t": "curve",
+   "f": "parabola",
+   "from": [
+    155.11,
+    137.8
+   ],
+   "dir": 0,
+   "speed": 80.3,
+   "g": 80,
+   "until_y": 147.7,
+   "style": "dash"
+  },
+  {
+   "t": "curve",
+   "f": "parabola",
+   "from": [
+    155.11,
+    137.8
+   ],
+   "dir": 180,
+   "speed": 80.3,
+   "g": 80,
+   "until_y": 220,
+   "style": "dash"
+  },
+  {
+   "t": "ball",
+   "at": [
+    40,
+    220
+   ],
+   "r": 5,
+   "phys": "body:ball"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    40,
+    220
+   ],
+   "dir": 55,
+   "len": 70,
+   "style": "velocity",
+   "phys": "velocity:v0",
+   "label": "v₀"
+  },
+  {
+   "t": "arc",
+   "at": [
+    40,
+    220
+   ],
+   "r": 34,
+   "from": 0,
+   "to": 25,
+   "label": "α",
+   "labelGap": 10
+  },
+  {
+   "t": "arc",
+   "at": [
+    40,
+    220
+   ],
+   "r": 50,
+   "from": 0,
+   "to": 55,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    85.34,
+    177.72
+   ],
+   "text": "θ",
+   "size": 15
+  },
+  {
+   "t": "dot",
+   "at": [
+    195.05,
+    147.7
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    197.05,
+    163.7
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 14
+  },
+  {
+   "t": "text",
+   "at": [
+    32,
+    233
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 14
+  }
+ ]
+}

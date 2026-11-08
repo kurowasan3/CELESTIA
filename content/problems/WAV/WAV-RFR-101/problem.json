@@ -1,0 +1,138 @@
+{
+ "id": "WAV-RFR-101",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "光がガラスに入るときの速さ・波長・振動数",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "空気中で波長 $600\\,\\mathrm{nm}$ の光が，屈折率 $1.5$ のガラスに入射する．空気の屈折率を $1.0$，空気中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "空気中での光の振動数を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "ガラス中での光の速さを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ガラス中での光の波長は何 nm か．"
+     },
+     {
+      "id": "4",
+      "tex": "ガラス中での光の振動数を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "入射角が $30^\\circ$ のとき，屈折角を $\\theta$ として $\\sin\\theta$ の値を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$5.0\\times10^{14}\\,\\mathrm{Hz}$",
+    "grading": "5*10^14 [Hz]"
+   },
+   {
+    "id": "2",
+    "tex": "$2.0\\times10^8\\,\\mathrm{m/s}$",
+    "grading": "2*10^8 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$400\\,\\mathrm{nm}$",
+    "grading": "400 [nm]"
+   },
+   {
+    "id": "4",
+    "tex": "$5.0\\times10^{14}\\,\\mathrm{Hz}$（変わらない）",
+    "grading": "5*10^14 [Hz]",
+    "wrong": [
+     {
+      "value": "(1/3)*10^15",
+      "misconception": "MC-REFRACTION-FREQ"
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac13$",
+    "grading": "1/3"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $f=\\dfrac c\\lambda=\\dfrac{3.0\\times10^8}{600\\times10^{-9}}=5.0\\times10^{14}\\,\\mathrm{Hz}$．\n\n(2) $v=\\dfrac cn=\\dfrac{3.0\\times10^8}{1.5}=2.0\\times10^8\\,\\mathrm{m/s}$．\n\n(3) $\\lambda'=\\dfrac\\lambda n=\\dfrac{600}{1.5}=400\\,\\mathrm{nm}$．\n\n(4) 境界面の両側で振動は1対1でつながるので，振動数は変わらない：$5.0\\times10^{14}\\,\\mathrm{Hz}$．（$\\dfrac{2.0\\times10^8}{400\\times10^{-9}}=5.0\\times10^{14}$ でも確かめられる．）光の色は振動数で決まるので，ガラスに入っても色は変わらない．\n\n(5) 屈折の法則 $1.0\\times\\sin30^\\circ=1.5\\sin\\theta$ より $\\sin\\theta=\\dfrac{0.50}{1.5}=\\dfrac13$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "屈折で変わるのは速さと波長（どちらも $\\dfrac1n$ 倍），振動数は変わらない．"
+ },
+ "simulation": {
+  "id": "optics.refraction",
+  "preset": {
+   "n1": 1.0,
+   "n2": 1.5,
+   "theta1": 30
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "refraction-light",
+  "wave-basics"
+ ],
+ "laws": [
+  "refraction-law",
+  "wave-speed"
+ ],
+ "misconceptions": [
+  "MC-REFRACTION-FREQ"
+ ],
+ "tags": [
+  "屈折",
+  "屈折率",
+  "光"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260" font-family="'Times New Roman', serif">
+<line x1="60" y1="50" x2="340" y2="211.66" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<line x1="340" y1="211.66" x2="60" y2="211.66" stroke="currentColor" stroke-width="2"/>
+<line x1="60" y1="211.66" x2="60" y2="50" stroke="currentColor" stroke-width="1.2"/>
+<path d="M305.36,191.66 A40,40 0 0 0 300,211.66" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="290.74" y="198.46" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<circle cx="204.5" cy="123.03" r="9" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-ink" data-dir="90" data-len="70">
+<line x1="370" y1="200" x2="370" y2="140" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="370,130 374.66,140 365.34,140" fill="currentColor"/>
+<text x="370" y="118" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<g class="f-ink" data-dir="90" data-len="70">
+<line x1="30" y1="200" x2="30" y2="140" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="30,130 34.66,140 25.34,140" fill="currentColor"/>
+<text x="30" y="118" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<g class="f-vel" data-phys="velocity:v" data-dir="-30" data-len="50">
+<line x1="124" y1="54.62" x2="158.64" y2="74.62" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="167.3,79.62 156.31,78.66 160.97,70.58" fill="currentColor"/>
+<text x="139.65" y="77.51" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+</g>
+<text x="200" y="245" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">磁場 B は鉛直上向き（図の矢印）</text>
+</svg>

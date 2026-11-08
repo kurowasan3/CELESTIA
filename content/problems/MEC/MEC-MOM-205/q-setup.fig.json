@@ -1,0 +1,82 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  175
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    10,
+    150
+   ],
+   "to": [
+    350,
+    150
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    200,
+    150
+   ],
+   "w": 260,
+   "h": 16,
+   "label": "M",
+   "phys": "body:plank"
+  },
+  {
+   "t": "block",
+   "at": [
+    90,
+    134
+   ],
+   "w": 34,
+   "h": 26,
+   "label": "m",
+   "phys": "body:block"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    110,
+    100
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "velocity",
+   "phys": "velocity:v0",
+   "label": "v₀",
+   "labelPos": "end",
+   "labelOffset": [
+    10,
+    0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    122
+   ],
+   "text": "上面はあらい",
+   "italic": false,
+   "size": 11,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    164
+   ],
+   "text": "水平面はなめらか",
+   "italic": false,
+   "size": 11,
+   "anchor": "middle"
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  190
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    40,
+    130
+   ],
+   "to": [
+    340,
+    130
+   ],
+   "style": "thick",
+   "phys": "rod"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     190,
+     130
+    ],
+    [
+     176,
+     160
+    ],
+    [
+     204,
+     160
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    160
+   ],
+   "to": [
+    230,
+    160
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    100,
+    130
+   ],
+   "w": 26,
+   "h": 40,
+   "label": "A"
+  },
+  {
+   "t": "block",
+   "at": [
+    310,
+    130
+   ],
+   "w": 26,
+   "h": 36,
+   "label": "B"
+  },
+  {
+   "t": "text",
+   "at": [
+    100,
+    78
+   ],
+   "text": "40 kg",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    310,
+    82
+   ],
+   "text": "30 kg",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    176
+   ],
+   "to": [
+    190,
+    176
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    170
+   ],
+   "to": [
+    100,
+    182
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    170
+   ],
+   "to": [
+    190,
+    182
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    145,
+    166
+   ],
+   "text": "1.5 m",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    176
+   ],
+   "to": [
+    310,
+    176
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    310,
+    170
+   ],
+   "to": [
+    310,
+    182
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    166
+   ],
+   "text": "x",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  }
+ ]
+}

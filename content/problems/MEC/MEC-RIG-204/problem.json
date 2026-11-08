@@ -1,0 +1,183 @@
+{
+ "id": "MEC-RIG-204",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "なめらかな壁に立てかけたはしごを人がのぼる",
+ "course": "物理",
+ "level": 3,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $l$，質量 $M$ の一様なはしごを，なめらかな鉛直の壁とあらい水平な床の間に，床と角 $\\theta$ をなすように立てかけた．質量 $m$ の人が，はしごの下端 A からはしごに沿って距離 $x$ の位置までのぼって静止した．はしごと床の間の静止摩擦係数を $\\mu$，重力加速度の大きさを $g$ とし，人は質点とみなす．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "床がはしごに及ぼす垂直抗力の大きさ $N$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "壁がはしごに及ぼす垂直抗力の大きさ $R$ を，$x$ を用いて表せ．また，床がはしごに及ぼす静止摩擦力の大きさ $f$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "はしごがすべらずに人がのぼれる距離 $x$ の最大値 $x_{\\mathrm{max}}$ を求めよ．ただし $0<x_{\\mathrm{max}}<l$ とする．"
+     },
+     {
+      "id": "4",
+      "tex": "人がはしごの上端 B までのぼってもすべらないための，$\\tan\\theta$ の条件を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな壁とあらい床の間に立てかけた長さ l のはしご AB。床となす角は θ。人が下端 A から距離 x の位置にいる",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "はしごにはたらく力：中点の重力 Mg、人から受ける力 mg、下端 A の垂直抗力 N と壁向きの摩擦力 f、上端 B で壁から受ける水平な垂直抗力 R",
+   "caption": "図は $M=m$，$x=\\dfrac34l$，$\\theta=60^\\circ$ の場合の力の大きさの比で描いた",
+   "physics": {
+    "equilibrium": true,
+    "torque": {
+     "about": [
+      140,
+      230
+     ]
+    },
+    "forces": [
+     {
+      "name": "Mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 90
+     },
+     {
+      "name": "f",
+      "dir_deg": 0
+     },
+     {
+      "name": "R",
+      "dir_deg": 180
+     }
+    ],
+    "equalLength": [
+     [
+      "force:f",
+      "force:R"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$N=(M+m)g$",
+    "grading": "N：(M+m)g"
+   },
+   {
+    "id": "2",
+    "tex": "$R=\\dfrac{(Ml+2mx)g}{2l\\tan\\theta}$，$f=R$",
+    "grading": "R：(M l+2m x)g/(2l tan(θ)) ; f：(M l+2m x)g/(2l tan(θ))"
+   },
+   {
+    "id": "3",
+    "tex": "$x_{\\mathrm{max}}=\\dfrac{l\\{2\\mu(M+m)\\tan\\theta-M\\}}{2m}$",
+    "grading": "x_{max}：l(2μ(M+m)tan(θ)-M)/(2m)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\tan\\theta\\ge\\dfrac{M+2m}{2\\mu(M+m)}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "はしごにはたらく力は，重力 $Mg$（中点），人が押す力 $mg$（A から $x$），床からの $N$ と $f$（A），壁からの $R$（B，水平）．壁はなめらかなので，B には摩擦力がはたらかない．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(1) 鉛直方向のつり合い：$N=(M+m)g$．\n\n(2) 未知の力 $N$，$f$ がはたらく A のまわりの力のモーメントのつり合いを考える．重力の腕の長さは水平距離 $\\dfrac l2\\cos\\theta$，$x\\cos\\theta$，$R$ の腕の長さは B の高さ $l\\sin\\theta$：\\[R\\,l\\sin\\theta=Mg\\cdot\\frac l2\\cos\\theta+mg\\,x\\cos\\theta\\quad\\Longrightarrow\\quad R=\\frac{(Ml+2mx)g}{2l\\tan\\theta}\\] 水平方向のつり合いから $f=R$（向きは壁の向き）．\n\n(3) すべらない条件は $f\\le\\mu N$：\\[\\frac{(Ml+2mx)g}{2l\\tan\\theta}\\le\\mu(M+m)g\\quad\\Longrightarrow\\quad x\\le\\frac{l\\{2\\mu(M+m)\\tan\\theta-M\\}}{2m}\\] 人が上にいくほど $R$ と $f$ が大きくなり，すべりやすくなる．\n\n(4) $x=l$ で $f\\le\\mu N$ が成り立てばよい：\\[\\frac{(M+2m)g}{2\\tan\\theta}\\le\\mu(M+m)g\\quad\\Longrightarrow\\quad\\tan\\theta\\ge\\frac{M+2m}{2\\mu(M+m)}\\] はしごを立てる（$\\theta$ を大きくする）ほど安全になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "未知の力が集まる点（下端）のまわりのモーメントを考えると，壁からの力が求まる．すべらない条件は $f\\le\\mu N$．"
+ },
+ "concepts": [
+  "torque",
+  "static-friction",
+  "equilibrium"
+ ],
+ "laws": [
+  "torque-equilibrium",
+  "friction-law"
+ ],
+ "misconceptions": [
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "剛体",
+  "はしご",
+  "静止摩擦",
+  "力のモーメント"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

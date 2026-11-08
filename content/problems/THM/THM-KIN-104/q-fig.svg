@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" width="260" height="220" font-family="'Times New Roman', serif">
+<polygon points="50,30 210,30 210,190 50,190" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="90" cy="70" r="3" fill="currentColor"/>
+<circle cx="160" cy="60" r="3" fill="currentColor"/>
+<circle cx="120" cy="120" r="3" fill="currentColor"/>
+<circle cx="180" cy="150" r="3" fill="currentColor"/>
+<circle cx="80" cy="160" r="3" fill="currentColor"/>
+<circle cx="150" cy="105" r="3" fill="currentColor"/>
+<g class="f-vel" data-phys="vel:v" data-dir="30" data-len="40">
+<line x1="120" y1="120" x2="145.98" y2="105" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="154.64,100 148.31,109.04 143.65,100.96" fill="currentColor"/>
+<text x="165.03" y="94" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+</g>
+<g class="f-comp" data-phys="comp:vx" data-dir="0" data-len="34.64">
+<line x1="120" y1="120" x2="144.64" y2="120" stroke="currentColor" stroke-width="2.2" stroke-dasharray="5 4"/>
+<polygon points="154.64,120 144.64,124.66 144.64,115.34" fill="currentColor"/>
+<text x="170.64" y="126" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">vₓ</text>
+</g>
+<text x="130" y="206" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+<text x="36" y="110" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+<text x="224" y="110" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">壁 X</text>
+</svg>

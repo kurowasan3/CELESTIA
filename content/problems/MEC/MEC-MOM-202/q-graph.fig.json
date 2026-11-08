@@ -1,0 +1,186 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  370,
+  230
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    190
+   ],
+   "dir": 0,
+   "len": 300,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    190
+   ],
+   "dir": 90,
+   "len": 170,
+   "style": "thin"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     50,
+     190
+    ],
+    [
+     110,
+     70
+    ],
+    [
+     230,
+     70
+    ],
+    [
+     290,
+     190
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    110,
+    70
+   ],
+   "to": [
+    110,
+    190
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    70
+   ],
+   "to": [
+    230,
+    190
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    70
+   ],
+   "to": [
+    110,
+    70
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    186
+   ],
+   "to": [
+    170,
+    194
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    206
+   ],
+   "text": "0.10",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    206
+   ],
+   "text": "0.20",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    230,
+    206
+   ],
+   "text": "0.30",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    206
+   ],
+   "text": "0.40",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    42,
+    70
+   ],
+   "text": "40",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    200
+   ],
+   "text": "O",
+   "italic": true,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    352,
+    206
+   ],
+   "text": "t [s]",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    62,
+    14
+   ],
+   "text": "F [N]",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  }
+ ]
+}

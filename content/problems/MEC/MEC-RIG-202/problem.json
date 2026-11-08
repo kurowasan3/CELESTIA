@@ -1,0 +1,171 @@
+{
+ "id": "MEC-RIG-202",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "小球をつけた棒の重心と2本の糸の張力",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $1.2\\,\\mathrm m$，質量 $2.0\\,\\mathrm{kg}$ の一様な棒 AB の端 B に，質量 $1.0\\,\\mathrm{kg}$ の小球を取り付けた．棒の両端 A，B に鉛直な糸をつけて天井からつるし，棒を水平に静止させた．小球の大きさは無視でき，重力加速度の大きさを $g=9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒と小球を合わせた全体の重心は，A から何 $\\mathrm m$ の位置にあるか．"
+     },
+     {
+      "id": "2",
+      "tex": "糸 A の張力 $T_{\\mathrm A}$ と糸 B の張力 $T_{\\mathrm B}$ はそれぞれ何 $\\mathrm N$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "小球を別の質量のおもりに取りかえたところ，糸 B の張力が糸 A の張力の3倍になった．おもりの質量は何 $\\mathrm{kg}$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "天井から2本の鉛直な糸でつるした水平な棒 AB。端 B に小球が付いている",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "棒と小球にはたらく力：A の張力 TA と B の張力 TB（上向き）、棒の中点の重力 2.0g と B の小球の重力 1.0g（下向き）",
+   "caption": "力の和も，A のまわりのモーメントの和も $0$",
+   "physics": {
+    "equilibrium": true,
+    "torque": {
+     "about": [
+      60,
+      130
+     ]
+    },
+    "forces": [
+     {
+      "name": "TA",
+      "dir_deg": 90
+     },
+     {
+      "name": "TB",
+      "dir_deg": 90
+     },
+     {
+      "name": "W1",
+      "dir_deg": 270
+     },
+     {
+      "name": "W2",
+      "dir_deg": 270
+     }
+    ],
+    "equalLength": [
+     [
+      "force:TA",
+      "force:W2"
+     ],
+     [
+      "force:TB",
+      "force:W1"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "A から $0.80\\,\\mathrm m$",
+    "grading": "0.8 [m]"
+   },
+   {
+    "id": "2",
+    "tex": "$T_{\\mathrm A}=9.8\\,\\mathrm N$，$T_{\\mathrm B}=19.6\\,\\mathrm N\\ (\\approx20\\,\\mathrm N)$",
+    "grading": "T_A：9.8 [N] ; T_B：19.6 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "$2.0\\,\\mathrm{kg}$",
+    "grading": "2 [kg]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 棒の重心は中点（A から $0.60\\,\\mathrm m$），小球は A から $1.2\\,\\mathrm m$．\\[x_G=\\frac{2.0\\times0.60+1.0\\times1.2}{2.0+1.0}=0.80\\,\\mathrm m\\]"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(2) A のまわりの力のモーメントのつり合い：\\[T_{\\mathrm B}\\times1.2=2.0g\\times0.60+1.0g\\times1.2\\quad\\Longrightarrow\\quad T_{\\mathrm B}=2.0g=19.6\\,\\mathrm N\\] 鉛直方向のつり合い $T_{\\mathrm A}+T_{\\mathrm B}=3.0g$ より $T_{\\mathrm A}=1.0g=9.8\\,\\mathrm N$．\n\n（重心を使うと，全体の重さ $3.0g$ が A から $0.80\\,\\mathrm m$ にはたらくとして $T_{\\mathrm B}\\times1.2=3.0g\\times0.80$ とも書ける．）\n\n(3) おもりの質量を $m$ とし，$T_{\\mathrm B}=3T_{\\mathrm A}$ とする．力のつり合い：$4T_{\\mathrm A}=(2.0+m)g$．A のまわりのモーメント：$3T_{\\mathrm A}\\times1.2=2.0g\\times0.60+mg\\times1.2$ より $3T_{\\mathrm A}=(1.0+m)g$．2式から \\[\\frac{(2.0+m)g}{4}=\\frac{(1.0+m)g}{3}\\quad\\Longrightarrow\\quad m=2.0\\,\\mathrm{kg}\\] このとき重心は A から $0.90\\,\\mathrm m$（$1.2\\,\\mathrm m$ を $1:3$ に分ける点）にある．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "重心は質量で重みをつけた平均の位置．2点で支えるとき，支える力は重心に近い側ほど大きい．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium"
+ ],
+ "laws": [
+  "center-of-mass",
+  "torque-equilibrium"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "重心",
+  "力のモーメント",
+  "つり合い"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  235
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    130,
+    40
+   ],
+   "to": [
+    130,
+    220
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    40
+   ],
+   "to": [
+    170,
+    220
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    130,
+    220
+   ],
+   "to": [
+    170,
+    220
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     130,
+     150
+    ],
+    [
+     170,
+     150
+    ],
+    [
+     170,
+     220
+    ],
+    [
+     130,
+     220
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    130,
+    150
+   ],
+   "to": [
+    170,
+    150
+   ],
+   "style": "ground",
+   "phys": "water-surface"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    22
+   ],
+   "text": "おんさ（500 Hz）",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    40
+   ],
+   "to": [
+    130,
+    40
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    80,
+    40
+   ],
+   "text": "管口",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "line",
+   "from": [
+    195,
+    40
+   ],
+   "to": [
+    195,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    188,
+    40
+   ],
+   "to": [
+    202,
+    40
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    188,
+    150
+   ],
+   "to": [
+    202,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    95
+   ],
+   "text": "l"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    190
+   ],
+   "text": "水",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

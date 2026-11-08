@@ -1,0 +1,124 @@
+{
+ "id": "ATM-RCT-101",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "α崩壊のエネルギー分配とラジウムの放射能・発熱",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止しているラジウム $^{226}_{\\ 88}\\mathrm{Ra}$ の原子核がα崩壊して，ラドン $^{222}_{\\ 86}\\mathrm{Rn}$ の原子核とα粒子になった．崩壊で放出されるエネルギーを $Q$ とし，$Q$ はすべて Rn 核とα粒子の運動エネルギーになるとする．α粒子と Rn 核の質量を $m$，$M$ とし，運動は非相対論的に扱う．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "α粒子の運動エネルギー $K_\\alpha$ を，$Q$，$m$，$M$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "測定されたα粒子の運動エネルギーは $4.78\\ \\mathrm{MeV}$ であった．$m:M=4:222$ として，$Q$ は何 MeV か．有効数字3桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "α粒子の速さは何 m/s か．$m=6.6\\times10^{-27}\\ \\mathrm{kg}$，$1\\ \\mathrm{MeV}=1.6\\times10^{-13}\\ \\mathrm J$ として，有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$^{226}\\mathrm{Ra}$ の半減期を $T=1.6\\times10^3$ 年とする．時刻 $t$ に $N$ 個ある原子核が単位時間あたりに崩壊する数は $\\dfrac{\\log_e2}{T}N$ で与えられる．$1.0\\ \\mathrm g$ の $^{226}\\mathrm{Ra}$ で，1秒間あたりに崩壊する原子核の数を有効数字2桁で求めよ．アボガドロ定数を $6.0\\times10^{23}\\ /\\mathrm{mol}$，$^{226}\\mathrm{Ra}$ のモル質量を $226\\ \\mathrm{g/mol}$，$1$ 年 $=3.2\\times10^7\\ \\mathrm s$，$\\log_e2=0.69$ とする．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) のラジウムで，崩壊のエネルギー $Q$ がすべて熱になるとすると，発熱の仕事率は何 W か．有効数字2桁で求めよ（崩壊でできた Rn などのその後の崩壊は考えない）．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$K_\\alpha=\\dfrac{M}{m+M}Q$",
+    "grading": "K_α：M Q/(M+m)"
+   },
+   {
+    "id": "2",
+    "tex": "$4.87\\ \\mathrm{MeV}$",
+    "grading": "Q（MeV）：4.87"
+   },
+   {
+    "id": "3",
+    "tex": "$1.5\\times10^7\\ \\mathrm{m/s}$",
+    "grading": "1.5*10^7 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$3.6\\times10^{10}$ 個",
+    "grading": "3.6*10^10"
+   },
+   {
+    "id": "5",
+    "tex": "$2.8\\times10^{-2}\\ \\mathrm W$",
+    "grading": "2.8*10^(-2) [W]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 運動量保存：$0=mv-MV$ より運動量の大きさ $p$ は等しい．$K=\\dfrac{p^2}{2\\times\\text{質量}}$ なので $K_\\alpha:K_{\\mathrm{Rn}}=M:m$．$K_\\alpha+K_{\\mathrm{Rn}}=Q$ より $K_\\alpha=\\dfrac M{m+M}Q$．\n\n(2) $Q=\\dfrac{m+M}MK_\\alpha=\\dfrac{226}{222}\\times4.78\\fallingdotseq4.87\\ \\mathrm{MeV}$．Rn 核も $0.09\\ \\mathrm{MeV}$ ほどの運動エネルギーで反跳する．\n\n(3) $K_\\alpha=4.78\\times1.6\\times10^{-13}=7.65\\times10^{-13}\\ \\mathrm J$．$v=\\sqrt{\\dfrac{2K_\\alpha}m}=\\sqrt{\\dfrac{2\\times7.65\\times10^{-13}}{6.6\\times10^{-27}}}\\fallingdotseq1.5\\times10^7\\ \\mathrm{m/s}$．光速の約5%なので，非相対論的な扱いでよい．\n\n(4) $N=\\dfrac{1.0}{226}\\times6.0\\times10^{23}\\fallingdotseq2.65\\times10^{21}$ 個．$T=1.6\\times10^3\\times3.2\\times10^7=5.12\\times10^{10}\\ \\mathrm s$．\n\\[ \\frac{\\log_e2}{T}N=\\frac{0.69}{5.12\\times10^{10}}\\times2.65\\times10^{21}\\fallingdotseq3.6\\times10^{10}\\ /\\mathrm s \\]\n（これは放射能の古い単位 1 キュリーのもとになった値である．）\n\n(5) $P=3.58\\times10^{10}\\times4.87\\times1.6\\times10^{-13}\\fallingdotseq2.8\\times10^{-2}\\ \\mathrm W$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "2体に分かれる崩壊では運動量の大きさが等しく，運動エネルギーは質量の逆比に分かれる．放射能は $\\dfrac{\\log_e2}{T}N$．"
+ },
+ "concepts": [
+  "nuclear-decay",
+  "mass-energy",
+  "momentum-conservation"
+ ],
+ "laws": [
+  "half-life",
+  "mass-energy",
+  "momentum-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "α崩壊",
+  "運動量保存",
+  "放射能",
+  "半減期"
+ ],
+ "provenance": {
+  "created": "2026-11-08"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

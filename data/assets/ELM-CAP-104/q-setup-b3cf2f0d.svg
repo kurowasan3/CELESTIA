@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 250" width="340" height="250" font-family="'Times New Roman', serif">
+<line x1="140" y1="40" x2="140" y2="140" stroke="currentColor" stroke-width="2.4" data-phys="plate"/>
+<line x1="220" y1="40" x2="220" y2="140" stroke="currentColor" stroke-width="2.4" data-phys="plate"/>
+<polygon points="165,40 195,40 195,140 165,140" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="140,90 80,90 80,200 140,200" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="battery:V">
+<line x1="140" y1="200" x2="175" y2="200" stroke="currentColor" stroke-width="1.6"/>
+<line x1="185" y1="200" x2="220" y2="200" stroke="currentColor" stroke-width="1.6"/>
+<line x1="185" y1="214" x2="185" y2="186" stroke="currentColor" stroke-width="1.6"/>
+<line x1="175" y1="207" x2="175" y2="193" stroke="currentColor" stroke-width="3"/>
+<text x="180" y="224" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">V</text>
+</g>
+<polyline points="220,200 280,200 280,90 220,90" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="180" y="22" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d</text>
+<line x1="140" y1="30" x2="220" y2="30" stroke="currentColor" stroke-width="1.2"/>
+<text x="180" y="160" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d/2</text>
+<text x="118" y="60" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">S</text>
+</svg>
