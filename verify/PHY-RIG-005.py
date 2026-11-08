@@ -43,3 +43,36 @@ print('l',q1*p2/(q1+p2-q3),'rb',(q1-q3)/p2,'ra',p2*(q3-p2)/(q1*(q1-q3)))
 q1s,p2s,q3s=sp.symbols('q1 p2 q3',positive=True)
 ll=q1s*p2s/(q1s+p2s-q3s)
 print('rb',sp.simplify((q1s-ll)/ll-(q1s-q3s)/p2s),'ra',sp.simplify((ll-p2s)/(q1s-ll)-p2s*(q3s-p2s)/(q1s*(q1s-q3s))))
+
+# --- (5) y_n = r_b (r_a r_b)^{n-1} l, 収束；mu'=mu では x:y=mu_a:mu_b を保って連続的に G へ
+def stops_all(l,mua,muap,mub,mubp,nmax=12,dl=2e-6):
+    p,q=0.0,1.0; slipping=None; st=[]
+    while len(st)<nmax and q-p>1e-4:
+        x=l-p; y=q-l; Na=y/(x+y); Nb=x/(x+y)
+        if slipping is None: slipping='b' if mub*Nb<mua*Na else 'a'
+        if slipping=='b':
+            if mubp*Nb<mua*Na: q-=dl
+            else: st.append(('b',q)); slipping='a'
+        else:
+            if muap*Na<mub*Nb: p+=dl
+            else: st.append(('a',p)); slipping='b'
+    return st
+l=0.37; mua,muap,mub,mubp=0.8,0.6,0.3,0.25
+ra,rb=muap/mub,mubp/mua
+st=stops_all(l,mua,muap,mub,mubp,nmax=6)
+yb=[q-l for (w,q) in st if w=='b']; print('y_n sim',yb)
+pred=[rb*(ra*rb)**(n-1)*l for n in range(1,len(yb)+1)]; print('y_n formula',pred)
+assert all(abs(a_-b_)<1e-4 for a_,b_ in zip(yb,pred)) and ra*rb<1
+# mu'=mu：最初の b の滑りの後，比 x/y が mu_a/mu_b に保たれる
+mua,mub=0.8,0.3
+p,q=0.0,1.0; dl=1e-6; first=None; ratios=[]
+while q-p>0.05:
+    x=l-p; y=q-l; Na=y; Nb=x
+    if mub*Nb<mua*Na: q-=dl          # b が滑る（a は保持できる）
+    else:
+        if first is None: first=(x,y)
+        p+=dl                        # a が滑る
+    if first is not None: ratios.append(x/y)
+print('mu=mu_k : x/y after first stop: min',min(ratios),' max',max(ratios),' mu_a/mu_b',mua/mub)
+assert abs(min(ratios)-mua/mub)<1e-3 and abs(max(ratios)-mua/mub)<1e-3
+print('(5) OK')

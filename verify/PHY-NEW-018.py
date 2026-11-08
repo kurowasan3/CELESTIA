@@ -9,31 +9,39 @@ phi=sp.atan(mu)
 print('    tan(theta+phi) form:',sp.simplify(sp.expand_trig(g*sp.tan(th+phi))-a1))
 # (2) a->oo: 限界 cos - mu sin <=0
 print('(2) limit ratio', sp.limit((a*sp.cos(th)-g*sp.sin(th))/(g*sp.cos(th)+a*sp.sin(th)),a,sp.oo))
-S,C=sp.Rational(28,100),sp.Rational(96,100); MU,MUK=sp.Rational(1,2),sp.Rational(1,4)
-print('    numeric a1/g',(S+MU*C)/(C-MU*S), float((S+MU*C)/(C-MU*S)))
-A1=2*(C-MUK*S)-(S+MUK*C); dec=S+C/2+MUK*(C-S/2); down=S+C/2-MUK*(C-S/2)
-print('(3) A1',A1,' dec',dec,' s2/s',A1/dec,float(A1/dec),' static check need',S+C/2,'vs max',MU*(C-S/2),' down',down)
-vP2=2*down*(1+A1/dec); print('    vP^2/(gs)=',vP2,float(vP2),' vP=',float(sp.sqrt(vP2)))
-# 数値シミュレーション（g=1,s=1）：相対座標 x（斜面上向き），静止/滑りの判定込み
-gn=1.0; Sn,Cn=0.28,0.96
-def acc_cart(t,state):  # 台車の前向き加速度
-    return 2.0 if state['phase']==1 else -0.5
-def f(x,v,ac):
-    N=gn*Cn+ac*Sn
-    drive=ac*Cn-gn*Sn
-    if abs(v)>1e-12: return drive-0.25*N*np.sign(v)
-    if abs(drive)<=0.5*N: return 0.0
-    return drive-0.25*N*np.sign(drive)
-x,v,t,dt=0.0,0.0,0.0,1e-5; state={'phase':1}; maxx=0; vR=None
-while True:
-    ac=acc_cart(t,state)
-    # RK2
-    k1=f(x,v,ac); xm=x+0.5*dt*v; vm=v+0.5*dt*k1
-    if v>0 and vm<0: vm=0
-    k2=f(xm,vm,ac); vn=v+dt*k2; xn=x+dt*vm
-    if v>0 and vn<0: vn=0.0
-    x,v,t=xn,vn,t+dt
-    if state['phase']==1 and x>=1.0: state['phase']=2; vR=v
-    maxx=max(maxx,x)
-    if state['phase']==2 and x<=0: break
-print('sim vR^2',vR**2,' theory',float(2*A1),'  max x',maxx,' theory',float(1+A1/dec),'  vP',abs(v),' theory',float(sp.sqrt(vP2)))
+# --- (3) 地面から見た動摩擦力の仕事（a>a1 一定，斜面に沿って s のぼるまで）
+mup,m_,s_=sp.symbols("mu' m s",positive=True)
+N=m_*(g*sp.cos(th)+a*sp.sin(th)); f=mup*N
+A=a*(sp.cos(th)-mup*sp.sin(th))-g*(sp.sin(th)+mup*sp.cos(th))
+t2=2*s_/A; X=a*t2/2
+r=sp.Matrix([X-s_*sp.cos(th), s_*sp.sin(th)])          # 地面から見た小物体の変位（前方 x, 上 y）
+fvec=f*sp.Matrix([sp.cos(th),-sp.sin(th)])               # 斜面下向き
+W=sp.simplify(fvec.dot(r)); Wp=sp.simplify(-fvec.dot(sp.Matrix([X,0])))
+W_claim=mup*N*(g*(sp.sin(th)+mup*sp.cos(th))+mup*a*sp.sin(th))/A*s_
+Wp_claim=-mup*N*a*sp.cos(th)/A*s_
+print('W check',sp.simplify(W-W_claim),' Wp check',sp.simplify(Wp-Wp_claim),' sum',sp.simplify(W+Wp))
+assert sp.simplify(W-W_claim)==0 and sp.simplify(Wp-Wp_claim)==0 and sp.simplify(W+Wp+mup*N*s_)==0
+# 独立な確認：地面系の仕事とエネルギーの関係 W_f = ΔK + mg s sinθ - W_N（W_N は垂直抗力の仕事）
+t=sp.sqrt(t2); vg=sp.Matrix([a*t-A*t*sp.cos(th), A*t*sp.sin(th)])
+dK=m_*vg.dot(vg)/2; nvec=N*sp.Matrix([sp.sin(th),sp.cos(th)]); WN=nvec.dot(r)
+print('energy-theorem check',sp.simplify(dK+m_*g*s_*sp.sin(th)-WN-W_claim))
+assert sp.simplify(dK+m_*g*s_*sp.sin(th)-WN-W_claim)==0
+# 数値：ランダムなパラメータで A>0 のとき W>0 を確認，台車系で数値積分した小物体の運動から仕事を直接積分
+rng=np.random.default_rng(1)
+for _ in range(2000):
+    thv=rng.uniform(0.05,1.3); muv=rng.uniform(0.05,1.0); mupv=muv*rng.uniform(0.05,0.99)
+    if muv*np.tan(thv)>=1: continue
+    a1v=(np.sin(thv)+muv*np.cos(thv))/(np.cos(thv)-muv*np.sin(thv))
+    av=a1v*rng.uniform(1.001,5)
+    vals={g:1,th:thv,a:av,mup:mupv,m_:1,s_:1}
+    Av=float(A.subs(vals)); assert Av>0
+    assert float(W_claim.subs(vals))>0
+dt=1e-5; thv,av,mupv=0.4,3.0,0.3; Nv=np.cos(thv)+av*np.sin(thv); Av=av*(np.cos(thv)-mupv*np.sin(thv))-(np.sin(thv)+mupv*np.cos(thv))
+xr=0.0; u=0.0; Vc=0.0; Wnum=0.0
+while xr<1.0:
+    vb=np.array([Vc-u*np.cos(thv), u*np.sin(thv)])          # 地面から見た小物体の速度
+    Wnum+=mupv*Nv*np.dot([np.cos(thv),-np.sin(thv)],vb)*dt
+    u+=Av*dt; xr+=u*dt-Av*dt*dt/2; Vc+=av*dt
+print('numeric W',Wnum,' formula',float(W_claim.subs({g:1,th:thv,a:av,mup:mupv,m_:1,s_:1})))
+assert abs(Wnum-float(W_claim.subs({g:1,th:thv,a:av,mup:mupv,m_:1,s_:1})))<1e-3
+print('(3) OK')

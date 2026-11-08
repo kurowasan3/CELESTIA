@@ -15,18 +15,33 @@ hA,hB=sp.symbols('h_A h_B',positive=True)
 print(sp.factor(sp.numer(sp.together(P.subs(h,hA)-P.subs(h,hB)))))
 f=lambda hh: float(slope.subs({b:1,s:1,h:hh}))
 print('(4) P(1/2),P(2)=',P.subs({b:1,s:1,h:sp.Rational(1,2)}),P.subs({b:1,s:1,h:2}),' sA+sB=',f(0.5)+f(2.0))
-# (5) hA=1/2, hB=3/2
+# ---- (4) general classification at fixed total volume ----
+sl=lambda hh: 16*s*(b**2-hh**2)/(sp.pi*(b**2+hh**2)**3)
+assert sp.simplify(sl(h)-slope)==0
+tot=sp.factor(sp.simplify(sl(h)+sl(b**2/h))); print('(4i) k(hA)+k(b^2/hA) =',tot)
+assert sp.simplify(tot-16*s*(b**2-h**2)**2/(sp.pi*b**4*(b**2+h**2)**2))==0
+xx=sp.symbols('x',positive=True)
+F=sp.pi*b**3/6*(xx*(3+xx**2)+(3*xx**2+1)/xx**3)
+assert sp.simplify(F-(V.subs(h,xx*b)+V.subs(h,b/xx)))==0
+Fp=sp.factor(sp.diff(F,xx)); print("(4iii) F'(x) =",Fp)
+assert sp.simplify(sp.diff(F,xx)-sp.pi*b**3/2*(1+xx**2)*(1-1/xx**4))==0
+print('(4ii) 2*V(hemisphere)=',sp.simplify(2*V.subs(h,b)),' F(1)=',sp.simplify(F.subs(xx,1)))
+# dynamics: flow proportional to pressure difference, volume conserved; total volume Vt (units pi b^3)
 Vf=lambda x: x*(3+x**2)/6
-Vt=Vf(0.5)+Vf(1.5); print('total V/(pi b^3)=',Vt,' sym each',Vt/2,' hemisphere',Vf(1.0))
-x=brentq(lambda x: Vf(x)+Vf(1/x)-Vt,0.3,0.99); print('hA=',x,' hB=',1/x,' P=',8*x/(1+x*x),' stable sum slope=',f(x)+f(1/x))
-print('initial pressures',8*0.5/1.25,8*1.5/(1+2.25))
-# dynamics: flow rate proportional to pressure difference, volume conserved
 Pn=lambda hh: 8*hh/(1+hh*hh); dVdh=lambda hh: np.pi*(1+hh*hh)/2
 def rhs(t,y):
-    a,bb=y; q=Pn(bb)-Pn(a)      # flow B->A
+    a,bb=y; q=Pn(bb)-Pn(a)
     return [q/dVdh(a), -q/dVdh(bb)]
-sol=solve_ivp(rhs,[0,200],[0.5,1.5],rtol=1e-10,atol=1e-12)
-print('dynamic final',sol.y[:,-1])
-# perturb symmetric state with same total volume -> goes to asymmetric
-xs=brentq(lambda x: 2*Vf(x)-Vt,1.0,2.0); sol2=solve_ivp(rhs,[0,400],[xs-1e-4,xs+1e-4],rtol=1e-10,atol=1e-12)
-print('symmetric h=',xs,' perturbed ->',sol2.y[:,-1])
+for Vt in [1.2, 1.3, 1.4, 1.6, 2.5]:
+    xs=brentq(lambda x: 2*Vf(x)-Vt,0.01,5.0)
+    so=solve_ivp(rhs,[0,2000],[xs-1e-3,xs+1e-3],rtol=1e-10,atol=1e-12)
+    a_,b_=so.y[:,-1]
+    print('Vt=%.2f (crit %.4f) sym h=%.4f -> final hA=%.4f hB=%.4f hA*hB=%.4f dp=%.4f'%(Vt,4/3,xs,a_,b_,a_*b_,Pn(a_)))
+    if Vt<4/3: assert abs(a_-xs)<1e-6 and abs(b_-xs)<1e-6
+    else: assert abs(a_*b_-1)<1e-6 and a_<1<b_
+# pressure decreases along asymmetric branch as total volume increases
+prev=4.0
+for Vt in [1.4,1.6,2.0,3.0]:
+    x=brentq(lambda x: Vf(x)+Vf(1/x)-Vt,1e-3,1-1e-9); pv=Pn(x); assert pv<prev; prev=pv
+    print('  branch Vt=%.1f x=%.4f dp=%.4f'%(Vt,x,pv))
+print('OK')

@@ -16,16 +16,22 @@ rel=sp.simplify(M*u**2/2+dE-(M*up2/2+E))
 print('(3) energy balance -> dE =',sp.solve(rel,dE)[0].expand())
 cos_res=sp.solve(sp.Eq(sp.solve(rel,dE)[0], sp.solve(sp.Eq(dE+E**2/(2*M*c**2),E),dE)[0]),sp.cos(th))
 print('    cos(theta) for resonance:',cos_res)
-# (4) numbers 57Fe
-amu=1.66e-27; Mv=57*amu; cv=3.0e8; ev=1.6e-19; dEv=14.4e3*ev
-Mc2=Mv*cv**2
-Eev=float(Ee.subs({M:Mv,c:cv,dE:dEv})); Eav=float(Ea.subs({M:Mv,c:cv,dE:dEv}))
-print('(4) Mc2 [eV]',Mc2/ev,' Ea-Ee [eV]',(Eav-Eev)/ev,' approx',dEv**2/Mc2/ev)
-umin=Eav/(Mv*cv); print('    umin',umin,' theta at u=100:',np.degrees(np.arccos(umin/100)))
-# direct check by numerically solving conservation for u=100, theta found -> photon energy equals Ea
-thv=np.arccos(umin/100); from scipy.optimize import brentq
-f=lambda Ev: Mv*100**2/2+dEv-(Mv*((100-Ev*np.cos(thv)/(Mv*cv))**2+(Ev*np.sin(thv)/(Mv*cv))**2)/2+Ev)
-Esol=ev*brentq(lambda x: f(x*ev)/ev,0.9*dEv/ev,1.1*dEv/ev,xtol=1e-12); print('    emitted E - Ea [eV]:',(Esol-Eav)/ev)
-# (5) hydrogen
-MH=1.7e-27; dEH=1.9*ev; print('(5) umin H',dEH/(MH*cv), ' gap H [eV]',dEH**2/(MH*cv**2)/ev)
-print('    vrms H 300K', np.sqrt(3*8.3*300/1.0e-3))
+# ---- new (5): after-process velocities are perpendicular, KE conserved (equal-mass elastic collision) ----
+Ea_s,cth=sp.symbols('E_a costh',positive=True)
+umin_s=Ea_s/(M*c)
+cos_cond=Ea_s/(M*u*c)
+n=sp.Matrix([cos_cond, sp.sqrt(1-cos_cond**2)])
+U=sp.Matrix([u,0])
+vB=umin_s*n
+vA=U-umin_s*n
+print('vA.vB =',sp.simplify(vA.dot(vB)))
+print('|vA|^2 - (u^2-umin^2) =',sp.simplify(vA.dot(vA)-(u**2-umin_s**2)))
+print('KE balance =',sp.simplify(M*u**2/2 - M*vA.dot(vA)/2 - M*vB.dot(vB)/2))
+# full energy check incl. internal energy: dE(Ea) from absorption relation
+dE_of_Ea=Ea_s-Ea_s**2/(2*M*c**2)
+print('emission energy balance (A):',sp.simplify(M*u**2/2+dE_of_Ea-(M*vA.dot(vA)/2+Ea_s)))
+print('absorption energy balance (B):',sp.simplify(Ea_s-(dE_of_Ea+M*vB.dot(vB)/2)))
+print('u=umin -> vA =',sp.simplify(vA.subs(u,umin_s)).T)
+# numeric spot check with arbitrary values
+vals={M:57*1.66e-27,c:3e8,Ea_s:14.4e3*1.6e-19,u:100.0}
+print('numeric vA.vB',float(vA.dot(vB).subs(vals)),' |vA|',float(sp.sqrt(vA.dot(vA)).subs(vals)))

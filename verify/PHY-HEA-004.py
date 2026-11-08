@@ -30,9 +30,9 @@ q12=sp.simplify(e1*frac)   # σT1^4 あたり
 print('2灰色面の有効係数',sp.simplify(q12-1/(1/e1+1/e2-1)))
 assert sp.simplify(q12-1/(1/e1+1/e2-1))==0
 assert sp.simplify(q12.subs(e1,1)-e2)==0
-# (5) 数値: ε=0.05, T0=300 K 相当
+# 数値例（ε=0.05, T0=300 K）
 T0=300.0; e=0.05
-print('(5) Tp=',T0*(1+1/e)**0.25,' Ts(3)=',T0*(1/e)**0.25,' Ts(4)=',T0, ' 黒1枚 Tp=',T0*2**0.25)
+print('数値例 Tp=',T0*(1+1/e)**0.25,' Ts(3)=',T0*(1/e)**0.25,' Ts(4)=',T0, ' 黒1枚 Tp=',T0*2**0.25)
 # 時間発展で定常状態に落ち着くことの確認（熱容量を適当に与えて数値積分）
 from scipy.integrate import solve_ivp
 sv=5.67e-8; Av=1.0; Iv=sv*Av*T0**4
@@ -46,3 +46,19 @@ for case in (3,4):
     print('case',case,'定常 Tp,Ts =',so.y[0][-1],so.y[1][-1])
     assert abs(so.y[0][-1]-T0*(1+1/e)**0.25)<0.01
 print('OK')
+# ---- 新しい (5)：両面とも放射率 ε のシールド
+# すき間（黒体の探査機と ε の面）の有効係数は q12(e1=1,e2=ε)=ε，外面は ε
+s5=sp.solve([sp.Eq(I,A*q12.subs({e1:1,e2:eps})*sig*(Tp4-Ts4)),sp.Eq(I,A*eps*sig*Ts4)],[Tp4,Ts4],dict=True)[0]
+print('(5) Tp^4/T0^4=',sp.simplify(s5[Tp4]/T04),' Ts^4/T0^4=',sp.simplify(s5[Ts4]/T04))
+assert sp.simplify(s5[Tp4]/T04-2/eps)==0 and sp.simplify(s5[Ts4]/T04-1/eps)==0
+ratio=sp.simplify(s5[Tp4]/s3[Tp4]); print('比 (5)/(3)=',ratio)
+assert sp.simplify(ratio-2/(1+eps))==0 and sp.limit(ratio,eps,0)==2
+for ev_ in (0.01,0.3,0.9): assert float(ratio.subs(eps,ev_))>1
+# 時間発展でも同じ定常状態に落ち着く
+def rhs5(t,Y):
+    Tp,Ts=Y; qin=e*sv*Av*(Tp**4-Ts**4); qout=e*sv*Av*Ts**4
+    return [(Iv-qin)/1e4,(qin-qout)/1e3]
+so=solve_ivp(rhs5,[0,5e6],[300,100],method='LSODA',rtol=1e-10)
+print('case5 定常 Tp,Ts =',so.y[0][-1],so.y[1][-1],' 理論',T0*(2/e)**0.25,T0*(1/e)**0.25)
+assert abs(so.y[0][-1]-T0*(2/e)**0.25)<0.01 and abs(so.y[1][-1]-T0*(1/e)**0.25)<0.01
+print('OK (5)')

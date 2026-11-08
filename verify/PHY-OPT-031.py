@@ -34,5 +34,21 @@ sol=sp.solve(sp.Eq(sp.sqrt(ns**2-sp.sin(i)**2), ns-1+sp.cos(i)+Ks),ns)
 print('inverse sym:',[sp.simplify(s_) for s_ in sol])
 # small-angle approximate n from N at 30 deg (to show inaccuracy)
 ia=np.pi/6; napprox=tv*ia**2/(tv*ia**2-Nv*lv); print('small-angle approx n =',napprox)
-# mirror compensation: OPL change of round trip = N lam -> mirror moves N lam/2 toward H
-print('mirror shift (mm)', Nv*lv/2*1e3)
+# (5)(a) g(i)=sqrt(n^2-sin^2 i)-cos i : even, increasing on (0,pi/2)
+g=sp.sqrt(n**2-sp.sin(i)**2)-sp.cos(i)
+gp=sp.diff(g,i); print("g'(i) =",sp.simplify(gp))
+assert sp.simplify(gp-sp.sin(i)*(1-sp.cos(i)/sp.sqrt(n**2-sp.sin(i)**2)))==0
+for nv in [1.05,1.33,1.53,2.4]:
+    ii=np.linspace(1e-4,np.pi/2-1e-4,20001); gv=np.sqrt(nv**2-np.sin(ii)**2)-np.cos(ii)
+    assert np.all(np.diff(gv)>0)
+# (5)(b) limit i->90deg
+Nlim=sp.limit(N,i,sp.pi/2); print('N(90deg) =',sp.simplify(Nlim))
+assert sp.simplify(Nlim-2*t/lam*(sp.sqrt(n**2-1)-(n-1)))==0
+print(' n=1.53, t=1mm, lam=500nm: N max =',float(Nlim.subs({n:1.53,t:tv,lam:lv})))
+print(' path in glass at grazing: t/cos r ->',float((t/sp.cos(r)).subs({n:1.53,t:1,i:sp.pi/2-1e-9})),' n/sqrt(n^2-1)=',1.53/np.sqrt(1.53**2-1))
+# (5)(c) dN/dn and its small-angle form
+dNdn=sp.diff(N,n); print('dN/dn =',sp.simplify(dNdn))
+assert sp.simplify(dNdn-2*t/lam*(n/sp.sqrt(n**2-sp.sin(i)**2)-1))==0
+ser=sp.series(dNdn,i,0,4).removeO(); print('small i:',sp.simplify(ser)); assert sp.simplify(ser-t*i**2/(n**2*lam))==0
+print(' dN/dn at 30deg, n=1.53:',float(dNdn.subs({n:1.53,t:tv,lam:lv,i:sp.pi/6})))
+print('OK')

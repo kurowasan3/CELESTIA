@@ -3,7 +3,7 @@
  "schema": "celestia.problem/1",
  "field": "ATM",
  "unit": "ATM-02",
- "topic": "原子核の運動を考慮したボーア模型と He⁺・重水素のスペクトル線のずれ",
+ "topic": "原子核の運動を考慮したボーア模型（換算質量）と He⁺ のスペクトル線のずれ，ポジトロニウム",
  "course": "物理",
  "level": 4,
  "minutes": 25,
@@ -38,7 +38,7 @@
      },
      {
       "id": "4",
-      "tex": "重水素原子（原子核の質量を $2m_{\\rm p}$ とみなす）の $n=4\\to2$ の線の波長は，水素原子の線より何 nm 短いか．(3) の結果を用いて有効数字2桁で求めよ．"
+      "tex": "(i) 一般の $M$ について，原子核と電子の運動エネルギーの比 $\\dfrac{K_{\\rm N}}{K_{\\rm e}}$ と，G のまわりの角運動量の比 $\\dfrac{L_{\\rm N}}{L_{\\rm e}}$ を $m$，$M$ で表せ．$M\\to\\infty$ の極限で，(1) の結果が原子核を静止させたボーア模型に一致することを，これらの比を用いて説明せよ．\n  (ii) 電子と陽電子（質量 $m$，電荷 $+e$）が (1) と同じように重心のまわりを回る系（ポジトロニウム）を考える（$M=m$，$Z=1$）．同じ量子数の組の遷移で出る光の波長は，原子核が無限に重い水素原子の場合の何倍か．また，$n=1$ の状態で電子が G のまわりに描く円の半径は，原子核が無限に重い水素原子の $n=1$ の軌道半径 $a_\\infty$ の何倍か．"
      }
     ]
    }
@@ -51,7 +51,7 @@
    "kind": "diagram",
    "format": "svg",
    "src": "q-fig.svg",
-   "alt": "問題図：原子核の運動を考慮したボーア模型と He⁺・重水素のスペクトル線のずれ",
+   "alt": "問題図：原子核の運動を考慮したボーア模型（換算質量）と He⁺ のスペクトル線のずれ，ポジトロニウム",
    "caption": ""
   }
  ],
@@ -71,7 +71,7 @@
    },
    {
     "id": "4",
-    "tex": "$0.13$ nm"
+    "tex": "(i) $\\dfrac{K_{\\rm N}}{K_{\\rm e}}=\\dfrac{L_{\\rm N}}{L_{\\rm e}}=\\dfrac mM$．$M\\to\\infty$ でともに $0$ になり，原子核は G に止まって運動エネルギーも角運動量も電子だけがもつので，$\\mu\\to m$ で静止核の模型に一致する．　(ii) 波長は $2$ 倍（$\\mu=\\frac m2$ で $|E_n|$ が半分）．電子の円の半径は $\\dfrac r2=a_\\infty$ で $1$ 倍（2粒子の距離 $r$ は $2a_\\infty$）．"
    }
   ]
  },
@@ -82,13 +82,13 @@
    "blocks": [
     {
      "type": "text",
-     "tex": "\\textbf{(1) 換算質量}\n重心の定義から，電子と原子核の回転半径は $r_e=\\dfrac{M}{m+M}r$，$r_N=\\dfrac{m}{m+M}r$．電子の運動方程式（向心方向）は\n\\[ mr_e\\omega^2=\\frac{Ze^2}{4\\pi\\varepsilon_0r^2}\\quad\\Longrightarrow\\quad \\mu r\\omega^2=\\frac{Ze^2}{4\\pi\\varepsilon_0r^2}\\qquad(mr_e=\\mu r) \\]\n（原子核の運動方程式 $Mr_N\\omega^2=\\cdots$ も同じ式になる．）角運動量の和は\n\\[ m(r_e\\omega)r_e+M(r_N\\omega)r_N=\\frac{mM^2+Mm^2}{(m+M)^2}r^2\\omega=\\mu r^2\\omega=\\frac{nh}{2\\pi} \\]\n$\\omega=\\dfrac{nh}{2\\pi\\mu r^2}$ を運動方程式に代入して $\\dfrac{n^2h^2}{4\\pi^2\\mu r^3}=\\dfrac{Ze^2}{4\\pi\\varepsilon_0r^2}$，よって\n\\[ r=\\boldsymbol{\\frac{\\varepsilon_0h^2n^2}{\\pi\\mu Ze^2}} \\]\n運動エネルギーの和は $\\frac12m(r_e\\omega)^2+\\frac12M(r_N\\omega)^2=\\frac12\\mu r^2\\omega^2=\\dfrac{Ze^2}{8\\pi\\varepsilon_0r}$ なので\n\\[ E_n=\\frac{Ze^2}{8\\pi\\varepsilon_0r}-\\frac{Ze^2}{4\\pi\\varepsilon_0r}=-\\frac{Ze^2}{8\\pi\\varepsilon_0r}=\\boldsymbol{-\\frac{\\mu Z^2e^4}{8\\varepsilon_0^{\\,2}h^2n^2}} \\]\n原子核の運動を考えると，電子の質量 $m$ を換算質量 $\\mu$ に置き換えればよい．\n\n\\textbf{(2) 重なる線}\n$\\dfrac1\\lambda=\\dfrac{E_{n}-E_{n'}}{hc}=\\dfrac{\\mu e^4}{8\\varepsilon_0^{\\,2}h^3c}Z^2\\left(\\dfrac1{n'^2}-\\dfrac1{n^2}\\right)$．$\\mu=m$ とすると，He$^+$ の $2k\\to4$ では\n\\[ 2^2\\left(\\frac1{16}-\\frac1{4k^2}\\right)=\\frac14-\\frac1{k^2} \\]\nで，水素原子の $k\\to2$ と同じ波長になる．上の準位 $n$ が奇数の線（$5\\to4$，$7\\to4$，…）は対応する水素の線がなく，He$^+$ に特有である．\n\n\\textbf{(3) 質量比}\n同じ量子数の組では $\\lambda\\propto1/\\mu$，$\\mu=\\dfrac{m}{1+m/M}\\approx m\\left(1-\\dfrac mM\\right)$．よって\n\\[ \\frac{\\lambda_{\\rm H}-\\lambda_{\\rm He}}{\\lambda_{\\rm H}}=1-\\frac{\\mu_{\\rm H}}{\\mu_{\\rm He}}\\approx\\frac m{m_{\\rm p}}-\\frac m{4m_{\\rm p}}=\\frac34\\frac m{m_{\\rm p}} \\]\n\\[ \\frac m{m_{\\rm p}}=\\frac43\\times\\frac{0.199}{486.13}=5.46\\times10^{-4}\\qquad\\therefore\\ \\frac{m_{\\rm p}}m=\\boldsymbol{1.83\\times10^3} \\]\nZ の違う2つの系で「同じになるはずの線」を比べることで，$Z$ の効果が消え，原子核の質量の効果だけが取り出せる．\n\n\\textbf{(4) 重水素}\n同様に $\\dfrac{\\Delta\\lambda}{\\lambda}\\approx\\dfrac m{m_{\\rm p}}-\\dfrac m{2m_{\\rm p}}=\\dfrac m{2m_{\\rm p}}$ だから\n\\[ \\Delta\\lambda=486.13\\times\\frac{5.46\\times10^{-4}}2=\\boldsymbol{0.13\\ \\mathrm{nm}} \\]\n重水素の線は水素の線のすぐ短波長側に現れる．\\hfill$\\square$"
+     "tex": "\\textbf{(1) 換算質量}\n重心の定義から，電子と原子核の回転半径は $r_e=\\dfrac{M}{m+M}r$，$r_N=\\dfrac{m}{m+M}r$．電子の運動方程式（向心方向）は\n\\[ mr_e\\omega^2=\\frac{Ze^2}{4\\pi\\varepsilon_0r^2}\\quad\\Longrightarrow\\quad \\mu r\\omega^2=\\frac{Ze^2}{4\\pi\\varepsilon_0r^2}\\qquad(mr_e=\\mu r) \\]\n（原子核の運動方程式 $Mr_N\\omega^2=\\cdots$ も同じ式になる．）角運動量の和は\n\\[ m(r_e\\omega)r_e+M(r_N\\omega)r_N=\\frac{mM^2+Mm^2}{(m+M)^2}r^2\\omega=\\mu r^2\\omega=\\frac{nh}{2\\pi} \\]\n$\\omega=\\dfrac{nh}{2\\pi\\mu r^2}$ を運動方程式に代入して $\\dfrac{n^2h^2}{4\\pi^2\\mu r^3}=\\dfrac{Ze^2}{4\\pi\\varepsilon_0r^2}$，よって\n\\[ r=\\boldsymbol{\\frac{\\varepsilon_0h^2n^2}{\\pi\\mu Ze^2}} \\]\n運動エネルギーの和は $\\frac12m(r_e\\omega)^2+\\frac12M(r_N\\omega)^2=\\frac12\\mu r^2\\omega^2=\\dfrac{Ze^2}{8\\pi\\varepsilon_0r}$ なので\n\\[ E_n=\\frac{Ze^2}{8\\pi\\varepsilon_0r}-\\frac{Ze^2}{4\\pi\\varepsilon_0r}=-\\frac{Ze^2}{8\\pi\\varepsilon_0r}=\\boldsymbol{-\\frac{\\mu Z^2e^4}{8\\varepsilon_0^{\\,2}h^2n^2}} \\]\n原子核の運動を考えると，電子の質量 $m$ を換算質量 $\\mu$ に置き換えればよい．\n\n\\textbf{(2) 重なる線}\n$\\dfrac1\\lambda=\\dfrac{E_{n}-E_{n'}}{hc}=\\dfrac{\\mu e^4}{8\\varepsilon_0^{\\,2}h^3c}Z^2\\left(\\dfrac1{n'^2}-\\dfrac1{n^2}\\right)$．$\\mu=m$ とすると，He$^+$ の $2k\\to4$ では\n\\[ 2^2\\left(\\frac1{16}-\\frac1{4k^2}\\right)=\\frac14-\\frac1{k^2} \\]\nで，水素原子の $k\\to2$ と同じ波長になる．上の準位 $n$ が奇数の線（$5\\to4$，$7\\to4$，…）は対応する水素の線がなく，He$^+$ に特有である．\n\n\\textbf{(3) 質量比}\n同じ量子数の組では $\\lambda\\propto1/\\mu$，$\\mu=\\dfrac{m}{1+m/M}\\approx m\\left(1-\\dfrac mM\\right)$．よって\n\\[ \\frac{\\lambda_{\\rm H}-\\lambda_{\\rm He}}{\\lambda_{\\rm H}}=1-\\frac{\\mu_{\\rm H}}{\\mu_{\\rm He}}\\approx\\frac m{m_{\\rm p}}-\\frac m{4m_{\\rm p}}=\\frac34\\frac m{m_{\\rm p}} \\]\n\\[ \\frac m{m_{\\rm p}}=\\frac43\\times\\frac{0.199}{486.13}=5.46\\times10^{-4}\\qquad\\therefore\\ \\frac{m_{\\rm p}}m=\\boldsymbol{1.83\\times10^3} \\]\nZ の違う2つの系で「同じになるはずの線」を比べることで，$Z$ の効果が消え，原子核の質量の効果だけが取り出せる．\n\n\\textbf{(4)}　\\textbf{(i)}　$r_e=\\dfrac{M}{m+M}r$，$r_N=\\dfrac{m}{m+M}r$ で，角速度は共通の $\\omega$ だから\n\\[ \\frac{K_{\\rm N}}{K_{\\rm e}}=\\frac{\\frac12M(r_N\\omega)^2}{\\frac12m(r_e\\omega)^2}=\\frac{M}{m}\\cdot\\frac{m^2}{M^2}=\\boldsymbol{\\frac mM},\\qquad \\frac{L_{\\rm N}}{L_{\\rm e}}=\\frac{Mr_N^{\\,2}\\omega}{mr_e^{\\,2}\\omega}=\\boldsymbol{\\frac mM} \\]\n（どちらも，2粒子の運動量の大きさが等しい $m\\,r_e\\omega=M\\,r_N\\omega$ ことから，「同じ運動量なら運動エネルギーも半径×運動量も重い方が小さい」ことの表れである．）\n\n$M\\to\\infty$ では両方の比が $0$ になり，$r_N\\to0$：原子核は G に静止し，運動エネルギーも角運動量もすべて電子がもつ．このとき量子条件は「電子の角運動量 $=n\\dfrac h{2\\pi}$」，運動方程式は「電子が静止した原子核のまわりを半径 $r$ で回る式」になり，静止核のボーア模型そのものである．(1) の式でも $\\mu=\\dfrac{m}{1+m/M}\\to m$ となって一致する．逆に $M$ が有限だと，量子化された角運動量と運動エネルギーの一部（割合 $\\dfrac{m}{m+M}$）を原子核が受けもつ．\n\n\\textbf{(ii)}　$M=m$ では $\\mu=\\dfrac{m}{2}$．(1) より $E_n\\propto\\mu$ なので，すべての準位のエネルギーが，原子核が無限に重い水素原子（$\\mu=m$）の $\\dfrac12$ 倍になる．遷移のエネルギー差も $\\dfrac12$ 倍だから，波長は $\\boldsymbol{2}$ \\textbf{倍}になる．\n\n2粒子の距離は $r\\propto\\dfrac1\\mu$ なので，$n=1$ で $r=2a_\\infty$．電子は G のまわりを半径 $r_e=\\dfrac{M}{m+M}r=\\dfrac r2=a_\\infty$ で回るので，\\textbf{1倍}（$a_\\infty$ に等しい）．\n\n（補足）電子の描く円の大きさは水素原子と同じなのにエネルギーは半分になる．これは，陽電子も同じ大きさの円を回っていて，2粒子の距離が $2a_\\infty$ と倍になるため位置エネルギーが半分になり（運動エネルギーは (i) の比 $1$ より2粒子で等分され，合計は位置エネルギーの大きさの半分），束縛が弱くなるからである．(i) で見たとおり，原子核の質量が電子に近づくほど原子核の運動の効果は大きくなり，水素と重水素・He$^+$ のわずかなずれ（(3)）が，ポジトロニウムでは2倍という大きな違いになる．\\hfill$\\square$"
     }
    ]
   }
  ],
  "idea": {
-  "tex": "原子核の運動を考慮したボーア模型では電子の質量を換算質量に置き換えればよい．Z の違う水素様イオンで同じ波長になるはずの線（He$^+$ の $2k\\to4$ と H の $k\\to2$）を比べると Z の効果が消えて換算質量の差だけが残り，わずかなずれ $\\Delta\\lambda/\\lambda\\approx\\frac34m/m_{\\rm p}$ から電子と陽子の質量比が決まる．同じ考えで重水素の線のずれも予言できる．"
+  "tex": "原子核の運動を考慮したボーア模型では電子の質量を換算質量に置き換えればよい．Z の違う水素様イオンで同じ波長になるはずの線（He$^+$ の $2k\\to4$ と H の $k\\to2$）を比べると Z の効果が消えて換算質量の差だけが残り，わずかなずれ $\\Delta\\lambda/\\lambda\\approx\\frac34m/m_{\\rm p}$ から電子と陽子の質量比が決まる．原子核が担う運動エネルギーと角運動量の割合は $m/M$ で，極端な場合のポジトロニウム（$M=m$）では波長が2倍になる．"
  },
  "concepts": [
   "bohr-model",

@@ -19,4 +19,28 @@ def Fwater(h):
 for h in [0.06,h0,0.10]:
     print('h=',h,' F numeric',Fwater(h),' formula',rho*g*(V-Vc)-rho*g*h*A,' mg',m*g)
 assert abs(Fwater(h0)-m*g)<1e-9
-dp=rho*g*(0.20-h0); print('Δp for lift at 20 cm:',dp)
+
+# ---- (5) uniform overpressure dp below the hole ----
+zc=R-c; thc=np.arccos(-zc/R)
+def Fcap_uniform(dp):
+    # cap: polar angle thc..pi ; force = -p n dS, z-component
+    f=lambda t: -dp*np.cos(t)*2*np.pi*R**2*np.sin(t)
+    return quad(f,thc,np.pi,epsabs=1e-13,epsrel=1e-12)[0]
+def Fcap_hydro(h):
+    f=lambda t: -rho*g*(h-(zc+R*np.cos(t)))*np.cos(t)*2*np.pi*R**2*np.sin(t)
+    return quad(f,thc,np.pi,epsabs=1e-13,epsrel=1e-12)[0]
+for dp in [100.0,1234.0]:
+    assert abs(Fcap_uniform(dp)-dp*A)<1e-10
+print('(5) uniform pressure on cap -> dp*pi r^2 (projected area) OK')
+# (a) lift condition h <= h0 + dp/(rho g)
+dp=800.0; hcrit=h0+dp/(rho*g)
+for h in [hcrit-1e-3,hcrit+1e-3]:
+    net=Fwater(h)+Fcap_uniform(dp)-m*g
+    print('(5a) h=%.5f net up force=%.3e'%(h,net)); assert (net>0)==(h<hcrit)
+# (b) dp making total = rho g V; equals projected-area average of hydrostatic pressure on cap
+for h in [0.07,0.12]:
+    dpb=rho*g*(h+Vc/A)
+    tot=Fwater(h)+Fcap_uniform(dpb)
+    print('(5b) h=%.2f total=%.6f rho g V=%.6f  hydro-on-cap=%.6f dp*A=%.6f'%(h,tot,rho*g*V,Fcap_hydro(h),dpb*A))
+    assert abs(tot-rho*g*V)<1e-9 and abs(Fcap_hydro(h)-dpb*A)<1e-9
+print('OK')

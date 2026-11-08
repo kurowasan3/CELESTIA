@@ -9,21 +9,11 @@
 <text x="64.0" y="76.8" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">4</text>
 <line x1="70.0" y1="115.5" x2="510.0" y2="115.5" stroke="#888" stroke-width="1" stroke-dasharray="4,4"/>
 <text x="64.0" y="120.5" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">3.2</text>
-<line x1="70.0" y1="83.8" x2="510.0" y2="83.8" stroke="#888" stroke-width="1" stroke-dasharray="4,4"/>
-<text x="64.0" y="88.8" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">3.78</text>
 <circle cx="182.8" cy="71.8" r="4" fill="#222"/>
 <text x="182.8" y="59.8" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">半球</text>
 <circle cx="115.8" cy="115.5" r="4" fill="#222"/>
 <text x="149.8" y="135.5" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">A(1/2)</text>
 <circle cx="464.9" cy="115.5" r="4" fill="#222"/>
 <text x="464.9" y="105.5" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">B(2)</text>
-<circle cx="115.8" cy="115.5" r="4" fill="#c0392b"/>
-<text x="115.8" y="105.5" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="middle"></text>
-<circle cx="292.1" cy="88.6" r="4" fill="#c0392b"/>
-<text x="306.1" y="110.6" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="middle">B始(3/2)</text>
-<circle cx="140.2" cy="84.0" r="4" fill="#c0392b"/>
-<text x="118.2" y="78.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="middle">A終</text>
-<circle cx="267.7" cy="84.0" r="4" fill="#c0392b"/>
-<text x="265.7" y="72.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="middle">B終</text>
-<text x="500" y="276" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">カッコ内は <tspan font-family="Times New Roman, serif" font-style="italic">h</tspan>/<tspan font-family="Times New Roman, serif" font-style="italic">b</tspan>　赤：(5) の始めと終わり</text>
+<text x="500" y="276" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">カッコ内は <tspan font-family="Times New Roman, serif" font-style="italic">h</tspan>/<tspan font-family="Times New Roman, serif" font-style="italic">b</tspan></text>
 </svg>

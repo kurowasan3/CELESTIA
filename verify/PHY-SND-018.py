@@ -17,13 +17,22 @@ for rr,dd in [(5.0,2.0),(5.0,10.0)]:
     f=sp.lambdify(th,vsp.subs({r:rr,d:dd,w:2.0}),'numpy'); vv=f(t)
     i=np.argmax(vv); j=np.argmin(vv)
     print(rr,dd,'max vSP',vv[i],'at th',t[i],'min',vv[j],'at',t[j],' expected',2.0*min(rr,dd), np.arccos(min(rr,dd)/max(rr,dd)))
-# numeric inverse problem
-V=340.0; fmax=700.0; fmin=660.0; wv=2.0; rv=5.0; tau=2*np.pi/3
-f0=(fmax+fmin)/2; D=V*(fmax-fmin)/(fmax+fmin)/wv
-q=-np.cos(wv*tau/2)
-print('f0',f0,'D',D,'q',q,'inside cand d=q r',q*rv,'(needs D=d=',q*rv,') outside d=r/q',rv/q,'(needs D=r=',rv,')')
-# simulate actual observed frequency for d=10 and check fmax,fmin,tau
-t=np.linspace(0,np.pi*2/wv,2000001); thv=wv*t
-f=sp.lambdify(th,vsp.subs({r:rv,d:10.0,w:wv}),'numpy'); vv=f(thv)
-fo=f0*(1-vv/V); i=np.argmax(fo); j=np.argmin(fo)
-print('sim fmax',fo[i],'fmin',fo[j],'tau(min->max)',t[i]-t[j])
+# (4) 新設問：円に関する反転点 S'(d'=r^2/d) では v'_SP = (r/d) v_SP（すべての θ）
+dp=r**2/d
+vsp_p=vsp.subs(d,dp)
+print("v'_SP / v_SP =",sp.simplify(vsp_p/vsp))
+assert sp.simplify(vsp_p/vsp - r/d)==0
+# 相似：S'P = (r/d) SP
+SPlen=sp.sqrt(SP.dot(SP)); SPp=sp.sqrt((P-sp.Matrix([dp,0])).dot(P-sp.Matrix([dp,0])))
+assert sp.simplify(SPp**2-(r/d)**2*SPlen**2)==0
+# 数値：極値の θ が一致し，振れ幅の比が r/d（d<r の内側の音源と外側の反転点）
+for rr,dd in [(5.0,2.5),(5.0,1.0),(3.0,2.0)]:
+    t=np.linspace(0,2*np.pi,400001)
+    f1=sp.lambdify(th,vsp.subs({r:rr,d:dd,w:2.0}),'numpy')(t)
+    f2=sp.lambdify(th,vsp.subs({r:rr,d:rr**2/dd,w:2.0}),'numpy')(t)
+    assert np.argmax(f1)==np.argmax(f2) and np.argmin(f1)==np.argmin(f2)
+    ratio=(f2.max()-f2.min())/(f1.max()-f1.min())
+    print(rr,dd,'extremum th',t[np.argmin(f1)],t[np.argmin(f2)],' amplitude ratio',ratio,' r/d',rr/dd)
+    assert abs(ratio-rr/dd)<1e-9
+    assert abs(f1.max()-2.0*dd)<1e-6 and abs(f2.max()-2.0*rr)<1e-6   # (2)(3) の omega d, omega r
+print('PHY-SND-018 (4) OK')

@@ -25,3 +25,29 @@ print('direct: perihelion with w=wmax:',orbit(wmax/VE,T=4)[0],' target',ratio)
 print('transfer: aphelion with w1:',orbit(w1/VE,T=40)[1])
 print('from 8rE with wamax: perihelion',orbit(wamax/VE,r0=8.0,T=60)[0],' target',ratio)
 assert abs(orbit(wmax/VE,T=4)[0]-ratio)<1e-5
+
+# ---- (3) general apoapsis k r_E ----
+k_,eps_=sp.symbols('k epsilon',positive=True)
+w1s,wq=sp.symbols('w1 wq',positive=True)
+sol3=sp.solve([sp.Eq(w1s,k_*wq),sp.Eq(w1s**2/2-V**2,wq**2/2-V**2/k_)],[w1s,wq],dict=True)
+sol3=[q for q in sol3 if sp.simplify(q[w1s]-V)!=0]
+print('(3) w1 =',[sp.simplify(q[w1s]) for q in sol3])
+w1f=V*sp.sqrt(2*k_/(k_+1)); wqf=V*sp.sqrt(2/(k_*(k_+1)))
+assert any(sp.simplify(q[w1s]-w1f)==0 and sp.simplify(q[wq]-wqf)==0 for q in sol3)
+# perihelion from Q with speed w' : rp/(k rE) = w'^2/(2VQ^2-w'^2), VQ^2=V^2/k ; set rp = eps rE
+wp=sp.symbols('wp',positive=True)
+wpmax=sp.solve(sp.Eq(wp**2/(2*V**2/k_-wp**2),eps_/k_),wp)[0]
+assert sp.simplify(wpmax-V*sp.sqrt(2*eps_/(k_*(k_+eps_))))==0
+dwq=wqf-wpmax
+print('(3) k->oo: u ->',sp.limit(w1f-V,k_,sp.oo),'  dwQ ->',sp.limit(dwq,k_,sp.oo))
+ve_,VE_=11.2,30.0
+tot=lambda kk: np.hypot(ve_,VE_*(np.sqrt(2*kk/(kk+1))-1))+VE_*(np.sqrt(2/(kk*(kk+1)))-np.sqrt(2*ratio/(kk*(kk+ratio))))
+ks=np.exp(np.linspace(np.log(1.01),np.log(1e6),400)); tv=tot(ks)
+assert np.all(np.diff(tv)<0); print('(3) total decreasing in k; k=8:',tot(8.0),' k=1e6:',tot(1e6),' escape v0:',v0_esc)
+assert abs(tot(8.0)-(v01+dv2))<1e-9
+# numeric orbit: from 1 rE with w1(k) reaches k ; from k with wpmax reaches eps (units rE=1, VE=1)
+for kk in [3.0,20.0]:
+    w1n=np.sqrt(2*kk/(kk+1)); wpn=np.sqrt(2*ratio/(kk*(kk+ratio)))
+    print('(3) k=%g aphelion %.6f ; perihelion from Q %.6f (target %.6f)'%(kk,orbit(w1n,T=4*np.pi*((kk+1)/2)**1.5)[1],orbit(wpn,r0=kk,T=2*np.pi*(kk/2)**1.5*1.2)[0],ratio))
+# time to Q: half period with a=(k+1)/2 rE
+print('(3) time to Q for k=8: %.3f T_E'%(0.5*((8+1)/2)**1.5))

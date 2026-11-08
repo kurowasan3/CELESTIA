@@ -48,3 +48,24 @@ def net2(x):
 sol2=fsolve(lambda z: net2(np.array(z)*1e-6)/W,[0,-0.1],xtol=1e-13)*1e-6
 print('perp-only numeric eq:',sol2,' analytic:',xa,ya, ' rel.diff',(sol2-np.array([xa,ya]))/np.array([xa,ya]))
 print('relative size of neglected axial part ~ delta/2 =',(nn-1)*d1/(nn*rr))
+
+# ---- new (5): validity condition and n<1 instability ----
+Ms,gs,cs,Ps,bt,al_s,rs,ns=sp.symbols('M g c P beta alpha r n',positive=True)
+d2s=ns*Ms*gs*cs*rs/(4*bt*(ns-1)*Ps*sp.sin(al_s))
+print('d2/r =',sp.simplify(d2s/rs),' (r cancels)')
+print('numeric RHS nMgc/(4 beta (n-1) P) =',nn*W*cc/(4*beta*(nn-1)*Pw),' vs sin30 =',np.sin(al))
+# n<1: exact-ray model gives force away from beam; equilibrium (if any) unstable
+nb=0.75
+def F_tot(O,nnv,bt=1.0):
+    return ray_force(O,F0,u1,Pw,nnv,rr,cc)+ray_force(O,F0,u2,bt*Pw,nnv,rr,cc)
+O_test=np.array([0.0,-3e-8])
+Fd=ray_force(O_test,F0,u1,Pw,nb,rr,cc); perp=O_test-np.dot(O_test,u1)*u1
+print('n<1: force . (unit vector line->O) =',np.dot(Fd,perp/np.linalg.norm(perp)),'(>0 means pushed away from beam)')
+kb=2*(nb-1)*Pw/(nb*cc*rr)
+# find equilibrium above F (O above both beams) and check stiffness signs numerically
+sol3=fsolve(lambda z: (F_tot(np.array(z)*1e-6,nb)+np.array([0,-W]))/W,[0,0.05],xtol=1e-13)*1e-6
+print('n<1 equilibrium:',sol3,' residual',F_tot(sol3,nb)+np.array([0,-W]))
+hh=1e-9
+kxn=-(F_tot(sol3+np.array([hh,0]),nb)[0]-F_tot(sol3-np.array([hh,0]),nb)[0])/(2*hh)
+kyn=-(F_tot(sol3+np.array([0,hh]),nb)[1]-F_tot(sol3-np.array([0,hh]),nb)[1])/(2*hh)
+print('n<1 stiffness kx,ky (negative => unstable):',kxn,kyn,' predicted',2*kb*np.cos(al)**2,2*kb*np.sin(al)**2)

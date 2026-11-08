@@ -19,3 +19,21 @@ Ptot=r0*sol[I]**2+Rw*(sol[I]-i)**2+(sol[r]+rA)*i**2+Pchem
 print('energy balance check:',sp.simplify(Ptot-Psup))
 # direction before contact: potentials (P=0): Q at -drop, X's negative terminal (via A) at -Ex  -> A-side higher -> current from X side to Q
 print('V_Q=',-drop,' V_Xminus=',-Ex)
+
+# ---- (5) rewritten: Thevenin equivalent vs. real power bookkeeping ----
+E0s,r0s,Rws,isym=sp.symbols('E_0 r_0 R_w i',positive=True)
+Is=(E0s+Rws*isym)/(r0s+Rws)
+assert sp.simplify(E0s-(r0s*Is+Rws*(Is-isym)))==0
+P0=E0s**2/(r0s+Rws); VT=Rws*E0s/(r0s+Rws); rT=r0s*Rws/(r0s+Rws)
+print('(5a) E0*I - (P0 + VT*i) =',sp.simplify(E0s*Is-(P0+VT*isym)))
+assert sp.simplify(E0s*Is-(P0+VT*isym))==0
+# external power is the same in both descriptions: VPQ*i
+VPQ_real=Rws*(Is-isym); VPQ_th=VT-rT*isym
+assert sp.simplify(VPQ_real-VPQ_th)==0
+internal_real=sp.simplify(r0s*Is**2+Rws*(Is-isym)**2); internal_th=rT*isym**2
+print('     real internal heat - thevenin internal heat =',sp.factor(sp.simplify(internal_real-internal_th)),' (= P0, independent of i)')
+assert sp.simplify(internal_real-internal_th-P0)==0
+nv={E0s:E0,r0s:r0,Rws:Rw,isym:i}
+print('     numbers: P0',P0.subs(nv),' VT i',(VT*isym).subs(nv),' E0 I',(E0s*Is).subs(nv),' VPQ i',(VPQ_th*isym).subs(nv),
+      ' real internal',internal_real.subs(nv),' thevenin internal',internal_th.subs(nv))
+print('DCC-007 (5) OK')

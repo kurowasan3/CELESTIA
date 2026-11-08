@@ -18,17 +18,29 @@ rn4=sp.simplify((rn**4).subs(hb**2,hbsq).subs(subs).subs(m,mu*me).subs(hb,sp.sqr
 print('r_n^4 =',sp.simplify(rn4))
 hw=sp.simplify((hb*w).subs(subs).subs(m,mu*me).subs(hb,sp.sqrt(hbsq)))
 print('hbar w =',hw)
-# numbers
-num={a0:5.3e-11,EH:13.6,mu:207,Z:82,R:7.1e-15}
-r1in=float((rn4.subs(n,1).subs(num))**sp.Rational(1,4)); r2in=float((rn4.subs(n,2).subs(num))**sp.Rational(1,4))
-r1pt=5.3e-11/(207*82); r2pt=4*r1pt
-print('inside r1,r2 =',r1in,r2in,' point r1,r2=',r1pt,r2pt,' R=',7.1e-15)
-hwv=float(hw.subs(num)); E1=hwv-3*13.6*5.3e-11*82/7.1e-15; E2=-207*82**2*13.6/4
-E1pt=-207*82**2*13.6
-print('hbar w [MeV]',hwv/1e6,' E1in',E1/1e6,' E2out',E2/1e6,' photon',(E2-E1)/1e6,' point photon',(E2-E1pt)/1e6, 'ratio',(E2-E1)/(E2-E1pt))
-# independent numeric check in SI
-kk=8.99e9; ee=1.602e-19; mme=9.109e-31; hbar=1.0546e-34
-mmu=207*mme; Rn=7.1e-15; Zz=82
-w_=np.sqrt(kk*Zz*ee**2/(mmu*Rn**3)); print('SI hbar w MeV',hbar*w_/ee/1e6, ' r1',np.sqrt(hbar/(mmu*w_)))
 # continuity check of energy at r=R between models? E_out(r)= -kZe^2/(2r); E_in(r)= m w^2 r^2 - 3kZe^2/(2R); at r=R both -kZe^2/(2R)
 print(sp.simplify((m*w**2*R**2-3*k*Z*e**2/(2*R))+k*Z*e**2/(2*R)))
+
+# ---- new (4): self-consistency equivalence and energy shift ----
+rho,RR,y,K=sp.symbols('rho R y K',positive=True)
+# s^4 = rho R^3  (from r_n^4 = n^2 a0 R^3/(mu Z) and rho = n^2 a0/(mu Z))
+print('s^4 - rho R^3 =',sp.simplify(rn4 - (n**2*a0/(mu*Z))*R**3))
+for rv in [0.3,0.9,1.0,1.7,5.0]:
+    sv=(rv*1.0**3)**0.25   # R=1
+    assert (sv<1.0)==(rv<1.0) or abs(rv-1)<1e-12
+# energies with K=kZe^2, m w^2 = K/R^3
+s_=(rho*RR**3)**sp.Rational(1,4)
+E3=K/RR**3*s_**2-3*K/(2*RR); E1=-K/(2*rho)
+delta=sp.simplify((E3-E1).subs(rho,RR/y**2))
+target=K/RR*(y-1)**2*(y+2)/(2*y)
+print('delta - target =',sp.simplify(delta-target))
+# K = 2 Z EH a0 -> delta = Z EH a0/R (y-1)^2(y+2)/y
+print('K check (k e^2=2EH a0):',sp.simplify((k*Z*e**2).subs(subs)-2*Z*EH*a0))
+# also check E3 directly from sympy model expression En (n hbar w - 3kZe^2/2R) with rho=n^2 hbar^2/(m k Z e^2)
+rho_expr=n**2*hb**2/(m*k*Z*e**2)
+d_direct=sp.simplify(En - (-k*Z*e**2/(2*rho_expr)))
+yv=sp.sqrt(R/rho_expr)
+print('direct delta - formula =',sp.simplify(d_direct - (k*Z*e**2/R*(yv-1)**2*(yv+2)/(2*yv))))
+f=sp.lambdify(y,(y-1)**2*(y+2)/y)
+ys=np.linspace(0.01,10,2000); assert (f(ys)>=-1e-15).all(); print('delta>=0 on grid; delta(1)=',f(1.0))
+print('series near y=1:',sp.series((y-1)**2*(y+2)/y,y,1,3))

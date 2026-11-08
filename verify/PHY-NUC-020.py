@@ -21,14 +21,24 @@ rng=np.random.default_rng(1)
 for Av in [1,12]:
     c=rng.uniform(-1,1,2_000_000); rr=(Av**2+2*Av*c+1)/(Av+1)**2
     print('A',Av,'MC mean',rr.mean(),'MC <ln>',np.log(rr).mean(),' alpha',((Av-1)/(Av+1))**2)
-L=np.log(2.0e6/0.025); print('ln ratio',L,'N_H',L/1,'N_C',L/float(xi_ans.subs(A,12)),'N_H naive',L/np.log(2))
 # with given table values ln2=0.693, ln10=2.303, ln11=2.398, ln13=2.565
 lnal=2*(2.398-2.565); alv=(11/13)**2; print('alpha',alv,'xi from table',1+alv*lnal/(1-alv))
-print('ln(8e7) from table',3*0.693+7*2.303)
-# MC simulation of slowing down histories (A=1): median collisions to go 2MeV->0.025eV
+
+# ---- new (5): N'/N, Jensen inequality, heavy-nucleus limit ----
+c_=(1+al)/2
+diff_=sp.simplify(xi_ans+sp.log(c_))   # xi - log(2/(1+alpha)) > 0 ?
+for Av in [1.0001,1.5,2,4,12,50,200,2000]:
+    val=float(diff_.subs(A,Av)); print(' A=%g  xi - log(2/(1+alpha)) = %.3e   N\'/N = %.5f'%(Av,val,float((xi_ans/(-sp.log(c_))).subs(A,Av))))
+dl=sp.symbols('delta',positive=True)
+xi_d=1+(1-dl)*sp.log(1-dl)/dl
+print('xi series in delta:',sp.series(xi_d,dl,0,3))
+print('log(2/(1+alpha)) series:',sp.series(-sp.log(1-dl/2),dl,0,3))
+print('N\'/N series:',sp.series(xi_d/(-sp.log(1-dl/2)),dl,0,2))
+eA=sp.symbols('e_A',positive=True)  # 1/A
+print('xi in 1/A:',sp.series(xi_ans.subs(A,1/eA),eA,0,2))
+print('hydrogen N\'/N =',1/np.log(2))
+# Monte Carlo: product of many ratios -> typical log decrement per collision = xi, not -log(mean)
 for Av in [1,12]:
-    N=20000; E=np.full(N,2.0e6); cnt=np.zeros(N,int); alive=np.ones(N,bool)
-    while alive.any():
-        c=rng.uniform(-1,1,alive.sum()); E[alive]*= (Av**2+2*Av*c+1)/(Av+1)**2; cnt[alive]+=1
-        alive=E>0.025
-    print('A',Av,'mean collisions',cnt.mean(),'median',np.median(cnt))
+    Nc=400; trials=4000
+    c=rng.uniform(-1,1,(trials,Nc)); rr=(Av**2+2*Av*c+1)/(Av+1)**2
+    print(' A',Av,' median of -log(prod)/N =',np.median(-np.log(rr).sum(1)/Nc),' xi=',float(xi_ans.subs(A,Av)) if Av>1 else 1.0,' -log(mean)=',-np.log(rr.mean()))

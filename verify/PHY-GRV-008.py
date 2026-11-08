@@ -25,15 +25,28 @@ print('    in delta:', expr, ' series:', sp.series(expr, d, 0, 2))
 g=9.8; Rn=6.4e6; Omn=7.3e-5; cn=3.0e8
 dn = Omn**2*Rn/g
 print('    delta=',dn,' shift km =', 1.5*Rn*dn/2/1e3, ' exact shift km=', (1.5*Rn - 3*Rn/(2*(1+dn/2)))/1e3)
-# (5) geostationary
-GMn=g*Rn**2
-rg=(GMn/Omn**2)**(1/3)
-sat_g = 1 - GMn/(cn**2*rg) - (Omn*rg)**2/(2*cn**2)
-gnd_g = 1 - GMn/(cn**2*Rn) - (Omn*Rn)**2/(2*cn**2)
-x = sat_g-gnd_g
-print('(5) rg/R=',rg/Rn,' ratio-1=',x,' per day us=',x*86400*1e6)
-# alternative: rotating-frame potential (grav + centrifugal), both at rest
-pot = lambda rr: -GMn/rr - 0.5*Omn**2*rr**2
-print('    rotating frame check:', (pot(rg)-pot(Rn))/cn**2)
-# symbolic form of (5)
-print('    symbolic:', sp.simplify((rate(-G*M/r,(Om*r)**2)-gnd2).subs(r,(G*M/Om**2)**sp.Rational(1,3))))
+# ---- (5) elliptical orbit, semi-major axis a (no Earth rotation) ----
+a=sp.symbols('a',positive=True)
+v2=G*M*(2/r-1/a)
+satE=rate(-G*M/r, v2)
+ratioE=sp.expand(satE-gnd)   # first order
+print('(5) ratio-1 =',sp.simplify(ratioE))
+assert sp.simplify(ratioE-G*M/c**2*(1/R-2/r+1/(2*a)))==0
+assert sp.simplify(ratioE.subs(a,r)-sp.expand(sat-gnd))==0
+# numeric: integrate Kepler orbit, check <1/r>=1/a and mean rate equals circular radius a
+import numpy as np
+from scipy.integrate import solve_ivp
+GMv=1.0; rp_=1.0; e_=0.6; av=rp_/(1-e_); vp=np.sqrt(GMv*(1+e_)/rp_)
+def rhs(t,y):
+    x,yy,vx,vy=y; d=np.hypot(x,yy); return [vx,vy,-GMv*x/d**3,-GMv*yy/d**3]
+T=2*np.pi*np.sqrt(av**3/GMv)
+so=solve_ivp(rhs,[0,T],[rp_,0,0,vp],rtol=1e-12,atol=1e-12,dense_output=True)
+ts=np.linspace(0,T,200001); Y=so.sol(ts); rr=np.hypot(Y[0],Y[1]); vv2=Y[2]**2+Y[3]**2
+inv=np.trapezoid(1/rr,ts)/T
+print('(5) <1/r>=%.8f 1/a=%.8f'%(inv,1/av)); assert abs(inv-1/av)<1e-6
+Rv=0.5; cc=1.0  # units: rates measured as coefficient of 1/c^2
+inst=(1/Rv) - 1/rr - vv2/2      # (ratio-1)*c^2/GM with GM=1 (A at rest at R)
+print('(5) mean rate coeff=%.8f  circular a: %.8f'%(np.trapezoid(inst,ts)/T, 1/Rv-1.5/av))
+assert abs(np.trapezoid(inst,ts)/T-(1/Rv-1.5/av))<1e-6
+imax=np.argmax(inst); print('(5) fastest at r=%.4f (apogee %.4f)'%(rr[imax],av*(1+e_)))
+assert abs(rr[imax]-av*(1+e_))<1e-3

@@ -35,3 +35,28 @@ for y0f in (0.70,0.74,0.76,0.80):
         return [v,(Pg-liq)/1e-3]
     sol=solve_ivp(rhs,[0,2],[y0+1e-4,0],max_step=1e-3)
     print('y0',y0f,'max disp',np.max(np.abs(sol.y[0]-y0)))
+# ---- 新しい (6)：一般の比熱比 γ で，吸熱 0 の高さと安定限界が一致する
+gm=sp.symbols('gamma',positive=True)
+dQg=n*R*sp.diff(T,y)/(gm-1)+P*S
+yq=sp.solve(sp.factor(dQg),y); print('(6) 吸熱0:',yq)
+dFg=rho*g*S-gm*P*S/y
+ys=sp.solve(dFg,y); print('    安定限界:',ys)
+ycg=gm*(a+H)/(gm+1)
+assert len(yq)==1 and len(ys)==1 and sp.simplify(yq[0]-ycg)==0 and sp.simplify(ys[0]-ycg)==0
+assert sp.simplify(ycg.subs(gm,sp.Rational(5,3))-yc)==0
+width=sp.simplify(ycg-ym); print('    幅',sp.factor(width),' γ→1:',sp.limit(width,gm,1))
+assert sp.simplify(width-(gm-1)*(a+H)/(2*(gm+1)))==0 and sp.limit(width,gm,1)==0
+# 数値：γ=7/5, a=0.2, H=1 で y_c の前後でモル比熱の符号と断熱変位への応答を調べる
+gv=1.4; an,Hn=0.2,1.0; ycv=gv*(an+Hn)/(gv+1)
+Cf=sp.lambdify(y,sp.simplify((dQg/(n*sp.diff(T,y))).subs({gm:gv,a:an,H:Hn})))
+print('    γ=1.4: yc=',ycv,' C/R at ym+0.01:',Cf(0.61)/1,' at yc+0.01:',Cf(ycv+0.01))
+for y0f,expect in ((ycv-0.02,'stable'),(ycv+0.02,'unstable')):
+    P0g=an+Hn-y0f
+    def rhs(t,s_):
+        yy,v=s_; Pg=P0g*(y0f/yy)**gv
+        liq=(an+Hn-yy) if yy>=y0f else (an+Hn-y0f)
+        return [v,(Pg-liq)/1e-3]
+    so=solve_ivp(rhs,[0,1],[y0f+1e-4,0],max_step=1e-3)
+    md=np.max(np.abs(so.y[0]-y0f)); print('    y0=',round(y0f,3),expect,' max disp',md)
+    assert (md<1e-3) if expect=='stable' else (md>1e-2)
+print('OK (6)')

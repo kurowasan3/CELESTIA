@@ -22,4 +22,21 @@ t05=np.arcsin(5*lam0/(2*D)); print('(3) approx formula n=5',np.degrees(lc/lam0*n
 lp=2*D*np.sin(np.radians(64.0))/5; dL=lp-lam0
 phi=np.degrees(np.arccos(1-dL/lc)); print('(4) dlam pm',dL*1e12,' phi',phi)
 # (5) visible
-r=lc/500e-9; print('(5) rel',r,' dtheta at 75 deg (rad)',r*np.tan(np.radians(75)),' deg',np.degrees(r*np.tan(np.radians(75))))
+r=lc/500e-9; print('(remark: visible light) rel',r,' dtheta at 75 deg (rad)',r*np.tan(np.radians(75)),' deg',np.degrees(r*np.tan(np.radians(75))))
+
+# ---- new (5): wavelength condition for resolving Compton shift; atom recoil ----
+lc_s,phi_s,tm,dth_s,lam_s=sp.symbols('lambda_C phi theta_max delta_theta lambda',positive=True)
+cond=sp.solve(sp.Eq(lc_s*(1-sp.cos(phi_s))/lam_s*sp.tan(tm),dth_s),lam_s)[0]
+print('lambda_max =',cond)
+# illustrate: with delta_theta = 1e-3 rad, theta_max=75deg, phi=90deg
+lmax=lc*(1-0)*np.tan(np.radians(75))/1e-3; print('lambda_max (dtheta=1e-3 rad) =',lmax,'m  (X-ray ok, visible 5e-7 m not)')
+print('relative change visible:',lc/500e-9)
+# Compton formula with recoiling mass M: derive and compare
+h_,c_,Mr,E0,E1=sp.symbols('h c M E0 E1',positive=True)
+# photon E0 -> E1 at angle phi on mass Mr at rest (relativistic): 1/E1 - 1/E0 = (1-cos)/(Mr c^2)
+p0=E0/c_; p1=E1/c_
+# energy: E0 + Mr c^2 = E1 + sqrt((Mr c^2)^2 + (p0^2+p1^2-2p0p1cos) c^2)
+eq=sp.Eq((E0+Mr*c_**2-E1)**2,(Mr*c_**2)**2+(p0**2+p1**2-2*p0*p1*sp.cos(phi_s))*c_**2)
+sol=sp.solve(eq,E1)[0]
+dlam=sp.simplify(h_*c_/sol-h_*c_/E0); print('Delta lambda for recoil mass M =',dlam)
+me=9.109e-31; Mc=12*1.6605e-27; print('m/M for carbon:',me/Mc,'  atomic shift (pm) at 90deg:',lc*me/Mc*1e12)

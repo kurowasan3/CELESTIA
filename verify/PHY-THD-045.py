@@ -23,3 +23,19 @@ for vs in [1e-3,2e-3,4e-3,0.5e-3]:
     Wg,p,N=total_work(Vt,vs,P0,a)
     print(f'v={vs*1e3}L N={N} pN/p0={p/P0:.4f} Wgas={Wg:.2f}J  Whand={Wg-P0*N*vs:.2f}J')
 print('closed form Wgas=',a*P0*Vt*math.log(a),' Whand=',P0*Vt*(a*math.log(a)-(a-1)))
+# ---- 新しい (6)：等温でゆっくり膨張させて取り出せる仕事 = W_h（可逆），a=1+ε で W_h ≈ p0 V ε^2/2
+aa,eps_,Vs,p0s=sp.symbols('a epsilon V p_0',positive=True)
+Xv=sp.symbols('X',positive=True)
+Wexp=sp.integrate(aa*p0s*Vs/Xv,(Xv,Vs,aa*Vs))-p0s*(aa-1)*Vs
+Wh=p0s*Vs*(aa*sp.log(aa)-(aa-1))
+assert sp.simplify(Wexp-Wh)==0
+ser=sp.series(Wh.subs(aa,1+eps_),eps_,0,3).removeO(); print('(6) W_max = W_h；a=1+ε:',sp.simplify(ser))
+assert sp.simplify(ser-p0s*Vs*eps_**2/2)==0
+# 数値：等温膨張を細かい段階に分けて直接積分し，手が受け取る仕事を計算 → 上の W_h に一致
+nRT=a*P0*Vt; Wout=quad(lambda x:nRT/x-P0,Vt,a*Vt)[0]
+print('   数値: 膨張で受け取る仕事',Wout,' W_h',P0*Vt*(a*math.log(a)-(a-1)))
+assert abs(Wout-P0*Vt*(a*math.log(a)-(a-1)))<1e-6
+for e_ in (1e-2,1e-3):
+    ex=P0*Vt*((1+e_)*math.log(1+e_)-e_); print('   ε=',e_,' W_h/(p0Vε^2/2)=',ex/(P0*Vt*e_**2/2))
+    assert abs(ex/(P0*Vt*e_**2/2)-1)<e_
+print('OK (6)')

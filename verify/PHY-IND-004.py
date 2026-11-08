@@ -26,3 +26,19 @@ for v0n in [3*vcn,1.5*vcn]:
     print('v0/vc=',v0n/vcn,' v_final/vc=',s.y[1,-1]/vcn,' (expect',v0n/vcn-1,')')
 s=solve_ivp(rhs,[0,1e6],[A,0.999*vcn],rtol=1e-11,atol=1e-14)
 print('just below vc: final v',s.y[1,-1],'x',s.y[0,-1])
+# (4) general v0>vc: v_inf=v0-vc, Joule heat H=m vc (v0 - vc/2) = m vc (v0+v_inf)/2, computed as integral of F v dt
+def rhs2(t,y):
+    xx,vv,H=y; G=A**4/(xx**2*(xx+A)**2)
+    F=K*G*vv          # braking force per unit mass (m=1)
+    return [vv,-F,F*vv]
+for r0 in [1.2,2.0,3.0,5.0]:
+    v0n=r0*vcn
+    s=solve_ivp(rhs2,[0,1e5],[A,v0n,0.0],rtol=1e-11,atol=1e-13)
+    vinf=s.y[1,-1]; H=s.y[2,-1]
+    Hf=vcn*(v0n-vcn/2)
+    print(f'v0/vc={r0}: v_inf/vc={vinf/vcn:.6f} (expect {r0-1})  H={H:.6e} formula={Hf:.6e}  m*vc*(v0+vinf)/2={vcn*(v0n+vinf)/2:.6e}')
+    assert abs(vinf/vcn-(r0-1))<1e-5 and abs(H/Hf-1)<1e-5
+# heat grows with v0 (not constant), impulse constant
+v0s=sp.symbols('v0s',positive=True); vcs=sp.symbols('vcs',positive=True); ms=sp.symbols('ms',positive=True)
+Hs=sp.Rational(1,2)*ms*(v0s**2-(v0s-vcs)**2)
+print('H =',sp.factor(Hs),' dH/dv0 =',sp.diff(Hs,v0s))

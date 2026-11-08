@@ -30,10 +30,30 @@ print('sqrt(2+sqrt2)=',np.sqrt(2+np.sqrt(2)))
 # (4) 位相速度の比
 v1=2*np.sin(np.pi/8)/(np.pi/(4)); v3=2*np.sin(3*np.pi/8)/(3*np.pi/4)
 print('(4) v3/v1 =',v3/v1,' (1+sqrt2)/3 =',(1+np.sqrt(2))/3)
-# (5) 2倍の数・半分の間隔（総質量・長さ同じ）での基本振動数の比
+# 総質量・長さを同じにして小球の数を変えたときの基本振動数（一様な弦は π）
 def f1(n): # n beads, total mass Mtot=1, L=1, S=1
     mm=1/n; bb=1/(n+1); return 2*np.sqrt(1/(mm*bb))*np.sin(np.pi/(2*(n+1)))
 print('(5) n=3 f1',f1(3),' n=7',f1(7),' cont(mass1 uniform) pi',np.pi)
+# (6) 新設問：R_n = (2/π) sqrt(n(n+1)) sin(π/(2(n+1)))，R_n<1，1-R_n ≈ 1/(2n)
+nn_=sp.symbols('n',positive=True)
+Rn=2/sp.pi*sp.sqrt(nn_*(nn_+1))*sp.sin(sp.pi/(2*(nn_+1)))
+for nv in range(1,60):
+    # 行列の固有値から独立に：小球 n 個，総質量 1，L=1，S=1
+    K=2*np.eye(nv)-np.eye(nv,k=1)-np.eye(nv,k=-1)
+    mm=1/nv; bb=1/(nv+1)
+    w1=np.sqrt(np.linalg.eigvalsh(K)[0]/(mm*bb))
+    R=w1/np.pi
+    assert abs(R-float(Rn.subs(nn_,nv)))<1e-10 and R<1
+print('R_3 =',float(Rn.subs(nn_,3)),' 4sqrt3/pi sin(pi/8)=',4*np.sqrt(3)/np.pi*np.sin(np.pi/8))
+eps=sp.symbols('epsilon',positive=True)   # eps = 1/n
+ser=sp.series(Rn.subs(nn_,1/eps),eps,0,3); print('R_n series in 1/n:',ser)
+assert sp.simplify(ser.removeO().coeff(eps,1)+sp.Rational(1,2))==0
+# 分散の効果のみ: sin x / x （x=π/(2(n+1)))は 1/n^2 の量；密度の効果 sqrt(n/(n+1)) が 1/(2n)
+disp=sp.series((sp.sin(sp.pi/(2*(1/eps+1)))/(sp.pi/(2*(1/eps+1)))),eps,0,3); print('dispersion factor:',disp)
+assert disp.removeO().coeff(eps,1)==0
+dens=sp.series(sp.sqrt((1/eps)/(1/eps+1)),eps,0,2); print('density factor:',dens)
+for nv in [10,100,1000]:
+    print('n=',nv,' 1-R_n=',1-float(Rn.subs(nn_,nv)),' 1/(2n)=',1/(2*nv))
 # 数値積分で n=3 の第1モードを確認
 def rhs(tt,Y):
     yy=Y[:3]; vv=Y[3:]

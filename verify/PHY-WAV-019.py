@@ -18,15 +18,28 @@ vg=sp.diff(om,k); vp=om/k
 print('(3) vg/v at km:',sp.simplify((vg/vp).subs(k,km)))
 print('    limits:',sp.limit(vg/vp,k,0),sp.limit(vg/vp,k,sp.oo))
 print('    vg/v general =',sp.simplify(vg/vp))
-# (4) U=0.30 m/s stream: solve v(k)=U
-Un=0.30; gn,sn,rn=9.8,7.3e-2,1.0e3
-f=lambda kk: gn/kk+sn*kk/rn-Un**2
-kmn=float(km.subs(num))
-k1=brentq(f,1e-3,kmn); k2=brentq(f,kmn,1e6)
-for kk in (k1,k2):
-    vgn=(gn+3*sn*kk**2/rn)/(2*np.sqrt(gn*kk+sn*kk**3/rn))
-    print('    k=%.4g lambda=%.4g cm  vg=%.4g  (U=%.2f) -> %s'%(kk,200*np.pi/kk,vgn,Un,'upstream' if vgn>Un else 'downstream'))
-# quadratic form: s k^2/rho - U^2 k + g = 0
+# (4) 新設問：棒に対して静止する2つの波の波長の積 = lambda_m^2，上流/下流の選択，U->vmin で合流
 kq=sp.solve(sp.Eq(s*k**2/rho-U**2*k+g,0),k)
-print('    quadratic roots:',[float(r.subs(num).subs(U,Un)) for r in kq])
-# numerical Bernoulli check of (1) independent: energy method with given numbers
+prod=sp.simplify(kq[0]*kq[1]); print('(4a) k1*k2 =',prod,' k_m^2 =',sp.simplify(km**2))
+assert sp.simplify(prod-km**2)==0
+gn,sn,rn=9.8,7.3e-2,1.0e3
+kmn=float(km.subs(num)); lam_m=2*np.pi/kmn; vminn=float(vmin.subs(num))
+for Un in [0.24,0.30,0.5,1.0]:
+    f=lambda kk: gn/kk+sn*kk/rn-Un**2
+    k1=brentq(f,1e-6,kmn); k2=brentq(f,kmn,1e7)
+    l1,l2=2*np.pi/k1,2*np.pi/k2
+    vg=lambda kk:(gn+3*sn*kk**2/rn)/(2*np.sqrt(gn*kk+sn*kk**3/rn))
+    print(f'U={Un}: lam1={l1*100:.4g} cm lam2={l2*100:.4g} cm  lam1*lam2/lam_m^2={l1*l2/lam_m**2:.12f}  vg(k1)-U={vg(k1)-Un:+.4f} vg(k2)-U={vg(k2)-Un:+.4f}')
+    assert abs(l1*l2/lam_m**2-1)<1e-9 and vg(k2)>Un and vg(k1)<Un
+# U -> vmin+ で両者が lam_m に合流し，vg - U -> 0
+for eps_ in [1e-2,1e-4,1e-6]:
+    Un=vminn*(1+eps_)
+    f=lambda kk: gn/kk+sn*kk/rn-Un**2
+    k1=brentq(f,1e-6,kmn); k2=brentq(f,kmn,1e7)
+    vg=lambda kk:(gn+3*sn*kk**2/rn)/(2*np.sqrt(gn*kk+sn*kk**3/rn))
+    print(f'U=vmin(1+{eps_}): lam1/lam_m={2*np.pi/k1/lam_m:.5f} lam2/lam_m={2*np.pi/k2/lam_m:.5f}  |vg-U| = {abs(vg(k1)-Un):.2e}, {abs(vg(k2)-Un):.2e}')
+# 図の例 U=0.30 m/s
+Un=0.30; f=lambda kk: gn/kk+sn*kk/rn-Un**2
+k1=brentq(f,1e-3,kmn); k2=brentq(f,kmn,1e6)
+print('figure example U=0.30: lambda1=%.3g cm lambda2=%.3g cm lambda_m=%.3g cm'%(200*np.pi/k1,200*np.pi/k2,100*lam_m))
+print('PHY-WAV-019 (4) OK')

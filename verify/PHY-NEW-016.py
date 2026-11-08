@@ -22,6 +22,24 @@ def f(tt,s):
 sol=solve_ivp(f,[0,49.9],[0,0],rtol=1e-9,atol=1e-14,method='LSODA')
 rr=1e-6+pv['k']*49.9; print('num v',sol.y[1,-1],' quasi',2*pv['rho']*pv['g']*rr**2/(9*pv['eta']),' num h',sol.y[0,-1],' quasi', 2*pv['rho']*pv['g']*(rr**3-1e-18)/(27*pv['eta']*pv['k']))
 # 圧力効果：深さ 0.10 m を上がる間の半径変化（等温）
-P0=1.0e5; D=0.10; print('Δr/r pressure',(1+1.0e3*9.8*D/P0)**(1/3)-1)
 v1=float(vh.subs(vals).subs(h,0.010)); print('v(1cm)',v1,' T=',2.0e-3/v1, ' v(8cm)',float(vh.subs(vals).subs(h,0.08)))
 print('r at 1cm',float(rh.subs(vals).subs(h,0.01)))
+
+# --- (4) 気体を取り込まず等温膨張だけの場合：v ∝ r^2 ∝ P^{-2/3}
+P0s,Ds,rhos,gs=sp.symbols('P0 D rho g',positive=True)
+z=sp.symbols('z',positive=True)
+r_of_z=(P0s+rhos*gs*z)**sp.Rational(-1,3)          # r ∝ P^{-1/3} (PV=const)
+ratio=sp.simplify((r_of_z.subs(z,0)/r_of_z.subs(z,Ds))**2)
+print('v_s/v_D =',ratio)
+assert sp.simplify(ratio-(1+rhos*gs*Ds/P0s)**sp.Rational(2,3))==0
+x=sp.symbols('x'); gam=sp.series((1+x)**sp.Rational(2,3),x,0,2).removeO().coeff(x,1); print('gamma',gam); assert gam==sp.Rational(2,3)
+D2=sp.solve(sp.Eq((1+rhos*gs*Ds/P0s)**sp.Rational(2,3),2),Ds)[0]; print('D2 =',sp.simplify(D2))
+assert sp.simplify(D2-(2*sp.sqrt(2)-1)*P0s/(rhos*gs))==0
+print('D2 numeric (rho=1e3,P0=1e5,g=9.8):',float(D2.subs({P0s:1.0e5,rhos:1.0e3,gs:9.8})))
+# 成長モデル：v ∝ h^{2/3} で速さ2倍 ⇔ h が 2^{3/2} 倍
+hh=sp.symbols('hh',positive=True); fac=sp.solve(sp.Eq((hh)**sp.Rational(2,3),2),hh)[0]; print('height factor',fac,float(fac))
+assert sp.simplify(fac-2*sp.sqrt(2))==0
+# 参考：深さ 10 cm からの比
+Dn=0.10; P0n=1.0e5
+print('ratio for D=10cm:',float(ratio.subs({P0s:P0n,rhos:1.0e3,gs:9.8,Ds:Dn})))
+print('(4) OK')

@@ -42,4 +42,39 @@ import sympy as sp
 A_,B_,X_=sp.symbols('A B X',positive=True); S_=sp.sqrt(A_**2+B_**2)
 xt_=A_**2/S_; yt_=B_**2/S_; yp_=yt_+(xt_**2-X_)/(2*xt_)
 print('h - square =',sp.simplify(sp.expand(yp_**2-B_**2*(1-X_/A_**2))-S_**2/(4*A_**4)*(X_-xt_**2)**2))
-print('tan^2 theta0 =',sp.nsimplify(1+4*1.36/(2*0.64)))
+
+# ---- (3) tangent point and limits ----
+S_=sp.sqrt(A_**2+B_**2)
+tp=(A_*(A_/S_), B_*(B_/S_))
+print('(3i) tangent point',tp)
+c_=sp.symbols('c',positive=True)
+vmin2=2*g*(c_+S_)
+print('(3ii) B->0:',sp.limit(vmin2,B_,0),' point',[sp.limit(q,B_,0) for q in tp])
+print('(3ii) A->0:',sp.limit(vmin2,A_,0),' point',[sp.limit(q,A_,0) for q in tp],' u^2 at tangent ->',sp.limit(2*g*A_**2/S_,A_,0))
+# direct: horizontal plate width 2A at height c: brute force min speed
+def clears_plate(v,th,x0,Aw,cc):
+    vx=v*np.cos(th); vy=v*np.sin(th)
+    # times at which y=cc
+    disc=vy**2-2*g*cc
+    if disc<0: return False
+    t1=(vy-np.sqrt(disc))/g; t2=(vy+np.sqrt(disc))/g
+    return x0+vx*t1<=-Aw and x0+vx*t2>=Aw
+Aw,cc=0.7,1.0; best=1e9
+for th in np.radians(np.linspace(50,85,351)):
+    for x0 in np.linspace(-4,-0.71,400):
+        lo,hi=2.0,15.0
+        if not clears_plate(hi,th,x0,Aw,cc): continue
+        for _ in range(40):
+            mid=(lo+hi)/2
+            if clears_plate(mid,th,x0,Aw,cc): hi=mid
+            else: lo=mid
+        best=min(best,hi)
+print('(3ii) plate brute min v=%.4f formula %.4f'%(best,np.sqrt(2*g*(cc+Aw))))
+assert abs(best-np.sqrt(2*g*(cc+Aw)))<5e-3
+# vertical plate height H: any v>sqrt(2gH) clears with suitable throw, v=sqrt(2gH) cannot
+H=1.6
+for v in [np.sqrt(2*g*H)*1.001, np.sqrt(2*g*H)*1.0001]:
+    eps=(v**2-2*g*H)/2   # split margin: vertical part gets half of the excess
+    vyv=np.sqrt(2*g*H+eps); vxv=np.sqrt(v**2-vyv**2)
+    print('(3ii) v/vmin=%.4f apex height-H=%.2e horizontal speed at apex=%.3e > 0'%(v/np.sqrt(2*g*H),vyv**2/(2*g)-H,vxv))
+    assert vyv**2/(2*g)>H and vxv>0

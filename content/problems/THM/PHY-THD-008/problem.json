@@ -38,7 +38,7 @@
      },
      {
       "id": "4",
-      "tex": "(2) で A から B へ移動した気体の物質量は $\\dfrac{pV}{RT}$ の何倍か．有効数字2桁で答えよ．"
+      "tex": "(2) で C を通って微小な物質量 $\\Delta n$ の気体が A から B へ移るとき，B 内の気体の内部エネルギーは，移った気体が A の中でもっていた内部エネルギー $\\dfrac32\\Delta nRT'$ ではなく $\\dfrac52\\Delta nRT'$ だけ増える（$T'$ はそのときの A 内の気体の絶対温度）．その理由を説明せよ．また，(3) の仮定のもとでこれを流出の全過程にわたって足し合わせ，B 内の気体の内部エネルギーの増加 $\\Delta U_{\\rm B}$ を $p$，$V$ で表し，(2) の結果と矛盾しないことを確かめよ．"
      }
     ]
    }
@@ -71,7 +71,7 @@
    },
    {
     "id": "4",
-    "tex": "$0.89$ 倍"
+    "tex": "A に残る後ろの気体が，移る気体を B へ押し込む仕事 $\\Delta nRT'$ をするから．$\\Delta U_{\\rm B}=2pV$（(2) から求めた $\\dfrac32(p_2-p)\\cdot2V=2pV$ と一致する）"
    }
   ]
  },
@@ -82,7 +82,7 @@
    "blocks": [
     {
      "type": "text",
-     "tex": "\\textbf{(1)} 容器は断熱で，気体は外部に仕事もしないので，熱力学第1法則より気体全体の内部エネルギーの和は保存する．単原子分子理想気体では $U=\\dfrac32nRT=\\dfrac32pV$ と書けるので，各容器の内部エネルギーは「$\\dfrac32\\times$圧力$\\times$容積」である．\n\\[ \\frac32(3p\\cdot V)+\\frac32(p\\cdot 2V)=\\frac32\\,p_1\\cdot 3V \\qquad\\therefore\\quad \\boldsymbol{p_1=\\frac53p} \\]\n物質量は $n_A=\\dfrac{3pV}{RT}$，$n_B=\\dfrac{p\\cdot 2V}{R\\cdot 2T}=\\dfrac{pV}{RT}$ で，合計 $n=\\dfrac{4pV}{RT}$．状態方程式 $p_1\\cdot 3V=nRT_1$ より $\\boldsymbol{T_1=\\dfrac54T}$．\n\n\\textbf{(2)} C を閉じた直後は A と B の温度は異なるが，それでも各容器の内部エネルギーは $\\dfrac32\\times$圧力$\\times$容積 で表せる．全体は断熱・仕事なしなので内部エネルギーの和は保存し，A，B の圧力はともに $p_2$ だから\n\\[ \\frac32(3pV+2pV)=\\frac32\\,p_2(V+2V)\\qquad\\therefore\\quad\\boldsymbol{p_2=\\frac53p} \\]\n(1) と同じ値になる．断熱容器内の単原子分子気体では，温度分布がどうであれ「圧力$\\times$容積」の和が保存されるからである．\n\n\\textbf{(3)} A に残った気体（物質量一定）だけに注目すると $pV^{5/3}=$一定．$V\\propto T/p$ を代入すると $p^{-2/3}T^{5/3}=$一定，すなわち $T\\propto p^{2/5}$．よって\n\\[ T_A=T\\left(\\frac{p_2}{3p}\\right)^{2/5}=\\left(\\frac59\\right)^{2/5}T\\approx \\boldsymbol{0.79T} \\]\nA に残った物質量は\n\\[ n_A'=\\frac{p_2V}{RT_A}=\\frac53\\left(\\frac95\\right)^{2/5}\\frac{pV}{RT}\\approx2.11\\,\\frac{pV}{RT} \\]\nB 内の物質量は $n_B'=n-n_A'\\approx1.89\\,\\dfrac{pV}{RT}$ なので，状態方程式より\n\\[ T_B=\\frac{p_2\\cdot 2V}{Rn_B'}\\approx\\frac{10/3}{1.89}\\,T\\approx\\boldsymbol{1.8T} \\]\nA の気体は膨張して冷え，B では流れ込んだ気体が後続の気体に押し込まれる仕事を受けるため，(1) の一様温度 $1.25T$ より高温になる．なお，この後 C を開け放せば (1) の状態に落ち着く（圧力は $\\dfrac53p$ のまま）．\n\n\\textbf{(4)} $n_A-n_A'=3\\,\\dfrac{pV}{RT}-2.11\\,\\dfrac{pV}{RT}\\approx \\boldsymbol{0.89}\\,\\dfrac{pV}{RT}$．\\hfill$\\square$"
+     "tex": "\\textbf{(1)} 容器は断熱で，気体は外部に仕事もしないので，熱力学第1法則より気体全体の内部エネルギーの和は保存する．単原子分子理想気体では $U=\\dfrac32nRT=\\dfrac32pV$ と書けるので，各容器の内部エネルギーは「$\\dfrac32\\times$圧力$\\times$容積」である．\n\\[ \\frac32(3p\\cdot V)+\\frac32(p\\cdot 2V)=\\frac32\\,p_1\\cdot 3V \\qquad\\therefore\\quad \\boldsymbol{p_1=\\frac53p} \\]\n物質量は $n_A=\\dfrac{3pV}{RT}$，$n_B=\\dfrac{p\\cdot 2V}{R\\cdot 2T}=\\dfrac{pV}{RT}$ で，合計 $n=\\dfrac{4pV}{RT}$．状態方程式 $p_1\\cdot 3V=nRT_1$ より $\\boldsymbol{T_1=\\dfrac54T}$．\n\n\\textbf{(2)} C を閉じた直後は A と B の温度は異なるが，それでも各容器の内部エネルギーは $\\dfrac32\\times$圧力$\\times$容積 で表せる．全体は断熱・仕事なしなので内部エネルギーの和は保存し，A，B の圧力はともに $p_2$ だから\n\\[ \\frac32(3pV+2pV)=\\frac32\\,p_2(V+2V)\\qquad\\therefore\\quad\\boldsymbol{p_2=\\frac53p} \\]\n(1) と同じ値になる．断熱容器内の単原子分子気体では，温度分布がどうであれ「圧力$\\times$容積」の和が保存されるからである．\n\n\\textbf{(3)} A に残った気体（物質量一定）だけに注目すると $pV^{5/3}=$一定．$V\\propto T/p$ を代入すると $p^{-2/3}T^{5/3}=$一定，すなわち $T\\propto p^{2/5}$．よって\n\\[ T_A=T\\left(\\frac{p_2}{3p}\\right)^{2/5}=\\left(\\frac59\\right)^{2/5}T\\approx \\boldsymbol{0.79T} \\]\nA に残った物質量は\n\\[ n_A'=\\frac{p_2V}{RT_A}=\\frac53\\left(\\frac95\\right)^{2/5}\\frac{pV}{RT}\\approx2.11\\,\\frac{pV}{RT} \\]\nB 内の物質量は $n_B'=n-n_A'\\approx1.89\\,\\dfrac{pV}{RT}$ なので，状態方程式より\n\\[ T_B=\\frac{p_2\\cdot 2V}{Rn_B'}\\approx\\frac{10/3}{1.89}\\,T\\approx\\boldsymbol{1.8T} \\]\nA の気体は膨張して冷え，B では流れ込んだ気体が後続の気体に押し込まれる仕事を受けるため，(1) の一様温度 $1.25T$ より高温になる．なお，この後 C を開け放せば (1) の状態に落ち着く（圧力は $\\dfrac53p$ のまま）．\n\n\\textbf{(4)}　\\textbf{押し込みの仕事}　その瞬間の A 内の圧力を $p'$ とすると，移る気体 $\\Delta n$ は A の中で体積 $\\Delta V'=\\dfrac{\\Delta nRT'}{p'}$ を占めている．「B 内の気体＋これから移る $\\Delta n$」を1つの系とみると，この系は，A に残る後ろの気体から圧力 $p'$ で押されて体積 $\\Delta V'$ だけ押し込まれ，仕事\n\\[ p'\\Delta V'=\\Delta nRT' \\]\nを受ける．B は変形しない断熱容器で，A との熱のやりとりもないので，ほかに仕事や熱の出入りはない．したがって B 内の気体の内部エネルギーの増加は，移った気体自身の内部エネルギー $\\dfrac32\\Delta nRT'$ にこの仕事を加えた\n\\[ \\frac32\\Delta nRT'+\\Delta nRT'=\\frac52\\Delta nRT' \\]\nになる．流れ込んだ気体が後続の気体に押し込まれて圧縮されるので，B の温度は (1) の一様温度より高くなる．\n\n\\textbf{足し合わせ}　A に残っている気体の物質量を $n'$ とする．(3) より A 内の気体は $T'\\propto p'^{2/5}$，$n'=\\dfrac{p'V}{RT'}\\propto p'^{3/5}$ と変わるので\n\\[ \\Delta n'=\\frac35n'\\frac{\\Delta p'}{p'},\\qquad RT'\\Delta n'=\\frac35\\cdot\\frac{p'V}{n'}\\cdot n'\\frac{\\Delta p'}{p'}=\\frac35V\\Delta p' . \\]\nB へ移る物質量は $\\Delta n=-\\Delta n'$ だから，$p'$ が $3p$ から $p_2=\\dfrac53p$ まで下がる間に\n\\[ \\Delta U_{\\rm B}=\\sum\\frac52RT'\\Delta n=-\\frac52\\cdot\\frac35V\\sum\\Delta p'=\\frac32V(3p-p_2)=\\frac32V\\cdot\\frac43p=\\boldsymbol{2pV}. \\]\n一方，(2) の結果から直接求めると\n\\[ \\Delta U_{\\rm B}=\\frac32p_2\\cdot2V-\\frac32p\\cdot2V=3V\\left(\\frac53p-p\\right)=2pV \\]\nで，\\textbf{一致する}．A 内の気体の内部エネルギーの減少 $\\dfrac32(3p-p_2)V=2pV$ も同じ値で，A が失ったエネルギーは「出ていった気体の内部エネルギー」と「それを押し出した仕事」としてすべて B に渡っている．逆に，足し合わせの結果 $\\dfrac32V(3p-p_2)$ と $3V(p_2-p)$ を等しいとおけば $p_2=\\dfrac53p$ が得られ，(2) を導き直すこともできる．\\hfill$\\square$"
     }
    ]
   }

@@ -15,9 +15,7 @@ f=sp.sqrt(r**2-(H-h)**2)-sp.sqrt(r**2-H**2)
 print('df/dr =',sp.simplify(sp.diff(f,r)))
 # (3) 受け手の高さ hp
 L3=sp.sqrt(h*(2*H-h))+sp.sqrt(hp*(2*H-hp))
-# (4) 数値
-Hv=340*1000/4.0
-val=float(L3.subs({H:Hv,h:2,hp:10})); print('(4) H=',Hv,' L=',val)
+Hv=340*1000/4.0   # 数値検証用の H（地上 340 m/s，高さ 1000 m で 336 m/s）
 # --- 独立検証: 音線方程式 d/ds(n dr/ds)=grad n, n=c0/c を数値積分
 Hn=Hv
 def n(yy): return 1/(1-yy/Hn)
@@ -52,4 +50,33 @@ xc=-(-rr*np.sin(0.3))*(-1)  # 接ベクトル(cos,sin), 上側法線(-sin,cos)
 xc=-rr*np.sin(0.3); yc=5+rr*np.cos(0.3)
 print('中心高さ',yc,'(H=',Hn,')  円からのずれ最大',np.max(np.abs(np.hypot(X-xc,Y-yc)-rr)))
 assert abs(yc-Hn)<1e-6 and np.max(np.abs(np.hypot(X-xc,Y-yc)-rr))<1e-3
+# (4) 新設問：気温逆転 c=c0(1+y/K)。円の中心は高さ -K，R=(h+K)/cos(a0)
+K,R_,a=sp.symbols('K R alpha',positive=True)
+cinv=c0*(1+y/K); cosal2=(y+K)/R_
+print('(4a) cos(alpha)/c =',sp.simplify(cosal2/cinv))
+assert sp.simplify(sp.diff(cosal2/cinv,y))==0
+Xf=lambda hh,KK,al: ((hh+KK)*np.sin(al)+np.sqrt((hh+KK)**2-KK**2*np.cos(al)**2))/np.cos(al)
+Kn=5.0e4; hn=2.0
+def n2(yy): return 1/(1+yy/Kn)
+def dn2(yy): return -(1/Kn)/(1+yy/Kn)**2
+def rhs2(s,Y):
+    x,yy,px,py=Y; nn=n2(yy); return [px/nn,py/nn,0.0,dn2(yy)]
+def ground2(s,Y): return Y[1]
+ground2.terminal=True; ground2.direction=-1
+prev=-1
+for al in [0.0,0.002,0.005,0.01,0.02]:
+    nn=n2(hn)
+    sol=solve_ivp(rhs2,[0,1e5],[0,hn,nn*np.cos(al),nn*np.sin(al)],rtol=1e-11,atol=1e-11,events=ground2,max_step=20)
+    Xnum=sol.y_events[0][0][0]; Xth=Xf(hn,Kn,al)
+    print('(4b) alpha0=',al,' X numeric',Xnum,' formula',Xth)
+    assert abs(Xnum-Xth)<1e-3*Xth and Xth>prev
+    prev=Xth
+assert abs(Xf(hn,Kn,0.0)-np.sqrt(hn*(hn+2*Kn)))<1e-9
+# 単調増加・発散（数値）と，下向きの音線で 0〜X(0) が埋まること
+als=np.linspace(0,np.pi/2-1e-6,200001); Xs=Xf(hn,Kn,als)
+assert np.all(np.diff(Xs)>0) and Xs[-1]>1e9
+for al in [-0.3,-0.05,-0.01]:
+    nn=n2(hn)
+    sol=solve_ivp(rhs2,[0,1e5],[0,hn,nn*np.cos(al),nn*np.sin(al)],rtol=1e-11,atol=1e-11,events=ground2,max_step=5)
+    xd=sol.y_events[0][0][0]; print('   downward alpha0=',al,' X=',xd); assert 0<xd<Xf(hn,Kn,0.0)
 print('OK')

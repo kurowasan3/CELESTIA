@@ -17,7 +17,7 @@ for _ in range(200000):
     except: continue
     if (x>=0).all(): mx=max(mx,x.max())
 print('max single photon energy found',mx)
-# (4) E1=0.80 mc^2 のとき，光子2,3のなす角の最小値
+# (4) instance E1=0.80 mc^2 of the general formula cos(psi_min/2)=eps/(2-eps)
 E1=0.8*mc2; S=2*mc2-E1
 E2=np.linspace(E1/2+ (S-E1)/2*0+1e-9, S-1e-9,200001)  # 条件 |E2-E3|<=E1 の範囲
 E2=E2[np.abs(2*E2-S)<=E1]; E3=S-E2
@@ -25,3 +25,16 @@ cospsi=(E1**2-E2**2-E3**2)/(2*E2*E3)
 psi=np.degrees(np.arccos(np.clip(cospsi,-1,1)))
 print('psi min',psi.min(),' at E2=',E2[np.argmin(psi)],' formula',2*np.degrees(np.arccos(E1/S)))
 print('psi max',psi.max())
+
+# ---- new (4): general eps, psi_min, limits ----
+import sympy as sp
+for eps in [0.05,0.3,0.8,0.97]:
+    E1=eps*mc2; S=2*mc2-E1
+    E2=np.linspace(0,S,400001); E3=S-E2
+    ok=(np.abs(E2-E3)<=E1)&(E2>0)&(E3>0); E2=E2[ok]; E3=E3[ok]
+    psi=np.degrees(np.arccos(np.clip((E1**2-E2**2-E3**2)/(2*E2*E3),-1,1)))
+    k=np.argmin(psi)
+    print(' eps=%.2f psi_min num %.3f  formula %.3f  E2 at min/mc2 %.4f (expect %.4f)  psi_max %.2f'%(eps,psi.min(),2*np.degrees(np.arccos(eps/(2-eps))),E2[k]/mc2,(2-eps)/2,psi.max()))
+e=sp.symbols('epsilon',positive=True)
+pm=2*sp.acos(e/(2-e))
+print('limits psi_min: eps->1',sp.limit(pm,e,1),' eps->0',sp.limit(pm,e,0))

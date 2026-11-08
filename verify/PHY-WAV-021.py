@@ -42,8 +42,8 @@ print('spacing',np.diff(a0)[:3],'lamF',lF)
 d=[(x-a0[a0<=x].max()) for x in a1[3:8]]
 print('apparent shift per flash',d,' u/f=',un/fn)
 assert np.allclose(d,un/fn)
-fF=vF/lF; print('lam_F=%.4f m, f_F=%.4f Hz, f+u/lam=%.4f'%(lF,fF,fn+un/lF))
-# ストロボ f_s=f_F で前方の縞が静止
+fF=vF/lF; assert abs(fF-(fn+un/lF))<1e-12   # 静止した観測者の見る振動数 f_F=f+u/λ_F
+# ストロボ f_s=f_F なら前方の縞は水面に対して静止
 p2=np.array([crest(T0+1/fF,m) for m in range(0,62)]); a2=np.sort(p2[p2>un*(T0+1/fF)])
 print('shift with fs=fF (mod lam):',[round(((x-a0[a0<=x].max())%lF),9) for x in a2[3:8]])
 # 後方の波：apparent velocity with f_s=f equals u (moves with source)
@@ -51,4 +51,20 @@ lamB=sp.symbols('lamB',positive=True)
 fB=sp.sqrt(g*lamB/(2*sp.pi))/lamB
 # f lamB = v + u -> fB = f - u/lamB, apparent speed lamB*(f-fB) = u
 expr=sp.simplify(lamB*(f-(f-u/lamB))); print('apparent back speed',expr)
+# (5) 新設問：lambda_F = (lam0/4)(1+sqrt(1-u/uc))^2，範囲 [lam0/4, lam0]，f_F in [f, 2f]
+lam0=g/(2*sp.pi*f**2)
+lamF_alt=(lam0/4)*(1+sp.sqrt(1-u/ucrit))**2
+assert sp.simplify(lamF_alt-lam_plus)==0
+assert sp.simplify(lam_plus.subs(u,0)-lam0)==0 and sp.simplify(lam_plus.subs(u,ucrit)-lam0/4)==0
+dl=sp.diff(lam_plus,u); 
+fF=f+u/lam_plus
+for _ in range(300):
+    fn_=random.uniform(0.5,5); uc_=9.8/(8*np.pi*fn_); un_=random.uniform(1e-4,0.9999)*uc_
+    sub={g:9.8,f:fn_,u:un_}
+    assert float(dl.subs(sub))<0
+    ff=float(fF.subs(sub)); assert fn_<ff<2*fn_
+    assert abs(ff-float((v.subs(lam,lam_plus)/lam_plus).subs(sub)))<1e-9
+print('f_F at u=uc:',sp.simplify(fF.subs(u,ucrit)),' at u=0:',sp.simplify(fF.subs(u,0)))
+# 非分散の波との比較：f*lam=c0-u は u->c0 で 0。深水波の前方波長の下限 lam0/4 は v_g=u の点
+print('min lambda_F / lambda_0 =',sp.simplify(lam_plus.subs(u,ucrit)/lam0))
 print('OK')

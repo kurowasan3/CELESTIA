@@ -25,4 +25,35 @@ Ms=sp.Rational(4,3)*sp.pi*Rp**3*rhoP; ms=sp.Rational(4,3)*sp.pi*s**3*rho
 rcB=sp.solve(sp.Eq(G*ms**2/(4*s**2),3*G*Ms*ms*s/r**3),r)
 rcA=sp.solve(sp.Eq(G*ms**2/(4*s**2),2*G*Ms*ms*s/r**3),r)
 print('rcB=',rcB,' rcA=',rcA)
-print('numeric rho_P/rho=2:',float((24)**(sp.Rational(1,3))),float(16**(sp.Rational(1,3))))
+
+# ---- (5) tidal torque on the pair about G and libration in synchronous rotation ----
+eperp=sp.Matrix([-sp.sin(phi),sp.cos(phi)])
+torque=(s*(m*grav(p1)).dot(eperp)) + ((-s)*(m*grav(p2)).dot(eperp))   # r x F (z) = arm * F.eperp
+tq1=sp.series(torque.subs(s,eps*s),eps,0,3).removeO().subs(eps,1)
+tq1=sp.simplify(sp.expand(tq1)); print('(5) torque ~',tq1)
+assert sp.simplify(tq1-(-6*G*M*m*s**2/r**3*sp.sin(phi)*sp.cos(phi)))==0
+I_=2*(sp.Rational(2,5)*m*s**2+m*s**2)
+k=sp.simplify(-sp.diff(tq1,phi).subs(phi,0)/I_/(G*M/r**3)); print('(5) Omega_lib^2/omega^2 at phi=0:',k)
+assert k==sp.Rational(15,7)
+print('(5) stiffness at phi=pi/2:',sp.simplify(-sp.diff(tq1,phi).subs(phi,sp.pi/2)))
+print('(5) period ratio T_lib/T =',sp.sqrt(1/k),float(sp.sqrt(1/k)))
+# numeric: integrate full planar rigid-body + orbit (exact gravity), small libration, measure period
+import numpy as np
+from scipy.integrate import solve_ivp
+Gv,Mv,mv,sv,rv=1.0,1.0,1e-9,1e-3,1.0
+Iv=2*(0.4*mv*sv**2+mv*sv**2)
+def acc(P): d=np.linalg.norm(P); return -Gv*Mv*P/d**3
+def rhs(t,y):
+    X,Y,VX,VY,psi,w=y; Rg=np.array([X,Y]); e=np.array([np.cos(psi),np.sin(psi)]); ep=np.array([-np.sin(psi),np.cos(psi)])
+    F1=mv*acc(Rg+sv*e); F2=mv*acc(Rg-sv*e)
+    a=(F1+F2)/(2*mv); tq=sv*F1.dot(ep)-sv*F2.dot(ep)
+    return [VX,VY,a[0],a[1],w,tq/Iv]
+om=np.sqrt(Gv*Mv/rv**3); phi0=0.02
+y0=[rv,0,0,om*rv,phi0,om]
+so=solve_ivp(rhs,[0,40],y0,rtol=1e-11,atol=1e-13,dense_output=True,max_step=0.01)
+ts=np.linspace(0,40,40001); Y=so.sol(ts)
+ph=Y[4]-np.unwrap(np.arctan2(Y[1],Y[0]))
+zc=[ts[i] for i in range(1,len(ts)) if ph[i-1]>0>=ph[i]]
+Tl=np.mean(np.diff(zc)); Torb=2*np.pi/om
+print('(5) numeric T_lib/T_orb=%.4f theory=%.4f'%(Tl/Torb,np.sqrt(7/15)))
+assert abs(Tl/Torb-np.sqrt(7/15))<2e-3

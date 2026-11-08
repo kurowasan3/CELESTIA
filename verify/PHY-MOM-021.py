@@ -11,7 +11,7 @@ assert sp.simplify(sol-W-m*w/Mk1)==0
 N=sp.symbols('N',positive=True,integer=True)
 mc=sp.symbols('m_c',positive=True)
 Vall=sp.solve(sp.Eq(0,(M-N*m)*W+N*m*(W-w)),W)[0]; print('all at once',Vall)
-# 数値例：台車 m, 球 9 個 → M=10m
+# 解答図の例：台車 m, 球 9 個 → M=10m
 Ws=[Fr(0)]
 for k in range(1,10):
     Ws.append(Ws[-1]+Fr(1,10-(k-1)))
@@ -30,4 +30,27 @@ for _ in range(1000):
 # 連続の極限
 mu=sp.symbols('mu',positive=True); x=sp.symbols('x')
 lim=sp.integrate(1/(M-x),(x,0,mu)); print('continuous',sp.simplify(lim))
+
+# ---- (5) energy bookkeeping for the k-th launch ----
+Wb=sp.symbols('W_b',nonnegative=True)   # W_{k-1}
+Mp=Mk1
+Wa=Wb+m*w/Mp
+Ek=sp.simplify((Mp-m)*Wa**2/2+m*(Wa-w)**2/2-Mp*Wb**2/2)
+print('(5a) E_k =',sp.factor(Ek)); assert sp.simplify(Ek-m*(Mp-m)*w**2/(2*Mp))==0
+dK=(Mp-m)*(Wa**2-Wb**2)/2
+ratio=sp.simplify(dK/Ek); print('(5b) dK/E =',ratio)
+assert sp.simplify(ratio-(2*Wb/w+m/Mp))==0
+# energy conservation: E = dK + dK_ball
+dKball=m*(Wa-w)**2/2-m*Wb**2/2
+assert sp.simplify(Ek-dK-dKball)==0
+# ratio>1 <=> ball KE decreases
+import random
+for _ in range(2000):
+    vals={m:random.uniform(.1,1),Mp:random.uniform(1.2,10),w:1.0,Wb:random.uniform(0,3)}
+    r_=float(ratio.subs(vals)); db=float(dKball.subs(vals))
+    assert (r_>1)==(db<0)
+print('(5b) ratio>1 exactly when the ejected ball loses KE')
+# example M=10m: ratio for each k
+for k in range(1,10):
+    Mpk=10-(k-1); print('   k=%d ratio=%.3f'%(k,2*float(Ws[k-1])+1/Mpk))
 print('ok')

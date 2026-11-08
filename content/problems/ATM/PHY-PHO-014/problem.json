@@ -3,7 +3,7 @@
  "schema": "celestia.problem/1",
  "field": "ATM",
  "unit": "ATM-01",
- "topic": "床の上ではね返る中性子の量子化（重力中の物質波の定常状態と吸収板による選別）",
+ "topic": "床の上ではね返る中性子の量子化（重力中の物質波の定常状態と対応原理）",
  "course": "物理",
  "level": 4,
  "minutes": 25,
@@ -38,7 +38,7 @@
      },
      {
       "id": "4",
-      "tex": "床から高さ $s$ のところに，床と平行に中性子を吸収する板を置き，床と板のすき間に中性子を水平に通す．最高点が $s$ をこえる運動をしている中性子は板に吸収され，最高点が $s$ 以下の中性子だけが通り抜けるとする．$s=30\\ \\mathrm{\\mu m}$ のとき，通り抜けられるのはどの $n$ の中性子か．また，$s$ をいくら以下にすると中性子がまったく通り抜けられなくなるか．"
+      "tex": "(i) 最高点の高さが $H$ の古典的な運動（床ではね返る往復運動）の周期 $T$ を $g$，$H$ で表せ．また，量子化の条件 $2\\displaystyle\\int_0^Hp\\,dx=nh$ で $n$ を連続な変数とみなして $E=mgH$ を $n$ の関数と考えるとき，$\\dfrac{dE}{dn}=\\dfrac{h}{T}$ が成り立つことを示せ．この関係から，$n$ が大きいとき，隣り合う状態の間の遷移で出入りするエネルギー量子 $h\\nu$ の振動数 $\\nu$ と古典的な運動の振動数 $\\dfrac1T$ がどのような関係になるかを答えよ．\n  (ii) $m$，$g$，$h$ を組み合わせて作れる長さの次元をもつ量は，$\\left(\\dfrac{h^2}{m^2g}\\right)^{\\frac13}$ の定数倍に限ることを，次元を比べて示せ．このことから，$g$ だけを $\\dfrac18$ 倍にすると $H_1$ と $E_1$ はそれぞれ何倍になるか．"
      }
     ]
    }
@@ -51,7 +51,7 @@
    "kind": "diagram",
    "format": "svg",
    "src": "q-fig.svg",
-   "alt": "問題図：床の上ではね返る中性子の量子化（重力中の物質波の定常状態と吸収板による選別）",
+   "alt": "問題図：床の上ではね返る中性子の量子化（重力中の物質波の定常状態と対応原理）",
    "caption": ""
   },
   {
@@ -60,7 +60,7 @@
    "kind": "diagram",
    "format": "svg",
    "src": "a-fig.svg",
-   "alt": "解答図：床の上ではね返る中性子の量子化（重力中の物質波の定常状態と吸収板による選別）",
+   "alt": "解答図：床の上ではね返る中性子の量子化（重力中の物質波の定常状態と対応原理）",
    "caption": "解答図"
   }
  ],
@@ -80,7 +80,7 @@
    },
    {
     "id": "4",
-    "tex": "$n=1,\\ 2$．$s\\le17\\ \\mathrm{\\mu m}$（$H_1$ 以下）"
+    "tex": "(i) $T=2\\sqrt{\\dfrac{2H}{g}}$．$n=\\dfrac{4m\\sqrt{2g}}{3h}H^{\\frac32}$ より $\\dfrac{dn}{dH}=\\dfrac{2m\\sqrt{2gH}}{h}$，$\\dfrac{dE}{dn}=\\dfrac{mg}{dn/dH}=\\dfrac{h}{2}\\sqrt{\\dfrac{g}{2H}}=\\dfrac hT$．$n$ が大きいと $E_{n+1}-E_n\\fallingdotseq\\dfrac{h}{T}$ で，$\\nu\\fallingdotseq\\dfrac1T$（古典的な往復の振動数に一致：対応原理）．　(ii) $h^am^bg^c$ が長さになる条件 $a+b=0$，$2a+c=1$，$-a-2c=0$ の解は $a=\\frac23$，$b=-\\frac23$，$c=-\\frac13$ だけ．$H_1\\propto g^{-\\frac13}$ で $2$ 倍，$E_1=mgH_1\\propto g^{\\frac23}$ で $\\dfrac14$ 倍．"
    }
   ]
  },
@@ -95,13 +95,13 @@
     },
     {
      "type": "text",
-     "tex": "\\textbf{(1) 運動量と量子化}　高さ $x$ での鉛直方向の速さ $u$ は，力学的エネルギー保存 $\\frac12mu^2+mgx=mgH$ より $u=\\sqrt{2g(H-x)}$．よって\n\\[ \\boldsymbol{p(x)=m\\sqrt{2g(H-x)}}. \\]\n与えられた積分を用いると\n\\[ \\int_0^Hp(x)\\,dx=m\\sqrt{2g}\\cdot\\frac23H^{\\frac32} \\]\n（解答図の面積）．量子化の条件は\n\\[ \\frac43m\\sqrt{2g}\\,H^{\\frac32}=nh\\quad\\therefore\\quad H^{\\frac32}=\\frac{3nh}{4m\\sqrt{2g}},\\qquad \\boldsymbol{H_n=\\left(\\frac{9n^2h^2}{32m^2g}\\right)^{\\frac13}}. \\]\n最高点では運動エネルギーが $0$ なので\n\\[ \\boldsymbol{E_n=mgH_n=\\left(\\frac{9n^2h^2mg^2}{32}\\right)^{\\frac13}} \\]\nで，$n^{2/3}$ に比例する（間隔が一定でもなく，$n^2$ に比例するのでもない）．\n\n\\textbf{(2) 数値}　\n\\[ \\frac{9h^2}{32m^2g}=\\frac{9(6.63\\times10^{-34})^2}{32(1.675\\times10^{-27})^2(9.80)}=4.50\\times10^{-15}\\ \\mathrm{m^3} \\]\nより $H_1=1.65\\times10^{-5}\\ \\mathrm m=\\boldsymbol{17\\ \\mathrm{\\mu m}}$．\n\\[ E_1=mgH_1=(1.675\\times10^{-27})(9.80)(1.65\\times10^{-5})=2.71\\times10^{-31}\\ \\mathrm J=\\boldsymbol{1.7\\times10^{-12}\\ \\mathrm{eV}}. \\]\n目に見えるほどの高さの「定常状態」が，きわめて小さなエネルギーで実現している．\n\n\\textbf{(3) 床での波長}　床での運動量は $p(0)=m\\sqrt{2gH_n}$ なので，量子化の条件は\n\\[ nh=\\frac43m\\sqrt{2g}\\,H_n^{\\frac32}=\\frac43\\,p(0)\\,H_n \\]\nと書ける．したがって $\\lambda_n=\\dfrac{h}{p(0)}=\\dfrac{4H_n}{3n}$，\n\\[ \\boldsymbol{\\frac{\\lambda_n}{H_n}=\\frac{4}{3n}} \\]\nで，$m$ や $g$ によらない．$n=1$ では物質波の波長が運動の範囲 $H_1$ より長く，「放物線を描いてはねる小球」という古典的な描像は成り立たない．\n\n\\textbf{(4) 吸収板による選別}　$H_n=H_1n^{2/3}$ より\n\\[ H_1=16.5\\ \\mathrm{\\mu m},\\quad H_2=16.5\\times2^{2/3}=26.2\\ \\mathrm{\\mu m},\\quad H_3=16.5\\times3^{2/3}=34.3\\ \\mathrm{\\mu m}. \\]\n$s=30\\ \\mathrm{\\mu m}$ では $H_n\\le s$ となる $\\boldsymbol{n=1,\\ 2}$ の中性子だけが通り抜ける．最も低い $H_1$ より $s$ を小さくすると，どの中性子も通れない．よって $\\boldsymbol{s\\le17\\ \\mathrm{\\mu m}}$（$H_1$ 以下）で通り抜ける中性子は $0$ になる．古典的には，最高点の低い中性子はどれだけ狭いすき間でも通れるはずであり，透過量が $0$ になるしきい値が存在することが量子化の証拠になる．\\hfill$\\square$"
+     "tex": "\\textbf{(1) 運動量と量子化}　高さ $x$ での鉛直方向の速さ $u$ は，力学的エネルギー保存 $\\frac12mu^2+mgx=mgH$ より $u=\\sqrt{2g(H-x)}$．よって\n\\[ \\boldsymbol{p(x)=m\\sqrt{2g(H-x)}}. \\]\n与えられた積分を用いると\n\\[ \\int_0^Hp(x)\\,dx=m\\sqrt{2g}\\cdot\\frac23H^{\\frac32} \\]\n（解答図の面積）．量子化の条件は\n\\[ \\frac43m\\sqrt{2g}\\,H^{\\frac32}=nh\\quad\\therefore\\quad H^{\\frac32}=\\frac{3nh}{4m\\sqrt{2g}},\\qquad \\boldsymbol{H_n=\\left(\\frac{9n^2h^2}{32m^2g}\\right)^{\\frac13}}. \\]\n最高点では運動エネルギーが $0$ なので\n\\[ \\boldsymbol{E_n=mgH_n=\\left(\\frac{9n^2h^2mg^2}{32}\\right)^{\\frac13}} \\]\nで，$n^{2/3}$ に比例する（間隔が一定でもなく，$n^2$ に比例するのでもない）．\n\n\\textbf{(2) 数値}　\n\\[ \\frac{9h^2}{32m^2g}=\\frac{9(6.63\\times10^{-34})^2}{32(1.675\\times10^{-27})^2(9.80)}=4.50\\times10^{-15}\\ \\mathrm{m^3} \\]\nより $H_1=1.65\\times10^{-5}\\ \\mathrm m=\\boldsymbol{17\\ \\mathrm{\\mu m}}$．\n\\[ E_1=mgH_1=(1.675\\times10^{-27})(9.80)(1.65\\times10^{-5})=2.71\\times10^{-31}\\ \\mathrm J=\\boldsymbol{1.7\\times10^{-12}\\ \\mathrm{eV}}. \\]\n目に見えるほどの高さの「定常状態」が，きわめて小さなエネルギーで実現している．\n\n\\textbf{(3) 床での波長}　床での運動量は $p(0)=m\\sqrt{2gH_n}$ なので，量子化の条件は\n\\[ nh=\\frac43m\\sqrt{2g}\\,H_n^{\\frac32}=\\frac43\\,p(0)\\,H_n \\]\nと書ける．したがって $\\lambda_n=\\dfrac{h}{p(0)}=\\dfrac{4H_n}{3n}$，\n\\[ \\boldsymbol{\\frac{\\lambda_n}{H_n}=\\frac{4}{3n}} \\]\nで，$m$ や $g$ によらない．$n=1$ では物質波の波長が運動の範囲 $H_1$ より長く，「放物線を描いてはねる小球」という古典的な描像は成り立たない．\n\n\\textbf{(4) 対応原理と次元}　\\textbf{(i)}　床から最高点まで上がる時間は $\\sqrt{\\dfrac{2H}{g}}$（最高点から自由落下する時間と同じ）なので，1往復の周期は\n\\[ \\boldsymbol{T=2\\sqrt{\\frac{2H}{g}}} \\]\n(1) の量子化の条件から $n=\\dfrac{4m\\sqrt{2g}}{3h}H^{\\frac32}$．$H$ で微分して\n\\[ \\frac{dn}{dH}=\\frac{2m\\sqrt{2g}}{h}H^{\\frac12}=\\frac{2m\\sqrt{2gH}}{h} \\]\n$E=mgH$ なので\n\\[ \\frac{dE}{dn}=\\frac{dE/dH}{dn/dH}=\\frac{mg\\,h}{2m\\sqrt{2gH}}=\\frac h2\\sqrt{\\frac{g}{2H}}=\\frac{h}{2\\sqrt{2H/g}}=\\boldsymbol{\\frac hT} \\]\n（別の見方：$\\displaystyle\\frac{d}{dE}\\Bigl(2\\int_0^Hp\\,dx\\Bigr)=2\\int_0^H\\frac{dx}{u}$ は往復にかかる時間 $T$ であり，量子化の条件の両辺を $E$ で微分すると $T=h\\dfrac{dn}{dE}$ となる．）\n\n$n$ が大きいと $H_n$ の変化は相対的に小さく，隣り合う状態の差は $E_{n+1}-E_n\\fallingdotseq\\dfrac{dE}{dn}=\\dfrac{h}{T_n}$．したがって隣り合う状態の間の遷移で出入りするエネルギー量子の振動数は $\\nu\\fallingdotseq\\dfrac1{T_n}$ で，\\textbf{古典的な往復運動の振動数に一致する}．量子数の大きい極限で量子論が古典論につながること（対応原理）が，この系でも成り立っている．逆に $n$ が小さいと $E_n\\propto n^{2/3}$ の差は $\\dfrac{dE}{dn}$ から大きくずれ，古典的な描像は使えない（(3) で $\\lambda_1>H_1$ だったことと対応する）．\n\n\\textbf{(ii)}　$[h]=\\mathrm{kg\\cdot m^2/s}$，$[m]=\\mathrm{kg}$，$[g]=\\mathrm{m/s^2}$ である．$h^am^bg^c$ が長さ $\\mathrm{m}$ の次元をもつには，kg，m，s の指数を比べて\n\\[ a+b=0,\\qquad 2a+c=1,\\qquad -a-2c=0 \\]\n第3式より $a=-2c$，第2式に入れて $-3c=1$．よって $c=-\\dfrac13$，$a=\\dfrac23$，$b=-\\dfrac23$ と\\textbf{ただ1通り}に決まり，長さは $\\dfrac{h^{2/3}}{m^{2/3}g^{1/3}}=\\left(\\dfrac{h^2}{m^2g}\\right)^{\\frac13}$ の定数倍に限られる．(1) の $H_n=\\left(\\dfrac{9n^2}{32}\\right)^{\\frac13}\\left(\\dfrac{h^2}{m^2g}\\right)^{\\frac13}$ は確かにこの形で，量子化の条件は数の係数 $\\left(\\dfrac{9n^2}{32}\\right)^{\\frac13}$ を決めているにすぎない．\n\n$g$ を $\\dfrac18$ 倍にすると $H_1\\propto g^{-\\frac13}$ は $\\left(\\dfrac18\\right)^{-\\frac13}=\\boldsymbol{2}$ \\textbf{倍}，$E_1=mgH_1\\propto g^{\\frac23}$ は $\\left(\\dfrac18\\right)^{\\frac23}=\\boldsymbol{\\dfrac14}$ \\textbf{倍}になる．重力が弱いほど「量子的にはねる」高さは大きくなるが，その増え方は $g^{-1/3}$ とゆるやかである．（地上では $H_1\\fallingdotseq17\\ \\mathrm{\\mu m}$ なので，すき間 $s$ を $H_1$ 以下にすると中性子がまったく通れなくなる，という形で量子化が観測できる．）\\hfill$\\square$"
     }
    ]
   }
  ],
  "idea": {
-  "tex": "重力場の中ではね返る粒子に物質波の量子化条件 $2\\int_0^Hp\\,dx=nh$ を課すと，$\\int p\\,dx\\propto H^{3/2}$ から最高点の高さは $n^{2/3}$ に比例する離散的な値になる．床での波長は $\\frac{4}{3n}H_n$ で質量や $g$ によらず，最低の状態では運動の範囲より長いので，すき間の高さで中性子を選別するとしきい値が現れる．"
+  "tex": "重力場の中ではね返る粒子に物質波の量子化条件 $2\\int_0^Hp\\,dx=nh$ を課すと，$\\int p\\,dx\\propto H^{3/2}$ から最高点の高さは $n^{2/3}$ に比例する離散的な値になる．床での波長は $\\frac{4}{3n}H_n$ で質量や $g$ によらず，最低の状態では運動の範囲より長い．量子化の条件を $E$ で微分すると往復の周期が現れ，$dE/dn=h/T$ から大きな $n$ では準位間隔が古典的な振動数に対応する．長さの尺度は次元解析だけで $(h^2/m^2g)^{1/3}$ に決まる．"
  },
  "concepts": [
   "photon",

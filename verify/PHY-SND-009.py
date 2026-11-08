@@ -29,11 +29,25 @@ expr = sp.simplify(N(lA*x, Tad))
 print('adiabatic N(x) =', expr)
 xD = sp.solve(sp.Eq(expr, 7), x)[0]
 print('adiabatic: ell_D/ell_A =', xD, '=', float(xD), ' T_D/T_A =', sp.nsimplify(Tad.subs(x, xD)/TA), float(Tad.subs(x, xD)/TA))
-# (5) V ∝ T^alpha のとき定圧加熱で N ∝ T^(1-alpha)
-r = sp.symbols('r', positive=True)
-al = 1 - sp.log(sp.Rational(11, 9))/sp.log(r)
-print('alpha =', al, ' for r=(11/9)^2 ->', sp.simplify(al.subs(r, sp.Rational(121, 81))))
-print('alpha for r=1.49 ->', float(al.subs(r, 1.49)))
+# (5) 新設問：N は ell と p だけで決まる。N = 9 sqrt((ell/ell_A)(p_A/p))
+p_, pA = sp.symbols('p p_A', positive=True)
+T_of = TA*p_*ell/(pA*lA)                 # 状態方程式 p*ell/T 一定
+N_lp = sp.simplify(N(ell, T_of))
+print('N(ell,p) =', N_lp)
+assert sp.simplify(N_lp - 9*sp.sqrt(ell*pA/(lA*p_))) == 0
+assert not N_lp.has(T) and not N_lp.has(TA)
+# (2)(3)(4) をこの式で再現
+assert sp.simplify(N_lp.subs({p_: pA, ell: lA*sp.Rational(121, 81)}) - 11) == 0          # 定圧
+assert sp.simplify(N_lp.subs({ell: lA, p_: pA*sp.Rational(81, 49)}) - 7) == 0            # 定積: p ∝ T
+xD_ = (sp.Rational(7, 9))**sp.Rational(5, 6)
+assert abs(float(N_lp.subs({ell: lA*xD_, p_: pA*xD_**(-sp.Rational(7, 5))})) - 7) < 1e-12  # 断熱: p ∝ ell^-gamma
+# 共鳴が続く条件 p ∝ ell, T ∝ ell^2
+assert sp.simplify(N_lp.subs(p_, pA*ell/lA) - 9) == 0
+print('T along p∝ell:', sp.simplify(T_of.subs(p_, pA*ell/lA)))
+assert sp.simplify(T_of.subs(p_, pA*ell/lA) - TA*(ell/lA)**2) == 0
+# 数値：p∝ell の経路で ell を 1→2 倍に変えても N は 9 のまま
+for xv in np.linspace(1, 2, 11):
+    assert abs(float(N_lp.subs({ell: lA*xv, p_: pA*xv})) - 9) < 1e-12
 
 # 数値: 温度を少しずつ上げて共鳴（N が奇数整数）となる温度を走査
 fn, lAn, TAn = 1000.0, 1.0, 300.0

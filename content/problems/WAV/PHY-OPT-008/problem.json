@@ -38,7 +38,7 @@
      },
      {
       "id": "4",
-      "tex": "溝の間隔 $d'$ の分からない別の格子に (2) と同じレーザー光を当て，$\\alpha$ を $0^\\circ$ から $90^\\circ$ まで増やすと，$\\alpha=0^\\circ$ 以外で光がレーザーに戻る角度はちょうど3つあり，そのうち1つは $\\sin\\alpha=0.60$ であった．$d'$ を有効数字3桁で求めよ．"
+      "tex": "格子を，回折光がレーザーに戻る配置（$\\beta=\\alpha$，次数 $m\\ \\ (m\\ge1)$）で用いる．\n(a) 波長が $\\lambda$ からわずかに $\\Delta\\lambda$ だけ変わったとき，同じ次数の光が戻る角 $\\alpha$ の変化を $\\Delta\\alpha$ とする．$\\dfrac{\\Delta\\alpha}{\\Delta\\lambda}$ が $\\alpha$ と $\\lambda$ だけで表され，$d$ や $m$ によらないことを示せ．\n(b) 波長 $\\lambda$ の光子の運動量の大きさは $\\dfrac{h}{\\lambda}$（$h$ はプランク定数）である．(1) の条件は，格子での反射の前後で光子の運動量の格子面に平行な成分が $\\dfrac hd$ の整数倍だけ変化することと同じであることを示せ．また，光がレーザーに戻る配置で，格子が光子1個から受ける力積の格子面に平行な成分の大きさを $h,\\ d,\\ m$ で表し，その向きを答えよ．"
      }
     ]
    }
@@ -71,7 +71,7 @@
    },
    {
     "id": "4",
-    "tex": "$d'=1.08\\ \\mu\\mathrm{m}$"
+    "tex": "(a) $\\dfrac{\\Delta\\alpha}{\\Delta\\lambda}=\\dfrac{\\tan\\alpha}{\\lambda}$．(b) 平行な成分の変化は $\\dfrac{h}{\\lambda}(\\sin\\alpha+\\sin\\beta)$ で，(1) よりこれは $\\dfrac{mh}{d}$．格子が受ける力積の平行な成分は大きさ $\\dfrac{mh}{d}$ で，入射光の進む向きの格子面に平行な成分と同じ向き（$\\beta<0$ の側へ向かう向き）"
    }
   ]
  },
@@ -82,13 +82,13 @@
    "blocks": [
     {
      "type": "text",
-     "tex": "\\textbf{(1)}　隣り合う溝で反射する2本の光線を考える．入射側では一方が他方より $d\\sin\\alpha$ だけ長く進み，反射後に $\\beta$ の向き（入射側を正）へ進むとき，同じ光が今度は $d\\sin\\beta$ だけ長く進む（$\\beta=-\\alpha$ の正反射では両者が打ち消して経路差 0 になることで符号を確かめられる）．経路差 $d(\\sin\\alpha+\\sin\\beta)$ が波長の整数倍のとき強め合うので\n\\[ \\boldsymbol{d(\\sin\\alpha+\\sin\\beta)=m\\lambda}\\qquad(m=0,\\pm1,\\pm2,\\ldots) \\]\n\n\\textbf{(2)}　光がレーザーに戻るのは $\\beta=\\alpha$ のときで\n\\[ 2d\\sin\\alpha=m\\lambda\\qquad\\therefore\\ \\sin\\alpha=\\frac{m\\lambda}{2d} \\]\n$0<\\sin\\alpha<1$ となる正の整数 $m$ の個数を数える．$\\dfrac{\\lambda}{2d}=\\dfrac{0.650}{3.20}=0.203125$ より，$m=1,2,3,4$（$\\sin\\alpha=0.203,\\ 0.406,\\ 0.609,\\ 0.8125$）の \\textbf{4つ}．最も大きい角は $m=4$ で $\\boldsymbol{\\sin\\alpha=0.8125}$（$\\alpha\\fallingdotseq54^\\circ$）．\n\n\\textbf{(3)}　$\\sin\\alpha=0.5$，$\\dfrac\\lambda d=0.40625$ を (1) に代入すると\n\\[ \\sin\\beta=0.40625\\,m-0.5 \\]\n$-1<\\sin\\beta<1$ となるのは $-1.23<m<3.69$，すなわち $m=-1,0,1,2,3$ で \\textbf{5本}．$\\sin\\beta$ はそれぞれ $-0.906,\\ -0.5,\\ -0.094,\\ 0.313,\\ 0.719$ で，入射側で最も傾いたものは $m=3$ の $\\boldsymbol{\\sin\\beta\\fallingdotseq0.719}$．入射が斜めなので，回折光は法線に関して非対称に並ぶ．\n\n\\textbf{(4)}　戻る条件は $\\sin\\alpha=\\dfrac{m\\lambda}{2d'}$．戻る角度がちょうど3つあるのは，$\\dfrac{m\\lambda}{2d'}<1$ を満たす正の整数 $m$ が $1,2,3$ だけのときで\n\\[ 3<\\frac{2d'}{\\lambda}\\leqq4 \\]\n（$2d'/\\lambda=4$ なら $m=4$ は $\\alpha=90^\\circ$ ですれすれになり，戻る光として観測されない．）一方，$\\sin\\alpha=0.60$ がそのうちの1つ（次数 $m_0$）なので\n\\[ \\frac{2d'}{\\lambda}=\\frac{m_0}{0.60} \\]\n$m_0=1,2,3$ に対して $\\dfrac{2d'}{\\lambda}=1.67,\\ 3.33,\\ 5.00$ で，条件を満たすのは $m_0=2$ だけである．よって\n\\[ d'=\\frac{3.33\\cdots\\times650}{2}\\ \\mathrm{nm}=\\frac53\\times650\\ \\mathrm{nm}\\fallingdotseq\\boldsymbol{1.08\\ \\mu\\mathrm{m}} \\]\n（他の2つは $\\sin\\alpha=0.30,\\ 0.90$ である．）\\hfill$\\square$"
+     "tex": "\\textbf{(1)}　隣り合う溝で反射する2本の光線を考える．入射側では一方が他方より $d\\sin\\alpha$ だけ長く進み，反射後に $\\beta$ の向き（入射側を正）へ進むとき，同じ光が今度は $d\\sin\\beta$ だけ長く進む（$\\beta=-\\alpha$ の正反射では両者が打ち消して経路差 0 になることで符号を確かめられる）．経路差 $d(\\sin\\alpha+\\sin\\beta)$ が波長の整数倍のとき強め合うので\n\\[ \\boldsymbol{d(\\sin\\alpha+\\sin\\beta)=m\\lambda}\\qquad(m=0,\\pm1,\\pm2,\\ldots) \\]\n\n\\textbf{(2)}　光がレーザーに戻るのは $\\beta=\\alpha$ のときで\n\\[ 2d\\sin\\alpha=m\\lambda\\qquad\\therefore\\ \\sin\\alpha=\\frac{m\\lambda}{2d} \\]\n$0<\\sin\\alpha<1$ となる正の整数 $m$ の個数を数える．$\\dfrac{\\lambda}{2d}=\\dfrac{0.650}{3.20}=0.203125$ より，$m=1,2,3,4$（$\\sin\\alpha=0.203,\\ 0.406,\\ 0.609,\\ 0.8125$）の \\textbf{4つ}．最も大きい角は $m=4$ で $\\boldsymbol{\\sin\\alpha=0.8125}$（$\\alpha\\fallingdotseq54^\\circ$）．\n\n\\textbf{(3)}　$\\sin\\alpha=0.5$，$\\dfrac\\lambda d=0.40625$ を (1) に代入すると\n\\[ \\sin\\beta=0.40625\\,m-0.5 \\]\n$-1<\\sin\\beta<1$ となるのは $-1.23<m<3.69$，すなわち $m=-1,0,1,2,3$ で \\textbf{5本}．$\\sin\\beta$ はそれぞれ $-0.906,\\ -0.5,\\ -0.094,\\ 0.313,\\ 0.719$ で，入射側で最も傾いたものは $m=3$ の $\\boldsymbol{\\sin\\beta\\fallingdotseq0.719}$．入射が斜めなので，回折光は法線に関して非対称に並ぶ．\n\n\\textbf{(4)}　(a) 戻る条件 $2d\\sin\\alpha=m\\lambda$ で，$m$ と $d$ を一定に保って $\\lambda$ を $\\Delta\\lambda$ 変えると，$\\alpha$ は $2d\\cos\\alpha\\,\\Delta\\alpha=m\\,\\Delta\\lambda$ を満たすように変わる．よって\n\\[ \\frac{\\Delta\\alpha}{\\Delta\\lambda}=\\frac{m}{2d\\cos\\alpha}=\\frac{2d\\sin\\alpha/\\lambda}{2d\\cos\\alpha}=\\boldsymbol{\\frac{\\tan\\alpha}{\\lambda}} \\]\n（2つ目の等号で $m=\\dfrac{2d\\sin\\alpha}{\\lambda}$ を用いた）．$d$ と $m$ は消え，$\\alpha$ と $\\lambda$ だけで決まる．格子の溝の間隔を変えても，同じ角度で使う限り波長を分ける能力（角分散）は変わらず，角分散を大きくするには $\\alpha$ を大きく（格子をすれすれに近い角度で）使えばよい．\n\n(b) 格子面に平行で，入射光のある側を向く向きを正とする．入射光は正の側から格子に向かって進むので，運動量の平行な成分は $-\\dfrac{h}{\\lambda}\\sin\\alpha$．回折光は角 $\\beta$ の向きに進むので $+\\dfrac{h}{\\lambda}\\sin\\beta$．変化は\n\\[ \\frac{h}{\\lambda}\\sin\\beta-\\left(-\\frac{h}{\\lambda}\\sin\\alpha\\right)=\\frac{h}{\\lambda}(\\sin\\alpha+\\sin\\beta) \\]\n(1) の条件 $d(\\sin\\alpha+\\sin\\beta)=m\\lambda$ は，これが $\\boldsymbol{\\dfrac{mh}{d}}$（$\\dfrac hd$ の整数倍）に等しいことと同じである．正反射（$m=0$，$\\beta=-\\alpha$）では平行な成分は保存され，平らな鏡と同じになる．格子は面に平行に $d$ ずらすと元の形に重なる周期的な構造なので，平行な方向には平らな鏡と違って運動量をやりとりできるが，その量は周期 $d$ で決まる $\\dfrac hd$ の整数倍に限られる．\n\n光がレーザーに戻る配置（$\\beta=\\alpha$）では，光子の平行な成分は $-\\dfrac h\\lambda\\sin\\alpha$ から $+\\dfrac h\\lambda\\sin\\alpha$ へと逆転し，変化は $\\dfrac{2h\\sin\\alpha}{\\lambda}=\\dfrac{mh}{d}$（正の向き）である．作用・反作用により，格子は光子1個から平行な成分が大きさ $\\boldsymbol{\\dfrac{mh}{d}}$ の力積を，負の向き，すなわち\\textbf{入射光の進む向きの平行成分と同じ向き}（$\\beta<0$ の側へ向かう向き）に受ける．\\hfill$\\square$"
     }
    ]
   }
  ],
  "idea": {
-  "tex": "反射型回折格子に斜めに入射させると，経路差は入射側と回折側の和 $d(\\sin\\alpha+\\sin\\beta)$ になり，回折光は法線に関して非対称に並ぶ．回折光が光源に戻る（$\\beta=\\alpha$）条件 $2d\\sin\\alpha=m\\lambda$ では，戻る角度の個数が $2d/\\lambda$ の整数部分で決まるので，「戻る角度の個数」と「そのうち1つの角度」から次数と格子間隔を逆算できる．"
+  "tex": "反射型回折格子に斜めに入射させると，経路差は入射側と回折側の和 $d(\\sin\\alpha+\\sin\\beta)$ になり，回折光は法線に関して非対称に並ぶ．回折光が光源に戻る（$\\beta=\\alpha$）条件 $2d\\sin\\alpha=m\\lambda$ では，戻る角度の個数が $2d/\\lambda$ の整数部分で決まり，戻る角の波長による変化 $\\tan\\alpha/\\lambda$ は $d$ や $m$ によらない．回折の条件は，周期 $d$ の格子が光子の面に平行な運動量を $h/d$ の整数倍だけ変えることと同じである．"
  },
  "concepts": [
   "light-interference",

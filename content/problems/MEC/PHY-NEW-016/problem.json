@@ -38,7 +38,7 @@
      },
      {
       "id": "4",
-      "tex": "仮に泡が気体を取り込まず，液体の圧力が下がることによって等温的に膨張するだけだとすると，深さ $10\\ \\mathrm{cm}$ から液面まで上昇する間に泡の半径は何\\%増えるか，有効数字2桁で求めよ．大気圧を $1.0\\times10^5\\ \\mathrm{Pa}$ とし，表面張力は無視する．この結果から，泡が上昇とともに速くなる主な原因を答えよ．"
+      "tex": "仮に泡が気体を取り込まず，液体の圧力が下がることによって等温的に膨張するだけだとする．大気圧を $P_0$ とし，表面張力は無視する．深さ $D$ の位置での泡の速さを $v_D$，液面に達したときの速さを $v_{\\rm s}$ として，$\\dfrac{v_{\\rm s}}{v_D}$ を $P_0,\\ \\rho,\\ g,\\ D$ で表せ．また，$\\rho gD\\ll P_0$ のときの近似式 $\\dfrac{v_{\\rm s}}{v_D}\\fallingdotseq1+\\gamma\\,\\dfrac{\\rho gD}{P_0}$ の係数 $\\gamma$ と，この膨張だけで速さが2倍になるのに必要な深さ $D_2$ を求めよ．さらに，(2) の結果のもとで速さが2倍になるには高さが何倍になればよいかと比べて，泡が上昇とともに速くなる主な原因を答えよ．"
      }
     ]
    }
@@ -71,7 +71,7 @@
    },
    {
     "id": "4",
-    "tex": "約 $0.33\\%$．速くなる主な原因は気体の取り込みによる泡の成長（浮力が $r^3$，抵抗が $r$ に比例するので $v\\propto r^2$）"
+    "tex": "$\\dfrac{v_{\\rm s}}{v_D}=\\left(1+\\dfrac{\\rho gD}{P_0}\\right)^{2/3}$，$\\gamma=\\dfrac23$，$D_2=(2\\sqrt2-1)\\dfrac{P_0}{\\rho g}$（液体の密度が水程度なら約 $19\\ \\mathrm m$）．(2) では高さが $2\\sqrt2$ 倍になれば速さが2倍になる（数 cm の上昇で足りる）ので，主な原因は気体の取り込みによる泡の成長"
    }
   ]
  },
@@ -82,13 +82,13 @@
    "blocks": [
     {
      "type": "text",
-     "tex": "\\textbf{(1) 終端速度}　泡が押しのけた液体の重さに等しい浮力 $\\frac43\\pi r^3\\rho g$ と抵抗力がつり合うので\n\\[ \\frac43\\pi r^3\\rho g=6\\pi\\eta rv\\quad\\therefore\\quad \\boldsymbol{v=\\frac{2\\rho gr^2}{9\\eta}}. \\]\n浮力は $r^3$，抵抗力は $r$ に比例するので，速さは $r^2$ に比例し，半径が少し増えるだけで大きく速くなる．\n\n\\textbf{(2) 高さと速さ}　$r=kt$ を代入すると $v=\\dfrac{2\\rho gk^2}{9\\eta}t^2$．$v$-$t$ グラフの面積が高さなので\n\\[ h=\\frac{2\\rho gk^2}{9\\eta}\\cdot\\frac{t^3}{3}=\\boldsymbol{\\frac{2\\rho gk^2t^3}{27\\eta}}. \\]\n$t=\\left(\\dfrac{27\\eta h}{2\\rho gk^2}\\right)^{1/3}$ を $v$ に代入して\n\\[ v=\\frac{2\\rho gk^2}{9\\eta}\\left(\\frac{27\\eta h}{2\\rho gk^2}\\right)^{\\frac23}=\\boldsymbol{\\left(\\frac{2\\rho gk^2h^2}{\\eta}\\right)^{\\frac13}}, \\]\nすなわち $v\\propto h^{2/3}$ である．（加速度は $\\dfrac{dv}{dt}=\\dfrac{4\\rho gk^2t}{9\\eta}$ で，等加速度ではない．）\n\n\\textbf{(3) 泡の列の間隔}　どの泡も同じ $h(t)$ に従って上昇し，時間 $T$ だけ遅れて次の泡が続く．ある高さを1個の泡が通過してから，次の泡が同じ高さを通過するまでの時間は $T$ なので，間隔が高さに比べて小さければ，その高さでの泡の間隔は $\\Delta h\\fallingdotseq vT$ で，$v$ に比例する．$v\\propto h^{2/3}$ より\n\\[ \\Delta h_{8.0\\,\\mathrm{cm}}=2.0\\ \\mathrm{mm}\\times\\left(\\frac{8.0}{1.0}\\right)^{\\frac23}=2.0\\times4=\\boldsymbol{8.0\\ \\mathrm{mm}}. \\]\n高さ $1.0\\ \\mathrm{cm}$ での速さは\n\\[ v=\\left(\\frac{2(1.0\\times10^3)(9.8)(1.0\\times10^{-5})^2(1.0\\times10^{-2})^2}{0.10}\\right)^{\\frac13}=(1.96\\times10^{-9})^{\\frac13}=1.25\\times10^{-3}\\ \\mathrm{m/s} \\]\nなので\n\\[ T=\\frac{\\Delta h}{v}=\\frac{2.0\\times10^{-3}}{1.25\\times10^{-3}}\\fallingdotseq\\boldsymbol{1.6\\ \\mathrm s}. \\]\n（このとき泡の半径は $0.24\\ \\mathrm{mm}$ 程度，高さ $8.0\\ \\mathrm{cm}$ でも $0.48\\ \\mathrm{mm}$ 程度で，抵抗力の式が使える遅い流れの範囲にある．）\n\n\\textbf{(4) 圧力変化の効果}　深さ $10\\ \\mathrm{cm}$ での圧力は $P_0+\\rho gD=1.0\\times10^5+980\\ \\mathrm{Pa}$．等温変化では $PV$ が一定なので体積は $1+\\dfrac{980}{1.0\\times10^5}=1.0098$ 倍，半径はその3乗根で\n\\[ (1.0098)^{\\frac13}\\fallingdotseq1.0033\\quad\\text{より約}\\ \\boldsymbol{0.33\\%} \\]\nしか増えない．速さは $r^2$ に比例するので約 $0.65\\%$ しか増えず，(3) のように泡の間隔が数倍にもなることは説明できない．泡が上昇とともに速くなる主な原因は，\\textbf{液体に溶けている気体を取り込んで泡が成長すること}である．\\hfill$\\square$"
+     "tex": "\\textbf{(1) 終端速度}　泡が押しのけた液体の重さに等しい浮力 $\\frac43\\pi r^3\\rho g$ と抵抗力がつり合うので\n\\[ \\frac43\\pi r^3\\rho g=6\\pi\\eta rv\\quad\\therefore\\quad \\boldsymbol{v=\\frac{2\\rho gr^2}{9\\eta}}. \\]\n浮力は $r^3$，抵抗力は $r$ に比例するので，速さは $r^2$ に比例し，半径が少し増えるだけで大きく速くなる．\n\n\\textbf{(2) 高さと速さ}　$r=kt$ を代入すると $v=\\dfrac{2\\rho gk^2}{9\\eta}t^2$．$v$-$t$ グラフの面積が高さなので\n\\[ h=\\frac{2\\rho gk^2}{9\\eta}\\cdot\\frac{t^3}{3}=\\boldsymbol{\\frac{2\\rho gk^2t^3}{27\\eta}}. \\]\n$t=\\left(\\dfrac{27\\eta h}{2\\rho gk^2}\\right)^{1/3}$ を $v$ に代入して\n\\[ v=\\frac{2\\rho gk^2}{9\\eta}\\left(\\frac{27\\eta h}{2\\rho gk^2}\\right)^{\\frac23}=\\boldsymbol{\\left(\\frac{2\\rho gk^2h^2}{\\eta}\\right)^{\\frac13}}, \\]\nすなわち $v\\propto h^{2/3}$ である．（加速度は $\\dfrac{dv}{dt}=\\dfrac{4\\rho gk^2t}{9\\eta}$ で，等加速度ではない．）\n\n\\textbf{(3) 泡の列の間隔}　どの泡も同じ $h(t)$ に従って上昇し，時間 $T$ だけ遅れて次の泡が続く．ある高さを1個の泡が通過してから，次の泡が同じ高さを通過するまでの時間は $T$ なので，間隔が高さに比べて小さければ，その高さでの泡の間隔は $\\Delta h\\fallingdotseq vT$ で，$v$ に比例する．$v\\propto h^{2/3}$ より\n\\[ \\Delta h_{8.0\\,\\mathrm{cm}}=2.0\\ \\mathrm{mm}\\times\\left(\\frac{8.0}{1.0}\\right)^{\\frac23}=2.0\\times4=\\boldsymbol{8.0\\ \\mathrm{mm}}. \\]\n高さ $1.0\\ \\mathrm{cm}$ での速さは\n\\[ v=\\left(\\frac{2(1.0\\times10^3)(9.8)(1.0\\times10^{-5})^2(1.0\\times10^{-2})^2}{0.10}\\right)^{\\frac13}=(1.96\\times10^{-9})^{\\frac13}=1.25\\times10^{-3}\\ \\mathrm{m/s} \\]\nなので\n\\[ T=\\frac{\\Delta h}{v}=\\frac{2.0\\times10^{-3}}{1.25\\times10^{-3}}\\fallingdotseq\\boldsymbol{1.6\\ \\mathrm s}. \\]\n（このとき泡の半径は $0.24\\ \\mathrm{mm}$ 程度，高さ $8.0\\ \\mathrm{cm}$ でも $0.48\\ \\mathrm{mm}$ 程度で，抵抗力の式が使える遅い流れの範囲にある．）\n\n\\textbf{(4) 圧力変化の効果}　気体を取り込まなければ泡の中の気体の量は一定で，等温変化では $PV$ が一定である．深さ $z$ での圧力は $P_0+\\rho gz$ なので，泡の体積は $(P_0+\\rho gz)^{-1}$ に，半径は $(P_0+\\rho gz)^{-1/3}$ に比例する．(1) より速さは $r^2$ に比例するので $v\\propto(P_0+\\rho gz)^{-2/3}$ で，\n\\[ \\frac{v_{\\rm s}}{v_D}=\\left(\\frac{P_0+\\rho gD}{P_0}\\right)^{\\frac23}=\\boldsymbol{\\left(1+\\frac{\\rho gD}{P_0}\\right)^{\\frac23}}. \\]\n$\\rho gD\\ll P_0$ なら $(1+x)^{2/3}\\fallingdotseq1+\\dfrac23x$ より $\\boldsymbol{\\gamma=\\dfrac23}$．膨張による速さの増加は，深さ $D$ の液柱の圧力と大気圧の比 $\\dfrac{\\rho gD}{P_0}$ 程度の割合にすぎない．\n\n速さが2倍になる条件は $\\left(1+\\dfrac{\\rho gD_2}{P_0}\\right)^{2/3}=2$，すなわち $1+\\dfrac{\\rho gD_2}{P_0}=2^{3/2}$ で\n\\[ D_2=\\boldsymbol{(2\\sqrt2-1)\\frac{P_0}{\\rho g}}. \\]\n$\\dfrac{P_0}{\\rho g}$ は大気圧と同じ圧力をつくる液柱の高さで，密度が水程度の液体では約 $10\\ \\mathrm m$ だから，$D_2$ は約 $19\\ \\mathrm m$ にもなる．\n\n一方，(2) の $v\\propto h^{2/3}$ では，速さが2倍になるには高さが $2^{3/2}=2\\sqrt2\\fallingdotseq2.8$ 倍になればよい（例えば高さ $1\\ \\mathrm{cm}$ から $2.8\\ \\mathrm{cm}$）．グラスの中の数 cm の上昇で速さが何倍にもなることは，圧力の減少による膨張では到底説明できない．泡が上昇とともに速くなる主な原因は，\\textbf{液体に溶けている気体を取り込んで泡が成長すること}である．\\hfill$\\square$"
     }
    ]
   }
  ],
  "idea": {
-  "tex": "終端速度で動く泡では，浮力が $r^3$・抵抗力が $r$ に比例するので速さは $r^2$ に比例し，半径が時間に比例して増えると高さは $t^3$，速さは $h^{2/3}$ に比例する．一定周期で生まれる泡の列では，ある高さでの間隔が「その高さでの速さ $\\times$ 周期」になるので，間隔の変化から速さの法則と周期が読みとれ，水圧の減少による膨張では加速を説明できないことも数値で確かめられる．"
+  "tex": "終端速度で動く泡では，浮力が $r^3$・抵抗力が $r$ に比例するので速さは $r^2$ に比例し，半径が時間に比例して増えると高さは $t^3$，速さは $h^{2/3}$ に比例する．一定周期で生まれる泡の列では，ある高さでの間隔が「その高さでの速さ $\\times$ 周期」になるので，間隔の変化から速さの法則と周期が読みとれ，水圧の減少による膨張は液柱の圧力と大気圧の比 $\\rho gD/P_0$ 程度の効果しかなく，加速を説明できない．"
  },
  "concepts": [
   "equation-of-motion",

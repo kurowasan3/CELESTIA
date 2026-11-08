@@ -30,3 +30,16 @@ def system(a):
     return ang, z
 for a in [a_inf-1e-9, a_D]:
     ang,z=system(a); print('a=%.5f visual angle per unit height=%.4f (expected %.4f)  image z from L2=%.2f -> dist from eye %.2f'%(a,ang,(LL-F2- (0))*0+ (1/F2)*( (LL-(F2 if a==a_inf-1e-9 else float(s_D.subs({f2:F2,Dn:DD}))))/a ),z,F2-z))
+# (4) M = m1 D/f2 ; M_D/M_inf = 1 + f2^2/(D(l-f1-f2)) ; compare with the (wrong) magnifier claim (D+f2)/D
+L_=sp.symbols('l',positive=True)
+b_inf=L_-f2; b_D=L_-f2+f2**2/Dn
+ratio=sp.simplify((b_D-f1)/(b_inf-f1))
+print('M_D/M_inf =',ratio,' ; minus claimed form:',sp.simplify(ratio-(1+f2**2/(Dn*(L_-f1-f2)))))
+assert sp.simplify(ratio-(1+f2**2/(Dn*(L_-f1-f2))))==0
+num=float(ratio.subs({L_:LL,f1:F1,f2:F2,Dn:DD})); print('numeric ratio %.5f (m ratio %.5f) ; magnifier claim %.3f'%(num,m_D/m_inf,(DD+F2)/DD))
+assert abs(num-m_D/m_inf)<1e-9
+# ray-matrix: visual angle per unit object height at both ends -> ratio equals m1 ratio (eye at F2')
+ang_inf,_=system(a_inf-1e-12); ang_D,_=system(a_D)
+print('ray-matrix angle ratio',ang_D/ang_inf)
+assert abs(ang_D/ang_inf-num)<1e-3
+print('OK')

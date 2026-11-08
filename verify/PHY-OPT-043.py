@@ -47,8 +47,27 @@ for x2 in x2s:
 x1 = 0.25
 vals = [0.25*(1+np.cos(2*np.pi*x1)*np.cos(2*np.pi*x2)) for x2 in x2s]
 assert max(vals)-min(vals) < 1e-12
-# g の最大・最小 (x1 = 0)
-gu = [1+0.5*np.cos(2*np.pi*x2) for x2 in np.linspace(0, 1, 1001)]
-gb = [1+np.cos(2*np.pi*x2) for x2 in np.linspace(0, 1, 1001)]
-print('uniform g range', min(gu), max(gu), ' binary g range', min(gb), max(gb))
+# (6)(a) same position: g-1 = var(I)/mean(I)^2 >= 0 for arbitrary phi distributions
+for trial in range(200):
+    k = rng.integers(1, 6); vals_phi = rng.uniform(0, 2*np.pi, k); w = rng.uniform(0, 1, k); w /= w.sum()
+    x = rng.uniform(0, 1)
+    I = 0.5*(1+np.cos(2*np.pi*x - vals_phi))
+    m = np.sum(w*I); M = np.sum(w*I*I); var = np.sum(w*(I-m)**2)
+    assert abs((M/m**2 - 1) - var/m**2) < 1e-12 and M/m**2 >= 1-1e-12
+print('(6)(a) g(x,x) >= 1 for random discrete phi distributions; equality iff var=0')
+# binary at x=P/4: var = 0 -> g = 1
+I = 0.5*(1+np.cos(2*np.pi*0.25 - np.array([0, np.pi]))); assert np.ptp(I) < 1e-12
+# (6)(b) binary case: g = 0 exactly at x1 = jP/2, x2 = x1 + (k+1/2)P
+gb = lambda x1, x2: 1+np.cos(2*np.pi*x1)*np.cos(2*np.pi*x2)
+X1, X2 = np.meshgrid(np.linspace(-1, 1, 801), np.linspace(-1, 1, 801))
+G = gb(X1, X2); zs = np.argwhere(G < 1e-12)
+for (r, c) in zs:
+    x1v, x2v = X1[r, c], X2[r, c]
+    assert abs(2*x1v - round(2*x1v)) < 1e-9 and abs((x2v-x1v-0.5) - round(x2v-x1v-0.5)) < 1e-9
+print('(6)(b) zeros of binary g found at', len(zs), 'grid points, all of the predicted form')
+for (x1v, x2v) in [(0, 0.5), (0.5, 0), (0.5, 1.0), (1.5, -1.0)]:
+    r1 = 0.5*(1+np.cos(2*np.pi*x1v - np.array([0, np.pi]))); r2 = 0.5*(1+np.cos(2*np.pi*x2v - np.array([0, np.pi])))
+    assert np.allclose(r1*r2, 0)
+# uniform case never reaches 0: min g = 1/2
+print('uniform g min =', min(1+0.5*np.cos(2*np.pi*d) for d in np.linspace(0, 1, 1001)))
 print('ALL OK')

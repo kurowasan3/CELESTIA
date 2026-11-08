@@ -29,3 +29,21 @@ print('    B reads',float(Rread2),'  formula R*Rc/Rin2=',float(1500*Rc/Rin2))
 # 一般式チェック：振れの割合 = Rin/(Rin+R)
 e,Rin,Rx=sp.symbols('e R_in R_x',positive=True)
 print('general', sp.simplify((e/(Rin+Rx))/(e/Rin)-Rin/(Rin+Rx)))
+
+# ---- (5) rewritten: general error of shunt-adjusted ohmmeter ----
+Es,Eps,rs,Igs,R1s,Ps=sp.symbols('E Ep r I_g R_1 P',positive=True)
+Psol=sp.solve(sp.Eq(Eps/(R1s+Ps)*Ps/rs,Igs),Ps)[0]
+Rin_p=sp.simplify(R1s+Psol); print('(5a) Rin\' =',Rin_p)
+assert sp.simplify(Rin_p-Eps*R1s/(Eps-rs*Igs))==0
+Rc_=Rin_p.subs(Eps,Es)
+relB=sp.simplify(Rc_/Rin_p-1); relA=sp.simplify((Es/Igs)/(Eps/Igs)-1)
+print('(5b) rel err B =',sp.factor(relB),'   A =',sp.factor(relA),'   ratio =',sp.simplify(relB/relA))
+assert sp.simplify(relB+rs*Igs*(Es-Eps)/(Eps*(Es-rs*Igs)))==0
+assert sp.simplify(relB/relA+rs*Igs/(Es-rs*Igs))==0
+nv={Es:E,Eps:E2,rs:r,Igs:Ig,R1s:R1v}
+print('     numbers: Rc',Rc_.subs(nv),' Rin\'',sp.N(Rin_p.subs(nv)),' relB',sp.N(relB.subs(nv)),' relA',sp.N(relA.subs(nv)),' ratio',sp.simplify((relB/relA).subs(nv)))
+assert Rc_.subs(nv)==1500
+assert abs(sp.N(Rin_p.subs(nv))-float(Rin2))<1e-9
+assert abs(sp.N(1500*(1+relB.subs(nv)))-float(Rread2))<1e-6
+print('     feasibility Rs>0 <=> P<r <=> Ep > Ig(R1+r) =',sp.N(Ig*(R1v+r)),'V')
+print('DCC-021 (5) OK')

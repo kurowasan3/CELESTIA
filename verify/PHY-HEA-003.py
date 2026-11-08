@@ -53,3 +53,25 @@ def stefan(c=2.1,N=40,Xe=0.10):
 ts=stefan(); print('移動境界の差分法 0->10cm',ts/3600,'h')
 assert abs(ts-t10)/t10<2e-3
 print('OK2')
+# ---- 新しい (5)：雪の層を記号で（X1→X2 の時間，余分の時間，等価な氷の厚さ，新しい境目 x**）
+X1s,X2s=sp.symbols('X_1 X_2',positive=True)
+tp=sp.integrate(rho*L/qs,(x,X1s,X2s))
+tp_ans=rho*L/Ta*((X2s**2-X1s**2)/(2*lam)+(X2s-X1s)*(1/al+s/ls))
+assert sp.simplify(tp-tp_ans)==0
+dt_extra=sp.simplify(tp-(t.subs(X,X2s)-t.subs(X,X1s)))
+assert sp.simplify(dt_extra-rho*L*s/(ls*Ta)*(X2s-X1s))==0 and sp.diff(dt_extra,X1s)+sp.diff(dt_extra,X2s)==0
+print('(5a) t\' と Δt=ρLs(X2-X1)/(λs Ta) を確認（X2-X1 だけに依存）')
+ds=lam*s/ls
+assert sp.simplify(qs-Ta/((x+ds)/lam+1/al))==0       # 雪 = 厚さ d_s の氷
+xss=sp.solve(sp.Eq(x/lam,1/al+s/ls),x)[0]
+assert sp.simplify(xss-(lam/al+ds))==0
+rate0=sp.limit(qs/(rho*L),x,0); assert sp.simplify(rate0-Ta/(rho*L*(1/al+s/ls)))==0
+print('(5b) d_s=',ds,' x**=',sp.simplify(xss),' x<<x** の速さ',sp.simplify(rate0))
+# 数値：x<<x** では x がほぼ t に比例する（雪あり，x 小で数値積分）
+from scipy.integrate import solve_ivp as _ivp
+f=sp.lambdify(x,(qs/(rho*L)).subs(num))
+so=_ivp(lambda tt,Y:[f(Y[0])],[0,2e5],[1e-6],dense_output=True,rtol=1e-10)
+x1,x2=so.sol(1e5)[0],so.sol(2e5)[0]
+print('雪あり：t=1e5,2e5 s の厚さ',x1,x2,' 比',x2/x1,' (x**=',float(xss.subs(num)),'m)')
+assert abs(x2/x1-2)<0.05
+print('OK (5)')

@@ -16,3 +16,11 @@ print('electron exact K',sp.N(K.subs(num).subs(mc2,0.511),5),' Zc exact',sp.N(sp
 Km=K.subs(mc2,105.7); print('muon K',sp.N(Km.subs(num),4),' Zc',sp.N(sp.solve(sp.Eq(Km,V0),Z)[0].subs(num),4))
 # 電子で R=3.5fm でも同じか
 print('electron exact Zc R=3.5', sp.N(sp.solve(sp.Eq(K,V0),Z)[0].subs({hc:1240,ke2:1.44,R:3.5,mc2:0.511}),5))
+
+# ---- new (4): general Z_c(R), monotonic, limits, crossover R* ----
+Zc_gen=sp.Rational(2,3)/ke2*(sp.sqrt((hc/4)**2+(mc2*R)**2)-mc2*R)
+print('Z_c(R) vs solve:',sp.simplify(Zc_gen-sp.solve(sp.Eq(K,V0),Z)[0]))
+print('dZc/dR =',sp.simplify(sp.diff(Zc_gen,R)),' (negative)')
+print('R->0 :',sp.limit(Zc_gen,R,0),'  leading R->oo:',sp.simplify(sp.limit(Zc_gen*R,R,sp.oo)),' vs nr:',sp.simplify(Zc_nr*R))
+Rstar=sp.solve(sp.Eq(p_c,mc2),R)[0]; print('R* =',Rstar,' electron',float(Rstar.subs({hc:1240,mc2:0.511})),' muon',float(Rstar.subs({hc:1240,mc2:106})))
+print('muon Zc(7fm) with mc2=106:',float(Zc_gen.subs({hc:1240,ke2:1.44,R:7.0,mc2:106})))

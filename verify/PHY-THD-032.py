@@ -29,3 +29,26 @@ Tnum=cr[1]-cr[0]
 Tth=2*np.pi*np.sqrt((dd+ll/ga)/gg)
 print('T numeric',Tnum,' theory',Tth,' solid float',2*np.pi*np.sqrt(dd/gg))
 assert abs(Tnum/Tth-1)<1e-3
+# ---- 新しい (5)：大気圧 p0 の中での周期
+p0s=sp.symbols('p_0',positive=True)
+pa=p0s+rho*g*d          # 気体の圧力（d=m/(ρS) は変わらない：pS=p0S+mg と p=p0+ρgd から）
+assert sp.simplify(pa*S-p0s*S-m*g)==0
+Dd2=sp.solve(sp.Eq(rho*g*Dd,-gam*pa*(y+Dd)/ell),Dd)[0]
+K2=sp.simplify(-rho*g*S*Dd2/y); w2b=sp.simplify(K2/m)
+Tform=2*sp.pi*sp.sqrt(d/g*(1+rho*g*ell/(gam*pa)))
+assert sp.simplify(2*sp.pi/sp.sqrt(w2b)-Tform)==0
+assert sp.simplify(Tform.subs(p0s,0)-2*sp.pi*sp.sqrt((d+ell/gam)/g))==0
+assert sp.simplify(sp.limit(Tform,p0s,sp.oo)-2*sp.pi*sp.sqrt(d/g))==0
+print('(5) T 式・p0→0・p0→∞ を確認')
+# 数値：非線形の断熱条件で直接積分（p0=1.0e5 Pa）
+P0v=1.0e5; pp2=P0v+mm*gg/SS
+def force2(yv):
+    f=lambda D:(pp2+rr*gg*D)*(ll+yv+D)**ga-pp2*ll**ga
+    D=brentq(f,-0.04,0.04); return rr*gg*SS*D
+sol=solve_ivp(lambda t,s:[s[1],force2(s[0])/mm],[0,3],[A0,0],max_step=1e-3,rtol=1e-9,atol=1e-12)
+yv=sol.y[0]; tt=sol.t
+cr=[tt[i]-yv[i]*(tt[i+1]-tt[i])/(yv[i+1]-yv[i]) for i in range(len(yv)-1) if yv[i]>0 and yv[i+1]<=0]
+Tnum2=cr[1]-cr[0]; Tth2=float(Tform.subs({p0s:P0v,m:mm,S:SS,rho:rr,g:gg,ell:ll,gam:ga}))
+print('   p0=1e5: T numeric',Tnum2,' theory',Tth2,' solid',2*np.pi*np.sqrt(dd/gg))
+assert abs(Tnum2/Tth2-1)<1e-3
+print('OK (5)')

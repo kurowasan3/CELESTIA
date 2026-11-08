@@ -26,11 +26,26 @@ print('group vel',g,' expected',v2n*k/np.linalg.norm(k)+np.array([wn,0]))
 sth=sp.symbols('s',positive=True)
 s_up=sp.solve(sp.Eq(v2*sth/(v1+w*sth), w/v2), sth)[0]
 print('upwind vertical ray sin(theta)=',sp.simplify(s_up))
-# 数値
-V1,V2,W,H=340.,330.,20.,300.
-sc=V1/(V2+W); thc=np.arcsin(sc)
-print('theta_c deg',np.degrees(thc),' skip distance 2H tan',2*H*np.tan(thc))
-su=V1*W/(V2**2-W**2); print('upwind vertical theta deg',np.degrees(np.arcsin(su)), su)
-# 直接：風上で sin th = su のとき sin ph = W/V2 となるか
-print(V2*su/(V1+W*su), W/V2)
-# 全反射の直前で光線の向き（ph->90°）: ray = (v2+w, 0) 水平
+# (4) 新設問：「上層は音速 v2+w の媒質」という誤った主張との比較
+s_=sp.symbols('s',positive=True)   # s = sin(theta)
+true_sphi=v2*s_/(v1-w*s_)
+claim_sphi=(v2+w)*s_/v1
+sols=sp.solve(sp.Eq(true_sphi,claim_sphi),s_)
+print('(4) claim agrees only at sin(theta)=',sols)
+assert len(sols)==1 and sp.simplify(sols[0]-v1/(v2+w))==0
+assert sp.simplify(true_sphi.subs(s_,v1/(v2+w))-1)==0     # 臨界角で sin(phi)=1
+# 法線方向の速さ v2 + w sin(phi) を使った交線速度の一致が (1) と同じ式を与える
+sp_=sp.symbols('sp',positive=True)
+sol_n=sp.solve(sp.Eq(v1/s_,(v2+w*sp_)/sp_),sp_)[0]
+assert sp.simplify(sol_n-true_sphi)==0
+# 数値：臨界角より小さい入射では主張の方が sin(phi) を大きく見積もる
+V1,V2,W=340.,330.,20.
+for sv in np.linspace(0.05,V1/(V2+W)-1e-3,50):
+    t=V2*sv/(V1-W*sv); c=(V2+W)*sv/V1
+    assert c>t
+# 幾何から直接：波面を dt 後に法線方向へ v2 dt 進め，さらに (w dt,0) 平行移動したときの法線方向の変位
+ph=np.radians(37.0); n=np.array([np.sin(ph),np.cos(ph)])
+disp=V2*n+np.array([W,0.0])
+print('normal speed',disp@n,' v2+w sin(phi)=',V2+W*np.sin(ph))
+assert abs(disp@n-(V2+W*np.sin(ph)))<1e-9
+print('PHY-SND-006 (4) OK')

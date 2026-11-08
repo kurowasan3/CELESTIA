@@ -59,3 +59,27 @@ def WDformula(Uv, extra_battery):
 
 
 print('WD1 formula', WDformula(num['V0'], False), ' WD2 formula', WDformula(num['V0'] - num['E'], True))
+
+# (7) new: W2 - W1 = W_E - r(K'-K) < W_E ; i_II(t) > i_I(t) ; rho -> infinity limits
+print('--- (7) ---')
+print('W2-W1 =', WD2 - WD1, '  W_E =', Wb2, '  W_E - r(K2-K1) =', Wb2 - (Wr2 - Wr1))
+assert abs((WD2 - WD1) - (Wb2 - (Wr2 - Wr1))) < 1e-6 and WD2 - WD1 < Wb2 and Wr2 > Wr1
+# pointwise comparison of currents (symbolic): i depends on U as -(U/R)(1-exp(-Rt/L))
+print('d i/dU =', sp.simplify(sp.diff(sol, U)), ' (<0 for t>0)')
+# limits rho -> oo with R = rho + r, I0 = E/r
+Rr = rho + r
+subsI = {R: Rr, I0: E/r}
+T1s = (L/R*sp.log(1 + R*I0/V0)).subs(subsI)
+T2s = (L/R*sp.log(1 + R*I0/(V0 - E))).subs(subsI)
+Q1s = ((L*I0 - V0*(L/R*sp.log(1 + R*I0/V0)))/R).subs(subsI)
+Q2s = ((L*I0 - (V0 - E)*(L/R*sp.log(1 + R*I0/(V0 - E))))/R).subs(subsI)
+W1s = rho/Rr*sp.Rational(1, 2)*L*(E/r)**2 + r/Rr*V0*Q1s
+W2s = rho/Rr*sp.Rational(1, 2)*L*(E/r)**2 + (r*V0 + rho*E)/Rr*Q2s
+for name, ex in [('T1', T1s), ('T2', T2s), ('W_E', E*Q2s), ('W1', W1s), ('W2', W2s)]:
+    print(name, '-> (rho->oo)', sp.simplify(sp.limit(ex, rho, sp.oo)))
+assert sp.simplify(sp.limit(W1s, rho, sp.oo) - L*E**2/(2*r**2)) == 0
+assert sp.simplify(sp.limit(W2s, rho, sp.oo) - L*E**2/(2*r**2)) == 0
+# numeric illustration: growing rho
+for rh in [200, 2e3, 2e4, 2e5]:
+    sub = {rho: rh, r: 30.0, L: 1.5, V0: 80.0, E: 9.0}
+    print(f'rho={rh:g}: T1={float(T1s.subs(sub)):.3e}  W_E={float((E*Q2s).subs(sub)):.3e}  W1={float(W1s.subs(sub)):.5f}  W2={float(W2s.subs(sub)):.5f}  LE^2/2r^2={1.5*81/1800:.5f}')

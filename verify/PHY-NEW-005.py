@@ -23,4 +23,13 @@ for gv,av,uv in [(9.8,3.0,5.0),(9.8,7.0,4.0)]:
     r=solve_ivp(rhs,[0,10],[0,0,V0+uv*np.cos(be),uv*np.sin(be)],events=ev,rtol=1e-12,atol=1e-12)
     T=r.t[-1]; truck=V0*T+0.5*av*T**2
     print('   ground-frame landing rel to launch point on truck:',r.y[0,-1]-truck)
-print('ratio bwd/fwd =',sp.simplify((u**2/(gp-al))/(u**2/(gp+al))))
+# --- (5) L_f L_b = u^4/g^2（alpha によらない）
+Lf=u**2/(gp+al); Lb=u**2/(gp-al)
+print('Lf*Lb =',sp.simplify(Lf*Lb)); assert sp.simplify(Lf*Lb-u**4/g**2)==0
+# 一般化：床に垂直 gperp, 平行 gpar の一様な加速度場での最大到達距離の積 = u^4/gperp^2（数値最適化で確認）
+for gperp,gpar,uv in [(9.8,3.0,5.0),(4.0,7.0,2.0),(1.0,0.2,1.0)]:
+    psi=np.linspace(1e-6,np.pi-1e-6,400001); tt=2*uv*np.sin(psi)/gperp
+    x=uv*np.cos(psi)*tt-gpar*tt**2/2
+    prod=x.max()*(-x.min()); print(' gperp',gperp,'gpar',gpar,' product',prod,' u^4/gperp^2',uv**4/gperp**2)
+    assert abs(prod/(uv**4/gperp**2)-1)<1e-6
+print('(5) OK')

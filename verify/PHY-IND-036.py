@@ -43,4 +43,19 @@ for sgn in [1,-1]:
     print('sgn',sgn,'tpk num',tpk,'pred',pred,'Ipk',Ipk,'pred |I|',np.hypot(I1n,I2n))
     assert abs(tpk-pred)/T<1e-3 and abs(abs(Ipk)-np.hypot(I1n,I2n))<1e-4*abs(Ipk)
     assert (Ipk>0)==(sgn>0)
+# (5) new: kappa = Bmax/max(B1,B2) as function of x=N/N*, maximum sqrt2 at N=N*
+x=symbols('x',positive=True)
+ratio=simplify((B1/B2).subs(N,x*Ns)); print('B1/B2 at N=x N* :',ratio)
+assert simplify(ratio-x)==0
+k_lo=sqrt(1+x**2); k_hi=sqrt(1+1/x**2)
+print('kappa(x<=1)=',k_lo,' kappa(x>=1)=',k_hi,' at x=1:',k_lo.subs(x,1),k_hi.subs(x,1))
+xs=np.linspace(0.05,5,1981)  # includes x=1 exactly
+kap=np.sqrt(1+xs**2)/np.maximum(1,xs)
+print('numeric argmax x=',xs[np.argmax(kap)],' max=',kap.max())
+assert abs(xs[np.argmax(kap)]-1)<5e-3 and abs(kap.max()-np.sqrt(2))<1e-4
+# phase-quadrature: max |I1 cos + I2 sin| = sqrt(I1^2+I2^2) < I1+I2
+tt=np.linspace(0,2*np.pi,100001)
+for a,b in [(1,1),(1,0.3),(2,5)]:
+    m=np.abs(a*np.cos(tt)+b*np.sin(tt)).max(); print(a,b,'max',m,'hypot',np.hypot(a,b),'sum',a+b)
+    assert abs(m-np.hypot(a,b))<1e-6 and m<a+b
 print('OK')

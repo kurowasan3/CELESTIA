@@ -17,7 +17,6 @@ def vals(Mv,Rv):
     return Kv,eta,xH,xHe
 print("NS",vals(2.8e30,1.2e4))
 print("WD",vals(1.2e30,7.0e6))
-RH=num['G']*2.8e30*num['m']/num['Q']; print("R_H",RH,"R_He",4*RH)
 print("K in MeV NS", vals(2.8e30,1.2e4)[0]/1.602e-13)
 # brute-force check: for WD, scan x, find minimal x where e>=K and e>=4K
 import numpy as np
@@ -26,3 +25,15 @@ print("scan xH",xs[np.argmax(ev>=Kv)],"xHe",xs[np.argmax(ev>=4*Kv)])
 # check energy conservation of counting: total energy shared = per-atom e * atoms
 Nv=1000.;xv=0.3
 print(abs(xv*Nv/4*num['Q'] - (Nv*(1-xv)+Nv*xv/4)*xv*num['Q']/(4-3*xv))<1e-20)
+
+# ---- new (5): equal-speed sharing -> x_* = 4K/Q = eta ; ordering x_H < x_* < x_He ----
+u=sp.symbols('u',positive=True)
+mass_total=sp.simplify(nH*m+nHe*4*m); print("total mass after burning:",mass_total)
+half_mu2=sp.solve(sp.Eq(E,sp.Rational(1,2)*mass_total*u**2),u)[0]
+ke_per_m=sp.simplify(sp.Rational(1,2)*m*half_mu2**2); print("1/2 m u^2 =",ke_per_m)
+xstar=sp.solve(sp.Eq(ke_per_m,k),x)[0]; print("x_* =",xstar)
+xH_=4*k/(Q+3*k); xHe_=16*k/(Q+12*k)
+print("x_* - x_H =",sp.factor(sp.simplify(xstar-xH_)),"   x_He - x_* =",sp.factor(sp.simplify(xHe_-xstar)))
+# numeric sanity (WD values) and brute-force: for equal speed, both species escape iff x >= x_*
+Kv=vals(1.2e30,7.0e6)[0]
+print("WD x_H, x_*, x_He:",4*Kv/(num['Q']+3*Kv),4*Kv/num['Q'],16*Kv/(num['Q']+12*Kv))

@@ -11,8 +11,25 @@ Er=me*w**2*r/e; dV=sp.integrate(Er,(r,0,R)); print('V(axis)-V(rim)=',dV)
 rho=sp.simplify(Er*2*sp.pi*r*e0/(sp.pi*r**2)); print('rho=',rho)
 # 外表面の電荷（単位長さ）= -ρπR^2，面密度
 print('sigma_surface=',sp.simplify(-rho*sp.pi*R**2/(2*sp.pi*R)))
+# illustrative magnitudes only (the old numeric part was removed)
 n=dict(m_e=9.11e-31,e=1.60e-19,g=9.8,omega=2*sp.pi*50,R=0.20,epsilon0=8.85e-12)
 print('E_grav num',sp.N(E.subs(n)),' dV rot num',sp.N(dV.subs(n)),' rho num',sp.N(rho.subs(n)),' n_excess',sp.N((rho/e).subs(n)))
 print('OK')
 vals={me:9.11e-31,e:1.60e-19,g:9.8,w:2*sp.pi*50,R:0.20,e0:8.85e-12}
 print('E_grav',sp.N(E.subs(vals),3),' dV_rot',sp.N(dV.subs(vals),3),' rho',sp.N(rho.subs(vals),3),' excess per m^3',sp.N((rho/e).subs(vals),3))
+
+# ---- (6) rewritten: where the charges are ----
+sig=sp.simplify(-rho*sp.pi*R**2/(2*sp.pi*R)); print('(6a) sigma =',sig)
+assert sp.simplify(sig+e0*me*w**2*R/e)==0
+rp=sp.symbols('rp',positive=True)
+Q_enclosed_out=sp.simplify(rho*sp.pi*R**2+2*sp.pi*R*sig); print('     enclosed charge per length for r>R:',Q_enclosed_out)
+assert Q_enclosed_out==0
+# jump condition at the surface: E_out - E_in = sigma/eps0
+Ein=Er.subs(r,R); print('     E_out from jump =',sp.simplify(Ein+sig/e0))
+assert sp.simplify(Ein+sig/e0)==0
+# (6b) divergence: 1D uniform field -> rho = eps0 dE/dz = 0 ; cylindrical E(r) -> rho = eps0 (1/r) d(r E)/dr
+z=sp.symbols('z')
+print('     A: rho = eps0 dE/dz =',sp.diff(me*g/e+0*z,z)*e0)
+rho_div=sp.simplify(e0*sp.diff(r*Er,r)/r); print('     B: rho = eps0 (1/r) d(rE)/dr =',rho_div)
+assert sp.simplify(rho_div-rho)==0
+print('ESF-022 (6) OK')

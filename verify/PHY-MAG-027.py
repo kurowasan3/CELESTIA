@@ -20,7 +20,7 @@ Q2=e0*S*V/(2*d); v3=v1+B*Q2*(d-2*d)/M; print('(4) v3 =',sp.simplify(v3), ' ratio
 v4=v3+B*(-Q2*d)/M; print('(5) v4 =',sp.simplify(v4))
 # 数値
 vals={e0:8.85e-12,S:1.0,V:1.0e3,B:1.0,M:1.0}
-print('(6) v1 =',float(v1.subs(vals)))
+print('order of magnitude of v1 for lab values:',float(v1.subs(vals)),'m/s')
 # 数値シミュレーション：(3) の過程を時間で追い，極板の電荷の運動と導線の電流の力積を別々に積分
 e0v,Sv,Vv,Bv,Mv,dv=8.85e-12,1.0,1.0e3,1.0,1.0,1e-3
 R=1e3   # 回路の抵抗（有限の速さで電荷が流れる）
@@ -37,3 +37,17 @@ def rhs(t,y):
 r=solve_ivp(rhs,[0,T],[e0v*Sv*Vv/dv,0],rtol=1e-11,atol=1e-22,max_step=1e-3)
 print('numeric momentum change during (3):',r.y[1,-1],' vs plate-only',float(Imp_plate.subs({e0:e0v,S:Sv,V:Vv,B:Bv,d:dv})))
 print('B*(Qz) change:',Bv*(r.y[0,-1]*zf(T)-e0v*Sv*Vv))
+
+# (6) new: field momentum p_f = eps0 (E x B) * volume, E = Q/(eps0 S) pointing -z between plates
+Qs=sp.symbols('Q',positive=True)
+Evec=sp.Matrix([0,0,-Qs/(e0*S)]); Bvec=sp.Matrix([B,0,0])
+pf=sp.simplify(e0*Evec.cross(Bvec)*S*z)
+print('(6) field momentum =',pf.T)
+assert sp.simplify(pf[1]+B*Qs*z)==0 and pf[0]==0 and pf[2]==0
+# total momentum at each stage: device M v + field p_f
+stages={'(2) charged, z=d':(v1,Q1,d),'(3) raised, z=2d':(v1,e0*S*V/(2*d),2*d),'(4) lowered, z=d':(v3,Q2,d),'(5) discharged':(v4,0,d)}
+for k,(vv,QQ,zz) in stages.items():
+    tot=sp.simplify(M*vv+pf[1].subs({Qs:QQ,z:zz}) if QQ!=0 else M*vv)
+    print(k,' total y-momentum =',tot); assert tot==0
+# (3) with battery: E=V/z, volume S z -> p_f constant
+print('(3) p_f with E=V/z:',sp.simplify(pf[1].subs(Qs,e0*S*V/z)))

@@ -31,6 +31,25 @@ b2=6.5e-3; print('beta=6.5e-3: theory',2*np.pi/np.sqrt(gv*(Gv-b2)/T0v),' sim',si
 a_iso=sp.series(g*(T0/(T0-beta*d)-1),d,0,2).removeO(); print('isothermal parcel a=',sp.simplify(a_iso))
 # unstable env beta>Gamma
 print('beta=0.012 sim (should diverge upward):',sim(0.012,z0=1.0,tend=300)[1])
-# (5) reverse: period 5.0e2 s at T0=280 -> beta
+# 参考（旧数値例）: period 5.0e2 s at T0=280 -> beta
 w5=2*np.pi/500; b5=Gv-w5**2*T0v/gv; print('beta from period 500 s =',b5)
 print('sim check period with beta=b5:',sim(b5,z0=2.0,tend=3000)[0])
+# ---- 新しい (5)：温位 θ = T (Pg/P)^((γ-1)/γ) と安定条件・ω^2
+zz_=sp.symbols('z',real=True)
+Tz=T0-beta*zz_
+# 静水圧：dlnP/dz = -Mg/(R T(z)) を厳密に積分（Pg=P(0)）
+lnP=-sp.integrate(M*g/(R*(T0-beta*sp.Symbol('s'))),(sp.Symbol('s'),0,zz_))
+theta=Tz*sp.exp(-(gam-1)/gam*lnP)
+dlog=sp.simplify(sp.diff(sp.log(theta),zz_))
+print('(5) (1/θ)dθ/dz =',dlog)
+assert sp.simplify(dlog-(Gam-beta)/Tz)==0
+assert sp.simplify(g*dlog.subs(zz_,0)-om2)==0
+# 数値：β<Γ と β>Γ で θ の増減と単振動／不安定が対応
+for bv in (0.0,6.5e-3,0.012):
+    from scipy.integrate import quad
+    def th(zv):   # 数値積分で静水圧の P を求め，θ を直接計算
+        lnPz=-quad(lambda s_:Mv*gv/(Rv*(T0v-bv*s_)),0,zv)[0]
+        return (T0v-bv*zv)*np.exp(-(gv_-1)/gv_*lnPz)
+    inc=th(100.0)>th(0.0)
+    print('  β=',bv,' 温位が上空ほど高い:',inc,' β<Γ:',bv<Gv); assert inc==(bv<Gv)
+print('OK (5)')

@@ -8,22 +8,19 @@ dphi_exact=2*sp.pi*l*(1/lam - 1/lam1)   # path ABC: AB at lam0, path ADC: DC at 
 dphi_exact=dphi_exact.subs(v0,h/(m*lam))
 ser=sp.series(dphi_exact.subs(g,sp.Symbol('eps')*g),sp.Symbol('eps'),0,2).removeO().subs(sp.Symbol('eps'),1)
 print('first order dphi =',sp.simplify(ser))
-# numbers
-M=1.67e-27; G=9.80; H=6.63e-34; A=7.0e-4; L0=2.0e-10
-N=M**2*G*A*L0/H**2; q=2*np.pi*N
-print('m^2 g/h^2=',M**2*G/H**2,' N=',N,' q=',q)
-# exactness check of approximation: v0, g s / v0^2
-v=H/(M*L0); print('v0=',v,'(take s=0.02 m) gs/v0^2=',G*0.02/v**2)
-# count of alpha in (0,pi/2] with both components constructive: q sin a = 4 pi k
-print('both-constructive count:',int(np.floor(q/(4*np.pi))),' lam0-only count:',int(np.floor(q/(2*np.pi))))
-# intensity f(phi)=cos^2(phi/2)+cos^2(phi/4) (normalized so f(0)=2)
-f=lambda phi: np.cos(phi/2)**2+np.cos(phi/4)**2
-res=minimize_scalar(f,bounds=(0.1,2*np.pi),method='bounded')
-print('first min phi=',res.x,' 2*arccos(-1/4)=',2*np.arccos(-0.25),' f=',res.fun,' ratio=',res.fun/2,' 7/32=',7/32)
-print('sin alpha at first min =',res.x/q,' naive pi/q=',np.pi/q)
-# scan to be sure first minimum as alpha increases
-a=np.linspace(0,np.pi/2,200001); I=f(q*np.sin(a))
-i=np.argmax(np.diff(np.sign(np.diff(I)))>0)+1
-print('scan first local min sin a=',np.sin(a[i]),' I/I0=',I[i]/2)
-# check q sin a=2pi value: I/I0
-print('I/I0 at phi=2pi',f(2*np.pi)/2)
+
+# ---- new (4): general contamination fraction w ----
+ph,w=sp.symbols('phi w',positive=True)
+Iw=(1-w)*(1+sp.cos(ph))+w*(1+sp.cos(ph/2))
+dI=sp.diff(Iw,ph)
+fac=-sp.sin(ph/2)*(2*(1-w)*sp.cos(ph/2)+w/2)
+print('dI/dphi - factored form =',sp.simplify(sp.expand_trig(dI-fac)))
+cst=-w/(4*(1-w))
+Imin=sp.simplify((2*(1-w)*sp.Symbol('c')**2+w*sp.Symbol('c')+w).subs(sp.Symbol('c'),cst))
+print('I at min =',sp.simplify(Imin),'  ratio formula check:',sp.simplify(Imin/2-(w-w**2/(8*(1-w)))/2))
+print('w=1/2 ratio:',sp.nsimplify(Imin.subs(w,sp.Rational(1,2))/2),'  boundary |c|=1 at w=',sp.solve(sp.Eq(w/(4*(1-w)),1),w))
+for wv in [0.05,0.3,0.5,0.75,0.85]:
+    ps=np.linspace(1e-6,2*np.pi,400001); Iv=(1-wv)*(1+np.cos(ps))+wv*(1+np.cos(ps/2))
+    dd=np.diff(Iv); k=np.argmax(dd>0) if (dd>0).any() else len(ps)-1
+    pred=2*np.arccos(-wv/(4*(1-wv))) if wv<0.8 else 2*np.pi
+    print(' w=%.2f first min phi num %.5f pred %.5f ratio num %.5f   lambda\'/lambda0 = %.4f'%(wv,ps[k],pred,Iv[k]/2,np.pi/pred))

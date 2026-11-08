@@ -24,3 +24,20 @@ for R in Rs:
     us=brentq(lambda x: x/R-i(x),0,U1); Pr.append(us*us/R)
 Pr=np.array(Pr); loc=[j for j in range(1,len(Rs)-1) if Pr[j]>Pr[j-1] and Pr[j]>Pr[j+1]]
 print('local maxima in R:',[(Rs[j],Pr[j]) for j in loc])
+
+# ---- new (4): switching of the optimal operating point vs I2 ----
+I1s,I2s,U1s,U2s=sp.symbols('I1 I2 U1 U2',positive=True)
+P1=(I1s+I2s)**2/(4*(I1s/U1s+I2s/U2s)); P2=I1s*U1s/4
+print('P2-P1 numerator factor:',sp.factor(sp.simplify((P2-P1)*4*(I1s/U1s+I2s/U2s))))
+thr=sp.solve(sp.Eq(P1,P2),I2s); print('thresholds I2:',thr)
+r=sp.symbols('r',positive=True)
+print('(r-2)-(1-2/r) =',sp.factor((r-2)-(1-2/r)))
+R1_thr=sp.simplify((1/(I1s/U1s+I2s/U2s)).subs(I2s,I1s*(U1s/U2s-2)))
+print('R1 at threshold * I1/U1 =',sp.factor(sp.simplify(R1_thr*I1s/U1s)))
+# numeric brute force: global optimum segment as I2 varies (U1=3, U2=0.5, I1=0.4) -> switch at 1.6
+def best(I2v):
+    def ii(x): return I1*max(0,1-x/U1)+I2v*max(0,1-x/U2)
+    uu=np.linspace(0,U1,300001); P=uu*np.array([ii(x) for x in uu]); k=np.argmax(P)
+    return uu[k],P[k],uu[k]/ii(uu[k])
+for I2v in [1.2,1.55,1.65,3.0]:
+    print(' I2=%.2f -> u*=%.3f P=%.4f R=%.3f'%((I2v,)+best(I2v)))

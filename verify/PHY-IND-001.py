@@ -27,7 +27,24 @@ def rhs(t,y):
     return [a1,a2]
 so=solve_ivp(rhs,[0,20],[0,0],rtol=1e-10,atol=1e-12)
 print('ODE final v1,v2=',so.y[:,-1],' formula:',float(s[v1].subs(vals)),float(s[v2].subs(vals)))
-# case m1=3m2, r=R : efficiency
-sub={m1:3*m2,r:R}
-eff=sp.simplify((m2*g*(-s[v2]))/(m1*g*(-s[v1])).subs(sub)) if False else sp.simplify(((m2*(-s[v2]))/(m1*(-s[v1]))).subs(sub))
-print('v1,v2 at m1=3m2,r=R:',sp.simplify(s[v1].subs(sub)),sp.simplify(s[v2].subs(sub)),' efficiency=',eff)
+# (4) general efficiency eta (u = -v here, left positive)
+u1=-s[v1]; u2=-s[v2]
+eta=sp.simplify(m2*u2/(m1*u1))
+eta_claim=m2*(R*m1-(R+r)*m2)/(m1*((R+r)*m1-R*m2))
+print('eta matches claim:',sp.simplify(eta-eta_claim)==0)
+# eta < m2/m1 : numerator - denominator of (m1/m2)eta
+print('num-den =',sp.factor((R*m1-(R+r)*m2)-((R+r)*m1-R*m2)))
+# random check of inequality under lift condition
+rng=np.random.default_rng(1)
+ok=True
+for _ in range(2000):
+    Rv,rv,m2v=rng.uniform(0.1,5,3); m1v=m2v*(1+rv/Rv)*rng.uniform(1.001,5)
+    e=float(eta_claim.subs({R:Rv,r:rv,m1:m1v,m2:m2v}))
+    ok&= (0<e<m2v/m1v)
+print('0<eta<m2/m1 for random lift-condition samples:',ok)
+# r->0 limit
+print('r->0: eta ->',sp.simplify(sp.limit(eta_claim,r,0)),' u1->',sp.factor(sp.limit(u1,r,0)),' u2->',sp.factor(sp.limit(u2,r,0)))
+heatR=(R*s[U]**2/R**2)  # U^2/R
+print('r->0: R heat / input =',sp.simplify(sp.limit((s[U]**2/R)/(m1*g*u1),r,0)))
+print('u1-u2 =',sp.factor(u1-u2))
+assert sp.simplify(eta-eta_claim)==0 and ok

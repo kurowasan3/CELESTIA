@@ -42,7 +42,7 @@
      },
      {
       "id": "5",
-      "tex": "$\\theta=30^\\circ$ で，(4) の条件が成り立つとき，$u_x$ と $V$ を $v$ で表し，小球の運動エネルギーのうち台に移った割合を求めよ．また，台を床に固定した場合に小球が跳ね返る向きが水平となす角を求め，比較せよ．"
+      "tex": "(a) 斜面の法線方向だけに着目する．小球が受ける力積の大きさを $J$ とするとき，台の速度の法線方向の成分 $V_n$（小球から遠ざかる向きを正）と $J$ の関係を求め，法線方向については台が質量 $\\dfrac{M}{\\sin^2\\theta}$ の物体としてふるまうことを示せ．\\\\ (b) 小球の運動エネルギーのうち台に移る割合 $f$ を $m,M,\\theta$ で表せ．$\\theta$ を固定して $M$ を変えるとき，$f$ を最大にする $M$ と $f$ の最大値を求めよ．また，$f$ の最大値が $1$ にならない理由を説明せよ．"
      }
     ]
    }
@@ -65,7 +65,7 @@
    "format": "svg",
    "src": "a-fig.svg",
    "alt": "解答図：なめらかな床上で動ける三角台の斜面に落ちた小球の弾性衝突（床の撃力と真横に跳ね返る条件）",
-   "caption": "解答図"
+   "caption": "解答図（例：θ=30°，M=m/2 で (4) の条件が成り立つときの跳ね返りと，台を固定した場合の比較）"
   }
  ],
  "answer": {
@@ -88,7 +88,7 @@
    },
    {
     "id": "5",
-    "tex": "$u_x=-\\dfrac{v}{\\sqrt3}$，$V=\\dfrac{2v}{\\sqrt3}$，割合 $\\dfrac23$；固定した場合は水平から $30^\\circ$ 上向き（左上）"
+    "tex": "(a) $V_n=V\\sin\\theta$，$MV=J\\sin\\theta$ より $J=\\dfrac{M}{\\sin^2\\theta}V_n$　(b) $f=\\dfrac{Mm\\sin^22\\theta}{(M+m\\sin^2\\theta)^2}$，$M=m\\sin^2\\theta$ のとき最大値 $\\cos^2\\theta$．斜面はなめらかで，小球の速度の斜面に平行な成分 $v\\sin\\theta$ は衝突で変わらないので，その運動エネルギー $\\frac12mv^2\\sin^2\\theta$ は台に移せない．移せるのは法線成分の運動エネルギー $\\frac12mv^2\\cos^2\\theta$ だけで，有効質量 $\\dfrac{M}{\\sin^2\\theta}$ が $m$ に等しいとき，等しい質量の1次元弾性衝突としてそれがすべて移る．"
    }
   ]
  },
@@ -103,7 +103,7 @@
     },
     {
      "type": "text",
-     "tex": "\\textbf{(1)}　斜面はなめらかなので，斜面が小球に及ぼす力は斜面に垂直で，力積の向きは\\textbf{斜面に垂直な外向き}（左上向き）である．小球が台を斜め下向きに押すと，床も台に大きな力（撃力）を及ぼし返す．\n・\\textbf{水平成分は保存する}：系にはたらく外力（重力・床の垂直抗力）はいずれも鉛直で，水平成分がない．\n・\\textbf{鉛直成分は保存しない}：床の垂直抗力は衝突の間だけ大きな撃力となり，有限の力積を与える（重力の力積は無視できる）．\nこのほか，弾性衝突で床の垂直抗力は仕事をしない（台が鉛直に動かない）ので\\textbf{運動エネルギーの和}が保存し，小球の速度の\\textbf{斜面に平行な成分}も変わらない．\n\n\\textbf{(2)}　斜面の外向き単位法線を $\\vec n=(-\\sin\\theta,\\cos\\theta)$，小球が受ける力積を $J\\vec n$（$J>0$）とする．台は水平方向に $-J(-\\sin\\theta)=J\\sin\\theta$ の力積を受ける．衝突前の小球の速度は $(0,-v)$ だから\n\\[ mu_x=-J\\sin\\theta,\\quad m(u_y+v)=J\\cos\\theta,\\quad MV=J\\sin\\theta . \\]\nエネルギー保存 $m(u_x^2+u_y^2)+MV^2=mv^2$ に代入して $J\\neq0$ の解を求めると\n\\[ J=\\frac{2Mmv\\cos\\theta}{M+m\\sin^2\\theta} \\]\nで，\n\\[ \\boldsymbol{u_x=-\\frac{Mv\\sin2\\theta}{M+m\\sin^2\\theta}},\\quad \\boldsymbol{u_y=\\frac{(M\\cos2\\theta-m\\sin^2\\theta)\\,v}{M+m\\sin^2\\theta}},\\quad \\boldsymbol{V=\\frac{mv\\sin2\\theta}{M+m\\sin^2\\theta}} . \\]\n（別解：法線方向に限れば，台は「有効質量」$M/\\sin^2\\theta$ の物体としてふるまい，法線方向の1次元弾性衝突として解いても同じ結果になる．）水平方向の運動量 $mu_x+MV=0$ が成り立つことも確かめられる．\n\n\\textbf{(3)}　台の鉛直方向の運動量は $0$ のままなので，床の力積は小球が台を押した力積の鉛直成分 $J\\cos\\theta$ を打ち消す．\n\\[ \\boldsymbol{\\frac{2Mmv\\cos^2\\theta}{M+m\\sin^2\\theta}} \\]\nこれは系全体の鉛直方向の運動量の変化 $m(u_y+v)$ とも一致する．\n\n\\textbf{(4)}　$u_y=0$ より $M\\cos2\\theta=m\\sin^2\\theta$，\n\\[ \\boldsymbol{M=\\frac{m\\sin^2\\theta}{\\cos2\\theta}} . \\]\n$M>0$ には $\\cos2\\theta>0$，すなわち $\\boldsymbol{0<\\theta<45^\\circ}$ が必要である．（固定した台では $\\theta=45^\\circ$ でちょうど真横に跳ね返るが，台が動くと法線方向の跳ね返りが弱まるので，より緩い斜面でなければ真横にならない．）\n\n\\textbf{(5)}　$\\theta=30^\\circ$ では $M=\\dfrac{m/4}{1/2}=\\dfrac m2$．(2) に代入して $M+m\\sin^2\\theta=\\frac34m$，$\\sin2\\theta=\\frac{\\sqrt3}2$ より\n\\[ \\boldsymbol{u_x=-\\frac{v}{\\sqrt3}},\\qquad \\boldsymbol{V=\\frac{2v}{\\sqrt3}} . \\]\n台の運動エネルギーは $\\frac12\\cdot\\frac m2\\cdot\\frac{4v^2}3=\\frac23\\cdot\\frac12mv^2$ なので，割合は $\\boldsymbol{\\frac23}$（小球には $\\frac13$ が残り，和は保存している）．台を固定すると，斜面に平行な成分 $-v\\sin\\theta$ はそのまま，垂直成分が反転して速度は $\\left(-\\frac{\\sqrt3}2v,\\frac12v\\right)$，水平から $\\boldsymbol{30^\\circ}$ 上向きに跳ね返る．台が動くと，台が逃げることで法線方向の跳ね返りが弱まり，その分が台の運動エネルギーになる．\\hfill$\\square$"
+     "tex": "\\textbf{(1)}　斜面はなめらかなので，斜面が小球に及ぼす力は斜面に垂直で，力積の向きは\\textbf{斜面に垂直な外向き}（左上向き）である．小球が台を斜め下向きに押すと，床も台に大きな力（撃力）を及ぼし返す．\n・\\textbf{水平成分は保存する}：系にはたらく外力（重力・床の垂直抗力）はいずれも鉛直で，水平成分がない．\n・\\textbf{鉛直成分は保存しない}：床の垂直抗力は衝突の間だけ大きな撃力となり，有限の力積を与える（重力の力積は無視できる）．\nこのほか，弾性衝突で床の垂直抗力は仕事をしない（台が鉛直に動かない）ので\\textbf{運動エネルギーの和}が保存し，小球の速度の\\textbf{斜面に平行な成分}も変わらない．\n\n\\textbf{(2)}　斜面の外向き単位法線を $\\vec n=(-\\sin\\theta,\\cos\\theta)$，小球が受ける力積を $J\\vec n$（$J>0$）とする．台は水平方向に $-J(-\\sin\\theta)=J\\sin\\theta$ の力積を受ける．衝突前の小球の速度は $(0,-v)$ だから\n\\[ mu_x=-J\\sin\\theta,\\quad m(u_y+v)=J\\cos\\theta,\\quad MV=J\\sin\\theta . \\]\nエネルギー保存 $m(u_x^2+u_y^2)+MV^2=mv^2$ に代入して $J\\neq0$ の解を求めると\n\\[ J=\\frac{2Mmv\\cos\\theta}{M+m\\sin^2\\theta} \\]\nで，\n\\[ \\boldsymbol{u_x=-\\frac{Mv\\sin2\\theta}{M+m\\sin^2\\theta}},\\quad \\boldsymbol{u_y=\\frac{(M\\cos2\\theta-m\\sin^2\\theta)\\,v}{M+m\\sin^2\\theta}},\\quad \\boldsymbol{V=\\frac{mv\\sin2\\theta}{M+m\\sin^2\\theta}} . \\]\n（別解：法線方向に限れば，台は「有効質量」$M/\\sin^2\\theta$ の物体としてふるまい，法線方向の1次元弾性衝突として解いても同じ結果になる．）水平方向の運動量 $mu_x+MV=0$ が成り立つことも確かめられる．\n\n\\textbf{(3)}　台の鉛直方向の運動量は $0$ のままなので，床の力積は小球が台を押した力積の鉛直成分 $J\\cos\\theta$ を打ち消す．\n\\[ \\boldsymbol{\\frac{2Mmv\\cos^2\\theta}{M+m\\sin^2\\theta}} \\]\nこれは系全体の鉛直方向の運動量の変化 $m(u_y+v)$ とも一致する．\n\n\\textbf{(4)}　$u_y=0$ より $M\\cos2\\theta=m\\sin^2\\theta$，\n\\[ \\boldsymbol{M=\\frac{m\\sin^2\\theta}{\\cos2\\theta}} . \\]\n$M>0$ には $\\cos2\\theta>0$，すなわち $\\boldsymbol{0<\\theta<45^\\circ}$ が必要である．（固定した台では $\\theta=45^\\circ$ でちょうど真横に跳ね返るが，台が動くと法線方向の跳ね返りが弱まるので，より緩い斜面でなければ真横にならない．）\n\n\\textbf{(5)(a) 法線方向の有効質量}　斜面の外向き単位法線 $\\vec n=(-\\sin\\theta,\\cos\\theta)$ に対し，台が小球から受ける力積は $-J\\vec n=(J\\sin\\theta,-J\\cos\\theta)$ で，鉛直成分は床の撃力が打ち消すので，台の運動量の変化は水平成分だけで $MV=J\\sin\\theta$ である．台の速度 $(V,0)$ の，小球から遠ざかる向き（$-\\vec n$ の向き）の成分は\n\\[ V_n=(V,0)\\cdot(\\sin\\theta,-\\cos\\theta)=V\\sin\\theta \\]\nなので，$V=\\dfrac{V_n}{\\sin\\theta}$ を代入して\n\\[ \\boldsymbol{J=\\frac{M}{\\sin^2\\theta}V_n} \\]\nとなる．すなわち法線方向に力積 $J$ を受けた台は，法線方向に質量 $\\dfrac{M}{\\sin^2\\theta}$ の物体と同じ速さで動き出す．台は水平にしか動けず，法線方向に速さ $V_n$ を得るには水平に $\\dfrac{V_n}{\\sin\\theta}$ も動かなければならないので，法線方向に「重く」見えるのである．さらに，台の運動エネルギー $\\frac12MV^2=\\frac12\\cdot\\dfrac{M}{\\sin^2\\theta}V_n^2$ も有効質量で書けるので，衝突は法線方向について質量 $m$ と $\\dfrac{M}{\\sin^2\\theta}$ の1次元弾性衝突として扱える（小球の斜面に平行な速度成分は変わらない）．\n\n\\textbf{(5)(b) 移る運動エネルギーの割合}　(2) の $V$ を用いて\n\\[ f=\\frac{\\frac12MV^2}{\\frac12mv^2}=\\boldsymbol{\\frac{Mm\\sin^22\\theta}{(M+m\\sin^2\\theta)^2}} \\]\n$a=m\\sin^2\\theta$ とおくと $\\dfrac{M}{(M+a)^2}$ は $\\dfrac{d}{dM}\\dfrac{M}{(M+a)^2}=\\dfrac{a-M}{(M+a)^3}$ より $M=a$ で最大になる．よって $f$ が最大になるのは\n\\[ \\boldsymbol{M=m\\sin^2\\theta} \\]\nのときで，最大値は\n\\[ f_{\\max}=\\frac{m^2\\sin^2\\theta\\sin^22\\theta}{4m^2\\sin^4\\theta}=\\frac{4\\sin^2\\theta\\cos^2\\theta}{4\\sin^2\\theta}=\\boldsymbol{\\cos^2\\theta} \\]\nである．\n\n\\textbf{1 にならない理由}　斜面はなめらかなので，小球の速度の斜面に平行な成分 $v\\sin\\theta$ は衝突で変わらず，それに対応する運動エネルギー $\\frac12mv^2\\sin^2\\theta$ は台に移せない．移せるのは法線成分 $v\\cos\\theta$ の運動エネルギー $\\frac12mv^2\\cos^2\\theta$（全体の $\\cos^2\\theta$）だけである．(a) より法線方向は質量 $m$ と $\\dfrac{M}{\\sin^2\\theta}$ の1次元弾性衝突なので，両者の質量が等しいとき（$\\dfrac{M}{\\sin^2\\theta}=m$，すなわち $M=m\\sin^2\\theta$）に，等しい質量の正面弾性衝突として法線方向の運動エネルギーがすべて台に移る．このとき小球の法線方向の速度は $0$ になり，小球は斜面に沿って速さ $v\\sin\\theta$ で動く．（(4) の真横に跳ね返る条件 $M=\\dfrac{m\\sin^2\\theta}{\\cos2\\theta}$ はこれより重い台の場合で，小球に法線方向の跳ね返りが残る．）\\hfill$\\square$"
     }
    ]
   }

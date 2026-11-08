@@ -3,7 +3,7 @@
  "schema": "celestia.problem/1",
  "field": "ATM",
  "unit": "ATM-02",
- "topic": "直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（鏡像核のクーロンエネルギー）",
+ "topic": "直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（Q 方程式と陽子のエネルギーが1つに決まる条件）",
  "course": "物理",
  "level": 4,
  "minutes": 25,
@@ -15,7 +15,7 @@
   "blocks": [
    {
     "type": "text",
-    "tex": "静止しているヘリウム3原子核 ${}^3\\mathrm{He}$ に，運動エネルギー $K_{\\mathrm d}=2.00\\,\\mathrm{MeV}$ の重陽子 d を当てると，反応 $\\mathrm d+{}^3\\mathrm{He}\\to{}^4\\mathrm{He}+\\mathrm p$ が起こる．図のように，陽子 p が d の入射方向と垂直な方向に飛び出した事象で，陽子の運動エネルギーを測ると $K_{\\mathrm p}=15.49\\,\\mathrm{MeV}$ であった．運動はすべて非相対論的に扱い，運動量の計算では各粒子の質量の比を質量数の比としてよい．原子核の結合エネルギーは d：$2.22\\,\\mathrm{MeV}$，${}^4\\mathrm{He}$：$28.30\\,\\mathrm{MeV}$，${}^3\\mathrm H$：$8.48\\,\\mathrm{MeV}$ であり，${}^3\\mathrm{He}$ の結合エネルギー $B$ は未知とする．"
+    "tex": "静止しているヘリウム3原子核 ${}^3\\mathrm{He}$ に，運動エネルギー $K_{\\mathrm d}=2.00\\,\\mathrm{MeV}$ の重陽子 d を当てると，反応 $\\mathrm d+{}^3\\mathrm{He}\\to{}^4\\mathrm{He}+\\mathrm p$ が起こる．図のように，陽子 p が d の入射方向と垂直な方向に飛び出した事象で，陽子の運動エネルギーを測ると $K_{\\mathrm p}=15.49\\,\\mathrm{MeV}$ であった．運動はすべて非相対論的に扱い，運動量の計算では各粒子の質量の比を質量数の比としてよい．原子核の結合エネルギーは d：$2.22\\,\\mathrm{MeV}$，${}^4\\mathrm{He}$：$28.30\\,\\mathrm{MeV}$ であり，${}^3\\mathrm{He}$ の結合エネルギー $B$ は未知とする．"
    },
    {
     "type": "figure",
@@ -42,7 +42,7 @@
      },
      {
       "id": "5",
-      "tex": "${}^3\\mathrm H$ と ${}^3\\mathrm{He}$ は陽子と中性子を入れかえた関係にある．核力は陽子と中性子を区別しないとすると，両者の結合エネルギーの差は ${}^3\\mathrm{He}$ の2個の陽子の間のクーロン力による位置エネルギーによるとみなせる．2個の陽子の距離 $r$ を有効数字2桁で求めよ．クーロンの法則の比例定数 $k_0=9.0\\times10^9\\,\\mathrm{N\\cdot m^2/C^2}$，電気素量 $e=1.6\\times10^{-19}\\,\\mathrm C$，$1\\,\\mathrm{MeV}=1.6\\times10^{-13}\\,\\mathrm J$ とする．"
+      "tex": "陽子が入射方向と角 $\\theta$（$0\\leqq\\theta\\leqq180^\\circ$）をなす向きに飛び出した事象を考える．$K_{\\mathrm d}$ と $Q$ は上と同じとする．\n  (i) $Q$ を $K_{\\mathrm d}$，$K_{\\mathrm p}$，$\\theta$ で表し，$\\theta=90^\\circ$ で (3) の式に戻ることを確かめよ．$\\theta=90^\\circ$ の測定では ${}^4\\mathrm{He}$ の向きを測らなくても $Q$ が決まる理由を，運動量の三角形を用いて説明せよ．\n  (ii) (i) の式を，与えられた $\\theta$ に対して $K_{\\mathrm p}$ を決める式とみる．すべての $\\theta$ について $K_{\\mathrm p}$ がただ1つに決まるための $Q$ の条件を $K_{\\mathrm d}$ で表し，その条件の意味を，重心系での陽子の速さと重心の速さの大小関係として説明せよ．"
      }
     ]
    }
@@ -55,7 +55,7 @@
    "kind": "diagram",
    "format": "svg",
    "src": "q-fig.svg",
-   "alt": "問題図：直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（鏡像核のクーロンエネルギー）",
+   "alt": "問題図：直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（Q 方程式と陽子のエネルギーが1つに決まる条件）",
    "caption": ""
   },
   {
@@ -64,7 +64,7 @@
    "kind": "diagram",
    "format": "svg",
    "src": "a-fig.svg",
-   "alt": "解答図：直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（鏡像核のクーロンエネルギー）",
+   "alt": "解答図：直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（Q 方程式と陽子のエネルギーが1つに決まる条件）",
    "caption": "解答図"
   }
  ],
@@ -88,7 +88,7 @@
    },
    {
     "id": "5",
-    "tex": "$r\\fallingdotseq1.9\\times10^{-15}\\,\\mathrm m$"
+    "tex": "(i) $Q=\\dfrac{5K_{\\mathrm p}-2K_{\\mathrm d}-2\\sqrt{2K_{\\mathrm d}K_{\\mathrm p}}\\cos\\theta}{4}$．$\\theta=90^\\circ$ では $\\vec p_{\\mathrm p}\\perp\\vec p_{\\mathrm d}$ で，三平方の定理により $p_\\alpha$ の大きさ（$K_\\alpha$）が角度の情報なしに決まる（$\\cos\\theta$ の項が消える）．　(ii) $Q>-\\dfrac{K_{\\mathrm d}}{2}$．これは重心系での陽子の速さ $w$ が重心の速さ $V$ より大きい（$\\frac12mw^2=\\frac45\\left(\\frac35K_{\\mathrm d}+Q\\right)>\\frac12mV^2=\\frac{2}{25}K_{\\mathrm d}$）ことと同値で，そのとき実験室系の各方向に陽子の速度がただ1つ対応する．この反応（$Q\\fallingdotseq18\\,\\mathrm{MeV}>0$）では常に満たされる．"
    }
   ]
  },
@@ -103,13 +103,13 @@
     },
     {
      "type": "text",
-     "tex": "\\textbf{(1)}　陽子・中性子がばらばらの状態を基準にすると，原子核の静止エネルギーは結合エネルギーの分だけ低い．反応の前後で陽子3個・中性子2個は変わらないので，ばらばらの状態は共通で，\n\\[ Q=(\\text{反応後の結合エネルギーの和})-(\\text{反応前の和})=28.30-(2.22+B)=\\boldsymbol{26.08-B}\\ [\\mathrm{MeV}] \\]\n（p は単独の核子なので結合エネルギー $0$．）\n\n\\textbf{(2)}　運動量の大きさは $p=\\sqrt{2MK}$．核子1個の質量を $m$ とし，運動量ベクトルを $\\vec p_{\\mathrm d}$，$\\vec p_{\\mathrm p}$，$\\vec p_\\alpha$ とすると，運動量保存 $\\vec p_{\\mathrm d}=\\vec p_{\\mathrm p}+\\vec p_\\alpha$ より $\\vec p_\\alpha=\\vec p_{\\mathrm d}-\\vec p_{\\mathrm p}$．$\\vec p_{\\mathrm p}\\perp\\vec p_{\\mathrm d}$ なので，解答図の直角三角形から三平方の定理で\n\\[ p_\\alpha^2=p_{\\mathrm d}^2+p_{\\mathrm p}^2\\quad\\Longrightarrow\\quad2(4m)K_\\alpha=2(2m)K_{\\mathrm d}+2mK_{\\mathrm p} \\]\n\\[ \\boldsymbol{2K_{\\mathrm d}+K_{\\mathrm p}=4K_\\alpha} \\]\n\n\\textbf{(3)}　エネルギー保存 $K_{\\mathrm d}+Q=K_{\\mathrm p}+K_\\alpha$ に $K_\\alpha=\\dfrac{2K_{\\mathrm d}+K_{\\mathrm p}}{4}$ を代入して\n\\[ Q=K_{\\mathrm p}+\\frac{2K_{\\mathrm d}+K_{\\mathrm p}}{4}-K_{\\mathrm d}=\\boldsymbol{\\frac{5K_{\\mathrm p}-2K_{\\mathrm d}}{4}}=\\frac{77.45-4.00}{4}\\fallingdotseq\\boldsymbol{18.36\\,\\mathrm{MeV}} \\]\n(1)より $B=26.08-18.36=\\boldsymbol{7.72\\,\\mathrm{MeV}}$．90° 方向の1つの測定だけで，未知の結合エネルギーが決まる．\n\n\\textbf{(4)}　解答図より $\\tan\\varphi=\\dfrac{p_{\\mathrm p}}{p_{\\mathrm d}}=\\sqrt{\\dfrac{2mK_{\\mathrm p}}{2(2m)K_{\\mathrm d}}}=\\sqrt{\\dfrac{15.49}{4.00}}\\fallingdotseq\\boldsymbol{1.97}$，$\\varphi\\fallingdotseq\\boldsymbol{63^\\circ}$．${}^4$He は入射方向に対して陽子と反対側に飛ぶ．（このとき $K_\\alpha=\\dfrac{4.00+15.49}{4}\\fallingdotseq4.87\\,\\mathrm{MeV}$．）\n\n\\textbf{(5)}　結合エネルギーの差は $8.48-7.72=0.76\\,\\mathrm{MeV}$．${}^3\\mathrm{He}$ では2個の陽子のクーロン斥力による位置エネルギー $\\dfrac{k_0e^2}{r}$ の分だけ結合が弱いとみなすと\n\\[ r=\\frac{k_0e^2}{0.76\\times1.6\\times10^{-13}}=\\frac{9.0\\times10^9\\times(1.6\\times10^{-19})^2}{1.216\\times10^{-13}}\\fallingdotseq\\boldsymbol{1.9\\times10^{-15}\\,\\mathrm m} \\]\n結合エネルギーはばらばらの核子を基準にした量なので，陽子と中性子の質量の違いはすでに差し引かれており，差はそのまま核子間の相互作用の違いを表す．得られた $r$ は原子核の大きさ程度で，もっともらしい．\\hfill$\\square$"
+     "tex": "\\textbf{(1)}　陽子・中性子がばらばらの状態を基準にすると，原子核の静止エネルギーは結合エネルギーの分だけ低い．反応の前後で陽子3個・中性子2個は変わらないので，ばらばらの状態は共通で，\n\\[ Q=(\\text{反応後の結合エネルギーの和})-(\\text{反応前の和})=28.30-(2.22+B)=\\boldsymbol{26.08-B}\\ [\\mathrm{MeV}] \\]\n（p は単独の核子なので結合エネルギー $0$．）\n\n\\textbf{(2)}　運動量の大きさは $p=\\sqrt{2MK}$．核子1個の質量を $m$ とし，運動量ベクトルを $\\vec p_{\\mathrm d}$，$\\vec p_{\\mathrm p}$，$\\vec p_\\alpha$ とすると，運動量保存 $\\vec p_{\\mathrm d}=\\vec p_{\\mathrm p}+\\vec p_\\alpha$ より $\\vec p_\\alpha=\\vec p_{\\mathrm d}-\\vec p_{\\mathrm p}$．$\\vec p_{\\mathrm p}\\perp\\vec p_{\\mathrm d}$ なので，解答図の直角三角形から三平方の定理で\n\\[ p_\\alpha^2=p_{\\mathrm d}^2+p_{\\mathrm p}^2\\quad\\Longrightarrow\\quad2(4m)K_\\alpha=2(2m)K_{\\mathrm d}+2mK_{\\mathrm p} \\]\n\\[ \\boldsymbol{2K_{\\mathrm d}+K_{\\mathrm p}=4K_\\alpha} \\]\n\n\\textbf{(3)}　エネルギー保存 $K_{\\mathrm d}+Q=K_{\\mathrm p}+K_\\alpha$ に $K_\\alpha=\\dfrac{2K_{\\mathrm d}+K_{\\mathrm p}}{4}$ を代入して\n\\[ Q=K_{\\mathrm p}+\\frac{2K_{\\mathrm d}+K_{\\mathrm p}}{4}-K_{\\mathrm d}=\\boldsymbol{\\frac{5K_{\\mathrm p}-2K_{\\mathrm d}}{4}}=\\frac{77.45-4.00}{4}\\fallingdotseq\\boldsymbol{18.36\\,\\mathrm{MeV}} \\]\n(1)より $B=26.08-18.36=\\boldsymbol{7.72\\,\\mathrm{MeV}}$．90° 方向の1つの測定だけで，未知の結合エネルギーが決まる．\n\n\\textbf{(4)}　解答図より $\\tan\\varphi=\\dfrac{p_{\\mathrm p}}{p_{\\mathrm d}}=\\sqrt{\\dfrac{2mK_{\\mathrm p}}{2(2m)K_{\\mathrm d}}}=\\sqrt{\\dfrac{15.49}{4.00}}\\fallingdotseq\\boldsymbol{1.97}$，$\\varphi\\fallingdotseq\\boldsymbol{63^\\circ}$．${}^4$He は入射方向に対して陽子と反対側に飛ぶ．（このとき $K_\\alpha=\\dfrac{4.00+15.49}{4}\\fallingdotseq4.87\\,\\mathrm{MeV}$．）\n\n\\textbf{(5)}　\\textbf{(i)}　運動量保存 $\\vec p_\\alpha=\\vec p_{\\mathrm d}-\\vec p_{\\mathrm p}$ より（余弦定理）\n\\[ p_\\alpha^{\\,2}=p_{\\mathrm d}^{\\,2}+p_{\\mathrm p}^{\\,2}-2p_{\\mathrm d}p_{\\mathrm p}\\cos\\theta \\]\n$p^2=2MK$ を使うと $8mK_\\alpha=4mK_{\\mathrm d}+2mK_{\\mathrm p}-2\\sqrt{4mK_{\\mathrm d}\\cdot2mK_{\\mathrm p}}\\cos\\theta$，すなわち\n\\[ K_\\alpha=\\frac{2K_{\\mathrm d}+K_{\\mathrm p}-2\\sqrt{2K_{\\mathrm d}K_{\\mathrm p}}\\cos\\theta}{4} \\]\nエネルギー保存 $Q=K_{\\mathrm p}+K_\\alpha-K_{\\mathrm d}$ に代入して\n\\[ \\boldsymbol{Q=\\frac{5K_{\\mathrm p}-2K_{\\mathrm d}-2\\sqrt{2K_{\\mathrm d}K_{\\mathrm p}}\\cos\\theta}{4}} \\]\n$\\theta=90^\\circ$ では $\\cos\\theta=0$ で $Q=\\dfrac{5K_{\\mathrm p}-2K_{\\mathrm d}}{4}$ となり (3) と一致する．\n\n${}^4\\mathrm{He}$ の向き（$\\varphi$）を測らずに済むのは，エネルギー保存に必要なのが ${}^4\\mathrm{He}$ の運動量の\\textbf{大きさ}だけで，それが運動量の三角形の1辺の長さとして，他の2辺 $p_{\\mathrm d}$，$p_{\\mathrm p}$ とその間の角 $\\theta$ から決まるからである．$\\theta=90^\\circ$ では三角形が直角三角形になり，$p_\\alpha^{\\,2}=p_{\\mathrm d}^{\\,2}+p_{\\mathrm p}^{\\,2}$ と交差項が消えて，$K$ どうしの1次の関係式になる．一般の $\\theta$ でも原理は同じだが，$\\sqrt{K_{\\mathrm d}K_{\\mathrm p}}\\cos\\theta$ の項が残る．\n\n\\textbf{(ii)}　$x=\\sqrt{K_{\\mathrm p}}\\ (>0)$ とおくと，(i) の式は\n\\[ 5x^2-2\\sqrt{2K_{\\mathrm d}}\\cos\\theta\\cdot x-(2K_{\\mathrm d}+4Q)=0 \\]\nという $x$ の2次方程式である．2つの解の積は $-\\dfrac{2K_{\\mathrm d}+4Q}{5}$ なので，$2K_{\\mathrm d}+4Q>0$ なら，どの $\\theta$ でも正の解と負の解が1つずつあり（判別式も正），$K_{\\mathrm p}$ は\\textbf{ただ1つ}に決まる．逆に $2K_{\\mathrm d}+4Q<0$ なら，$\\cos\\theta>0$ の方向では正の解が2つになるか解がなく（後方 $\\cos\\theta<0$ では正の解がない），ただ1つには決まらない．よって条件は\n\\[ \\boldsymbol{Q>-\\frac{K_{\\mathrm d}}{2}} \\]\n（等号の場合は $\\theta<90^\\circ$ で一方の解が $0$ に縮退する境目．）\n\n\\textbf{重心系での意味}　全質量 $5m$，全運動量 $p_{\\mathrm d}$（$p_{\\mathrm d}^{\\,2}=4mK_{\\mathrm d}$）より重心の速さは $V=\\dfrac{p_{\\mathrm d}}{5m}$ で，$\\dfrac12mV^2=\\dfrac{2}{25}K_{\\mathrm d}$．重心系での運動エネルギーは，はじめ $K_{\\mathrm d}-\\dfrac12(5m)V^2=\\dfrac35K_{\\mathrm d}$，反応後は $\\dfrac35K_{\\mathrm d}+Q$ で，p と ${}^4$He は大きさの等しい運動量で逆向きに飛ぶので，運動エネルギーは質量に反比例して p に $\\dfrac45$ が分配される：\n\\[ \\frac12mw^2=\\frac45\\left(\\frac35K_{\\mathrm d}+Q\\right) \\]\n$w>V\\iff\\dfrac{12}{25}K_{\\mathrm d}+\\dfrac45Q>\\dfrac{2}{25}K_{\\mathrm d}\\iff Q>-\\dfrac{K_{\\mathrm d}}{2}$ で，(ii) の条件と一致する．実験室系での陽子の速度は $\\vec V+\\vec w$（$\\vec w$ の向きは任意）で，その先端は重心速度の先端を中心とする半径 $w$ の球面上にある．$w>V$ なら出発点 O は球面の内側にあり，O から引いたどの向きの半直線も球面とちょうど1回交わるので，各方向に速さがただ1つ対応する．$w<V$ なら O は外側にあり，前方の円錐内の方向では2回交わり（2つのエネルギー），円錐の外には陽子が出ない．この反応は $Q\\fallingdotseq18\\,\\mathrm{MeV}$ の発熱反応で条件を十分に満たすので，どの角度で測っても陽子のエネルギーは1つに決まり，(3) のように1回の測定から $Q$ が決められる．\\hfill$\\square$"
     }
    ]
   }
  ],
  "idea": {
-  "tex": "生成粒子の1つが入射方向と直角に出た事象では，運動量の三角形が直角三角形になり，角度を使わずに運動エネルギーの間の1次式が得られる．エネルギー保存と組み合わせると，1つの粒子のエネルギー測定だけから Q 値が決まり，結合エネルギーの差を通して未知の原子核の結合エネルギー（さらに鏡像核のクーロンエネルギーから陽子間距離）までたどれる．"
+  "tex": "生成粒子の1つが入射方向と直角に出た事象では，運動量の三角形が直角三角形になり，角度を使わずに運動エネルギーの間の1次式が得られる．エネルギー保存と組み合わせると，1つの粒子のエネルギー測定だけから Q 値が決まり，結合エネルギーの差を通して未知の原子核の結合エネルギーまでたどれる．一般の角度では余弦定理による Q 方程式になり，重心系での生成粒子の速さが重心の速さより大きければ，各方向のエネルギーはただ1つに決まる．"
  },
  "concepts": [
   "bohr-model",

@@ -24,10 +24,23 @@ so=solve_ivp(rhs,[0,10],[0.0],events=ev,max_step=1e-4,dense_output=True)
 T=so.t_events[0][0]; ts=np.linspace(0,T,20001); u=so.sol(ts)[0]
 slip=np.trapezoid(vv-u,ts); Qn=muv*gv*np.cos(alv)*slip; Wn=muv*gv*np.cos(alv)*vv*T
 print('numeric Q',Qn,' formula',float(Q.subs({g:gv,v:vv,al:alv,mu:muv})),' Wb/Q',Wn/Qn)
-# numbers for (4): v=2, alpha=30deg, lam=40, L=10, measured P=2240 W
-vals={g:9.8,v:2.0,al:sp.pi/6,lam:40,L:10}
-P0=40*(2.0**2+9.8*10*0.5); print('lam(v^2+gLsin)=',P0)
-Qm=2.0**2/2+(2240-P0)/40; rr=2*Qm/2.0**2
-mu4=rr*sp.tan(sp.pi/6)/(rr-1); print('Q',Qm,'mu4',float(mu4),sp.nsimplify(mu4))
-print('P total check', float(P.subs(vals).subs(mu,mu4)))
-print('s1 at mu4', float(s1.subs(vals).subs(mu,mu4)), ' a=',float(a.subs(vals).subs(mu,mu4)))
+# ---- (4) belt frame: belt does no work; Q = KE lost (v^2/2) + gravity work over relative slip v t1/2 ----
+slip_rel=v*t1-s1
+assert sp.simplify(slip_rel-v*t1/2)==0
+Qbelt=v**2/2+g*sp.sin(al)*slip_rel
+print('(4) Q_beltframe - Q =',sp.simplify(Qbelt-Q))
+assert sp.simplify(Qbelt-Q)==0
+lim=sp.limit(sp.simplify(Q),mu,sp.oo); print('(4) mu->oo Q ->',lim); assert sp.simplify(lim-v**2/2)==0
+assert sp.simplify(Q.subs(al,0)-v**2/2)==0; print('(4) alpha=0: Q = v^2/2 independent of mu')
+# Q decreasing in mu (for mu cos > sin)
+dQ=sp.simplify(sp.diff(sp.simplify(Q),mu)); print('(4) dQ/dmu =',dQ)
+# numeric: simulate in belt frame (grain starts at -v, friction up-slope, gravity down-slope)
+def rhs2(t,y): return [gv*(muv*np.cos(alv)-np.sin(alv)), y[0]]
+ev2=lambda t,y:y[0]; ev2.terminal=True
+so2=solve_ivp(rhs2,[0,10],[-vv,0.0],events=ev2,max_step=1e-4)
+disp=so2.y_events[0][0][1]   # displacement in belt frame (negative: down-slope)
+Wg=-gv*np.sin(alv)*disp
+print('(4) numeric belt-frame: KE lost + W_grav =',vv**2/2+Wg,' Q formula',float(Q.subs({g:gv,v:vv,al:alv,mu:muv})))
+assert abs(vv**2/2+Wg-float(Q.subs({g:gv,v:vv,al:alv,mu:muv})))<1e-3
+for mm in [1,10,100,1e4]:
+    print('   mu=%g Q/(v^2/2)=%.5f'%(mm,float((Q/(v**2/2)).subs({al:alv,mu:mm}))))

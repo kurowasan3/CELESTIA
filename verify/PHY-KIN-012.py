@@ -27,4 +27,24 @@ uv=2*np.sqrt(gv*hv)
 t1v=(uv-np.sqrt(uv**2-2*gv*hv))/gv; t2v=(uv+np.sqrt(uv**2-2*gv*hv))/gv
 for vx in [dv/t2v*0.98,dv/t2v*1.02,dv/t1v*0.98,dv/t1v*1.02]:
     tt=dv/vx; y=uv*tt-gv*tt**2/2; print("vx",vx,"height at wall",y,"clears" if y>=hv else "fails")
-# (5) energy: mechanism energy m u^2/2 ; ramp none. compare min run-up energies (per unit m): ramp opt: a*s2 = v^2/2 ; impulse: a*smin + u^2/2
+
+
+# ---- (5) total energy (per unit mass) E = a s + u^2/2 minimised over u and s ----
+D=sp.sqrt(h**2+d**2)
+s2=g*(h+D)/(2*a)
+Uopt=(h+D)*sp.sqrt(g/(2*D)); sopt=g*d**2/(4*a*D)
+# trajectory with vx^2=2 a sopt, vertical u=Uopt passes exactly through (d,h)
+vx=sp.sqrt(2*a*sopt); tw=d/vx
+print('(5) height at wall - h:',sp.simplify(Uopt*tw-g*tw**2/2-h))
+assert sp.simplify(Uopt*tw-g*tw**2/2-h)==0
+print('(5) E(opt) - a s2:',sp.simplify(a*sopt+Uopt**2/2-a*s2)); assert sp.simplify(a*sopt+Uopt**2/2-a*s2)==0
+assert sp.simplify((Uopt**2-2*g*h)-g*(D-h)**2/(2*D))==0
+# numeric brute force over u: min of a*smin(u)+u^2/2 (smin = lowest run-up for that u)
+smin_f=sp.lambdify((u,),(smin+u**2/(2*a)).subs({g:gv,h:hv,d:dv,a:1.0}))
+us=np.linspace(np.sqrt(2*gv*hv)+1e-9,40,400001); Es=smin_f(us)
+i=np.argmin(Es)
+print('(5) numeric min E=%.6f at u=%.5f ; formula E=%.6f u=%.5f'%(Es[i],us[i],gv*(hv+np.hypot(hv,dv))/2,float(Uopt.subs({g:gv,h:hv,d:dv}))))
+assert abs(Es[i]-gv*(hv+np.hypot(hv,dv))/2)<1e-6
+# also: E over the whole allowed s-range for each u is >= a s2 (any launch reaching wall needs V^2>=g(h+D))
+smax_f=sp.lambdify((u,),(smax+u**2/(2*a)).subs({g:gv,h:hv,d:dv,a:1.0}))
+assert np.all(smax_f(us[::100])>=gv*(hv+np.hypot(hv,dv))/2-1e-9)

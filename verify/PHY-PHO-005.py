@@ -17,8 +17,6 @@ WC_num=WA_num-2.20; print('WC[eV]=',WC_num)
 print('nu_min=',WC_num*ee/h_num)
 # 別法: ν2 側から WA
 print('WA from nu2 =',(h_num*0.90e15+ee*0.79)/ee)
-# 素朴な解釈の限界振動数
-print('naive threshold',WA_num*ee/h_num)
 # モンテカルロ: 平行平板, 等方放出, 運動エネルギー一様 0..Kmax の電子 → 到達条件 法線成分 ≥ e(φC-φA)
 import numpy as np
 rng=np.random.default_rng(0); hnu=6.6e-34*1.2e15/ee; Kmax=hnu-2.3; WAv=4.5; WCv=2.3
@@ -27,3 +25,16 @@ Kn=K*ct**2
 for Vv in [-0.46,-0.44,0.0,2.19,2.21]:
     barrier=-(Vv+(WCv-WAv))  # e(φC-φA) in eV
     print(Vv, np.mean(Kn>=barrier))
+
+# ---- new (5): photocell energy bookkeeping, EMF independent of W_K ----
+EmaxStored=sp.simplify(-e*Vstop)   # -eV at cutoff
+print('max stored energy per electron =',EmaxStored,'  unrecovered =',sp.simplify(h*nu-EmaxStored))
+# electron at A vacuum level at cutoff has energy hnu (KE 0); drops to A Fermi level -eV -> releases:
+Vc=Vstop
+print('energy released entering anode =',sp.simplify(h*nu-(-e*Vc)))
+print('d(EMF)/dW_C =',sp.diff(-Vstop,WC),'  d(EMF)/dW_A =',sp.diff(-Vstop,WA))
+# Monte Carlo: EMF (largest -V with nonzero current) for two cathodes with same anode
+for WCv_ in [2.3,1.5]:
+    Kmax_=hnu-WCv_   # fastest electron emitted normally carries KE Kmax_ toward the anode
+    Vfirst=-Kmax_-(WCv_-WAv)   # lowest V at which the most energetic normal emission still reaches anode
+    print(' W_C=%.1f eV: current starts at V=%.3f  (expected -(hnu-W_A)=%.3f)'%(WCv_,Vfirst,-(hnu-WAv)))

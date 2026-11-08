@@ -24,8 +24,23 @@ def depth(mn,Mn):
     return r.x,r.fun
 for (mn,Mn) in [(1,1),(1,2),(2,1)]:
     p,dd=depth(mn,Mn); print('m,M=',mn,Mn,' phi*=',np.degrees(p),' cos phi*',np.cos(p),' depth/l',dd,' alpha+phi deg',np.degrees(np.arctan(Mn*np.sin(p)/(mn+2*Mn-Mn*np.cos(p)))+p))
-print('sqrt21/5',np.sqrt(21)/5,' sqrt15/4',np.sqrt(15)/4, 'acos(2/5)',np.degrees(np.arccos(0.4)),'acos(1/4)',np.degrees(np.arccos(0.25)))
 # stability: G below T
 for (mn,Mn) in [(1,2),(2,1)]:
     p,_=depth(mn,Mn); a=np.arctan(Mn*np.sin(p)/(mn+2*Mn-Mn*np.cos(p)))
     Gy=float(G[1].subs({al:a,ph:p,m:mn,M:Mn,l:1})); print('G_y',Gy)
+
+# --- (3) 一般の m, M：軽い脚の先でつるす方が O が高い；m/M -> 0 で alpha->30deg, phi->60deg, depth->sqrt3/2 l
+sT=M/(m+2*M); sS=m/(M+2*m)
+print('sinT - sinS =',sp.factor(sT-sS)); assert sp.simplify(sp.factor(sT-sS)-(M**2-m**2)/((m+2*M)*(M+2*m)))==0
+rng=np.random.default_rng(3)
+for _ in range(200):
+    mn,Mn=rng.uniform(0.1,5,2)
+    _,dT=depth(mn,Mn); _,dS=depth(Mn,mn)       # S でつるす＝役割を入れかえ
+    assert (dT<dS)==(Mn>mn) or abs(dT-dS)<1e-9
+for eps in [1e-2,1e-4,1e-6]:
+    p,dd=depth(eps,1.0); a=np.arctan(np.sin(p)/(eps+2-np.cos(p)))
+    print(' m/M=',eps,' phi',np.degrees(p),' alpha',np.degrees(a),' depth/l',dd)
+p,dd=depth(1e-8,1.0); a=np.arctan(np.sin(p)/(2-np.cos(p)))
+assert abs(np.degrees(p)-60)<1e-3 and abs(np.degrees(a)-30)<1e-3 and abs(dd-np.sqrt(3)/2)<1e-6
+# 幾何：m=0 では重心＝OS の中点で T の真下，|x_O - x_T| <= l/2
+print('(3) OK')

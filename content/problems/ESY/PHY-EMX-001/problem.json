@@ -43,7 +43,7 @@
      },
      {
       "id": "5",
-      "tex": "ある実験で $\\dfrac{h}{w}=0.016$ の金属帯を用いたところ，$R=6.0\\,\\Omega$ のとき P にはたらく電磁気的な力の合力が $0$ になった．$\\mu_0=4\\pi\\times10^{-7}\\,\\mathrm{N/A^2}$ として，光速 $c$ を有効数字2桁で求めよ．"
+      "tex": "抵抗値が $R$ のとき，金属帯の長さ $1$ あたりにたくわえられた電磁気的なエネルギー $u=\\dfrac{U_E+U_B}{\\ell}$ と，抵抗で消費される電力 $P$ の比 $\\dfrac{P}{u}$ は速さの次元をもつ．$\\dfrac{P}{u}$ を $c$，$R$，$R_0$ で表し，$R=R_0$ のとき最大値 $c$ をとることを示せ．また，電池から抵抗へのエネルギーが金属帯の間の空間を通って運ばれていると考えるとき，この結果は何を意味するか．"
      }
     ]
    }
@@ -80,7 +80,7 @@
    },
    {
     "id": "5",
-    "tex": "$c=3.0\\times10^8\\,\\mathrm{m/s}$"
+    "tex": "$\\dfrac{P}{u}=\\dfrac{2cRR_0}{R^2+R_0^2}\\leqq c$（等号は $R=R_0$）．金属帯の間にたくわえられたエネルギーが抵抗へ運ばれる平均の速さは光速 $c$ を超えず，$R=R_0$（電場と磁場のエネルギーが等しいとき）にちょうど $c$ になる"
    }
   ]
  },
@@ -91,13 +91,13 @@
    "blocks": [
     {
      "type": "text",
-     "tex": "\\textbf{(1)}　P，Q の間の電場の大きさは $\\dfrac{V}{h}$ で，これは両面の電荷がつくる電場の和 $\\dfrac{\\sigma}{\\varepsilon_0}$ に等しいので，P の電荷面密度は $\\sigma=\\dfrac{\\varepsilon_0V}{h}$，電荷は $\\sigma w\\ell$．P にはたらく力を求めるときは，P 自身がつくる電場は除き，Q がつくる電場 $\\dfrac{\\sigma}{2\\varepsilon_0}$ だけを用いる（自分自身の電場から合力は受けない）．\n\\[ F_E=\\sigma w\\ell\\cdot\\frac{\\sigma}{2\\varepsilon_0}=\\boldsymbol{\\frac{\\varepsilon_0w\\ell V^2}{2h^2}} \\]\n正負の電荷なので\\textbf{引力}．\n\n\\textbf{(2)}　電流は $I=\\dfrac{V}{R}$（金属帯の抵抗は0なので P，Q の間の電圧はどこでも $V$）．幅あたりの電流は $K=\\dfrac{I}{w}$．P の位置で Q がつくる磁束密度は $\\dfrac{\\mu_0K}{2}$ で，P の電流に垂直．P の面積 $1$ あたりの力は $K\\cdot\\dfrac{\\mu_0K}{2}$ なので\n\\[ F_B=\\frac{\\mu_0K^2}{2}\\,w\\ell=\\frac{\\mu_0\\ell I^2}{2w}=\\boldsymbol{\\frac{\\mu_0\\ell V^2}{2wR^2}} \\]\n逆向きの電流は反発し合うので\\textbf{斥力}．ここでも P 自身がつくる磁場は除く．\n\n\\textbf{(3)}　$F_E=F_B$ より\n\\[ \\frac{\\varepsilon_0w}{h^2}=\\frac{\\mu_0}{wR_0^2}\\quad\\Longrightarrow\\quad R_0=\\frac{h}{w}\\sqrt{\\frac{\\mu_0}{\\varepsilon_0}}=\\frac{h}{w}\\,\\mu_0\\cdot\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}=\\boldsymbol{\\mu_0c\\,\\frac{h}{w}} \\]\n$F_E$ は $R$ によらず，$F_B\\propto\\dfrac{1}{R^2}$ なので，$R$ が大きい（電流が小さい）ほど電気的引力がまさる．合力が引力となるのは $\\boldsymbol{R>R_0}$．\n\n\\textbf{(4)}　金属帯の間は電気容量 $C=\\dfrac{\\varepsilon_0w\\ell}{h}$ のコンデンサーなので $U_E=\\dfrac12CV^2=\\dfrac{\\varepsilon_0w\\ell V^2}{2h}$．磁場は，2枚の電流がつくる磁場が間では強め合って $B=\\mu_0K$，外側では打ち消し合って $0$ になる．よって\n\\[ U_B=\\frac{(\\mu_0K)^2}{2\\mu_0}\\,wh\\ell=\\frac{\\mu_0h\\ell I^2}{2w} \\]\n\\[ \\frac{U_B}{U_E}=\\frac{\\mu_0h^2}{\\varepsilon_0w^2R^2}=\\boldsymbol{\\left(\\frac{R_0}{R}\\right)^2} \\]\n一方 (1)(2) より $\\dfrac{F_B}{F_E}=\\dfrac{\\mu_0h^2}{\\varepsilon_0w^2R^2}$ で，\\textbf{両者は等しい}．実際，$F_E=\\dfrac{U_E}{h}$，$F_B=\\dfrac{U_B}{h}$ であり，面積あたりの力（$\\dfrac{\\varepsilon_0E^2}{2}$，$\\dfrac{B^2}{2\\mu_0}$）はその場所のエネルギー密度に等しい．電場は間隔を縮める向きに，磁場は間隔を広げる向きに面を押す．$R=R_0$ では電場と磁場のエネルギーが等しくなり，力がちょうど打ち消す．\n\n（参考：$R_0$ は，この2枚の金属帯を伝わる電気信号の「特性インピーダンス」と呼ばれる量に一致する．）\n\n\\textbf{(5)}　(3) より $c=\\dfrac{R_0}{\\mu_0}\\cdot\\dfrac{w}{h}$ なので\n\\[ c=\\frac{6.0}{4\\pi\\times10^{-7}\\times0.016}=2.98\\times10^8\\ \\longrightarrow\\ \\boldsymbol{3.0\\times10^8\\ \\mathrm{m/s}} \\]\n力のつり合いと抵抗値だけから，$\\varepsilon_0$ を直接測ることなく光速が求まる．\\hfill$\\square$"
+     "tex": "\\textbf{(1)}　P，Q の間の電場の大きさは $\\dfrac{V}{h}$ で，これは両面の電荷がつくる電場の和 $\\dfrac{\\sigma}{\\varepsilon_0}$ に等しいので，P の電荷面密度は $\\sigma=\\dfrac{\\varepsilon_0V}{h}$，電荷は $\\sigma w\\ell$．P にはたらく力を求めるときは，P 自身がつくる電場は除き，Q がつくる電場 $\\dfrac{\\sigma}{2\\varepsilon_0}$ だけを用いる（自分自身の電場から合力は受けない）．\n\\[ F_E=\\sigma w\\ell\\cdot\\frac{\\sigma}{2\\varepsilon_0}=\\boldsymbol{\\frac{\\varepsilon_0w\\ell V^2}{2h^2}} \\]\n正負の電荷なので\\textbf{引力}．\n\n\\textbf{(2)}　電流は $I=\\dfrac{V}{R}$（金属帯の抵抗は0なので P，Q の間の電圧はどこでも $V$）．幅あたりの電流は $K=\\dfrac{I}{w}$．P の位置で Q がつくる磁束密度は $\\dfrac{\\mu_0K}{2}$ で，P の電流に垂直．P の面積 $1$ あたりの力は $K\\cdot\\dfrac{\\mu_0K}{2}$ なので\n\\[ F_B=\\frac{\\mu_0K^2}{2}\\,w\\ell=\\frac{\\mu_0\\ell I^2}{2w}=\\boldsymbol{\\frac{\\mu_0\\ell V^2}{2wR^2}} \\]\n逆向きの電流は反発し合うので\\textbf{斥力}．ここでも P 自身がつくる磁場は除く．\n\n\\textbf{(3)}　$F_E=F_B$ より\n\\[ \\frac{\\varepsilon_0w}{h^2}=\\frac{\\mu_0}{wR_0^2}\\quad\\Longrightarrow\\quad R_0=\\frac{h}{w}\\sqrt{\\frac{\\mu_0}{\\varepsilon_0}}=\\frac{h}{w}\\,\\mu_0\\cdot\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}=\\boldsymbol{\\mu_0c\\,\\frac{h}{w}} \\]\n$F_E$ は $R$ によらず，$F_B\\propto\\dfrac{1}{R^2}$ なので，$R$ が大きい（電流が小さい）ほど電気的引力がまさる．合力が引力となるのは $\\boldsymbol{R>R_0}$．\n\n\\textbf{(4)}　金属帯の間は電気容量 $C=\\dfrac{\\varepsilon_0w\\ell}{h}$ のコンデンサーなので $U_E=\\dfrac12CV^2=\\dfrac{\\varepsilon_0w\\ell V^2}{2h}$．磁場は，2枚の電流がつくる磁場が間では強め合って $B=\\mu_0K$，外側では打ち消し合って $0$ になる．よって\n\\[ U_B=\\frac{(\\mu_0K)^2}{2\\mu_0}\\,wh\\ell=\\frac{\\mu_0h\\ell I^2}{2w} \\]\n\\[ \\frac{U_B}{U_E}=\\frac{\\mu_0h^2}{\\varepsilon_0w^2R^2}=\\boldsymbol{\\left(\\frac{R_0}{R}\\right)^2} \\]\n一方 (1)(2) より $\\dfrac{F_B}{F_E}=\\dfrac{\\mu_0h^2}{\\varepsilon_0w^2R^2}$ で，\\textbf{両者は等しい}．実際，$F_E=\\dfrac{U_E}{h}$，$F_B=\\dfrac{U_B}{h}$ であり，面積あたりの力（$\\dfrac{\\varepsilon_0E^2}{2}$，$\\dfrac{B^2}{2\\mu_0}$）はその場所のエネルギー密度に等しい．電場は間隔を縮める向きに，磁場は間隔を広げる向きに面を押す．$R=R_0$ では電場と磁場のエネルギーが等しくなり，力がちょうど打ち消す．\n\n（参考：$R_0$ は，この2枚の金属帯を伝わる電気信号の「特性インピーダンス」と呼ばれる量に一致する．）\n\n\\textbf{(5)}　(4) より\n\\[ u=\\frac{U_E+U_B}{\\ell}=\\frac{\\varepsilon_0wV^2}{2h}\\left\\{1+\\left(\\frac{R_0}{R}\\right)^2\\right\\},\\qquad P=\\frac{V^2}{R}. \\]\n(3) の $R_0=\\dfrac hw\\sqrt{\\dfrac{\\mu_0}{\\varepsilon_0}}$ より $\\dfrac{h}{\\varepsilon_0w}=\\dfrac{R_0}{\\sqrt{\\varepsilon_0\\mu_0}}=cR_0$ なので\n\\[ \\frac Pu=\\frac{2h}{\\varepsilon_0wR}\\cdot\\frac{R^2}{R^2+R_0^2}=\\boldsymbol{\\frac{2cRR_0}{R^2+R_0^2}}. \\]\n（$\\Omega$ の比と $c$ の積なので確かに速さの次元をもつ．）相加平均と相乗平均の関係 $R^2+R_0^2\\geqq2RR_0$ より\n\\[ \\frac Pu\\leqq c, \\]\n等号は $R=R_0$ のときに限る．\n\n\\textbf{意味}　定常状態では，金属帯の間の空間には長さ $1$ あたり $u$ のエネルギーがあり，抵抗は単位時間に $P$ のエネルギーを受け取り続けている．これをエネルギーが金属帯に沿って速さ $v$ で流れているとみると $P=uv$ であり，$v=\\dfrac Pu$ はエネルギーが運ばれる平均の速さである．結果は，この速さが\\textbf{光速 $c$ を超えない}こと，そして電場と磁場のエネルギーが等しい $R=R_0$ のときに\\textbf{ちょうど $c$} になることを示している．$R\\neq R_0$ では，電場か磁場のどちらか一方のエネルギーが余分にたくわえられ，運ばれる量に比べてたくわえられた量が多くなるため，平均の速さは $c$ より小さい．$R_0$ が (4) の参考で述べた特性インピーダンスであることとあわせると，$R=R_0$ でつないだ2枚の金属帯は，電磁波（電気信号）が光速で伝わる「伝送線路」としてはたらいていることがわかる．\\hfill$\\square$"
     }
    ]
   }
  ],
  "idea": {
-  "tex": "平行な2枚の導体に電荷と逆向きの電流があると，電気的引力 $\\propto\\varepsilon_0E^2$ と磁気的斥力 $\\propto B^2/\\mu_0$ が競合し，それぞれ面積あたりの大きさがエネルギー密度に等しい．両者は終端抵抗が $\\mu_0c\\,h/w$ のときちょうど打ち消し合うので，力のつり合いと抵抗値から $c=1/\\sqrt{\\varepsilon_0\\mu_0}$ が決まる．"
+  "tex": "平行な2枚の導体に電荷と逆向きの電流があると，電気的引力 $\\propto\\varepsilon_0E^2$ と磁気的斥力 $\\propto B^2/\\mu_0$ が競合し，それぞれ面積あたりの大きさがエネルギー密度に等しい．両者は終端抵抗が $\\mu_0c\\,h/w$ のときちょうど打ち消し合う．このとき電場と磁場のエネルギーが等しく，たくわえられたエネルギーはちょうど光速 $c$ で抵抗へ運ばれる（一般の $R$ ではそれより遅い）．"
  },
  "concepts": [
   "electromagnetic-induction",

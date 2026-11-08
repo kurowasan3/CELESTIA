@@ -25,3 +25,19 @@ xv=[float(t) for t in xs if t>0][0]
 K0=Kp*(xv+1)**2/(4*xv); print('M/mp=',xv,' K0=',K0)
 # closed form
 r=(14*Kp/KN)**0.5; print('closed form (14-r)/(r-1)=',(14-r)/(r-1))
+
+# ---- new (4): ratio rho(t), monotonic range, inverse, t->0 equals photon ratio 14 ----
+t,rho_s=sp.symbols('t rho',positive=True)
+rho_t=sp.simplify((4*t/(t+1)**2)/(4*t*14/(t+14)**2))
+print('rho(t) - (t+14)^2/(14(t+1)^2) =',sp.simplify(rho_t-(t+14)**2/(14*(t+1)**2)))
+print('drho/dt =',sp.factor(sp.diff(rho_t,t)))   # negative for t>0
+print('limits t->0, t->oo:',sp.limit(rho_t,t,0),sp.limit(rho_t,t,sp.oo))
+t_of_rho=(14-sp.sqrt(14*rho_s))/(sp.sqrt(14*rho_s)-1)
+print('inverse check rho(t(rho)) - rho =',sp.simplify(rho_t.subs(t,t_of_rho)-rho_s))
+# photon ratio for small E: K = 2E^2/(Mc^2) to leading order -> ratio 14
+Kexact=sp.solve(sp.Eq(2*E,K+sp.sqrt(2*M*c**2*K)),K)
+Kexact=[s for s in Kexact if s.subs({E:1,M:1000,c:1})<1][0]
+eps=sp.symbols('epsilon',positive=True)
+print('photon K leading:',sp.series(Kexact.subs(E,eps*M*c**2)/(M*c**2),eps,0,3))
+ratio_ph=sp.limit(Kexact.subs(M,m)/Kexact.subs(M,14*m),E,0); print('photon ratio E->0:',ratio_ph)
+print('measured rho=',Kp/KN,' t=',float(t_of_rho.subs(rho_s,Kp/KN)))

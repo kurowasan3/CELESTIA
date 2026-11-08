@@ -21,8 +21,4 @@
 <line x1="130.0" y1="60.0" x2="130.0" y2="240.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
 <text x="130.0" y="258.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">τ</text>
 <text x="150.0" y="141.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf">傾き <tspan font-family="Times New Roman, serif" font-style="italic">gH</tspan> / <tspan font-family="Times New Roman, serif" font-style="italic">L</tspan></text>
-<line x1="60.0" y1="78.0" x2="163.1" y2="78.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
-<line x1="163.1" y1="78.0" x2="163.1" y2="240.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
-<text x="163.1" y="258" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">1.47<tspan font-family="Times New Roman, serif" font-style="italic">τ</tspan></text>
-<text x="54" y="83.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="end">0.9<tspan font-family="Times New Roman, serif" font-style="italic">V</tspan></text>
 </svg>

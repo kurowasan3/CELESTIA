@@ -29,3 +29,21 @@ nA_,TA_,UB=sol.y[:,-1]; pB=UB/1.5/2
 nB_=4-nA_; TB_=pB*2/nB_
 print('numeric pf',nA_*TA_,'TA',TA_,'TB',TB_,'dn',3-nA_)
 assert abs(nA_*TA_-5/3)<1e-6 and abs(TB_-1.762198)<1e-5 and abs(TA_-0.790480)<1e-5; print('OK')
+# ---- 新しい (4)：B に運びこまれるエネルギーは 5/2 Δn R T'（押し込みの仕事 Δn R T' を含む）
+pp=sp.symbols("p'",positive=True)
+nA_of=nA*(pp/(3*p))**sp.Rational(3,5); TA_of=T*(pp/(3*p))**sp.Rational(2,5)
+assert sp.simplify(nA_of*R*TA_of-pp*V)==0           # A の状態方程式
+integrand=sp.Rational(5,2)*R*TA_of*(-sp.diff(nA_of,pp))
+dUB=sp.simplify(sp.integrate(integrand,(pp,3*p,P2)))
+print('(4) ΔU_B（足し合わせ）=',dUB)
+assert sp.simplify(dUB-2*p*V)==0
+assert sp.simplify(sp.Rational(3,2)*(P2*2*V-p*2*V)-dUB)==0
+# 押し込みの仕事を入れないと（3/2 だけ）合わない
+dUB_wrong=sp.simplify(sp.integrate(sp.Rational(3,2)*R*TA_of*(-sp.diff(nA_of,pp)),(pp,3*p,P2)))
+print('   3/2 だけで足すと',dUB_wrong,'（不一致）'); assert sp.simplify(dUB_wrong-2*p*V)!=0
+# 足し合わせの式から p2 を逆に決める
+q2=sp.symbols('q2',positive=True)
+print('   p2 を逆算:',sp.solve(sp.Eq(sp.Rational(3,2)*V*(3*p-q2),3*V*(q2-p)),q2))
+# 数値（上の ODE は dUB=2.5 TA を使っている）：UB の増加が 2pV(=2) になる
+print('   ODE: UB 増加 =',UB-3.0); assert abs((UB-3.0)-2.0)<1e-6
+print('OK (4)')

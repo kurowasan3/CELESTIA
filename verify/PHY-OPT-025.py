@@ -23,13 +23,24 @@ l1,l2=1492.6,1470.9
 B=(1/l2**2-1/l1**2)/3; A=1/l1**2-B
 a_rec=1/(2*n1v*np.sqrt(A)); D_rec=1/(2*n1v*np.sqrt(B))
 print('recovered a=%.4f nm, D=%.4f nm'%(a_rec,D_rec))
-# strain eps=1e-3 shifts
-eps=1e-3
-for k in (1,2):
-    print(k,'shift nm',lv[k-1]*eps/(1+(k*av/Dv)**2))
-print('separation change nm', lv[0]*eps/(1.01)-lv[1]*eps/1.04)
-# exact shift with eps
-def lamf(k,a_,D_=Dv): return 2*n1v*a_/np.sqrt(1+(k*a_/D_)**2)*1000
-for k in (1,2): print(k,'exact shift',lamf(k,av*(1+eps))-lamf(k,av))
-print('exact sep change',(lamf(1,av*(1+eps))-lamf(2,av*(1+eps)))-(lamf(1,av)-lamf(2,av)))
 print('third peak guided?', 3*a_rec/D_rec/np.sqrt(1+(3*a_rec/D_rec)**2), 'vs', np.sqrt(1-(n2v/n1v)**2))
+# (5)(a) strain sensitivity eps/(1+(Na/D)^2) [dln already printed above]
+assert sp.simplify(dln-1/(1+(N*a/D)**2))==0
+# (5)(b) index change: dln lam/dln n1 = 1 for every mode
+dn=sp.simplify(sp.diff(sp.log(lamN),n1)*n1); print('dln lam/dln n1 =',dn); assert dn==1
+# (5)(c) inversion for eps, eta from r1, r2
+e_,h_,k_=sp.symbols('epsilon eta k',positive=True)
+r1=h_+e_/(1+k_**2); r2=h_+e_/(1+4*k_**2)
+eps_f=(1+k_**2)*(1+4*k_**2)/(3*k_**2)*(r1-r2); eta_f=((1+4*k_**2)*r2-(1+k_**2)*r1)/(3*k_**2)
+assert sp.simplify(eps_f-e_)==0 and sp.simplify(eta_f-h_)==0
+print('inversion formulas verified')
+# numeric: exact perturbation of the waveguide (a, n1 changed), recover eps and eta
+def lamf(k,a_,D_=Dv,n_=n1v): return 2*n_*a_/np.sqrt(1+(k*a_/D_)**2)*1000
+eps0,eta0=2.0e-5,-1.0e-5
+rr=[(lamf(k,av*(1+eps0),Dv,n1v*(1+eta0))-lamf(k,av))/lamf(k,av) for k in (1,2)]
+kk=av/Dv
+eps_rec=(1+kk**2)*(1+4*kk**2)/(3*kk**2)*(rr[0]-rr[1]); eta_rec=((1+4*kk**2)*rr[1]-(1+kk**2)*rr[0])/(3*kk**2)
+print('true eps,eta=',eps0,eta0,' recovered=',eps_rec,eta_rec)
+assert abs(eps_rec/eps0-1)<1e-3 and abs(eta_rec/eta0-1)<1e-3
+print('(r1-r2)/eps =',(rr[0]-rr[1])/eps0,' ~3k^2/((1+k^2)(1+4k^2)) =',3*kk**2/((1+kk**2)*(1+4*kk**2)))
+print('OK')

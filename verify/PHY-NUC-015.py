@@ -13,3 +13,13 @@ N=next(N for N in range(2,1000) if float(ratio.subs(n,N))-1<0.01); print('min n 
 R=1.10e7; inv=R*(1/109**2-1/110**2); print('lambda(110->109)=',1/inv)
 # 古典的な周回振動数から見積もった波長
 c=3.0e8; f110=2*R*c/110**3; print('lambda from f_110 =',c/f110)
+
+# ---- new (5): f_n = 2Rc/n^3, dE/dx = h f, nu = integral of f ----
+Rc=sp.simplify(nu/((1/(n-1)**2-1/n**2)))
+print('Rc =',Rc,'  f_n - 2Rc/n^3 =',sp.simplify(fn-2*Rc/n**3),'  E_n + R h c/n^2 =',sp.simplify(En+Rc*h/n**2))
+x,K=sp.symbols('x k',positive=True)
+Ex=-Rc*h/x**2; fx=2*Rc/x**3
+print('dE/dx - h f =',sp.simplify(sp.diff(Ex,x)-h*fx))
+print('int_{n-1}^n f - nu =',sp.simplify(sp.integrate(fx,(x,n-1,n))-nu))
+nuk=sp.integrate(fx,(x,n-K,n)); print('nu_k/f_n as n->oo:',sp.limit(sp.simplify(nuk/fn),n,sp.oo))
+print('check n->n-2 equals integral:',sp.simplify(nuk.subs(K,2)-nu2))

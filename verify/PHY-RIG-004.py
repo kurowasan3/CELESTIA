@@ -26,14 +26,29 @@ assert sp.simplify(sp.expand_trig(sp.tan(b+phi))-vt2/(g*r))==0
 # slide-out: |F|=mu*(N1+N2): v^2/(gr)=tan(b+lam)
 vs2=sp.solve(sp.Eq(fe,mu*fn),v)[0]**2
 assert sp.simplify(sp.expand_trig(sp.tan(b+sp.atan(mu)))-vs2/(g*r))==0
-# numeric (4): d/h=1/sqrt3, mu=0.8, b=15deg, r=50, g=9.8
-gv,rv=9.8,50.0; bv=np.radians(15); ph=np.arctan(1/np.sqrt(3)); lam=np.arctan(0.8)
-print('tip max v=',np.sqrt(gv*rv*np.tan(bv+ph)),' slide max v=',np.sqrt(gv*rv*np.tan(bv+lam)))
-print('low side: tan(b-phi)=',np.tan(bv-ph),' tan(b-lam)=',np.tan(bv-lam))
-# brute-force: scan v, find first failure
-for vv in np.linspace(0,40,40001):
-    d_={m:1,g:gv,h:1,d:1/np.sqrt(3),v:vv,r:rv,b:bv}
-    n1=float(s[N1].subs(d_)); n2=float(s[N2].subs(d_)); ff=float(s[F].subs(d_))
-    if n1<0 or n2<0 or abs(ff)>0.8*(n1+n2):
-        print('first failure at v=',vv,'n1=',n1,'slide?',abs(ff)>0.8*(n1+n2)); break
+# --- (4) 低速側：内側への横すべり tan(b-lam)，内側への転倒 tan(b-phi)，F=0 で N1=N2
+vlo_s=sp.solve(sp.Eq(-fe,mu*fn),v)[0]**2
+assert sp.simplify(sp.expand_trig(sp.tan(b-sp.atan(mu)))-vlo_s/(g*r))==0
+vlo_t=sp.solve(sp.Eq(s[N2],0),v)[0]**2
+assert sp.simplify(sp.expand_trig(sp.tan(b-sp.atan(d/h)))-vlo_t/(g*r))==0
+v0sq=sp.solve(sp.Eq(s[F],0),v)[0]**2; print('v0^2 =',sp.simplify(v0sq))
+assert sp.simplify(v0sq-g*r*sp.tan(b))==0
+n1=sp.simplify(s[N1].subs(v,sp.sqrt(v0sq))); n2=sp.simplify(s[N2].subs(v,sp.sqrt(v0sq)))
+print('N1,N2 at v0:',n1,n2); assert sp.simplify(n1-n2)==0 and sp.simplify(n1-m*g/(2*sp.cos(b)))==0
+# brute-force：mu<d/h, b>lam の例で，安全な速さの範囲を走査して公式と比較
+gv,rv=9.8,50.0
+for (bdeg,muv,dh) in [(40,0.5,0.8),(30,0.3,0.6),(50,0.6,0.9)]:
+    bv=np.radians(bdeg); lam=np.arctan(muv)
+    VV=np.linspace(0,60,60001)
+    fN1=sp.lambdify(v,s[N1].subs({m:1,g:gv,h:1,d:dh,r:rv,b:bv}),'numpy')
+    fN2=sp.lambdify(v,s[N2].subs({m:1,g:gv,h:1,d:dh,r:rv,b:bv}),'numpy')
+    fF=sp.lambdify(v,s[F].subs({m:1,g:gv,h:1,d:dh,r:rv,b:bv}),'numpy')
+    n1v,n2v,ffv=fN1(VV),fN2(VV),fF(VV)
+    safe=VV[(n1v>=0)&(n2v>=0)&(np.abs(ffv)<=muv*(n1v+n2v))]
+    lo,hi=min(safe),max(safe)
+    plo=np.sqrt(gv*rv*np.tan(bv-lam)); phi_=np.sqrt(gv*rv*np.tan(bv+lam))
+    # 下限で起こるのは横すべりか（転倒の限界はそれより低速）
+    tip_lo=np.sqrt(max(gv*rv*np.tan(bv-np.arctan(dh)),0))
+    print('beta',bdeg,'mu',muv,'d/h',dh,' scan',lo,hi,' formula',plo,phi_,' tip-low',tip_lo)
+    assert abs(lo-plo)<2e-3 and abs(hi-phi_)<2e-3 and tip_lo<plo
 print('OK')

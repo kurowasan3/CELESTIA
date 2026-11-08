@@ -31,3 +31,19 @@ for dn in [0.3,0.5,0.59,0.7,0.9]:
     i=int(np.argmin(Us)); tmin=ths[::100][i]
     pred=np.degrees(np.arcsin(min(1,dn/(ln*np.sqrt(rn/r0n)))))
     print('d=',dn,' numeric eq angle',np.degrees(tmin),' predicted',pred)
+
+# --- (4) 傾いた状態の安定性と，d_c 直下での傾き phi ≈ sqrt(2(d_c-d)/d_c)
+Mth=S*g*sp.cos(th)/2*(rho0*(d/sp.sin(th))**2-rho*l**2)     # 起こす向きのモーメント
+th_eq=sp.asin(d/dc)
+dM=sp.simplify(sp.diff(Mth,th).subs(th,th_eq)); print('dM/dtheta at eq =',dM)
+num={l:1,S:1,g:9.8,rho:0.36,rho0:1.0}
+for dn in [0.1,0.3,0.5,0.59]:
+    v_=float(dM.subs(num).subs(d,dn)); print(' d',dn,' dM/dtheta',v_); assert v_<0    # 復元的（安定）
+    te=float(th_eq.subs(num).subs(d,dn))
+    assert float(Mth.subs(num).subs(d,dn).subs(th,te+1e-3))<0 and float(Mth.subs(num).subs(d,dn).subs(th,te-1e-3))>0
+dcn=0.6
+for eps in [1e-2,1e-3,1e-4]:
+    dn=dcn*(1-eps); phi_exact=np.pi/2-np.arcsin(dn/dcn); phi_app=np.sqrt(2*(dcn-dn)/dcn)
+    print(' eps',eps,' phi exact',phi_exact,' approx',phi_app,' rel err',abs(phi_exact/phi_app-1)); assert abs(phi_exact/phi_app-1)<eps
+print(' 2% below d_c: phi =',np.pi/2-np.arcsin(0.98),'rad =',np.degrees(np.pi/2-np.arcsin(0.98)),'deg')
+print('(4) OK')

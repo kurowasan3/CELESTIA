@@ -31,3 +31,33 @@ for pv in [4.0,1.6]:
     print('p=',pv,'extrema from far:',ext[:4])
 # model: I ~ sin^2(pi N /2)
 print('model I(N)=4 sin^2(pi N/2) relative to free propagation; N=1->4, N=2->0')
+# (5) zone plate rho_j=b sqrt(j), odd zones open, plane-wave illumination: on-axis amplitude (paraxial Fresnel)
+# U(q) ∝ (1/(lam q)) ∫_open exp(i pi rho^2/(lam q)) d(rho^2)  -> analytic per ring
+def U_zp(qv,b,lv,K):
+    u=lambda r2: np.pi*r2/(lv*qv)
+    tot=0j
+    for j in range(1,2*K+1,2):
+        u1,u2=u((j-1)*b**2),u(j*b**2)
+        tot+=(np.exp(1j*u2)-np.exp(1j*u1))/(1j)/np.pi   # = (1/(lam q)) * integral of exp(iu) d(rho^2)
+    return abs(tot)
+b=0.5e-3; K=20
+for lv,name in [(6.5e-7,'red'),(4.0e-7,'violet')]:
+    F=b**2/lv
+    qs=np.linspace(F/9,F*1.6,40001); A=np.array([U_zp(qq,b,lv,K) for qq in qs])
+    pk=qs[1:-1][(A[1:-1]>A[:-2])&(A[1:-1]>=A[2:])&(A[1:-1]>0.6*A.max())]
+    print(name,'F=%.4f m'%F,' strong peaks at q/F =',np.round(pk/F,4))
+    assert np.allclose(sorted(pk/F,reverse=True)[:4],[1,1/3,1/5,1/7],atol=2e-3)
+    for m in [2,4,6]: print('   q=F/%d amplitude %.3e (vs peak %.2f)'%(m,U_zp(F/m,b,lv,K),A.max()))
+print('red focus nearer than violet: F_red < F_violet ->',b**2/6.5e-7 < b**2/4.0e-7)
+# exact (non-paraxial path, Rayleigh-Sommerfeld-like with 1/r) check of the main focus for a modest zone plate
+from scipy.integrate import quad
+def U_exact(qv,b,lv,K):
+    k=2*np.pi/lv; tot=0j
+    for j in range(1,2*K+1,2):
+        r1,r2=b*np.sqrt(j-1),b*np.sqrt(j)
+        g=lambda r: np.exp(1j*k*np.sqrt(qv**2+r**2))/np.sqrt(qv**2+r**2)*r
+        tot+=quad(lambda r: g(r).real,r1,r2,limit=200)[0]+1j*quad(lambda r: g(r).imag,r1,r2,limit=200)[0]
+    return abs(tot)
+lv=5.0e-7; F=b**2/lv; qs=np.linspace(0.9*F,1.1*F,201); A=[U_exact(qq,b,lv,10) for qq in qs]
+print('exact-path main focus at q/F =',round(qs[int(np.argmax(A))]/F,4)); assert abs(qs[int(np.argmax(A))]/F-1)<0.01
+print('OK')
