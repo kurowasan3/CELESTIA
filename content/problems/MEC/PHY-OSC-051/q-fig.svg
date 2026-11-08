@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 330">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<line x1="90.0" y1="80.0" x2="350.0" y2="80.0" stroke="#222" stroke-width="1.6"/>
+<line x1="90.0" y1="80.0" x2="98.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="100.0" y1="80.0" x2="108.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="80.0" x2="118.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="120.0" y1="80.0" x2="128.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="130.0" y1="80.0" x2="138.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="140.0" y1="80.0" x2="148.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="150.0" y1="80.0" x2="158.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="160.0" y1="80.0" x2="168.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="170.0" y1="80.0" x2="178.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="180.0" y1="80.0" x2="188.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="190.0" y1="80.0" x2="198.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="200.0" y1="80.0" x2="208.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="210.0" y1="80.0" x2="218.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="220.0" y1="80.0" x2="228.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="230.0" y1="80.0" x2="238.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="240.0" y1="80.0" x2="248.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="250.0" y1="80.0" x2="258.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="260.0" y1="80.0" x2="268.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="270.0" y1="80.0" x2="278.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="280.0" y1="80.0" x2="288.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="290.0" y1="80.0" x2="298.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="300.0" y1="80.0" x2="308.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="80.0" x2="318.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="320.0" y1="80.0" x2="328.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="330.0" y1="80.0" x2="338.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<line x1="340.0" y1="80.0" x2="348.0" y2="72.0" stroke="#222" stroke-width="1"/>
+<rect x="216" y="77" width="8" height="6" fill="#fff" stroke="none"/>
+<line x1="220.0" y1="80.0" x2="342.1" y2="225.5" stroke="#222" stroke-width="1.4"/>
+<line x1="220.0" y1="80.0" x2="220.0" y2="25.0" stroke="#222" stroke-width="1.4"/>
+<line x1="234.0" y1="60.0" x2="234.0" y2="25.0" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar)"/>
+<text x="242.0" y="42.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="start">ゆっくり引く</text>
+<text x="208.0" y="98.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="end">O</text>
+<line x1="220.0" y1="80.0" x2="220.0" y2="265.5" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<ellipse cx="220.0" cy="225.5" rx="122.1" ry="22" stroke="#888" stroke-width="1" stroke-dasharray="5,4" fill="none"/>
+<line x1="220.0" y1="225.5" x2="342.1" y2="225.5" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="281.1" y="241.5" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">r</text>
+<circle cx="342.1" cy="225.5" r="9" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<text x="356.1" y="229.5" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">m</text>
+<path d="M220.0,130.0 A50,50 0 0 0 252.1,118.3" stroke="#222" stroke-width="1" fill="none"/>
+<text x="234.0" y="148.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">θ</text>
+<text x="291.1" y="148.8" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">l</text>
+<path d="M158.9,244.6 L168.4,245.5 L178.2,246.2 L188.4,246.8 L198.8,247.2 L209.4,247.5 L220.0,247.5 L230.6,247.5 L241.2,247.2 L251.6,246.8 L261.8,246.2 L271.6,245.5 L281.1,244.6" stroke="#1f5fbf" stroke-width="1.8" fill="none" marker-end="url(#q-ab)"/>
+<text x="182.0" y="267.5" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1f5fbf" text-anchor="middle">ω</text>
+<line x1="410.0" y1="240.0" x2="410.0" y2="285.0" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar)"/>
+<text x="420.0" y="275.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">g</text>
+</svg>

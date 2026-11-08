@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300">
+<defs><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<path d="M127.9,160.9 A110,110 0 0 0 332.1,79.1" fill="none" stroke="#222" stroke-width="2.4"/>
+<line x1="127.9" y1="160.9" x2="332.1" y2="79.1" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<circle cx="230.0" cy="120.0" r="3" fill="#222"/>
+<text x="236.0" y="114.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="start">O</text>
+<line x1="50.0" y1="169.1" x2="410.0" y2="169.1" stroke="#1f5fbf" stroke-width="1.4"/>
+<text x="380.0" y="163.1" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">水面</text>
+<circle cx="250.4" cy="171.1" r="3" fill="#222"/>
+<text x="258.4" y="175.1" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">G</text>
+<line x1="250.4" y1="171.1" x2="250.4" y2="241.1" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<text x="256.4" y="235.1" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#c0392b" text-anchor="start">mg</text>
+<line x1="127.9" y1="160.9" x2="127.9" y2="200.9" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<text x="97.9" y="196.9" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#c0392b" text-anchor="start">m′g</text>
+<line x1="230.0" y1="120.0" x2="230.0" y2="40.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<text x="238" y="54" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf">浮力 (<tspan font-family="Times New Roman, serif" font-style="italic">m</tspan>+<tspan font-family="Times New Roman, serif" font-style="italic">m′</tspan>)<tspan font-family="Times New Roman, serif" font-style="italic">g</tspan></text>
+<line x1="250.4" y1="171.1" x2="250.4" y2="120.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="230.0" y1="120.0" x2="250.4" y2="120.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="127.9" y1="106.0" x2="230.0" y2="106.0" stroke="#888" stroke-width="1" marker-end="url(#a-ag)" marker-start="url(#a-ag)"/>
+<text x="178.93327952154976" y="100" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="middle">R <tspan font-style="normal">cos</tspan> θ</text>
+<text x="260" y="132" font-family="Times New Roman, serif" font-style="italic" font-size="13" fill="#222"><tspan font-style="normal">(</tspan>R<tspan font-style="normal">/2) sin</tspan> θ</text>
+</svg>

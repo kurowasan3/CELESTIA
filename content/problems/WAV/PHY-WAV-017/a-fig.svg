@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560">
+<defs><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<line x1="30.0" y1="40.0" x2="580.0" y2="40.0" stroke="#222" stroke-width="1.2"/>
+<line x1="240.0" y1="40.0" x2="240.0" y2="540.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="300.0" y1="40.0" x2="300.0" y2="540.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="240.0" y="32.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">0</text>
+<text x="300.0" y="34.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">ℓ</text>
+<text x="585.0" y="45.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">x</text>
+<line x1="20.0" y1="40.0" x2="20.0" y2="545.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<text x="14.0" y="543.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="end">t</text>
+<text x="130.0" y="58.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">媒質 I</text>
+<text x="270.0" y="58.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">II</text>
+<text x="410.0" y="58.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">媒質 I</text>
+<line x1="60.0" y1="70.0" x2="240.0" y2="160.0" stroke="#1f5fbf" stroke-width="1.6"/>
+<text x="55.0" y="64.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#1f5fbf" text-anchor="middle">入射 1</text>
+<line x1="240.0" y1="160.0" x2="60.0" y2="250.0" stroke="#c0392b" stroke-width="1.4"/>
+<text x="50.0" y="260.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#c0392b" text-anchor="end">−1/2</text>
+<line x1="240.0" y1="160.0" x2="300.0" y2="250.0" stroke="#222" stroke-width="1.2"/>
+<line x1="300.0" y1="250.0" x2="460.0" y2="330.0" stroke="#1f5fbf" stroke-width="1.4"/>
+<text x="470.0" y="334.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf" text-anchor="start">3/4</text>
+<line x1="300.0" y1="250.0" x2="240.0" y2="340.0" stroke="#222" stroke-width="1.2"/>
+<line x1="240.0" y1="340.0" x2="80.0" y2="420.0" stroke="#c0392b" stroke-width="1.4"/>
+<text x="70.0" y="424.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#c0392b" text-anchor="end">3/8</text>
+<line x1="240.0" y1="340.0" x2="300.0" y2="430.0" stroke="#222" stroke-width="1.2"/>
+<line x1="300.0" y1="430.0" x2="460.0" y2="510.0" stroke="#1f5fbf" stroke-width="1.4"/>
+<text x="470.0" y="514.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf" text-anchor="start">3/16</text>
+<text x="470.0" y="100.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#1f5fbf" text-anchor="middle">右へ出るパルスの高さ</text>
+<text x="110.0" y="500.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="middle">左へ戻るパルスの高さ</text>
+<text x="270.0" y="180.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">1/2</text>
+<text x="270.0" y="305.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">1/4</text>
+<text x="270.0" y="380.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">1/8</text>
+<text x="300.0" y="535.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">（M＝9m．以後，左右とも高さは 1/4 倍ずつ，時間間隔は 6ℓ/v）</text>
+</svg>

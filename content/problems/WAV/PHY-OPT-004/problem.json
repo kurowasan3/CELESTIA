@@ -1,0 +1,122 @@
+{
+ "id": "PHY-OPT-004",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "片方のスリットを覆う薄膜と液浸による0次明線の移動から屈折率と厚さを分離する",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，間隔 $d$ の複スリット A，B（B が上）と，そこから距離 $l$ 離れたスクリーンを用いてヤングの実験を行う．単スリット S は A，B から等距離にあり，スクリーン上の点 O は A，B から等距離の点である．O を原点としてスクリーン上に上向きに $x$ 軸をとる．$d$，$|x|$ は $l$ に比べて十分小さい．\n\nスリット B だけを，屈折率 $n_f$，厚さ $\\delta$（ともに未知）の透明な薄膜で覆う．膜の屈折率は光の波長によらないとし，光は膜に垂直に入射するとしてよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "装置が空気中（屈折率 1）にあるとき，経路差が 0 の明線（0次の明線）の座標 $x_0$ を $n_f$，$\\delta$，$d$，$l$ で表せ．また，単色光だけではどの明線が0次の明線かを決められないが，白色光を用いれば決められる理由を述べよ．"
+     },
+     {
+      "id": "2",
+      "tex": "装置全体（S，複スリット，スクリーンを含む）を屈折率 $n_l$ の液体に浸した．単色光（真空中の波長 $\\lambda$）による明線の間隔と，0次の明線の座標 $x_0'$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$d=0.50\\ \\mathrm{mm}$，$l=1.00\\ \\mathrm{m}$ とする．白色光で調べると，0次の明線は空気中では O から上へ $10.0\\ \\mathrm{mm}$，屈折率 $1.60$ の液体中では O から下へ $1.25\\ \\mathrm{mm}$ の位置にあった．$n_f$ と $\\delta$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の液体中で真空中の波長 $600\\ \\mathrm{nm}$ の単色光を用いると，0次の明線は O から明線間隔の何倍だけずれているか．また，液体の屈折率をいくらにすれば，膜があっても0次の明線が O に来るか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：片方のスリットを覆う薄膜と液浸による0次明線の移動から屈折率と厚さを分離する",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$x_0=\\dfrac{(n_f-1)\\delta l}{d}$（上向き）．理由は解説参照"
+   },
+   {
+    "id": "2",
+    "tex": "間隔 $\\dfrac{\\lambda l}{n_l d}$，$x_0'=\\dfrac{(n_f-n_l)\\delta l}{n_l d}$"
+   },
+   {
+    "id": "3",
+    "tex": "$n_f=1.50$，$\\delta=1.0\\times10^{-5}\\ \\mathrm{m}$"
+   },
+   {
+    "id": "4",
+    "tex": "約 $1.7$ 倍（$\\frac53$ 倍），$n_l=1.50$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　スクリーン上の点 P$(x)$ について，近似式 $\\mathrm{AP}-\\mathrm{BP}=\\dfrac{dx}{l}$ が使える．S から A，B までは等距離なので，光路差は複スリットより後ろと膜の部分だけで生じる．B を通る光は，厚さ $\\delta$ の部分を空気（屈折率 1）の代わりに屈折率 $n_f$ の膜の中を通るので，光学距離が $(n_f-1)\\delta$ だけ長くなる．A 経由と B 経由の光路差は\n\\[ \\left(\\mathrm{AP}\\right)-\\left(\\mathrm{BP}+(n_f-1)\\delta\\right)=\\frac{dx}{l}-(n_f-1)\\delta \\]\nこれが 0 になる位置が0次の明線で\n\\[ \\boldsymbol{x_0=\\frac{(n_f-1)\\delta l}{d}}\\quad(\\text{膜を付けた B の側へずれる}) \\]\n\n単色光では，明線はどれも同じ明るさで等間隔 $\\lambda l/d$ に並ぶので，模様全体が明線間隔の整数倍だけずれても区別がつかず，$x_0$ は間隔を法としてしか決まらない．白色光では，光路差 0 の位置だけはすべての波長で同時に明るくなって白く見え，それ以外の明線は波長ごとに位置がずれて色がつく．膜の屈折率が波長によらなければ光路差 0 の位置は波長によらないので，白い明線として0次の明線を特定できる．\n\n\\textbf{(2)}　液体中では，膜以外の経路はすべて屈折率 $n_l$ の媒質なので，A 経由と B 経由の光路差は\n\\[ n_l\\frac{dx}{l}-(n_f-n_l)\\delta \\]\nとなる．膜は「$\\delta$ の液体を置き換えた」ものなので，追加の光学距離は $(n_f-1)\\delta$ ではなく $(n_f-n_l)\\delta$ である点に注意する．明線条件は\n\\[ n_l\\frac{dx}{l}-(n_f-n_l)\\delta=m\\lambda\\qquad(m\\ \\text{は整数}) \\]\nよって明線の間隔は $\\boldsymbol{\\dfrac{\\lambda l}{n_l d}}$，0次（$m=0$）の明線は\n\\[ \\boldsymbol{x_0'=\\frac{(n_f-n_l)\\delta l}{n_l d}} \\]\n$n_l>n_f$ ならば $x_0'<0$ となり，空気中とは逆の向きにずれる．\n\n\\textbf{(3)}　空気中で上へ $X_1=10.0\\ \\mathrm{mm}$，液体中で下へ $X_2=1.25\\ \\mathrm{mm}$ だから\n\\[ (n_f-1)\\delta=\\frac{dX_1}{l},\\qquad (n_l-n_f)\\delta=\\frac{n_l dX_2}{l} \\]\n2式を足すと $n_f$ が消えて\n\\[ (n_l-1)\\delta=\\frac{d}{l}(X_1+n_lX_2) \\]\n\\[ \\delta=\\frac{0.50\\times10^{-3}\\times(10.0+1.60\\times1.25)\\times10^{-3}}{0.60\\times1.00}=\\boldsymbol{1.0\\times10^{-5}\\ \\mathrm{m}} \\]\n\\[ n_f=1+\\frac{dX_1}{l\\delta}=1+\\frac{0.50\\times10^{-3}\\times10.0\\times10^{-3}}{1.00\\times1.0\\times10^{-5}}=\\boldsymbol{1.50} \\]\n\n\\textbf{(4)}　0次の明線のずれを明線間隔で割ると\n\\[ \\frac{|x_0'|}{\\lambda l/(n_l d)}=\\frac{|n_f-n_l|\\delta}{\\lambda}=\\frac{0.10\\times1.0\\times10^{-5}}{600\\times10^{-9}}=\\frac53\\fallingdotseq\\boldsymbol{1.7\\ \\text{倍}} \\]\n（O から下へ明線間隔の $\\frac53$ 倍．）また $x_0'=0$ となるのは $n_f-n_l=0$，すなわち $\\boldsymbol{n_l=1.50}$ のときで，このとき膜は液体と光学的に区別がつかなくなる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "片方のスリットを覆う膜による光路差の増分は，膜が置き換えた媒質との屈折率差で $(n_f-n_\\text{媒質})\\delta$ となるため，周囲の屈折率を変えると0次の明線のずれの大きさも向きも変わる．単色光では0次が特定できないので白色光で同定し，空気中と液体中の2つのずれを連立すると，膜の屈折率と厚さを分離して求められる．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ヤングの実験",
+  "光路差",
+  "薄膜",
+  "屈折率",
+  "白色光",
+  "0次の明線"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

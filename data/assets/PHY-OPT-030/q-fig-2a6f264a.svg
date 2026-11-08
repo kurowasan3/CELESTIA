@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 270">
+<defs><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker></defs>
+<rect x="70.0" y="80.0" width="440.0" height="30.0" fill="#eef2f8" stroke="#222" stroke-width="1.6"/>
+<path d="M 70,110 L 510,149.4 L 510,179.4 L 70,140 Z" fill="#eef2f8" stroke="#222" stroke-width="1.6"/>
+<text x="220.0" y="100.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">平板ガラス（固定）</text>
+<text x="110.0" y="140.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">平板ガラス（可動）</text>
+<line x1="130.0" y1="22.0" x2="130.0" y2="76.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="230.0" y1="22.0" x2="230.0" y2="76.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="330.0" y1="22.0" x2="330.0" y2="76.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="430.0" y1="22.0" x2="430.0" y2="76.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="445.0" y="30.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">単色光（波長</text>
+<text x="530.0" y="30.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">λ</text>
+<text x="540.0" y="30.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">）</text>
+<path d="M 159.0,68 L 171.0,68 L 165.0,80 Z" fill="#c0392b" stroke="#c0392b" stroke-width="1.2"/>
+<text x="173.0" y="68.0" font-family="Times New Roman, serif" font-size="15" fill="#222" text-anchor="start">P<tspan baseline-shift="sub" font-size="10" font-style="normal">1</tspan></text>
+<line x1="165.0" y1="110.0" x2="165.0" y2="118.5" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<path d="M 349.0,68 L 361.0,68 L 355.0,80 Z" fill="#c0392b" stroke="#c0392b" stroke-width="1.2"/>
+<text x="363.0" y="68.0" font-family="Times New Roman, serif" font-size="15" fill="#222" text-anchor="start">P<tspan baseline-shift="sub" font-size="10" font-style="normal">2</tspan></text>
+<line x1="355.0" y1="110.0" x2="355.0" y2="135.5" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<circle cx="70.0" cy="110.0" r="2.5" fill="#222" stroke="#222" stroke-width="1.6"/>
+<text x="48.0" y="115.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">O</text>
+<line x1="450.0" y1="85.0" x2="450.0" y2="188.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="468.0" y1="96.0" x2="468.0" y2="110.0" stroke="#222" stroke-width="1" marker-end="url(#q-ak)"/>
+<line x1="468.0" y1="158.0" x2="468.0" y2="144.0" stroke="#222" stroke-width="1" marker-end="url(#q-ak)"/>
+<text x="474.0" y="108.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">D</text>
+<line x1="70.0" y1="144.0" x2="70.0" y2="218.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="450.0" y1="188.0" x2="450.0" y2="218.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="70.0" y1="212.0" x2="450.0" y2="212.0" stroke="#222" stroke-width="1" marker-end="url(#q-ak)" marker-start="url(#q-ak)"/>
+<text x="260.0" y="207.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">L</text>
+<line x1="70.0" y1="234.0" x2="540.0" y2="234.0" stroke="#222" stroke-width="1.2" marker-end="url(#q-ak)"/>
+<text x="542.0" y="239.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">x</text>
+<text x="66.0" y="252.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">0</text>
+<line x1="165.0" y1="230.0" x2="165.0" y2="238.0" stroke="#222" stroke-width="1"/>
+<text x="165.0" y="252.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="middle">L/4</text>
+<line x1="355.0" y1="230.0" x2="355.0" y2="238.0" stroke="#222" stroke-width="1"/>
+<text x="355.0" y="252.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="middle">3L/4</text>
+<text x="18.0" y="190.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">（傾きは誇張して描いてある）</text>
+</svg>

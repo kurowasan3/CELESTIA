@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker></defs>
+<circle cx="150" cy="150" r="110" fill="none" stroke="#222" stroke-width="1.6"/>
+<circle cx="150" cy="150" r="3" fill="#222"/>
+<text x="132" y="168" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">O</text>
+<line x1="150" y1="150" x2="205" y2="150" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<circle cx="205" cy="150" r="5" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="209" y="172" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">S</text>
+<text x="172.5" y="168" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">d</text>
+<line x1="150" y1="150" x2="213.1" y2="59.9" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="165.5" y="104.9" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">r</text>
+<path d="M172,150 A22,22 0 0 0 162.6,132.0" fill="none" stroke="#222" stroke-width="1"/>
+<text x="176" y="140" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">θ</text>
+<circle cx="213.1" cy="59.9" r="5" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="221.1" y="53.9" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">P</text>
+<line x1="213.1" y1="59.9" x2="176.2" y2="34.1" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="120" y="300" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">(a) <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">d</tspan> &lt; <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">r</tspan></text>
+<circle cx="420" cy="150" r="85" fill="none" stroke="#222" stroke-width="1.6"/>
+<circle cx="420" cy="150" r="3" fill="#222"/>
+<text x="402" y="168" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">O</text>
+<line x1="420" y1="150" x2="590" y2="150" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<circle cx="590" cy="150" r="5" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="594" y="172" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">S</text>
+<text x="560" y="143" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">d</text>
+<line x1="420" y1="150" x2="468.8" y2="80.4" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="428.4" y="115.2" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">r</text>
+<path d="M442,150 A22,22 0 0 0 432.6,132.0" fill="none" stroke="#222" stroke-width="1"/>
+<text x="446" y="140" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">θ</text>
+<circle cx="468.8" cy="80.4" r="5" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="476.8" y="74.4" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">P</text>
+<line x1="468.8" y1="80.4" x2="431.9" y2="54.6" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="390" y="275" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">(b) <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">d</tspan> &gt; <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">r</tspan></text>
+<text x="20" y="22" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">観測者 P は反時計回りに角速度</text>
+<text x="226" y="22" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">ω</text>
+<text x="246" y="22" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">で回る（S は静止）</text>
+</svg>

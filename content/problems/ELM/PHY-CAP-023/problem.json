@@ -1,0 +1,142 @@
+{
+ "id": "PHY-CAP-023",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "並列コンデンサーを電荷だめにもつばね支持極板の引き込み（電圧一定と電荷一定の中間）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，絶縁体の水平な床の上で，面積 $S$ の金属板Aが，左端を壁に固定したばね定数 $k$ の絶縁体のばねにつながれ，摩擦なく左右に動ける．Aと平行に向かい合って金属板Bが床に固定されており，A，Bは平行板コンデンサーをつくる．ばねが自然長のときのAB間の距離を $d_0$，そのときの電気容量を $C_0$ とする．さらに，電気容量 $\\beta C_0$（$\\beta>0$）の固定されたコンデンサーPを，導線でA，Bと並列につなぐ．\n\nはじめどの極板も帯電していない．A側（AとPの一方の極板）の電気量の和を $Q\\,(>0)$，B側の和を $-Q$ となるように，$Q$ を0からゆっくり増やしていく．Aの運動にはわずかな抵抗がはたらき，Aは各時点でつり合いの位置に落ち着くものとする．AB間の距離を $x$ とし，極板の端の影響は無視する．極板Aの電気量が $q$，AB間の電場の強さが $E$ のとき，Aが受ける静電気力の大きさは $\\dfrac12qE$ である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "AB間の距離が $x$ のとき，Aの電気量 $q$ と，Aが受ける静電気力の大きさ $F$ を，$Q$，$x$，$d_0$，$C_0$，$\\beta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "つり合いの位置からAをわずかにずらしたとき，Aがつり合いの位置へ戻る（安定である）ための条件は，$x>x^*$ の形に書ける．$x^*$ を $d_0$，$\\beta$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\beta>\\dfrac12$ のとき，$Q$ を増やしていくと，ある値 $Q_{\\rm c}$ を超えた瞬間にAはBへ一気に引き込まれる．引き込まれる直前のAB間の距離と，$Q_{\\rm c}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\beta\\le\\dfrac12$ のとき，$Q$ を増やしても一気に引き込まれることはなく，AはBへ連続的に近づく．AB間の距離を0に近づけるのに必要な $Q$ の値を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\beta\\to\\infty$ および $\\beta\\to0$ の極限で $x^*$ はどうなるか．それぞれどのような状況に対応するかを述べ，Pが引き込みに果たす役割を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：並列コンデンサーを電荷だめにもつばね支持極板の引き込み（電圧一定と電荷一定の中間）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：並列コンデンサーを電荷だめにもつばね支持極板の引き込み（電圧一定と電荷一定の中間）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$q=\\dfrac{d_0Q}{d_0+\\beta x}$，$F=\\dfrac{d_0Q^2}{2C_0(d_0+\\beta x)^2}$"
+   },
+   {
+    "id": "2",
+    "tex": "$x^*=\\dfrac{(2\\beta-1)d_0}{3\\beta}$"
+   },
+   {
+    "id": "3",
+    "tex": "距離 $\\dfrac{(2\\beta-1)d_0}{3\\beta}$，$Q_{\\rm c}=\\dfrac23(1+\\beta)^{\\frac32}d_0\\sqrt{\\dfrac{2kC_0}{3\\beta}}$"
+   },
+   {
+    "id": "4",
+    "tex": "$Q=d_0\\sqrt{2kC_0}$"
+   },
+   {
+    "id": "5",
+    "tex": "$\\beta\\to\\infty$ で $x^*\\to\\dfrac23d_0$（電圧一定），$\\beta\\to0$ で $x^*\\to-\\infty$（電荷一定，つねに安定）．Pは近づくAへ電荷を補給する電荷だめで，容量が大きいほど引き込みが起こりやすい"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) Aの電気量と引力}\n\nAB間の電気容量は間隔に反比例するので $C(x)=\\dfrac{d_0}{x}C_0$．AB とPは並列で電圧が共通だから，電気量は容量の比に分かれる：\n\\[ q=Q\\cdot\\frac{C(x)}{C(x)+\\beta C_0}=\\boldsymbol{\\frac{d_0Q}{d_0+\\beta x}} \\]\n$\\varepsilon_0S=C_0d_0$ なので，AB間の電場は $E=\\dfrac{q}{\\varepsilon_0S}=\\dfrac{q}{C_0d_0}$．よって\n\\[ F=\\frac12qE=\\frac{q^2}{2C_0d_0}=\\boldsymbol{\\frac{d_0Q^2}{2C_0(d_0+\\beta x)^2}} \\]\n$x$ が小さくなるとAB間の容量が増え，Pから電荷が流れ込んで $q$ が増える．そのため引力は電荷一定の場合（一定）より強く，電圧一定の場合（$1/x^2$）より弱く $x$ に依存する．\n\n\\textbf{(2) 安定の条件}\n\nAにはたらく，$x$ を増やす向きの力の和は $f(x)=k(d_0-x)-F(x)$ である．つり合いの位置で $f=0$，そこからわずかに $\\delta$ ずらすと $f\\approx f'(x)\\delta$ なので，安定であるためには $f'(x)<0$，すなわち\n\\[ k>-F'(x)=\\frac{\\beta d_0Q^2}{C_0(d_0+\\beta x)^3} \\]\nつり合いの条件 $k(d_0-x)=\\dfrac{d_0Q^2}{2C_0(d_0+\\beta x)^2}$ を用いて $Q^2$ を消去すると，右辺は $\\dfrac{2k\\beta(d_0-x)}{d_0+\\beta x}$ となる．よって\n\\[ d_0+\\beta x>2\\beta(d_0-x)\\quad\\Longleftrightarrow\\quad x>\\boldsymbol{x^*=\\frac{(2\\beta-1)d_0}{3\\beta}} \\]\n\n\\textbf{(3) 一気に引き込まれる条件（$\\beta>\\frac12$）}\n\nつり合いの条件を $Q^2$ について解くと\n\\[ Q^2=g(x)=\\frac{2kC_0}{d_0}(d_0-x)(d_0+\\beta x)^2 \\]\n$g'(x)=\\dfrac{2kC_0}{d_0}(d_0+\\beta x)\\{-(d_0+\\beta x)+2\\beta(d_0-x)\\}$ は $x=x^*$ で0になり，$x^*<x<d_0$ では $g'(x)<0$ である．つまり $x$ を $d_0$ から減らしていくと $Q^2$ は増え，$x=x^*$ で最大になる．$Q$ を増やすとつり合いの位置は安定な範囲 $x>x^*$ を $x^*$ に向かって連続的に移動し，$Q$ がこの最大値を超えるとつり合いの位置がなくなってAは一気に引き込まれる．$\\beta>\\frac12$ なら $x^*>0$ である．\n\n直前の距離は $\\boldsymbol{x^*=\\dfrac{(2\\beta-1)d_0}{3\\beta}}$．このとき $d_0-x^*=\\dfrac{(1+\\beta)d_0}{3\\beta}$，$d_0+\\beta x^*=\\dfrac{2(1+\\beta)d_0}{3}$ なので\n\\[ Q_{\\rm c}^2=\\frac{2kC_0}{d_0}\\cdot\\frac{(1+\\beta)d_0}{3\\beta}\\cdot\\frac{4(1+\\beta)^2d_0^2}{9}\\quad\\Longrightarrow\\quad \\boldsymbol{Q_{\\rm c}=\\frac23(1+\\beta)^{\\frac32}d_0\\sqrt{\\frac{2kC_0}{3\\beta}}} \\]\n\n\\textbf{(4) 連続的に近づく場合（$\\beta\\le\\frac12$）}\n\n$x^*\\le0$ なので，$0<x<d_0$ のすべてのつり合いが安定で，$g(x)$ は $x$ の減少とともに単調に増える．したがって $Q$ を増やすとAは連続的に近づき，$x\\to0$ に必要な値は\n\\[ Q^2=g(0)=2kC_0d_0^2\\quad\\Longrightarrow\\quad \\boldsymbol{Q=d_0\\sqrt{2kC_0}} \\]\n（$\\beta$ によらない．$x\\to0$ ではAB間の容量が非常に大きくなり，ほぼすべての電荷がAに集まるからである．）\n\n\\textbf{(5) 極限と P の役割}\n\n$\\beta\\to\\infty$ では $x^*\\to\\boldsymbol{\\dfrac23d_0}$．Pの容量が非常に大きいとAB間の電圧はほとんど変わらず，電池につないだ電圧一定の場合と同じになる．$\\beta\\to0$ では $x^*\\to\\boldsymbol{-\\infty}$ で，すべてのつり合いが安定である．これはAの電気量が一定の場合で，引力が $x$ によらず一定になり，ばねの力と競り合って不安定になることがない．\n\nPは「電荷だめ」としてはたらく．Aが近づくとAB間の容量が増え，Pから電荷がAへ流れ込んで引力がさらに強まる（正のフィードバック）．Pの容量が小さいと補給できる電荷が限られ，このフィードバックがばねに勝てない．引き込みが起こるかどうかの境目が $\\beta=\\frac12$，すなわちPの容量が自然長のときのAB間の容量の半分のところにある．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "並列のコンデンサーは極板に電荷を補給する電荷だめで，引力が電圧一定と電荷一定の中間の形 $\\propto(d_0+\\beta x)^{-2}$ になる．つり合いの安定条件からQを消去すると不安定の境目 $x^*=\\frac{(2\\beta-1)d_0}{3\\beta}$ が得られ，電荷だめの容量が自然長のときの容量の半分以下だと引き込み自体が起こらない．"
+ },
+ "concepts": [
+  "capacitor",
+  "equilibrium"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "極板間引力",
+  "ばね",
+  "安定性",
+  "電気量保存",
+  "並列コンデンサー"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

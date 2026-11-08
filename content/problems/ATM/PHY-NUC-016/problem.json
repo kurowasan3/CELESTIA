@@ -1,0 +1,130 @@
+{
+ "id": "PHY-NUC-016",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "衝突径数をもつα粒子の最接近距離と，原子核に触れる断面積のエネルギー依存性",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，質量 $m$，電気量 $2e$ の $\\alpha$ 粒子が，十分遠方から運動エネルギー $K$ で，電気量 $Ze$ の原子核に向かって進む．$\\alpha$ 粒子のはじめの進路と原子核との距離（衝突径数）を $b$ とする．原子核は動かないとし，$\\alpha$ 粒子にはクーロン力だけがはたらくとする．クーロンの法則の比例定数を $k_0$ とし，静電気力による位置エネルギーの基準を無限遠とする．また，正面衝突（$b=0$）のときの最接近距離を $d$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$d$ を $k_0,\\ Z,\\ e,\\ K$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "衝突径数が $b$ のときの最接近距離 $r_{\\min}$ を $b,\\ d$ で表せ．また，最接近点での速さは遠方での速さ $v_0$ の何倍か．"
+     },
+     {
+      "id": "3",
+      "tex": "$r_{\\min}=2d$ となる衝突径数 $b$ を $d$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "原子核を半径 $R_{\\mathrm N}$ の球とし，$\\alpha$ 粒子の中心が原子核の中心から $R_{\\mathrm N}$ 以内に近づくと核力がはたらいて核反応が起こりうるとする（それまではクーロン力だけを考える）．$\\alpha$ 粒子が原子核に「触れる」ことがありうるための $K$ の条件を求めよ．また，そのとき触れることになる衝突径数の最大値 $b_{\\max}$ を求め，入射方向に垂直な面で見て $\\alpha$ 粒子が原子核に触れる部分の面積（断面積）$\\sigma=\\pi b_{\\max}^{\\,2}$ を，$R_{\\mathrm N}$，$K$ および $U_{\\mathrm N}=\\dfrac{2k_0Ze^2}{R_{\\mathrm N}}$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "金の原子核（$Z=79$，$R_{\\mathrm N}=7.0\\times10^{-15}\\ \\mathrm m$）について，$k_0=9.0\\times10^{9}\\ \\mathrm{N\\cdot m^2/C^2}$，$e=1.6\\times10^{-19}\\ \\mathrm C$ として次の値を有効数字 2 桁で求めよ．\n  (i) $K=5.0\\ \\mathrm{MeV}$ のときの $d$．(ii) 原子核に触れることがありうる $K$ の最小値（MeV 単位）．(iii) $\\sigma$ が原子核の断面 $\\pi R_{\\mathrm N}^{\\,2}$ の半分になる $K$（MeV 単位）．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：衝突径数をもつα粒子の最接近距離と，原子核に触れる断面積のエネルギー依存性",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$d=\\dfrac{2k_0Ze^2}{K}$"
+   },
+   {
+    "id": "2",
+    "tex": "$r_{\\min}=\\dfrac{d+\\sqrt{d^2+4b^2}}{2}$，速さは $\\dfrac{b}{r_{\\min}}=\\dfrac{2b}{d+\\sqrt{d^2+4b^2}}$ 倍"
+   },
+   {
+    "id": "3",
+    "tex": "$b=\\sqrt2\\,d$"
+   },
+   {
+    "id": "4",
+    "tex": "$K>U_{\\mathrm N}$（$d<R_{\\mathrm N}$），$b_{\\max}=R_{\\mathrm N}\\sqrt{1-\\dfrac{d}{R_{\\mathrm N}}}$，$\\sigma=\\pi R_{\\mathrm N}^{\\,2}\\left(1-\\dfrac{U_{\\mathrm N}}{K}\\right)$"
+   },
+   {
+    "id": "5",
+    "tex": "(i) $4.6\\times10^{-14}\\ \\mathrm m$　(ii) $33\\ \\mathrm{MeV}$　(iii) $65\\ \\mathrm{MeV}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{考え方}　クーロン力は原子核の方向を向く中心力なので，原子核のまわりの角運動量が保存される．最接近点では速度が動径に垂直なので，角運動量は「速さ $\\times$ 距離」だけで書ける．これと力学的エネルギー保存を連立する．\n\n\\textbf{(1)}　正面衝突では最接近点で速さ $0$．エネルギー保存 $K=\\dfrac{k_0(2e)(Ze)}{d}$ より $d=\\boldsymbol{\\dfrac{2k_0Ze^2}{K}}$．\n\n\\textbf{(2)}　最接近点での速さを $v$ とする．遠方では速度と原子核への垂線の距離が $b$ なので，角運動量保存より $mv_0b=mvr_{\\min}$，すなわち $v=\\dfrac{b}{r_{\\min}}v_0$．エネルギー保存は\n\\[ K=\\frac12mv^2+\\frac{2k_0Ze^2}{r_{\\min}}=K\\frac{b^2}{r_{\\min}^{\\,2}}+K\\frac{d}{r_{\\min}} \\]\n両辺を $K$ で割って $r_{\\min}^{\\,2}$ を掛けると $r_{\\min}^{\\,2}-dr_{\\min}-b^2=0$．正の解をとって\n\\[ r_{\\min}=\\boldsymbol{\\frac{d+\\sqrt{d^2+4b^2}}{2}} \\]\n最接近点での速さは $v_0$ の $\\boldsymbol{\\dfrac{b}{r_{\\min}}=\\dfrac{2b}{d+\\sqrt{d^2+4b^2}}}$ 倍．$b=0$ で $r_{\\min}=d$，$b\\gg d$ で $r_{\\min}\\to b$ となり，いずれも妥当．\n\n\\textbf{(3)}　$r_{\\min}=2d$ を $r_{\\min}^{\\,2}-dr_{\\min}-b^2=0$ に代入して $4d^2-2d^2=b^2$，よって $b=\\boldsymbol{\\sqrt2\\,d}$．\n\n\\textbf{(4)}　触れる条件は $r_{\\min}\\le R_{\\mathrm N}$．$r_{\\min}$ は $b$ について増加し，最小値は $b=0$ の $d$ なので，触れることがありうるのは $d<R_{\\mathrm N}$，すなわち\n\\[ \\boldsymbol{K>\\frac{2k_0Ze^2}{R_{\\mathrm N}}=U_{\\mathrm N}} \\]\n（$K$ がクーロン障壁の高さを超える）．このとき $r_{\\min}=R_{\\mathrm N}$ となる $b$ が $b_{\\max}$ で，$R_{\\mathrm N}^{\\,2}-dR_{\\mathrm N}-b_{\\max}^{\\,2}=0$ より\n\\[ b_{\\max}=\\boldsymbol{R_{\\mathrm N}\\sqrt{1-\\frac{d}{R_{\\mathrm N}}}},\\qquad \\sigma=\\pi b_{\\max}^{\\,2}=\\boldsymbol{\\pi R_{\\mathrm N}^{\\,2}\\left(1-\\frac{U_{\\mathrm N}}{K}\\right)} \\]\n（$\\dfrac{d}{R_{\\mathrm N}}=\\dfrac{U_{\\mathrm N}}{K}$ を用いた）．$K$ が大きいほどクーロン力による「はね返し」が効かなくなり，$\\sigma$ は幾何学的な断面 $\\pi R_{\\mathrm N}^{\\,2}$ に近づく．エネルギーが障壁を超えていても，$b$ が大きいと角運動量に伴う運動エネルギーが残るので触れられない点が，正面衝突だけを考える場合との違いである．\n\n\\textbf{(5)}　(i) $K=5.0\\times10^6\\times1.6\\times10^{-19}\\ \\mathrm J$ なので\n\\[ d=\\frac{2\\times9.0\\times10^9\\times79\\times(1.6\\times10^{-19})^2}{5.0\\times10^6\\times1.6\\times10^{-19}}\\fallingdotseq\\boldsymbol{4.6\\times10^{-14}\\ \\mathrm m} \\]\n$R_{\\mathrm N}$ の約 $6.5$ 倍で，5 MeV の $\\alpha$ 粒子は金の原子核に触れない．\n\n(ii) $U_{\\mathrm N}=\\dfrac{2\\times9.0\\times10^9\\times79\\times(1.6\\times10^{-19})^2}{7.0\\times10^{-15}}\\ \\mathrm J$，eV 単位では $\\dfrac{2\\times9.0\\times10^9\\times79\\times1.6\\times10^{-19}}{7.0\\times10^{-15}}\\fallingdotseq3.25\\times10^7\\ \\mathrm{eV}$，よって $\\boldsymbol{33\\ \\mathrm{MeV}}$．\n\n(iii) $1-\\dfrac{U_{\\mathrm N}}{K}=\\dfrac12$ より $K=2U_{\\mathrm N}\\fallingdotseq\\boldsymbol{65\\ \\mathrm{MeV}}$．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "中心力であるクーロン力のもとでは原子核のまわりの角運動量が保存し，最接近点では速度が動径に垂直なので，エネルギー保存と合わせて $r_{\\min}^2-dr_{\\min}-b^2=0$ が得られる．これを逆に使うと，原子核に触れる衝突径数の上限から断面積 $\\pi R^2(1-U_{\\mathrm N}/K)$ が求まり，障壁を超えても大きな $b$ では触れないことがわかる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "restitution",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ラザフォード散乱",
+  "角運動量保存",
+  "最接近距離",
+  "クーロン障壁",
+  "断面積"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

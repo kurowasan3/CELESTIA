@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240">
+  <defs>
+    <marker id="q-ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/></marker>
+    <marker id="q-ak" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#222"/></marker>
+    <marker id="q-aks" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M8,0 L0,4 L8,8 z" fill="#222"/></marker>
+  </defs>
+  <rect x="150" y="70" width="410" height="100" fill="none" stroke="#222" stroke-width="1.6"/>
+  <line x1="150" y1="90" x2="560" y2="90" stroke="#222" stroke-width="1.6"/>
+  <line x1="150" y1="150" x2="560" y2="150" stroke="#222" stroke-width="1.6"/>
+  <line x1="40" y1="120" x2="560" y2="120" stroke="#888" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="61.0" y1="55.3" x2="150" y2="120" stroke="#1f5fbf" stroke-width="1.8"/>
+  <polyline points="150.0,120.0 224.3,150.0 372.8,90.0 521.3,150.0 560.0,134.3" fill="none" stroke="#1f5fbf" stroke-width="1.8"/>
+  <line x1="150.0" y1="120.0" x2="187.1" y2="135.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+  <line x1="61.0" y1="55.3" x2="105.5" y2="87.7" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+  <path d="M 120 120 A 30 30 0 0 1 125.7 102.4" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="98" y="114" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">α</text>
+  <path d="M 212 120 A 62 62 0 0 1 207.5 143.2" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="216" y="136" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">β</text>
+  <text x="570" y="84" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">n<tspan baseline-shift="sub" font-size="10" font-style="normal">2</tspan></text>
+  <text x="570" y="124" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">n<tspan baseline-shift="sub" font-size="10" font-style="normal">1</tspan></text>
+  <text x="570" y="164" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">n<tspan baseline-shift="sub" font-size="10" font-style="normal">2</tspan></text>
+  <text x="20" y="40" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">入射側の媒質（屈折率 </text>
+  <text x="160" y="40" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">n<tspan baseline-shift="sub" font-size="10" font-style="normal">0</tspan></text>
+  <text x="176" y="40" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">）</text>
+  <text x="330" y="85" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222">クラッド</text>
+  <text x="158" y="106" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">コア</text>
+  <line x1="150" y1="190" x2="560" y2="190" stroke="#222" stroke-width="1" marker-start="url(#q-aks)" marker-end="url(#q-ak)"/>
+  <line x1="150" y1="172" x2="150" y2="196" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="560" y1="172" x2="560" y2="196" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="352" y="210" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">l</text>
+  <text x="130" y="232" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">入射端面（軸に垂直）</text>
+  <text x="510" y="232" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">出射端</text>
+</svg>

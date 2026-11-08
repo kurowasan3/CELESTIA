@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+<defs><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1f5fbf"/></marker><marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#c0392b"/></marker></defs>
+<circle cx="150" cy="140" r="85" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,4"/>
+<path d="M150.0,225.0 A85,85 0 0,0 215.1,85.4" fill="none" stroke="#1f5fbf" stroke-width="2.2"/>
+<line x1="150.0" y1="225.0" x2="215.1" y2="85.4" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<line x1="150" y1="140" x2="150.0" y2="225.0" stroke="#888" stroke-width="1"/>
+<line x1="150" y1="140" x2="215.1" y2="85.4" stroke="#888" stroke-width="1"/>
+<path d="M150,162 A22,22 0 0,0 166.9,125.9" fill="none" stroke="#222" stroke-width="1"/>
+<text x="170" y="148" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">2π<tspan font-family="Times New Roman, serif" font-style="italic">w</tspan>/<tspan font-family="Times New Roman, serif" font-style="italic">w</tspan><tspan font-family="Times New Roman, serif" baseline-shift="sub" font-size="10">0</tspan></text>
+<text x="122.6" y="185.2" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#c0392b">A</text>
+<text x="133.6" y="185.2" font-family="Times New Roman, serif" font-size="16" fill="#c0392b">(<tspan font-style="italic">w</tspan>)</text>
+<text x="150" y="285" text-anchor="middle" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">開口部 0≦<tspan font-family="Times New Roman, serif" font-style="italic">x</tspan>≦<tspan font-family="Times New Roman, serif" font-style="italic">w</tspan>：弧の弦</text>
+<text x="144.0" y="241.0" text-anchor="end" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">x<tspan font-style="normal">=0</tspan></text>
+<text x="57" y="65" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" >直径 <tspan font-family="Times New Roman, serif" font-style="italic">A</tspan><tspan font-family="Times New Roman, serif" baseline-shift="sub" font-size="10">1</tspan></text>
+<circle cx="440" cy="190" r="52" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,4"/>
+<path d="M440,242 A52,52 0 0,0 440,138" fill="none" stroke="#1f5fbf" stroke-width="2.2"/>
+<line x1="440" y1="242" x2="440" y2="140" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<line x1="440" y1="138" x2="440" y2="36" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)" stroke-dasharray="6,3"/>
+<text x="432" y="196" text-anchor="end" font-family="Times New Roman, serif" font-size="14" fill="#c0392b">[0, <tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="10">0</tspan>/2]</text>
+<text x="432" y="92" text-anchor="end" font-family="Times New Roman, serif" font-size="14" fill="#c0392b">[<tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="10">0</tspan>, 3<tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="10">0</tspan>/2]</text>
+<text x="450" y="92" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">同じ向き</text>
+<text x="440" y="285" text-anchor="middle" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">中央の幅 <tspan font-family="Times New Roman, serif" font-style="italic">w</tspan><tspan font-family="Times New Roman, serif" baseline-shift="sub" font-size="10">0</tspan>/2 をふさいだ場合：合計 2<tspan font-family="Times New Roman, serif" font-style="italic">A</tspan><tspan font-family="Times New Roman, serif" baseline-shift="sub" font-size="10">1</tspan></text>
+</svg>

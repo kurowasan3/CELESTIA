@@ -1,0 +1,134 @@
+{
+ "id": "PHY-OPT-028",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "向かい合わせた2枚の凹面鏡による像（穴の位置に像が浮かぶ配置と倍率・正立の条件）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，焦点距離 $f$ の同じ凹面鏡 $\\mathrm M_1$，$\\mathrm M_2$ を，光軸（鉛直）を一致させて鏡面を向かい合わせ，頂点（鏡の中心）の間の距離を $D$ とする．上の鏡 $\\mathrm M_2$ の頂点には小さな穴があいている．下の鏡 $\\mathrm M_1$ の頂点に，光軸に垂直な小さな物体（光軸からの高さ $h_0$ の点を含む）を置く．物体から出て，まず $\\mathrm M_2$ で反射し，次に $\\mathrm M_1$ で反射した光がつくる像を考える（それ以外の反射は考えない）．光軸に近い光線だけを考え，穴が $\\mathrm M_2$ での反射におよぼす影響は無視する．凹面鏡の写像公式 $\\frac1a+\\frac1b=\\frac1f$（物体・像が鏡の前方にあるとき正）と倍率 $-\\frac ba$ は，像が鏡の後方にできる場合（$b<0$）や，鏡に入射する光がその鏡の後方の点に向かって集まっていく場合（物体距離 $a<0$）にもそのまま使えるものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$D\\ne f$ のとき，$\\mathrm M_2$ による像の $\\mathrm M_2$ からの距離 $b_1$（$\\mathrm M_1$ の側を正）と倍率を，$D,\\ f$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\mathrm M_1$ による最終的な像の $\\mathrm M_1$ からの距離 $b_2$（$\\mathrm M_2$ の側を正）を，$D,\\ f$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "最終的な像がちょうど $\\mathrm M_2$ の穴の位置にできて，穴の上にのぞくように見えるための $D$ をすべて求めよ．それぞれの場合について，物体に対する像の倍率を求め，正立か倒立かを答えよ（$D=f$ となる場合は極限で考えてよい）．"
+     },
+     {
+      "id": "4",
+      "tex": "$D$ を変えたとき，最終的な像が物体に対して正立になる $D$ の範囲を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：向かい合わせた2枚の凹面鏡による像（穴の位置に像が浮かぶ配置と倍率・正立の条件）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：向かい合わせた2枚の凹面鏡による像（穴の位置に像が浮かぶ配置と倍率・正立の条件）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$b_1=\\dfrac{fD}{D-f}$，倍率 $-\\dfrac{f}{D-f}$"
+   },
+   {
+    "id": "2",
+    "tex": "$b_2=\\dfrac{fD(D-2f)}{D^2-3fD+f^2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$D=f$：倍率 $-1$（倒立，同じ大きさ），$D=3f$：倍率 $+1$（正立，同じ大きさ）"
+   },
+   {
+    "id": "4",
+    "tex": "$0<D<\\dfrac{3-\\sqrt5}{2}f$ または $D>\\dfrac{3+\\sqrt5}{2}f$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　鏡での反射を「光の進む向きが折り返されるレンズ」とみなし，$\\mathrm M_2$ による像を $\\mathrm M_1$ に対する物体として2段階で結像を追う．\n\n\\textbf{(1)}　物体は $\\mathrm M_2$ から距離 $a_1=D$ の前方にある．$\\frac1D+\\frac1{b_1}=\\frac1f$ より\n\\[ b_1=\\boldsymbol{\\frac{fD}{D-f}},\\qquad \\text{倍率}\\ m_1=-\\frac{b_1}{D}=\\boldsymbol{-\\frac{f}{D-f}}. \\]\n\n\\textbf{(2)}　$\\mathrm M_2$ で反射した光は $\\mathrm M_1$ に向かう．$\\mathrm M_1$ から見た物体距離は\n\\[ a_2=D-b_1=D-\\frac{fD}{D-f}=\\frac{D(D-2f)}{D-f} \\]\nである．$b_1>D$（$f<D<2f$）なら光は $\\mathrm M_1$ の後方の点に集まろうとしながら $\\mathrm M_1$ に当たるので $a_2<0$ の虚物体，$D<f$ なら $b_1<0$ で $\\mathrm M_2$ の後方の虚像が物体になるが，いずれも同じ式で扱える．$\\frac1{a_2}+\\frac1{b_2}=\\frac1f$ より\n\\[ b_2=\\frac{fa_2}{a_2-f}=\\frac{fD(D-2f)}{D(D-2f)-f(D-f)}=\\boldsymbol{\\frac{fD(D-2f)}{D^2-3fD+f^2}}. \\]\n\n\\textbf{(3) 像が穴の位置にくる条件}　$b_2=D$ とおくと $f(D-2f)=D^2-3fD+f^2$，すなわち\n\\[ D^2-4fD+3f^2=0,\\qquad (D-f)(D-3f)=0. \\]\n$D=f$ では (1) の $b_1$ が発散するので極限で確かめる：$D\\to f$ で $b_2\\to\\frac{f\\cdot f\\cdot(-f)}{f^2-3f^2+f^2}=f=D$ となり，確かに穴の位置に像ができる．よって $\\boldsymbol{D=f,\\ 3f}$．\n\n全体の倍率は\n\\[ m=m_1m_2=\\left(-\\frac{b_1}{D}\\right)\\left(-\\frac{b_2}{a_2}\\right)=\\frac{f^2}{D^2-3fD+f^2}. \\]\n【$D=3f$ の場合】$m=\\frac{f^2}{9f^2-9f^2+f^2}=\\boldsymbol{+1}$，\\textbf{正立で同じ大きさ}．途中の像は $b_1=\\frac32f$（鏡の間のちょうど中央）にできる倒立・半分の大きさの実像で，それを $\\mathrm M_1$ が2倍に拡大して再び倒立させる．\n\n【$D=f$ の場合】$m=\\frac{f^2}{f^2-3f^2+f^2}=\\boldsymbol{-1}$，\\textbf{倒立で同じ大きさ}．物体は $\\mathrm M_2$ の焦点にあるので，物体の各点から出た光は $\\mathrm M_2$ で反射後に平行光となり，$\\mathrm M_1$ はその平行光を自分の焦点（＝ $\\mathrm M_2$ の頂点）に集める．高さ $h_0$ の点から出た光は，光軸と $-\\frac{h_0}{f}$ の傾きをもつ平行光になり，$\\mathrm M_1$ の焦点面上の高さ $f\\cdot\\left(-\\frac{h_0}{f}\\right)=-h_0$ に集まるので，倍率 $-1$ と一致する．\n（光軸に垂直な平面内での倍率 $-1$ は，像が光軸のまわりに $180^\\circ$ 回転していることを表す．）\n\n\\textbf{(4) 正立の条件}　$m>0\\iff D^2-3fD+f^2>0$．$D^2-3fD+f^2=0$ の解は $D=\\frac{3\\pm\\sqrt5}{2}f$ なので\n\\[ \\boldsymbol{0<D<\\frac{3-\\sqrt5}{2}f\\ \\ \\text{または}\\ \\ D>\\frac{3+\\sqrt5}{2}f}. \\]\n$D=3f$ はたしかに後者に含まれる．また $D=\\frac{3\\pm\\sqrt5}{2}f$ では $|m|\\to\\infty$ で，最終的な像は無限遠に移る（$b_2$ の分母も $0$）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "向かい合わせた凹面鏡による像は，1枚目の像を2枚目の物体（後方に集まろうとする光なら虚物体）として2段階で追える．全体の倍率は $f^2/(D^2-3fD+f^2)$ となり，像が穴の位置にくるのは焦点の配置 $D=f$（平行光を介して倒立等倍）と $D=3f$（中央の実像を介して正立等倍）の2通りで，$D=f$ は1段目の像が無限遠に行く極限として扱う必要がある．"
+ },
+ "concepts": [
+  "light-interference",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "凹面鏡",
+  "写像公式",
+  "虚物体",
+  "倍率",
+  "2段階の結像"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 275" width="580" height="275">
+<defs>
+<marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker>
+</defs>
+<line x1="40.0" y1="40.0" x2="180.0" y2="40.0" stroke="#222" stroke-width="1.6"/>
+<text x="110" y="30" font-family="Times New Roman, serif" font-size="15" text-anchor="middle" fill="#222"><tspan baseline-shift="super" font-size="10">228</tspan>Th</text>
+<line x1="300.0" y1="230.0" x2="470.0" y2="230.0" stroke="#222" stroke-width="1.6"/>
+<text x="478" y="235" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">0</text>
+<line x1="300.0" y1="195.0" x2="470.0" y2="195.0" stroke="#222" stroke-width="1.6"/>
+<text x="478" y="200" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">84.5 keV</text>
+<line x1="300.0" y1="125.0" x2="470.0" y2="125.0" stroke="#222" stroke-width="1.6"/>
+<text x="478" y="130" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">250 keV</text>
+<text x="385" y="260" font-family="Times New Roman, serif" font-size="15" text-anchor="middle" fill="#222"><tspan baseline-shift="super" font-size="10">224</tspan>Ra</text>
+<line x1="170.0" y1="40.0" x2="300.0" y2="228.0" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="170.0" y1="40.0" x2="300.0" y2="193.0" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="170.0" y1="40.0" x2="300.0" y2="123.0" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<text x="262" y="92" font-size="13" text-anchor="start" fill="#222"><tspan font-family="Times New Roman, serif">α : </tspan><tspan font-family="Times New Roman, serif" font-style="italic">K</tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="sub" font-size="10">2</tspan></tspan></text><text x="262" y="165" font-size="13" text-anchor="end" fill="#222"><tspan font-family="Times New Roman, serif">α : </tspan><tspan font-family="Times New Roman, serif" font-style="italic">K</tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="sub" font-size="10">1</tspan></tspan></text><text x="272" y="218" font-size="13" text-anchor="end" fill="#222"><tspan font-family="Times New Roman, serif">α : </tspan><tspan font-family="Times New Roman, serif" font-style="italic">K</tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="sub" font-size="10">0</tspan></tspan></text>
+<line x1="330.0" y1="195.0" x2="330.0" y2="228.0" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<line x1="400.0" y1="125.0" x2="400.0" y2="228.0" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<line x1="440.0" y1="125.0" x2="440.0" y2="193.0" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<text x="338" y="215" font-family="Noto Sans CJK JP, sans-serif" font-size="11" text-anchor="start" fill="#222">γ 84.5</text>
+<text x="392" y="170" font-family="Times New Roman, serif" font-size="14" text-anchor="end" fill="#222">γ</text><text x="392" y="186" font-family="Noto Sans CJK JP, sans-serif" font-size="11" text-anchor="end" fill="#222">250</text>
+<text x="448" y="165" font-family="Times New Roman, serif" font-size="14" text-anchor="start" fill="#222">γ</text><text x="448" y="181" font-family="Noto Sans CJK JP, sans-serif" font-size="11" text-anchor="start" fill="#222">166</text>
+</svg>

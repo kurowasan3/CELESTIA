@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 330"><defs><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="q-rr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker></defs>
+<g font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">
+<line x1="300" y1="20" x2="300" y2="310" stroke="#222" stroke-width="2.4"/>
+<line x1="60" y1="250" x2="560" y2="250" stroke="#888" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="548" y="244" font-family="Times New Roman, serif" font-style="italic" font-size="16">x</text>
+<text x="306" y="30" font-family="Times New Roman, serif" font-style="italic" font-size="16">y</text>
+<text x="286" y="268">O</text>
+<text x="308" y="300">壁 M</text>
+<text x="420" y="40">広場 P（音速 <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16">c</tspan>）</text>
+<text x="70" y="40">部屋 R（音速 <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16">c</tspan><tspan font-size="10" baseline-shift="sub">R</tspan>）</text>
+<line x1="300" y1="134.52994616207485" x2="500" y2="250" stroke="#1f5fbf" stroke-width="1.6"/>
+<line x1="300" y1="134.52994616207485" x2="200.0" y2="74.5" stroke="#1f5fbf" stroke-width="1.6"/>
+<line x1="400.0" y1="192.3" x2="390.0" y2="186.5" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#q-ar)"/>
+<line x1="250.0" y1="104.5" x2="242.0" y2="99.7" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#q-ar)"/>
+<line x1="210" y1="134.52994616207485" x2="390" y2="134.52994616207485" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M345,134.52994616207485 A45,45 0 0 1 339.0,157.0" fill="none" stroke="#222" stroke-width="1"/>
+<text x="350" y="152.52994616207485" font-family="Times New Roman, serif" font-style="italic" font-size="16">θ</text>
+<path d="M255,134.52994616207485 A45,45 0 0 1 261.4,111.4" fill="none" stroke="#222" stroke-width="1"/>
+<text x="238" y="126.52994616207485" font-family="Times New Roman, serif" font-style="italic" font-size="16">φ</text>
+<circle cx="300" cy="134.5" r="2.5" fill="#222"/>
+<text x="306" y="128.5">(0, <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16">b</tspan>)</text>
+<circle cx="500" cy="250" r="8" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="494" y="276">S</text>
+<text x="512" y="276" font-size="12">（振動数 <tspan font-family="Times New Roman, serif" font-style="italic" font-size="14">f</tspan>）</text>
+<line x1="300" y1="278" x2="500" y2="278" stroke="#222" stroke-width="1" marker-start="url(#q-ag)" marker-end="url(#q-ag)"/>
+<text x="395.0" y="294" font-family="Times New Roman, serif" font-style="italic" font-size="16">L</text>
+<line x1="200.0" y1="20" x2="200.0" y2="310" stroke="#888" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="150.0" y="300" font-size="13"><tspan font-family="Times New Roman, serif" font-style="italic" font-size="15">x</tspan> = −<tspan font-family="Times New Roman, serif" font-style="italic" font-size="15">D</tspan></text>
+<circle cx="200.0" cy="74.5" r="8" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="172.0" y="79.5">Q</text>
+<line x1="186.0" y1="88.5" x2="186.0" y2="134.5" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-rr)"/>
+<text x="164.0" y="122.5" font-family="Times New Roman, serif" font-style="italic" font-size="16">W</text>
+<line x1="200.0" y1="278" x2="300" y2="278" stroke="#222" stroke-width="1" marker-start="url(#q-ag)" marker-end="url(#q-ag)"/>
+<text x="245.0" y="294" font-family="Times New Roman, serif" font-style="italic" font-size="16">D</text>
+</g></svg>

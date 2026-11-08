@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 290">
+  <defs>
+    <marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+  </defs>
+  <!-- ground -->
+  <line x1="20" y1="262" x2="580" y2="262" stroke="#222" stroke-width="1.6"/>
+  <line x1="30" y1="262" x2="20" y2="274" stroke="#222" stroke-width="1"/><line x1="44" y1="262" x2="34" y2="274" stroke="#222" stroke-width="1"/><line x1="58" y1="262" x2="48" y2="274" stroke="#222" stroke-width="1"/><line x1="72" y1="262" x2="62" y2="274" stroke="#222" stroke-width="1"/><line x1="86" y1="262" x2="76" y2="274" stroke="#222" stroke-width="1"/><line x1="100" y1="262" x2="90" y2="274" stroke="#222" stroke-width="1"/><line x1="114" y1="262" x2="104" y2="274" stroke="#222" stroke-width="1"/><line x1="128" y1="262" x2="118" y2="274" stroke="#222" stroke-width="1"/><line x1="142" y1="262" x2="132" y2="274" stroke="#222" stroke-width="1"/><line x1="156" y1="262" x2="146" y2="274" stroke="#222" stroke-width="1"/><line x1="170" y1="262" x2="160" y2="274" stroke="#222" stroke-width="1"/><line x1="184" y1="262" x2="174" y2="274" stroke="#222" stroke-width="1"/><line x1="198" y1="262" x2="188" y2="274" stroke="#222" stroke-width="1"/><line x1="212" y1="262" x2="202" y2="274" stroke="#222" stroke-width="1"/><line x1="226" y1="262" x2="216" y2="274" stroke="#222" stroke-width="1"/><line x1="240" y1="262" x2="230" y2="274" stroke="#222" stroke-width="1"/><line x1="254" y1="262" x2="244" y2="274" stroke="#222" stroke-width="1"/><line x1="268" y1="262" x2="258" y2="274" stroke="#222" stroke-width="1"/><line x1="282" y1="262" x2="272" y2="274" stroke="#222" stroke-width="1"/><line x1="296" y1="262" x2="286" y2="274" stroke="#222" stroke-width="1"/><line x1="310" y1="262" x2="300" y2="274" stroke="#222" stroke-width="1"/><line x1="324" y1="262" x2="314" y2="274" stroke="#222" stroke-width="1"/><line x1="338" y1="262" x2="328" y2="274" stroke="#222" stroke-width="1"/><line x1="352" y1="262" x2="342" y2="274" stroke="#222" stroke-width="1"/><line x1="366" y1="262" x2="356" y2="274" stroke="#222" stroke-width="1"/><line x1="380" y1="262" x2="370" y2="274" stroke="#222" stroke-width="1"/><line x1="394" y1="262" x2="384" y2="274" stroke="#222" stroke-width="1"/><line x1="408" y1="262" x2="398" y2="274" stroke="#222" stroke-width="1"/><line x1="422" y1="262" x2="412" y2="274" stroke="#222" stroke-width="1"/><line x1="436" y1="262" x2="426" y2="274" stroke="#222" stroke-width="1"/><line x1="450" y1="262" x2="440" y2="274" stroke="#222" stroke-width="1"/><line x1="464" y1="262" x2="454" y2="274" stroke="#222" stroke-width="1"/><line x1="478" y1="262" x2="468" y2="274" stroke="#222" stroke-width="1"/><line x1="492" y1="262" x2="482" y2="274" stroke="#222" stroke-width="1"/><line x1="506" y1="262" x2="496" y2="274" stroke="#222" stroke-width="1"/><line x1="520" y1="262" x2="510" y2="274" stroke="#222" stroke-width="1"/><line x1="534" y1="262" x2="524" y2="274" stroke="#222" stroke-width="1"/><line x1="548" y1="262" x2="538" y2="274" stroke="#222" stroke-width="1"/><line x1="562" y1="262" x2="552" y2="274" stroke="#222" stroke-width="1"/><line x1="576" y1="262" x2="566" y2="274" stroke="#222" stroke-width="1"/>
+  <!-- bed -->
+  <path d="M90,192.9 L380,192.9 L380,217.9 L90,217.9 Z" fill="none" stroke="#222" stroke-width="1.6"/>
+  <line x1="90" y1="192.9" x2="90" y2="167.9" stroke="#222" stroke-width="1.6"/>
+  <!-- cab -->
+  <path d="M380,217.9 L380,40 L500,40 L545,110 L545,217.9 Z" fill="none" stroke="#222" stroke-width="1.6"/>
+  <path d="M405,55 L490,55 L525,105 L405,105 Z" fill="none" stroke="#222" stroke-width="1.2"/>
+  <circle cx="150" cy="234.9" r="20" fill="none" stroke="#222" stroke-width="1.6"/>
+  <circle cx="480" cy="234.9" r="20" fill="none" stroke="#222" stroke-width="1.6"/>
+  <!-- rod -->
+  <line x1="294.0" y1="192.9" x2="380" y2="70" stroke="#222" stroke-width="4"/>
+  <line x1="379" y1="70" x2="379" y2="130" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <path d="M379,102.0 A32,32 0 0 1 361.6,96.2" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="356" y="122" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">θ</text>
+  <text x="360" y="66" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">B</text>
+  <text x="288.0" y="184.9" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">A</text>
+  <text x="267.0" y="127.4" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">棒（<tspan font-family="Times New Roman, serif" font-style="italic">M</tspan>，<tspan font-family="Times New Roman, serif" font-style="italic">L</tspan>）</text>
+  <text x="100" y="160.9" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">荷台（あらい）</text>
+  <text x="322" y="34" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">なめらかな壁</text>
+  <!-- axis -->
+  <line x1="40" y1="40" x2="100" y2="40" stroke="#222" stroke-width="1.2" marker-end="url(#q-ak)"/>
+  <text x="106" y="45" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">前（<tspan font-family="Times New Roman, serif" font-style="italic">x</tspan>）</text>
+</svg>

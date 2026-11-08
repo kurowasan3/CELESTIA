@@ -1,0 +1,143 @@
+{
+ "id": "PHY-OPT-031",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "マイケルソン干渉計で回転させた平行平面ガラス板の光路長変化と屈折率の測定",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，半透鏡 H と反射鏡 M$_1$，M$_2$ からなるマイケルソン干渉計に波長 $\\lambda$ の単色光を入れ，M$_1$，M$_2$ で反射して H で重なった光の強さを検出器 D で測る．H と M$_1$ の間の光路に，厚さ $t$，屈折率 $n\\ (n>1)$ の平行平面ガラス板 G を，はじめ光線に垂直に置く．G は，光線に垂直で紙面に垂直な回転軸のまわりに回転させることができる．M$_1$ は光線に垂直なので，G を通って M$_1$ で反射した光は同じ経路を逆にたどって H に戻る．空気の屈折率を $1$ とし，G の表面での反射光は考えない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "G を（光線に垂直に）置いたことによる，H から M$_1$ へ行って H に戻る光の光学距離（光路長）の増加量を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "G を角 $i$ だけ回転させると，光線は G に入射角 $i$ で入射し，屈折角 $r$ で G の中を進んで，入射光に平行に（横にずれて）出ていく．G の手前の点で光線に垂直な平面と，G を出た後の点で光線に垂直な平面の間の光学距離（片道）は，G がない場合に比べて\n  \\[ t\\left(\\sqrt{n^2-\\sin^2 i}-\\cos i\\right) \\]\n  だけ長いことを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "G を角 $0$ から角 $i$ までゆっくり回転させる間に，D で観測される光の強さは周期的に変化した．その明暗の変化の回数（強さが極大になる回数）$N$ を $t,\\ n,\\ \\lambda,\\ i$ で表せ．さらに，$i$ が十分小さいとき $N$ は $i^2$ に比例することを示し，比例係数を求めよ．必要なら $|x|\\ll1$ のとき $\\sqrt{1-x}\\fallingdotseq1-\\frac{x}{2}$，$\\cos x\\fallingdotseq1-\\frac{x^2}{2}$，$\\sin x\\fallingdotseq x$ を用いよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$t=1.00$ mm，$\\lambda=5.00\\times10^{-7}$ m として，G を $i=30^\\circ$ まで回転させる間に $N=200$ 回の明暗が数えられた．$n$ を有効数字3桁で求めよ．また，(3) の $i^2$ に比例する近似式を用いて $n$ を求めると，いくらになるか（有効数字3桁）．$\\sqrt3=1.732$ とする．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) と同じ回数の明暗を，G を光線に垂直にしたまま M$_1$ を光線に沿って動かすことで起こすには，M$_1$ を H に近づける向き・遠ざける向きのどちらに，どれだけ動かせばよいか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：マイケルソン干渉計で回転させた平行平面ガラス板の光路長変化と屈折率の測定",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：マイケルソン干渉計で回転させた平行平面ガラス板の光路長変化と屈折率の測定",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2(n-1)t$"
+   },
+   {
+    "id": "2",
+    "tex": "略（解説参照）"
+   },
+   {
+    "id": "3",
+    "tex": "$N=\\frac{2t}{\\lambda}\\left\\{\\sqrt{n^2-\\sin^2 i}-\\cos i-(n-1)\\right\\}$，$i$ が小さいとき $N\\fallingdotseq\\frac{(n-1)t}{n\\lambda}i^2$（比例係数 $\\frac{(n-1)t}{n\\lambda}$）"
+   },
+   {
+    "id": "4",
+    "tex": "$n=1.53$，近似式では $n=1.57$"
+   },
+   {
+    "id": "5",
+    "tex": "H から遠ざける向きに $5.00\\times10^{-5}$ m"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　ガラス板を傾けると，ガラスの中の経路は $\\frac{t}{\\cos r}$ に伸びるが，同時に「ガラスがなければ通るはずだった空気の区間」も変わる．光路差は必ず，光線に垂直な2つの平面の間で「ガラスあり」と「ガラスなし」を比べて求める．平面波なので，光線に垂直な平面は等位相面であり，横へのずれは位相に影響しない．\n\n\\textbf{(1)}　厚さ $t$ の区間が空気（光学距離 $t$）からガラス（$nt$）に置き換わり，往復で2回通るので，増加量は $\\boldsymbol{2(n-1)t}$．\n\n\\textbf{(2)}　解答図のように，光線が G に入る点を P，出る点を Q とし，Q を通り光線に垂直な平面と，入射光線の延長との交点を R とする．G の中の光線は G の法線と角 $r$ をなすので\n\\[ \\mathrm{PQ}=\\frac{t}{\\cos r} \\]\n入射光線と G の中の光線の間の角は $i-r$ なので，G がない場合に P から同じ平面まで進む距離は $\\mathrm{PR}=\\mathrm{PQ}\\cos(i-r)$ である．G を出た後は両者とも同じ向きに進み，Q と R は同じ等位相面上にあるから，光学距離の差は\n\\[ n\\,\\mathrm{PQ}-\\mathrm{PR}=\\frac{t}{\\cos r}\\{n-\\cos(i-r)\\}=\\frac{t}{\\cos r}\\left(n-\\cos i\\cos r-\\sin i\\sin r\\right) \\]\n屈折の法則 $\\sin i=n\\sin r$ を使うと $\\sin i\\sin r=n\\sin^2 r$ なので\n\\[ \\frac{t}{\\cos r}\\left(n\\cos^2 r-\\cos i\\cos r\\right)=t\\,(n\\cos r-\\cos i)=t\\left(\\sqrt{n^2-\\sin^2 i}-\\cos i\\right) \\]\n（$n\\cos r=\\sqrt{n^2-n^2\\sin^2 r}=\\sqrt{n^2-\\sin^2 i}$）．$i=0$ で $(n-1)t$ となり (1) と一致する．\\hfill$\\square$\n\n\\textbf{(3)}　往復の光路長の増加は (2) の2倍で，回転前（$i=0$）からの変化は\n\\[ \\Delta=2t\\left\\{\\sqrt{n^2-\\sin^2 i}-\\cos i-(n-1)\\right\\} \\]\n光路長が $\\lambda$ 変わるごとに明暗が1回くり返すので\n\\[ N=\\boldsymbol{\\frac{2t}{\\lambda}\\left\\{\\sqrt{n^2-\\sin^2 i}-\\cos i-(n-1)\\right\\}} \\]\n$i$ が小さいとき，$\\sqrt{n^2-i^2}=n\\sqrt{1-\\frac{i^2}{n^2}}\\fallingdotseq n-\\frac{i^2}{2n}$，$\\cos i\\fallingdotseq1-\\frac{i^2}{2}$ より，中かっこの中は $\\frac{i^2}{2}-\\frac{i^2}{2n}=\\frac{(n-1)i^2}{2n}$．よって\n\\[ N\\fallingdotseq\\boldsymbol{\\frac{(n-1)t}{n\\lambda}\\,i^2} \\]\n（$\\Delta$ は $i$ について増加関数であり，回転によって光路長は増える．）\nなお，「ガラス中の経路が $\\frac{t}{\\cos r}$ に伸びた分だけ」を数えると，空気の区間の変化を落とすことになり誤りである．\n\n\\textbf{(4)}　$K=\\frac{N\\lambda}{2t}=\\frac{200\\times5.00\\times10^{-7}}{2\\times1.00\\times10^{-3}}=0.0500$ とおくと，(3) の式は\n\\[ \\sqrt{n^2-\\sin^2 i}=n-u,\\qquad u=1-\\cos i-K \\]\nとなる．両辺を2乗して $n^2-\\sin^2 i=n^2-2nu+u^2$ より\n\\[ n=\\frac{\\sin^2 i+u^2}{2u} \\]\n$i=30^\\circ$ では $u=1-0.8660-0.0500=0.0840$（より正確には $0.08397$），$\\sin^2 i=0.25$ なので\n\\[ n=\\frac{0.25+0.00705}{0.1679}\\fallingdotseq\\boldsymbol{1.53} \\]\n（$n-u>0$ なので2乗による余分な解ではない．）\n一方，近似式 $N=\\frac{(n-1)t}{n\\lambda}i^2$ を $n$ について解くと $n=\\frac{ti^2}{ti^2-N\\lambda}$．$i=\\frac{\\pi}{6}=0.5236$ rad，$ti^2=2.742\\times10^{-4}$ m，$N\\lambda=1.00\\times10^{-4}$ m より\n\\[ n=\\frac{2.742}{1.742}\\fallingdotseq\\boldsymbol{1.57} \\]\n$30^\\circ$ では近似が粗く，屈折率を大きく見積もってしまう．\n\n\\textbf{(5)}　回転によって光路長は増えたので，M$_1$ を H から遠ざけて往復の光路長を $N\\lambda$ 増やせばよい．動かす距離は\n\\[ \\frac{N\\lambda}{2}=\\frac{200\\times5.00\\times10^{-7}}{2}=\\boldsymbol{5.00\\times10^{-5}}\\ \\text{m}\\quad(\\text{H から遠ざける向き}) \\]\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "傾けた平行平板による光路長の増加は，ガラス中の経路 $\\frac{t}{\\cos r}$ だけでなく，光線に垂直な等位相面の間で「ガラスなし」の空気の区間と比べて $t(\\sqrt{n^2-\\sin^2 i}-\\cos i)$ となる．回転による明暗の回数からこの式を逆に解けば屈折率が求まり，小角度で $i^2$ に比例する近似は大きな角では誤差が大きい．"
+ },
+ "concepts": [
+  "light-interference",
+  "torque",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "マイケルソン干渉計",
+  "光路長",
+  "平行平面板",
+  "屈折の法則",
+  "屈折率の測定"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

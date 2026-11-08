@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+<defs><marker id="q-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="q-ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker></defs>
+<!-- top: frequency graph -->
+<line x1="60" y1="130" x2="560" y2="130" stroke="#222" stroke-width="1.2" marker-end="url(#q-ah)"/>
+<line x1="60" y1="130" x2="60" y2="20" stroke="#222" stroke-width="1.2" marker-end="url(#q-ah)"/>
+<text x="565" y="135" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">t</text>
+<text x="20" y="22" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">振動数</text>
+<polyline points="60,110 160,40 260,110 360,40 460,110 520,68" fill="none" stroke="#222" stroke-width="1.8"/>
+<line x1="60" y1="40" x2="380" y2="40" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="60" y1="110" x2="480" y2="110" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="60" y1="75" x2="540" y2="75" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="6" y="80" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">f<tspan baseline-shift="sub" font-size="10">c</tspan></text>
+<text x="2" y="45" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">f<tspan baseline-shift="sub" font-size="10">c</tspan><tspan font-style="normal">+Δ</tspan>f<tspan font-style="normal">/2</tspan></text>
+<text x="2" y="115" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">f<tspan baseline-shift="sub" font-size="10">c</tspan><tspan font-style="normal">−Δ</tspan>f<tspan font-style="normal">/2</tspan></text>
+<line x1="160" y1="130" x2="160" y2="40" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="155" y="148" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">T</text>
+<line x1="260" y1="130" x2="260" y2="110" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="250" y="148" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222"><tspan font-style="normal">2</tspan>T</text>
+<text x="54" y="148" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">0</text>
+<!-- bottom: geometry -->
+<line x1="40" y1="250" x2="570" y2="250" stroke="#222" stroke-width="1" stroke-dasharray="1 0"/>
+<rect x="62" y="222" width="18" height="24" fill="none" stroke="#222" stroke-width="1.6"/>
+<polygon points="80,226 94,216 94,252 80,242" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="40" y="270" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">O（音源・マイク）</text>
+<rect x="470" y="205" width="10" height="45" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="452" y="198" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">反射板</text>
+<line x1="465" y1="225" x2="420" y2="225" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ahb)"/>
+<text x="436" y="218" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">u</text>
+<line x1="90" y1="282" x2="470" y2="282" stroke="#222" stroke-width="1" marker-start="url(#q-ah)" marker-end="url(#q-ah)"/>
+<text x="275" y="278" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">L</text>
+<line x1="470" y1="252" x2="470" y2="290" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+</svg>

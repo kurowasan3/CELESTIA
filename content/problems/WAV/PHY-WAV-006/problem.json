@@ -1,0 +1,134 @@
+{
+ "id": "PHY-WAV-006",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "壁の鏡像波源による水面波の干渉と節の個数からの距離の決定",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，水面に鉛直な平らな壁があり，壁から距離 $a$（未知）の点 O に波源がある．波源は波長 $\\lambda$ の円形波を連続的に送り出している．O から壁に下ろした垂線の足を A とし，O から壁と反対向きに AO を延長した半直線を $\\ell_1$，O を通り壁に平行な半直線を $\\ell_2$ とする．波は壁で位相を変えずに反射する．波の減衰は無視し，O から直接届く波と壁で反射した波の振幅はどこでも等しいとする．\n\n観測すると，次の2つのことがわかった．\n\\begin{itemize}\n  \\item[(ア)] $\\ell_1$ 上（O を除く）では，水面はどこでもまったく振動していない．\n  \\item[(イ)] $\\ell_2$ 上（O を除く）で水面が振動していない点は，ちょうど3個ある．\n\\end{itemize}"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\ell_1$ 上の点では，直接波と反射波の経路差が点の位置によらないことを示し，(ア)が成り立つための条件を $a$，$\\lambda$ と整数 $k\\ (k\\geqq 0)$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$a$ を $\\lambda$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "(イ)の3点のうち，O に最も近い点と最も遠い点の O からの距離をそれぞれ $\\lambda$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "次に，波源を $\\ell_1$ に沿ってゆっくり壁から遠ざけていく．$\\ell_1$ 上の水面が初めて最も激しく振動するようになるまでに波源を動かす距離を求めよ．また，そのとき $\\ell_2$ 上（O を除く）で水面が振動していない点はいくつあるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：壁の鏡像波源による水面波の干渉と節の個数からの距離の決定",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：壁の鏡像波源による水面波の干渉と節の個数からの距離の決定",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "経路差はつねに $2a$，条件 $2a=\\left(k+\\dfrac12\\right)\\lambda$"
+   },
+   {
+    "id": "2",
+    "tex": "$a=\\dfrac74\\lambda$"
+   },
+   {
+    "id": "3",
+    "tex": "最も近い点 $\\dfrac65\\lambda$，最も遠い点 $12\\lambda$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac14\\lambda$，4個"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{鏡像波源}　壁で位相を変えずに反射する波は，壁に関して O と対称な点 O$'$（OO$'=2a$）から O と同位相で出た波とみなせる．したがって水面上の各点の振動は，同位相の2波源 O，O$'$ による干渉で決まる．\n\n\\textbf{(1)}　$\\ell_1$ 上の点 P では，O$'$，O，P が一直線上にこの順に並ぶので\n\\[ \\mathrm{O'P}-\\mathrm{OP}=\\mathrm{OO'}=2a \\]\nとなり，P の位置によらない．したがって $\\ell_1$ 上はどこでも同じ干渉状態にあり，振幅の等しい2波が逆位相で重なれば，どこでも振動しない．その条件は\n\\[ \\boldsymbol{2a=\\left(k+\\frac12\\right)\\lambda}\\quad(k=0,1,2,\\ldots) \\]\n（このとき $\\ell_1$ 上の合成波は，振幅 0 の「進行波」，すなわち波がない状態である．）\n\n\\textbf{(2)}　$\\ell_2$ 上で O から距離 $x\\ (>0)$ の点 Q では\n\\[ \\Delta(x)=\\mathrm{O'Q}-\\mathrm{OQ}=\\sqrt{4a^2+x^2}-x=\\frac{4a^2}{\\sqrt{4a^2+x^2}+x} \\]\nであり，$\\Delta(x)$ は $x$ とともに単調に減少し，$x\\to+0$ で $2a$，$x\\to\\infty$ で $0$ に近づく．よって $x>0$ で $\\Delta$ がとる値は $0<\\Delta<2a$ のすべてで，各値をちょうど1回とる．\n\n弱め合う（振動しない）点は $\\Delta=\\left(m+\\frac12\\right)\\lambda$ の点だから，その個数は $0<\\left(m+\\frac12\\right)\\lambda<2a$ を満たす整数 $m\\geqq0$ の個数である．(1) より $2a=\\left(k+\\frac12\\right)\\lambda$ なので，これは $m=0,1,\\ldots,k-1$ の $k$ 個．(イ)より $k=3$ で\n\\[ 2a=\\frac72\\lambda\\qquad\\therefore\\ \\boldsymbol{a=\\frac74\\lambda} \\]\n\n\\textbf{(3)}　$\\Delta=\\sqrt{4a^2+x^2}-x$ を $x$ について解くと，$\\sqrt{4a^2+x^2}=x+\\Delta$ の両辺を2乗して\n\\[ x=\\frac{4a^2-\\Delta^2}{2\\Delta},\\qquad 4a^2=\\frac{49}{4}\\lambda^2 \\]\n$\\Delta$ が大きいほど $x$ は小さい．O に最も近い点は $\\Delta=\\frac52\\lambda$ で\n\\[ x=\\frac{\\frac{49}{4}-\\frac{25}{4}}{5}\\lambda=\\boldsymbol{\\frac65\\lambda} \\]\n最も遠い点は $\\Delta=\\frac12\\lambda$ で\n\\[ x=\\frac{\\frac{49}{4}-\\frac14}{1}\\lambda=\\boldsymbol{12\\lambda} \\]\n（中間の点は $\\Delta=\\frac32\\lambda$ で $x=\\frac{10}{3}\\lambda$．）\n\n\\textbf{(4)}　波源が壁から $a'$ の位置にあるとき，$\\ell_1$ 上の経路差は $2a'$ である．最も激しく振動する（振幅が2倍になる）のは $2a'$ が $\\lambda$ の整数倍のときで，$2a'=\\frac72\\lambda$ から $2a'$ を増やして最初に整数倍になるのは $2a'=4\\lambda$．よって動かす距離は\n\\[ a'-a=2\\lambda-\\frac74\\lambda=\\boldsymbol{\\frac14\\lambda} \\]\nこのとき $\\ell_2$ 上で振動しない点は $0<\\left(m+\\frac12\\right)\\lambda<4\\lambda$ を満たす $m=0,1,2,3$ の $\\boldsymbol{4}$ \\textbf{個}．\n\n\\textbf{注意}　$\\ell_2$ 上の弱め合いの点の個数は，$x=0$ での経路差 $2a$ と $x\\to\\infty$ での経路差 $0$ の間に入る半整数の個数で数えられる．経路差の「範囲」を押さえるのが要点である．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "位相を変えない反射壁は，壁に関して対称な位置に同位相の鏡像波源を置くことと同じである．波源の背後の半直線上では経路差が $2a$ で一定なので全体が同じ干渉状態になり，壁に平行な半直線上では経路差が $2a$ から $0$ まで単調に変わるので，弱め合いの点の個数がその範囲に入る半整数の数で決まる．この2つの観測から逆に波源の位置を決める．"
+ },
+ "concepts": [
+  "wave-basics",
+  "interference"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "波の干渉",
+  "鏡像波源",
+  "経路差",
+  "水面波",
+  "節の個数"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

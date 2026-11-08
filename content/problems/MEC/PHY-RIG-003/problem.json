@@ -1,0 +1,135 @@
+{
+ "id": "PHY-RIG-003",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "偏心した穴あき円板が斜面上で静止する条件（重心と接点の位置関係）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "半径 $R$，中心 O の一様な薄い円板から，O からの距離が $\\dfrac R3$ の点 D を中心とする半径 $\\dfrac R2$ の円形部分をくり抜いた（図の左）．くり抜いた後の円板の質量を $M$ とする．この円板を，水平面と角 $\\alpha$ をなす粗い斜面上に，円板面が斜面の最大傾斜線を含む鉛直面内にあるように立てて置く（図の右）．円板の縁は欠けておらず，円板は斜面上を転がることができる．円板と斜面の間の静止摩擦係数を $\\mu$，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "円板の重心 G の位置を，O からの距離と向きで答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "円板が斜面上で（向きを適当に選べば）静止できるための $\\alpha$ と $\\mu$ の条件を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の条件のもとで静止している状態のうち，円板を少し転がしても元に戻る状態について，線分 OG が鉛直下向きとなす角を $\\psi$ として $\\sin\\psi$ を求めよ．また，G は O から見て斜面の上側・下側のどちらにあるか．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\sin\\alpha=\\dfrac13$ の斜面上で円板を静止させるため，円板の縁に小さなおもりを 1 個取り付ける．おもりの質量の最小値と，そのときの取り付け位置を求めよ．ただし $\\mu$ は十分大きいとする．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：偏心した穴あき円板が斜面上で静止する条件（重心と接点の位置関係）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：偏心した穴あき円板が斜面上で静止する条件（重心と接点の位置関係）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "直線 DO 上，O に関して D と反対側で，O からの距離 $\\dfrac R9$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\sin\\alpha\\leqq\\dfrac19$ かつ $\\mu\\geqq\\tan\\alpha$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\sin\\psi=9\\sin\\alpha$，G は O より斜面の上側（かつ O より下方）にある"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac M3$．直線 DO を O の側へ延長して縁と交わる点（D から最も遠い縁の点）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 重心}\nくり抜く前の円板の質量を $M_0$ とすると，穴の部分の質量は $\\left(\\frac12\\right)^2M_0=\\frac14M_0$ で，$M=\\frac34M_0$．O を原点，O から D の向きを正とする軸で，穴の部分を「負の質量 $-\\frac14M_0$」とみなすと\n\\[ x_G=\\frac{M_0\\cdot0+\\left(-\\frac14M_0\\right)\\cdot\\frac R3}{M_0-\\frac14M_0}=-\\frac R9. \\]\nG は \\textbf{直線 DO 上，O に関して D と反対側で $\\boldsymbol{\\dfrac R9}$ の位置}にある．\n\n\\textbf{(2) 静止の条件}\n円板にはたらく力は重力 $Mg$（G に作用）と，接点 P で斜面から受ける抗力（垂直抗力と静止摩擦力の合力）だけである．2 力でつり合うには，抗力は大きさ $Mg$ で\\textbf{鉛直上向き}，しかも P のまわりのモーメントから\\textbf{重力の作用線が P を通る}，すなわち G が P の真上（鉛直線上）になければならない．\nP は O から斜面に垂直に $R$ だけ下の点なので，O と P の水平距離は $R\\sin\\alpha$．G の O からの水平距離は最大でも $OG=\\frac R9$ だから，G を P の鉛直線上におけるための条件は $R\\sin\\alpha\\leqq\\frac R9$，すなわち $\\boldsymbol{\\sin\\alpha\\leqq\\dfrac19}$．\nまた抗力を斜面方向と垂直方向に分けると，摩擦力 $Mg\\sin\\alpha$，垂直抗力 $Mg\\cos\\alpha$ なので，滑らない条件は $Mg\\sin\\alpha\\leqq\\mu Mg\\cos\\alpha$，すなわち $\\boldsymbol{\\mu\\geqq\\tan\\alpha}$（円板の向きによらない）．\n\n\\textbf{(3) 安定な静止位置}\nP は O より斜面の上側に水平距離 $R\\sin\\alpha$ ずれているので，G も O より上側に水平に $R\\sin\\alpha$ だけずれた位置にある：$\\dfrac R9\\sin\\psi=R\\sin\\alpha$ より $\\boldsymbol{\\sin\\psi=9\\sin\\alpha}$．これを満たす $\\psi$ は $\\psi_1$ と $\\pi-\\psi_1$（$0<\\psi_1\\leqq\\frac{\\pi}{2}$）の 2 つある．\n円板が斜面を下る向きに角 $\\theta$ だけ転がると，O は斜面に沿って $R\\theta$ 下がり（高さは $R\\theta\\sin\\alpha$ 下がる），OG は斜面上側へさらに $\\theta$ 回転する．G の高さを位置エネルギーで表すと\n\\[ U(\\theta)=Mg\\left\\{-R\\theta\\sin\\alpha-\\frac R9\\cos(\\psi+\\theta)\\right\\}+\\text{const}. \\]\n$\\dfrac{dU}{d\\theta}\\Big|_{\\theta=0}=Mg\\left(-R\\sin\\alpha+\\frac R9\\sin\\psi\\right)=0$ が (3) の条件で，$\\dfrac{d^2U}{d\\theta^2}\\Big|_{\\theta=0}=\\dfrac{MgR}{9}\\cos\\psi$ が正（$U$ が極小）となるのは $\\cos\\psi>0$ のとき．よって安定なのは $\\psi=\\psi_1$ の方で，\\textbf{G は O より斜面の上側で，O より下方}にある．\n（直観的には，G が O より下にあると，少し下へ転がったとき G が P の鉛直線より上側へ出て，重力のモーメントが円板を押し戻す．）\n\n\\textbf{(4) おもりの位置と質量}\n$\\sin\\alpha=\\frac13>\\frac19$ なので円板だけでは静止できない．質量 $m$ のおもりを O からの位置ベクトル $\\vec r$（$|\\vec r|=R$）の点に付けると，全体の重心の O からの位置は $\\dfrac{M\\overrightarrow{\\mathrm{OG}}+m\\vec r}{M+m}$．三角不等式より\n\\[ \\left|\\frac{M\\overrightarrow{\\mathrm{OG}}+m\\vec r}{M+m}\\right|\\leqq\\frac{M\\cdot\\frac R9+mR}{M+m}, \\]\n等号は $\\vec r$ が $\\overrightarrow{\\mathrm{OG}}$ と同じ向きのとき，すなわち\\textbf{直線 DO を O の側へ延長して縁と交わる点}に付けたときに成り立つ．(2) と同様に全体の重心の O からの距離が $R\\sin\\alpha=\\frac R3$ 以上であればよいので\n\\[ \\frac{\\frac{M}{9}R+mR}{M+m}\\geqq\\frac R3\\ \\Rightarrow\\ \\frac23m\\geqq\\frac29M\\ \\Rightarrow\\ m\\geqq\\boldsymbol{\\frac M3}. \\]\nこのとき静止摩擦係数は $\\mu\\geqq\\tan\\alpha=\\dfrac{1}{2\\sqrt2}$ が必要である．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "穴の部分を負の質量とみなして重心を求める．斜面上の円板が静止するには，斜面からの抗力が鉛直で重力とつり合い，重心が接点の真上にあることが必要で，重心の中心からのずれが傾角の上限を決める．"
+ },
+ "concepts": [
+  "torque",
+  "momentum-conservation",
+  "equilibrium"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "重心",
+  "負の質量",
+  "剛体のつり合い",
+  "斜面",
+  "安定性"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "id": "PHY-CAP-022",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "コンデンサーのY–Δ変換による非平衡ブリッジの合成容量と，孤立部分に電荷があるときの変換の破れ",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "3つの端子 A，B，D をもつ「Y型素子」を考える．図1のように，電気容量 $C_1$，$C_2$，$C_3$ のコンデンサーの一方の極板をそれぞれ端子 A，B，D に，他方の極板をすべて共通の点 O につなぐ．点 O は外部とつながっていない（O とそれにつながる極板を合わせた部分を「孤立部分 O」とよぶ）．はじめ，すべてのコンデンサーは帯電していない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "端子 A，B，D の電位をそれぞれ $\\phi_{\\rm A}$，$\\phi_{\\rm B}$，$\\phi_{\\rm D}$ に保ったとき，点 O の電位 $\\phi_{\\rm O}$ と，端子 A を通って素子に流れ込んだ電気量 $Q_{\\rm A}$ を求めよ．さらに，$Q_{\\rm A}$ が $c_{\\rm AB}(\\phi_{\\rm A}-\\phi_{\\rm B})+c_{\\rm AD}(\\phi_{\\rm A}-\\phi_{\\rm D})$ の形に書けることを示し，この Y型素子と外から区別できない「Δ型素子」（端子間に直接つないだ3個のコンデンサー）の電気容量 $c_{\\rm AB}$，$c_{\\rm BD}$，$c_{\\rm DA}$ を $C_1$，$C_2$，$C_3$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "図2の回路では，端子 P，Q の間に5個のコンデンサーがつながれている（P–X 間 $C$，X–Q 間 $2C$，P–Y 間 $2C$，Y–Q 間 $C$，X–Y 間 $C$）．はじめすべて帯電していない．点 X を中心とする部分を Y型素子とみなして (1) の変換を用い，P–Q 間の合成容量を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の回路の P–Q 間に電圧 $V$（P が高電位）の電池をつないで十分に時間がたったとき，X–Y 間のコンデンサーの電圧と，回路全体に蓄えられた静電エネルギーを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "次に，(2) の回路を組み立てる前に，点 X とそれにつながる3枚の極板からなる孤立部分にだけ，あらかじめ合計 $q_0$ の電気量を与えておいた（他の孤立部分 Y は電気的に中性）．この状態で P–Q 間に電圧 $V$ の電池をつないで十分に時間がたったとき，X–Y 間のコンデンサーの電圧が 0 になった．$q_0$ を $C$，$V$ で表せ．また，このとき電池の正極から端子 P に流れ込んだ電気量を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "一般の $q_0$ について，電池をつないでから P に流れ込む電気量は $V$ に比例しない．このことから，孤立部分に電荷があると，Y型素子を (1) のΔ型素子に置き換えられない理由を簡潔に述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：コンデンサーのY–Δ変換による非平衡ブリッジの合成容量と，孤立部分に電荷があるときの変換の破れ",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\phi_{\\rm O}=\\dfrac{C_1\\phi_{\\rm A}+C_2\\phi_{\\rm B}+C_3\\phi_{\\rm D}}{C_1+C_2+C_3}$，$c_{\\rm AB}=\\dfrac{C_1C_2}{C_1+C_2+C_3}$，$c_{\\rm BD}=\\dfrac{C_2C_3}{C_1+C_2+C_3}$，$c_{\\rm DA}=\\dfrac{C_3C_1}{C_1+C_2+C_3}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac75C$"
+   },
+   {
+    "id": "3",
+    "tex": "電圧 $\\dfrac V5$（Y 側が高電位），エネルギー $\\dfrac{7}{10}CV^2$"
+   },
+   {
+    "id": "4",
+    "tex": "$q_0=CV$，流れ込む電気量 $CV$"
+   },
+   {
+    "id": "5",
+    "tex": "流れ込む電気量が $\\dfrac75CV-\\dfrac25q_0$ となり，$V$ によらない項 $-\\dfrac25q_0$ が残るため（コンデンサーだけのΔ型素子では電気量は電位差に比例し，$V=0$ で 0 になる）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) Y型素子の変換}\\quad 孤立部分 O の電気量は 0 のまま保存される．O 側の極板の電気量の和を 0 とおくと\n\\[ C_1(\\phi_{\\rm O}-\\phi_{\\rm A})+C_2(\\phi_{\\rm O}-\\phi_{\\rm B})+C_3(\\phi_{\\rm O}-\\phi_{\\rm D})=0 \\]\nより $\\boldsymbol{\\phi_{\\rm O}=\\dfrac{C_1\\phi_{\\rm A}+C_2\\phi_{\\rm B}+C_3\\phi_{\\rm D}}{S}}$（$S=C_1+C_2+C_3$）．端子 A から流れ込んだ電気量は A 側の極板の電気量だから\n\\[ Q_{\\rm A}=C_1(\\phi_{\\rm A}-\\phi_{\\rm O})=\\frac{C_1}{S}\\{C_2(\\phi_{\\rm A}-\\phi_{\\rm B})+C_3(\\phi_{\\rm A}-\\phi_{\\rm D})\\}. \\]\nΔ型素子では $Q_{\\rm A}=c_{\\rm AB}(\\phi_{\\rm A}-\\phi_{\\rm B})+c_{\\rm DA}(\\phi_{\\rm A}-\\phi_{\\rm D})$ なので，すべての電位で一致するには\n\\[ \\boldsymbol{c_{\\rm AB}=\\frac{C_1C_2}{S},\\quad c_{\\rm BD}=\\frac{C_2C_3}{S},\\quad c_{\\rm DA}=\\frac{C_3C_1}{S}} \\]\n（B，D についても同様）．\n\n\\textbf{(2) 合成容量}\\quad 点 X につながる3個（P 側 $C$，Q 側 $2C$，Y 側 $C$，和 $4C$）を Δ型に直すと\n\\[ c_{\\rm PQ}=\\frac{C\\cdot 2C}{4C}=\\frac C2,\\quad c_{\\rm PY}=\\frac{C\\cdot C}{4C}=\\frac C4,\\quad c_{\\rm YQ}=\\frac{2C\\cdot C}{4C}=\\frac C2. \\]\nすると P–Y 間は $2C+\\frac C4=\\frac94C$，Y–Q 間は $C+\\frac C2=\\frac32C$ の並列，これらの直列に $c_{\\rm PQ}$ が並列に入る：\n\\[ \\frac{\\frac94C\\cdot\\frac32C}{\\frac94C+\\frac32C}+\\frac C2=\\frac{9}{10}C+\\frac12C=\\boldsymbol{\\frac75C}. \\]\nこのブリッジは $\\frac{C}{2C}\\neq\\frac{2C}{C}$ で平衡していないので，直列・並列だけでは計算できない点に注意する．\n\n\\textbf{(3)}\\quad 電位を $\\phi_{\\rm P}=V$，$\\phi_{\\rm Q}=0$ とし，X，Y の電位を $x$，$y$ とする．孤立部分 X，Y の電気量 0 から\n\\[ C(x-V)+C(x-y)+2Cx=0,\\qquad 2C(y-V)+C(y-x)+Cy=0 \\]\nこれを解いて $x=\\frac25V$，$y=\\frac35V$．X–Y 間の電圧は $\\boldsymbol{\\dfrac V5}$（Y が高電位）．P に流れ込む電気量は $C\\cdot\\frac35V+2C\\cdot\\frac25V=\\frac75CV$ で (2) と一致する．エネルギーは $\\frac12\\cdot\\frac75CV\\cdot V=\\boldsymbol{\\dfrac{7}{10}CV^2}$（各コンデンサーの $\\frac12CV^2$ の和でも同じ値になる）．\n\n\\textbf{(4) 孤立部分に電荷がある場合}\\quad 孤立部分 X の電気量は $q_0$ のまま保存されるので，X の式だけが\n\\[ C(x-V)+C(x-y)+2Cx=q_0 \\]\nに変わる．X–Y 間の電圧が 0，すなわち $x=y$ とおくと，Y の式 $2C(y-V)+Cy=0$ から $x=y=\\frac23V$．これを X の式に入れて\n\\[ q_0=C\\left(\\tfrac23V-V\\right)+2C\\cdot\\tfrac23V=\\boldsymbol{CV}. \\]\nP に流れ込んだ電気量は $C(V-x)+2C(V-y)=\\frac13CV+\\frac23CV=\\boldsymbol{CV}$．\n\n\\textbf{(5)}\\quad 一般の $q_0$ で連立方程式を解くと，P に流れ込む電気量は $\\frac75CV-\\frac25q_0$ となる．コンデンサーだけからなるΔ型素子では，端子の電気量は端子間の電位差の1次式で定数項をもたない（電圧 0 なら電気量 0）．孤立部分の電荷 $q_0$ はこれに $V$ によらない項を加えるので，どのような $c_{\\rm AB},c_{\\rm BD},c_{\\rm DA}$ を選んでも同じ振る舞いにはならない．(1) の変換は「孤立部分 O の電気量が 0」という電気量保存の条件の上に成り立っている．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "中心点が孤立した Y型のコンデンサーは，孤立部分の電気量保存から中心の電位を消去すると端子間に直接つないだΔ型と同じ形になり，$c_{\\rm AB}=C_1C_2/(C_1+C_2+C_3)$ などで置き換えられる．これで非平衡ブリッジの合成容量が求まるが，孤立部分にもともと電荷があると電位差に比例しない定数項が残り，置き換えは成り立たない．"
+ },
+ "concepts": [
+  "capacitor",
+  "coulomb-field"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "Y-Δ変換",
+  "ブリッジ回路",
+  "合成容量",
+  "孤立部分の電気量保存",
+  "静電エネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

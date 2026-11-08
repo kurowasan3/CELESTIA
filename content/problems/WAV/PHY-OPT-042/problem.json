@@ -1,0 +1,130 @@
+{
+ "id": "PHY-OPT-042",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "点光源で照らしたCDに見える虹色の輪（光源と目の位置で決まる輪の半径）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "CD の記録面では，反射膜上の溝（トラック）が中心 P のまわりに間隔 $d=1.60\\ \\mu\\mathrm m$ の同心円状に並んでおり，狭い範囲では間隔 $d$ の反射型回折格子とみなせる．反射膜は屈折率 $n$ の透明基板（厚さは無視できる）でおおわれている．記録のある部分は P からの距離が $23\\ \\mathrm{mm}$ 以上 $58\\ \\mathrm{mm}$ 以下の範囲である．\n\n図のように，CD を水平に置き，P を通る鉛直線（CD の軸）上で，記録面からの高さ $a$ の点 S に白色の点光源を，高さ $b=150\\ \\mathrm{mm}$ の点 Q に目を置く（光源は目の視界をさえぎらないものとする）．すると記録面上に，P を中心とする虹色の輪が見えた．P からの距離 $r$ の溝に入射する光が鉛直線となす角を $\\alpha$，そこから Q へ向かう光が鉛直線となす角を $\\beta$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "基板内では光の角度は $\\alpha_n,\\ \\beta_n$（$\\sin\\alpha=n\\sin\\alpha_n$，$\\sin\\beta=n\\sin\\beta_n$）になる．隣り合う溝で反射して Q へ向かう光が強め合う条件を，基板内の光路差から求め，$n$ を含まない形 $d(\\sin\\alpha+\\sin\\beta)=m\\lambda$（$m$ は正の整数，$\\lambda$ は空気中の波長）になることを示せ．S と Q がともに軸上にあるため，入射光と回折光がどちらも溝に対して P 側にあることに注意せよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$r\\ll a,\\ b$ として，波長 $\\lambda$ の $m$ 次の輪の半径 $r$ を $a,\\ b,\\ d,\\ m,\\ \\lambda$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "波長 $0.64\\ \\mu\\mathrm m$ の赤色の1次の輪が，ちょうど $r=40.0\\ \\mathrm{mm}$ に見えるようにしたい．近似を用いずに $a$ を有効数字3桁で求めよ．また，(2) の近似式を使うと $a$ はいくらと見積もられるか．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の配置で，紫（$0.40\\ \\mu\\mathrm m$）から赤（$0.64\\ \\mu\\mathrm m$）までの光による1次の輪が見える範囲（$r$ の範囲）を求めよ．また，2次の輪は記録面のどの範囲に，どの波長範囲の光で見えるか．数値は有効数字2桁でよい．"
+     },
+     {
+      "id": "5",
+      "tex": "光源を十分遠くに移し，平行光を CD に垂直に当てると（目の位置は同じ），1次の輪のうち記録面上に見えるのはどの波長範囲か．(4) との違いの理由を (2) の式から説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：点光源で照らしたCDに見える虹色の輪（光源と目の位置で決まる輪の半径）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "解説参照"
+   },
+   {
+    "id": "2",
+    "tex": "$r=\\dfrac{m\\lambda}{d}\\cdot\\dfrac{ab}{a+b}$"
+   },
+   {
+    "id": "3",
+    "tex": "$a=278\\ \\mathrm{mm}$（近似式では $300\\ \\mathrm{mm}$）"
+   },
+   {
+    "id": "4",
+    "tex": "1次：$r=25\\ \\mathrm{mm}$（紫）〜 $40\\ \\mathrm{mm}$（赤）．2次：紫の輪が $r=51\\ \\mathrm{mm}$ に現れ，$58\\ \\mathrm{mm}$ の縁までに $0.40$〜$0.45\\ \\mu\\mathrm m$ の紫〜青の部分だけが見える"
+   },
+   {
+    "id": "5",
+    "tex": "$0.40$〜$0.58\\ \\mu\\mathrm m$（紫〜黄）．平行光は $a\\to\\infty$ にあたり，$\\dfrac{ab}{a+b}$ が大きくなって輪が外へ広がり，赤が記録面の外に出るため"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 強め合いの条件}\n\n隣り合う溝 K（P に近い方）と L（P から遠い方）に，S からの光がほぼ平行に入るとする．S が軸上（P 側の上方）にあるので，入射光は P 側から外向きに進み，K に先に，L に後で届く．基板内で入射光の波面に沿って測ると，L に届く光は K に届く光より $d\\sin\\alpha_n$ だけ長く基板内を進む．一方 Q も P 側の上方にあるので，回折光は内向き（P の方へ）に進み，L からの光は K からの光より $d\\sin\\beta_n$ だけ長く進む．したがって光路差は\n\\[ n\\,d(\\sin\\alpha_n+\\sin\\beta_n)=d(n\\sin\\alpha_n+n\\sin\\beta_n)=d(\\sin\\alpha+\\sin\\beta) \\]\nとなり，強め合う条件は $\\boldsymbol{d(\\sin\\alpha+\\sin\\beta)=m\\lambda}$．屈折の法則 $\\sin\\alpha=n\\sin\\alpha_n$ により\\textbf{基板の屈折率は打ち消し合う}（基板内では波長が $1/n$ になるが，同じ割合で角度の正弦も小さくなる）．\n\n\\textbf{(2) 近軸近似}\n\n$\\sin\\alpha=\\dfrac{r}{\\sqrt{r^2+a^2}}\\fallingdotseq\\dfrac ra$，$\\sin\\beta\\fallingdotseq\\dfrac rb$ より $r\\Bigl(\\dfrac1a+\\dfrac1b\\Bigr)=\\dfrac{m\\lambda}{d}$，\n\\[ \\boldsymbol{r=\\frac{m\\lambda}{d}\\cdot\\frac{ab}{a+b}}. \\]\nレンズの式に似て，光源までの距離と目までの距離の「調和平均の半分」が輪の大きさを決める．\n\n\\textbf{(3) 光源の高さ}\n\n$\\sin\\beta=\\dfrac{40.0}{\\sqrt{40.0^2+150^2}}=0.2577$，$m=1$ で $\\sin\\alpha+\\sin\\beta=\\dfrac{0.64}{1.60}=0.400$ だから $\\sin\\alpha=0.1423$．$\\tan\\alpha=\\dfrac{0.1423}{\\sqrt{1-0.1423^2}}=0.1438=\\dfrac{40.0}{a}$ より\n\\[ \\boldsymbol{a=278\\ \\mathrm{mm}}. \\]\n近似式では $\\dfrac1a=\\dfrac{0.64\\times10^{-3}}{1.60\\times10^{-3}\\times40.0}-\\dfrac1{150}=\\dfrac1{300}$ より $\\boldsymbol{a=300\\ \\mathrm{mm}}$ となり，約 $8\\%$ ずれる（$\\sin\\beta$ を $r/b$ と近似した誤差が大きい）．\n\n\\textbf{(4) 見える輪の範囲}\n\n$a=278\\ \\mathrm{mm}$，$b=150\\ \\mathrm{mm}$ のもとで，$f(r)=\\dfrac{r}{\\sqrt{r^2+a^2}}+\\dfrac{r}{\\sqrt{r^2+b^2}}$ は $r$ の増加関数なので，$f(r)=m\\lambda/d$ の解は $\\lambda$ が大きいほど外側にある．\n\\begin{itemize}\n  \\item 1次の紫：$f(r)=0.250$ を解くと $r\\fallingdotseq25\\ \\mathrm{mm}$．1次の赤は (3) より $40\\ \\mathrm{mm}$．よって1次の輪は $\\boldsymbol{25\\ \\mathrm{mm}}$（紫，内側）から $\\boldsymbol{40\\ \\mathrm{mm}}$（赤，外側）に並び，すべて記録面上にある．\n  \\item 2次の紫：$f(r)=0.500$ より $r\\fallingdotseq51\\ \\mathrm{mm}$．縁 $r=58\\ \\mathrm{mm}$ では $f(58)=\\dfrac{58}{284}+\\dfrac{58}{161}=0.565$ なので，そこに来る2次の波長は $\\lambda=\\dfrac{0.565\\times1.60}{2}=0.45\\ \\mu\\mathrm m$．2次の輪は $\\boldsymbol{51\\ \\mathrm{mm}}$ から縁までに，$\\boldsymbol{0.40\\sim0.45\\ \\mu\\mathrm m}$ の紫〜青の部分だけが見える（赤の2次は $87\\ \\mathrm{mm}$ で CD の外）．\n\\end{itemize}\n\n\\textbf{(5) 平行光の場合}\n\n垂直入射では $\\alpha=0$ なので条件は $d\\sin\\beta=m\\lambda$．縁 $r=58\\ \\mathrm{mm}$ で $\\sin\\beta=\\dfrac{58}{\\sqrt{58^2+150^2}}=0.361$，そこに来る1次の波長は $\\lambda=d\\sin\\beta=0.58\\ \\mu\\mathrm m$．紫の1次は $\\sin\\beta=0.25$ で $r=39\\ \\mathrm{mm}$ にあるから，見えるのは $\\boldsymbol{0.40\\sim0.58\\ \\mu\\mathrm m}$（紫〜黄）で，赤の1次（$r=65\\ \\mathrm{mm}$）は記録面の外に出て見えない．\n\n平行光は $a\\to\\infty$ にあたり，(2) の $\\dfrac{ab}{a+b}$ が $b$ まで大きくなる．光源が近いと入射光自身が外向きに傾いていて $\\sin\\alpha$ の分だけ回折に「助走」がつくので，同じ波長が内側で条件を満たし輪が縮む．光源を目の近くに置くほど輪は小さくなり，$a=b$ では平行光の約半分になる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "反射型格子に光源と目が同じ側の軸上から向かうと強め合いの条件は $d(\\sin\\alpha+\\sin\\beta)=m\\lambda$ となり，基板の屈折率は屈折の法則で打ち消される．近軸では輪の半径が $\\frac{m\\lambda}{d}\\frac{ab}{a+b}$ と光源と目の距離の「レンズの式」型の組み合わせで決まるので，光源を近づけると輪が縮み，どの次数・どの色が記録面に入るかが変わる．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "回折格子",
+  "反射型格子",
+  "CD",
+  "屈折率の打ち消し",
+  "近軸近似"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

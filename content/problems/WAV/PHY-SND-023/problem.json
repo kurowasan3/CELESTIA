@@ -1,0 +1,152 @@
+{
+ "id": "PHY-SND-023",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "ピストンがつくる圧縮波からの音速の導出と，定常波の節の間隔による混合気体の組成の決定",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "\\textbf{［A］}　図1のように，断面積 $S$ の十分に長いまっすぐな管に，圧力 $p_0$，密度 $\\rho$ の理想気体が静止している．管の左端のピストンを，時刻 $0$ から一定の速さ $w$ で右へ押し込み続けると，ピストンの前に圧力 $p_0+\\Delta p$ の圧縮された領域ができ，その右端（波面）は一定の速さ $c$ で右へ進んだ．圧縮された領域の気体はすべてピストンと同じ速さ $w$ で動き，波面より右の気体は静止したままである．$w\\ll c$，$\\Delta p\\ll p_0$ とし，気体の圧縮は熱の出入りがないほど速いので，圧縮された気体は断熱変化（比熱比 $\\gamma$，$pV^\\gamma=$ 一定）をするものとする．必要なら $|h|\\ll1$ のとき $(1+h)^n\\fallingdotseq1+nh$ を用いよ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "時刻 $0$ から $t$ までに波面が通過した気体について，体積の減少の割合 $\\dfrac{\\Delta V}{V}$ を $w,\\ c$ で表せ．さらに，$\\Delta p$ を $\\gamma,\\ p_0,\\ w,\\ c$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "時刻 $0$ から $t$ までに動き出した気体の運動量の変化と，その気体が受けた力積の関係から，$\\Delta p$ を $\\rho,\\ c,\\ w$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "(1)，(2) から $c$ を $\\gamma,\\ p_0,\\ \\rho$ で表し，さらにモル質量 $M$，絶対温度 $T$，気体定数 $R$ を用いて表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "\\textbf{［B］}　図2のように，管の右端を固い板でふさぎ，左端のスピーカーから振動数 $f$ の音を出し続けたところ，管内に定常波ができた．小さなマイクロホンを管内で動かし，圧力の振動の振幅が $0$ になる位置（圧力の節）を調べたところ，隣り合う圧力の節の間隔が $d$ であった．固い板から最も近い圧力の節までの距離を $d$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "管を絶対温度 $T$ の窒素 N$_2$（モル質量 $28\\ \\text{g/mol}$，二原子分子で定積モル比熱 $\\frac52R$）で満たしたときの節の間隔を $d_0$ とする．次に，同じ温度 $T$，同じ振動数 $f$ で，管をヘリウム He（モル質量 $4\\ \\text{g/mol}$，単原子分子で定積モル比熱 $\\frac32R$）と窒素の混合気体で満たしたところ，節の間隔の2乗が $d_0^{\\,2}$ の $\\dfrac{15}{8}$ 倍になった．混合気体中のヘリウムの物質量の割合 $x$（$0\\le x\\le1$）を求めよ．ただし，混合気体の定積モル比熱とモル質量は，成分のそれぞれの値を物質量の割合で平均したものとし，混合気体の比熱比は（定圧モル比熱）$/$（定積モル比熱）である．"
+     },
+     {
+      "id": "6",
+      "tex": "音波による圧縮・膨張が等温変化だと誤って考えた人は，(5) と同じ測定結果から $x$ をいくらと推定するか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：ピストンがつくる圧縮波からの音速の導出と，定常波の節の間隔による混合気体の組成の決定",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：ピストンがつくる圧縮波からの音速の導出と，定常波の節の間隔による混合気体の組成の決定",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{\\Delta V}{V}=\\dfrac{w}{c}$，$\\Delta p=\\dfrac{\\gamma p_0w}{c}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\Delta p=\\rho cw$"
+   },
+   {
+    "id": "3",
+    "tex": "$c=\\sqrt{\\dfrac{\\gamma p_0}{\\rho}}=\\sqrt{\\dfrac{\\gamma RT}{M}}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac d2$"
+   },
+   {
+    "id": "5",
+    "tex": "$x=\\dfrac12$"
+   },
+   {
+    "id": "6",
+    "tex": "$x=\\dfrac{49}{90}\\fallingdotseq0.54$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 体積の減少の割合と圧力の増加}\n\n時刻 $t$ までに波面は $ct$ 進む．波面が通過した気体は，はじめ長さ $ct$（体積 $V=Sct$）を占めていたが，いまはピストンと波面の間の長さ $ct-wt$ に押し縮められている．よって\n\\[ \\frac{\\Delta V}{V}=\\frac{Swt}{Sct}=\\boldsymbol{\\frac{w}{c}}. \\]\n断熱変化 $(p_0+\\Delta p)(V-\\Delta V)^\\gamma=p_0V^\\gamma$ より\n\\[ p_0+\\Delta p=p_0\\Bigl(1-\\frac{\\Delta V}{V}\\Bigr)^{-\\gamma}\\fallingdotseq p_0\\Bigl(1+\\gamma\\frac{\\Delta V}{V}\\Bigr)\\quad\\Longrightarrow\\quad \\Delta p=\\boldsymbol{\\frac{\\gamma p_0w}{c}}. \\]\n\n\\textbf{(2) 運動量と力積}\n\n時間 $t$ の間に動き出した気体の質量は，はじめ長さ $ct$ にあった分 $\\rho Sct$ で，それが速さ $w$ を得たので運動量の増加は $\\rho Sct\\cdot w$．この気体が受ける力は，左側（ピストン）から $(p_0+\\Delta p)S$，右側（静止した気体）から $p_0S$ で，合力は $\\Delta p\\,S$．よって\n\\[ \\Delta p\\,S\\,t=\\rho Sct\\,w\\quad\\Longrightarrow\\quad\\Delta p=\\boldsymbol{\\rho cw}. \\]\n\n\\textbf{(3) 音速}\n\n(1)，(2) の $\\Delta p$ を等しいとおくと $\\dfrac{\\gamma p_0w}{c}=\\rho cw$，すなわち\n\\[ c=\\boldsymbol{\\sqrt{\\frac{\\gamma p_0}{\\rho}}}. \\]\n理想気体では $p_0=\\dfrac{\\rho}{M}RT$ なので\n\\[ c=\\boldsymbol{\\sqrt{\\frac{\\gamma RT}{M}}}. \\]\n音速は圧力・密度の値そのものではなく温度とモル質量・比熱比で決まり，ピストンの速さ $w$ にもよらない．\n\n\\textbf{(4) 固い板に最も近い圧力の節}\n\n固い板の位置では気体が動けないので，板は\\textbf{変位の節}である．音波の圧力変化は気体の変位の「位置による変化の割合（伸び縮み）」に比例するので，変位の節は伸び縮みが最大の位置，すなわち\\textbf{圧力の腹}になる．圧力の節は変位の腹で，変位の節から $\\frac{\\lambda}{4}$ 離れている．隣り合う圧力の節の間隔は $d=\\frac{\\lambda}{2}$ なので，求める距離は\n\\[ \\frac{\\lambda}{4}=\\boldsymbol{\\frac{d}{2}}. \\]\n\n\\textbf{(5) 混合気体の組成}\n\n振動数が同じなので $d=\\frac{c}{2f}\\propto c$，よって $d^2\\propto c^2=\\dfrac{\\gamma RT}{M}$．混合気体では\n\\[ C_V=\\frac32Rx+\\frac52R(1-x)=\\Bigl(\\frac52-x\\Bigr)R,\\quad C_p=C_V+R=\\Bigl(\\frac72-x\\Bigr)R,\\quad \\gamma=\\frac{7-2x}{5-2x}, \\]\n\\[ M=4x+28(1-x)=28-24x\\ [\\text{g/mol}]. \\]\n窒素だけ（$x=0$）では $\\gamma=\\frac75$，$M=28$ なので\n\\[ \\frac{d^2}{d_0^{\\,2}}=\\frac{\\dfrac{7-2x}{(5-2x)(28-24x)}}{\\dfrac{7}{5\\cdot28}}=\\frac{20(7-2x)}{(5-2x)(28-24x)}=\\frac{15}{8}. \\]\n分母を払って整理すると\n\\[ 160(7-2x)=15(5-2x)(28-24x)\\ \\Longrightarrow\\ 720x^2-2320x+980=0\\ \\Longrightarrow\\ 36x^2-116x+49=0, \\]\n\\[ (2x-1)(18x-49)=0. \\]\n$0\\le x\\le1$ より $x=\\boldsymbol{\\dfrac12}$．（$x$ が増えると $M$ が減り $\\gamma$ が増えるので $d^2/d_0^{\\,2}$ は単調に増加し，解はただ1つである．）\n\n\\textbf{(6) 等温変化と誤った場合}\n\n等温変化なら $pV=$ 一定で，(1) は $\\Delta p=\\dfrac{p_0w}{c}$ となり $c=\\sqrt{\\dfrac{p_0}{\\rho}}=\\sqrt{\\dfrac{RT}{M}}$（ニュートンの音速）．この式で解釈すると比熱比の違いが無視され\n\\[ \\frac{d^2}{d_0^{\\,2}}=\\frac{28}{28-24x}=\\frac{15}{8}\\ \\Longrightarrow\\ x=\\boldsymbol{\\frac{49}{90}}\\fallingdotseq0.54. \\]\n実際の値 $0.50$ より大きく見積もる．これは，ヘリウムを混ぜると比熱比が大きくなる分（音速を上げる効果）まで，モル質量の減少によるものと誤って解釈するためである．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "一定速度で押し込むピストンがつくる圧縮波では，「体積の減少率 $w/c$ と断熱変化による圧力上昇」と「動き出した気体の運動量と力積」の2通りで圧力上昇を表すことができ，両者から $c=\\sqrt{\\gamma p/\\rho}=\\sqrt{\\gamma RT/M}$ が出る．したがって音速（定常波の節の間隔）は気体の比熱比とモル質量を反映し，混合気体の組成を音の測定から逆算できる．圧縮・膨張を等温とみなすと比熱比の寄与が抜け落ち，組成を誤って推定する．"
+ },
+ "concepts": [
+  "string-resonance",
+  "momentum-conservation",
+  "heat-temperature"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "音速",
+  "断熱変化",
+  "比熱比",
+  "定常波",
+  "混合気体",
+  "運動量と力積"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

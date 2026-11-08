@@ -1,0 +1,144 @@
+{
+ "id": "PHY-NUC-020",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "減速材の原子核との弾性散乱による中性子の減速（重心系での等方散乱とエネルギーの対数平均）",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "原子炉や中性子捕捉療法では，速い中性子を減速材の原子核との弾性衝突で遅くする．質量 $m$ の中性子が速さ $v$ で，静止している質量 $Am$ の原子核（$A\\ge1$）に衝突し，弾性的に散乱される場合を考える．原子核の熱運動や化学結合の影響は無視する．衝突前後の中性子の運動エネルギーを $E$，$E'$ とする．対数はすべて自然対数とし，必要なら $\\log2=0.693$，$\\log10=2.303$，$\\log11=2.398$，$\\log13=2.565$ を用いよ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "2粒子の重心の速度 $V_{\\rm G}$ と，重心とともに動く観測者から見た衝突前の中性子の速さ $u$ を $A,\\ v$ で表せ．弾性衝突では，重心とともに動く観測者から見た各粒子の速さは衝突の前後で変わらない．この観測者から見て中性子の進む向きが角 $\\Phi$ だけ変わったとして，$\\dfrac{E'}{E}$ を $A$ と $\\Phi$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\dfrac{E'}{E}$ の最小値 $\\alpha$ を $A$ で表せ．また，水素（$A=1$）と炭素（$A=12$）について $\\alpha$ の値を求めよ（炭素は有効数字2桁）．"
+     },
+     {
+      "id": "3",
+      "tex": "重心とともに動く観測者から見た散乱の向きがあらゆる方向に一様なとき，$\\cos\\Phi$ は $-1$ から $1$ までの値を一様に（どの値も同じ確からしさで）とる．このとき $\\dfrac{E'}{E}$ はどのような範囲にどのように分布するか述べ，その平均値を $A$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "1回の衝突によるエネルギーの減り方を対数で測り，$\\xi=-\\left\\langle\\log\\dfrac{E'}{E}\\right\\rangle$（$\\langle\\ \\rangle$ は (3) の分布での平均）とする．$\\xi$ を $\\alpha$ で表し（$A>1$ の場合），水素と炭素について $\\xi$ の値を求めよ（炭素は有効数字3桁）．"
+     },
+     {
+      "id": "5",
+      "tex": "$2.0$ MeV の中性子を $0.025$ eV まで減速するのに要する衝突回数 $N$ を，水素と炭素のそれぞれについて有効数字2桁で見積もれ．ただし，多数回の衝突の後の $\\log E$ の減少量は「1回あたりの平均 $\\xi$ × 回数」で近似できるものとする．また，水素について「1回の衝突ごとにエネルギーが (3) の平均値の割合に減る」と考えて見積もると何回になるかを求め，この見積もりが (5) 前半の値より大きくなる理由を簡潔に述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：減速材の原子核との弾性散乱による中性子の減速（重心系での等方散乱とエネルギーの対数平均）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：減速材の原子核との弾性散乱による中性子の減速（重心系での等方散乱とエネルギーの対数平均）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V_{\\rm G}=\\dfrac{v}{A+1}$，$u=\\dfrac{Av}{A+1}$，$\\dfrac{E'}{E}=\\dfrac{A^2+2A\\cos\\Phi+1}{(A+1)^2}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\alpha=\\left(\\dfrac{A-1}{A+1}\\right)^2$，水素 $0$，炭素 $0.72$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\alpha\\le\\dfrac{E'}{E}\\le1$ の範囲に一様に分布し，平均値は $\\dfrac{1+\\alpha}{2}=\\dfrac{A^2+1}{(A+1)^2}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\xi=1+\\dfrac{\\alpha\\log\\alpha}{1-\\alpha}$，水素 $1$，炭素 $0.158$"
+   },
+   {
+    "id": "5",
+    "tex": "水素 $N\\approx18$ 回，炭素 $N\\approx1.2\\times10^2$ 回．平均値の割合（$\\frac12$）で考えると約 $26$ 回．$\\log$ は上に凸なので $\\left\\langle\\log\\frac{E'}{E}\\right\\rangle<\\log\\left\\langle\\frac{E'}{E}\\right\\rangle$ となり，平均の割合で考えると1回あたりの（対数での）減少を小さく見積もるから"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　重心の速度は $V_{\\rm G}=\\dfrac{mv}{m+Am}=\\boldsymbol{\\dfrac{v}{A+1}}$．重心とともに動く観測者から見た中性子の速さは $u=v-V_{\\rm G}=\\boldsymbol{\\dfrac{Av}{A+1}}$．\n衝突は内力によるので重心速度は変わらず，弾性衝突なので重心系での速さ $u$ も変わらない．散乱後の中性子の速度は，重心速度 $\\vec V_{\\rm G}$ に，向きが $\\Phi$ だけ変わった大きさ $u$ のベクトルを加えたものになる（解答図）．余弦定理より\n\\[ v'^2=V_{\\rm G}^2+u^2+2V_{\\rm G}u\\cos\\Phi=\\frac{v^2\\left(1+A^2+2A\\cos\\Phi\\right)}{(A+1)^2} \\]\n\\[ \\therefore\\ \\frac{E'}{E}=\\frac{v'^2}{v^2}=\\boldsymbol{\\frac{A^2+2A\\cos\\Phi+1}{(A+1)^2}}. \\]\n\n\\textbf{(2)}　最小は $\\cos\\Phi=-1$（正面衝突ではね返る場合）で $\\alpha=\\boldsymbol{\\left(\\dfrac{A-1}{A+1}\\right)^2}$．（実験室系の運動量保存とエネルギー保存から正面衝突を解いても，中性子の速度は $\\frac{1-A}{1+A}v$ となり一致する．）水素は $\\alpha=\\boldsymbol{0}$，炭素は $\\alpha=\\left(\\frac{11}{13}\\right)^2=\\frac{121}{169}=\\boldsymbol{0.72}$．重い原子核ほど1回では少ししか減速できない．\n\n\\textbf{(3)}　(1) の結果は $\\cos\\Phi$ の1次式\n\\[ \\frac{E'}{E}=\\frac{1+\\alpha}{2}+\\frac{1-\\alpha}{2}\\cos\\Phi \\]\n（$\\frac{A^2+1}{(A+1)^2}=\\frac{1+\\alpha}{2}$，$\\frac{2A}{(A+1)^2}=\\frac{1-\\alpha}{2}$ を確かめよ）である．1次式による変換は一様な分布を一様な分布に写すので，$\\dfrac{E'}{E}$ は $\\boldsymbol{\\alpha\\le\\dfrac{E'}{E}\\le1}$ の範囲に一様に分布する．平均値は区間の中点で $\\boldsymbol{\\dfrac{1+\\alpha}{2}=\\dfrac{A^2+1}{(A+1)^2}}$（水素では $\\frac12$）．\n\n\\textbf{(4)}　$x=\\dfrac{E'}{E}$ が $[\\alpha,1]$ に一様に分布するので\n\\[ \\langle\\log x\\rangle=\\frac{1}{1-\\alpha}\\int_\\alpha^1\\log x\\,dx=\\frac{\\big[x\\log x-x\\big]_\\alpha^1}{1-\\alpha}=\\frac{-1-\\alpha\\log\\alpha+\\alpha}{1-\\alpha}=-1-\\frac{\\alpha\\log\\alpha}{1-\\alpha}. \\]\nよって $\\xi=\\boldsymbol{1+\\dfrac{\\alpha\\log\\alpha}{1-\\alpha}}$．水素では $\\int_0^1\\log x\\,dx=-1$ より $\\xi=\\boldsymbol{1}$（$\\alpha\\to0$ の極限とも一致）．炭素では $\\log\\alpha=2(\\log11-\\log13)=-0.334$，$\\alpha=0.7160$ として\n\\[ \\xi=1+\\frac{0.7160\\times(-0.334)}{0.2840}=1-0.842=\\boldsymbol{0.158}. \\]\n\n\\textbf{(5)}　$\\log\\dfrac{2.0\\times10^6}{0.025}=\\log(8\\times10^7)=3\\log2+7\\log10=2.079+16.121=18.20$．$N$ 回の衝突で $\\log E$ は約 $N\\xi$ 減るので，$N\\approx\\dfrac{18.20}{\\xi}$：\n\\[ \\text{水素}\\ N\\approx\\boldsymbol{18}\\ \\text{回},\\qquad \\text{炭素}\\ N\\approx\\frac{18.20}{0.158}=115\\approx\\boldsymbol{1.2\\times10^2}\\ \\text{回}. \\]\n1回ごとに平均値 $\\frac12$ 倍になると考えると $N'=\\dfrac{18.20}{\\log2}=\\dfrac{18.20}{0.693}\\approx\\boldsymbol{26}$ 回となり，多すぎる．\n\n理由：$N$ 回後のエネルギーは各回の割合 $x_1x_2\\cdots x_N$ の積で，その対数 $\\sum\\log x_i$ は回数が多いと $N\\langle\\log x\\rangle$ に近づく（典型的な中性子の値）．$\\log$ は上に凸なので $\\langle\\log x\\rangle<\\log\\langle x\\rangle$（水素では $-1<\\log\\frac12=-0.693$）．平均の割合を使う見積もりは，まれに少ししか減速しない衝突に引きずられて1回あたりの減速を小さく評価してしまう．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "弾性散乱を重心系で見ると中性子の速さは変わらず向きだけが変わるので，$E'/E$ は $\\cos\\Phi$ の1次式となり，等方散乱では $[\\alpha,1]$（$\\alpha=\\left(\\frac{A-1}{A+1}\\right)^2$）に一様に分布する．多数回の減速は割合の積なので，回数は平均の割合ではなく対数の平均 $\\xi=1+\\frac{\\alpha\\log\\alpha}{1-\\alpha}$ で数える必要がある（$\\log$ の凸性）．"
+ },
+ "concepts": [
+  "bohr-model",
+  "restitution",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "中性子の減速",
+  "弾性衝突",
+  "重心系",
+  "等方散乱",
+  "対数平均",
+  "減速材"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

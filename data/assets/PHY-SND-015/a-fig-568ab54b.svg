@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+  <line x1="40" y1="260" x2="570" y2="260" stroke="#222" stroke-width="1" marker-end="url(#a-ak)"/>
+  <text x="575" y="265" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">x</text>
+  <line x1="300" y1="260" x2="300" y2="30" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="40" y1="260" x2="40" y2="30" stroke="#222" stroke-width="1" marker-end="url(#a-ak)"/>
+  <text x="48" y="40" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">t</text>
+  <line x1="80" y1="260" x2="146.0" y2="60" stroke="#222" stroke-width="1.6"/>
+  <text x="70" y="280" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">S<tspan baseline-shift="sub" font-size="9">1</tspan> の位置</text>
+  <line x1="520" y1="260" x2="520" y2="60" stroke="#222" stroke-width="1.6"/>
+  <text x="496" y="280" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">S<tspan baseline-shift="sub" font-size="9">2</tspan> の位置</text>
+  <text x="288" y="280" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">原点</text>
+  <line x1="154.8" y1="260.0" x2="193.6" y2="60.0" stroke="#1f5fbf" stroke-width="1.2"/><line x1="203.2" y1="260.0" x2="242.0" y2="60.0" stroke="#1f5fbf" stroke-width="1.2"/><line x1="251.6" y1="260.0" x2="290.4" y2="60.0" stroke="#1f5fbf" stroke-width="1.2"/><line x1="300.0" y1="260.0" x2="338.8" y2="60.0" stroke="#1f5fbf" stroke-width="1.2"/><line x1="348.4" y1="260.0" x2="387.2" y2="60.0" stroke="#1f5fbf" stroke-width="1.2"/><line x1="396.8" y1="260.0" x2="435.6" y2="60.0" stroke="#1f5fbf" stroke-width="1.2"/><line x1="445.2" y1="260.0" x2="484.0" y2="60.0" stroke="#1f5fbf" stroke-width="1.2"/>
+  <text x="340" y="22" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf">節の位置（速度 <tspan font-family="Times New Roman, serif" font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="9">n</tspan> で移動）</text>
+</svg>

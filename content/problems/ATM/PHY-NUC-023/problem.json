@@ -1,0 +1,144 @@
+{
+ "id": "PHY-NUC-023",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "高密度星の表面での降着エネルギーと核融合エネルギーの比較，粒子の種類による放出条件の違い",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $M$，半径 $R$ の高密度の星の表面に，伴星から流れ出した水素原子が降り積もる．万有引力定数を $G$，水素原子の質量を $m$ とする．降り積もった水素の一部は核融合\n\\[ 4\\,{}^{1}\\mathrm{H}\\ \\longrightarrow\\ {}^{4}\\mathrm{He} \\]\nを起こし，この反応1回あたりエネルギー $Q$ を放出する．$Q$ は ${}^4\\mathrm{He}$ 原子の静止エネルギーに比べて十分小さいので，${}^4\\mathrm{He}$ 原子の質量は $4m$ としてよい．星の自転，電子の存在，ニュートリノなどで失われるエネルギー，星以外の物体による万有引力は考えない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "無限遠で静止していた水素原子が星の表面に達したときの運動エネルギー $K$ を求めよ．また，降り積もった水素がすべて ${}^4\\mathrm{He}$ に変わるとき，同じ量の水素について「落下で解放されるエネルギー」は「核融合で放出されるエネルギー」の何倍か．その値 $\\eta$ を $K,\\ Q$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "表面に降り積もって静止した $N$ 個の水素原子の層（落下の運動エネルギーはすでに放射として失われている）のうち，割合 $x$ $(0<x\\le1)$ の水素原子が核融合を起こした．放出されたエネルギーは，この層にあるすべての原子（残った ${}^1\\mathrm{H}$ と生じた ${}^4\\mathrm{He}$）に等しく分配され，それぞれの原子の上向きの運動エネルギーになるとする．1原子あたりのエネルギー $\\varepsilon$ を $x,\\ Q$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) で，層の ${}^1\\mathrm{H}$ 原子が無限遠まで飛び去るための $x$ の最小値 $x_{\\mathrm H}$ と，${}^4\\mathrm{He}$ 原子が無限遠まで飛び去るための $x$ の最小値 $x_{\\mathrm{He}}$ を，$K,\\ Q$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$G=6.67\\times10^{-11}\\,\\mathrm{N\\cdot m^2/kg^2}$，$m=1.67\\times10^{-27}\\,\\mathrm{kg}$，$Q=4.28\\times10^{-12}\\,\\mathrm J$ とする．\n (a) 白色矮星（$M=1.2\\times10^{30}\\,\\mathrm{kg}$，$R=7.0\\times10^{6}\\,\\mathrm m$）について，$\\eta,\\ x_{\\mathrm H},\\ x_{\\mathrm{He}}$ を有効数字2桁で求めよ．\n (b) 中性子星（$M=2.8\\times10^{30}\\,\\mathrm{kg}$，$R=1.2\\times10^{4}\\,\\mathrm m$）について $\\eta$ を有効数字2桁で求め，核融合による爆発で物質が無限遠に放出されうるかを判定せよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$M=2.8\\times10^{30}\\,\\mathrm{kg}$ のまま半径 $R$ だけを変えた星を考える．「$x$ を適当に選べば ${}^1\\mathrm H$ は放出できるが，${}^4\\mathrm{He}$ はどのような $x$ でも放出できない」ような $R$ の範囲を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：高密度星の表面での降着エネルギーと核融合エネルギーの比較，粒子の種類による放出条件の違い",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：高密度星の表面での降着エネルギーと核融合エネルギーの比較，粒子の種類による放出条件の違い",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$K=\\dfrac{GMm}{R}$，$\\eta=\\dfrac{4K}{Q}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\varepsilon=\\dfrac{xQ}{4-3x}$"
+   },
+   {
+    "id": "3",
+    "tex": "$x_{\\mathrm H}=\\dfrac{4K}{Q+3K}$，$x_{\\mathrm{He}}=\\dfrac{16K}{Q+12K}$"
+   },
+   {
+    "id": "4",
+    "tex": "(a) $\\eta=1.8\\times10^{-2}$，$x_{\\mathrm H}=1.8\\times10^{-2}$，$x_{\\mathrm{He}}=6.8\\times10^{-2}$　(b) $\\eta=24$，$K>Q$ なので放出されない"
+   },
+   {
+    "id": "5",
+    "tex": "$7.3\\times10^{4}\\,\\mathrm m<R<2.9\\times10^{5}\\,\\mathrm m$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 万有引力だけがはたらくので力学的エネルギーが保存する．無限遠で静止（エネルギー $0$）だから\n\\[ 0=K-\\frac{GMm}{R}\\qquad\\therefore\\ \\boldsymbol{K=\\frac{GMm}{R}} \\]\n水素原子 $4$ 個あたり，落下で $4K$，核融合で $Q$ が解放されるので $\\boldsymbol{\\eta=\\dfrac{4K}{Q}}$．\n\n\\textbf{(2)} 核融合を起こすのは $xN$ 個で，反応は $\\dfrac{xN}{4}$ 回，放出エネルギーは $\\dfrac{xN}{4}Q$．反応後の原子の数は ${}^1\\mathrm H$ が $(1-x)N$ 個，${}^4\\mathrm{He}$ が $\\dfrac{xN}{4}$ 個で，合計 $\\dfrac{(4-3x)N}{4}$ 個．等分配するから\n\\[ \\boldsymbol{\\varepsilon=\\frac{xNQ/4}{(4-3x)N/4}=\\frac{xQ}{4-3x}} \\]\n$\\varepsilon$ は $x$ の増加関数で，$x=1$（全部が He）で最大値 $Q$ をとる．\n\n\\textbf{(3)} 表面から無限遠に達する条件は，力学的エネルギー保存より「運動エネルギー $\\ge$ 万有引力による位置エネルギーの深さ」である．${}^1\\mathrm H$ では $\\varepsilon\\ge\\dfrac{GMm}{R}=K$，${}^4\\mathrm{He}$（質量 $4m$）では $\\varepsilon\\ge4K$．等分配なので\\textbf{軽い原子ほど飛び去りやすい}．$\\dfrac{xQ}{4-3x}=K$ を解いて\n\\[ \\boldsymbol{x_{\\mathrm H}=\\frac{4K}{Q+3K}},\\qquad \\boldsymbol{x_{\\mathrm{He}}=\\frac{16K}{Q+12K}}\\quad(K\\to4K) \\]\nただしこれらが $1$ 以下のとき（$K\\le Q$，$4K\\le Q$）に限って意味をもつ．\n\n\\textbf{(4)(a)} $K=\\dfrac{6.67\\times10^{-11}\\times1.2\\times10^{30}\\times1.67\\times10^{-27}}{7.0\\times10^{6}}=1.91\\times10^{-14}\\,\\mathrm J$．\n\\[ \\eta=\\frac{4\\times1.91\\times10^{-14}}{4.28\\times10^{-12}}=\\boldsymbol{1.8\\times10^{-2}},\\quad x_{\\mathrm H}=\\frac{7.64\\times10^{-14}}{4.34\\times10^{-12}}=\\boldsymbol{1.8\\times10^{-2}},\\quad x_{\\mathrm{He}}=\\frac{3.06\\times10^{-13}}{4.51\\times10^{-12}}=\\boldsymbol{6.8\\times10^{-2}} \\]\n白色矮星では核融合のエネルギーが落下のエネルギーより圧倒的に大きく，層の数％が燃えるだけで物質が吹き飛ぶ．\n\n\\textbf{(b)} $K=\\dfrac{6.67\\times10^{-11}\\times2.8\\times10^{30}\\times1.67\\times10^{-27}}{1.2\\times10^{4}}=2.6\\times10^{-11}\\,\\mathrm J$ で $\\eta=\\dfrac{4K}{Q}=\\boldsymbol{24}$．中性子星では落下のエネルギーの方が核融合よりずっと大きい．$\\varepsilon$ の最大値は $Q=4.28\\times10^{-12}\\,\\mathrm J<K$ なので，すべてが燃えても ${}^1\\mathrm H$ すら脱出できず，\\textbf{物質は放出されない}（エネルギーは熱として放射される）．\n\n\\textbf{(5)} $\\varepsilon$ の上限は $Q$（$x\\to1$）である．${}^1\\mathrm H$ が放出できる条件は $x_{\\mathrm H}<1$，すなわち $K<Q$．${}^4\\mathrm{He}$ がどの $x$ でも放出できない条件は $4K>Q$．よって\n\\[ \\frac{Q}{4}<K<Q\\iff \\frac{GMm}{Q}<R<\\frac{4GMm}{Q} \\]\n$\\dfrac{GMm}{Q}=\\dfrac{6.67\\times10^{-11}\\times2.8\\times10^{30}\\times1.67\\times10^{-27}}{4.28\\times10^{-12}}=7.3\\times10^{4}\\,\\mathrm m$ だから\n\\[ \\boldsymbol{7.3\\times10^{4}\\,\\mathrm m<R<2.9\\times10^{5}\\,\\mathrm m} \\]\nこの範囲では，層の大部分が燃えたときに残ったわずかな水素だけが吹き飛ぶ．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "降着で解放されるエネルギー（1核子あたり $GMm/R$）と核融合のエネルギー（質量欠損）の大小は星のコンパクトさで決まり，中性子星では降着が，白色矮星では核融合が勝つ．核融合のエネルギーを層の全原子に等分配すると，脱出に必要なエネルギーは質量に比例するので軽い H が先に飛び去り，燃焼割合 $x$ と星の半径によって「何も出ない／H だけ出る／He も出る」が切り替わる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "universal-gravitation",
+  "mass-energy"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "核融合",
+  "質量欠損",
+  "万有引力",
+  "脱出条件",
+  "中性子星",
+  "白色矮星"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

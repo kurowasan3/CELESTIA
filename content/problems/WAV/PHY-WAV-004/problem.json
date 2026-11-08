@@ -1,0 +1,143 @@
+{
+ "id": "PHY-WAV-004",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "線密度の異なる2本の弦をつないだ弦の固有振動（接合点が節・腹の両方）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，線密度 $\\rho$，長さ $l$ の弦1と，線密度 $4\\rho$，長さ $\\frac{l}{2}$ の弦2を点 B で結んだ．弦1の端 A はなめらかな滑車にかけて質量 $M$ のおもりをつるし，弦2の端 C には振動数を変えられる振動源をつないだ．弦の張力の大きさを $S$ とし，A と C はともに定常波の節とみなす．結び目 B の質量は無視でき，B の両側で張力が等しいので，B では弦の変位と弦の傾きがともに連続している．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "弦1，弦2を伝わる横波の速さ $v_1$，$v_2$ を求めよ．また，波が弦1の全長，弦2の全長を伝わるのにかかる時間 $t_1$，$t_2$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "B が節となる定常波（共振）が生じる振動数を，正の整数 $n$ を用いてすべて表せ．また，このとき弦2にできる定常波の腹の振幅は，弦1の腹の振幅の何倍か．"
+     },
+     {
+      "id": "3",
+      "tex": "B が腹となる定常波も生じうる．その振動数を正の整数 $m$ を用いてすべて表せ．また，このとき弦2の腹の振幅は弦1の腹の振幅の何倍か．"
+     },
+     {
+      "id": "4",
+      "tex": "この弦の共振振動数は (2)，(3) で求めたもので尽くされることが知られている．共振振動数を小さい順に並べた列は，線密度 $\\rho$ の一様な弦（両端が節，張力 $S$）の固有振動数の列と完全に一致する．その一様な弦の長さを求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "振動源の振動数を $f_0$ に固定し，おもりの質量 $M$ を小さい値から徐々に大きくしていく．共振が起こる最大の $M$ を求めよ．重力加速度の大きさを $g$ とする．また，そのときの弦全体の定常波の様子を，B の位置に注目して説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：線密度の異なる2本の弦をつないだ弦の固有振動（接合点が節・腹の両方）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：線密度の異なる2本の弦をつないだ弦の固有振動（接合点が節・腹の両方）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_1=\\sqrt{\\frac{S}{\\rho}}$，$v_2=\\frac12\\sqrt{\\frac{S}{\\rho}}$，$t_1=t_2=l\\sqrt{\\frac{\\rho}{S}}$"
+   },
+   {
+    "id": "2",
+    "tex": "$f=\\frac{n}{2l}\\sqrt{\\frac{S}{\\rho}}$，$\\frac12$ 倍"
+   },
+   {
+    "id": "3",
+    "tex": "$f=\\frac{2m-1}{4l}\\sqrt{\\frac{S}{\\rho}}$，1 倍"
+   },
+   {
+    "id": "4",
+    "tex": "$2l$"
+   },
+   {
+    "id": "5",
+    "tex": "$M=\\frac{16\\rho l^2f_0^{\\,2}}{g}$；AB，BC がともに $\\frac14$ 波長で，B が腹（両側の振幅が等しい）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 張力は共通に $S$ なので\n\\[ v_1=\\boldsymbol{\\sqrt{\\frac{S}{\\rho}}},\\qquad v_2=\\sqrt{\\frac{S}{4\\rho}}=\\boldsymbol{\\frac12\\sqrt{\\frac{S}{\\rho}}} \\]\n\\[ t_1=\\frac{l}{v_1}=\\boldsymbol{l\\sqrt{\\frac{\\rho}{S}}},\\qquad t_2=\\frac{l/2}{v_2}=\\boldsymbol{l\\sqrt{\\frac{\\rho}{S}}} \\]\n2本の弦を波が渡る時間が等しいことが，この問題の鍵になる．\n\n\\textbf{(2) B が節の場合}\n\n振動数 $f$ は弦1，弦2で共通（B で振動が受け渡されるため）．波長は $\\lambda_1=\\frac{v_1}{f}$，$\\lambda_2=\\frac{v_2}{f}=\\frac{\\lambda_1}{2}$．A と B が節なので弦1の長さは半波長の整数倍：$l=n\\cdot\\frac{\\lambda_1}{2}$．このとき弦2では $\\frac{l}{2}=n\\cdot\\frac{\\lambda_2}{2}$ となり，B と C がともに節という条件も自動的に満たされる．よって\n\\[ f=\\frac{v_1}{\\lambda_1}=\\boldsymbol{\\frac{n}{2l}\\sqrt{\\frac{S}{\\rho}}}\\quad(n=1,2,\\dots) \\]\n振幅比：B 付近の変位は，弦1では $y=A_1\\sin k_1 s$，弦2では $y=A_2\\sin k_2 s'$（$s,s'$ は B からの距離，$k=\\frac{2\\pi}{\\lambda}$）の形で，B での傾きの大きさはそれぞれ $A_1k_1$，$A_2k_2$ である．傾きが連続だから $A_1k_1=A_2k_2$，\n\\[ \\frac{A_2}{A_1}=\\frac{k_1}{k_2}=\\frac{\\lambda_2}{\\lambda_1}=\\boldsymbol{\\frac12}\\ \\text{倍} \\]\n\n\\textbf{(3) B が腹の場合}\n\nA から B までは節から腹なので $l=(2m-1)\\frac{\\lambda_1}{4}$．すると $\\frac{l}{2}=(2m-1)\\frac{\\lambda_2}{4}$ で，弦2でも B（腹）から C（節）まで $\\frac14$ 波長の奇数倍となり条件と矛盾しない．\n\\[ f=\\boldsymbol{\\frac{2m-1}{4l}\\sqrt{\\frac{S}{\\rho}}}\\quad(m=1,2,\\dots) \\]\n腹では傾きが 0 なので傾きの連続は自動的に成り立ち，変位の連続から両側の腹の振幅が等しい：$\\boldsymbol{1}$ 倍．\n\n\\textbf{(4)} (2)，(3) をまとめると，共振振動数は\n\\[ f_j=\\frac{j}{4l}\\sqrt{\\frac{S}{\\rho}}\\quad(j=1,2,3,\\dots) \\]\n（$j$ が奇数なら B が腹，偶数なら B が節）．線密度 $\\rho$ の一様な弦（長さ $L$）の固有振動数は $\\frac{j}{2L}\\sqrt{\\frac{S}{\\rho}}$ なので，一致するのは $L=\\boldsymbol{2l}$．これは，速さ $v_1$ で渡るのに弦全体と同じ時間 $t_1+t_2=2l\\sqrt{\\rho/S}$ がかかる長さである．「全長 $\\frac32l$ の弦」と考えると誤る．\n\n\\textbf{(5)} $M$ を大きくすると $S=Mg$ が増えて (4) の振動数がすべて上がる．$f_0$ で共振するのは $f_0=\\frac{j}{4l}\\sqrt{\\frac{Mg}{\\rho}}$，すなわち $M=\\frac{16\\rho l^2f_0^{\\,2}}{j^2g}$ のときで，最大は $j=1$：\n\\[ M=\\boldsymbol{\\frac{16\\rho l^2f_0^{\\,2}}{g}} \\]\nこのとき B が腹で，AB 間・BC 間はともに $\\frac14$ 波長，両側の振幅は等しい（解答図（ア））．B が節とならない基本振動であることに注意する．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "接合点では振動数・張力が共通で，変位と傾きが連続する．接合点が節なら振幅比は波数の逆比，腹なら振幅は等しい．2本の弦を波が渡る時間が等しいと，節・腹の両方の系列が合わさって「同じ渡り時間の一様な弦」と同じ固有振動数列になる．"
+ },
+ "concepts": [
+  "wave-basics",
+  "string-resonance",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "弦の共振",
+  "線密度",
+  "境界条件",
+  "固有振動",
+  "定常波"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

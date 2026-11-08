@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" width="520" height="240">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<circle cx="110" cy="120" r="45" fill="none" stroke="#222" stroke-width="1.6"/>
+<circle cx="395" cy="120" r="90" fill="none" stroke="#222" stroke-width="1.6"/>
+<line x1="155.0" y1="116.0" x2="305.0" y2="116.0" stroke="#222" stroke-width="1.6"/>
+<line x1="155.0" y1="124.0" x2="305.0" y2="124.0" stroke="#222" stroke-width="1.6"/>
+<circle cx="230" cy="120" r="11" fill="none" stroke="#222" stroke-width="1.6"/>
+<line x1="230.0" y1="109.0" x2="230.0" y2="131.0" stroke="#222" stroke-width="1.6"/>
+<line x1="230.0" y1="109.0" x2="230.0" y2="96.0" stroke="#222" stroke-width="1.6"/>
+<line x1="222.0" y1="96.0" x2="238.0" y2="96.0" stroke="#222" stroke-width="1.6"/>
+<text x="230.0" y="88.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">コック</text>
+<line x1="110.0" y1="120.0" x2="81.1" y2="154.5" stroke="#222" stroke-width="1"/>
+<text x="104" y="152" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="end">R<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<line x1="395.0" y1="120.0" x2="463.9" y2="62.1" stroke="#222" stroke-width="1"/>
+<text x="430" y="72" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">R<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<text x="30" y="40" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">大気圧 <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16">p</tspan><tspan baseline-shift="sub" font-size="10">0</tspan></text>
+</svg>

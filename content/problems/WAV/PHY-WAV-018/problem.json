@@ -1,0 +1,121 @@
+{
+ "id": "PHY-WAV-018",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "面に垂直に動く反射板による平面波の斜め反射（反射角の変化と戻らない反射波）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止した一様な媒質中を速さ $V$ で伝わる平面波（波長 $\\lambda$）が，十分に広い平らな反射板 W に入射角 $\\alpha\\ \\left(0<\\alpha<\\frac{\\pi}{2}\\right)$ で入射している．図のように，媒質に対して静止した座標系で W に沿って $x$ 軸，W の法線に沿って入射側を正の向きとする $y$ 軸をとる．W は時刻 $t=0$ に $y=0$ にあり，以後 $y$ 軸の負の向き（入射側から遠ざかる向き）に一定の速さ $v$ で動いて，時刻 $t$ には $y=-vt$ にある．ただし $v<V\\cos\\alpha$ とし，入射波は $t\\ge 0$ に W に当たるものとする．\n\n反射は W 上の各点で起こり，W 上のどの点でも，入射波の山が届いた瞬間にその点から反射波の山が出るものとする．反射波の進む向きが W の法線（$y$ 軸の正の向き）となす角を反射角 $\\alpha'$，反射波の波長を $\\lambda'$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "入射波の1つの山（波面）と W との交点は，W に沿って（$x$ 方向に）どれだけの速さで動くか．また，W 上の1点が受け取る入射波の振動数 $f_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "反射波の山と W との交点が W に沿って動く速さを $V$，$v$，$\\alpha'$ で表せ．これを (1) と比べることにより，$\\alpha$ と $\\alpha'$ の間に\n  \\[ V\\sin\\frac{\\alpha'-\\alpha}{2}=v\\sin\\frac{\\alpha'+\\alpha}{2} \\]\n  が成り立つことを示せ．また，$\\lambda'$ を $\\lambda$，$\\alpha$，$\\alpha'$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\alpha=\\dfrac{\\pi}{3}$ のとき，反射波が W に沿って進む（$\\alpha'=\\dfrac{\\pi}{2}$）ような $v$ の値 $v_{\\rm c}$ を $V$ で表せ．また，そのときの $\\lambda'$ を $\\lambda$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\alpha=\\dfrac{\\pi}{3}$，$v_{\\rm c}<v<\\dfrac{V}{2}$ のとき，入射側の $y>0$ の位置に静止している観測者は，W からの反射波を観測できるか．反射波の波面の $y$ 方向の動きと W の動きを比べて，理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：面に垂直に動く反射板による平面波の斜め反射（反射角の変化と戻らない反射波）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "交点の速さ $\\dfrac{V-v\\cos\\alpha}{\\sin\\alpha}$，$f_1=\\dfrac{V-v\\cos\\alpha}{\\lambda}$"
+   },
+   {
+    "id": "2",
+    "tex": "交点の速さ $\\dfrac{V+v\\cos\\alpha'}{\\sin\\alpha'}$，$\\lambda'=\\dfrac{\\sin\\alpha'}{\\sin\\alpha}\\lambda$"
+   },
+   {
+    "id": "3",
+    "tex": "$v_{\\rm c}=(2-\\sqrt3)V$，$\\lambda'=\\dfrac{2}{\\sqrt3}\\lambda$"
+   },
+   {
+    "id": "4",
+    "tex": "観測できない（$\\alpha'>\\frac{\\pi}{2}$ となり反射波は $y$ の負の向きに進むが，その $y$ 方向の速さ $V|\\cos\\alpha'|$ は $v$ より小さく，反射波は $y\\le 0$ の W の前方にとどまって W を追いかけるだけである）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{考え方}　板が動くと「入射角＝反射角」は成り立たない．板の上で入射波の山と反射波の山がつねに同じ点で出会うこと，すなわち W 上での「山の交点の間隔」と「交点の動く速さ」が入射波と反射波で共通であることが，反射の法則に代わる条件になる．\n\n\\textbf{(1)}　入射波の進む向きの単位ベクトルは $(\\sin\\alpha,\\,-\\cos\\alpha)$ なので，1つの山は $x\\sin\\alpha-y\\cos\\alpha=Vt+c$（$c$ は定数）と表せる．W 上 $y=-vt$ を代入すると\n\\[ x\\sin\\alpha=(V-v\\cos\\alpha)t+c \\quad\\therefore\\quad x=\\frac{V-v\\cos\\alpha}{\\sin\\alpha}\\,t+\\frac{c}{\\sin\\alpha} \\]\nよって交点は $x$ 方向に速さ $\\boldsymbol{\\dfrac{V-v\\cos\\alpha}{\\sin\\alpha}}$ で動く．一方，ある瞬間の W 上での山と山の間隔は $\\dfrac{\\lambda}{\\sin\\alpha}$ である（W は $x$ 軸に平行な直線なので，この間隔は W の運動によらない）．W 上の1点を通過する山の数は毎秒（交点の速さ）$\\div$（間隔）だから\n\\[ f_1=\\frac{V-v\\cos\\alpha}{\\sin\\alpha}\\cdot\\frac{\\sin\\alpha}{\\lambda}=\\boldsymbol{\\frac{V-v\\cos\\alpha}{\\lambda}} \\]\nこれは遠ざかる観測者のドップラー効果（W の速度の，波の進む向きの成分が $v\\cos\\alpha$）と一致する．\n\n\\textbf{(2)}　反射波の進む向きは $(\\sin\\alpha',\\,\\cos\\alpha')$ なので，山は $x\\sin\\alpha'+y\\cos\\alpha'=Vt+c'$．$y=-vt$ を代入して $x=\\dfrac{V+v\\cos\\alpha'}{\\sin\\alpha'}\\,t+\\dfrac{c'}{\\sin\\alpha'}$．交点の速さは $\\boldsymbol{\\dfrac{V+v\\cos\\alpha'}{\\sin\\alpha'}}$ である．\n\n入射波の山の交点からそのまま反射波の山が出るので，両者の交点はつねに一致し，速さが等しい：\n\\[ \\frac{V-v\\cos\\alpha}{\\sin\\alpha}=\\frac{V+v\\cos\\alpha'}{\\sin\\alpha'} \\]\n分母を払うと $V(\\sin\\alpha'-\\sin\\alpha)=v(\\sin\\alpha'\\cos\\alpha+\\cos\\alpha'\\sin\\alpha)=v\\sin(\\alpha+\\alpha')$．和積の公式と2倍角の公式から\n\\[ 2V\\cos\\frac{\\alpha'+\\alpha}{2}\\sin\\frac{\\alpha'-\\alpha}{2}=2v\\sin\\frac{\\alpha'+\\alpha}{2}\\cos\\frac{\\alpha'+\\alpha}{2} \\]\n$\\alpha'=\\pi-\\alpha$（進む向きが入射波と同じ＝入射波そのもの）は反射波ではないので $\\cos\\frac{\\alpha'+\\alpha}{2}\\neq0$ で割ってよく，\n\\[ V\\sin\\frac{\\alpha'-\\alpha}{2}=v\\sin\\frac{\\alpha'+\\alpha}{2} \\]\nが得られる．$v=0$ なら $\\alpha'=\\alpha$ に戻る．\n\nまた，W 上の山の間隔も一致するので $\\dfrac{\\lambda}{\\sin\\alpha}=\\dfrac{\\lambda'}{\\sin\\alpha'}$，すなわち $\\boldsymbol{\\lambda'=\\dfrac{\\sin\\alpha'}{\\sin\\alpha}\\lambda}$．\n（確認：W の上で受けた振動数 $f_1$ の波を，波の進む向きに対して速さ $v\\cos\\alpha'$ で遠ざかりながら出すので $\\lambda'=\\dfrac{V+v\\cos\\alpha'}{f_1}$．これと (1) の $f_1$ から得られる比は，上の交点の速さの一致の式と同じである．）\n\n\\textbf{(3)}　$\\alpha=\\frac{\\pi}{3}$，$\\alpha'=\\frac{\\pi}{2}$ を代入すると $V\\sin\\frac{\\pi}{12}=v\\sin\\frac{5\\pi}{12}=v\\cos\\frac{\\pi}{12}$ だから\n\\[ v_{\\rm c}=V\\tan\\frac{\\pi}{12}=\\boldsymbol{(2-\\sqrt3)V}\\fallingdotseq0.27V \\]\nこのとき $\\lambda'=\\dfrac{\\sin(\\pi/2)}{\\sin(\\pi/3)}\\lambda=\\boldsymbol{\\dfrac{2}{\\sqrt3}\\lambda}$．\n\n\\textbf{(4)}　$T=\\tan\\frac{\\alpha'}{2}$，$t_0=\\tan\\frac{\\alpha}{2}$ とおくと，(2) の関係は加法定理により\n\\[ \\frac{v}{V}=\\frac{\\sin\\frac{\\alpha'-\\alpha}{2}}{\\sin\\frac{\\alpha'+\\alpha}{2}}=\\frac{T-t_0}{T+t_0} \\]\nと書け，右辺は $T$ について増加する．したがって $v$ が大きいほど $\\alpha'$ は大きく，$v>v_{\\rm c}$ では $\\alpha'>\\frac{\\pi}{2}$ である（$v\\to V\\cos\\alpha$ で $\\alpha'\\to\\pi-\\alpha$）．このとき反射波の速度の $y$ 成分 $V\\cos\\alpha'$ は負で，反射波も W と同じく $y$ の負の向きに進む．\n\n反射波の山と W の $y$ 方向の速さを比べる．$A=\\frac{\\alpha'+\\alpha}{2}$，$B=\\frac{\\alpha'-\\alpha}{2}$ とすると $v=V\\dfrac{\\sin B}{\\sin A}$，$\\sin B=\\sin(\\alpha'-A)=\\sin\\alpha'\\cos A-\\cos\\alpha'\\sin A$ より\n\\[ v+V\\cos\\alpha'=\\frac{V(\\sin B+\\cos\\alpha'\\sin A)}{\\sin A}=\\frac{V\\sin\\alpha'\\cos A}{\\sin A}>0 \\]\n（$\\alpha'<\\pi-\\alpha$ より $A<\\frac{\\pi}{2}$）．つまり $V|\\cos\\alpha'|<v$ で，反射波の山は W より遅く，W との間隔を広げながら W を追いかける．各山は W が $y\\le0$ にあるときに出て，その後 $y$ の負の向きにしか進まないので，$y>0$ の点には決して届かない．よって入射側の $y>0$ に静止した観測者は\\textbf{反射波を観測できない}．（$v<v_{\\rm c}$ なら $\\cos\\alpha'>0$ で反射波は入射側に戻ってくる．$v=v_{\\rm c}$ がその境目である．）\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "反射板が面に垂直に動くと「入射角＝反射角」は成り立たず，板の上で入射波と反射波の山の交点が一致する（交点の間隔と板に沿った移動の速さが共通になる）ことから $V\\sin\\frac{\\alpha'-\\alpha}{2}=v\\sin\\frac{\\alpha'+\\alpha}{2}$，$\\lambda'/\\lambda=\\sin\\alpha'/\\sin\\alpha$ が決まる．遠ざかる板ではある速さを境に反射角が直角を超え，反射波は板を追う向きに進むが板より遅いため入射側には戻らない．"
+ },
+ "concepts": [
+  "wave-basics",
+  "doppler"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "反射の法則",
+  "ドップラー効果",
+  "動く反射板",
+  "波面の交点",
+  "平面波"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340">
+  <defs>
+    <marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+    <marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+    <marker id="q-ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+    <marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker>
+  </defs>
+  <g font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">
+  <!-- Fig 1 -->
+  <rect x="20" y="168" width="60" height="24" fill="none" stroke="#222" stroke-width="1.6"/>
+  <text x="18" y="160">レーザー</text>
+  <line x1="80" y1="180" x2="300" y2="180" stroke="#1f5fbf" stroke-width="1.8"/>
+  <line x1="150" y1="180" x2="150" y2="50" stroke="#1f5fbf" stroke-width="1.8"/>
+  <line x1="150" y1="180" x2="150" y2="280" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+  <line x1="135" y1="195" x2="165" y2="165" stroke="#222" stroke-width="2.4"/>
+  <text x="104" y="216">H</text>
+  <line x1="130" y1="48" x2="170" y2="48" stroke="#222" stroke-width="3"/>
+  <text x="178" y="54">M<tspan baseline-shift="sub" font-size="10">Y</tspan></text>
+  <line x1="302" y1="160" x2="302" y2="200" stroke="#222" stroke-width="3"/>
+  <text x="290" y="222">M<tspan baseline-shift="sub" font-size="10">X</tspan></text>
+  <line x1="315" y1="180" x2="345" y2="180" stroke="#888" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#q-ag)"/>
+  <text x="318" y="172" font-family="Times New Roman, serif" font-style="italic">u</text>
+  <line x1="110" y1="290" x2="190" y2="290" stroke="#222" stroke-width="3"/>
+  <text x="196" y="296">F</text>
+  <text x="200" y="174">経路 X</text>
+  <text x="156" y="100">経路 Y</text>
+  <line x1="150" y1="150" x2="300" y2="150" stroke="#888" stroke-width="1" marker-start="url(#q-ag)" marker-end="url(#q-ag)"/>
+  <text x="212" y="144" font-family="Times New Roman, serif" font-style="italic">L<tspan baseline-shift="sub" font-size="10" font-style="normal">X</tspan></text>
+  <line x1="115" y1="50" x2="115" y2="178" stroke="#888" stroke-width="1" marker-start="url(#q-ag)" marker-end="url(#q-ag)"/>
+  <text x="90" y="118" font-family="Times New Roman, serif" font-style="italic">L<tspan baseline-shift="sub" font-size="10" font-style="normal">Y</tspan></text>
+  <text x="140" y="328">図1</text>
+  <!-- Fig 2 -->
+  <line x1="370" y1="250" x2="600" y2="250" stroke="#222" stroke-width="1.6" marker-end="url(#q-ax)"/>
+  <text x="604" y="256" font-family="Times New Roman, serif" font-style="italic" font-size="16">x</text>
+  <text x="452" y="272">O</text>
+  <text x="560" y="272">F</text>
+  <line x1="460" y1="70" x2="460" y2="248" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+  <line x1="420" y1="72" x2="459" y2="248" stroke="#c0392b" stroke-width="1.8"/>
+  <line x1="420" y1="72" x2="440" y2="162" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar)"/>
+  <path d="M460,110 A138,138 0 0 0 451,111" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="444" y="104" font-family="Times New Roman, serif" font-style="italic" font-size="16">θ</text>
+  <text x="468" y="90">経路 Y の光</text>
+  <text x="352" y="62">経路 X の光</text>
+  <!-- X wavefronts (perpendicular to X direction) -->
+  <line x1="380" y1="204" x2="560" y2="164" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="380" y1="174" x2="560" y2="134" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="510" y="200" font-size="12">X の波面</text>
+  <text x="440" y="328">図2（<tspan font-family="Times New Roman, serif" font-style="italic">θ</tspan> は誇張）</text>
+  </g>
+</svg>

@@ -1,0 +1,135 @@
+{
+ "id": "PHY-RIG-002",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "斜めに引かれる直方体の滑り出しと前後2方向の転倒（引く角度の許容範囲）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，粗い水平な床の上に，幅 $a$，高さ $b$，質量 $M$ の一様な直方体が置かれている．直方体の前面の上端の辺の中点に糸を付け，糸を図の断面内で水平から角 $\\phi$（$0<\\phi<\\frac{\\pi}{2}$）だけ上向きに傾けて引き，張力の大きさ $T$ を 0 からゆっくり大きくしていく．直方体と床の間の静止摩擦係数を $\\mu$，重力加速度の大きさを $g$ とする．直方体の底面の後端の辺を Q，前端の辺を R とよぶ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "直方体が傾かずにいるとして，滑り出すときの張力の大きさ $T_s$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "直方体が静止しているとき，床からの垂直抗力の作用点の Q からの距離 $x_N$ を $T$ を用いて表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "直方体が傾き始めることなく滑り出すための $\\tan\\phi$ の範囲を求めよ．範囲の両端では，それぞれどの辺のまわりに傾き始めるか．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\mu=\\dfrac12$，$b=\\dfrac32a$ とする．(3) の範囲で $\\phi$ を選ぶとき，直方体を滑り出させるのに必要な張力の大きさは，常にある値より大きい．その値を求めよ．また，傾きを考えなければ $T_s$ を最小にする $\\phi$ が存在するが，その $\\phi$ で引くと何が起こるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：斜めに引かれる直方体の滑り出しと前後2方向の転倒（引く角度の許容範囲）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：斜めに引かれる直方体の滑り出しと前後2方向の転倒（引く角度の許容範囲）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_s=\\dfrac{\\mu Mg}{\\cos\\phi+\\mu\\sin\\phi}$"
+   },
+   {
+    "id": "2",
+    "tex": "$x_N=\\dfrac{\\frac12Mga-T(a\\sin\\phi-b\\cos\\phi)}{Mg-T\\sin\\phi}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac{2b}{a}-\\dfrac1\\mu<\\tan\\phi<\\dfrac{2b}{a}+\\dfrac1\\mu$．下限側では R のまわりに（前へ），上限側では Q のまわりに（後ろへ）傾き始める"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{\\sqrt2}{3}Mg$．$\\tan\\phi=\\dfrac12$ で引くと，滑り出す前に R のまわりに前へ傾き始める"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}\n静止中は床から垂直抗力 $N$ と静止摩擦力 $f$（糸と逆向き）がはたらく．\n\\[ \\text{鉛直：}N=Mg-T\\sin\\phi,\\qquad \\text{水平：}f=T\\cos\\phi . \\]\n滑り出すのは $f=\\mu N$ のときで，$T\\cos\\phi=\\mu(Mg-T\\sin\\phi)$ より\n\\[ T_s=\\boldsymbol{\\frac{\\mu Mg}{\\cos\\phi+\\mu\\sin\\phi}}. \\]\nこのとき $N=Mg-T_s\\sin\\phi=\\dfrac{Mg\\cos\\phi}{\\cos\\phi+\\mu\\sin\\phi}>0$ で，糸が直方体を持ち上げてしまうことはない．\n\n\\textbf{(2)}\n垂直抗力は底面に分布しているが，その合力の作用点を Q から $x_N$ の位置とする．Q を通り紙面に垂直な軸のまわりのモーメントのつり合いを考える（摩擦力は床面上にはたらくので，この軸のまわりのモーメントは 0）．糸の付け根は Q から水平に $a$，高さ $b$ の点なので，張力のモーメント（反時計回り＝前を持ち上げる向きを正）は $T(a\\sin\\phi-b\\cos\\phi)$．重力は $-Mg\\cdot\\frac a2$，垂直抗力は $+Nx_N$ だから\n\\[ Nx_N-\\frac12Mga+T(a\\sin\\phi-b\\cos\\phi)=0\\ \\Rightarrow\\ x_N=\\boldsymbol{\\frac{\\frac12Mga-T(a\\sin\\phi-b\\cos\\phi)}{Mg-T\\sin\\phi}}. \\]\n\n\\textbf{(3)}\n直方体が傾かないためには，作用点が底面内 $0\\leqq x_N\\leqq a$ になければならない．$x_N$ は $T=0$ で $\\frac a2$ であり，$T$ について単調（一次分数関数）なので，$T=T_s$ で底面内にあれば，それまでずっと底面内にある．$T=T_s$ を代入すると\n\\[ x_N\\big|_{T=T_s}=\\frac a2+\\mu b-\\frac{\\mu a}{2}\\tan\\phi . \\]\n（$\\mu N=T_s\\cos\\phi$，$N=Mg-T_s\\sin\\phi$ を用いると整理できる．）\n$x_N<a$（R のまわりに前へ傾かない）$\\iff\\tan\\phi>\\dfrac{2b}{a}-\\dfrac1\\mu$，\n$x_N>0$（Q のまわりに後ろへ傾かない）$\\iff\\tan\\phi<\\dfrac{2b}{a}+\\dfrac1\\mu$．\nよって\n\\[ \\boldsymbol{\\frac{2b}{a}-\\frac1\\mu<\\tan\\phi<\\frac{2b}{a}+\\frac1\\mu}. \\]\n$\\phi$ が小さいと水平分力が上端を前に押し倒す（\\textbf{R のまわりに前へ}）．$\\phi$ が大きいと鉛直分力が前を持ち上げ，\\textbf{Q のまわりに後ろへ}傾く．両側に限界がある点が要所である．\n\n\\textbf{(4)}\n$\\mu=\\frac12$，$\\frac{2b}{a}=3$ より，許される範囲は $1<\\tan\\phi<5$．\n$T_s$ の分母 $\\cos\\phi+\\frac12\\sin\\phi=\\frac{\\sqrt5}{2}\\cos(\\phi-\\beta)$（$\\tan\\beta=\\frac12$）は $\\phi>\\beta$ で減少するので，$T_s$ はこの範囲で $\\phi$ とともに増加する．よって $T_s$ は $\\tan\\phi\\to1$（$\\phi\\to\\frac{\\pi}{4}$）で下限に近づき\n\\[ T_s>\\frac{\\frac12Mg}{\\frac{1}{\\sqrt2}+\\frac12\\cdot\\frac{1}{\\sqrt2}}=\\boldsymbol{\\frac{\\sqrt2}{3}Mg}. \\]\n傾きを考えなければ，$T_s$ は $\\tan\\phi=\\mu=\\frac12$ で最小値 $\\frac{Mg}{\\sqrt5}$ をとる．しかし $\\tan\\phi=\\frac12<1$ は許される範囲の外で，このとき $x_N|_{T=T_s}=\\frac a2+\\frac34a-\\frac18a=\\frac98a>a$．すなわち張力が $T_s$ に達する前に作用点が R に達し，\\textbf{直方体は滑り出す前に R のまわりに前へ傾き始める}．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "直方体が滑るか倒れるかは，垂直抗力の作用点が底面内にあるかどうかで判定する．斜め上向きに引くと，水平分力は前への転倒を，鉛直分力は後ろへの転倒を促すので，引く角度に上下両側の限界が生じる．"
+ },
+ "concepts": [
+  "torque",
+  "static-friction",
+  "normal-force"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "剛体のつり合い",
+  "転倒",
+  "垂直抗力の作用点",
+  "静止摩擦",
+  "最小値"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

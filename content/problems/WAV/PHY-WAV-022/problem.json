@@ -1,0 +1,129 @@
+{
+ "id": "PHY-WAV-022",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "位相差による電波の到来方向の測定（位相の不定性と2本の基線を組み合わせた合成基線）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "遠方の発信源から波長 $\\lambda$ の電波（平面波とみなせる）が届いている．発信源の仰角 $\\theta$（水平方向を $0^\\circ$ とする）を測るため，図のように受信アンテナ A を置き，その真下 $d_1=4\\lambda$ の位置にアンテナ B，真下 $d_2=5\\lambda$ の位置にアンテナ C を置いた．位相計は，A に対する B（または C）の受信波の位相の遅れを，1 周期を $1$ とする単位で測り，その小数部分 $\\varphi$（$0\\le\\varphi<1$）だけを表示する．たとえば遅れが $2.3$ 周期なら $\\varphi=0.3$ と表示される．発信源は，$\\sin\\theta$ が $0.15$ 以上 $0.85$ 以下の範囲にあることがわかっている．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "真下に距離 $d$ だけ離れたアンテナの受信波の，A に対する位相の遅れ（周期単位，小数部分を取る前の値）を $d,\\lambda,\\theta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "ある観測で，B の表示は $\\varphi_{\\rm B}=0.20$，C の表示は $\\varphi_{\\rm C}=0.50$ であった．B の表示だけから考えられる $\\sin\\theta$ の値をすべて求めよ（上の範囲の制限は考えなくてよい）．"
+     },
+     {
+      "id": "3",
+      "tex": "表示の差 $\\varphi_{\\rm C}-\\varphi_{\\rm B}$ に，負なら $1$ を加えたもの $\\varphi_{\\rm CB}$ は，A と B，C の間隔によらずに $\\sin\\theta$ とどのような関係にあるか．それを用いて (2) の観測の $\\sin\\theta$ を 1 つに決め，$\\theta$ を有効数字 3 桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "実際の位相計の表示には，それぞれ最大 $\\pm\\delta$（周期単位）の誤差がある．(3) の方法で求めた $\\sin\\theta$ を目安として，(2) の候補のうち最も近いものを選ぶことにする．$\\sin\\theta$ が上の範囲のどの値であっても，誤差がどのように加わっても正しい候補が選ばれるための $\\delta$ の条件を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\delta=0.02$ のとき，(2) の観測から得られる $\\theta$ の範囲を，(4) の方法で候補を選んだ場合と，(3) の方法だけで決めた場合のそれぞれについて，度の単位で小数第 1 位まで求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：位相差による電波の到来方向の測定（位相の不定性と2本の基線を組み合わせた合成基線）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{d\\sin\\theta}{\\lambda}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\sin\\theta=0.05,\\ 0.30,\\ 0.55,\\ 0.80$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\varphi_{\\rm CB}=\\sin\\theta$（$\\varphi_{\\rm CB}$ は間隔 $d_2-d_1=\\lambda$ の基線の表示と同じ）；$\\sin\\theta=0.30$，$\\theta=17.5^\\circ$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\delta<\\dfrac1{18}$"
+   },
+   {
+    "id": "5",
+    "tex": "候補を選んだ場合 $17.2^\\circ\\le\\theta\\le17.8^\\circ$，(3) だけの場合 $15.1^\\circ\\le\\theta\\le19.9^\\circ$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　仰角 $\\theta$ で届く平面波の波面は進行方向に垂直なので，鉛直に $d$ 離れた2点の経路差は $d\\sin\\theta$ で，下のアンテナの方が遅れる．位相の遅れは周期単位で $\\boldsymbol{\\dfrac{d\\sin\\theta}{\\lambda}}$．\n\n\\textbf{(2)}　B の遅れは $4\\sin\\theta$ 周期．表示はその小数部分だから $4\\sin\\theta=k+0.20$（$k$ は整数）で，$0\\le\\sin\\theta\\le1$ より $k=0,1,2,3$：\n\\[ \\sin\\theta=\\boldsymbol{0.05,\\ 0.30,\\ 0.55,\\ 0.80} . \\]\n基線が波長より長いと，位相が1周期以上回ってしまい1つの表示に複数の方向が対応する（これが位相の不定性）．\n\n\\textbf{(3)}　$\\varphi_{\\rm B}=4\\sin\\theta-k_{\\rm B}$，$\\varphi_{\\rm C}=5\\sin\\theta-k_{\\rm C}$（$k_{\\rm B},k_{\\rm C}$ は整数）だから\n\\[ \\varphi_{\\rm C}-\\varphi_{\\rm B}=\\sin\\theta-(k_{\\rm C}-k_{\\rm B}) . \\]\n差の小数部分（負なら $1$ を加えたもの）は $\\sin\\theta$ の小数部分であり，$0\\le\\sin\\theta<1$ なので $\\boldsymbol{\\varphi_{\\rm CB}=\\sin\\theta}$．つまり B と C を組み合わせると，間隔 $d_2-d_1=\\lambda$ の仮想的な基線で測ったのと同じになり，不定性がなくなる．観測値では $\\varphi_{\\rm CB}=0.30$ で $\\sin\\theta=\\boldsymbol{0.30}$，$\\theta=\\boldsymbol{17.5^\\circ}$．（(2) の候補の 1 つと一致する．）\n\n\\textbf{(4)}　誤差 $e_{\\rm B},e_{\\rm C}$（$|e|\\le\\delta$）が加わると，目安は $\\sin\\theta+(e_{\\rm C}-e_{\\rm B})$ になり（$\\sin\\theta$ が $0.15$〜$0.85$ にあるので，$2\\delta<0.15$ なら小数部分を取る操作で値が飛ぶことはない），正しい候補は $\\sin\\theta+e_{\\rm B}/4$ になる．両者の差は\n\\[ \\left|e_{\\rm C}-e_{\\rm B}-\\frac{e_{\\rm B}}4\\right|\\le\\delta+\\frac54\\delta=\\frac94\\delta . \\]\n候補どうしの間隔は $\\frac14$ なので，正しい候補が常に最も近いためには，この差が間隔の半分 $\\frac18$ より小さければよい（等号付近では隣の候補と等距離になりうる）：\n\\[ \\frac94\\delta<\\frac18\\quad\\therefore\\ \\boldsymbol{\\delta<\\frac1{18}}\\ (\\approx0.056) . \\]\nこのとき $2\\delta<0.15$ も満たされている．\n\n\\textbf{(5)}　$\\delta=0.02<\\frac1{18}$ なので候補は正しく $k=1$ が選ばれ，$4\\sin\\theta=1.20\\pm0.02$，$\\sin\\theta=0.300\\pm0.005$：\n\\[ 0.295\\le\\sin\\theta\\le0.305\\quad\\therefore\\ \\boldsymbol{17.2^\\circ\\le\\theta\\le17.8^\\circ} . \\]\n(3) の方法だけでは誤差が $2\\delta=0.04$ で $0.26\\le\\sin\\theta\\le0.34$，$\\boldsymbol{15.1^\\circ\\le\\theta\\le19.9^\\circ}$．長い基線は精度を，短い（合成）基線は不定性の解消を受け持ち，両者を組み合わせることで広い範囲と高い精度を両立できる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "長い基線の位相差は精度が高いが周期の整数倍の不定性をもつ．間隔の差が波長に等しい2本の基線の表示の差は，その差の長さの仮想的な基線の表示と同じになって不定性を解消し，そこから長い基線の候補を選ぶ．正しく選べる条件は，目安の誤差が候補の間隔の半分より小さいこと（$\\frac94\\delta<\\frac18$）で決まる．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "位相差",
+  "経路差",
+  "方向探知",
+  "不定性",
+  "合成基線",
+  "誤差評価"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

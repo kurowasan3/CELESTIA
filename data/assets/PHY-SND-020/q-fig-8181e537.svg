@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<line x1="30.0" y1="95.0" x2="570.0" y2="95.0" stroke="#222" stroke-width="1.6"/>
+<line x1="30.0" y1="155.0" x2="570.0" y2="155.0" stroke="#222" stroke-width="1.6"/>
+<path d="M24,87 q6,8 0,16 q-6,8 0,16" stroke="#222" stroke-width="1" fill="none"/>
+<path d="M24,131 q6,8 0,16 q-6,8 0,16" stroke="#222" stroke-width="1" fill="none"/>
+<path d="M564,87 q6,8 0,16 q-6,8 0,16" stroke="#222" stroke-width="1" fill="none"/>
+<path d="M564,131 q6,8 0,16 q-6,8 0,16" stroke="#222" stroke-width="1" fill="none"/>
+<text x="18.0" y="130.0" font-family="Noto Sans CJK JP, sans-serif" font-size="16" fill="#222" text-anchor="middle">…</text>
+<text x="585.0" y="130.0" font-family="Noto Sans CJK JP, sans-serif" font-size="16" fill="#222" text-anchor="middle">…</text>
+<rect x="294" y="96" width="12" height="58" stroke="#222" stroke-width="1.6" fill="#ccc"/>
+<text x="300.0" y="65.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">M</text>
+<line x1="300.0" y1="71.0" x2="300.0" y2="93.0" stroke="#888" stroke-width="1"/>
+<line x1="312.0" y1="130.0" x2="372.0" y2="130.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="380.0" y="135.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1f5fbf" text-anchor="start">u<tspan baseline-shift="sub" font-size="10" font-family="Noto Sans CJK JP, sans-serif" font-style="normal">0</tspan></text>
+<text x="150.0" y="135.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">p<tspan baseline-shift="sub" font-size="10" font-family="Noto Sans CJK JP, sans-serif" font-style="normal">0</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">，</tspan>ρ<tspan baseline-shift="sub" font-size="10" font-family="Noto Sans CJK JP, sans-serif" font-style="normal">0</tspan></text>
+<text x="460.0" y="135.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">p<tspan baseline-shift="sub" font-size="10" font-family="Noto Sans CJK JP, sans-serif" font-style="normal">0</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">，</tspan>ρ<tspan baseline-shift="sub" font-size="10" font-family="Noto Sans CJK JP, sans-serif" font-style="normal">0</tspan></text>
+<text x="300.0" y="195.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">なめらかに動くピストン（時刻 0 にたたく）</text>
+<text x="560.0" y="83.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="end"><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">断面積 </tspan>S</text>
+<text x="300.0" y="225.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">管は左右に十分長い</text>
+</svg>

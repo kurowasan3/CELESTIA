@@ -1,0 +1,135 @@
+{
+ "id": "PHY-OSC-054",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "回転する円盤上のシリンダー内のピストンと等温気体（遠心力の仕事と不安定なつり合いからの跳び移り）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な円盤が鉛直な回転軸のまわりに回転できる．図のように，断面積 $S$，長さ $L$ の細長いシリンダーを，その中心軸が円盤の半径方向に沿い，一端（内端）が回転軸上にくるように円盤に固定する．シリンダー内には質量 $m$ のピストン（厚さは無視できる）がなめらかに動けるように入っており，回転軸からピストンまでの距離を $x$ とする．ピストンより外側の部屋 A には $n$ モルの理想気体が封入され，内側の部屋は真空である．A の気体は円盤を通して熱をやりとりし，温度はつねに一定値 $T$ に保たれ，圧力は部屋の中で一様とする．シリンダー内にはストッパーがあり，ピストンは $x<x_0$ の側へは動けない．気体定数を $R$ とし，気体の質量，重力の影響は無視する．円盤の角速度 $\\omega$ は外部のモーターで調節でき，以下では円盤とともに回転する観測者の立場で考えてよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "ピストンがストッパーから離れて位置 $x$（$x_0<x<L$）で円盤に対して静止しているときの $\\omega^2$ を，$n,R,T,m,L,x$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "前問のつり合いの位置からピストンを半径方向にわずかにずらしたとき，もとの位置に戻ろうとする（つり合いが安定である）ための $x$ の条件を求めよ．ただし $\\omega$ は一定に保つ．"
+     },
+     {
+      "id": "3",
+      "tex": "$x_0=\\frac23L$ とする．静止した円盤をゆっくりと回し始めたところ，$\\omega=\\omega_1$ でピストンがストッパーを離れた．その後も $\\omega$ をゆっくり増やし，ピストンが $x=\\frac56L$ に達したときの角速度を $\\omega_2$ とする．\n\\begin{enumerate}\n\\item[(a)] $\\omega_1^2$，$\\omega_2^2$ を求めよ．\n\\item[(b)] ピストンがストッパーを離れてから $x=\\frac56L$ に達するまでに，回転する観測者から見てピストンにはたらく遠心力がした仕事 $W_{\\rm C}$ を求めよ．\n\\item[(c)] 円盤を回し始めてから $\\omega=\\omega_2$ になるまでに，シリンダーの側壁（半径方向に垂直な向きの力）が慣性系から見てピストンにした仕事 $W_{\\rm M}$ を求めよ．ピストンの半径方向の速さは常に十分小さいとする．\n\\end{enumerate}"
+     },
+     {
+      "id": "4",
+      "tex": "次に，ストッパーの位置を $x_0=\\frac14L$ に変えて同じ操作を始めた．ピストンがストッパーを離れた瞬間から $\\omega$ をその値に一定に保ったところ，ピストンは大きく動き出し，ピストンと側壁のわずかな摩擦のために振動がやがて止まった．\n\\begin{enumerate}\n\\item[(a)] ピストンが最終的に静止した位置 $x_{\\rm f}$ を求めよ．\n\\item[(b)] ピストンが動き出してから静止するまでに，摩擦によって発生した熱 $E_{\\rm d}$ を求めよ．\n\\end{enumerate}"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：回転する円盤上のシリンダー内のピストンと等温気体（遠心力の仕事と不安定なつり合いからの跳び移り）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：回転する円盤上のシリンダー内のピストンと等温気体（遠心力の仕事と不安定なつり合いからの跳び移り）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\omega^2=\\dfrac{nRT}{m\\,x(L-x)}$"
+   },
+   {
+    "id": "2",
+    "tex": "$x>\\dfrac L2$"
+   },
+   {
+    "id": "3",
+    "tex": "(a) $\\omega_1^2=\\dfrac{9nRT}{2mL^2}$，$\\omega_2^2=\\dfrac{36nRT}{5mL^2}$　(b) $W_{\\rm C}=nRT\\log 2$　(c) $W_{\\rm M}=nRT\\left(\\log 2+\\dfrac52\\right)$"
+   },
+   {
+    "id": "4",
+    "tex": "(a) $x_{\\rm f}=\\dfrac34L$　(b) $E_{\\rm d}=nRT\\left(\\dfrac43-\\log 3\\right)\\approx0.235\\,nRT$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) つり合い}　A の圧力は $p=\\dfrac{nRT}{S(L-x)}$ で，気体はピストンを内向きに $pS=\\dfrac{nRT}{L-x}$ で押す．回転する観測者から見ると外向きの遠心力 $m\\omega^2x$ がはたらくので，\n\\[ m\\omega^2x=\\frac{nRT}{L-x}\\quad\\therefore\\ \\boldsymbol{\\omega^2=\\frac{nRT}{m\\,x(L-x)}} \\]\n\n\\textbf{(2) 安定性}　$\\omega$ 一定で外向きに $\\delta$ ずらすと，外向きの合力は\n\\[ F(x+\\delta)=m\\omega^2(x+\\delta)-\\frac{nRT}{L-x-\\delta}\\approx\\left(m\\omega^2-\\frac{nRT}{(L-x)^2}\\right)\\delta . \\]\n遠心力は変位に比例して外へ押す「負のばね」，等温気体は $\\frac{nRT}{(L-x)^2}$ の「ばね」である．(1) を代入すると係数は $\\dfrac{nRT}{L-x}\\left(\\dfrac1x-\\dfrac1{L-x}\\right)$ で，これが負（復元力）になる条件は $\\boldsymbol{x>\\frac L2}$．これは (1) の $\\omega^2$ が $x(L-x)$ の最大となる $x=\\frac L2$ で最小になることと対応し，$x<\\frac L2$ のつり合いは $\\omega$ を上げるとかえって内側へ移るべき不安定な枝である．\n\n\\textbf{(3)(a)}　ストッパーを離れる瞬間は (1) で $x=\\frac23L$ とおけて $\\boldsymbol{\\omega_1^2=\\frac{9nRT}{2mL^2}}$．$x=\\frac56L$ では $\\boldsymbol{\\omega_2^2=\\frac{36nRT}{5mL^2}}$．$\\frac23L>\\frac L2$ なので途中のつり合いはすべて安定で，ピストンはつり合いを保ってゆっくり動く．\n\n\\textbf{(b)}　$\\omega$ が時間とともに変わるので，遠心力の仕事を「$\\frac12m\\omega^2x^2$ の差」として求めることはできない（位置エネルギーが使えるのは $\\omega$ 一定のときだけ）．しかしピストンは各瞬間つり合っているので，遠心力の仕事は気体がピストンを押す力に逆らってした仕事，すなわち気体がされた仕事に等しい．等温圧縮で A の体積は $\\frac13LS$ から $\\frac16LS$ になるから\n\\[ W_{\\rm C}=nRT\\log\\frac{L/3}{L/6}=\\boldsymbol{nRT\\log2} . \\]\n（等温なので内部エネルギーは変わらず，同じだけの熱が円盤へ流れ出る．）\n\n\\textbf{(c)}　慣性系では遠心力はなく，ピストンにはたらく力は気体の圧力（半径方向）と側壁の力（周方向）だけである．側壁の力の仕事は，ピストンの運動エネルギーの増加と，ピストンが気体にした仕事の和になる．周方向の速さは $\\omega x$，半径方向の速さは無視できるので，静止状態から $\\omega_2$ までで\n\\[ W_{\\rm M}=\\frac12m\\omega_2^2\\left(\\tfrac56L\\right)^2+nRT\\log2=\\frac12\\cdot\\frac{36nRT}{5L^2}\\cdot\\frac{25L^2}{36}+nRT\\log2=\\boldsymbol{nRT\\left(\\log2+\\frac52\\right)} . \\]\nストッパーに押しつけられている間も運動エネルギー $\\frac12m\\omega^2x_0^2$ は増えるが，ストッパーの力は半径方向で仕事をしないので，これも側壁の仕事で賄われる．回転系の遠心力の仕事 $W_{\\rm C}$ との差は，慣性系での回転の運動エネルギーそのものである．\n\n\\textbf{(4)(a)}　ストッパーを離れるのは (1) で $x=\\frac L4$ のとき，$\\omega^2=\\dfrac{16nRT}{3mL^2}$．$\\frac L4<\\frac L2$ だから (2) によりこのつり合いは不安定で，わずかに外へずれると遠心力が勝ってピストンは外へ動き出す．$\\omega$ が一定なので，同じ $\\omega$ でつり合う位置は $x(L-x)=\\frac L4\\cdot\\frac{3L}4$ の他方の解\n\\[ x_{\\rm f}=\\boldsymbol{\\frac34L} \\]\nで，$\\frac34L>\\frac L2$ より安定である．振動が減衰すればここに止まる．\n\n\\textbf{(b)}　$\\omega$ が一定なので回転系で遠心力の位置エネルギー $-\\frac12m\\omega^2x^2$ が使え，コリオリの力・側壁の垂直抗力は回転系で仕事をしない．回転系のエネルギー収支（遠心力の仕事 ＝ 気体がされた仕事 ＋ 摩擦熱，始めと終わりの運動エネルギーは $0$）より\n\\[ E_{\\rm d}=\\frac12m\\omega^2\\left\\{\\left(\\tfrac34L\\right)^2-\\left(\\tfrac14L\\right)^2\\right\\}-nRT\\log\\frac{3L/4}{L/4}=\\frac43nRT-nRT\\log3=\\boldsymbol{nRT\\left(\\frac43-\\log3\\right)} \\]\n$\\approx0.235\\,nRT>0$ で矛盾はない．気体は等温を保つので，気体がされた仕事 $nRT\\log3$ はそのまま熱として円盤へ流れる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "角速度を変えながらの準静的な変化では遠心力の位置エネルギーが使えず，遠心力の仕事は気体がされた仕事から求め，慣性系では側壁の仕事が回転の運動エネルギーまで賄う．遠心力（負のばね）と等温気体のばねの競合で $x<L/2$ のつり合いは不安定になり，そこから離れたピストンは同じ $\\omega$ の安定な解 $L-x_0$ へ跳び移る（このときは $\\omega$ 一定なので回転系のエネルギー保存で散逸が求まる）．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "circular-motion",
+  "mechanical-energy"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "回転座標系",
+  "遠心力",
+  "等温変化",
+  "つり合いの安定性",
+  "エネルギー収支"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

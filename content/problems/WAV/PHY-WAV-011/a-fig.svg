@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360">
+<defs><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1f5fbf"/></marker><marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#c0392b"/></marker><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#222"/></marker><marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#888"/></marker></defs>
+<line x1="70.0" y1="300.0" x2="530.0" y2="300.0" stroke="#222" stroke-width="1.8" marker-end="url(#a-ak)"/>
+<line x1="70.0" y1="300.0" x2="70.0" y2="20.0" stroke="#222" stroke-width="1.8" marker-end="url(#a-ak)"/>
+<text x="540.0" y="305.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">x</text>
+<text x="525.0" y="320.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">[mm]</text>
+<text x="62.0" y="28.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="end">t</text>
+<text x="80.0" y="28.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">[μs]</text>
+<line x1="70.0" y1="300.0" x2="406.0" y2="57.3" stroke="#222" stroke-width="1.8"/>
+<line x1="113.2" y1="248.0" x2="490.0" y2="84.7" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="146.8" y1="230.7" x2="466.0" y2="46.2" stroke="#c0392b" stroke-width="1.8"/>
+<line x1="70.0" y1="266.7" x2="113.2" y2="248.0" stroke="#1f5fbf" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="70.0" y1="275.0" x2="146.8" y2="230.7" stroke="#c0392b" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="353.2" y="55.6" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">(a) 直接波</text>
+<text x="454.0" y="29.6" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="end">(c) 横波の先頭波</text>
+<text x="497.2" y="133.6" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#1f5fbf" text-anchor="end">(b) 縦波の先頭波</text>
+<line x1="113.2" y1="300.0" x2="113.2" y2="305.0" stroke="#222" stroke-width="1"/>
+<text x="113.2" y="320.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">18</text>
+<line x1="146.8" y1="300.0" x2="146.8" y2="305.0" stroke="#222" stroke-width="1"/>
+<text x="146.8" y="320.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">32</text>
+<line x1="185.2" y1="300.0" x2="185.2" y2="305.0" stroke="#222" stroke-width="1"/>
+<text x="185.2" y="320.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">48</text>
+<text x="64.0" y="270.7" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">6.4</text>
+<text x="64.0" y="285.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">4.8</text>
+<line x1="185.2" y1="300.0" x2="185.2" y2="216.8" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+</svg>

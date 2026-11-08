@@ -1,0 +1,143 @@
+{
+ "id": "PHY-WAV-021",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "動きながら振動する波源がつくる深水波（分散による前方の波の消失と群速度による選択，ストロボ観察）",
+ "course": "物理",
+ "level": 5,
+ "minutes": 35,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "十分に深い水の表面を伝わる波（深水波）の位相速度（山が進む速さ）$v$ は波長 $\\lambda$ によって異なり，重力加速度の大きさを $g$ として\n\\[ v=\\sqrt{\\frac{g\\lambda}{2\\pi}} \\]\nで与えられる．また，波のエネルギー（波の集まりの先端）は位相速度ではなく，群速度 $v_{\\rm g}=\\dfrac{v}{2}$ で伝わる．\n\n図のように，$x$ 軸に垂直な長い棒状の波源を台車につるし，静止した水面に対して一定の速さ $u$ で $+x$ 向きに動かしながら，台車に対して振動数 $f$ で上下に振動させる．十分に時間がたつと，波源の前方（$x$ の大きい側）と後方にそれぞれ一定の波長の平面波ができる（前方にはできない場合もある）．波の減衰は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "前方の波の波長を $\\lambda_{\\rm F}$，後方の波の波長を $\\lambda_{\\rm B}$ とする．波源が山を1つ出してから次の山を出すまでの間の，山と波源の動きを考えて，$\\lambda_{\\rm F}$，$\\lambda_{\\rm B}$ が満たす関係式を $f$，$u$ と位相速度 $v(\\lambda_{\\rm F})$，$v(\\lambda_{\\rm B})$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) の前方の関係式を満たす $\\lambda$ が存在するための $u$ の条件を求めよ．また，そのとき関係式を満たす $\\lambda$ をすべて $g$，$f$，$u$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "実際に波源の前方に波が現れるのは，その波のエネルギーが波源より速く進む場合，すなわち $v_{\\rm g}>u$ の場合だけである．(2) で求めた $\\lambda$ のうち前方に現れる $\\lambda_{\\rm F}$ はどれか，理由とともに答えよ．また，(2) の条件の境界の速さを $u_{\\rm c}$ とするとき，$u=u_{\\rm c}$ では前方の波について $v_{\\rm g}=u$ となることを示せ．"
+     },
+     {
+      "id": "4",
+      "tex": "部屋を暗くし，1秒あたりの閃光の数が $f_{\\rm s}$ のストロボで水面を照らして，前方の波の縞模様を観察する．$f_{\\rm s}=f$ にしたとき，閃光ごとに見える前方の縞模様は，波源に対してどのように見えるか．そのことから，縞模様が水面に対して静止して見えるための条件を $\\lambda_{\\rm F}$，$u$，$f$ で表し，$0<u<u_{\\rm c}$ ではこの条件が決して満たされないことを示せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$g=9.8\\ {\\rm m/s^2}$，$f=2.0\\ {\\rm Hz}$，$u=0.15\\ {\\rm m/s}$ のとき，$\\lambda_{\\rm F}$ と，水面に対して静止した観測者が見る前方の波の振動数 $f_{\\rm F}$ を有効数字2桁で求めよ．また，前方の縞模様が静止して見えるストロボの $f_{\\rm s}$ のうち最大のものを有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：動きながら振動する波源がつくる深水波（分散による前方の波の消失と群速度による選択，ストロボ観察）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：動きながら振動する波源がつくる深水波（分散による前方の波の消失と群速度による選択，ストロボ観察）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f\\lambda_{\\rm F}=v(\\lambda_{\\rm F})-u$，$f\\lambda_{\\rm B}=v(\\lambda_{\\rm B})+u$"
+   },
+   {
+    "id": "2",
+    "tex": "$u\\le u_{\\rm c}=\\dfrac{g}{8\\pi f}$，$\\lambda_\\pm=\\dfrac{g}{8\\pi f^2}\\left(1\\pm\\sqrt{1-\\dfrac{8\\pi fu}{g}}\\right)^2$"
+   },
+   {
+    "id": "3",
+    "tex": "長い方の $\\lambda_{\\rm F}=\\lambda_+$（$\\lambda_+$ だけが $v>2u$ を満たす）．$u=u_{\\rm c}$ では $\\lambda=\\dfrac{g}{8\\pi f^2}$，$v_{\\rm g}=\\dfrac{g}{8\\pi f}=u_{\\rm c}$"
+   },
+   {
+    "id": "4",
+    "tex": "波源に対していつも同じ位置に見える（波源とともに速さ $u$ で $+x$ 向きに動いて見える）．静止して見える条件は $\\dfrac uf=n\\lambda_{\\rm F}$（$n$ は自然数）だが，$0<\\dfrac uf<\\lambda_{\\rm F}$ なので満たされない"
+   },
+   {
+    "id": "5",
+    "tex": "$\\lambda_{\\rm F}=0.21\\ {\\rm m}$，$f_{\\rm F}=2.7\\ {\\rm Hz}$，最大の $f_{\\rm s}=2.7\\ {\\rm Hz}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 山の間隔}\n\n時刻 $0$ に波源の位置で山が出たとする．次の山が出る時刻 $1/f$ までに，波源は $+x$ 向きに $u/f$ 進み，前方に出た最初の山は位相速度 $v(\\lambda_{\\rm F})$ で $v(\\lambda_{\\rm F})/f$ 進む．山の間隔が波長だから\n\\[ \\boldsymbol{f\\lambda_{\\rm F}=v(\\lambda_{\\rm F})-u} \\]\n後方の山は $-x$ 向きに進み，波源とは逆向きに離れていくので\n\\[ \\boldsymbol{f\\lambda_{\\rm B}=v(\\lambda_{\\rm B})+u} \\]\nドップラー効果の式と同じ形だが，位相速度が波長によって変わるので，波長を含む方程式を解かなければならない．\n\n\\textbf{(2) 前方の波の候補}\n\n$\\sigma=\\sqrt\\lambda$，$c=\\sqrt{g/2\\pi}$ とおくと $v=c\\sigma$ で，前方の関係式は\n\\[ f\\sigma^2-c\\sigma+u=0 \\]\nとなる．2解の和 $c/f$，積 $u/f$ はともに正なので，実数解があれば2つとも正である．実数解をもつ条件は判別式 $c^2-4fu\\ge0$，すなわち\n\\[ \\boldsymbol{u\\le u_{\\rm c}=\\frac{g}{8\\pi f}} \\]\nこのとき $\\sigma_\\pm=\\dfrac{c}{2f}\\left(1\\pm\\sqrt{1-\\dfrac{4fu}{c^2}}\\right)$ で，$\\lambda=\\sigma^2$ より\n\\[ \\boldsymbol{\\lambda_\\pm=\\frac{g}{8\\pi f^2}\\left(1\\pm\\sqrt{1-\\frac{8\\pi fu}{g}}\\right)^2} \\]\n$u>u_{\\rm c}$ では，速く動く波源の前に出られる波がない．\n\n\\textbf{(3) 群速度による選択}\n\n$v_{\\rm g}>u$ は $c\\sigma>2u$ と同じである．解と係数の関係 $c=f(\\sigma_++\\sigma_-)$，$u=f\\sigma_+\\sigma_-$ を用いると\n\\begin{itemize}\n\\item $\\sigma=\\sigma_+$：$c\\sigma_+-2u=f\\sigma_+(\\sigma_+-\\sigma_-)>0$ で条件を満たす．\n\\item $\\sigma=\\sigma_-$：$c\\sigma_--2u=f\\sigma_-(\\sigma_--\\sigma_+)<0$ で満たさない．\n\\end{itemize}\nしたがって前方に現れるのは \\textbf{長い方} $\\boldsymbol{\\lambda_{\\rm F}=\\lambda_+}$ である．短い方 $\\lambda_-$ の山は波源より速く進むが，エネルギーは波源より遅く，前方にとどまれない．\n\n$u=u_{\\rm c}$ では重解 $\\sigma=\\dfrac{c}{2f}$ となり，\n\\[ \\lambda=\\frac{c^2}{4f^2}=\\boldsymbol{\\frac{g}{8\\pi f^2}},\\qquad v=c\\sigma=\\frac{g}{4\\pi f},\\qquad \\boldsymbol{v_{\\rm g}=\\frac v2=\\frac{g}{8\\pi f}=u_{\\rm c}} \\]\nつまり前方の波が存在する限界は，そのエネルギーがちょうど波源と同じ速さで進む状態である．\n\n\\textbf{(4) 波源の振動数でのストロボ観察}\n\n十分に時間がたった状態では，波源は周期 $1/f$ ごとに同じ動作をくり返すので，波源から見た水面の形も周期 $1/f$ でくり返す．したがって $f_{\\rm s}=f$ の閃光ごとに見える縞模様は \\textbf{波源に対していつも同じ位置} にあり，縞模様は波源とともに速さ $u$ で $+x$ 向きに動いて見える（閃光ごとに $u/f$ ずつ前進する）．\n\n縞模様は波長の整数倍だけずれても同じに見えるので，水面に対して静止して見える条件は\n\\[ \\boldsymbol{\\frac uf=n\\lambda_{\\rm F}}\\quad(n=1,2,\\cdots) \\]\nところが (3) より前方の波では $v>2u$ だから，(1) の式から $f\\lambda_{\\rm F}=v-u>u$，すなわち\n\\[ 0<\\frac uf<\\lambda_{\\rm F} \\]\nであり，条件は決して満たされない．等号 $u/f=\\lambda_{\\rm F}$ になるのは $v=2u$，すなわち $u=u_{\\rm c}$ の限界の場合だけである．（水面に対して静止した観測者が見る振動数 $f_{\\rm F}=v/\\lambda_{\\rm F}=f+u/\\lambda_{\\rm F}$ は $f$ と $2f$ の間にあり，$f$ の整数倍にならない，と言っても同じである．）\n\n\\textbf{(5) 数値}\n\n$\\dfrac{8\\pi fu}{g}=\\dfrac{8\\pi\\times2.0\\times0.15}{9.8}=0.769$，$\\sqrt{1-0.769}=0.480$，$\\dfrac{g}{8\\pi f^2}=0.0975\\ {\\rm m}$ より\n\\[ \\lambda_{\\rm F}=0.0975\\times(1.480)^2=0.214\\ {\\rm m}\\approx\\boldsymbol{0.21\\ m} \\]\n（$u_{\\rm c}=g/8\\pi f=0.195\\ {\\rm m/s}>u$ なので前方の波は存在する．）静止した観測者の位置を山が通過する振動数は\n\\[ f_{\\rm F}=\\frac{v(\\lambda_{\\rm F})}{\\lambda_{\\rm F}}=f+\\frac{u}{\\lambda_{\\rm F}}=2.0+\\frac{0.15}{0.214}=2.70\\ {\\rm Hz}\\approx\\boldsymbol{2.7\\ Hz} \\]\n（$v=\\sqrt{g\\lambda_{\\rm F}/2\\pi}=0.577\\ {\\rm m/s}$ から $v/\\lambda_{\\rm F}=2.70\\ {\\rm Hz}$ でも確かめられる．）水面に対して縞模様が静止して見えるのは，閃光の間に各点がちょうど整数回振動するとき，すなわち $f_{\\rm F}=nf_{\\rm s}$ のときなので，最大の点滅数は\n\\[ f_{\\rm s}=f_{\\rm F}\\approx\\boldsymbol{2.7\\ Hz} \\]\n波源の振動数 $2.0\\ {\\rm Hz}$ に合わせても縞模様は止まらない点が，(4) の結果と対応している．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "動く波源の前方の波長は $f\\lambda=v(\\lambda)-u$ で決まるが，分散性の波では位相速度が波長に依存するのでこれは波長の方程式になり，深水波では波源が $g/8\\pi f$ より速いと解がなく，解が2つあっても前方に現れるのは群速度が波源より速い長い方だけである．ストロボを波源の振動数に合わせると縞模様は波源とともに動いて見え，前方の波では $\\lambda_{\\rm F}>u/f$ なので水面に対して止まって見えることはない．"
+ },
+ "concepts": [
+  "wave-basics",
+  "doppler"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "分散",
+  "群速度",
+  "深水波",
+  "ストロボ",
+  "位相速度"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

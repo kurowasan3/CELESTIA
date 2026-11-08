@@ -1,0 +1,134 @@
+{
+ "id": "PHY-NUC-022",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "水素様イオンのスペクトル系列の重なりと，密集位置の比からの原子番号の決定",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "原子番号 $Z$ の原子核と1個の電子だけからなるイオン（水素様イオン）の定常状態のエネルギーは，$E_0=13.6\\,\\mathrm{eV}$ として\n\\[ E_n=-\\frac{Z^2E_0}{n^2}\\qquad(n=1,2,3,\\dots) \\]\nで与えられる．量子数 $n$ の状態から量子数 $m\\ (<n)$ の状態に移るときに放出される光の線をまとめて「系列 $m$」とよぶ．プランク定数を $h$，光速を $c$ とし，$\\lambda_0=\\dfrac{hc}{E_0}=91.2\\,\\mathrm{nm}$ を用いてよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "系列 $m$ の線の波長 $\\lambda$ がとりうる範囲を $\\lambda_0,\\ Z,\\ m$ で表せ．また，系列 $m$ と系列 $m+1$ の波長の範囲が重なるための $m$ の条件を求め，それが $Z$ によらないことを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "系列 $m$ の線のうち，系列 $m+1$ の最短波長の極限より長い波長をもつ（系列 $m+1$ の範囲に入り込む）線について，始めの状態の量子数 $n$ が満たす条件を $m$ で表せ．また，$m=6$ のときその本数を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ある未知の水素様イオンが出す光の $35\\,\\mathrm{nm}$ から $80\\,\\mathrm{nm}$ までのスペクトルを調べたところ，図のようになった．線は P（$40.5\\,\\mathrm{nm}$）と Q（$63.3\\,\\mathrm{nm}$）の長波長側でそれぞれ密集しており，この範囲に線が密集する位置はほかにない．このイオンの原子番号 $Z$ と，P，Q が系列 $m$ のどれの短波長の極限にあたるかを求めよ．ただし，P と Q の波長の比だけからは複数の組合せが考えられるので，それらが除かれる理由も述べよ．"
+     },
+     {
+      "id": "4",
+      "tex": "図の $*$（$72.9\\,\\mathrm{nm}$）と $**$（$52.1\\,\\mathrm{nm}$）の線は，それぞれどの状態からどの状態への移り変わりによるものか．量子数で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：水素様イオンのスペクトル系列の重なりと，密集位置の比からの原子番号の決定",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：水素様イオンのスペクトル系列の重なりと，密集位置の比からの原子番号の決定",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{m^2\\lambda_0}{Z^2}<\\lambda\\le\\dfrac{m^2(m+1)^2}{2m+1}\\cdot\\dfrac{\\lambda_0}{Z^2}$，重なる条件は $m\\ge3$（$m>1+\\sqrt2$）"
+   },
+   {
+    "id": "2",
+    "tex": "$m<n<\\dfrac{m(m+1)}{\\sqrt{2m+1}}$，$m=6$ では $n=7\\sim11$ の $5$ 本"
+   },
+   {
+    "id": "3",
+    "tex": "$Z=6$，P は系列 $4$，Q は系列 $5$ の極限"
+   },
+   {
+    "id": "4",
+    "tex": "$*$：$n=6\\to m=4$，$**$：$n=4\\to m=3$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 振動数条件 $\\dfrac{hc}{\\lambda}=E_n-E_m=Z^2E_0\\left(\\dfrac1{m^2}-\\dfrac1{n^2}\\right)$ より\n\\[ \\frac1\\lambda=\\frac{Z^2}{\\lambda_0}\\left(\\frac1{m^2}-\\frac1{n^2}\\right)\\qquad(n=m+1,m+2,\\dots) \\]\n最長波長は $n=m+1$，最短波長の極限は $n\\to\\infty$ で\n\\[ \\boldsymbol{\\frac{m^2\\lambda_0}{Z^2}<\\lambda\\le\\frac{m^2(m+1)^2}{2m+1}\\cdot\\frac{\\lambda_0}{Z^2}} \\]\n（$\\frac1{m^2}-\\frac1{(m+1)^2}=\\frac{2m+1}{m^2(m+1)^2}$ を用いた）．系列 $m+1$ は系列 $m$ より長波長側にあるので，重なる条件は「系列 $m+1$ の最短の極限 $<$ 系列 $m$ の最長」：\n\\[ \\frac{(m+1)^2\\lambda_0}{Z^2}<\\frac{m^2(m+1)^2}{2m+1}\\cdot\\frac{\\lambda_0}{Z^2}\\iff m^2-2m-1>0\\iff m>1+\\sqrt2 \\]\nよって $\\boldsymbol{m\\ge3}$．両辺に共通の因子 $\\lambda_0/Z^2$ が消えるので，条件は $Z$ によらない（水素原子でもパッシェン系列から先は隣の系列と重なる）．\\hfill$\\square$\n\n\\textbf{(2)} 系列 $m$ の線 $\\lambda_n=\\dfrac{\\lambda_0}{Z^2}\\cdot\\dfrac{m^2n^2}{n^2-m^2}$ が $\\dfrac{(m+1)^2\\lambda_0}{Z^2}$ より長い条件は\n\\[ m^2n^2>(m+1)^2(n^2-m^2)\\iff n^2\\{(m+1)^2-m^2\\}<m^2(m+1)^2\\iff \\boldsymbol{n<\\frac{m(m+1)}{\\sqrt{2m+1}}} \\]\n（$n>m$ と合わせる）．これも $Z$ によらない．$m=6$ では $\\dfrac{42}{\\sqrt{13}}=11.6\\cdots$ なので $n=7,8,9,10,11$ の $\\boldsymbol{5}$ 本．（$m=3$ なら $\\frac{12}{\\sqrt7}=4.5\\cdots$ で $n=4$ の1本だけ．）\\hfill$\\square$\n\n\\textbf{(3)} 線が密集するのは各系列の短波長の極限 $\\dfrac{m^2\\lambda_0}{Z^2}$ の長波長側である．P，Q がそれぞれ系列 $m_{\\rm P}$，$m_{\\rm Q}$ の極限とすると\n\\[ \\frac{\\lambda_{\\rm Q}}{\\lambda_{\\rm P}}=\\frac{m_{\\rm Q}^2}{m_{\\rm P}^2}=\\frac{63.3}{40.5}=1.563=\\frac{25}{16}\\quad\\therefore\\ \\frac{m_{\\rm Q}}{m_{\\rm P}}=\\frac54 \\]\n比だけなら $(m_{\\rm P},m_{\\rm Q})=(4,5),(8,10),(12,15),\\dots$ すなわち $(4k,5k)$ が考えられる．しかし $k\\ge2$ なら，その間の系列 $4k+1,\\dots,5k-1$ の極限も P と Q の間に現れ，そこにも線が密集するはずである．P と Q の間に密集する位置がないので，P，Q は隣り合う系列で $k=1$，すなわち P が系列 $\\boldsymbol4$，Q が系列 $\\boldsymbol5$ の極限である（たとえば $(8,10)$ なら $Z=12$ となり，系列 $9$ の極限 $51.3\\,\\mathrm{nm}$ に密集が見えるはず）．\n\\[ Z^2=\\frac{m_{\\rm P}^2\\lambda_0}{\\lambda_{\\rm P}}=\\frac{16\\times91.2}{40.5}=36.0\\qquad\\therefore\\ \\boldsymbol{Z=6} \\]\n（このとき系列 $3$ の極限 $22.8\\,\\mathrm{nm}$，系列 $6$ の極限 $91.2\\,\\mathrm{nm}$ はどちらも観測範囲の外にあり，図と矛盾しない．）\\hfill$\\square$\n\n\\textbf{(4)} $Z=6$ のとき $\\dfrac{1}{n^2}=\\dfrac1{m^2}-\\dfrac{\\lambda_0}{36\\lambda}$ を満たす整数 $n$ を探す．各系列の範囲は（$Z=6$ で）系列3：$22.8\\sim52.1\\,\\mathrm{nm}$，系列4：$40.5\\sim112.5\\,\\mathrm{nm}$，系列5：$63.3\\sim207\\,\\mathrm{nm}$ である．\n\n$*$（$72.9\\,\\mathrm{nm}$）：$\\dfrac{\\lambda_0}{36\\lambda}=0.03475$．入りうるのは系列4と系列5（重なりの部分）．\n系列4：$\\dfrac1{n^2}=0.0625-0.03475=0.02775$，$n=6.00$．系列5：$\\dfrac1{n^2}=0.04-0.03475=0.00525$，$n=13.8$（整数でない）．よって $\\boldsymbol{n=6\\to m=4}$．これは (2) の $m=4$ の条件 $n<\\frac{20}{3}$ を満たす，系列5の範囲に入り込んだ系列4の線である．\n\n$**$（$52.1\\,\\mathrm{nm}$）：$\\dfrac{\\lambda_0}{36\\lambda}=0.04862$．入りうるのは系列3と系列4．\n系列3：$\\dfrac1{n^2}=0.1111-0.04862=0.06249$，$n=4.00$．系列4：$\\dfrac1{n^2}=0.0625-0.04862=0.01388$，$n=8.49$（整数でない）．よって $\\boldsymbol{n=4\\to m=3}$．これは (2) で見た「系列4の範囲に入り込む系列3のただ1本の線」である．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "水素様イオンの系列 $m$ と $m+1$ の波長範囲が重なる条件 $m\\ge3$，および重なりに入り込む線の数 $n<m(m+1)/\\sqrt{2m+1}$ は，$\\lambda_0/Z^2$ が共通因子として消えるので $Z$ によらない．線の密集位置（系列の極限）の比は量子数の2乗の比だけで決まるが，比が同じ組合せが無数にあるので「間に別の密集がない」ことを使って隣り合う系列と確定し，$Z$ を求める．重なりの領域にある線は2つの系列の両方で整数解を調べて帰属する．"
+ },
+ "concepts": [
+  "bohr-model",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "水素様イオン",
+  "スペクトル系列",
+  "系列の重なり",
+  "原子番号の決定",
+  "ボーア模型"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,130 @@
+{
+ "id": "PHY-OPT-019",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "z² について等間隔に並べたスリット列による集光（高次の焦点，間引きと位相反転による焦点の変化）",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，$x=0$ の面 A に，$y$ 方向（紙面に垂直）にのびる細いスリット $\\mathrm{S}_1,\\ \\mathrm{S}_2,\\ \\ldots,\\ \\mathrm{S}_N$ を，$z$ 座標が\n\\[ z_n=b\\sqrt n\\qquad(n=1,2,\\ldots,N) \\]\nとなる位置にあけた（$b$ は正の定数，$N$ は大きな偶数）．面 A の左側から波長 $\\lambda$ の単色の平面波を $x$ 軸に平行に当て，$x$ 軸上の点 Q$(x,0)$ $(x>0)$ での光の強さを考える．各スリットから Q に届く光は，振幅が等しく，スリットでの位相がそろっているとしてよい．また $z_N$ は以下で考える $x$ に比べて十分小さく，$|\\delta|\\ll1$ のとき $\\sqrt{1+\\delta}\\fallingdotseq1+\\dfrac\\delta2$ と近似してよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "スリット $\\mathrm{S}_{n+1}$ と $\\mathrm{S}_n$ から Q までの経路の長さの差を求め，それが $n$ によらないことを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "すべてのスリットからの光が Q で強め合う $x$ をすべて求めよ．そのうち最も大きいものを $f$ とし，$f$ を $b,\\ \\lambda$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$n$ が奇数のスリットをすべてふさいだ．残りのスリットからの光が強め合う $x$ を $f$ を用いてすべて求め，(2) にはなかった点を答えよ．また，$x=f$ での光の強さは (2) の場合の何倍になるか．"
+     },
+     {
+      "id": "4",
+      "tex": "スリットをふさぐ代わりに，$n$ が奇数のスリットだけを，光路長を $\\dfrac\\lambda2$ だけ長くする薄い透明な膜でおおった．$x$ 軸上で光が強め合う $x$ を $f$ を用いてすべて求めよ．また，$x=f$ での光の強さと，$x=2f$ での光の強さが (3) の場合の何倍になるかを答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "スリットをすべて開いた状態で，$b=0.24\\ {\\rm mm}$ とし，波長 $\\lambda_1=6.0\\times10^{-7}\\ {\\rm m}$ と $\\lambda_2=4.0\\times10^{-7}\\ {\\rm m}$ の光を同時に当てた．$\\lambda_1$ の光についての $f$ を求めよ．また，2つの波長の光がどちらも強め合う $x$ 軸上の点のうち，面 A から最も遠いものの $x$ を求めよ．有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：z² について等間隔に並べたスリット列による集光（高次の焦点，間引きと位相反転による焦点の変化）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{b^2}{2x}$（$n$ によらない）"
+   },
+   {
+    "id": "2",
+    "tex": "$x=\\dfrac{b^2}{2m\\lambda}$（$m=1,2,3,\\ldots$），$f=\\dfrac{b^2}{2\\lambda}$"
+   },
+   {
+    "id": "3",
+    "tex": "$x=\\dfrac{2f}{m}$（$m=1,2,3,\\ldots$）；新しく現れるのは $x=2f,\\ \\dfrac{2f}{3},\\ \\dfrac{2f}{5},\\ \\ldots$；$\\dfrac14$ 倍"
+   },
+   {
+    "id": "4",
+    "tex": "$x=\\dfrac{2f}{2j+1}$（$j=0,1,2,\\ldots$）；$x=f$ では $0$（暗い），$x=2f$ では $4$ 倍"
+   },
+   {
+    "id": "5",
+    "tex": "$f=4.8\\times10^{-2}\\ {\\rm m}$；$x=2.4\\times10^{-2}\\ {\\rm m}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} $\\mathrm{S}_n$ から Q までの距離は\n\\[ \\sqrt{x^2+z_n^2}=x\\sqrt{1+\\frac{nb^2}{x^2}}\\fallingdotseq x+\\frac{nb^2}{2x} \\]\nよって差は $\\dfrac{(n+1)b^2}{2x}-\\dfrac{nb^2}{2x}=\\boldsymbol{\\dfrac{b^2}{2x}}$ で，$n$ によらない．等間隔でない（外側ほど詰まった）スリットの配置が，経路の長さの2乗則（$z^2$ に比例する増え方）とちょうど打ち消し合っている．\\hfill$\\square$\n\n\\textbf{(2)} 隣り合うスリットの経路差がすべて等しいので，それが波長の整数倍なら全スリットが同位相で強め合う：\n\\[ \\frac{b^2}{2x}=m\\lambda\\quad\\Longrightarrow\\quad x=\\boldsymbol{\\frac{b^2}{2m\\lambda}}\\ \\ (m=1,2,3,\\ldots),\\qquad f=\\boldsymbol{\\frac{b^2}{2\\lambda}} \\]\n強め合う点は $f,\\ \\dfrac f2,\\ \\dfrac f3,\\ \\ldots$ と軸上に並ぶ（$m$ 次の焦点）．この面 A は焦点距離 $f$ のレンズのように平行光を集めるが，焦点が無数にある点がレンズと異なる．\\hfill$\\square$\n\n\\textbf{(3) 1つおきにふさぐ}　残るのは $n=2,4,6,\\ldots$ で，隣り合う残りのスリットの経路差は $2\\cdot\\dfrac{b^2}{2x}=\\dfrac{b^2}{x}$．強め合う条件 $\\dfrac{b^2}{x}=m\\lambda$ より\n\\[ x=\\frac{b^2}{m\\lambda}=\\boldsymbol{\\frac{2f}{m}}\\quad(m=1,2,3,\\ldots) \\]\n$m$ が偶数のものは (2) の点 $\\dfrac fj$ と一致し，(2) の点はすべて残る．新しく現れるのは $m$ が奇数の $\\boldsymbol{x=2f,\\ \\dfrac{2f}{3},\\ \\dfrac{2f}{5},\\ \\ldots}$ で，特に (2) で最も遠い焦点 $f$ のさらに2倍の距離に焦点ができる．スリットを減らしたのに焦点が増えるのは，周期（$n$ についての間隔）が2倍になったためである．\n\n$x=f$ では，残った $\\dfrac N2$ 本の光が同位相で重なるので振幅は (2) の $\\dfrac12$ 倍，強さは振幅の2乗に比例して $\\boldsymbol{\\dfrac14}$ \\textbf{倍}．\\hfill$\\square$\n\n\\textbf{(4) 位相をずらす膜}　奇数番目の光は光路長が $\\dfrac\\lambda2$ 長くなる（位相が $\\pi$ ずれる）．隣り合うスリットの間の実質的な光路差は，幾何学的な差 $\\dfrac{b^2}{2x}$ に $\\pm\\dfrac\\lambda2$ が加わったもので，その符号は1本ごとに入れかわるが，$\\lambda$ だけ違う値は位相として同じなので，強め合う条件は\n\\[ \\frac{b^2}{2x}+\\frac\\lambda2=(j+1)\\lambda\\ \\ (j=0,1,\\ldots)\\quad\\Longrightarrow\\quad x=\\frac{b^2}{(2j+1)\\lambda}=\\boldsymbol{\\frac{2f}{2j+1}} \\]\nすなわち $\\boldsymbol{x=2f,\\ \\dfrac{2f}{3},\\ \\dfrac{2f}{5},\\ \\ldots}$ である．\n\n$x=f$（および $\\dfrac fj$）では，膜がなければ全スリットが同位相なので，膜をつけると奇数番目と偶数番目が逆位相になり，$N$ が偶数なので2本ずつ打ち消し合って強さは $\\boldsymbol{0}$ になる．\n\n$x=2f$ では，幾何学的な差 $\\dfrac\\lambda2$ と膜による $\\dfrac\\lambda2$ が合わさって $N$ 本すべてが同位相になる．(3) では $\\dfrac N2$ 本しか寄与しないので，振幅は2倍，強さは $\\boldsymbol{4}$ \\textbf{倍}になる．光を捨てずに位相だけを変える方が明るい焦点が得られる．\\hfill$\\square$\n\n\\textbf{(5)} $f_1=\\dfrac{b^2}{2\\lambda_1}=\\dfrac{(0.24\\times10^{-3})^2}{2\\times6.0\\times10^{-7}}=\\boldsymbol{4.8\\times10^{-2}\\ {\\rm m}}$．\n\n2つの波長がともに強め合うのは，$\\dfrac{b^2}{2x}$ が $\\lambda_1$ と $\\lambda_2$ の両方の整数倍のとき．$6.0\\times10^{-7}$ と $4.0\\times10^{-7}$ の最小公倍数は $1.2\\times10^{-6}\\ {\\rm m}$ で，$x$ を最大にするにはこの最小の値をとればよい（$\\lambda_1$ の2次と $\\lambda_2$ の3次が重なる）：\n\\[ x=\\frac{b^2}{2\\times1.2\\times10^{-6}}=\\frac{5.76\\times10^{-8}}{2.4\\times10^{-6}}=\\boldsymbol{2.4\\times10^{-2}\\ {\\rm m}} \\]\nなお，$\\lambda$ が長いほど $f$ は短い（赤い光ほど手前に集まる）ので，ガラスのレンズとは色による焦点のずれ方が逆になる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "スリットを $z_n=b\\sqrt n$（$z^2$ について等間隔）に並べると，軸上の点への隣り合う経路差が $b^2/(2x)$ と $n$ によらなくなり，それが波長の整数倍となる点 $x=f/m$ に全スリットの光が同位相で集まる．1本おきにふさぐと $n$ についての周期が2倍になって $2f/(\\text{奇数})$ に新しい焦点が生じ，ふさぐ代わりに位相を $\\pi$ ずらすと元の焦点は消え，新しい焦点は全スリットが寄与して4倍明るくなる．"
+ },
+ "concepts": [
+  "light-interference",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "干渉",
+  "スリット",
+  "経路差",
+  "ゾーンプレート",
+  "位相",
+  "強度"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

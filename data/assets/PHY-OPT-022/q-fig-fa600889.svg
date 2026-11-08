@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
+<defs><marker id="q-ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c0392b"/></marker></defs>
+<rect x="240" y="40" width="110" height="270" fill="#e8eef8" stroke="none"/>
+<line x1="240" y1="40" x2="240" y2="310" stroke="#222" stroke-width="1.6"/>
+<line x1="350" y1="40" x2="350" y2="310" stroke="#222" stroke-width="1.6"/>
+<text x="240" y="30" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">A</text><text x="350" y="30" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">B</text>
+<text x="295" y="300" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">屈折率 <tspan font-family="Times New Roman, serif" font-style="italic">n</tspan></text>
+<line x1="240" y1="322" x2="350" y2="322" stroke="#888" stroke-dasharray="3 3"/><text x="295" y="337" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">D</text>
+<line x1="60" y1="34" x2="236" y2="69" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ar)"/>
+<text x="70" y="30" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">入射光（強度 <tspan font-family="Times New Roman, serif" font-style="italic">I</tspan><tspan baseline-shift="sub" font-size="10">0</tspan>）</text>
+<line x1="240" y1="70" x2="80" y2="102" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar2)"/><text x="58" y="108" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">R<tspan baseline-shift="sub" font-size="10" font-style="normal">0</tspan></text>
+<polyline points="240,70 350,100 240,130 350,160 240,190 350,220 240,250 350,280" fill="none" stroke="#1f5fbf" stroke-width="1.4"/>
+<line x1="350" y1="100" x2="520" y2="134" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ar)"/><text x="528" y="140" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">T<tspan baseline-shift="sub" font-size="10" font-style="normal">1</tspan></text>
+<line x1="240" y1="130" x2="80" y2="162" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar2)"/><text x="58" y="168" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">R<tspan baseline-shift="sub" font-size="10" font-style="normal">1</tspan></text>
+<line x1="350" y1="160" x2="520" y2="194" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ar)"/><text x="528" y="200" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">T<tspan baseline-shift="sub" font-size="10" font-style="normal">2</tspan></text>
+<line x1="240" y1="190" x2="80" y2="222" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar2)"/><text x="58" y="228" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">R<tspan baseline-shift="sub" font-size="10" font-style="normal">2</tspan></text>
+<line x1="350" y1="220" x2="520" y2="254" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ar)"/><text x="528" y="260" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">T<tspan baseline-shift="sub" font-size="10" font-style="normal">3</tspan></text>
+<line x1="240" y1="250" x2="80" y2="282" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar2)"/><text x="58" y="288" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">R<tspan baseline-shift="sub" font-size="10" font-style="normal">3</tspan></text>
+<line x1="350" y1="280" x2="520" y2="314" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ar)"/><text x="528" y="320" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">T<tspan baseline-shift="sub" font-size="10" font-style="normal">4</tspan></text>
+<text x="420" y="30" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">空気</text><text x="140" y="300" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">空気</text>
+</svg>

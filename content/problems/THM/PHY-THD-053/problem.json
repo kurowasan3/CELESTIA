@@ -1,0 +1,128 @@
+{
+ "id": "PHY-THD-053",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "ポリトロープ膨張・定圧圧縮・定積加熱のサイクルの熱効率（膨張の指数による吸熱・放熱の切り替わり）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，加熱・冷却装置のついたシリンダーとなめらかに動くピストンに，単原子分子理想気体 1 mol を閉じ込める．気体の状態を次のサイクル A→B→C→A で変化させる．\n\\begin{itemize}\n  \\item A→B：状態 A（圧力 $p_0$，体積 $V_0$，温度 $T_0$）から，$pV^n=$ 一定（$n$ は $n\\ge1$ の定数）を保つように，必要に応じて熱を出し入れしながら体積 $8V_0$ の状態 B までゆっくり膨張させる．\n  \\item B→C：圧力を一定に保ってゆっくり圧縮し，体積を $V_0$ に戻す（状態 C）．\n  \\item C→A：体積を $V_0$ に保って加熱し，A に戻す．\n\\end{itemize}\n気体定数を $R$ とする．このサイクルの熱効率 $e$ は，1サイクルで気体が外部にする正味の仕事を，1サイクルの間に気体が\\textbf{吸収した}熱量の和（放出した熱量は含めない）で割ったものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$n>1$ のとき，A→B の過程での気体のモル比熱（温度を 1 K 上げるのに要する熱量）$C_n$ を $n,\\ R$ で表せ．また，A→B の膨張の間に気体が熱を吸収するのは $n$ がどの範囲にあるときか．$n=1$ の場合も含めて答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$n=1$，$n=\\frac53$，$n=2$ の3つの場合について，熱効率 $e$ を有効数字2桁で求めよ．必要なら $\\log_e2=0.693$ を用いよ．"
+     },
+     {
+      "id": "3",
+      "tex": "A→B での膨張後の体積を $8V_0$ から $aV_0$（$a>1$）に変える．$n>1$ を固定して $a\\to\\infty$ としたとき，$e$ はどのような値に近づくか．$1<n\\le\\frac53$ と $n>\\frac53$ の場合に分けて答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：ポリトロープ膨張・定圧圧縮・定積加熱のサイクルの熱効率（膨張の指数による吸熱・放熱の切り替わり）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：ポリトロープ膨張・定圧圧縮・定積加熱のサイクルの熱効率（膨張の指数による吸熱・放熱の切り替わり）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$C_n=\\dfrac{(3n-5)R}{2(n-1)}$，熱を吸収するのは $1\\le n<\\dfrac53$（$n=\\frac53$ では出入りなし，$n>\\frac53$ では放出）"
+   },
+   {
+    "id": "2",
+    "tex": "$n=1$：$e=\\dfrac{3\\log_e2-\\frac78}{3\\log_e2+\\frac{21}{16}}\\approx0.36$，$n=\\frac53$：$e=\\dfrac{58}{93}\\approx0.62$，$n=2$：$e=\\dfrac{14}{27}\\approx0.52$"
+   },
+   {
+    "id": "3",
+    "tex": "$1<n\\le\\frac53$ のとき $1$，$n>\\frac53$ のとき $\\dfrac{2}{3(n-1)}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 過程 A→B のモル比熱}\\\\\n$pV^n=K$（一定）と状態方程式 $pV=RT$ を使う．A→B の途中の状態（温度 $T$）までに気体がする仕事は\n\\[ W=\\int_{V_0}^{V}\\frac{K}{V'^n}dV'=\\frac{p_0V_0-pV}{n-1}=\\frac{R(T_0-T)}{n-1}\\quad(n>1) \\]\nなので，温度が $\\Delta T$ 変わるときの仕事は $\\Delta W=-\\dfrac{R\\,\\Delta T}{n-1}$．第一法則 $\\Delta Q=\\frac32R\\,\\Delta T+\\Delta W$ より\n\\[ C_n=\\frac{\\Delta Q}{\\Delta T}=\\frac32R-\\frac{R}{n-1}=\\boldsymbol{\\frac{(3n-5)R}{2(n-1)}} \\]\n$n>1$ の膨張では $T=\\frac{K}{R}V^{1-n}$ が下がる（$\\Delta T<0$）．したがって $\\Delta Q=C_n\\Delta T>0$（吸熱）となるのは $C_n<0$，すなわち $1<n<\\frac53$ のときである．温度が下がるのに熱を吸収するのは，吸収した熱以上の仕事を外にするからである．$n=1$（等温）では $\\Delta U=0$ で，仕事の分だけ熱を吸収する．$n=\\frac53$ は断熱変化（$C_n=0$），$n>\\frac53$ では $C_n>0$ なので膨張中に熱を放出する．\\\\\n以上より，膨張中に熱を吸収するのは $\\boldsymbol{1\\le n<\\frac53}$．\n\n\\textbf{(2) 3つの場合の熱効率}\\\\\n各状態：$p_{\\rm B}=p_0\\cdot8^{-n}$，$T_{\\rm B}=T_0\\cdot8^{1-n}$，$T_{\\rm C}=T_0\\cdot8^{-n}$．B→C（定圧圧縮）は温度が下がるので必ず放熱，C→A（定積加熱）は必ず吸熱で $Q_{\\rm CA}=\\frac32R(T_0-T_{\\rm C})$．B→C の仕事は $W_{\\rm BC}=-p_{\\rm B}\\cdot7V_0=-7RT_{\\rm C}$．以下 $RT_0$ を単位とする．\\\\\n\\underline{$n=1$}：$W_{\\rm AB}=Q_{\\rm AB}=RT_0\\log_e8=3\\log_e2$，$T_{\\rm C}=\\frac18T_0$ より $W_{\\rm BC}=-\\frac78$，$Q_{\\rm CA}=\\frac32\\cdot\\frac78=\\frac{21}{16}$．\n\\[ e=\\frac{3\\log_e2-\\frac78}{3\\log_e2+\\frac{21}{16}}=\\frac{2.079-0.875}{2.079+1.3125}\\approx\\boldsymbol{0.36} \\]\n\\underline{$n=\\frac53$}（断熱）：$8^{2/3}=4$，$8^{5/3}=32$ より $T_{\\rm B}=\\frac14T_0$，$T_{\\rm C}=\\frac1{32}T_0$．$Q_{\\rm AB}=0$，$W_{\\rm AB}=-\\Delta U=\\frac32\\cdot\\frac34=\\frac98$，$W_{\\rm BC}=-\\frac7{32}$，$Q_{\\rm CA}=\\frac32\\cdot\\frac{31}{32}=\\frac{93}{64}$．\n\\[ e=\\frac{\\frac{72}{64}-\\frac{14}{64}}{\\frac{93}{64}}=\\boldsymbol{\\frac{58}{93}\\approx0.62} \\]\n\\underline{$n=2$}：$T_{\\rm B}=\\frac18T_0$，$T_{\\rm C}=\\frac1{64}T_0$．$W_{\\rm AB}=\\frac{R(T_0-T_{\\rm B})}{n-1}=\\frac78$，$\\Delta U_{\\rm AB}=\\frac32\\left(\\frac18-1\\right)=-\\frac{21}{16}$ より $Q_{\\rm AB}=\\frac78-\\frac{21}{16}=-\\frac7{16}$（放熱なので吸収熱に入れない）．$W_{\\rm BC}=-\\frac7{64}$，$Q_{\\rm CA}=\\frac32\\cdot\\frac{63}{64}=\\frac{189}{128}$．\n\\[ e=\\frac{\\frac{56}{64}-\\frac{7}{64}}{\\frac{189}{128}}=\\frac{98}{189}=\\boldsymbol{\\frac{14}{27}\\approx0.52} \\]\n（$Q_{\\rm AB}$ を吸収熱に含めて差し引いてしまうと誤る．）\\\\\n等温膨張は仕事が最も大きいが，温度の低い B→C で捨てる熱も大きく効率は低い．断熱より急な膨張（$n=2$）では膨張中に熱を捨ててしまう．3つの中では断熱膨張の効率が最も高い（$a=8$ のとき，$n\\ge1$ のすべての $n$ の中でも $n=\\frac53$ で最大になることが数値計算で確かめられる）．\n\n\\textbf{(3) 膨張比 $a\\to\\infty$ の極限}\\\\\n一般の $a$ で（単位 $RT_0$）\n\\[ W=\\frac{1-a^{1-n}}{n-1}-(a^{1-n}-a^{-n}),\\quad Q_{\\rm AB}=(1-a^{1-n})\\left(\\frac1{n-1}-\\frac32\\right),\\quad Q_{\\rm CA}=\\frac32(1-a^{-n}) \\]\n$n>1$ なので $a\\to\\infty$ で $a^{1-n}\\to0$，$a^{-n}\\to0$．よって $W\\to\\dfrac1{n-1}$，$Q_{\\rm CA}\\to\\dfrac32$．\\\\\n\\underline{$1<n<\\frac53$}：$Q_{\\rm AB}>0$ も吸収熱に入るので，吸収熱 $\\to\\left(\\frac1{n-1}-\\frac32\\right)+\\frac32=\\frac1{n-1}$．よって $e\\to\\boldsymbol{1}$．\\\\\n\\underline{$n=\\frac53$}：$Q_{\\rm AB}=0$ で吸収熱 $\\to\\frac32$，$W\\to\\frac32$ なので $e\\to\\boldsymbol{1}$（$e=1-\\frac{5(a-1)}{3(a^{5/3}-1)}\\to1$ とも書ける）．\\\\\n\\underline{$n>\\frac53$}：$Q_{\\rm AB}<0$ なので吸収熱は $Q_{\\rm CA}$ だけで，\n\\[ e\\to\\frac{1/(n-1)}{3/2}=\\boldsymbol{\\frac{2}{3(n-1)}}\\ (<1) \\]\n膨張比をいくら大きくしても，膨張中に捨てた熱の分だけ効率は1に届かない．$n=\\frac53$ を境に極限値が切り替わる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$pV^n=$ 一定の過程のモル比熱は $C_V-R/(n-1)$ で，$n=\\gamma$ を境に符号が変わるため，膨張中の熱の出入りは $n<\\gamma$ で吸熱，$n>\\gamma$ で放熱に切り替わる．熱効率は吸収した熱だけで割るので，膨張後に定圧圧縮・定積加熱で戻すサイクルでは断熱膨張（$n=\\gamma$）が最も有利になり，膨張比 $\\to\\infty$ の極限効率も $n\\le\\gamma$ では1，$n>\\gamma$ では $(\\gamma-1)/(n-1)$ と切り替わる．"
+ },
+ "concepts": [
+  "first-law",
+  "heat-temperature",
+  "heat-engine"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ポリトロープ変化",
+  "モル比熱",
+  "熱効率",
+  "断熱変化",
+  "極限",
+  "場合分け"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

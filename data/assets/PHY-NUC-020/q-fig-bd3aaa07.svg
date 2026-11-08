@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<text x="20" y="28" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">衝突前</text>
+<circle cx="60" cy="90" r="9" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="40" y="122" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">中性子</text><text x="88" y="122" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">m</text>
+<line x1="72" y1="90" x2="150" y2="90" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="105" y="80" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">v</text>
+<circle cx="220" cy="90" r="15" fill="#222"/>
+<text x="180" y="128" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">原子核（静止）</text>
+<text x="200" y="148" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">質量</text><text x="236" y="148" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">Am</text>
+<line x1="290" y1="20" x2="290" y2="220" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="310" y="28" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">衝突後（実験室系）</text>
+<circle cx="400" cy="140" r="3" fill="#888"/>
+<line x1="320" y1="140" x2="540" y2="140" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="400" y1="140" x2="470" y2="75" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<circle cx="478" cy="68" r="9" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="492" y="64" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">v′</text>
+<line x1="400" y1="140" x2="455" y2="190" stroke="#222" stroke-width="1.8" marker-end="url(#q-ak)"/>
+<circle cx="466" cy="200" r="15" fill="#222"/>
+</svg>

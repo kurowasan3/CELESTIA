@@ -1,0 +1,143 @@
+{
+ "id": "PHY-SND-011",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "吸音材の前にできる不完全な定常波（定在波比からの反射率と反射の位相のずれ）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，断面積が一様な細長い管の右端に吸音材の試料 S を取り付け，左方の遠くにあるスピーカーから振動数 $f$ の音を送り込む．管の中の音は管に沿って進む平面波とみなす．試料の表面を原点とし，管に沿って右向きに $x$ 軸をとる．管の中を動かせる小さなマイクロホンで，試料の表面から左へ距離 $l$ の点（$x=-l$）の音圧（大気圧からの圧力の変化）を測る．\n\n試料へ向かう音（入射波）の音圧は $p_1=A\\sin\\left\\{2\\pi\\left(ft-\\frac{x}{\\lambda}\\right)\\right\\}$（$A>0$，$\\lambda$ は波長）で表される．試料は入射波の一部だけを反射し，表面 $x=0$ での反射波の音圧は $rA\\sin(2\\pi ft-\\delta)$ となる．ここで $r\\ (0\\le r\\le 1)$ は振幅の反射率，$\\delta\\ (0\\le\\delta<2\\pi)$ は反射による位相の遅れである．スピーカー側での反射は無視でき，音の強さは音圧の振幅の2乗に比例するものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "反射波の音圧 $p_2$ を，$x\\ (x\\le 0)$ と $t$ の式で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "点 $x=-l$ での音圧の振幅 $P(l)$ を $A,\\ r,\\ \\lambda,\\ \\delta,\\ l$ で表せ．また，$l$ を変えたときの $P$ の最大値と最小値を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "マイクロホンを動かして調べたところ，音圧の振幅が極小になる点は間隔 $D$ で並び，試料にもっとも近い極小点は表面から距離 $l_0\\ (0\\le l_0<D)$ の位置にあった．また，振幅の最大値と最小値の比は $s\\ (s>1)$ であった．音速 $V$，反射率 $r$，試料に吸収される音の強さの入射波の強さに対する割合 $\\eta$，位相の遅れ $\\delta$ を，$f,\\ D,\\ l_0,\\ s$ のうち必要なものを用いて表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$f=500\\ \\mathrm{Hz}$，$D=0.340\\ \\mathrm{m}$，$l_0=0.085\\ \\mathrm{m}$，$s=3.0$ のとき，$V,\\ r,\\ \\eta,\\ \\delta$ の値を求めよ（$V,\\ r,\\ \\eta$ は有効数字2桁）．"
+     },
+     {
+      "id": "5",
+      "tex": "次に，マイクロホンを空気の振動の速さを測るセンサーに取り替えて，(4) の条件で同じ測定をした．進行波では，$x$ 軸の正の向きに進む波の音圧は空気の速度の $x$ 成分に比例して同符号であり，負の向きに進む波の音圧は空気の速度の $x$ 成分に比例して逆符号である（比例定数の大きさは両者で共通）．空気の速さの振幅が極小になる点のうち試料にもっとも近いものの，表面からの距離を求めよ．また，速さの振幅の最大値と最小値の比を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：吸音材の前にできる不完全な定常波（定在波比からの反射率と反射の位相のずれ）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：吸音材の前にできる不完全な定常波（定在波比からの反射率と反射の位相のずれ）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$p_2=rA\\sin\\left\\{2\\pi\\left(ft+\\frac{x}{\\lambda}\\right)-\\delta\\right\\}$"
+   },
+   {
+    "id": "2",
+    "tex": "$P(l)=A\\sqrt{1+r^2+2r\\cos\\left(\\frac{4\\pi l}{\\lambda}+\\delta\\right)}$，最大値 $A(1+r)$，最小値 $A(1-r)$"
+   },
+   {
+    "id": "3",
+    "tex": "$V=2fD$，$r=\\dfrac{s-1}{s+1}$，$\\eta=\\dfrac{4s}{(s+1)^2}$，$\\delta=\\pi-\\dfrac{2\\pi l_0}{D}\\ \\left(l_0\\le\\frac{D}{2}\\right)$，$\\delta=3\\pi-\\dfrac{2\\pi l_0}{D}\\ \\left(l_0>\\frac{D}{2}\\right)$"
+   },
+   {
+    "id": "4",
+    "tex": "$V=3.4\\times10^2\\ \\mathrm{m/s}$，$r=0.50$，$\\eta=0.75$，$\\delta=\\dfrac{\\pi}{2}$"
+   },
+   {
+    "id": "5",
+    "tex": "$0.255\\ \\mathrm{m}$，比 $3.0$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 反射波の式}　反射波は $x$ 軸の負の向きに進むので，$x=0$ での振動 $rA\\sin(2\\pi ft-\\delta)$ が，点 $x\\ (\\le0)$ には時間 $|x|/V=-x/V$ だけ遅れて届く．$t\\to t+\\frac{x}{V}$ と置きかえ，$V=f\\lambda$ を使うと\n\\[ p_2=\\boldsymbol{rA\\sin\\left\\{2\\pi\\left(ft+\\frac{x}{\\lambda}\\right)-\\delta\\right\\}}. \\]\n\n\\textbf{(2) 合成振幅}　$x=-l$ では\n\\[ p_1=A\\sin\\left(2\\pi ft+\\frac{2\\pi l}{\\lambda}\\right),\\qquad p_2=rA\\sin\\left(2\\pi ft-\\frac{2\\pi l}{\\lambda}-\\delta\\right) \\]\nで，両者は同じ振動数の単振動であり，位相の差は $\\phi=\\frac{4\\pi l}{\\lambda}+\\delta$（入射波が進んでいる）．長さ $A$ と $rA$ の回転ベクトルが角 $\\phi$ をなして合成されると考えると，余弦定理より\n\\[ P(l)=\\boldsymbol{A\\sqrt{1+r^2+2r\\cos\\left(\\frac{4\\pi l}{\\lambda}+\\delta\\right)}}. \\]\n$\\cos\\phi=1$ のとき最大値 $\\boldsymbol{A(1+r)}$，$\\cos\\phi=-1$ のとき最小値 $\\boldsymbol{A(1-r)}$ となる．反射が完全（$r=1$）なら最小値は $0$ で通常の定常波の節になるが，$r<1$ では節が「底上げ」され，入射波の残りが試料に吸収されるぶん音が試料へ流れ込み続ける．\n\n\\textbf{(3) 測定値から読み取る}　$P$ は $\\phi$ の周期 $2\\pi$ ごと，すなわち $l$ が $\\frac{\\lambda}{2}$ 変わるごとに同じ値をとるので，極小点の間隔は $D=\\frac{\\lambda}{2}$．よって $\\lambda=2D$，\n\\[ V=f\\lambda=\\boldsymbol{2fD}. \\]\n最大・最小の比は $s=\\frac{1+r}{1-r}$ なので\n\\[ r=\\boldsymbol{\\frac{s-1}{s+1}}. \\]\n強さは振幅の2乗に比例するから，反射される割合は $r^2$，吸収される割合は\n\\[ \\eta=1-r^2=\\boldsymbol{\\frac{4s}{(s+1)^2}}. \\]\n（管内の音のエネルギーは試料で吸収されるか反射されるかのどちらかである．）\n極小点では $\\phi=\\frac{4\\pi l_0}{\\lambda}+\\delta=\\frac{2\\pi l_0}{D}+\\delta$ が $\\pi$ の奇数倍になる．$0\\le\\frac{2\\pi l_0}{D}<2\\pi$，$0\\le\\delta<2\\pi$ より $\\phi$ は $\\pi$ か $3\\pi$ で，\n\\[ \\boldsymbol{\\delta=\\pi-\\frac{2\\pi l_0}{D}}\\ \\left(l_0\\le\\tfrac{D}{2}\\right),\\qquad \\boldsymbol{\\delta=3\\pi-\\frac{2\\pi l_0}{D}}\\ \\left(l_0>\\tfrac{D}{2}\\right). \\]\n確認として，固い壁（音圧が同位相で反射，$\\delta=0$）なら $l_0=\\frac{D}{2}=\\frac{\\lambda}{4}$ で，壁の表面は音圧の腹になる．$\\delta=\\pi$ なら $l_0=0$ で表面が音圧の極小になる．\n\n\\textbf{(4) 数値}　$V=2\\times500\\times0.340=\\boldsymbol{3.4\\times10^2\\ \\mathrm{m/s}}$，$r=\\frac{3.0-1}{3.0+1}=\\boldsymbol{0.50}$，$\\eta=1-0.25=\\boldsymbol{0.75}$．$l_0=0.085=\\frac{D}{4}\\le\\frac{D}{2}$ なので $\\delta=\\pi-\\frac{\\pi}{2}=\\boldsymbol{\\frac{\\pi}{2}}$．\n\n\\textbf{(5) 空気の速さの振幅}　比例定数の大きさを $Z$ とすると，入射波による空気の速度は $p_1/Z$，反射波による速度は $-p_2/Z$ である．したがって速度は $(p_1-p_2)/Z$ で，(2) と同様に\n\\[ U(l)=\\frac{A}{Z}\\sqrt{1+r^2-2r\\cos\\phi}. \\]\n音圧と符号だけが逆なので，速さの振幅の極小は $\\cos\\phi=1$，つまり音圧の振幅が最大の点にくる．(4) では $\\phi=\\frac{2\\pi l}{D}+\\frac{\\pi}{2}$ が $2\\pi$ の整数倍になる最小の $l$ は $\\frac{2\\pi l}{D}=\\frac{3\\pi}{2}$，すなわち\n\\[ l=\\frac{3}{4}D=\\boldsymbol{0.255\\ \\mathrm{m}}. \\]\n最大値・最小値は $\\frac{A}{Z}(1+r)$，$\\frac{A}{Z}(1-r)$ なので，比は音圧と同じ $\\boldsymbol{3.0}$ である．音圧の極小と速さの極小は $\\frac{D}{2}=\\frac{\\lambda}{4}$ ずれており，完全反射の定常波で「変位の節＝圧力の腹」となることの一般化になっている．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "部分的に反射する境界の前では，音圧の振幅が入射波と反射波の回転ベクトルの和として $A(1-r)$ と $A(1+r)$ の間を周期 $\\lambda/2$ で変化するので，最大と最小の比から反射率と吸収率が，極小点の位置から反射による位相の遅れが読み取れる．音圧と空気の速度の符号の関係は進む向きで逆になるため，速さの振幅の極小は音圧の振幅の極大の位置にくる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "torque",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "定常波",
+  "部分反射",
+  "音圧",
+  "回転ベクトル",
+  "吸音率"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

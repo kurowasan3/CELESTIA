@@ -1,0 +1,138 @@
+{
+ "id": "PHY-WAV-013",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "音波がつくる上昇する反射面による電波の反射（ブラッグ条件とドップラー効果，光子と音の粒子の保存則）",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "地上から鉛直上向きに振動数 $f_s$ の音波を短時間発すると，空気の密度の濃淡が音速 $v_s$ で上昇していく．電波は密度の濃淡のところでごくわずかに反射されるので，音波の通り道には，間隔の等しい弱い反射面が並んで上昇していると考えることができる．地上から振動数 $f$ の電波を真上に発し，多数の反射面で反射されて地上に戻る電波を観測する．真空中の光速を $c$ とし，空気中の電波の速さも $c$ とする．$v_s\\ll c$ であり，(1)〜(4) では $\\dfrac{v_s}{c}$ の1次までの近似を用いよ．音速は考えている高さの付近で一定とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "反射面の間隔 $\\Lambda$ を $v_s,\\ f_s$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "反射面とともに上昇する観測者から見ると，電波の振動数は $f$ からずれて見える（電波の速さはこの観測者に対しても $c$ である）．この観測者から見た電波の波長を求めよ．さらに，隣り合う反射面からの反射波が強め合い，しかもそれが最も低い振動数で起こる条件から，地上に戻る電波が最も強くなる振動数 $f_0$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "地上で観測する反射波の振動数 $f_{\\rm r}$ と $f$ の差 $\\Delta f=f-f_{\\rm r}$ を $f,\\ v_s,\\ c$ で表せ．また，$f=f_0$ のとき $\\Delta f$ は何に等しくなるか．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の結果は，反射を「エネルギー $hf$，運動量 $\\dfrac{hf}{c}$ の光子が，エネルギー $hf_s$，運動量 $\\dfrac{hf_s}{v_s}$（上向き）の音の粒子を1個つくって真下にはね返る過程」とみると理解できる（$h$ はプランク定数）．この過程のエネルギーと運動量の保存の式を書き，それから $f$ と $f_{\\rm r}$ を求めて (2)(3) の結果と比べよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$f_s=1.000\\times10^3\\,\\mathrm{Hz}$ の音波を使ったところ，$f_0=461.5\\,\\mathrm{MHz}$ であった．$c=3.00\\times10^8\\,\\mathrm{m/s}$，音速は $0\\,{}^\\circ\\mathrm{C}$（$273\\,\\mathrm{K}$）で $331.5\\,\\mathrm{m/s}$ で絶対温度の $\\frac12$ 乗に比例するとして，その高さの音速（有効数字3桁）と気温（$\\mathrm{{}^\\circ C}$，有効数字2桁）を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "音波を発してから $t_1=3.000\\,\\mathrm{s}$ 後に短い電波のパルスを発したところ，反射波はパルスを発してから $t_2=6.80\\,\\mu\\mathrm{s}$ 後に戻ってきた．反射が起きた高さ $H$ と，地上から高さ $H$ までの音速の平均値を有効数字3桁で求めよ．この平均値が (5) の音速と異なる理由も述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：音波がつくる上昇する反射面による電波の反射（ブラッグ条件とドップラー効果，光子と音の粒子の保存則）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\Lambda=\\dfrac{v_s}{f_s}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\lambda'=\\dfrac{c}{f}\\left(1+\\dfrac{v_s}{c}\\right)$，$f_0=\\dfrac{cf_s}{2v_s}+\\dfrac{f_s}{2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\Delta f=\\dfrac{2v_s}{c}f$，$f=f_0$ のとき $\\Delta f=f_s$（音波の振動数）"
+   },
+   {
+    "id": "4",
+    "tex": "$hf=hf_{\\rm r}+hf_s$，$\\dfrac{hf}{c}=-\\dfrac{hf_{\\rm r}}{c}+\\dfrac{hf_s}{v_s}$ より $f=\\dfrac{cf_s}{2v_s}+\\dfrac{f_s}{2}$，$f_{\\rm r}=f-f_s$（(2)(3) と一致）"
+   },
+   {
+    "id": "5",
+    "tex": "$v_s=325\\,\\mathrm{m/s}$，$-11\\,{}^\\circ\\mathrm{C}$"
+   },
+   {
+    "id": "6",
+    "tex": "$H=1.02\\times10^3\\,\\mathrm{m}$，$340\\,\\mathrm{m/s}$（平均は下の暖かい層を含むため）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　密度の濃い部分（反射面）は音波の1波長ごとに現れるので $\\Lambda=\\boldsymbol{\\dfrac{v_s}{f_s}}$．反射面は速さ $v_s$ で上昇する．\n\n\\textbf{(2)}　速さ $v_s$ で波源から遠ざかる観測者が受ける振動数は $f'=f\\left(1-\\dfrac{v_s}{c}\\right)$ で，この観測者に対しても電波の速さは $c$ なので\n\\[ \\lambda'=\\frac{c}{f'}\\fallingdotseq\\boldsymbol{\\frac cf\\left(1+\\frac{v_s}{c}\\right)} \\]\n反射面とともに動く観測者から見ると反射面は静止しており，隣り合う反射面で反射した波の経路差は往復の $2\\Lambda$ である．これが波長の整数倍のとき強め合う：$2\\Lambda=n\\lambda'$．最も低い振動数（最も長い波長）は $n=1$ で，\n\\[ \\frac{2v_s}{f_s}=\\frac{c}{f_0}\\left(1+\\frac{v_s}{c}\\right)\\ \\Longrightarrow\\ f_0=\\frac{cf_s}{2v_s}\\left(1+\\frac{v_s}{c}\\right)=\\boldsymbol{\\frac{cf_s}{2v_s}+\\frac{f_s}{2}} \\]\n反射面が動いていなければ $f_0=\\dfrac{cf_s}{2v_s}$ で，第2項が反射面の運動による補正である．\n\n\\textbf{(3)}　反射面は「遠ざかる観測者」として $f'=f(1-\\frac{v_s}{c})$ を受け，それを「遠ざかる波源」として地上に送り返すので\n\\[ f_{\\rm r}=f'\\cdot\\frac{c}{c+v_s}=f\\,\\frac{c-v_s}{c+v_s}\\fallingdotseq f\\left(1-\\frac{2v_s}{c}\\right),\\qquad \\Delta f=\\boldsymbol{\\frac{2v_s}{c}f} \\]\n$f=f_0$ のとき，1次までの近似で\n\\[ \\Delta f=\\frac{2v_s}{c}\\cdot\\frac{cf_s}{2v_s}\\left(1+\\frac{v_s}{c}\\right)\\fallingdotseq\\boldsymbol{f_s} \\]\nすなわち，最も強く反射されるときの振動数のずれは\\textbf{音波の振動数そのもの}に等しく，音速によらない．したがって音速を知るには，振動数のずれではなく，最も強く反射される振動数 $f_0$ そのものを測る必要がある．\n\n\\textbf{(4)}　はね返った光子の振動数を $f_{\\rm r}$ とする．上向きを正として\n\\[ \\text{エネルギー：}\\ hf=hf_{\\rm r}+hf_s,\\qquad \\text{運動量：}\\ \\frac{hf}{c}=-\\frac{hf_{\\rm r}}{c}+\\frac{hf_s}{v_s} \\]\n第1式から $f_{\\rm r}=f-f_s$．これを第2式に代入して $\\dfrac{2f-f_s}{c}=\\dfrac{f_s}{v_s}$，よって\n\\[ f=\\boldsymbol{\\frac{cf_s}{2v_s}+\\frac{f_s}{2}},\\qquad f_{\\rm r}=\\boldsymbol{f-f_s} \\]\nこれは (2) の $f_0$ と (3) の $\\Delta f=f_s$ にそのまま一致する．光子が真後ろにはね返るには，音の粒子に光子の運動量のほぼ2倍を渡さなければならず，その運動量 $\\frac{hf_s}{v_s}$ が決まっているので光子の振動数が1つに決まる（強め合いの条件）．渡したエネルギー $hf_s$ の分だけ光子の振動数が下がる（ドップラー効果）．波の干渉で考えた2つの条件が，粒子の保存則では2本の式として表れている．\n\n\\textbf{(5)}　$f_0=\\dfrac{f_s(c+v_s)}{2v_s}$ を $v_s$ について解くと $v_s=\\dfrac{cf_s}{2f_0-f_s}$．\n\\[ v_s=\\frac{3.00\\times10^8\\times1.000\\times10^3}{9.230\\times10^8-1.000\\times10^3}\\fallingdotseq\\boldsymbol{325\\,\\mathrm{m/s}} \\]\n音速は $\\sqrt T$ に比例するので $T=273\\times\\left(\\dfrac{325.0}{331.5}\\right)^2\\fallingdotseq262\\,\\mathrm K$，気温は約 $\\boldsymbol{-11\\,{}^\\circ\\mathrm C}$．\n\n\\textbf{(6)}　電波は往復 $2H$ を時間 $t_2$ で進むので\n\\[ H=\\frac{ct_2}{2}=\\frac{3.00\\times10^8\\times6.80\\times10^{-6}}{2}=\\boldsymbol{1.02\\times10^3\\,\\mathrm m} \\]\n音波は，音波を発してから電波が高さ $H$ に達する時刻 $t_1+\\dfrac{t_2}{2}$ までに高さ $H$ まで上ったので，平均の音速は\n\\[ \\bar v=\\frac{H}{t_1+\\frac{t_2}{2}}\\fallingdotseq\\frac{1020}{3.000}=\\boldsymbol{340\\,\\mathrm{m/s}} \\]\n(5) は反射が起きた高さ付近の音速（その高さの気温）を表すのに対し，(6) は地上からその高さまでの平均である．対流圏では高いほど気温が低く，下の暖かい層では音速が大きいので，平均値の方が大きくなる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "音波がつくる動く反射面の列による電波の反射では，反射面とともに動く系での強め合い（ブラッグ条件）と，地上で見たドップラー効果の2つが同時にはたらき，最も強く反射されるとき振動数のずれは音波の振動数に等しくなる．これは光子が音の粒子を1個つくってはね返るときのエネルギー保存と運動量保存の2式と同じ内容である．"
+ },
+ "concepts": [
+  "wave-basics",
+  "momentum-conservation",
+  "mechanical-energy"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "反射波の干渉",
+  "ブラッグ条件",
+  "音速と温度",
+  "光子の運動量"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

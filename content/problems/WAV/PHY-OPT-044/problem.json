@@ -1,0 +1,142 @@
+{
+ "id": "PHY-OPT-044",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "重ねた2枚の回折格子がレンズの焦点面につくる明点の格子とモアレ縞（重ねる場合と並べる場合の違い）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図1のように，$z$ 軸に垂直な平面内に回折格子を置き，$z$ 軸の正の向きに進む波長 $\\lambda$ の平行光線を垂直に当てる．格子の後方に焦点距離 $f$ の凸レンズを，光軸が $z$ 軸に一致するように置き，レンズの後方の焦点面にスクリーンを置く．スクリーン上には格子の $x$ 軸，$y$ 軸と同じ向きに $x'$ 軸，$y'$ 軸をとり，光軸との交点を O$'$ とする（図2は $z$ 軸の正の側から見た図である）．光の進む向きが $z$ 軸から $x$ 方向・$y$ 方向に傾く角はいずれも十分小さく，$\\sin\\theta\\approx\\tan\\theta\\approx\\theta$ と近似してよい．また，次のことを用いてよい．\n\\begin{quote}\n格子定数 $d$ の回折格子に（垂直とは限らない向きから）光が入射するとき，回折光は，進む向きの傾き角のうち溝に垂直な向きの成分だけが $m\\lambda/d$（$m$ は整数）ずつ変化した向きに進み，溝に平行な向きの成分は変わらない．\n\\end{quote}\n回折格子はどれも，すべての次数の回折光を生じるものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "溝が $y$ 軸に平行な格子定数 $d$ の回折格子 A だけを置いたとき，スクリーン上の明点の位置 $(x',y')$ を求めよ．また，A を $x$ 方向に $d/2$ だけずらしたとき，および A の下半分 $(y<0)$ を厚紙でおおったとき，明点の位置はそれぞれどうなるか．理由とともに答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "A と同じ格子定数の回折格子 B は，A を $z$ 軸のまわりに角 $\\alpha$（$0<\\alpha<60^\\circ$，$z$ 軸の正の側から見て反時計回り）だけ回転させた向きに溝がある（図2）．B だけを置いたときの明点の並び方を答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "A と B を密着させて重ね（光は A，B の順に通る），平行光線を当てた．A の 1 次の明点 $(m=1)$ の位置ベクトル（O$'$ から見た位置）を $\\vec a$，B の 1 次の明点の位置ベクトルを $\\vec b$ とするとき，スクリーン上の明点の位置ベクトルをすべて $\\vec a$，$\\vec b$ を用いて表せ．また，A だけ，B だけのときには現れなかった明点のうち O$'$ に最も近いものについて，O$'$ からの距離を $f$，$\\lambda$，$d$，$\\alpha$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) で求めた O$'$ に最も近い新しい明点は，ある1枚の回折格子を単独で置いたときの 1 次の明点と同じ位置にある．その仮想的な回折格子の格子定数 $D$ と，その溝が $x$ 軸となす角を求めよ．重ねた2枚の格子を肉眼で見ると，実際にこの間隔 $D$ の太い縞（モアレ縞）が見える．$d=0.10$ mm，$\\alpha=2.0^\\circ$ のときの $D$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "次に，A と B を重ねずに，光の当たる範囲の上半分 $(y>0)$ に A を，下半分 $(y<0)$ に B を並べて置いた．(3) で新たに現れた明点は現れるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：重ねた2枚の回折格子がレンズの焦点面につくる明点の格子とモアレ縞（重ねる場合と並べる場合の違い）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：重ねた2枚の回折格子がレンズの焦点面につくる明点の格子とモアレ縞（重ねる場合と並べる場合の違い）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$(x',y')=\\left(m\\dfrac{f\\lambda}{d},\\,0\\right)$（$m$ は整数）．ずらしても，下半分をおおっても位置は変わらない（おおうと暗くなる）"
+   },
+   {
+    "id": "2",
+    "tex": "O$'$ を通り $x'$ 軸と角 $\\alpha$ をなす直線上に間隔 $\\dfrac{f\\lambda}{d}$ で並ぶ：$m\\dfrac{f\\lambda}{d}(\\cos\\alpha,\\sin\\alpha)$"
+   },
+   {
+    "id": "3",
+    "tex": "$m\\vec a+n\\vec b$（$m$，$n$ は整数），最も近い新しい明点は $\\pm(\\vec a-\\vec b)$ で距離 $\\dfrac{2f\\lambda}{d}\\sin\\dfrac{\\alpha}{2}$"
+   },
+   {
+    "id": "4",
+    "tex": "$D=\\dfrac{d}{2\\sin\\frac{\\alpha}{2}}$，溝が $x$ 軸となす角 $\\dfrac{\\alpha}{2}$（A，B の溝にほぼ垂直），$D\\approx2.9$ mm"
+   },
+   {
+    "id": "5",
+    "tex": "現れない（各光線は A，B の一方しか通らないので，明点は2本の直線上の $m\\vec a$，$n\\vec b$ だけ）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{レンズの焦点面の性質}　凸レンズに入る平行光線は，入る位置によらず，レンズの中心を通る光線と同じ向きの直線が焦点面と交わる点に集まる．傾き角 $(\\theta_x,\\theta_y)$ の平行光線が集まる点は $(x',y')=(f\\theta_x,\\,f\\theta_y)$ である．したがって，焦点面の明点の位置は\\textbf{回折光の向きだけ}で決まり，格子のどの部分を光が通ったかによらない．\n\\begin{enumerate}\n  \\item 溝に垂直な向きは $x$ 方向なので，回折光の向きは $\\theta_x=m\\lambda/d$，$\\theta_y=0$．よって明点は $\\boldsymbol{(x',y')=\\left(m\\dfrac{f\\lambda}{d},\\,0\\right)}$ に並ぶ．\nA を $x$ 方向に $d/2$ ずらしても，回折光の向き（強め合う条件）は変わらないので位置は変わらない（各回折光の位相がずれるだけで明るさも変わらない）．下半分をおおっても，残った部分からの回折光の向きは同じなので位置は変わらず，光の量が減るので暗くなる．\n  \\item 溝に垂直な向きは $x$ 軸から角 $\\alpha$ の向き $(\\cos\\alpha,\\sin\\alpha)$ なので，回折光の傾き角はこの向きに $m\\lambda/d$ ずつ変わる．明点は $m\\dfrac{f\\lambda}{d}(\\cos\\alpha,\\sin\\alpha)$，すなわち \\textbf{O$'$ を通り $x'$ 軸と角 $\\alpha$ をなす直線上に間隔 $\\dfrac{f\\lambda}{d}$ で並ぶ}（溝に垂直な向きに並ぶ）．\n  \\item A を出た光は，傾き角が $m\\dfrac{\\lambda}{d}(1,0)$ の向きに分かれる．それぞれが B に斜めに入射すると，与えられた性質により，傾き角のうち B の溝に垂直な成分だけがさらに $n\\dfrac{\\lambda}{d}$ 変わる．小角近似では傾き角はベクトルとして足し合わされるので，最終的な傾き角は\n\\[ \\vec\\theta=m\\frac{\\lambda}{d}(1,0)+n\\frac{\\lambda}{d}(\\cos\\alpha,\\sin\\alpha), \\]\n焦点面上の位置は $f\\vec\\theta$ で，$\\vec a=\\dfrac{f\\lambda}{d}(1,0)$，$\\vec b=\\dfrac{f\\lambda}{d}(\\cos\\alpha,\\sin\\alpha)$ を用いて $\\boldsymbol{m\\vec a+n\\vec b}$（$m$，$n$ は整数）と表される．\n新しい明点は $m\\ne0$ かつ $n\\ne0$ のもので，$s=\\dfrac{f\\lambda}{d}$ とおくと\n\\[ |m\\vec a+n\\vec b|^2=s^2(m^2+n^2+2mn\\cos\\alpha) . \\]\nこれを最小にするのは $mn<0$，$|m|=|n|=1$ の場合で（たとえば $(2,-1)$ では $5-4\\cos\\alpha>2-2\\cos\\alpha$），$\\pm(\\vec a-\\vec b)$ の距離は\n\\[ |\\vec a-\\vec b|=s\\sqrt{2-2\\cos\\alpha}=\\boldsymbol{\\frac{2f\\lambda}{d}\\sin\\frac{\\alpha}{2}} . \\]\n$\\alpha<60^\\circ$ ではこれは $s$ より小さく，A や B の 1 次の明点よりも O$'$ に近い．\n  \\item 格子定数 $D$ の格子の 1 次の明点の O$'$ からの距離は $f\\lambda/D$ なので，$\\dfrac{f\\lambda}{D}=\\dfrac{2f\\lambda}{d}\\sin\\dfrac{\\alpha}{2}$ より\n\\[ D=\\boldsymbol{\\frac{d}{2\\sin\\frac{\\alpha}{2}}} . \\]\n明点は溝に垂直な向きに並ぶので，溝は $\\vec a-\\vec b$ に垂直である．$\\vec a-\\vec b=s\\left(1-\\cos\\alpha,\\,-\\sin\\alpha\\right)=2s\\sin\\frac{\\alpha}{2}\\left(\\sin\\frac{\\alpha}{2},\\,-\\cos\\frac{\\alpha}{2}\\right)$ は $x'$ 軸から $-(90^\\circ-\\frac{\\alpha}{2})$ の向きなので，溝が $x$ 軸となす角は $\\boldsymbol{\\dfrac{\\alpha}{2}}$（A，B の溝の二等分線にほぼ垂直）である．\n数値は $D=\\dfrac{0.10\\ \\text{mm}}{2\\sin1.0^\\circ}=\\dfrac{0.10}{0.0349}\\ \\text{mm}\\approx\\boldsymbol{2.9\\ \\text{mm}}$．わずかな角のずれが，格子定数の約30倍の太い縞として拡大されて見える．\n  \\item 並べて置くと，上半分を通る光は A だけ，下半分を通る光は B だけで回折されるので，回折光の向きは $m\\lambda/d$ の A の向きか，$n\\lambda/d$ の B の向きのどちらかに限られる．2 回の回折で傾き角が足し合わされることがないので，$m\\vec a+n\\vec b$（$m,n\\ne0$）の明点は\\textbf{現れない}．明点は (1)，(2) の2本の直線上の点だけで，それぞれ光の量が半分になる分暗くなる．重ねた格子は光を「続けて」通すので向きの変化が足し合わされ，並べた格子は光を「どちらか一方」に通すので明点の集合が合わさるだけ，という違いである．\\hfill$\\square$\n\\end{enumerate}"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "レンズの焦点面の明点の位置は回折光の向きだけで決まり，格子のどの部分を光が通ったかによらず，明点は溝に垂直な向きに並ぶ．重ねた2枚の格子では2回の回折による傾き角の変化が足し合わされるので，明点は $m\\vec a+n\\vec b$ の格子点に並び，差 $\\vec a-\\vec b$ の明点は格子定数 $d/(2\\sin\\frac{\\alpha}{2})$ の仮想的な格子（モアレ縞）に対応する．並べて置くと各光線は一方の格子しか通らないので，この明点は現れない．"
+ },
+ "concepts": [
+  "light-interference",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "回折格子",
+  "凸レンズ",
+  "焦点面",
+  "2次元の回折",
+  "モアレ縞"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

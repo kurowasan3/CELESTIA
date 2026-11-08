@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340">
+<defs>
+<marker id="q-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<!-- incident plane wave -->
+<line x1="30" y1="120" x2="110" y2="120" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ah)"/>
+<line x1="30" y1="225" x2="110" y2="225" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ah)"/>
+<line x1="30" y1="270" x2="110" y2="270" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ah)"/>
+<text x="22" y="105" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">平行光（波長 <tspan font-family="Times New Roman, serif" font-style="italic">λ</tspan>）</text>
+<!-- slit plate at x=130; slits at y=150 (B, upper) and 190 (A, lower); center 170 -->
+<line x1="130" y1="50" x2="130" y2="146" stroke="#222" stroke-width="3"/>
+<line x1="130" y1="154" x2="130" y2="186" stroke="#222" stroke-width="3"/>
+<line x1="130" y1="194" x2="130" y2="290" stroke="#222" stroke-width="3"/>
+<text x="112" y="146" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">B</text>
+<text x="112" y="200" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">A</text>
+<!-- film behind B -->
+<rect x="134" y="142" width="8" height="16" fill="#888" stroke="#222" stroke-width="1"/>
+<line x1="142" y1="142" x2="175" y2="110" stroke="#888" stroke-width="1"/>
+<text x="150" y="104" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">膜（位相が <tspan font-family="Times New Roman, serif" font-style="italic">φ</tspan> 遅れる）</text>
+<!-- a dimension -->
+<line x1="95" y1="150" x2="95" y2="190" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="80" y="176" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">a</text>
+<!-- axis line -->
+<line x1="130" y1="170" x2="470" y2="170" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<!-- screen at x=470 -->
+<line x1="470" y1="40" x2="470" y2="300" stroke="#222" stroke-width="1.6"/>
+<line x1="470" y1="300" x2="470" y2="30" stroke="#222" stroke-width="1" marker-end="url(#q-ak)"/>
+<text x="478" y="38" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">x</text>
+<text x="476" y="186" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">O</text>
+<!-- rays to C2 -->
+<line x1="130" y1="150" x2="470" y2="95" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<line x1="130" y1="190" x2="470" y2="95" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<!-- detectors -->
+<rect x="472" y="87" width="16" height="16" fill="#888" stroke="#222" stroke-width="1"/>
+<rect x="472" y="217" width="16" height="16" fill="#888" stroke="#222" stroke-width="1"/>
+<text x="402" y="88" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">C<tspan baseline-shift="sub" font-size="10">2</tspan>（<tspan font-family="Times New Roman, serif" font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="10">2</tspan>）</text>
+<text x="402" y="250" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">C<tspan baseline-shift="sub" font-size="10">1</tspan>（<tspan font-family="Times New Roman, serif" font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="10">1</tspan>）</text>
+<!-- multiplier device -->
+<rect x="540" y="140" width="60" height="50" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="552" y="171" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">積 ×</text>
+<path d="M 488 95 C 520 95, 530 140, 545 140" fill="none" stroke="#222" stroke-width="1"/>
+<path d="M 488 225 C 520 225, 530 190, 545 190" fill="none" stroke="#222" stroke-width="1"/>
+<!-- L dimension -->
+<line x1="130" y1="315" x2="470" y2="315" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="294" y="333" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">L</text>
+<text x="420" y="320" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222"></text>
+<text x="500" y="320" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">スクリーン</text>
+</svg>

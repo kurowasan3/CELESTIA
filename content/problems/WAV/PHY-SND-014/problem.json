@@ -1,0 +1,130 @@
+{
+ "id": "PHY-SND-014",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "飛ぶコウモリが段差のある崖から受ける反射波の打ち消し合い（ドップラー効果と干渉の組合せ）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，鉛直で平らな崖の面に，厚さ $d$ の平らな板状の岩がはりついている．コウモリは崖に垂直な直線上にいて，崖に向けて振動数を自由に変えられる超音波を連続的に出し，その反射波を聞く．超音波は岩の表面と崖の面（岩のない部分）で同じ強さで反射し，反射による位相の変化も両者で同じとする．音の速さを $V$ とし，コウモリと崖の距離は $d$ に比べて十分大きい．反射波の強さは，岩の表面からの反射波と崖の面からの反射波の重ね合わせで決まるものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "風のない日，空中に静止したコウモリが振動数をしだいに上げていくと，ある振動数で反射波がはじめて最も弱くなった．その振動数 $f_{\\mathrm A}$ を $V,\\ d$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "次にコウモリは，崖に向かってまっすぐ一定の速さ $v\\ (v<V)$ で飛びながら同じ実験をした．コウモリの前方を進む超音波の，空気中での波長を，出す振動数 $f$ と $V,\\ v$ で表せ．また，反射波がはじめて最も弱くなるときにコウモリが出している振動数 $f_{\\mathrm B}$ と，そのときコウモリが聞く反射波の振動数 $f_{\\mathrm B}'$ を，$V,\\ v,\\ d$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "コウモリが崖からまっすぐ遠ざかる向きに速さ $v$ で飛びながら，後方の崖に向けて超音波を出して同じ実験をした．反射波がはじめて最も弱くなるときに出している振動数 $f_{\\mathrm C}$ を求め，(2) の $f_{\\mathrm B}'$ と比べよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(2)，(3) の実験で $f_{\\mathrm B}=41.5\\ \\mathrm{kHz}$，$f_{\\mathrm C}=43.5\\ \\mathrm{kHz}$ であった．$V=340\\ \\mathrm{m/s}$ として，$d$ と $v$ の値を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "ある日，コウモリの側から崖に向かって一様な風が速さ $w\\ (w<V)$ で吹いていた．地面に対して静止したコウモリが (1) と同じ実験をすると，反射波がはじめて最も弱くなる振動数はいくらか．$V,\\ w,\\ d$ で表せ．また，それは $f_{\\mathrm A}$ より大きいか小さいか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：飛ぶコウモリが段差のある崖から受ける反射波の打ち消し合い（ドップラー効果と干渉の組合せ）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f_{\\mathrm A}=\\dfrac{V}{4d}$"
+   },
+   {
+    "id": "2",
+    "tex": "波長 $\\dfrac{V-v}{f}$，$f_{\\mathrm B}=\\dfrac{V-v}{4d}$，$f_{\\mathrm B}'=\\dfrac{V+v}{4d}$"
+   },
+   {
+    "id": "3",
+    "tex": "$f_{\\mathrm C}=\\dfrac{V+v}{4d}$，$f_{\\mathrm B}'$ に等しい"
+   },
+   {
+    "id": "4",
+    "tex": "$d=2.0\\times10^{-3}\\ \\mathrm{m}$，$v=8.0\\ \\mathrm{m/s}$"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac{V^2-w^2}{4dV}$，$f_{\\mathrm A}$ より小さい"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{打ち消し合いを決めるもの}　岩の表面と崖の面はどちらも静止している．崖の面で反射する波は，岩の表面で反射する波より往復 $2d$ だけ長い経路を空気中で進む．2つの反射波は同じ向きに同じ空気中を進むので，両者の位相差は「$2d$ が空気中の波長 $\\lambda$ の何倍か」で決まり，コウモリの位置や運動によらない．反射による位相の変化は共通なので，最も弱め合う条件は\n\\[ 2d=\\left(m+\\tfrac12\\right)\\lambda\\quad(m=0,1,2,\\dots), \\]\n振動数を低い方から上げる（波長を長い方から縮める）とき最初に満たされるのは $m=0$，すなわち $\\lambda=4d$ である．ここで $\\lambda$ は\\textbf{振動数ではなく空気中の波長}であることが鍵になる．\n\n\\textbf{(1)}　静止したコウモリの音の波長は $V/f$ なので，$\\frac{V}{f_{\\mathrm A}}=4d$ より $f_{\\mathrm A}=\\boldsymbol{\\dfrac{V}{4d}}$．\n\n\\textbf{(2)}　速さ $v$ で前進しながら振動数 $f$ の音を出すと，1周期 $\\frac1f$ の間に波の先頭は $V/f$ 進み，音源は $v/f$ 進むので，前方の波長は\n\\[ \\lambda=\\boldsymbol{\\frac{V-v}{f}}. \\]\n崖で反射した波の波長も同じ（反射面は静止している）．$\\lambda=4d$ より\n\\[ f_{\\mathrm B}=\\boldsymbol{\\frac{V-v}{4d}}. \\]\n反射波（波長 $4d$，速さ $V$）にコウモリが速さ $v$ で向かっていくので，単位時間に受け取る波の数は $\\frac{V+v}{4d}$：\n\\[ f_{\\mathrm B}'=\\boldsymbol{\\frac{V+v}{4d}}. \\]\n（ドップラー効果の式 $f_{\\mathrm B}'=\\frac{V+v}{V-v}f_{\\mathrm B}$ からも同じ．）\n\n\\textbf{(3)}　崖から遠ざかりながら後方に出す音の波長は $\\frac{V+v}{f}$．$\\frac{V+v}{f_{\\mathrm C}}=4d$ より\n\\[ f_{\\mathrm C}=\\boldsymbol{\\frac{V+v}{4d}}=f_{\\mathrm B}'. \\]\nどちらも「空気中の波長が $4d$ の波」を，崖に近づく向きに速さ $v$ で動く観測者（(2)）が受けるか，崖から遠ざかる向きに動く音源（(3)）が作るかの違いで，振動数は $\\frac{V+v}{4d}$ と一致する．\n\n\\textbf{(4)}　$f_{\\mathrm B}+f_{\\mathrm C}=\\frac{2V}{4d}=\\frac{V}{2d}$，$f_{\\mathrm C}-f_{\\mathrm B}=\\frac{2v}{4d}=\\frac{v}{2d}$ より\n\\[ d=\\frac{V}{2(f_{\\mathrm B}+f_{\\mathrm C})}=\\frac{340}{2\\times85.0\\times10^3}=\\boldsymbol{2.0\\times10^{-3}\\ \\mathrm{m}},\\qquad v=V\\frac{f_{\\mathrm C}-f_{\\mathrm B}}{f_{\\mathrm C}+f_{\\mathrm B}}=340\\times\\frac{2.0}{85.0}=\\boldsymbol{8.0\\ \\mathrm{m/s}}. \\]\n\n\\textbf{(5)}　音源も反射面も地面に静止しているので，どこでも振動数は $f$ のままだが，風があると波の速さが向きで変わる．地面に対して，崖へ向かう音は $V+w$，戻る音は $V-w$ で進むので，波長は往路 $\\frac{V+w}{f}$，復路 $\\frac{V-w}{f}$ と異なり，「$2d$ と波長の比」という言い方はそのままでは使えない．そこで時間で考える：崖の面で反射する波が余分にかかる時間は\n\\[ \\Delta t=\\frac{d}{V+w}+\\frac{d}{V-w}=\\frac{2dV}{V^2-w^2}. \\]\n同じ瞬間にコウモリに届く2つの反射波は，出された時刻が $\\Delta t$ だけずれているので位相差は $2\\pi f\\Delta t$．最初の弱め合いは $f\\Delta t=\\frac12$ のときで\n\\[ f=\\boldsymbol{\\frac{V^2-w^2}{4dV}}=f_{\\mathrm A}\\left(1-\\frac{w^2}{V^2}\\right), \\]\n$f_{\\mathrm A}$ より \\textbf{小さい}．風の効果は往路で得をして復路で損をするのでほぼ打ち消し，$w/V$ の2次だけが残る．\n\n\\textbf{別解（(2) の確認）}　(5) と同じ時間の考え方で (2) を解くと，崖の面からの反射波は岩の表面からの反射波より，出された時刻が $\\Delta t$ 早い．この間にコウモリは $v\\Delta t$ 進むので $V\\Delta t=2d+v\\Delta t$，$\\Delta t=\\frac{2d}{V-v}$．$f_{\\mathrm B}\\Delta t=\\frac12$ より $f_{\\mathrm B}=\\frac{V-v}{4d}$ で一致する．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "静止した2つの反射面による反射波の打ち消し合いは，振動数ではなく空気中の波長（または2つの波が出された時刻の差）で決まる．動く音源では前方の波長が $(V-v)/f$ に縮むので打ち消す振動数がずれ，近づく・遠ざかるの2つの測定から段差と速さを分離できる．風がある場合は往復の時間差で考え，効果は $w^2/V^2$ の2次になる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "doppler",
+  "interference"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "干渉",
+  "反射",
+  "波長",
+  "エコーロケーション"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

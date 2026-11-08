@@ -1,0 +1,142 @@
+{
+ "id": "PHY-WAV-015",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "浅い領域へ屈折する点波源の波面と見かけの波源の位置",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，$xy$ 平面に広がる水面が $x$ 軸を境に2つの領域に分かれている．領域A（$y>0$）での波の速さは $V$，領域B（$y<0$）での波の速さは $\\dfrac V2$ である．領域Aの点 P$(0,\\,d)$ から，時刻 $t=0$ に1つの山（円形のパルス波）を送り出した．境界での反射は考えない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "時刻 $t\\ (>d/V)$ に，パルスの領域Aでの波面と $x$ 軸（$x>0$）との交点を T とする．T の $x$ 座標 $x_{\\rm T}$ と，T が $x$ 軸上を動く速さ $u$ を $V$，$d$，$t$ で表せ．また，T に入射する波の入射角を $i$ として，$u$ を $V$ と $i$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "領域Bに入った波の波面も T を通り，その波面は自分に垂直な向きに速さ $\\dfrac V2$ で進む．T の近くの領域Bの波面と $x$ 軸とのなす角（屈折角）を $\\theta$ として，$\\sin\\theta$ を $\\sin i$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "時刻 $t=\\dfrac{2d}{V}$ における領域Bの波面と $y$ 軸との交点 S の座標，T の座標，および T での $\\sin\\theta$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "時刻 $t=\\dfrac{2d}{V}$ における領域Bの波面は，S の近くでは，$y$ 軸上の点 Q$(0,\\,y_{\\rm Q})$ を中心とする円で近似できる．$y_{\\rm Q}$ と，この円の半径 $r$ を求めよ．ただし，入射角 $\\alpha$ が小さい波の道筋（射線）を考え，$\\sin\\alpha\\fallingdotseq\\tan\\alpha\\fallingdotseq\\alpha$ としてよい．"
+     },
+     {
+      "id": "5",
+      "tex": "(3) の T を通る領域Bの射線を領域Aの側へ逆向きに延長し，$y$ 軸と交わる点の $y$ 座標 $y_{\\rm T}$ を求めよ．また，T が (4) の円の上にあるかどうかを調べ，領域Bの波面が円であるかどうかを答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：浅い領域へ屈折する点波源の波面と見かけの波源の位置",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：浅い領域へ屈折する点波源の波面と見かけの波源の位置",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$x_{\\rm T}=\\sqrt{V^2t^2-d^2}$，$u=\\dfrac{V^2t}{\\sqrt{V^2t^2-d^2}}=\\dfrac{V}{\\sin i}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\sin\\theta=\\dfrac12\\sin i$"
+   },
+   {
+    "id": "3",
+    "tex": "S$\\left(0,\\,-\\dfrac d2\\right)$，T$(\\sqrt3\\,d,\\,0)$，$\\sin\\theta=\\dfrac{\\sqrt3}{4}$"
+   },
+   {
+    "id": "4",
+    "tex": "$y_{\\rm Q}=2d$，$r=\\dfrac52d$"
+   },
+   {
+    "id": "5",
+    "tex": "$y_{\\rm T}=\\sqrt{13}\\,d$；QT$=\\sqrt7\\,d>\\dfrac52d$ なので T は円の外側にあり，波面は円ではない"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　屈折の法則は「境界上で波面の端が動く速さが両側で等しい」ことから出る．点波源では，この速さが場所ごとに違うので，屈折後の波面は円にならない．\n\n\\textbf{(1)}　領域Aの波面は P を中心とする半径 $Vt$ の円だから $x_{\\rm T}^2+d^2=V^2t^2$，\n\\[ x_{\\rm T}=\\boldsymbol{\\sqrt{V^2t^2-d^2}},\\qquad u=\\frac{dx_{\\rm T}}{dt}=\\boldsymbol{\\frac{V^2t}{\\sqrt{V^2t^2-d^2}}}. \\]\nPT と $y$ 軸（境界の法線）のなす角が入射角 $i$ で，$\\sin i=\\dfrac{x_{\\rm T}}{Vt}$ だから $u=\\boldsymbol{\\dfrac{V}{\\sin i}}$．波面が境界をななめに横切るので，交点は波の速さより速く動く．\n\n\\textbf{(2)}　領域Bの波面も境界上でつねに T を通るので，Bの側でも波面の端は速さ $u$ で $x$ 軸上を動く．Bの波面が境界と角 $\\theta$ をなし，速さ $\\dfrac V2$ で前進すると，端は $\\dfrac{V/2}{\\sin\\theta}$ の速さで境界上を動く．これが $u=\\dfrac{V}{\\sin i}$ に等しいから\n\\[ \\sin\\theta=\\boldsymbol{\\frac12\\sin i}. \\]\nこれは屈折の法則（屈折率 $2$）にほかならない．\n\n\\textbf{(3)}　$t=\\dfrac{2d}{V}$ のとき，$y$ 軸に沿って進んだ波は Aで $d$ 進むのに $\\dfrac dV$，残り $\\dfrac dV$ でBを $\\dfrac V2\\cdot\\dfrac dV=\\dfrac d2$ 進む．よって S$\\boldsymbol{\\left(0,\\,-\\dfrac d2\\right)}$．また (1) より $x_{\\rm T}=\\sqrt{4d^2-d^2}$ で T$\\boldsymbol{(\\sqrt3\\,d,\\,0)}$．$\\sin i=\\dfrac{\\sqrt3d}{2d}=\\dfrac{\\sqrt3}{2}$（$i=60^\\circ$）なので $\\sin\\theta=\\boldsymbol{\\dfrac{\\sqrt3}{4}}$．\n\n\\textbf{(4)}　入射角 $\\alpha$ の小さい射線は，境界の $x=d\\tan\\alpha\\fallingdotseq d\\alpha$ の点で屈折し，屈折角は $\\beta\\fallingdotseq\\dfrac\\alpha2$ になる．Bでの射線を逆に延長すると，$y$ 軸と $y=\\dfrac{d\\alpha}{\\tan\\beta}\\fallingdotseq\\dfrac{d\\alpha}{\\alpha/2}=2d$ で交わる．$\\alpha$ によらないので，S 近くの射線はすべて点 Q$(0,\\,2d)$ から出たように見え，波面（射線に垂直）は Q を中心とする円で近似できる：\n\\[ y_{\\rm Q}=\\boldsymbol{2d},\\qquad r=\\text{QS}=2d+\\frac d2=\\boldsymbol{\\frac52d}. \\]\n（水中の物体が浅く見える「見かけの深さ」と同じ考え方で，ここでは遅い側から見るので波源は実際の $2$ 倍遠くに見える．）\n\n\\textbf{(5)}　T を通る射線の屈折角は $\\sin\\theta=\\dfrac{\\sqrt3}{4}$，$\\cos\\theta=\\dfrac{\\sqrt{13}}{4}$，$\\tan\\theta=\\dfrac{\\sqrt3}{\\sqrt{13}}$．逆に延長した直線と $y$ 軸との交点は\n\\[ y_{\\rm T}=\\frac{x_{\\rm T}}{\\tan\\theta}=\\sqrt3\\,d\\cdot\\frac{\\sqrt{13}}{\\sqrt3}=\\boldsymbol{\\sqrt{13}\\,d}\\ (\\fallingdotseq3.6d). \\]\nまた $\\text{QT}=\\sqrt{(\\sqrt3d)^2+(2d)^2}=\\sqrt7\\,d\\fallingdotseq2.65d>\\dfrac52d$ なので，\\textbf{T は (4) の円の外側にあり，波面は円ではない}．射線の逆延長が1点に集まらず，ななめの射線ほど見かけの波源が遠く（$2d$ から $\\sqrt{13}d$ へ）ずれるため，波面は境界に近いほど円より外側に張り出した形になる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "点波源からの波が屈折するとき，境界上の波面の端は場所ごとに異なる速さ $V/\\sin i$ で動き，これを両側でそろえることが屈折の法則を与える．屈折後の射線の逆延長は1点に集まらず，法線の近くでは見かけの波源（遅い側からは距離が2倍）を中心とする円で近似できるが，ななめの射線ほど見かけの波源がずれるので波面は円にならない．"
+ },
+ "concepts": [
+  "wave-basics",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "屈折",
+  "ホイヘンスの原理",
+  "波面",
+  "見かけの波源",
+  "水面波"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

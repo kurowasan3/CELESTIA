@@ -1,0 +1,151 @@
+{
+ "id": "PHY-OPT-043",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "位相がゆらぐ二重スリット干渉の強度相関（消えた縞を2台の検出器の積で取り出す）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，波長 $\\lambda$ の単色の平行光を，間隔 $a$ の二重スリット A，B を開けた板に垂直に当て，板から距離 $L$（$L\\gg a$）離れたスクリーン上で，光の強さに比例した読みを示す小さな光検出器を用いて明るさを測る．A，B の垂直二等分線とスクリーンの交点を原点 O とし，スクリーン上に $x$ 軸をとる．B は $x$ 軸の正の側にある．以下では $|x|\\ll L$ の範囲だけを考える．\n\nスリット B の直後に透明な膜を置いた．膜を通る光は，膜がないときに比べて位相が $\\varphi$ だけ遅れる．$\\varphi$ は膜の状態によって時間とともに変わるが，その変化は検出器の応答に比べて十分ゆっくりで，各瞬間の読みは，その瞬間の $\\varphi$ を一定とみなしたときの値に等しい．膜による光の吸収は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\varphi$ が一定のとき，位置 $x$ の検出器の読みは $\\dfrac{\\alpha}{2}\\Bigl\\{1+\\cos\\Bigl(\\dfrac{2\\pi x}{P}-\\varphi\\Bigr)\\Bigr\\}$（$\\alpha$ は定数）と表される．スリットから $x$ までの距離の差を考えて，$P$ を $\\lambda,\\ L,\\ a$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "膜の状態が不規則に変わり，$\\varphi$ が $0\\le\\varphi<2\\pi$ のあらゆる値を同じ割合でとるようになった．検出器の読みを十分長い時間平均した値 $\\overline{I}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の状況で，2台の同じ検出器 C$_1$，C$_2$ を位置 $x_1$，$x_2$ に置き，同じ瞬間の2つの読みの積を十分長い時間平均した値 $\\overline{M}$ を求め，$g=\\dfrac{\\overline{M}}{\\overline{I}^{\\,2}}$ を $x_1,\\ x_2,\\ P$ で表せ．必要なら，$\\varphi$ が $0\\le\\varphi<2\\pi$ に一様に分布するとき，定数 $\\beta$ に対して $\\cos(\\beta-\\varphi)$，$\\cos(\\beta-2\\varphi)$ の平均がどちらも $0$ であることを用いよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\lambda=6.0\\times10^{-7}\\ \\text{m}$，$L=2.0\\ \\text{m}$ で，(3) の測定を C$_1$ を固定し C$_2$ を動かして行ったところ，$g$ が最小になる隣り合う位置の間隔は $4.0\\times10^{-4}\\ \\text{m}$ であった．スリット間隔 $a$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "膜を別のものに取りかえたところ，$\\varphi$ は $0$ と $\\pi$ の2つの値だけを不規則に，同じ割合でとるようになった．このときの $\\overline{I}$ と $g$ を求めよ．また，C$_1$ をどの位置に置くと，$g$ が $x_2$ によらなくなるか．$x_1$ を $P$ と整数 $n$ で表せ．"
+     },
+     {
+      "id": "6",
+      "tex": "C$_1$ を $x_1=0$ に固定して C$_2$ を動かしたとき，$g$ の最大値と最小値を (3) の場合と (5) の場合のそれぞれについて求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：位相がゆらぐ二重スリット干渉の強度相関（消えた縞を2台の検出器の積で取り出す）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：位相がゆらぐ二重スリット干渉の強度相関（消えた縞を2台の検出器の積で取り出す）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$P=\\dfrac{\\lambda L}{a}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\overline{I}=\\dfrac{\\alpha}{2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\overline{M}=\\dfrac{\\alpha^2}{4}\\Bigl\\{1+\\dfrac12\\cos\\dfrac{2\\pi(x_2-x_1)}{P}\\Bigr\\}$，$g=1+\\dfrac12\\cos\\dfrac{2\\pi(x_2-x_1)}{P}$"
+   },
+   {
+    "id": "4",
+    "tex": "$a\\fallingdotseq3.0\\times10^{-3}\\ \\text{m}$"
+   },
+   {
+    "id": "5",
+    "tex": "$\\overline{I}=\\dfrac{\\alpha}{2}$，$g=1+\\cos\\dfrac{2\\pi x_1}{P}\\cos\\dfrac{2\\pi x_2}{P}$，$x_1=\\Bigl(\\dfrac{n}{2}+\\dfrac14\\Bigr)P$"
+   },
+   {
+    "id": "6",
+    "tex": "(3)の場合：最大 $\\dfrac32$，最小 $\\dfrac12$　(5)の場合：最大 $2$，最小 $0$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 縞の間隔}\n\nA，B の座標を $\\mp\\frac a2$ とすると，\n\\[ L_{\\rm A}-L_{\\rm B}=\\sqrt{L^2+\\Bigl(x+\\frac a2\\Bigr)^2}-\\sqrt{L^2+\\Bigl(x-\\frac a2\\Bigr)^2}\\fallingdotseq\\frac{ax}{L}. \\]\nB を通る光は経路が $\\frac{ax}{L}$ だけ短い一方，膜で位相が $\\varphi$ 遅れるので，2つの光の位相差は $\\delta=\\frac{2\\pi}{\\lambda}\\cdot\\frac{ax}{L}-\\varphi$．明るさは $1+\\cos\\delta$ に比例するので，$\\frac{2\\pi x}{P}=\\frac{2\\pi ax}{\\lambda L}$ より\n\\[ P=\\boldsymbol{\\frac{\\lambda L}{a}}. \\]\n\n\\textbf{(2) 1台の検出器の平均}\n\n$\\cos\\bigl(\\frac{2\\pi x}{P}-\\varphi\\bigr)$ の平均は $0$ なので\n\\[ \\overline{I}=\\boldsymbol{\\frac{\\alpha}{2}}. \\]\n縞の位置が不規則に動くため，平均すると縞は消える（どの $x$ でも同じ明るさ）．\n\n\\textbf{(3) 2台の読みの積の平均}\n\n$\\theta_1=\\frac{2\\pi x_1}{P}$，$\\theta_2=\\frac{2\\pi x_2}{P}$ とおく．\n\\[ I_1I_2=\\frac{\\alpha^2}{4}\\bigl\\{1+\\cos(\\theta_1-\\varphi)+\\cos(\\theta_2-\\varphi)+\\cos(\\theta_1-\\varphi)\\cos(\\theta_2-\\varphi)\\bigr\\}. \\]\n積を和に直すと\n\\[ \\cos(\\theta_1-\\varphi)\\cos(\\theta_2-\\varphi)=\\frac12\\cos(\\theta_1-\\theta_2)+\\frac12\\cos(\\theta_1+\\theta_2-2\\varphi). \\]\n$\\varphi$ を含む項の平均はすべて $0$ で，$\\varphi$ を含まない $\\frac12\\cos(\\theta_1-\\theta_2)$ だけが残る：\n\\[ \\overline{M}=\\boldsymbol{\\frac{\\alpha^2}{4}\\Bigl\\{1+\\frac12\\cos\\frac{2\\pi(x_2-x_1)}{P}\\Bigr\\}},\\qquad g=\\boldsymbol{1+\\frac12\\cos\\frac{2\\pi(x_2-x_1)}{P}}. \\]\n縞そのものは消えても，2点の明るさの\\textbf{ゆらぎは互いに相関}している．縞全体が平行移動するので，間隔が $P$ の整数倍の2点はいつも同時に明るく（暗く）なり，$\\frac{P}{2}$ ずれた2点は一方が明るいとき他方が暗い．そのため $g$ は2点の間隔だけの関数で，周期 $P$ で変化する．\n\n\\textbf{(4) スリット間隔}\n\n(3) より $g$ は $x_2$ について周期 $P$ で変化するので，最小の位置の間隔が $P=4.0\\times10^{-4}\\ \\text{m}$．\n\\[ a=\\frac{\\lambda L}{P}=\\frac{6.0\\times10^{-7}\\times2.0}{4.0\\times10^{-4}}=\\boldsymbol{3.0\\times10^{-3}\\ \\text{m}}. \\]\n縞が見えなくても，強度の相関から縞の間隔，ひいてはスリット間隔が測れる．\n\n\\textbf{(5) 位相が $0$ と $\\pi$ の2値をとる場合}\n\n$\\cos(\\theta-\\pi)=-\\cos\\theta$ なので，$\\cos(\\theta-\\varphi)$ は $\\varphi=0$ と $\\pi$ で符号が逆になり，平均は $0$：\n\\[ \\overline{I}=\\boldsymbol{\\frac{\\alpha}{2}}\\quad(\\text{縞はやはり消える}). \\]\n一方，積 $\\cos(\\theta_1-\\varphi)\\cos(\\theta_2-\\varphi)$ は $\\varphi=0,\\ \\pi$ のどちらでも $\\cos\\theta_1\\cos\\theta_2$ に等しい（符号の反転が2回起こる）ので\n\\[ \\overline{M}=\\frac{\\alpha^2}{4}\\bigl(1+\\cos\\theta_1\\cos\\theta_2\\bigr),\\qquad g=\\boldsymbol{1+\\cos\\frac{2\\pi x_1}{P}\\cos\\frac{2\\pi x_2}{P}}. \\]\n(3) と違って $g$ は間隔 $x_2-x_1$ だけでは決まらない．縞が「半周期ずれた2つの模様」の間を行き来するだけなので，両方の模様で明るさが等しい点（$\\cos\\theta_1=0$）では明るさがゆらがない．このとき $g$ は $x_2$ によらず $1$ となる．条件は $\\frac{2\\pi x_1}{P}=\\frac{\\pi}{2}+n\\pi$，すなわち\n\\[ x_1=\\boldsymbol{\\Bigl(\\frac n2+\\frac14\\Bigr)P}\\quad(n\\text{ は整数}). \\]\n\n\\textbf{(6) $x_1=0$ のときの最大・最小}\n\n(3) の場合：$g=1+\\frac12\\cos\\frac{2\\pi x_2}{P}$ なので最大 $\\boldsymbol{\\frac32}$，最小 $\\boldsymbol{\\frac12}$．\n\n(5) の場合：$g=1+\\cos\\frac{2\\pi x_2}{P}$ なので最大 $\\boldsymbol{2}$，最小 $\\boldsymbol{0}$．\n\n(5) の場合，$x_1=0$ は2つの模様の一方で明線，他方で暗線なので，C$_1$ の読みは $\\alpha$ と $0$ を行き来する．C$_2$ が $x_2=\\frac P2$ にあると読みが常に逆になり積が常に $0$，$x_2=0$ では同時に $\\alpha$ か $0$ になって $\\overline{M}=\\frac{\\alpha^2}{2}$ となる．(3) では縞の位置があらゆる値をとるので，相関はこれより弱く（変化の幅が半分に）なる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "二重スリットの一方の位相が不規則に変わると縞の位置がゆらぎ，1台の検出器の時間平均では縞が消えるが，2点の強度の積の平均には縞全体の平行移動による相関が残る．位相が一様にゆらぐときは相関が2点の間隔だけで決まり（$g=1+\\frac12\\cos\\frac{2\\pi\\Delta x}{P}$），縞間隔とスリット間隔を測定できる．位相が $0,\\pi$ の2値だけをとるときは相関が各点の位置で決まり，2つの模様で明るさが等しい点ではゆらぎ自体が消える．"
+ },
+ "concepts": [
+  "light-interference",
+  "interference",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ヤングの実験",
+  "干渉縞の消失",
+  "強度相関",
+  "位相のゆらぎ",
+  "時間平均"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "id": "PHY-OPT-021",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "望遠レンズ系の合成焦点距離と，回折によるボケ・ピントの許容幅（絞りとのかね合い）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，焦点距離 $6a$，半径 $R$ の凸レンズ L$_1$ と，焦点距離 $3a$ の凹レンズ L$_2$ を，光軸を共通にして間隔 $4a$ で並べ，L$_2$ の後方にスクリーン S を光軸に垂直に置いて，十分遠方の物体の像を S に投影する．レンズの厚さは無視でき，L$_2$ は L$_1$ を通った光をすべて通すとする．光軸と小さな角 $\\varphi$ をなす光について $\\tan\\varphi\\fallingdotseq\\sin\\varphi\\fallingdotseq\\varphi$，$1-\\cos\\varphi\\fallingdotseq\\dfrac{\\varphi^2}{2}$ と近似してよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "光軸上の遠方の点から来る光が S 上の 1 点 F に集まるための，L$_2$ と S の距離を求めよ．また，光軸に平行に高さ $w$ で L$_1$ に入射した光線が F に達するときに光軸となす角を $\\alpha$ とすると，$\\dfrac{w}{\\tan\\alpha}$ は $w$ によらない．この値 $f$（合成焦点距離）を求め，L$_1$ から S までの長さと比べよ．"
+     },
+     {
+      "id": "2",
+      "tex": "距離 $D$ だけ離れた高さ $H$ の物体（$H\\ll D$）の像の高さを求め，L$_1$ だけで投影した場合の像の高さと比べよ．"
+     },
+     {
+      "id": "3",
+      "tex": "実際には光は波であり，L$_2$ を通過した直後の光の波面は，F を中心とする半径 $r$ の球面の一部とみなせる．光軸上の波面上の点を W$_0$，L$_1$ の縁を通った光が通る波面上の点を W とし，FW が光軸となす角を $\\beta$ とする．F を原点とし，光軸に沿ってレンズの向きに $x$ 軸，S に沿って W の側に $y$ 軸をとる．F の近くの点 Q$(x,y)$ $(|x|,|y|\\ll r)$ について，光路差 $\\Delta L=\\mathrm{WQ}-\\mathrm{W_0Q}$ を $x$，$y$，$\\beta$ で表せ．必要なら $|\\varepsilon|\\ll1$ のとき $\\sqrt{1+\\varepsilon}\\fallingdotseq1+\\dfrac{\\varepsilon}{2}$ を用いよ．"
+     },
+     {
+      "id": "4",
+      "tex": "波長を $\\lambda$ とする．S 上で $|\\Delta L|=\\dfrac{\\lambda}{2}$ となる $y$ の値を像のボケの大きさ $\\delta$，光軸上で $|\\Delta L|=\\dfrac{\\lambda}{2}$ となる $x$ の値をスクリーン位置の許容幅 $\\ell$ とする．$\\delta$ と $\\ell$ を $a$，$R$，$\\lambda$ で表せ．さらに，ボケ $\\delta$ が物体上でどれだけの大きさに相当するかを求め，それが L$_1$ だけで投影した場合と同じであることを示せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$a=1.0\\ \\mathrm{cm}$，$\\lambda=5.5\\times10^{-7}\\ \\mathrm m$ とする．スクリーン位置の許容幅として $\\ell\\ge0.20\\ \\mathrm{mm}$ を確保するため，L$_1$ の直前に円形の絞りを置いて光の通る部分を半径 $\\rho$ に制限する．$\\rho$ の最大値と，そのとき $D=1.0\\ \\mathrm{km}$ の物体上で区別できる大きさ（(4) の「物体上でのボケの大きさ」）を有効数字 2 桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：望遠レンズ系の合成焦点距離と，回折によるボケ・ピントの許容幅（絞りとのかね合い）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：望遠レンズ系の合成焦点距離と，回折によるボケ・ピントの許容幅（絞りとのかね合い）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$6a$，$f=18a$（L$_1$ から S までは $10a$ で，$f$ より短い）"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac{18aH}{D}$（L$_1$ だけの場合 $\\dfrac{6aH}{D}$ の 3 倍）"
+   },
+   {
+    "id": "3",
+    "tex": "$\\Delta L=x(1-\\cos\\beta)-y\\sin\\beta$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\delta=\\dfrac{9a\\lambda}{R}$，$\\ell=\\dfrac{324a^2\\lambda}{R^2}$，物体上で $\\dfrac{\\lambda D}{2R}$（$f$ によらず L$_1$ だけの場合と同じ）"
+   },
+   {
+    "id": "5",
+    "tex": "$\\rho=9.4\\ \\mathrm{mm}$，$2.9\\ \\mathrm{cm}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 合成焦点距離}　光軸に平行な光は L$_1$ を通ると L$_1$ の後方 $6a$ の点に向かう．この点は L$_2$ の後方 $2a$ にあり，L$_2$ にとっては後方にある虚物体（物体距離 $-2a$）である．凹レンズ（焦点距離 $-3a$）の写像公式 $\\dfrac{1}{-2a}+\\dfrac1b=\\dfrac{1}{-3a}$ より $b=\\boldsymbol{6a}$：L$_2$ の後方 $6a$ に S を置けばよい．\n\n高さ $w$ の光線は，L$_2$ では高さ $w\\cdot\\dfrac{2a}{6a}=\\dfrac w3$ を通り，そこから距離 $6a$ で光軸上の F に達するので $\\tan\\alpha=\\dfrac{w/3}{6a}=\\dfrac{w}{18a}$．よって\n\\[ f=\\frac{w}{\\tan\\alpha}=\\boldsymbol{18a} \\]\nL$_1$ から S までの長さは $4a+6a=10a$ で，焦点距離 $18a$ の凸レンズ 1 枚と同じはたらきを，それより短い長さで実現している（望遠レンズ）．\n\n\\textbf{(2) 像の大きさ}　遠方の物体の上端から来る光は，光軸と角 $\\varphi=\\dfrac HD$ をなす平行光である．L$_1$ はこれを L$_1$ の後方 $6a$，高さ $6a\\varphi$ の点に集めようとし，これが L$_2$ に対する虚物体になる．L$_2$ による倍率は $\\dfrac{6a}{2a}=3$（正立）なので像の高さは $18a\\varphi$：\n\\[ \\boldsymbol{\\frac{18aH}{D}} \\]\nL$_1$ だけなら $\\dfrac{6aH}{D}$ なので \\textbf{3 倍}．像の大きさは合成焦点距離 $f$ に比例する．\n\n\\textbf{(3) 光路差}　W$_0=(r,0)$，W$=(r\\cos\\beta,\\ r\\sin\\beta)$，Q$=(x,y)$．\n\\[ \\mathrm{WQ}=\\sqrt{r^2-2r(x\\cos\\beta+y\\sin\\beta)+x^2+y^2}\\fallingdotseq r-x\\cos\\beta-y\\sin\\beta \\]\n（$x^2$，$y^2$ は $r^2$ に比べ 2 次の微小量として無視）．同様に $\\mathrm{W_0Q}\\fallingdotseq r-x$．よって\n\\[ \\Delta L=\\boldsymbol{x(1-\\cos\\beta)-y\\sin\\beta} \\]\n（解答図）．F（$x=y=0$）では波面上のすべての点から等距離なので光は強め合う．\n\n\\textbf{(4) ボケと許容幅}　縁の光線の角度は (1) で $w=R$ とした $\\tan\\beta=\\dfrac{R}{18a}$，すなわち $\\beta\\fallingdotseq\\dfrac{R}{f}$ である．\n・S 上（$x=0$）：$|y|\\sin\\beta=\\dfrac\\lambda2$ より $\\delta=\\dfrac{\\lambda}{2\\sin\\beta}\\fallingdotseq\\dfrac{\\lambda f}{2R}=\\boldsymbol{\\frac{9a\\lambda}{R}}$．\n・光軸上（$y=0$）：$x(1-\\cos\\beta)=\\dfrac\\lambda2$ より $\\ell=\\dfrac{\\lambda}{2(1-\\cos\\beta)}\\fallingdotseq\\dfrac{\\lambda}{\\beta^2}=\\dfrac{\\lambda f^2}{R^2}=\\boldsymbol{\\frac{324a^2\\lambda}{R^2}}$．\n物体上の大きさ $X$ は像の高さ $\\dfrac{fX}{D}$ に写るので，$\\dfrac{fX}{D}=\\delta$ から\n\\[ X=\\frac{D\\delta}{f}=\\boldsymbol{\\frac{\\lambda D}{2R}} \\]\n$f$ が消えるので，L$_1$ だけ（$f=6a$，$\\beta\\fallingdotseq\\dfrac{R}{6a}$，$\\delta=\\dfrac{3a\\lambda}{R}$）で投影した場合と\\textbf{同じ}である．望遠系は像を 3 倍に拡大するが，ボケも同じく 3 倍になるので，見分けられる細かさは入口の半径 $R$ だけで決まる．一方，許容幅 $\\ell$ は $f^2$ に比べて大きくなり，L$_1$ だけの場合の 9 倍である．\n\n\\textbf{(5) 絞りによる調整}　絞りの半径を $\\rho$ とすると (4) の $R$ を $\\rho$ に置きかえて $\\ell=\\dfrac{\\lambda f^2}{\\rho^2}$．$\\ell\\ge0.20\\ \\mathrm{mm}$ より\n\\[ \\rho\\le f\\sqrt{\\frac{\\lambda}{\\ell}}=0.18\\ \\mathrm m\\times\\sqrt{\\frac{5.5\\times10^{-7}}{2.0\\times10^{-4}}}\\fallingdotseq\\boldsymbol{9.4\\ \\mathrm{mm}} \\]\nこのとき物体上で区別できる大きさは\n\\[ \\frac{\\lambda D}{2\\rho}=\\frac{5.5\\times10^{-7}\\times1.0\\times10^{3}}{2\\times9.4\\times10^{-3}}\\fallingdotseq\\boldsymbol{2.9\\ \\mathrm{cm}} \\]\n絞るとピント合わせは楽になる（$\\ell\\propto\\rho^{-2}$）が，細かいものは見分けにくくなる（$X\\propto\\rho^{-1}$）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "凸レンズと凹レンズを組み合わせると，全長より長い焦点距離のレンズと同じ像が得られる．集束する球面波の中心と縁から近くの点までの光路差が半波長になる距離で，横方向のボケ $\\lambda f/(2R)$ と光軸方向の許容幅 $\\lambda f^2/R^2$ が決まり，物体側に換算したボケは $\\lambda D/(2R)$ となって焦点距離によらず入口の半径だけで決まる．"
+ },
+ "concepts": [
+  "light-interference",
+  "lens-imaging",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "レンズの組み合わせ",
+  "合成焦点距離",
+  "回折",
+  "光路差",
+  "焦点深度",
+  "分解能"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

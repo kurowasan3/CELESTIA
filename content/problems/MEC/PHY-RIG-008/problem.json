@@ -1,0 +1,122 @@
+{
+ "id": "PHY-RIG-008",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "片方の脚だけに摩擦がはたらくそりの斜面滑走（向きで加速・減速が入れかわる）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，傾きの角 $\\alpha$ の斜面上に，2本の脚 P，Q をもつ質量 $M$ のそりを置く．P と Q は斜面に沿って距離 $2b$ だけ離れており，そりの重心 G は PQ の中点から斜面に垂直に距離 $h$ の位置にある．脚 P の先にはゴムが付いていて，斜面との間の静止摩擦係数は $\\mu$，動摩擦係数は $\\mu'$ $(\\mu'<\\mu)$ である．脚 Q の先には小さななめらかな車輪が付いていて，斜面との間に摩擦はない．そりは P，Q を斜面に接したまま，回転せずに斜面に沿って最大傾斜の方向に運動するものとする．重力加速度の大きさを $g$ とし，$\\mu'h<b$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "P を下側（斜面の下の方）にしたそりが，斜面を滑り下りている．P，Q が斜面から受ける垂直抗力の大きさ $N_{\\mathrm P}$，$N_{\\mathrm Q}$ と，斜面に沿って下向きを正とするそりの加速度 $a_1$ を求めよ．また，$\\mu'h<b$ が成り立たないとどうなるかを簡潔に述べよ．"
+     },
+     {
+      "id": "2",
+      "tex": "P を上側にしたそりが斜面を滑り下りているときの加速度 $a_2$（下向きを正）を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "同じ斜面で，P を下側にしたそりは減速し，P を上側にしたそりは加速する．そのような $\\tan\\alpha$ の範囲を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\alpha$ が (3) の範囲にあるとき，P を下側にしたそりに斜面に沿って下向きの初速 $v_0$ を与えた．そりが止まるまでに進む距離 $s$ を求めよ．また，止まった後，そりが静止し続けることを示せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：片方の脚だけに摩擦がはたらくそりの斜面滑走（向きで加速・減速が入れかわる）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$N_{\\mathrm P}=\\dfrac{bMg\\cos\\alpha}{2b-\\mu'h}$，$N_{\\mathrm Q}=\\dfrac{(b-\\mu'h)Mg\\cos\\alpha}{2b-\\mu'h}$，$a_1=g\\sin\\alpha-\\dfrac{\\mu'b}{2b-\\mu'h}g\\cos\\alpha$．$\\mu'h\\ge b$ だと Q が浮いて，そりは P を支点に前へ回転する（転倒しようとする）．"
+   },
+   {
+    "id": "2",
+    "tex": "$a_2=g\\sin\\alpha-\\dfrac{\\mu'b}{2b+\\mu'h}g\\cos\\alpha$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac{\\mu'b}{2b+\\mu'h}<\\tan\\alpha<\\dfrac{\\mu'b}{2b-\\mu'h}$"
+   },
+   {
+    "id": "4",
+    "tex": "$s=\\dfrac{(2b-\\mu'h)v_0^2}{2g\\{\\mu'b\\cos\\alpha-(2b-\\mu'h)\\sin\\alpha\\}}$．静止に必要な摩擦係数は $\\dfrac{2b\\tan\\alpha}{b+h\\tan\\alpha}<\\mu'<\\mu$ なので静止し続ける．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　そりは回転しないので，重心のまわりの力のモーメントの和は $0$ である（重力は重心にはたらくのでモーメントをもたない）．摩擦力は斜面の位置，すなわち重心から距離 $h$ だけ下の位置にはたらくので，摩擦力が重心のまわりにモーメントをつくり，それを P，Q の垂直抗力の差が打ち消す．このため $N_{\\mathrm P}$ と $N_{\\mathrm Q}$ は等しくならず，摩擦力の大きさ $\\mu'N_{\\mathrm P}$ そのものが運動の向きと脚の配置によって変わる．\n\n\\textbf{(1) P が下側}　斜面方向の運動方程式，垂直方向のつり合い，重心のまわりのモーメントは\n\\[ Ma_1=Mg\\sin\\alpha-\\mu'N_{\\mathrm P},\\qquad N_{\\mathrm P}+N_{\\mathrm Q}=Mg\\cos\\alpha \\]\n\\[ bN_{\\mathrm P}-bN_{\\mathrm Q}-h\\,\\mu'N_{\\mathrm P}=0 \\]\n（P に斜面上向きにはたらく摩擦力は，重心より $h$ 下で，そりを「前のめり」にする向きのモーメントをもつので，前の脚 P の垂直抗力が大きくなる．）よって $N_{\\mathrm Q}=\\left(1-\\dfrac{\\mu'h}{b}\\right)N_{\\mathrm P}$ で\n\\[ N_{\\mathrm P}=\\boldsymbol{\\frac{bMg\\cos\\alpha}{2b-\\mu'h}},\\qquad N_{\\mathrm Q}=\\boldsymbol{\\frac{(b-\\mu'h)Mg\\cos\\alpha}{2b-\\mu'h}} \\]\n\\[ a_1=\\boldsymbol{g\\sin\\alpha-\\frac{\\mu'b}{2b-\\mu'h}\\,g\\cos\\alpha} \\]\n$\\mu'h\\ge b$ だと $N_{\\mathrm Q}\\le0$ となり Q は斜面から離れる：摩擦力のモーメントを P の垂直抗力だけでは打ち消せず，\\textbf{そりは P を中心に前へ回転（転倒）しようとする}．\n\n\\textbf{(2) P が上側}　P の位置が重心の後ろ側になるので，モーメントの式は $bN_{\\mathrm Q}-bN_{\\mathrm P}-h\\,\\mu'N_{\\mathrm P}=0$（摩擦力はやはり前の脚 Q の側に荷重を移す）．$N_{\\mathrm Q}=\\left(1+\\dfrac{\\mu'h}{b}\\right)N_{\\mathrm P}$ より $N_{\\mathrm P}=\\dfrac{bMg\\cos\\alpha}{2b+\\mu'h}$ で\n\\[ a_2=\\boldsymbol{g\\sin\\alpha-\\frac{\\mu'b}{2b+\\mu'h}\\,g\\cos\\alpha} \\]\n摩擦のある脚が前にあると摩擦力自身がその脚への荷重を増やし（自己強化），後ろにあると荷重を減らす．\n\n\\textbf{(3) 加速と減速が入れかわる範囲}　$a_1<0<a_2$ より\n\\[ \\boldsymbol{\\frac{\\mu'b}{2b+\\mu'h}<\\tan\\alpha<\\frac{\\mu'b}{2b-\\mu'h}} \\]\n同じそり・同じ斜面でも，向きを変えるだけで減速と加速が入れかわる．\n\n\\textbf{(4) 停止距離と停止後}　減速の大きさは $|a_1|=g\\left(\\dfrac{\\mu'b\\cos\\alpha}{2b-\\mu'h}-\\sin\\alpha\\right)$ で一定だから\n\\[ s=\\frac{v_0^2}{2|a_1|}=\\boldsymbol{\\frac{(2b-\\mu'h)v_0^2}{2g\\{\\mu'b\\cos\\alpha-(2b-\\mu'h)\\sin\\alpha\\}}} \\]\n止まった後は摩擦力が静止摩擦力 $f$ に切り替わり，垂直抗力の配分も変わる．静止しているとき\n\\[ f=Mg\\sin\\alpha,\\qquad N_{\\mathrm P}+N_{\\mathrm Q}=Mg\\cos\\alpha,\\qquad bN_{\\mathrm P}-bN_{\\mathrm Q}-hf=0 \\]\nより $N_{\\mathrm P}=\\dfrac{Mg(b\\cos\\alpha+h\\sin\\alpha)}{2b}$，$N_{\\mathrm Q}=\\dfrac{Mg(b\\cos\\alpha-h\\sin\\alpha)}{2b}$．静止し続ける条件 $f\\le\\mu N_{\\mathrm P}$ は\n\\[ \\mu\\ge\\frac{2b\\tan\\alpha}{b+h\\tan\\alpha} \\]\n右辺は $\\tan\\alpha$ の増加関数で，(3) の上限 $\\tan\\alpha=\\dfrac{\\mu'b}{2b-\\mu'h}$ を代入すると\n\\[ \\frac{2b\\cdot\\dfrac{\\mu'b}{2b-\\mu'h}}{b+\\dfrac{\\mu'bh}{2b-\\mu'h}}=\\frac{2\\mu'b^2}{2b^2}=\\mu' \\]\nとなる．したがって (3) の範囲では右辺 $<\\mu'<\\mu$ であり，条件は満たされる．また $N_{\\mathrm Q}>0$ も $\\tan\\alpha<\\dfrac{\\mu'b}{2b-\\mu'h}<\\dfrac{b}{h}$（$\\mu'h<b$ による）から成り立つ．よって\\textbf{そりは止まった後，静止し続ける}．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回転しない剛体では重心のまわりのモーメントが0なので，重心より下ではたらく摩擦力が前後の脚の垂直抗力に差をつくる．摩擦のある脚が前にあると摩擦力が自分の垂直抗力を増やし，後ろにあると減らすため，同じ物体でも向きによって摩擦力が変わり，加速と減速が入れかわる．停止すると静止摩擦に切り替わって荷重配分も変わるので，静止できるかは改めて判定する．"
+ },
+ "concepts": [
+  "torque",
+  "momentum-conservation",
+  "static-friction"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "剛体のつり合い",
+  "力のモーメント",
+  "動摩擦力",
+  "垂直抗力の配分",
+  "斜面"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

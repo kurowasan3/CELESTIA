@@ -1,0 +1,134 @@
+{
+ "id": "PHY-OPT-027",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "2枚の凸レンズの間隔を焦点距離の和にした組合せ（物体の位置によらない倍率と縦倍率）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，焦点距離 $f_1$ の凸レンズ $\\mathrm L_1$ と焦点距離 $f_2$ の凸レンズ $\\mathrm L_2$ を，光軸を一致させて間隔 $d$ で置く．光軸に垂直に立てた小さな物体 PQ を，$\\mathrm L_1$ の前方（$\\mathrm L_2$ と反対側）距離 $x$ の位置に置く．レンズはいずれも薄いものとし，光軸近くの光線だけを考える．最終的な像（$\\mathrm L_2$ による像）について，$\\mathrm L_2$ の後方（$\\mathrm L_1$ と反対側）を正として $\\mathrm L_2$ からの距離を $z$ とし（$z<0$ なら $\\mathrm L_2$ の前方の虚像），物体に対する像の大きさの比を倍率 $m$（正立なら正，倒立なら負）とする．$\\mathrm L_1$ による像が $\\mathrm L_2$ の前方にできる場合には，それを $\\mathrm L_2$ の物体として扱い，$\\mathrm L_2$ の後方にできる場合には，$\\mathrm L_2$ に対して物体距離が負の物体（虚物体）として同じ写像公式を用いてよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$m$ を $x,\\ d,\\ f_1,\\ f_2$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "物体をどこに置いても $m$ が変わらないようにするには，$d$ をいくらにすればよいか．そのときの $m$ を求め，像は正立か倒立かを答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の配置で，$z$ を $x,\\ f_1,\\ f_2$ で表せ．また，物体を $\\mathrm L_1$ から遠ざける向きに $\\Delta x$ だけ動かすと，像はどちら向きにどれだけ動くか．$f_1=10\\ \\mathrm{cm}$，$f_2=25\\ \\mathrm{cm}$，$\\Delta x=1.0\\ \\mathrm{mm}$ のときの値も求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(2) の配置で $f_1=f_2=f$ とする．物体から最終的な像までの距離は $x$ によらず一定であることを示し，その値を求めよ．また，像が実像になるための $x$ の範囲を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：2枚の凸レンズの間隔を焦点距離の和にした組合せ（物体の位置によらない倍率と縦倍率）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：2枚の凸レンズの間隔を焦点距離の和にした組合せ（物体の位置によらない倍率と縦倍率）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$m=\\dfrac{f_1f_2}{x(d-f_1-f_2)-f_1(d-f_2)}$"
+   },
+   {
+    "id": "2",
+    "tex": "$d=f_1+f_2$，$m=-\\dfrac{f_2}{f_1}$（倒立）"
+   },
+   {
+    "id": "3",
+    "tex": "$z=f_2+\\dfrac{f_2^2}{f_1}-\\dfrac{f_2^2}{f_1^2}x$，像は $\\mathrm L_2$ に近づく向き（物体と同じ向き）に $\\left(\\dfrac{f_2}{f_1}\\right)^2\\Delta x$ 動く；数値 $6.3\\ \\mathrm{mm}$（$6.25\\ \\mathrm{mm}$）"
+   },
+   {
+    "id": "4",
+    "tex": "$4f$，$0<x<2f$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 2段の結像}　$\\mathrm L_1$ による像の位置 $b_1$ は $\\frac1x+\\frac1{b_1}=\\frac1{f_1}$ より $b_1=\\frac{f_1x}{x-f_1}$．$\\mathrm L_2$ に対する物体距離は $a_2=d-b_1$（負なら虚物体）で，$\\frac1{a_2}+\\frac1z=\\frac1{f_2}$ より $z=\\frac{f_2a_2}{a_2-f_2}$．各レンズの倍率は $-\\frac{b_1}{x}$，$-\\frac{z}{a_2}$ なので\n\\[ m=\\frac{b_1}{x}\\cdot\\frac{z}{a_2}=\\frac{b_1}{x}\\cdot\\frac{f_2}{a_2-f_2}=\\frac{f_1}{x-f_1}\\cdot\\frac{f_2}{d-f_2-\\frac{f_1x}{x-f_1}}. \\]\n分母を整理すると $(x-f_1)(d-f_2)-f_1x=x(d-f_1-f_2)-f_1(d-f_2)$ なので\n\\[ m=\\boldsymbol{\\frac{f_1f_2}{x(d-f_1-f_2)-f_1(d-f_2)}}. \\]\n\n\\textbf{(2) 倍率が物体の位置によらない条件}　(1) の分母の $x$ の係数が $0$，つまり $\\boldsymbol{d=f_1+f_2}$ のとき $m$ は $x$ によらない．このとき分母は $-f_1\\cdot f_1$ なので\n\\[ m=\\boldsymbol{-\\frac{f_2}{f_1}}\\quad(\\text{倒立}). \\]\n\\textbf{光線で見た理由}：物体の先端 Q から光軸に平行に出た光線は，$\\mathrm L_1$ の後焦点を通るが，そこは $\\mathrm L_2$ の前焦点でもあるので，$\\mathrm L_2$ を出ると再び光軸に平行になる．入射時の高さ $h$ に対して出るときの高さは $-\\frac{f_2}{f_1}h$（焦点を中心とする相似）で，物体の位置によらない．像の先端はこの光線上にあるので，像の高さは物体の位置によらず $-\\frac{f_2}{f_1}h$ となる．\n\n\\textbf{(3) 像の位置と縦の移動}　$d=f_1+f_2$ では $a_2=f_1+f_2-\\frac{f_1x}{x-f_1}$ を代入して整理すると\n\\[ z=\\boldsymbol{f_2+\\frac{f_2^2}{f_1}-\\frac{f_2^2}{f_1^2}x}. \\]\n$z$ は $x$ の1次式で，$x$ が $\\Delta x$ 増えると $z$ は $\\left(\\frac{f_2}{f_1}\\right)^2\\Delta x$ 減る．すなわち像は \\textbf{$\\mathrm L_2$ に近づく向き（物体が動いたのと同じ向き）に} $\\boldsymbol{\\left(\\frac{f_2}{f_1}\\right)^2\\Delta x}$ 動く．横倍率が $\\frac{f_2}{f_1}$ 倍なら光軸方向の倍率はその2乗になる．数値は $\\left(\\frac{25}{10}\\right)^2\\times1.0=\\boldsymbol{6.3\\ \\mathrm{mm}}$（$6.25\\ \\mathrm{mm}$）．\n\n\\textbf{(4) $f_1=f_2=f$ の場合}　$d=2f$，$m=-1$ で，(3) より $z=2f-x$．物体から像までの距離は\n\\[ x+d+z=x+2f+(2f-x)=\\boldsymbol{4f} \\]\nで $x$ によらない．物体を動かすと像も同じ向きに同じだけ動き，倒立した等倍の像が物体から $4f$ 離れた位置にでき続ける．像が実像（$z>0$）となるのは $2f-x>0$，すなわち $\\boldsymbol{0<x<2f}$ のとき．$x>2f$ では $\\mathrm L_1$ による像が $\\mathrm L_2$ より手前にでき，それが $\\mathrm L_2$ の焦点より内側に入るので，$\\mathrm L_2$ による像は虚像になる（それでも符号つきの距離として $4f$ の関係は成り立つ）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "2枚の凸レンズの間隔を焦点距離の和にすると，光軸に平行に入った光線は平行のまま高さだけ $-f_2/f_1$ 倍になって出ていくので，像の倍率は物体の位置によらなくなる．一方，像の位置は物体の位置の1次式になり，光軸方向の移動は横倍率の2乗倍に拡大される．"
+ },
+ "concepts": [
+  "light-interference",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "レンズの組合せ",
+  "写像公式",
+  "倍率",
+  "虚物体",
+  "縦倍率"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

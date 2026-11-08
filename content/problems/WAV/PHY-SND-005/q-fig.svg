@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240">
+  <defs>
+    <marker id="q-ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/></marker>
+    <marker id="q-ak" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#222"/></marker>
+    <marker id="q-aks" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M8,0 L0,4 L8,8 z" fill="#222"/></marker>
+  </defs>
+  <!-- flight path -->
+  <line x1="30" y1="50" x2="530" y2="50" stroke="#888" stroke-width="1" stroke-dasharray="6,4"/>
+  <!-- drone -->
+  <g stroke="#222" stroke-width="1.6" fill="none">
+    <rect x="128" y="44" width="24" height="10"/>
+    <line x1="118" y1="40" x2="134" y2="40"/><line x1="146" y1="40" x2="162" y2="40"/>
+    <line x1="132" y1="44" x2="126" y2="40"/><line x1="148" y1="44" x2="154" y2="40"/>
+  </g>
+  <text x="104" y="34" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">音源（振動数 </text>
+  <text x="196" y="34" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">f<tspan baseline-shift="sub" font-size="10" font-style="normal">0</tspan></text>
+  <text x="212" y="34" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">）</text>
+  <line x1="170" y1="68" x2="240" y2="68" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+  <text x="246" y="73" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1f5fbf">v</text>
+  <!-- point P overhead -->
+  <circle cx="380" cy="50" r="3" fill="#222"/>
+  <text x="386" y="42" font-family="Times New Roman, serif" font-size="16" fill="#222">P</text>
+  <line x1="380" y1="53" x2="380" y2="186" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- height h -->
+  <line x1="420" y1="52" x2="420" y2="186" stroke="#222" stroke-width="1" marker-end="url(#q-ak)" marker-start="url(#q-aks)"/>
+  <text x="428" y="124" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">h</text>
+  <!-- observer -->
+  <g stroke="#222" stroke-width="1.6" fill="none">
+    <circle cx="380" cy="160" r="5"/>
+    <line x1="380" y1="165" x2="380" y2="178"/>
+    <line x1="372" y1="170" x2="388" y2="170"/>
+    <line x1="380" y1="178" x2="374" y2="188"/><line x1="380" y1="178" x2="386" y2="188"/>
+  </g>
+  <text x="352" y="180" font-family="Times New Roman, serif" font-size="16" fill="#222">O</text>
+  <!-- ground -->
+  <line x1="30" y1="190" x2="530" y2="190" stroke="#222" stroke-width="1.6"/>
+  <g stroke="#222" stroke-width="1">
+    <line x1="40" y1="190" x2="32" y2="200"/><line x1="60" y1="190" x2="52" y2="200"/><line x1="80" y1="190" x2="72" y2="200"/><line x1="100" y1="190" x2="92" y2="200"/><line x1="120" y1="190" x2="112" y2="200"/><line x1="140" y1="190" x2="132" y2="200"/><line x1="160" y1="190" x2="152" y2="200"/><line x1="180" y1="190" x2="172" y2="200"/><line x1="200" y1="190" x2="192" y2="200"/><line x1="220" y1="190" x2="212" y2="200"/><line x1="240" y1="190" x2="232" y2="200"/><line x1="260" y1="190" x2="252" y2="200"/><line x1="280" y1="190" x2="272" y2="200"/><line x1="300" y1="190" x2="292" y2="200"/><line x1="320" y1="190" x2="312" y2="200"/><line x1="340" y1="190" x2="332" y2="200"/><line x1="360" y1="190" x2="352" y2="200"/><line x1="380" y1="190" x2="372" y2="200"/><line x1="400" y1="190" x2="392" y2="200"/><line x1="420" y1="190" x2="412" y2="200"/><line x1="440" y1="190" x2="432" y2="200"/><line x1="460" y1="190" x2="452" y2="200"/><line x1="480" y1="190" x2="472" y2="200"/><line x1="500" y1="190" x2="492" y2="200"/><line x1="520" y1="190" x2="512" y2="200"/>
+  </g>
+  <text x="120" y="228" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">音速 </text>
+  <text x="156" y="228" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">V</text>
+  <text x="170" y="228" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">，光の伝わる時間は無視</text>
+</svg>

@@ -1,0 +1,123 @@
+{
+ "id": "PHY-OPT-041",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "偏光板を付けた2つのスリットによる干渉縞の移動とコントラスト（楕円偏光の位相の読み取り）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$z$ 軸の正の向きに進む波長 $\\lambda$ の光があり，その電場の $x$ 成分と $y$ 成分は\n\\[ E_x=a\\cos\\psi,\\qquad E_y=b\\sin\\psi,\\qquad \\psi=2\\pi\\left(\\nu t-\\frac{z}{\\lambda}\\right) \\]\nで表される（$a>0$ と $b\\neq0$ は定数で，(3) までは $b>0$ とする．$\\nu$ は振動数）．この光を，$z$ 軸に垂直な板に間隔 $s$ で開けた2つの細いスリット S$_1$，S$_2$ に垂直に入射させ，板から距離 $L$ のスクリーンで干渉縞を観測する．図のように，スクリーン上で S$_1$S$_2$ の垂直二等分面上の点を O とし，O から S$_1$ の側に向かって座標 $u$ をとる．$L\\gg s$，$|u|\\ll L$ とし，回折による強さの変化は考えない．\n\nS$_1$ の前面には透過軸が $x$ 軸方向の偏光板を，S$_2$ の前面には透過軸が $x$ 軸から $y$ 軸の向きに角 $\\theta$（$0\\leq\\theta<\\dfrac{\\pi}{2}$）だけ傾いた偏光板を付ける．偏光板は透過軸方向の電場の成分だけを位相を変えずに通し，2枚の偏光板の厚さは同じとする．光の強さは，その点での電場の $x$ 成分の振幅の2乗と $y$ 成分の振幅の2乗の和に比例する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "S$_2$ を通過した光の電場は，透過軸方向の単位ベクトル $\\vec e_\\theta$ を用いて $A\\cos(\\psi-\\beta)\\,\\vec e_\\theta$（$A>0$，$0\\leq\\beta<\\dfrac{\\pi}{2}$）と表される．$A$ と $\\tan\\beta$ を $a,\\ b,\\ \\theta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "スクリーン上の点 $u$ での光の強さ $I(u)$ は，比例定数を $k$ として，$I(u)=k\\{C_0+C_1\\cos(\\Delta(u)+\\beta)\\}$ の形に書ける．$\\Delta(u)$ を $s,\\ L,\\ \\lambda,\\ u$ で，$C_0$，$C_1$ を $a,\\ A,\\ \\theta$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "入射光が円偏光（$b=a$）の場合を考える．$\\theta=0$ のとき O にあった明線は，$\\theta$ をゆっくり大きくしていくと連続的に移動する．角 $\\theta$ のときのこの明線の座標 $u_0$ と，縞のコントラスト $V=\\dfrac{I_{\\max}-I_{\\min}}{I_{\\max}+I_{\\min}}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$b$ の値（符号も含めて）が分からない光で，$\\theta=\\dfrac{\\pi}{4}$ として観測したところ，$\\theta=0$ のとき O にあった明線は，S$_2$ の側へ縞の間隔の $\\dfrac16$ だけ移動していた．$\\dfrac ba$ と，このときの縞のコントラスト $V$ を求めよ．また，同じ大きさだけ S$_1$ の側へ移動していたとしたら，入射光の電場について何がいえるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：偏光板を付けた2つのスリットによる干渉縞の移動とコントラスト（楕円偏光の位相の読み取り）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$A=\\sqrt{a^2\\cos^2\\theta+b^2\\sin^2\\theta}$，$\\tan\\beta=\\dfrac ba\\tan\\theta$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\Delta(u)=\\dfrac{2\\pi su}{\\lambda L}$，$C_0=a^2+A^2$，$C_1=2aA\\cos\\theta$"
+   },
+   {
+    "id": "3",
+    "tex": "$u_0=-\\dfrac{\\theta}{2\\pi}\\cdot\\dfrac{\\lambda L}{s}$（S$_2$ の側へ $\\dfrac{\\theta\\lambda L}{2\\pi s}$），$V=\\cos\\theta$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac ba=\\sqrt3$，$V=\\dfrac23$；S$_1$ の側への移動なら $\\beta<0$，すなわち $b=-\\sqrt3\\,a$ で，電場ベクトルの回る向きが逆の楕円偏光である"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 偏光板を通過した光}\n偏光板は $\\vec E$ の $\\vec e_\\theta$ 方向の成分 $E_x\\cos\\theta+E_y\\sin\\theta$ だけを通すので\n\\[ E_\\theta=a\\cos\\theta\\cos\\psi+b\\sin\\theta\\sin\\psi. \\]\nこれを $A\\cos(\\psi-\\beta)=A\\cos\\beta\\cos\\psi+A\\sin\\beta\\sin\\psi$ と比べて $A\\cos\\beta=a\\cos\\theta$，$A\\sin\\beta=b\\sin\\theta$．よって\n\\[ \\boldsymbol{A=\\sqrt{a^2\\cos^2\\theta+b^2\\sin^2\\theta}},\\qquad \\boldsymbol{\\tan\\beta=\\frac ba\\tan\\theta}. \\]\n偏光板は光路長を変えていないのに，通過した光の位相は $\\beta$ だけ遅れている．これは，$x$ 成分と $y$ 成分の位相が $\\dfrac{\\pi}{2}$ ずれているために，両者を斜めの軸に射影して足すと中間の位相になるからである．\n\n\\textbf{(2) 干渉縞の強さ}\n点 $u$ までの経路差は，近似により $\\mathrm{S_2P}-\\mathrm{S_1P}=\\dfrac{su}{L}$ なので，S$_2$ からの光は S$_1$ からの光より位相が $\\Delta(u)=\\boldsymbol{\\dfrac{2\\pi su}{\\lambda L}}$ だけ遅れて届く．S$_1$ からの光の位相を $\\psi$ と書くと，点 $u$ での電場は\n\\[ \\vec E=a\\cos\\psi\\,\\vec e_x+A\\cos(\\psi-\\beta-\\Delta)\\,\\vec e_\\theta. \\]\n$\\vec e_\\theta=\\cos\\theta\\,\\vec e_x+\\sin\\theta\\,\\vec e_y$ と分解すると，干渉するのは同じ方向の成分どうしだけである．\n\\begin{itemize}\n  \\item $x$ 成分：$a\\cos\\psi+A\\cos\\theta\\cos(\\psi-\\beta-\\Delta)$．同じ振動数の2つの振動の和なので，振幅の2乗は $a^2+A^2\\cos^2\\theta+2aA\\cos\\theta\\cos(\\Delta+\\beta)$．\n  \\item $y$ 成分：$A\\sin\\theta\\cos(\\psi-\\beta-\\Delta)$ だけで，振幅の2乗は $A^2\\sin^2\\theta$．\n\\end{itemize}\nこれらの和に比例するので\n\\[ I(u)=k\\{a^2+A^2+2aA\\cos\\theta\\cos(\\Delta+\\beta)\\},\\quad \\boldsymbol{C_0=a^2+A^2},\\ \\boldsymbol{C_1=2aA\\cos\\theta}. \\]\n\n\\textbf{(3) 円偏光の場合}\n$b=a$ なら $A=a$，$\\tan\\beta=\\tan\\theta$ より $\\beta=\\theta$．明線は $\\Delta+\\theta=2\\pi m$ の位置である．$\\theta=0$ で O（$m=0$）にあった明線は，$\\theta$ を連続的に変えると $\\Delta=-\\theta$ の位置へ移るから\n\\[ \\frac{2\\pi su_0}{\\lambda L}=-\\theta\\quad\\therefore\\ \\boldsymbol{u_0=-\\frac{\\theta}{2\\pi}\\cdot\\frac{\\lambda L}{s}}, \\]\nすなわち S$_2$ の側へ，縞の間隔 $\\dfrac{\\lambda L}{s}$ の $\\dfrac{\\theta}{2\\pi}$ 倍だけ移動する（S$_2$ からの光が遅れた分を，S$_2$ に近い側で取り戻す）．\nコントラストは $I_{\\max}=k(2a^2+2a^2\\cos\\theta)$，$I_{\\min}=k(2a^2-2a^2\\cos\\theta)$ より $\\boldsymbol{V=\\cos\\theta}$．$y$ 成分は S$_1$ からの光と干渉せず，一様な明るさを加えるだけなので，縞は $\\theta$ とともにぼやける．\n\n\\textbf{(4) 楕円偏光の読み取り}\n縞の間隔の $\\dfrac16$ だけ S$_2$ の側へ移動したので $\\beta=\\dfrac{2\\pi}{6}=\\dfrac{\\pi}{3}$．$\\theta=\\dfrac{\\pi}{4}$ では $\\tan\\beta=\\dfrac ba$ だから $\\boldsymbol{\\dfrac ba=\\sqrt3}$．このとき\n\\[ A^2=\\frac{a^2+b^2}{2}=2a^2,\\qquad V=\\frac{C_1}{C_0}=\\frac{2a\\cdot\\sqrt2a\\cdot\\frac{1}{\\sqrt2}}{a^2+2a^2}=\\boldsymbol{\\frac23}. \\]\nもし S$_1$ の側へ移動していたら $\\beta=-\\dfrac{\\pi}{3}$ で，$\\tan\\beta=\\dfrac ba\\tan\\theta<0$ となるには $E_y$ の係数が負，すなわち $E_y=-\\sqrt3\\,a\\sin\\psi$ でなければならない．これは $y$ 成分の位相が逆で，\\textbf{電場ベクトルの先端が楕円上を逆向きに回る}楕円偏光であることを意味する．縞の移動の向きから回転の向きが，移動量から楕円の軸の比が読み取れる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "偏光板は透過軸方向の成分だけを通すので，位相が $\\pi/2$ ずれた $x,y$ 成分をもつ楕円偏光を斜めの軸に射影すると，光路長を変えずに位相 $\\beta$（$\\tan\\beta=\\frac ba\\tan\\theta$）が生じる．干渉するのは同じ方向の成分どうしだけなので，2つのスリットの偏光板の角の違いは干渉縞の平行移動（位相 $\\beta$）とコントラストの低下（$\\cos\\theta$ 因子）として現れ，縞の移動から楕円の軸の比と回転の向きを逆算できる．"
+ },
+ "concepts": [
+  "light-interference",
+  "torque",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "偏光",
+  "楕円偏光",
+  "ヤングの実験",
+  "干渉縞の移動",
+  "コントラスト",
+  "重ね合わせ"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

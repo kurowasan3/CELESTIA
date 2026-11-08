@@ -1,0 +1,144 @@
+{
+ "id": "PHY-NUC-005",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "α線のエネルギースペクトルから娘核の励起準位を復元する（反跳の補正）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止している原子核 ${}^{228}\\mathrm{Th}$ は $\\alpha$ 崩壊して ${}^{224}\\mathrm{Ra}$ になる．原子の質量は ${}^{228}\\mathrm{Th}$：$228.028741\\,\\mathrm u$，${}^{224}\\mathrm{Ra}$：$224.020211\\,\\mathrm u$，${}^{4}\\mathrm{He}$：$4.002603\\,\\mathrm u$ であり，$1\\,\\mathrm u$ は $931.5\\,\\mathrm{MeV}$ のエネルギーに相当する．運動はすべて非相対論的に扱い，運動量・運動エネルギーの計算では原子核の質量の比を質量数の比としてよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "${}^{224}\\mathrm{Ra}$ が基底状態（最もエネルギーの低い状態）で生じる崩壊で放出されるエネルギー $Q$ を，MeV 単位で有効数字3桁で求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "この崩壊で $\\alpha$ 粒子が得る運動エネルギー $K_0$ を $Q$ を用いて表し，有効数字3桁の数値で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\alpha$ 線のエネルギーを精密に測ると，図のように $K_0=5.423\\,\\mathrm{MeV}$ のほか，$K_1=5.340\\,\\mathrm{MeV}$，$K_2=5.177\\,\\mathrm{MeV}$ の $\\alpha$ 線も観測された．これは ${}^{224}\\mathrm{Ra}$ が基底状態よりエネルギーが $E_1^*$，$E_2^*$ だけ高い励起状態で生じる崩壊もあるためである．$E_1^*$，$E_2^*$ を keV 単位で有効数字3桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "励起状態の ${}^{224}\\mathrm{Ra}$ は，ただちに $\\gamma$ 線を出してより低いエネルギーの状態に移る．この試料から観測されうる $\\gamma$ 線のエネルギーをすべて，keV 単位で有効数字3桁で答えよ．また，$\\gamma$ 線を放出するときの ${}^{224}\\mathrm{Ra}$ の反跳を無視してよい理由を，$E_1^*$ の場合について反跳エネルギーを見積もって示せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\alpha$ 線のエネルギー差 $K_0-K_1$ をそのまま $E_1^*$ とみなすと，何 % の誤差が生じるか．また，基底状態への崩壊で ${}^{224}\\mathrm{Ra}$ が得る運動エネルギーを keV 単位で求め，$E_1^*$ と比べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：α線のエネルギースペクトルから娘核の励起準位を復元する（反跳の補正）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：α線のエネルギースペクトルから娘核の励起準位を復元する（反跳の補正）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Q\\fallingdotseq5.52\\,\\mathrm{MeV}$"
+   },
+   {
+    "id": "2",
+    "tex": "$K_0=\\dfrac{224}{228}Q\\fallingdotseq5.42\\,\\mathrm{MeV}$"
+   },
+   {
+    "id": "3",
+    "tex": "$E_1^*\\fallingdotseq84.5\\,\\mathrm{keV}$，$E_2^*\\fallingdotseq250\\,\\mathrm{keV}$"
+   },
+   {
+    "id": "4",
+    "tex": "$84.5\\,\\mathrm{keV}$，$250\\,\\mathrm{keV}$，$166\\,\\mathrm{keV}$．反跳エネルギーは約 $2\\times10^{-5}\\,\\mathrm{keV}$ で無視できる"
+   },
+   {
+    "id": "5",
+    "tex": "約 $1.8\\,\\%$ 小さく見積もる．${}^{224}\\mathrm{Ra}$ の運動エネルギーは約 $96.8\\,\\mathrm{keV}$ で，$E_1^*$ より大きい"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　反応で失われる質量は（電子の質量は両辺で打ち消すので原子の質量で計算してよい）\n\\[ \\Delta m=228.028741-(224.020211+4.002603)=0.005927\\,\\mathrm u \\]\n\\[ Q=0.005927\\times931.5\\fallingdotseq\\boldsymbol{5.52\\,\\mathrm{MeV}} \\]\n\n\\textbf{(2)}　静止した原子核の分裂なので運動量保存より $\\alpha$ と Ra の運動量の大きさ $p$ は等しい．運動エネルギーは $p^2/(2m)$ なので質量に反比例し，その和が $Q$ になる：\n\\[ K_0=\\frac{224}{228}Q=\\boldsymbol{\\frac{224}{228}Q}\\fallingdotseq\\boldsymbol{5.42\\,\\mathrm{MeV}} \\]\n測定値 $5.423\\,\\mathrm{MeV}$ と一致する．\n\n\\textbf{(3)}　Ra が励起状態で生じると，静止エネルギーが $E^*$ だけ大きくなる分，運動エネルギーとして分配されるエネルギーが $Q-E^*$ に減る．運動量保存は変わらないので，$\\alpha$ はその $\\dfrac{224}{228}$ を受け取る：$K_i=\\dfrac{224}{228}(Q-E_i^*)$．差を取ると $Q$ の誤差の影響も消えて\n\\[ E_i^*=\\frac{228}{224}(K_0-K_i) \\]\n\\[ E_1^*=\\frac{228}{224}\\times0.083\\,\\mathrm{MeV}\\fallingdotseq\\boldsymbol{84.5\\,\\mathrm{keV}},\\qquad E_2^*=\\frac{228}{224}\\times0.246\\,\\mathrm{MeV}\\fallingdotseq\\boldsymbol{250\\,\\mathrm{keV}} \\]\n\n\\textbf{(4)}　可能な遷移は $E_1^*\\to0$，$E_2^*\\to0$，$E_2^*\\to E_1^*$ の3つで，$\\gamma$ 線のエネルギーは\n\\[ \\boldsymbol{84.5\\,\\mathrm{keV}},\\quad\\boldsymbol{250\\,\\mathrm{keV}},\\quad\\boldsymbol{250.4-84.5\\fallingdotseq166\\,\\mathrm{keV}} \\]\n$\\gamma$ 線の運動量は $E_\\gamma/c$ なので，Ra（静止エネルギー $Mc^2\\fallingdotseq224\\times931.5\\,\\mathrm{MeV}$）の反跳エネルギーは\n\\[ \\frac{(E_\\gamma/c)^2}{2M}=\\frac{E_\\gamma^2}{2Mc^2}=\\frac{(0.0845)^2}{2\\times2.09\\times10^5}\\,\\mathrm{MeV}\\fallingdotseq2\\times10^{-5}\\,\\mathrm{keV} \\]\nで，$E_\\gamma$ に比べて完全に無視できる．$\\gamma$ 線は運動量の割にエネルギーが大きい（$E=pc$）ので，重い原子核にはほとんどエネルギーを渡さない．\n\n\\textbf{(5)}　$K_0-K_1=83.0\\,\\mathrm{keV}$ は $E_1^*=84.5\\,\\mathrm{keV}$ より $\\dfrac{4}{228}\\fallingdotseq\\boldsymbol{1.8\\,\\%}$ 小さい．差の $\\dfrac{4}{228}$ は Ra の反跳が持ち去る割合である．実際，基底状態への崩壊で Ra が得る運動エネルギーは\n\\[ \\frac{4}{228}Q=\\frac{4}{224}K_0\\fallingdotseq\\boldsymbol{96.8\\,\\mathrm{keV}} \\]\nで，励起エネルギー $E_1^*$ よりも大きい．$\\alpha$ 粒子のエネルギーに比べれば小さな反跳も，準位間隔の議論では無視できない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "静止核の2体崩壊では運動エネルギーが質量の逆比で分配されるので，娘核が励起状態で生じたときの $\\alpha$ 線のエネルギー低下は励起エネルギーの $\\frac{A-4}{A}$ 倍になる．$\\alpha$ 線スペクトルの差に反跳補正をかけて準位を復元し，そこから $\\gamma$ 線のエネルギーを予言する（$\\gamma$ 線放出の反跳は $E^2/(2Mc^2)$ で無視できる）．"
+ },
+ "concepts": [
+  "bohr-model",
+  "momentum-conservation",
+  "nuclear-decay"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "アルファ崩壊",
+  "運動量保存",
+  "反跳",
+  "励起準位",
+  "ガンマ線",
+  "Q値"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

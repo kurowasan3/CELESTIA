@@ -1,0 +1,122 @@
+{
+ "id": "PHY-OPT-007",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "水面に広がる油膜の反射色と可視域に強め合いが現れない膜厚",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水（屈折率 $1.33$）の上に，屈折率 $1.40$ の油が一様な厚さ $d$ の膜となって広がっている．膜に白色光を当て，反射光を観察する．可視光の波長（真空中）は $400\\ \\mathrm{nm}$ 以上 $700\\ \\mathrm{nm}$ 以下とする．屈折率の波長による違いは無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "真上から入射させて真上で観察するとき，反射光が強め合う波長 $\\lambda$ の条件を $d$ と整数 $m\\ (m\\geqq0)$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "真上から観察すると，可視域で反射光が強め合う波長はちょうど2つで，$640\\ \\mathrm{nm}$ と $457\\ \\mathrm{nm}$ であった．$d$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の膜を，入射角 $60^\\circ$ の方向から照らし，反射の向き（反射角 $60^\\circ$）から観察する．(2) で $640\\ \\mathrm{nm}$ に強め合いを与えていた次数の強め合いは，何 nm の波長に移るか．有効数字3桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "油が蒸発して膜が一様に薄くなっていくと，真上から見て可視域に強め合う波長が1つもない状態が現れる．そうなる $d$ の範囲をすべて求めよ．また，膜が極めて薄くなったとき，反射光はどのように見えるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：水面に広がる油膜の反射色と可視域に強め合いが現れない膜厚",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2\\times1.40\\,d=\\left(m+\\dfrac12\\right)\\lambda$"
+   },
+   {
+    "id": "2",
+    "tex": "$d=5.7\\times10^{2}\\ \\mathrm{nm}$"
+   },
+   {
+    "id": "3",
+    "tex": "$503\\ \\mathrm{nm}$"
+   },
+   {
+    "id": "4",
+    "tex": "$d<71\\ \\mathrm{nm}$ および $125\\ \\mathrm{nm}<d<214\\ \\mathrm{nm}$．極めて薄いとき，どの波長でも弱め合って暗く見える"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　膜の上面（空気→油，$1<1.40$）での反射は位相が $\\pi$ ずれ，下面（油→水，$1.40>1.33$）での反射は位相が変わらない．位相のずれが一方だけなので，光路差 $2nd$（$n=1.40$）が半波長の奇数倍のとき強め合う．\n\\[ \\boldsymbol{2\\times1.40\\,d=\\left(m+\\frac12\\right)\\lambda}\\qquad(m=0,1,2,\\ldots) \\]\n\n\\textbf{(2)}　強め合う波長は $\\lambda_m=\\dfrac{2nd}{m+\\frac12}$ で，$m$ が1増えるごとに短くなる．可視域にある強め合いがちょうど2つなので，$640\\ \\mathrm{nm}$ と $457\\ \\mathrm{nm}$ は連続する次数 $m$，$m+1$ に対応する．\n\\[ \\left(m+\\frac12\\right)\\times640=\\left(m+\\frac32\\right)\\times457 \\]\n\\[ 183m=685.5-320=365.5\\qquad\\therefore\\ m\\fallingdotseq2.0\\ \\to\\ m=2 \\]\nよって\n\\[ d=\\frac{(2+\\frac12)\\times640}{2\\times1.40}\\fallingdotseq571\\ \\mathrm{nm}\\ \\to\\ \\boldsymbol{d=5.7\\times10^{2}\\ \\mathrm{nm}} \\]\n（確認：$2nd=1600\\ \\mathrm{nm}$ より強め合いは $1067,\\ 640,\\ 457,\\ 356\\ \\mathrm{nm}$ で，可視域には2つだけ．）\n\n\\textbf{(3)}　入射角 $\\theta$，膜内の屈折角 $\\phi$ のとき，2つの反射光の光路差は $2nd\\cos\\phi$ である．屈折の法則 $\\sin\\theta=n\\sin\\phi$ より\n\\[ 2nd\\cos\\phi=2d\\sqrt{n^2-\\sin^2\\theta}=2d\\sqrt{1.96-0.75}=2d\\times1.10 \\]\n反射の位相のずれは (1) と同じなので，$m=2$ の強め合いの波長は\n\\[ \\lambda'=\\frac{2\\times1.10\\,d}{2+\\frac12}=\\frac{2\\times1.10\\times571.4}{2.5}\\fallingdotseq\\boldsymbol{503\\ \\mathrm{nm}} \\]\n斜めから見ると光路差が小さくなり，同じ次数の強め合いは短波長側へ移る．\n\n\\textbf{(4)}　$2nd=2.80d$ と書くと，強め合う波長は $\\dfrac{2.80d}{m+\\frac12}$，すなわち $5.60d,\\ \\dfrac{5.60d}{3},\\ \\dfrac{5.60d}{5},\\ldots$ である．\n\\begin{itemize}\n  \\item $m=0$ の強め合いが可視域より短い：$5.60d<400$ のとき，すべての次数が $400\\ \\mathrm{nm}$ 未満．$d<71.4\\ \\mathrm{nm}$．\n  \\item $m=0$ が可視域より長く，$m=1$ が可視域より短い：$5.60d>700$ かつ $\\dfrac{5.60d}{3}<400$，すなわち $125\\ \\mathrm{nm}<d<214\\ \\mathrm{nm}$．\n\\end{itemize}\nそれ以外の $d$ では必ず可視域に強め合いがある．実際，$71.4\\ \\mathrm{nm}\\leqq d\\leqq125\\ \\mathrm{nm}$ では $m=0$ の波長 $5.60d$ が可視域に入る．$d\\geqq214\\ \\mathrm{nm}$ では $m=1$ の波長が $400\\ \\mathrm{nm}$ 以上であり，$m\\geqq1$ で隣り合う強め合いの波長の比 $\\dfrac{m+3/2}{m+1/2}$ は $\\dfrac53$ 以下で，可視域の両端の比 $\\dfrac{700}{400}=1.75$ より小さいから，強め合いの波長の列が可視域を飛び越すことはできない．以上より\n\\[ \\boldsymbol{d<71\\ \\mathrm{nm}\\ \\text{および}\\ 125\\ \\mathrm{nm}<d<214\\ \\mathrm{nm}} \\]\n膜が極めて薄い（$d\\to0$）と光路差がほぼ 0 になり，上面の反射だけで生じる位相差 $\\pi$ によって\\textbf{どの波長でも弱め合い，膜は暗く見える}．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "膜の上下の媒質が異なると反射による位相の変化が一方だけになり，強め合いの条件は光路差が半波長の奇数倍となる．可視域に強め合いがちょうど2つという情報から連続する次数を確定して膜厚を求め，逆に可視域に強め合いが入らない膜厚を，最低次の強め合いが可視域の長波長側にはみ出し次の次数が短波長側にはみ出す条件として不等式で求める．"
+ },
+ "concepts": [
+  "light-interference",
+  "interference",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "薄膜干渉",
+  "油膜",
+  "反射の位相変化",
+  "次数の決定",
+  "斜め入射"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

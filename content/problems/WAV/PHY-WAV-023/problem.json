@@ -1,0 +1,139 @@
+{
+ "id": "PHY-WAV-023",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "小球を等間隔につけた弦の固有振動（離散的な弦の分散関係とモード数の上限）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量の無視できる弦に，質量 $m$ の小球 $n$ 個を間隔 $b$ で取り付け，図のように両端を固定する．端の小球と固定端の間隔も $b$ であり，弦の長さは $L=(n+1)b$ である．弦の張力の大きさ $S$ は常に一定とし，小球は弦に垂直な方向（$y$ 方向）にのみ小さく振動する．左端から $j$ 番目の小球の変位を $y_j$ とし，固定端を $j=0$，$j=n+1$ として $y_0=y_{n+1}=0$ とする．重力は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "隣り合う小球の変位の差は間隔 $b$ に比べて十分小さい．$j$ 番目の小球が両側の弦から受ける力の $y$ 成分の和 $F_j$ を，$S$，$b$，$y_{j-1}$，$y_j$，$y_{j+1}$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$y_j=A\\sin(jkb)\\cos\\omega t$（$A$，$k$，$\\omega$ は定数，$\\omega>0$，$0<kb\\le\\pi$）がすべての小球の運動方程式をみたすための，$\\omega$ と $k$ の関係を求めよ．必要なら $\\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta)=2\\sin\\alpha\\cos\\beta$，$1-\\cos\\beta=2\\sin^2\\dfrac{\\beta}{2}$ を用いよ．"
+     },
+     {
+      "id": "3",
+      "tex": "両端の条件から許される $k$ を求め，固有角振動数 $\\omega_l$ を $l$ を用いて表せ．また，異なる振動のしかたがちょうど $n$ 通りしかない理由を述べよ．"
+     },
+     {
+      "id": "4",
+      "tex": "小球の個数 $n$ がわからない弦について，振動数の低い方から2つの固有振動数の比を測ったところ $\\sqrt{2+\\sqrt2}$ であった．$n$ を求めよ．また，この弦の最も振動数の低い振動における各小球の振幅の比を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の弦について，$l$ 番目の固有振動の「波の速さ」を $v_l=\\omega_l/k_l$ で定義する．最も振動数の高い振動と最も低い振動の速さの比を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(4) の弦の基本振動数は，同じ長さ $L$・同じ張力 $S$ で，質量 $nm$ が一様に分布した弦の基本振動数の何倍か．有効数字2桁で求めよ．一様な弦の波の速さは $\\sqrt{S/\\rho}$（$\\rho$ は線密度）である．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：小球を等間隔につけた弦の固有振動（離散的な弦の分散関係とモード数の上限）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F_j=\\dfrac{S}{b}(y_{j+1}-2y_j+y_{j-1})$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega=2\\sqrt{\\dfrac{S}{mb}}\\sin\\dfrac{kb}{2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$k_l=\\dfrac{l\\pi}{L}$，$\\omega_l=2\\sqrt{\\dfrac{S}{mb}}\\sin\\dfrac{l\\pi}{2(n+1)}$（$l=1,2,\\dots,n$）"
+   },
+   {
+    "id": "4",
+    "tex": "$n=3$，$1:\\sqrt2:1$"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac{v_3}{v_1}=\\dfrac{1+\\sqrt2}{3}$"
+   },
+   {
+    "id": "6",
+    "tex": "$0.84$ 倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 復元力}\n\n$j$ 番目と $j+1$ 番目の間の弦が水平となす角を $\\varphi$ とすると，$\\tan\\varphi=\\dfrac{y_{j+1}-y_j}{b}$ は小さいので，この弦から受ける力の $y$ 成分は $S\\sin\\varphi\\fallingdotseq S\\tan\\varphi=\\dfrac{S}{b}(y_{j+1}-y_j)$．左側も同様に $\\dfrac{S}{b}(y_{j-1}-y_j)$．和をとって\n\\[ \\boldsymbol{F_j=\\frac{S}{b}(y_{j+1}-2y_j+y_{j-1})}. \\]\n水平成分は両側でほぼ $S$ と $-S$ で打ち消し合う．\n\n\\textbf{(2) 分散関係}\n\n$y_j$ は角振動数 $\\omega$ の単振動なので加速度は $-\\omega^2y_j$．与式の公式から\n\\[ y_{j+1}+y_{j-1}=A\\{\\sin((j+1)kb)+\\sin((j-1)kb)\\}\\cos\\omega t=2\\cos(kb)\\,y_j. \\]\n運動方程式 $m(-\\omega^2y_j)=\\dfrac{S}{b}(2\\cos kb-2)y_j=-\\dfrac{4S}{b}\\sin^2\\dfrac{kb}{2}\\,y_j$ がすべての $j$ で成り立つ条件は\n\\[ \\boldsymbol{\\omega=2\\sqrt{\\frac{S}{mb}}\\,\\sin\\frac{kb}{2}}. \\]\n$\\omega$ は $k$ に比例せず，$kb=\\pi$ で最大値 $2\\sqrt{S/(mb)}$ をとる．\n\n\\textbf{(3) 固有振動}\n\n$y_0=0$ は自動的にみたされる．$y_{n+1}=A\\sin((n+1)kb)\\cos\\omega t=0$ より $(n+1)kb=l\\pi$，すなわち $\\boldsymbol{k_l=\\dfrac{l\\pi}{L}}$ で\n\\[ \\boldsymbol{\\omega_l=2\\sqrt{\\frac{S}{mb}}\\sin\\frac{l\\pi}{2(n+1)}}. \\]\n$l=n+1$ では $\\sin(j\\pi)=0$ となりすべての小球が静止するので振動ではない．$l$ を $2(n+1)-l$ に置きかえると $\\sin\\!\\left(j\\pi\\cdot\\frac{2(n+1)-l}{n+1}\\right)=-\\sin\\frac{jl\\pi}{n+1}$ となり，小球の位置での変位の形は符号が変わるだけで同じ振動を表す（角振動数も等しい）．$l$ が $2(n+1)$ 増えても同じである．したがって異なる振動は $l=1,2,\\dots,n$ の $\\boldsymbol{n}$ 通りだけで，これは小球の数（自由度）に等しい．弦の「すき間」の部分には質量がないので，小球の間でどんなに細かく波打つ形を考えても新しい振動にはならない．\n\n\\textbf{(4) 個数の決定}\n\n$\\theta=\\dfrac{\\pi}{2(n+1)}$ とおくと $\\dfrac{\\omega_2}{\\omega_1}=\\dfrac{\\sin2\\theta}{\\sin\\theta}=2\\cos\\theta$．これは $n$ とともに単調に増えて 2 に近づくので，比から $n$ が一つに決まる．$2\\cos\\theta=\\sqrt{2+\\sqrt2}$ より $\\cos^2\\theta=\\dfrac{2+\\sqrt2}{4}=\\cos^2\\dfrac{\\pi}{8}$，よって $\\theta=\\dfrac{\\pi}{8}$，$\\boldsymbol{n=3}$．\n\n最低の振動（$l=1$）の振幅は $\\sin\\dfrac{j\\pi}{4}$（$j=1,2,3$）に比例するので $\\boldsymbol{1:\\sqrt2:1}$．\n\n\\textbf{(5) 波の速さ}\n\n$n=3$，$b=\\dfrac{L}{4}$ では $v_l=\\dfrac{\\omega_l}{k_l}=2\\sqrt{\\dfrac{S}{mb}}\\dfrac{L}{l\\pi}\\sin\\dfrac{l\\pi}{8}$．\n\\[ \\frac{v_3}{v_1}=\\frac{\\sin(3\\pi/8)}{3\\sin(\\pi/8)}=\\frac{1}{3}\\cot\\frac{\\pi}{8}=\\boldsymbol{\\frac{1+\\sqrt2}{3}}\\ (\\fallingdotseq0.80). \\]\n波長が間隔 $b$ に近づくほど遅くなる（波長によって速さが変わる）．波長が $b$ よりずっと長いときは $\\sin\\frac{kb}{2}\\fallingdotseq\\frac{kb}{2}$ より $v\\fallingdotseq b\\sqrt{\\dfrac{S}{mb}}=\\sqrt{\\dfrac{S}{m/b}}$ となり，線密度 $m/b$ の一様な弦の値に一致する．\n\n\\textbf{(6) 一様な弦との比較}\n\n一様な弦（線密度 $\\rho=\\dfrac{3m}{L}$）の基本振動の角振動数は $\\omega_{\\rm c}=\\dfrac{\\pi}{L}\\sqrt{\\dfrac{S}{\\rho}}=\\pi\\sqrt{\\dfrac{S}{3mL}}$．小球の弦は $b=\\dfrac{L}{4}$ より\n\\[ \\omega_1=2\\sqrt{\\frac{4S}{mL}}\\sin\\frac{\\pi}{8}=4\\sin\\frac{\\pi}{8}\\sqrt{\\frac{S}{mL}}. \\]\n\\[ \\frac{\\omega_1}{\\omega_{\\rm c}}=\\frac{4\\sqrt3}{\\pi}\\sin\\frac{\\pi}{8}\\fallingdotseq\\boldsymbol{0.84}. \\]\n質量が小球に集中しているぶん，同じ総質量の一様な弦より低い音になる．小球の数をふやし間隔をせばめると，この比は 1 に近づく．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "等間隔の小球をつけた弦では，正弦波形 $\\sin(jkb)$ を仮定すると隣どうしの和が $2\\cos(kb)$ 倍になり，分散関係 $\\omega=2\\sqrt{S/(mb)}\\sin(kb/2)$ が得られる．固定端の条件で $k$ が離散化されるが，小球の位置でしか変位が意味をもたないので $l$ と $2(n+1)-l$ が同じ振動を表し，モードは小球の数だけに限られる．固有振動数の比は $2\\cos\\frac{\\pi}{2(n+1)}$ となって $n$ を逆算でき，連続弦との違いは波長が間隔に近いほど大きい．"
+ },
+ "concepts": [
+  "wave-basics",
+  "string-resonance",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "定常波",
+  "連成振動",
+  "分散関係",
+  "固有振動",
+  "弦の振動",
+  "逆問題"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

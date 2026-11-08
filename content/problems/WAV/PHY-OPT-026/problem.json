@@ -1,0 +1,142 @@
+{
+ "id": "PHY-OPT-026",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "液体の上に置いた二等辺三角形プリズムの底面での全反射（臨界の液体の屈折率から屈折率を求める・分散による色の選別）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，頂角 $\\alpha$ の二等辺三角形 ABC を断面とするガラスのプリズムを，底面 BC を下にして，屈折率 $n_{\\mathrm L}$ の液体の層の上に置く．液体は底面 BC 全体に接している．空気の屈折率を $1$，ガラスの屈折率を $n$ とし，光の進路は断面 ABC 内にあるものとする．単色光の細い光線を，BC に平行に AB 面に入射させる．光線は AB 面の B に近い部分に入射し，屈折したのち底面 BC に達し，そこで反射した光は AC 面から空気中に出るものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "AB 面での入射角を $\\alpha$ で表せ．また，AB 面での屈折角 $\\theta_1$ が満たす式を書け．"
+     },
+     {
+      "id": "2",
+      "tex": "底面 BC での入射角 $\\theta_2$ を $\\alpha,\\ \\theta_1$ で表せ．さらに，底面で全反射が起こる条件が\n  \\[ n_{\\mathrm L}<\\cos\\frac{\\alpha}{2}\\sqrt{n^2-\\sin^2\\frac{\\alpha}{2}}+\\sin^2\\frac{\\alpha}{2} \\]\n  と表されることを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "底面で全反射した光が AC 面から出るときの進む向きを求めよ．また，AB 面の異なる高さに BC に平行に入射した2本の光線について，AC 面から出たあとの上下の位置関係はどうなるか．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\alpha=90^\\circ$ とする．液体の屈折率を少しずつ大きくしていったところ，$n_{\\mathrm L}$ が $1.42$ をこえたとき，底面での全反射が起こらなくなった．ガラスの屈折率 $n$ を有効数字3桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "別のガラス（$\\alpha=90^\\circ$）でできたプリズムで，赤色光と紫色光の屈折率がそれぞれ $1.51$，$1.53$ であるとする．赤色光と紫色光をふくむ光を BC に平行に入射させ，屈折率 $1.45$ の液体の上に置いたとき，AC 面から出る光の色はどうなるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：液体の上に置いた二等辺三角形プリズムの底面での全反射（臨界の液体の屈折率から屈折率を求める・分散による色の選別）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：液体の上に置いた二等辺三角形プリズムの底面での全反射（臨界の液体の屈折率から屈折率を求める・分散による色の選別）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "入射角 $\\dfrac{\\alpha}{2}$，$\\sin\\dfrac{\\alpha}{2}=n\\sin\\theta_1$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\theta_2=\\dfrac{\\pi}{2}-\\dfrac{\\alpha}{2}+\\theta_1$，全反射条件 $n\\sin\\theta_2>n_{\\mathrm L}$ を変形して示される"
+   },
+   {
+    "id": "3",
+    "tex": "BC に平行（入射光と同じ向き），2本の上下の位置関係は入れかわる（像が上下反転する）"
+   },
+   {
+    "id": "4",
+    "tex": "$n\\approx1.48$"
+   },
+   {
+    "id": "5",
+    "tex": "紫色光は全反射して出るが，赤色光は全反射せず一部が液体中に出ていくので，出てくる光は赤色が弱まり紫色が強い"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　底角は $\\angle\\mathrm B=\\frac{\\pi-\\alpha}{2}$．BC に平行な光線と AB 面のなす角は $\\angle\\mathrm B$ なので，法線とのなす角（入射角）は $\\frac{\\pi}{2}-\\angle\\mathrm B=\\boldsymbol{\\frac{\\alpha}{2}}$．屈折の法則より\n\\[ \\boldsymbol{\\sin\\frac{\\alpha}{2}=n\\sin\\theta_1}. \\]\n\n\\textbf{(2)}　AB 面の内向きの法線は水平から下へ $\\frac{\\alpha}{2}$ 傾いている．屈折光はこの法線から角 $\\theta_1$ だけ水平側にあるので，水平から下向きに $\\frac{\\alpha}{2}-\\theta_1$ 傾いて進む．底面 BC は水平なので，底面での入射角は\n\\[ \\theta_2=\\boldsymbol{\\frac{\\pi}{2}-\\frac{\\alpha}{2}+\\theta_1}. \\]\n全反射の条件は $n\\sin\\theta_2>n_{\\mathrm L}$ で，\n\\[ n\\sin\\theta_2=n\\cos\\left(\\frac{\\alpha}{2}-\\theta_1\\right)=\\cos\\frac{\\alpha}{2}\\cdot n\\cos\\theta_1+\\sin\\frac{\\alpha}{2}\\cdot n\\sin\\theta_1. \\]\n$n\\sin\\theta_1=\\sin\\frac{\\alpha}{2}$，$n\\cos\\theta_1=\\sqrt{n^2-n^2\\sin^2\\theta_1}=\\sqrt{n^2-\\sin^2\\frac{\\alpha}{2}}$ を代入すると\n\\[ n_{\\mathrm L}<\\cos\\frac{\\alpha}{2}\\sqrt{n^2-\\sin^2\\frac{\\alpha}{2}}+\\sin^2\\frac{\\alpha}{2}\\equiv N(n) \\]\nが得られる．右辺 $N(n)$ は $n$ について単調に増加する．\n\n\\textbf{(3)}　図形は BC の垂直二等分線に関して対称で，底面での反射も鏡映なので，反射光の経路は入射光の経路を鏡に映して逆向きにたどったものになる（光の逆進性）．入射光が BC に平行に AB に入ったのだから，反射光は AC 面から \\textbf{BC に平行に，入射光と同じ向きに} 出ていく．このとき AC 面での入射角は $\\theta_1$ で，$\\sin\\theta_1=\\frac{1}{n}\\sin\\frac{\\alpha}{2}<\\frac1n$ なので AC 面で全反射は起こらない．\nまた，AB 面の高い位置に入射した光ほど底面の C に近い側で反射し，AC 面の低い位置から出る．したがって2本の光線の\\textbf{上下の位置関係は入れかわり}，プリズムを通して見た像は上下が反転する（ダブプリズム）．\n\n\\textbf{(4)}　$\\alpha=90^\\circ$ では $\\cos\\frac{\\alpha}{2}=\\frac{1}{\\sqrt2}$，$\\sin^2\\frac{\\alpha}{2}=\\frac12$．全反射がちょうど起こらなくなる液体の屈折率は $N(n)$ に等しいので\n\\[ 1.42=\\frac{1}{\\sqrt2}\\sqrt{n^2-\\frac12}+\\frac12\\ \\Longrightarrow\\ n^2=2(0.92)^2+\\frac12=2.1928, \\]\n$n=\\boldsymbol{1.48}$．（答えから条件を逆にたどる測定で，プリズムの屈折率がわかる．）\n\n\\textbf{(5)}　$N(n)$ に代入すると\n\\[ N(1.51)=\\frac{1}{\\sqrt2}\\sqrt{2.2801-0.5}+0.5\\approx1.443,\\qquad N(1.53)=\\frac{1}{\\sqrt2}\\sqrt{2.3409-0.5}+0.5\\approx1.459. \\]\n液体の屈折率 $1.45$ は $N(\\text{赤})<1.45<N(\\text{紫})$ なので，\\textbf{紫色光は底面で全反射して AC 面から出るが，赤色光は全反射が起こらず一部が液体中へ透過する}．そのため AC 面から出る光は赤色が弱まり，紫色の割合が大きくなる．屈折率が大きい色ほど AB 面で強く曲がって底面への入射角は小さくなるが，それ以上に $n$ が大きくなる効果が勝って $n\\sin\\theta_2$ は大きくなる（$N(n)$ が増加関数）ことがポイントである．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "底辺に平行に入射した光の底面での全反射の条件は，屈折の法則を代入すると $n\\sin\\theta_2=\\cos\\frac{\\alpha}{2}\\sqrt{n^2-\\sin^2\\frac{\\alpha}{2}}+\\sin^2\\frac{\\alpha}{2}$ という $n$ の増加関数で表される．全反射が止まる液体の屈折率からガラスの屈折率を逆算でき，分散があると屈折率の小さい赤色から先に全反射しなくなる．対称性と光の逆進性から出射光は入射光に平行になり，上下が反転する．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "屈折の法則",
+  "全反射",
+  "プリズム",
+  "分散",
+  "光の逆進性"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

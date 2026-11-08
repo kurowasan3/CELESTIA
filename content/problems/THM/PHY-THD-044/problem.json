@@ -1,0 +1,130 @@
+{
+ "id": "PHY-THD-044",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "密閉した剛体容器内で氷を加熱するときの熱量（飽和蒸気量による頭打ちと定積での蒸発熱）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "容積 $V=1.0\\,$m$^3$ の変形しない容器の中を真空にし，$-10^\\circ$C の氷 $m\\,$[kg] を入れて密閉した．容器をゆっくり加熱して，中身をすべて $100^\\circ$C にする．容器の熱容量は考えず，中身の水（氷・液体・水蒸気）が吸収する熱量 $Q$ を考える．\n\nデータ：氷の比熱 $2.1\\times10^3\\,$J/(kg·K)，水の比熱 $4.2\\times10^3\\,$J/(kg·K)，氷の融解熱 $3.3\\times10^5\\,$J/kg，$100^\\circ$C での水の蒸発熱 $L_v=2.26\\times10^6\\,$J/kg（$1.01\\times10^5\\,$Pa の一定圧力のもとで，液体から水蒸気にするときに吸収する熱量），$100^\\circ$C の飽和水蒸気圧 $p_{\\rm s}=1.01\\times10^5\\,$Pa，水のモル質量 $M=1.8\\times10^{-2}\\,$kg/mol，気体定数 $R=8.31\\,$J/(mol·K)，$100^\\circ$C を $T=373\\,$K とする．\n\n水蒸気は理想気体とし，その内部エネルギーは温度だけで決まるとする．液体の水と氷の体積は容器の容積に比べて無視できる．数値の答えは有効数字2桁とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$100^\\circ$C でこの容器の中に水蒸気として存在できる水の質量の最大値 $m_{\\rm s}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$100^\\circ$C の水が質量 $\\Delta m$ だけ，この容器の中で（容積一定のまま）蒸発するとき，吸収する熱量は $L_v\\Delta m$ にならない．その理由を述べ，吸収する熱量を $L_v$，$R$，$T$，$M$，$\\Delta m$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$m=0.40\\,$kg の場合と $m=0.80\\,$kg の場合のそれぞれについて，$Q$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$m=0.40\\,$kg のとき，加熱後の容器内の圧力を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$m=0.80\\,$kg の氷を，$100^\\circ$C ですべて水蒸気にするには，容器の容積を少なくともいくらにすればよいか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：密閉した剛体容器内で氷を加熱するときの熱量（飽和蒸気量による頭打ちと定積での蒸発熱）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$m_{\\rm s}=0.59\\,$kg"
+   },
+   {
+    "id": "2",
+    "tex": "解説参照．$\\left(L_v-\\dfrac{RT}{M}\\right)\\Delta m$（$\\approx2.1\\times10^6\\,\\Delta m\\,$J）"
+   },
+   {
+    "id": "3",
+    "tex": "$m=0.40\\,$kg：$1.1\\times10^6\\,$J，$m=0.80\\,$kg：$1.8\\times10^6\\,$J"
+   },
+   {
+    "id": "4",
+    "tex": "$6.9\\times10^4\\,$Pa"
+   },
+   {
+    "id": "5",
+    "tex": "$1.4\\,$m$^3$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 水蒸気の圧力は飽和水蒸気圧を超えられない．状態方程式 $p_{\\rm s}V=\\dfrac{m_{\\rm s}}{M}RT$ より\n\\[ m_{\\rm s}=\\frac{p_{\\rm s}VM}{RT}=\\frac{1.01\\times10^5\\times1.0\\times1.8\\times10^{-2}}{8.31\\times373}=\\boldsymbol{0.59\\,\\text{kg}} \\]\nこれより多い水を入れると，余りは液体のまま残る．\n\n\\textbf{(2)} $L_v$ は一定圧力 $p_{\\rm s}$ のもとで測った値なので，水蒸気が体積 $\\Delta V$ をつくるときに周囲を押しのける仕事 $p_{\\rm s}\\Delta V$ を含んでいる．状態方程式より $p_{\\rm s}\\Delta V=\\dfrac{\\Delta m}{M}RT$（液体の体積は無視）だから，熱力学第一法則より内部エネルギーの増加は\n\\[ \\Delta U=L_v\\Delta m-\\frac{RT}{M}\\Delta m \\]\n変形しない容器の中では外へ仕事をしないので，吸収する熱量はこの $\\Delta U$ に等しく\n\\[ \\boldsymbol{\\left(L_v-\\frac{RT}{M}\\right)\\Delta m}=(2.26\\times10^6-1.72\\times10^5)\\Delta m\\approx2.1\\times10^6\\,\\Delta m\\ \\text{J} \\]\n\n\\textbf{(3)} 容器は変形しないので加熱の間に仕事はなく，$Q=\\Delta U$（中身の内部エネルギーの変化）である．内部エネルギーは状態だけで決まるので，初めと終わりの状態が同じなら，計算しやすい道筋で求めてよい．そこで「(i) 全部を液体のまま $100^\\circ$C にする → (ii) $100^\\circ$C で質量 $m_v$ を蒸発させる → (iii) 水蒸気を同じ温度のまま容器全体に広げる」という道筋をとる．(iii) では理想気体の温度が変わらないので $\\Delta U=0$．\n\n(i) の分は 1 kg あたり\n\\[ 2.1\\times10^3\\times10+3.3\\times10^5+4.2\\times10^3\\times100=7.71\\times10^5\\,\\text{J} \\]\n(ii) の分は (2) より 1 kg あたり $2.09\\times10^6\\,$J．蒸発する質量は $m_v=\\min(m,\\,m_{\\rm s})$ で，\n\\[ Q=7.71\\times10^5\\,m+2.09\\times10^6\\,\\min(m,\\,m_{\\rm s}) \\]\nと，$m=m_{\\rm s}$ で傾きが変わる折れ線になる．\n\\begin{itemize}\n\\item $m=0.40\\,$kg $(<m_{\\rm s})$：すべて蒸発して $Q=0.40\\times(7.71\\times10^5+2.09\\times10^6)=\\boldsymbol{1.1\\times10^6\\,\\text{J}}$．\n\\item $m=0.80\\,$kg $(>m_{\\rm s})$：蒸発するのは $0.59\\,$kg だけで $Q=0.80\\times7.71\\times10^5+0.587\\times2.09\\times10^6=\\boldsymbol{1.8\\times10^6\\,\\text{J}}$．\n\\end{itemize}\n\n\\textbf{(4)} すべて水蒸気なので，$p=\\dfrac{m}{M}\\cdot\\dfrac{RT}{V}=\\dfrac{0.40}{1.8\\times10^{-2}}\\times\\dfrac{8.31\\times373}{1.0}=\\boldsymbol{6.9\\times10^4\\,\\text{Pa}}$．飽和水蒸気圧より低く，水蒸気は飽和していない．\n\n\\textbf{(5)} すべて水蒸気になるには，$100^\\circ$C でその圧力が $p_{\\rm s}$ 以下であればよい：\n\\[ V\\ge\\frac{mRT}{Mp_{\\rm s}}=\\frac{0.80\\times8.31\\times373}{1.8\\times10^{-2}\\times1.01\\times10^5}=\\boldsymbol{1.4\\,\\text{m}^3} \\]\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "密閉した変形しない容器では，蒸発できる量が「飽和水蒸気の密度×容積」で頭打ちになるので，必要な熱量は入れた質量に対して折れ線になる．また外へ仕事をしないので，蒸発に要する熱は定圧の蒸発熱から $p\\Delta V=RT/M$（単位質量あたり）を引いたものになり，熱量は状態量（内部エネルギー）の差として都合のよい道筋で計算できる．"
+ },
+ "concepts": [
+  "first-law",
+  "work-energy",
+  "torque"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "飽和蒸気圧",
+  "蒸発熱",
+  "熱力学第一法則",
+  "定積変化",
+  "状態量"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300">
+<defs><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker></defs>
+<text x="20" y="24" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">1本のすき間の回転ベクトルの列（<tspan font-family="Times New Roman, serif" font-style="italic">m</tspan> 次の方向）</text>
+<line x1="72.1" y1="215.0" x2="86.4" y2="233.6" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="86.4" y1="233.6" x2="105.0" y2="247.9" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="105.0" y1="247.9" x2="126.7" y2="256.9" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="126.7" y1="256.9" x2="150.0" y2="260.0" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="150.0" y1="260.0" x2="173.3" y2="256.9" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="173.3" y1="256.9" x2="195.0" y2="247.9" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="195.0" y1="247.9" x2="213.6" y2="233.6" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="213.6" y1="233.6" x2="227.9" y2="215.0" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="72.1" y1="215.0" x2="227.9" y2="215.0" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ac)"/>
+<line x1="150" y1="170" x2="72.1" y2="215.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="150" y1="170" x2="227.9" y2="215.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<path d="M129.2,182.0 A24,24 0 0 0 170.8,182.0" fill="none" stroke="#222" stroke-width="1"/>
+<text x="142" y="198" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">Φ<tspan baseline-shift="sub" font-size="10">m</tspan></text>
+<text x="80" y="288" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf">弧の長さ ∝ <tspan font-family="Times New Roman, serif" font-style="italic">w</tspan></text>
+<text x="236" y="220" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#c0392b">弦＝合成振幅</text>
+<circle cx="150" cy="170" r="2" fill="#222"/>
+<text x="330" y="60" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">G ＋ G′ ＝ 全面すき間</text>
+<rect x="340" y="100" width="24" height="6" fill="#222"/>
+<rect x="376" y="100" width="24" height="6" fill="#222"/>
+<rect x="412" y="100" width="24" height="6" fill="#222"/>
+<rect x="448" y="100" width="24" height="6" fill="#222"/>
+<rect x="484" y="100" width="24" height="6" fill="#222"/>
+<rect x="364" y="150" width="12" height="6" fill="#222"/>
+<rect x="400" y="150" width="12" height="6" fill="#222"/>
+<rect x="436" y="150" width="12" height="6" fill="#222"/>
+<rect x="472" y="150" width="12" height="6" fill="#222"/>
+<rect x="508" y="150" width="12" height="6" fill="#222"/>
+<text x="310" y="107" font-family="Times New Roman, serif" font-size="14" fill="#222">G</text>
+<text x="310" y="157" font-family="Times New Roman, serif" font-size="14" fill="#222">G′</text>
+<line x1="340" y1="205" x2="520" y2="205" stroke="#222" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="345" y="196" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">重ねた板からの光</text>
+<text x="330" y="240" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">斜め方向（<tspan font-family="Times New Roman, serif" font-style="italic">m</tspan>≧1）には光が来ない</text>
+<text x="330" y="262" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">→ G と G′ の光は同振幅・逆位相</text>
+</svg>

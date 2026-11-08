@@ -1,0 +1,131 @@
+{
+ "id": "PHY-CAP-020",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "入れ子に置いた2組の平行板（電荷と電圧の結合係数の対称性と，操作していない電池の充電）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，面積 $S$ の4枚の薄い金属板K，L，M，Nを，端をそろえて真空中に平行に置いた．KN間の距離は $D$，LM間の距離は $d$（$d<D$）で，LとMはKとNの間にある．KとNは抵抗 $R_2$，スイッチS$_2$，起電力 $V_2$ の電池に，LとMは抵抗 $R_1$，スイッチS$_1$，起電力 $V_1$ の電池につながれている（いずれも内部抵抗は無視でき，K，Lの側が正極）．真空の誘電率を $\\varepsilon_0$ とし，板の端の影響は無視する．はじめすべての板の電荷は $0$ である．以下，K，Lの電荷を $Q$，$q$ とすると，N，Mの電荷はそれぞれ $-Q$，$-q$ である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "KのNに対する電位 $V_{\\rm KN}$ と，LのMに対する電位 $V_{\\rm LM}$ を，$Q,q,D,d,S,\\varepsilon_0$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "図の回路とは別に，KN間に起電力 $V_0$ の電池だけをつなぎ（K側が正極），LとMを導線で直接つないだ．十分に時間がたったときのLの電荷 $q$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "逆に，LM間に起電力 $V_0$ の電池だけをつなぎ（L側が正極），KとNを導線で直接つないだ．十分に時間がたったときのKの電荷 $Q$ を求め，(2)の結果と比べて気づくことを述べよ．"
+     },
+     {
+      "id": "4",
+      "tex": "図の回路でS$_1$，S$_2$ をともに閉じて十分に時間がたったときの $Q$，$q$ を求めよ．また，$Q=0$ となるための条件を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "図の回路で，S$_2$ を開いたままS$_1$ を閉じ，十分に時間がたった．その後S$_2$ を閉じた（S$_1$ は閉じたまま）．S$_2$ を閉じてから十分に時間がたつまでの間について，\n (a) 電池 $V_1$ を通過した電気量の大きさを求めよ．また，$V_2>V_1$ のとき電池 $V_1$ は充電されるか放電するか．\n (b) 2つの抵抗で発生したジュール熱の和 $H$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：入れ子に置いた2組の平行板（電荷と電圧の結合係数の対称性と，操作していない電池の充電）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V_{\\rm KN}=\\dfrac{QD+qd}{\\varepsilon_0S}$，$V_{\\rm LM}=\\dfrac{(Q+q)d}{\\varepsilon_0S}$"
+   },
+   {
+    "id": "2",
+    "tex": "$q=-\\dfrac{\\varepsilon_0SV_0}{D-d}$"
+   },
+   {
+    "id": "3",
+    "tex": "$Q=-\\dfrac{\\varepsilon_0SV_0}{D-d}$（(2)の $q$ と等しい）"
+   },
+   {
+    "id": "4",
+    "tex": "$Q=\\dfrac{\\varepsilon_0S(V_2-V_1)}{D-d}$，$q=\\dfrac{\\varepsilon_0S(DV_1-dV_2)}{d(D-d)}$，$Q=0$ となるのは $V_1=V_2$"
+   },
+   {
+    "id": "5",
+    "tex": "(a) $\\dfrac{\\varepsilon_0S|V_2-V_1|}{D-d}$，充電される　(b) $H=\\dfrac{\\varepsilon_0S(V_2-V_1)^2}{2(D-d)}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 電場の重ね合わせ}\n\n一様に帯電した板は両側に $\\dfrac{|\\text{電荷}|}{2\\varepsilon_0S}$ の電場をつくる．K（$+Q$）とN（$-Q$）の電場はKN間で強め合って $\\dfrac{Q}{\\varepsilon_0S}$（K→Nの向き），外側で打ち消す．同様にL（$+q$）とM（$-q$）の電場はLM間だけに $\\dfrac{q}{\\varepsilon_0S}$ をつくる．したがって\n\\[ \\text{KL間・MN間：}\\ \\frac{Q}{\\varepsilon_0S},\\qquad \\text{LM間：}\\ \\frac{Q+q}{\\varepsilon_0S} \\]\n（向きはK→N を正）．電場×距離を足し合わせて\n\\[ \\boldsymbol{V_{\\rm KN}=\\frac{Q(D-d)}{\\varepsilon_0S}+\\frac{(Q+q)d}{\\varepsilon_0S}=\\frac{QD+qd}{\\varepsilon_0S}},\\qquad \\boldsymbol{V_{\\rm LM}=\\frac{(Q+q)d}{\\varepsilon_0S}} \\]\n外側の組の電圧には内側の電荷が係数 $d$ で，内側の組の電圧には外側の電荷が同じ係数 $d$ で効いている（係数が対称）．\n\n\\textbf{(2)} $V_{\\rm LM}=0$ より $q=-Q$．これを $V_{\\rm KN}=V_0$ に代入して $\\dfrac{Q(D-d)}{\\varepsilon_0S}=V_0$．\n\\[ Q=\\frac{\\varepsilon_0SV_0}{D-d},\\qquad \\boldsymbol{q=-\\frac{\\varepsilon_0SV_0}{D-d}} \\]\nLとMをつないでも，KN間の電場によってLに負，Mに正の電荷が誘導される（LM間の電場が $0$ になるように）．\n\n\\textbf{(3)} $V_{\\rm KN}=0$ より $QD+qd=0$，$V_{\\rm LM}=V_0$ より $(Q+q)d=\\varepsilon_0SV_0$．$q=-\\dfrac{QD}{d}$ を代入して\n\\[ Q\\left(1-\\frac Dd\\right)d=\\varepsilon_0SV_0\\quad\\Longrightarrow\\quad \\boldsymbol{Q=-\\frac{\\varepsilon_0SV_0}{D-d}} \\]\nこれは(2)の $q$ と\\textbf{完全に等しい}．「外側に電圧 $V_0$ をかけて内側を短絡したときに内側に誘導される電荷」と「内側に $V_0$ をかけて外側を短絡したときに外側に誘導される電荷」が等しい．(1)の係数が対称であることの表れ（相反性）で，配置によらず成り立つ一般的な性質である．\n\n\\textbf{(4) 両方の電池をつなぐ}\n\n$V_{\\rm KN}=V_2$，$V_{\\rm LM}=V_1$ を連立する．差をとると $V_2-V_1=\\dfrac{Q(D-d)}{\\varepsilon_0S}$ なので\n\\[ \\boldsymbol{Q=\\frac{\\varepsilon_0S(V_2-V_1)}{D-d}},\\qquad \\boldsymbol{q=\\frac{\\varepsilon_0SV_1}{d}-Q=\\frac{\\varepsilon_0S(DV_1-dV_2)}{d(D-d)}} \\]\n$Q=0$ となるのは $\\boldsymbol{V_1=V_2}$ のとき．このときKとL，MとNが同電位になり，KL間・MN間に電場がない．\n\n\\textbf{(5) S$_2$ を閉じたときの電荷の移動とジュール熱}\n\nS$_2$ を閉じる前は $Q=0$，$V_{\\rm LM}=V_1$ より $q_0=\\dfrac{\\varepsilon_0SV_1}{d}$．閉じた後は(4)の値になる．\n\n(a) 電池 $V_1$ を正極から送り出された電気量は\n\\[ \\Delta q=q-q_0=-Q=-\\frac{\\varepsilon_0S(V_2-V_1)}{D-d} \\]\nで，大きさは $\\boldsymbol{\\dfrac{\\varepsilon_0S|V_2-V_1|}{D-d}}$．$V_2>V_1$ では $\\Delta q<0$，つまり電荷が電池 $V_1$ に正極から押し戻されるので，電池 $V_1$ は\\textbf{充電される}．S$_1$ は操作していないのに，外側の板の電荷が内側の電圧を変えようとするためである．\n\n(b) 電池のした仕事は $W_2=V_2Q$，$W_1=V_1\\Delta q=-V_1Q$．静電エネルギーを電場のエネルギー（$\\frac12\\varepsilon_0E^2\\times$体積）で求めると\n\\[ U=\\frac{Q^2(D-d)}{2\\varepsilon_0S}+\\frac{(Q+q)^2d}{2\\varepsilon_0S} \\]\nLM間の電場は前後とも $\\dfrac{V_1}{d}$ で変わらないので，増えたのはKL間・MN間の分だけで $\\Delta U=\\dfrac{Q^2(D-d)}{2\\varepsilon_0S}=\\dfrac12Q(V_2-V_1)$．エネルギー保存より\n\\[ H=W_1+W_2-\\Delta U=Q(V_2-V_1)-\\frac12Q(V_2-V_1)=\\boldsymbol{\\frac{\\varepsilon_0S(V_2-V_1)^2}{2(D-d)}} \\]\nこれは，電気容量 $\\dfrac{\\varepsilon_0S}{D-d}$（KL間とMN間の直列）のコンデンサーを電圧 $V_2-V_1$ で抵抗を通して充電したときの熱 $\\frac12CV^2$ と同じであり，$V_1=V_2$ なら何も起こらない．\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "入れ子の平行板では，外側の組の電圧に内側の電荷が，内側の組の電圧に外側の電荷が同じ係数 $d/\\varepsilon_0S$ で効き，この対称性から「片方に電圧をかけ他方を短絡したときの誘導電荷」が入れかえても等しくなる（相反性）．両方の電池をつなぐと外側の電荷は電圧の差 $V_2-V_1$ だけで決まり，あとから外側をつなぐと操作していない内側の電池が充電され，熱は容量 $\\varepsilon_0S/(D-d)$ を電圧 $V_2-V_1$ で充電した場合と同じになる．"
+ },
+ "concepts": [
+  "capacitor",
+  "work-energy",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "平行板コンデンサー",
+  "電場の重ね合わせ",
+  "静電誘導",
+  "相反性",
+  "ジュール熱",
+  "電池の仕事"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

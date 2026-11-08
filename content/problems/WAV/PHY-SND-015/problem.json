@@ -1,0 +1,144 @@
+{
+ "id": "PHY-SND-015",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "一方の音源が動く2音源の干渉（移動する節の速度とうなり）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，$x$ 軸上の $x=L$ に音源S$_2$ を固定し，音源S$_1$ を $x$ 軸上で正の向きに一定の速さ $u$（$u<V$）で動かす．S$_1$ は時刻 $t=0$ に $x=-L$ を通過する．2つの音源はどちらも，音源の位置で $A\\sin 2\\pi ft$ と表される音波（空気の圧力の変化）を出し続けている．音速を $V$ とし，風はない．音波の振幅は場所によらず $A$ とみなし，以下ではS$_1$ が考える点より左にあり，両方の音波がその点に届いている間だけを考える．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "位置 $x$ に時刻 $t$ に届いているS$_1$ の音波は，S$_1$ が時刻 $t_{\\rm e}$ に出したものである．$t_{\\rm e}$ を求め，その点でのS$_1$ の音波を $A\\sin\\Phi_1$ の形で表せ（$\\Phi_1$ を $f,V,u,L,x,t$ で表せ）．"
+     },
+     {
+      "id": "2",
+      "tex": "位置 $x$，時刻 $t$ でのS$_2$ の音波を $A\\sin\\Phi_2$ の形で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "原点に固定したマイクロホンで聞こえるうなりの振動数 $f_{\\rm b}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "2つの音波の重ね合わせの振幅が $0$ になる点（節）は，時間とともに一定の速度で $x$ 軸上を移動する．その速度 $w_{\\rm n}$ と，隣り合う節の間隔 $\\ell$ を求めよ．また，$u\\ll V$ のとき，$w_{\\rm n}$ はおよそ $u$ の何倍か．"
+     },
+     {
+      "id": "5",
+      "tex": "マイクロホンを $x$ 軸の正の向きに一定の速さ $w$（$w<V$）で動かしたところ，うなりが聞こえなかった．$w$ をドップラー効果の式から求め，(4)の結果と一致することを確かめよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：一方の音源が動く2音源の干渉（移動する節の速度とうなり）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：一方の音源が動く2音源の干渉（移動する節の速度とうなり）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$t_{\\rm e}=\\dfrac{Vt-x-L}{V-u}$，$\\Phi_1=\\dfrac{2\\pi f(Vt-x-L)}{V-u}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\Phi_2=2\\pi f\\left(t-\\dfrac{L-x}{V}\\right)$"
+   },
+   {
+    "id": "3",
+    "tex": "$f_{\\rm b}=\\dfrac{fu}{V-u}$"
+   },
+   {
+    "id": "4",
+    "tex": "$w_{\\rm n}=\\dfrac{uV}{2V-u}$，$\\ell=\\dfrac{V(V-u)}{f(2V-u)}$，およそ $\\dfrac12$ 倍"
+   },
+   {
+    "id": "5",
+    "tex": "$w=\\dfrac{uV}{2V-u}$（$w_{\\rm n}$ に一致）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 音を出した時刻}\n\n時刻 $t_{\\rm e}$ のS$_1$ の位置は $-L+ut_{\\rm e}$．そこから出た音が距離 $x-(-L+ut_{\\rm e})$ を速さ $V$ で進んで時刻 $t$ に届くので\n\\[ x+L-ut_{\\rm e}=V(t-t_{\\rm e})\\quad\\Longrightarrow\\quad \\boldsymbol{t_{\\rm e}=\\frac{Vt-x-L}{V-u}} \\]\n音波の位相は出したときの位相 $2\\pi ft_{\\rm e}$ のまま運ばれるので\n\\[ \\boldsymbol{\\Phi_1=\\frac{2\\pi f\\,(Vt-x-L)}{V-u}} \\]\n（$t$ の係数から，この音は振動数 $\\dfrac{fV}{V-u}$，$x$ の係数から波長 $\\dfrac{V-u}{f}$ で，近づく音源のドップラー効果がそのまま現れている．）\n\n\\textbf{(2)} S$_2$ の音は距離 $L-x$ を進むのに $\\dfrac{L-x}{V}$ かかるので $\\boldsymbol{\\Phi_2=2\\pi f\\left(t-\\dfrac{L-x}{V}\\right)}$．\n\n\\textbf{(3) 固定したマイクロホンのうなり}\n\n$A\\sin\\Phi_1+A\\sin\\Phi_2=2A\\cos\\dfrac{\\Phi_1-\\Phi_2}{2}\\sin\\dfrac{\\Phi_1+\\Phi_2}{2}$ で，振幅は $2A\\left|\\cos\\dfrac{\\Phi_1-\\Phi_2}{2}\\right|$．位相差は\n\\[ \\Phi_1-\\Phi_2=2\\pi f\\left\\{\\frac{u}{V-u}\\,t-\\frac{2V-u}{V(V-u)}\\,x-\\frac{Lu}{V(V-u)}\\right\\} \\]\n$x=0$ では位相差が単位時間に $2\\pi\\dfrac{fu}{V-u}$ ずつ増え，$2\\pi$ 増えるごとに振幅の極大が1回来るので\n\\[ \\boldsymbol{f_{\\rm b}=\\frac{fu}{V-u}} \\]\nこれは2つの振動数の差 $\\dfrac{fV}{V-u}-f$ に等しい．\n\n\\textbf{(4) 節の移動}\n\n節は $\\Phi_1-\\Phi_2=(2n+1)\\pi$（$n$ は整数）の点で，これを $x$ について解くと\n\\[ x=\\frac{Vu\\,t-Lu-\\dfrac{(2n+1)V(V-u)}{2f}}{2V-u} \\]\nとなり，どの節も同じ速度\n\\[ \\boldsymbol{w_{\\rm n}=\\frac{uV}{2V-u}} \\]\nで移動する．隣り合う $n$ の差から\n\\[ \\boldsymbol{\\ell=\\frac{V(V-u)}{f(2V-u)}} \\]\n（$u=0$ では $\\ell=\\dfrac{V}{2f}$ で，定常波の節の間隔＝半波長に戻る．）$u\\ll V$ では $w_{\\rm n}\\approx\\dfrac{u}{2}$ で，干渉模様は音源の速さの\\textbf{およそ半分}で動く．\n\nなお，固定点を単位時間に通過する節の数は $\\dfrac{w_{\\rm n}}{\\ell}=\\dfrac{uV}{2V-u}\\cdot\\dfrac{f(2V-u)}{V(V-u)}=\\dfrac{fu}{V-u}$ で，(3)のうなりの振動数と一致する．うなりとは「動く節が観測点を通り過ぎること」である．\n\n\\textbf{(5) 動くマイクロホン}\n\nS$_1$ からの音（振動数 $\\dfrac{fV}{V-u}$，$+x$ 向きに進む）からは遠ざかり，S$_2$ からの音（$-x$ 向きに進む）には近づくので，聞こえる振動数は\n\\[ f_1'=\\frac{fV}{V-u}\\cdot\\frac{V-w}{V}=\\frac{f(V-w)}{V-u},\\qquad f_2'=\\frac{f(V+w)}{V} \\]\nうなりが消えるのは $f_1'=f_2'$ のときで\n\\[ V(V-w)=(V+w)(V-u)\\quad\\Longrightarrow\\quad \\boldsymbol{w=\\frac{uV}{2V-u}} \\]\nこれは(4)の $w_{\\rm n}$ と一致する．節と一緒に動けば振幅は変わらないので，うなりが聞こえないのは当然である．\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "波は出したときの位相を運ぶので，動く音源の波は「発射時刻を逆算した位相」で書け，ドップラー効果が式に自動的に入る．振動数の異なる逆向きの2つの波の干渉では節が速度 $\\dfrac{uV}{2V-u}$（$u\\ll V$ でほぼ $u/2$）で移動し，固定点でのうなりは節の通過，うなりが消える観測者の速度は節の速度に等しい．"
+ },
+ "concepts": [
+  "string-resonance",
+  "doppler",
+  "beats"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "うなり",
+  "干渉",
+  "定常波",
+  "位相",
+  "音源の運動"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

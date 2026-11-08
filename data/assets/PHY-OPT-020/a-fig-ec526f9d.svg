@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300">
+<defs><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1f5fbf"/></marker><marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#c0392b"/></marker><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#222"/></marker><marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#888"/></marker></defs>
+<circle cx="330" cy="150" r="90" fill="#888" fill-opacity="0.18" stroke="#222" stroke-width="1.6"/>
+<line x1="30.0" y1="150.0" x2="620.0" y2="150.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<circle cx="420.0" cy="150.0" r="3" fill="#222"/>
+<text x="426.0" y="168.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">V</text>
+<circle cx="240.0" cy="150.0" r="3" fill="#222"/>
+<text x="244.0" y="168.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">F</text>
+<circle cx="330.0" cy="150.0" r="3" fill="#222"/>
+<text x="330.0" y="168.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">O</text>
+<circle cx="150.0" cy="150.0" r="3" fill="#c0392b"/>
+<text x="150.0" y="168.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">F'（像）</text>
+<line x1="240.0" y1="150.0" x2="401.2" y2="95.0" stroke="#1f5fbf" stroke-width="1.6"/>
+<line x1="401.2" y1="95.0" x2="547.8" y2="62.9" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="150.0" y1="150.0" x2="401.2" y2="95.0" stroke="#c0392b" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="240.0" y1="150.0" x2="401.2" y2="205.0" stroke="#1f5fbf" stroke-width="1.6"/>
+<line x1="401.2" y1="205.0" x2="547.8" y2="237.1" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="150.0" y1="150.0" x2="401.2" y2="205.0" stroke="#c0392b" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="150.0" y1="195.0" x2="420.0" y2="195.0" stroke="#222" stroke-width="1" marker-start="url(#a-ak)" marker-end="url(#a-ak)"/>
+<text x="285.0" y="212.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="middle">3r</text>
+<line x1="150.0" y1="155.0" x2="150.0" y2="200.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="420.0" y1="155.0" x2="420.0" y2="200.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="300.0" y="50.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">n</text>
+<text x="312.0" y="50.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">= 4/3</text>
+</svg>

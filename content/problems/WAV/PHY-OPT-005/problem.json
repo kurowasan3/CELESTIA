@@ -1,0 +1,122 @@
+{
+ "id": "PHY-OPT-005",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "屈折率の異なるレンズと平板の間に液体を満たしたニュートンリングと反射の位相変化",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，屈折率 $1.50$ のガラスでできた平凸レンズ（凸面の半径 $R$）を，屈折率 $1.70$ のガラス平板の上に置き，すき間を屈折率 $n$（未知）の透明な液体で満たした．真上から真空中の波長 $\\lambda$ の単色光を当て，反射光を真上から観察すると，中心 O のまわりに同心円状の明暗の環が見えた．中心付近は明るかった．レンズ上面での反射は考えなくてよく，中心 O から距離 $r$ の位置でのすき間の厚さは $\\dfrac{r^2}{2R}$ とみなしてよい．光は屈折率の小さい媒質から大きい媒質へ向かう境界で反射するとき位相が $\\pi$ ずれ，その逆では位相は変わらない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "中心付近が明るいことから，$n$ の範囲を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "中心から数えて $k$ 番目 $(k=1,2,\\ldots)$ の暗環の半径 $r_k$ を $R$，$\\lambda$，$n$，$k$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\lambda=589\\ \\mathrm{nm}$，$R=2.00\\ \\mathrm{m}$ とする．中心付近の環が見にくく何番目かはわからないが，ある暗環の半径は $1.357\\ \\mathrm{mm}$，そこから外側へ数えて5番目の暗環の半径は $2.350\\ \\mathrm{mm}$ であった．$n$ を有効数字3桁で求めよ．また，半径 $1.357\\ \\mathrm{mm}$ の暗環は中心から数えて何番目か．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の状態から，レンズを平板に平行に保ったままゆっくり $1.00\\ \\mu\\mathrm{m}$ 持ち上げた．この間に，中心に吸い込まれて消えた暗環はいくつか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：屈折率の異なるレンズと平板の間に液体を満たしたニュートンリングと反射の位相変化",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1.50<n<1.70$"
+   },
+   {
+    "id": "2",
+    "tex": "$r_k=\\sqrt{\\left(k-\\dfrac12\\right)\\dfrac{\\lambda R}{n}}$"
+   },
+   {
+    "id": "3",
+    "tex": "$n=1.60$，3番目"
+   },
+   {
+    "id": "4",
+    "tex": "5個"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　干渉するのは，レンズ下面（レンズ→液体の境界）で反射する光 a と，平板上面（液体→平板の境界）で反射する光 b である．\n\\begin{itemize}\n  \\item a：$1.50\\to n$ の境界．$n>1.50$ なら位相が $\\pi$ ずれる．\n  \\item b：$n\\to1.70$ の境界．$n<1.70$ なら位相が $\\pi$ ずれる．\n\\end{itemize}\n中心付近ではすき間の厚さがほぼ 0 で経路差がないので，明るいのは反射による位相のずれが a，b で等しい（両方ずれる，または両方ずれない）ときである．両方ずれないには $n<1.50$ かつ $n>1.70$ が必要で不可能．両方ずれるのは\n\\[ \\boldsymbol{1.50<n<1.70} \\]\nのときである．（$n<1.50$ や $n>1.70$ では一方だけがずれ，中心は暗くなる．）\n\n\\textbf{(2)}　位相のずれは相殺するので，光路差 $2n\\cdot\\dfrac{r^2}{2R}=\\dfrac{nr^2}{R}$ だけで明暗が決まる．暗環の条件は\n\\[ \\frac{nr^2}{R}=\\left(j+\\frac12\\right)\\lambda\\qquad(j=0,1,2,\\ldots) \\]\n中心は明るい（$j=-\\frac12$ に相当）ので，中心から $k$ 番目の暗環は $j=k-1$ で\n\\[ \\boldsymbol{r_k=\\sqrt{\\left(k-\\frac12\\right)\\frac{\\lambda R}{n}}} \\]\n\n\\textbf{(3)}　番号の分からない暗環を $k$ 番目とすると，5つ外側は $k+5$ 番目で，番号の差だけが確かである．\n\\[ r_{k+5}^2-r_k^2=\\frac{5\\lambda R}{n} \\]\n\\[ n=\\frac{5\\lambda R}{r_{k+5}^2-r_k^2}=\\frac{5\\times589\\times10^{-9}\\times2.00}{(2.350^2-1.357^2)\\times10^{-6}}=\\frac{5.89\\times10^{-6}}{3.681\\times10^{-6}}\\fallingdotseq\\boldsymbol{1.60} \\]\nこれは (1) の範囲に入っている．つぎに\n\\[ k-\\frac12=\\frac{nr_k^2}{\\lambda R}=\\frac{1.60\\times(1.357\\times10^{-3})^2}{589\\times10^{-9}\\times2.00}\\fallingdotseq2.50 \\]\nより $k=3$，すなわち \\textbf{3番目}である．\n\n\\textbf{(4)}　レンズを $h$ だけ持ち上げると，すき間は $h+\\dfrac{r^2}{2R}$ になり，暗環の条件は\n\\[ 2n\\left(h+\\frac{r^2}{2R}\\right)=\\left(j+\\frac12\\right)\\lambda\\qquad\\therefore\\ r^2=\\frac{R}{n}\\left\\{\\left(j+\\frac12\\right)\\lambda-2nh\\right\\} \\]\n$h$ が増えると同じ $j$ の環の半径は小さくなり，$2nh=\\left(j+\\frac12\\right)\\lambda$ になったとき中心に吸い込まれて消える．$h=1.00\\ \\mu\\mathrm{m}$ までに消えるのは\n\\[ j+\\frac12\\leqq\\frac{2nh}{\\lambda}=\\frac{2\\times1.60\\times1.00\\times10^{-6}}{589\\times10^{-9}}\\fallingdotseq5.43 \\]\nを満たす $j=0,1,2,3,4$ の環で，$\\boldsymbol{5}$ \\textbf{個}である．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "ニュートンリングの中心の明暗は経路差ではなく2つの反射での位相変化の組合せで決まり，液体の屈折率がレンズと平板の間にあれば両方で $\\pi$ ずれて中心が明るくなる．番号が不確かなときは2つの環の半径の2乗の差から屈折率を求め，逆に番号を確定する．レンズを持ち上げると同じ次数の環が内側へ移り，$2nh$ が半整数倍の波長を超えるたびに1つずつ中心に消える．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ニュートンリング",
+  "薄膜干渉",
+  "反射の位相変化",
+  "屈折率",
+  "液体"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

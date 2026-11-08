@@ -1,0 +1,143 @@
+{
+ "id": "PHY-SND-003",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "遠ざかる音源の直接音と反射音の継続時間・重なりとうなりの回数",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，一直線上に観測者 O と反射板 R が距離 $D$ だけ離れて静止している．音源 S はこの直線上を O から R の向きに一定の速さ $v$ で進み，時刻 $t=0$ に O の位置を通過した．S は $t=0$ から $t=T$ までの間だけ振動数 $f_0$ の音を出し続けた．ただし $vT<D$ とする．音速を $V$（$v<V$）とし，風はないものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "O が S からの直接音を聞く時間 $t_1$ と，R からの反射音を聞く時間 $t_2$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "O が聞く直接音と反射音の振動数 $f_1$，$f_2$ を，(1) の結果を用いて求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "O が反射音を聞き始める時刻と聞き終わる時刻を求めよ．また，O が直接音と反射音を同時に聞く時間帯が存在するための $D$ の条件を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の条件が満たされるとき，O が聞くうなりの回数 $N$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$V=340\\,\\mathrm{m/s}$，$v=10\\,\\mathrm{m/s}$，$T=2.0\\,\\mathrm{s}$，$D=300\\,\\mathrm{m}$，$f_0=462\\,\\mathrm{Hz}$ のとき，$N$ を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：遠ざかる音源の直接音と反射音の継続時間・重なりとうなりの回数",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：遠ざかる音源の直接音と反射音の継続時間・重なりとうなりの回数",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$t_1=\\frac{V+v}{V}T$，$t_2=\\frac{V-v}{V}T$"
+   },
+   {
+    "id": "2",
+    "tex": "$f_1=\\frac{V}{V+v}f_0$，$f_2=\\frac{V}{V-v}f_0$"
+   },
+   {
+    "id": "3",
+    "tex": "聞き始め $\\frac{2D}{V}$，聞き終わり $T+\\frac{2D-vT}{V}$；$vT<D<\\frac{(V+v)T}{2}$"
+   },
+   {
+    "id": "4",
+    "tex": "$N=\\frac{2vf_0\\{(V+v)T-2D\\}}{V^2-v^2}$"
+   },
+   {
+    "id": "5",
+    "tex": "$8.0$ 回"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 最初と最後の音の到着時刻を追う}\n\n直接音：$t=0$ に O の位置で出た音はすぐ届き，$t=T$ に O から $vT$ の位置で出た最後の音は時刻 $T+\\frac{vT}{V}$ に届く．\n\\[ t_1=T+\\frac{vT}{V}=\\boldsymbol{\\frac{V+v}{V}T} \\]\n反射音：最初の音は R まで往復して時刻 $\\frac{2D}{V}$ に届く．最後の音は位置 $vT$ から R まで $D-vT$，戻りに $D$ 進むので，時刻 $T+\\frac{2D-vT}{V}$ に届く．\n\\[ t_2=T+\\frac{2D-vT}{V}-\\frac{2D}{V}=\\boldsymbol{\\frac{V-v}{V}T} \\]\n\n\\textbf{(2) 波の数は変わらない}\n\nS が出した波の数 $f_0T$ を，O は直接音として時間 $t_1$ で，反射音として時間 $t_2$ で受け取る（R は受け取った波をそのまま送り返す）．\n\\[ f_1=\\frac{f_0T}{t_1}=\\boldsymbol{\\frac{V}{V+v}f_0},\\qquad f_2=\\frac{f_0T}{t_2}=\\boldsymbol{\\frac{V}{V-v}f_0} \\]\nこれはドップラー効果の公式（遠ざかる音源，および R を観測者・静止音源とする2段階）と一致する．\n\n\\textbf{(3)} 反射音は時刻 $\\boldsymbol{\\frac{2D}{V}}$ に聞こえ始め，$\\boldsymbol{T+\\frac{2D-vT}{V}}$ に聞こえ終わる．直接音の終わり $\\frac{(V+v)T}{V}$ と比べると\n\\[ \\left(T+\\frac{2D-vT}{V}\\right)-\\frac{(V+v)T}{V}=\\frac{2(D-vT)}{V}>0 \\]\nなので，反射音は必ず直接音より後に終わる．よって同時に聞く時間帯があるのは，反射音が直接音の終わる前に始まるとき：\n\\[ \\frac{2D}{V}<\\frac{(V+v)T}{V}\\iff D<\\frac{(V+v)T}{2} \\]\n前提と合わせて $\\boldsymbol{vT<D<\\frac{(V+v)T}{2}}$．逆に $D>\\frac{(V+v)T}{2}$ なら，直接音と反射音の間に無音の時間ができる．\n\n\\textbf{(4)} 重なっている時間は $\\Delta t=\\frac{(V+v)T}{V}-\\frac{2D}{V}=\\frac{(V+v)T-2D}{V}$．1秒あたりのうなりの回数は $f_2-f_1=\\frac{2Vv}{V^2-v^2}f_0$ なので\n\\[ N=(f_2-f_1)\\Delta t=\\boldsymbol{\\frac{2vf_0\\{(V+v)T-2D\\}}{V^2-v^2}} \\]\n（別解：この時間帯に届く反射音の波の数から直接音の波の数を引いたものがうなりの回数であり，同じ結果になる．）\n\n\\textbf{(5)} $vT=20\\,\\mathrm{m}<D=300\\,\\mathrm{m}<\\frac{(V+v)T}{2}=350\\,\\mathrm{m}$ で条件を満たす．\n\\[ N=\\frac{2\\times10\\times462\\times(700-600)}{340^2-10^2}=\\frac{924000}{115500}=\\boldsymbol{8.0}\\ \\text{回} \\]\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "音源が出した波の数は観測者が受け取る波の数に等しく，最初と最後の音の到着時刻から継続時間と振動数が決まる．直接音と反射音が重なる時間帯は到着時刻の大小で決まり，うなりの回数は（振動数差）×（重なる時間），あるいは受け取った波の数の差として求まる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "doppler",
+  "beats"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "反射音",
+  "うなり",
+  "波の数",
+  "継続時間"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

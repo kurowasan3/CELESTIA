@@ -1,0 +1,134 @@
+{
+ "id": "PHY-SND-013",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "壁に平行に進む音源の直接音と反射音（鏡像音源によるドップラー効果と速さ・現在位置の逆算）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "上から見た図のように，音をよく反射する鉛直で平らな長い壁があり，壁から距離 $h$ の直線 $\\ell$（壁に平行）上に観測者 O が静止している．振動数 $f_0$ の音を出す音源 S が，$\\ell$ 上を一定の速さ $u$ で O に向かって近づいている．音の速さを $V\\ (V>u)$ とし，風はないものとする．壁での反射で音の振動数は変わらない（壁は静止している）．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "壁で反射して O に届く音は，壁に関して S と対称な点 S$'$ にある音源が出した音と同じ経路をたどる．S$'$ がどのような運動をする音源と考えればよいかを述べよ．そのうえで，O が S の方向から直接聞く音の振動数 $f_1$ と，$\\ell$ と角 $\\theta\\ \\left(0<\\theta<\\frac{\\pi}{2}\\right)$ をなす方向から届く反射音の振動数 $f_2$ を，$f_0,\\ u,\\ V,\\ \\theta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "ある時刻に，O は S の方向から振動数 $f_1$ の音を，$\\ell$ と角 $\\theta$ をなす方向から振動数 $f_2$ の反射音を同時に聞いた．$f_0$ と $u$ がわからないものとして，$u$ と $f_0$ を $V,\\ f_1,\\ f_2,\\ \\theta$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の時刻に，S は O からどれだけ離れた位置にあるか．$h,\\ \\theta,\\ u,\\ V$ で表せ．また，O がこの時刻に聞いている直接音と反射音とでは，S が音を出した時刻はどちらがどれだけ早いか．$h,\\ \\theta,\\ u,\\ V$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "この後，O が聞く反射音の振動数はしだいに変化し，やがて $f_0$ に等しくなる．そのときに反射音が届く方向と，その瞬間の S の位置を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：壁に平行に進む音源の直接音と反射音（鏡像音源によるドップラー効果と速さ・現在位置の逆算）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：壁に平行に進む音源の直接音と反射音（鏡像音源によるドップラー効果と速さ・現在位置の逆算）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "S$'$ は壁の向こう側（$\\ell$ から距離 $2h$）で $\\ell$ に平行に速さ $u$ で S と同じ向きに動く音源．$f_1=\\dfrac{V}{V-u}f_0$，$f_2=\\dfrac{V}{V-u\\cos\\theta}f_0$"
+   },
+   {
+    "id": "2",
+    "tex": "$u=\\dfrac{V(f_1-f_2)}{f_1-f_2\\cos\\theta}$，$f_0=\\dfrac{f_1f_2(1-\\cos\\theta)}{f_1-f_2\\cos\\theta}$"
+   },
+   {
+    "id": "3",
+    "tex": "O から S の向きに $\\dfrac{2h(V\\cos\\theta-u)}{V\\sin\\theta}$ の位置，反射音の方が $\\dfrac{2h(1-\\cos\\theta)}{(V-u)\\sin\\theta}$ だけ早く出された"
+   },
+   {
+    "id": "4",
+    "tex": "$\\ell$ に垂直な方向（$\\theta=\\frac{\\pi}{2}$），S は O を通り過ぎて O から $\\dfrac{2hu}{V}$ 進んだ位置"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 鏡像音源}　平面での反射では，反射音の経路は壁に関して対称な点 S$'$ から O へまっすぐ進む経路と同じ長さ・同じ向きになる（反射の法則）．S が $\\ell$ 上を速さ $u$ で動けば，S$'$ は $\\ell$ から距離 $2h$ の直線上を，$\\ell$ に平行に同じ向きへ速さ $u$ で動く．したがって反射音は「S$'$ を音源とする直接音」として扱え，ドップラー効果には音源から観測者へ向かう方向の速度成分が効く．\n\n直接音：S は O に向かって速さ $u$ で近づくので\n\\[ f_1=\\boldsymbol{\\frac{V}{V-u}f_0}. \\]\n反射音：O に届く音の方向が $\\ell$ と角 $\\theta$ をなすとき，その音を出した瞬間の S$'$ から O へ向かう向きと S$'$ の速度のなす角は $\\theta$ で，O へ向かう速度成分は $u\\cos\\theta$．O は静止しているので\n\\[ f_2=\\boldsymbol{\\frac{V}{V-u\\cos\\theta}f_0}. \\]\n\n\\textbf{(2) 逆算}　2式から $f_0=\\frac{V-u}{V}f_1=\\frac{V-u\\cos\\theta}{V}f_2$．よって $(V-u)f_1=(V-u\\cos\\theta)f_2$ より\n\\[ u=\\boldsymbol{\\frac{V(f_1-f_2)}{f_1-f_2\\cos\\theta}},\\qquad f_0=\\frac{V-u}{V}f_1=\\boldsymbol{\\frac{f_1f_2(1-\\cos\\theta)}{f_1-f_2\\cos\\theta}}. \\]\n（$\\cos\\theta<1$ なので $f_1>f_2$ で，$u>0$ となる．）\n\n\\textbf{(3) 2つの音を出した時刻}　O を原点に，S の来る向きに $\\ell$ に沿って $x$ 軸をとる．O が時刻 $t$ に聞いている反射音は，S$'$ が $x_2=\\frac{2h}{\\tan\\theta}$ にあったとき（S も $x$ 座標 $x_2$）に出され，経路の長さは $\\frac{2h}{\\sin\\theta}$．直接音は S が $x_1$ にあったときに出され，経路の長さは $x_1$．出した時刻をそれぞれ $t_2,\\ t_1$ とすると\n\\[ t-t_2=\\frac{2h}{V\\sin\\theta},\\qquad t-t_1=\\frac{x_1}{V},\\qquad x_2-x_1=u(t_1-t_2). \\]\n第3式に代入すると $x_2-x_1=\\frac{u}{V}\\left(\\frac{2h}{\\sin\\theta}-x_1\\right)$ なので\n\\[ x_1=\\frac{2h}{\\sin\\theta}\\cdot\\frac{V\\cos\\theta-u}{V-u}. \\]\n時刻 $t$ の S の位置は $x_1$ からさらに $u(t-t_1)=\\frac{u}{V}x_1$ 進んだ点で\n\\[ x_{\\text{S}}=x_1\\left(1-\\frac{u}{V}\\right)=\\boldsymbol{\\frac{2h(V\\cos\\theta-u)}{V\\sin\\theta}}. \\]\n時刻の差は\n\\[ t_1-t_2=\\frac{1}{V}\\left(\\frac{2h}{\\sin\\theta}-x_1\\right)=\\frac{2h}{V\\sin\\theta}\\cdot\\frac{V(1-\\cos\\theta)}{V-u}=\\boldsymbol{\\frac{2h(1-\\cos\\theta)}{(V-u)\\sin\\theta}}, \\]\nで，\\textbf{反射音の方が早く}出されている．同時に聞こえる2つの音は，同じ時刻に出された音ではない．\nなお $x_1>0$（直接音が近づく音源から出た）ためには $V\\cos\\theta>u$ が必要で，(2) のように S の方向から近づく音として $f_1$ が聞こえている限りこれは満たされている．\n\n\\textbf{(4) 反射音が $f_0$ になるとき}　$f_2=f_0$ となるのは $\\cos\\theta=0$，すなわち反射音が \\textbf{$\\ell$ に垂直な方向} から届くときである．時間がたつほど，O に届く反射音は S$'$ がより O に近い（$x_2$ が小さい）ときに出されたものになるので $\\theta$ は大きくなり，$f_2$ は減って $\\theta=\\frac{\\pi}{2}$ で $f_0$ になる．このとき (3) の式で $\\cos\\theta=0,\\ \\sin\\theta=1$ とすると\n\\[ x_{\\text{S}}=-\\frac{2hu}{V}, \\]\nつまり S は \\textbf{O を通り過ぎて O から $\\boldsymbol{\\frac{2hu}{V}}$ 進んだ位置} にある．S が O の真横（$x=0$）で出した音が往復 $2h$ を進む時間 $\\frac{2h}{V}$ の間に，S が $u\\cdot\\frac{2h}{V}$ 進むことと一致する．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "平らな壁で反射した音は，壁に関して対称な位置を壁に平行に動く鏡像音源からの直接音とみなせ，届く方向と速度のなす角 $\\theta$ を使って $V/(V-u\\cos\\theta)$ のドップラー効果を受ける．直接音と反射音の振動数と方向から速さと元の振動数を逆算できるが，同時に聞こえる2つの音は出された時刻が異なるので，音源の現在位置は経路長の差を追って求める必要がある．"
+ },
+ "concepts": [
+  "string-resonance",
+  "doppler"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "鏡像音源",
+  "反射音",
+  "斜め方向",
+  "逆算"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

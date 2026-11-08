@@ -1,0 +1,142 @@
+{
+ "id": "PHY-WAV-014",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "浅い水と深い水で船がつくるくさび形の波（群速度とケルビン角）",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止した広い水面上を，大きさの無視できる船が $X$ 軸の正の向きに一定の速さ $V$ で進み，水面に波をつくり続けている．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "水深が浅く，波の速さが波長によらず一定値 $c\\ (c<V)$ である場合を考える．船が通過した各点は，その時刻から速さ $c$ で広がる円形の素元波を出すとみなす．図 (a) のように船の後方にできるくさび形の波面と $X$ 軸のなす角を $\\theta$ とするとき，$\\sin\\theta$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "以下 (2)〜(5) では，水深が十分深い場合を考える．このとき，波数 $k$（波長 $\\lambda$ に対して $k=\\frac{2\\pi}{\\lambda}$）の波の角振動数は $\\omega=\\sqrt{gk}$ で，波の速さ（位相速度）$c=\\frac{\\omega}{k}$ は波長によって異なる．同じ向きに進み，波数が $k\\pm\\Delta k$，角振動数が $\\omega\\pm\\Delta\\omega$（$\\Delta k\\ll k$）の振幅の等しい2つの波を重ね合わせると，うなりのような振幅の変化（波のかたまり）ができ，それは速さ $v_{\\rm G}=\\frac{\\Delta\\omega}{\\Delta k}$（群速度）で進む．波のエネルギーもこの速さで運ばれる．近似式 $\\sqrt{k\\pm\\Delta k}\\fallingdotseq\\sqrt k\\left(1\\pm\\frac{\\Delta k}{2k}\\right)$ を用いて，$v_{\\rm G}$ を同じ波数の位相速度 $c$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "深い水では，船とともに動く観測者から見て形が変わらない（定常な）波だけが船の後方に残る．進む向きが船の進む向きと角 $\\varphi\\ (-90^\\circ<\\varphi<90^\\circ)$ をなす平面波が，船から見て静止しているためには，その位相速度 $c$ はいくらでなければならないか．また，その波の波長 $\\lambda$ を $V,\\ g,\\ \\varphi$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "図 (b) のように，時間 $t$ だけ前に船が点 P にいたとき P で生じた (3) の波（向き $\\varphi$）のエネルギーは，P から向き $\\varphi$ に群速度で運ばれ，現在は点 Q にある．船の現在の位置を S とする．$\\varphi$ をいろいろに変えたとき，Q はある円の上にあることを示し，その円の中心の位置と半径を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "船の後方で波のエネルギーが存在する領域は，S を頂点とするくさび形になる．その半頂角を $\\alpha$ とするとき $\\sin\\alpha$ を求め，$\\alpha$ が $V$ によらないことを示せ．また，くさびの縁にある波の向き $\\varphi$ について $\\tan|\\varphi|$ を求め，その波の波長を $V,\\ g$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：浅い水と深い水で船がつくるくさび形の波（群速度とケルビン角）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：浅い水と深い水で船がつくるくさび形の波（群速度とケルビン角）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\sin\\theta=\\dfrac cV$"
+   },
+   {
+    "id": "2",
+    "tex": "$v_{\\rm G}=\\dfrac c2$"
+   },
+   {
+    "id": "3",
+    "tex": "$c=V\\cos\\varphi$，$\\lambda=\\dfrac{2\\pi V^2\\cos^2\\varphi}{g}$"
+   },
+   {
+    "id": "4",
+    "tex": "線分 PS 上で P から $\\dfrac{Vt}4$ の点を中心とする半径 $\\dfrac{Vt}4$ の円（P と PS の中点を直径の両端とする円）"
+   },
+   {
+    "id": "5",
+    "tex": "$\\sin\\alpha=\\dfrac13$（$\\alpha\\fallingdotseq19.5^\\circ$，$V$ によらない），$\\tan|\\varphi|=\\dfrac1{\\sqrt2}$，$\\lambda=\\dfrac{4\\pi V^2}{3g}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　時間 $t$ 前に船がいた点 P$'$ から出た素元波は半径 $ct$ の円で，船は P$'$ から $Vt$ 進んだ S にいる．すべての素元波に共通に接する線（包絡線）が波面で，それは S からそれぞれの円に引いた接線である．接点と P$'$，S がつくる直角三角形より\n\\[ \\sin\\theta=\\frac{ct}{Vt}=\\boldsymbol{\\frac cV}. \\]\nこれは $t$ によらないので，波面は S を頂点とする2本の直線（くさび）になる（$V>c$ のときだけできる）．\n\n\\textbf{(2)}　$\\omega(k\\pm\\Delta k)=\\sqrt{g(k\\pm\\Delta k)}\\fallingdotseq\\sqrt{gk}\\left(1\\pm\\frac{\\Delta k}{2k}\\right)$ なので $\\Delta\\omega=\\frac{\\sqrt{gk}}{2k}\\Delta k$．よって\n\\[ v_{\\rm G}=\\frac{\\Delta\\omega}{\\Delta k}=\\frac12\\cdot\\frac{\\sqrt{gk}}{k}=\\frac12\\cdot\\frac{\\omega}{k}=\\boldsymbol{\\frac c2}. \\]\n深い水では，波のかたまり（エネルギー）は山や谷の半分の速さでしか進まない．\n\n\\textbf{(3)}　向き $\\varphi$ に進む平面波の山の列は，山に垂直な向き（進む向き）に速さ $c$ で動く．山に平行な方向へずれても山の列の形は変わらないので，船から見て山が止まって見える条件は，船の速度の「進む向きの成分」が $c$ に等しいことである：\n\\[ c=\\boldsymbol{V\\cos\\varphi}. \\]\n一方 $c=\\frac{\\omega}{k}=\\sqrt{\\frac gk}=\\sqrt{\\frac{g\\lambda}{2\\pi}}$ だから $\\lambda=\\frac{2\\pi c^2}{g}=\\boldsymbol{\\frac{2\\pi V^2\\cos^2\\varphi}{g}}$．\n\n\\textbf{(4)}　P を原点とし，$X$ 軸を船の向き，$Y$ 軸をそれに垂直にとる．Q は P から向き $\\varphi$ に距離 $v_{\\rm G}t=\\frac c2t=\\frac{Vt\\cos\\varphi}2$ の点だから\n\\[ X_{\\rm Q}=\\frac{Vt}2\\cos^2\\varphi,\\qquad Y_{\\rm Q}=\\frac{Vt}2\\cos\\varphi\\sin\\varphi. \\]\n\\[ \\left(X_{\\rm Q}-\\frac{Vt}4\\right)^2+Y_{\\rm Q}^{\\,2}=\\frac{V^2t^2}{16}\\left\\{(2\\cos^2\\varphi-1)^2+(2\\sin\\varphi\\cos\\varphi)^2\\right\\}=\\frac{V^2t^2}{16}(\\cos^22\\varphi+\\sin^22\\varphi)=\\left(\\frac{Vt}4\\right)^2. \\]\nよって Q は，線分 PS 上で P から $\\boldsymbol{\\frac{Vt}4}$ の点 C を中心とする半径 $\\boldsymbol{\\frac{Vt}4}$ の円の上にある．\n幾何的に見ると，位相（山）は向き $\\varphi$ に距離 $ct=Vt\\cos\\varphi$ 進むので，その点 Q$'$ は $\\angle{\\rm PQ'S}=90^\\circ$ を満たし，PS を直径とする円の上にある．エネルギーはその半分の距離しか進まないので，Q の円はこの円を P を中心に $\\frac12$ 倍に縮めたもの（P と PS の中点 M を直径の両端とする円）になる．\n\n\\textbf{(5)}　時間 $t$ 前に出たエネルギーは (4) の円の上にあり，その中心 C は S から距離 $\\frac{3Vt}4$，半径は $\\frac{Vt}4$ である．S から見たこの円の広がりの半角 $\\alpha$ は，S から円に引いた接線の角だから\n\\[ \\sin\\alpha=\\frac{Vt/4}{3Vt/4}=\\boldsymbol{\\frac13}\\qquad(\\alpha\\fallingdotseq19.5^\\circ). \\]\n$t$ をいろいろに変えた円は，すべて S を中心に相似に拡大・縮小したものなので，エネルギーのある領域は半頂角 $\\alpha$ の一定のくさびになる．$\\sin\\alpha=\\frac13$ は $V$ も $g$ も含まないので，深い水ではどんな速さの船でも同じ角になる．\n接点を T とすると CT $\\perp$ ST，${\\rm ST}=\\sqrt{\\left(\\frac{3Vt}4\\right)^2-\\left(\\frac{Vt}4\\right)^2}=\\frac{Vt}{\\sqrt2}$，$\\cos\\alpha=\\frac{2\\sqrt2}3$．S$=(Vt,0)$ から\n\\[ {\\rm T}=\\left(Vt-\\frac{Vt}{\\sqrt2}\\cdot\\frac{2\\sqrt2}{3},\\ \\frac{Vt}{\\sqrt2}\\cdot\\frac13\\right)=\\left(\\frac{Vt}3,\\ \\frac{Vt}{3\\sqrt2}\\right). \\]\nT は P から向き $\\varphi$ にあるので $\\tan|\\varphi|=\\boldsymbol{\\frac1{\\sqrt2}}$，$\\cos^2\\varphi=\\frac23$ で，波長は $\\lambda=\\frac{2\\pi V^2}g\\cdot\\frac23=\\boldsymbol{\\frac{4\\pi V^2}{3g}}$．\n浅い水の (1) では角が $V$ とともに狭くなるのに対し，深い水では「群速度が位相速度の半分」という性質だけで角が決まる点が本質的な違いである．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "波の速さが一定の浅い水では素元波の包絡線から $\\sin\\theta=c/V$ のくさびができる．深い水では $\\omega=\\sqrt{gk}$ により群速度が位相速度の半分になり，船について定常な波は $c=V\\cos\\varphi$ の向きにしか進めない．位相の到達点が PS を直径とする円に乗るのに対し，エネルギーはその半分の距離の円に乗るので，船からの接線で決まる半頂角 $\\sin\\alpha=1/3$ は船の速さによらない．"
+ },
+ "concepts": [
+  "wave-basics",
+  "light-interference"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ホイヘンスの原理",
+  "群速度",
+  "分散",
+  "包絡線",
+  "ケルビン波"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

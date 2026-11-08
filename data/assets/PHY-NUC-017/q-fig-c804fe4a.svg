@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300">
+  <defs><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+  <line x1="70" y1="250" x2="480" y2="250" stroke="#222" stroke-width="1.2" marker-end="url(#q-ak)"/>
+  <line x1="70" y1="250" x2="70" y2="25" stroke="#222" stroke-width="1.2" marker-end="url(#q-ak)"/>
+  <line x1="70" y1="80" x2="450" y2="140" stroke="#1f5fbf" stroke-width="1.8"/>
+  <line x1="70" y1="120" x2="450" y2="230" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="7,4"/>
+  <g font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">
+    <text x="80" y="40">原子数（対数目盛り，イメージ）</text>
+    <text x="250" y="275">時間 →</text>
+    <text x="40" y="270">過去</text>
+    <text x="440" y="270">現在</text>
+    <text x="300" y="104"><tspan font-size="10" baseline-shift="super">238</tspan>U</text>
+    <text x="250" y="215"><tspan font-size="10" baseline-shift="super">235</tspan>U</text>
+  </g>
+</svg>

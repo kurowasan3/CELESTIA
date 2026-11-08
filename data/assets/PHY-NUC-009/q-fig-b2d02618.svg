@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 290" width="520" height="290">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker>
+</defs>
+<line x1="20.0" y1="130.0" x2="85.0" y2="130.0" stroke="#222" stroke-width="1.2" marker-end="url(#q-ak)"/>
+<text x="40" y="120" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">α線</text>
+<rect x="92" y="85" width="5" height="90" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="95" y="75" font-family="Times New Roman, serif" font-size="15" text-anchor="middle" fill="#222">C</text>
+<text x="95" y="195" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="middle" fill="#222">標的膜</text>
+<circle cx="150" cy="130" r="7" fill="none" stroke="#222" stroke-width="1.6"/><text x="150" y="134" font-family="Times New Roman, serif" font-size="10" text-anchor="start" fill="#222"></text>
+<text x="150" y="116" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="middle" fill="#222">Y</text>
+<line x1="158.0" y1="130.0" x2="205.0" y2="130.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="182" y="120" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="middle" fill="#222">v</text>
+<line x1="205.0" y1="130.0" x2="300.0" y2="130.0" stroke="#888" stroke-width="1" stroke-dasharray="5 4"/>
+<rect x="300" y="85" width="10" height="90" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="305" y="75" font-family="Times New Roman, serif" font-size="15" text-anchor="middle" fill="#222">S</text>
+<line x1="310.0" y1="88.0" x2="316.0" y2="82.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="98.0" x2="316.0" y2="92.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="108.0" x2="316.0" y2="102.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="118.0" x2="316.0" y2="112.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="128.0" x2="316.0" y2="122.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="138.0" x2="316.0" y2="132.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="148.0" x2="316.0" y2="142.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="158.0" x2="316.0" y2="152.0" stroke="#222" stroke-width="1"/>
+<line x1="310.0" y1="168.0" x2="316.0" y2="162.0" stroke="#222" stroke-width="1"/>
+<text x="305" y="195" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="middle" fill="#222">停止板</text>
+<line x1="97.0" y1="210.0" x2="97.0" y2="226.0" stroke="#888" stroke-width="1"/><line x1="300.0" y1="210.0" x2="300.0" y2="226.0" stroke="#888" stroke-width="1"/>
+<line x1="97.0" y1="218.0" x2="300.0" y2="218.0" stroke="#888" stroke-width="1" marker-end="url(#q-ag)"/><line x1="300.0" y1="218.0" x2="97.0" y2="218.0" stroke="#888" stroke-width="1" marker-end="url(#q-ag)"/>
+<text x="250" y="238" font-size="15" text-anchor="start" fill="#222"><tspan font-family="Times New Roman, serif" font-style="italic">d</tspan><tspan font-family="Times New Roman, serif"> = </tspan><tspan font-family="Times New Roman, serif" font-style="italic">x</tspan><tspan font-family="Times New Roman, serif"> + </tspan><tspan font-family="Times New Roman, serif" font-style="italic">x</tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="sub" font-size="10">0</tspan></tspan></text>
+<rect x="185" y="255" width="30" height="20" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="225" y="271" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">P（運動方向と垂直）</text>
+<line x1="200.0" y1="135.0" x2="200.0" y2="206.0" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/><line x1="200.0" y1="244.0" x2="200.0" y2="254.0" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="200.0" y1="130.0" x2="260.0" y2="26.1" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="245.0" y="6.1" width="30" height="20" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="280.0" y="20.076951545867374" font-family="Times New Roman, serif" font-size="15" text-anchor="start" fill="#222">Q</text>
+<path d="M 240 130 A 40 40 0 0 0 220.0 95.4" fill="none" stroke="#222" stroke-width="1"/>
+<text x="244" y="108" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">60°</text>
+<text x="360" y="120" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">検出器は膜・板から</text><text x="360" y="138" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">十分遠い（模式図）</text>
+</svg>

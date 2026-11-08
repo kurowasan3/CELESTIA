@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340">
+<defs>
+<marker id="q-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<!-- ===== left: side view ===== -->
+<text x="20" y="24" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">（横から見た図）</text>
+<!-- floor -->
+<line x1="20" y1="290" x2="300" y2="290" stroke="#222" stroke-width="1.6"/>
+<g stroke="#222" stroke-width="1">
+<line x1="30" y1="290" x2="20" y2="302"/><line x1="50" y1="290" x2="40" y2="302"/><line x1="70" y1="290" x2="60" y2="302"/><line x1="90" y1="290" x2="80" y2="302"/><line x1="110" y1="290" x2="100" y2="302"/><line x1="130" y1="290" x2="120" y2="302"/><line x1="150" y1="290" x2="140" y2="302"/><line x1="170" y1="290" x2="160" y2="302"/><line x1="190" y1="290" x2="180" y2="302"/><line x1="210" y1="290" x2="200" y2="302"/><line x1="230" y1="290" x2="220" y2="302"/><line x1="250" y1="290" x2="240" y2="302"/><line x1="270" y1="290" x2="260" y2="302"/><line x1="290" y1="290" x2="280" y2="302"/>
+</g>
+<!-- axis -->
+<line x1="60" y1="50" x2="60" y2="290" stroke="#888" stroke-width="1" stroke-dasharray="6,4"/>
+<!-- tube -->
+<rect x="60" y="112" width="200" height="14" fill="none" stroke="#222" stroke-width="1.6"/>
+<line x1="260" y1="112" x2="260" y2="126" stroke="#fff" stroke-width="0"/>
+<circle cx="150" cy="119" r="6" fill="#222"/>
+<!-- rotation symbol on axis -->
+<path d="M 42 72 A 20 7 0 1 0 78 72" fill="none" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#q-ah)"/>
+<text x="84" y="70" font-family="Times New Roman, serif" font-style="italic" font-size="17" fill="#1f5fbf">ω</text>
+<text x="44" y="112" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">O</text>
+<text x="266" y="112" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">A</text>
+<text x="66" y="284" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">O′</text>
+<text x="145" y="106" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">m</text>
+<!-- r0 and L dimensions -->
+<line x1="60" y1="142" x2="150" y2="142" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="96" y="160" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">r<tspan baseline-shift="sub" font-size="10">0</tspan></text>
+<line x1="60" y1="178" x2="260" y2="178" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="156" y="196" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">L</text>
+<!-- height h -->
+<line x1="285" y1="126" x2="285" y2="290" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="292" y="214" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">h</text>
+<!-- ===== right: top view ===== -->
+<text x="340" y="24" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">（上から見た図）</text>
+<circle cx="400" cy="200" r="3.5" fill="#222"/>
+<text x="372" y="222" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">O</text>
+<!-- tube at angle 20 deg -->
+<g transform="rotate(-20 400 200)">
+<rect x="400" y="193" width="190" height="14" fill="none" stroke="#222" stroke-width="1.6"/>
+<circle cx="485" cy="200" r="6" fill="#222"/>
+</g>
+<text x="570" y="118" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">A</text>
+<!-- rotation arrow CCW -->
+<path d="M 602.8 254.4 A 210 210 0 0 0 548.5 51.5" fill="none" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ah)"/>
+<text x="596" y="88" font-family="Times New Roman, serif" font-style="italic" font-size="17" fill="#1f5fbf">ω</text>
+<text x="400" y="300" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">管は O を通る鉛直軸のまわりを</text>
+<text x="400" y="318" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">反時計回りに一定の角速度で回る</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<path d="M25.0,100.0 L29.2,104.0 L33.5,96.0 L37.8,104.0 L42.0,96.0 L46.2,104.0 L50.5,96.0 L54.8,104.0 L59.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M69.0,100.0 L73.2,104.0 L77.5,96.0 L81.8,104.0 L86.0,96.0 L90.2,104.0 L94.5,96.0 L98.8,104.0 L103.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M113.0,100.0 L117.2,104.0 L121.5,96.0 L125.8,104.0 L130.0,96.0 L134.2,104.0 L138.5,96.0 L142.8,104.0 L147.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M157.0,100.0 L161.2,104.0 L165.5,96.0 L169.8,104.0 L174.0,96.0 L178.2,104.0 L182.5,96.0 L186.8,104.0 L191.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M201.0,100.0 L204.8,104.0 L208.5,96.0 L212.2,104.0 L216.0,96.0 L219.8,104.0 L223.5,96.0 L227.2,104.0 L231.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M249.0,100.0 L252.2,104.0 L255.5,96.0 L258.8,104.0 L262.0,96.0 L265.2,104.0 L268.5,96.0 L271.8,104.0 L275.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M293.0,100.0 L296.2,104.0 L299.5,96.0 L302.8,104.0 L306.0,96.0 L309.2,104.0 L312.5,96.0 L315.8,104.0 L319.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M337.0,100.0 L340.2,104.0 L343.5,96.0 L346.8,104.0 L350.0,96.0 L353.2,104.0 L356.5,96.0 L359.8,104.0 L363.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M381.0,100.0 L384.2,104.0 L387.5,96.0 L390.8,104.0 L394.0,96.0 L397.2,104.0 L400.5,96.0 L403.8,104.0 L407.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M425.0,100.0 L428.2,104.0 L431.5,96.0 L434.8,104.0 L438.0,96.0 L441.2,104.0 L444.5,96.0 L447.8,104.0 L451.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M469.0,100.0 L472.8,104.0 L476.5,96.0 L480.2,104.0 L484.0,96.0 L487.8,104.0 L491.5,96.0 L495.2,104.0 L499.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M509.0,100.0 L513.2,104.0 L517.5,96.0 L521.8,104.0 L526.0,96.0 L530.2,104.0 L534.5,96.0 L538.8,104.0 L543.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M553.0,100.0 L557.2,104.0 L561.5,96.0 L565.8,104.0 L570.0,96.0 L574.2,104.0 L578.5,96.0 L582.8,104.0 L587.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M597.0,100.0 L601.2,104.0 L605.5,96.0 L609.8,104.0 L614.0,96.0 L618.2,104.0 L622.5,96.0 L626.8,104.0 L631.0,100.0" stroke="#222" stroke-width="1.2" fill="none"/>
+<circle cx="20.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<circle cx="64.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<circle cx="108.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<circle cx="152.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<circle cx="196.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<circle cx="240.0" cy="100.0" r="9" stroke="#222" stroke-width="1.6" fill="#bbb"/>
+<circle cx="284.0" cy="100.0" r="9" stroke="#222" stroke-width="1.6" fill="#bbb"/>
+<circle cx="328.0" cy="100.0" r="9" stroke="#222" stroke-width="1.6" fill="#bbb"/>
+<circle cx="372.0" cy="100.0" r="9" stroke="#222" stroke-width="1.6" fill="#bbb"/>
+<circle cx="416.0" cy="100.0" r="9" stroke="#222" stroke-width="1.6" fill="#bbb"/>
+<circle cx="460.0" cy="100.0" r="9" stroke="#222" stroke-width="1.6" fill="#bbb"/>
+<circle cx="504.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<circle cx="548.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<circle cx="592.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<circle cx="636.0" cy="100.0" r="5" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<text x="10.0" y="105.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">…</text>
+<line x1="10.0" y1="165.0" x2="630.0" y2="165.0" stroke="#222" stroke-width="1.2" marker-end="url(#q-ak)"/>
+<text x="632.0" y="170.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">x</text>
+<line x1="240.0" y1="114.0" x2="240.0" y2="170.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="460.0" y1="114.0" x2="460.0" y2="170.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="240.0" y="185.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">0</text>
+<text x="460.0" y="186.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">ℓ</text>
+<text x="108.0" y="45.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">媒質 I</text>
+<text x="108.0" y="66.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="middle"><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">質量 </tspan>m</text>
+<text x="350.0" y="45.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">媒質 II</text>
+<text x="350.0" y="66.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="middle"><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">質量 </tspan>M</text>
+<text x="570.0" y="45.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">媒質 I</text>
+<text x="570.0" y="66.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="middle"><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">質量 </tspan>m</text>
+<line x1="64.0" y1="122.0" x2="108.0" y2="122.0" stroke="#222" stroke-width="1" marker-end="url(#q-ak)" marker-start="url(#q-ak)"/>
+<text x="86.0" y="140.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">d</text>
+<text x="130.0" y="86.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">G</text>
+<line x1="138.0" y1="145.0" x2="196.0" y2="145.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="128.0" y="150.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#1f5fbf" text-anchor="end">入射</text>
+<text x="320.0" y="222.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">（(1)(2) では <tspan font-family="Times New Roman, serif" font-style="italic">x</tspan> ≥ 0 の全体が媒質 II）</text>
+</svg>

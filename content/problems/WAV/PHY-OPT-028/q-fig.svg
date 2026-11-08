@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<path d="M243.0,60.1 L239.0,60.2 L235.0,60.3 L231.0,60.5 L227.0,60.7 L223.0,61.0 L219.0,61.3 L215.0,61.6 L211.0,62.0 L207.0,62.5 L203.0,62.9 L199.0,63.5 L195.0,64.0 L191.0,64.6 L187.0,65.3 L183.0,66.0 L179.0,66.7 L175.0,67.5 L171.0,68.3 L167.0,69.2 L163.0,70.1 L159.0,71.0 L155.0,72.0 L151.0,73.1 L147.0,74.1 L143.0,75.3 L139.0,76.4 L135.0,77.6 L131.0,78.9 L127.0,80.2 L123.0,81.5 L119.0,82.9 L115.0,84.3 L111.0,85.8 L107.0,87.3 L103.0,88.8" stroke="#222" stroke-width="2.2" fill="none"/>
+<path d="M257.0,60.1 L261.0,60.2 L265.0,60.3 L269.0,60.5 L273.0,60.7 L277.0,61.0 L281.0,61.3 L285.0,61.6 L289.0,62.0 L293.0,62.5 L297.0,62.9 L301.0,63.5 L305.0,64.0 L309.0,64.6 L313.0,65.3 L317.0,66.0 L321.0,66.7 L325.0,67.5 L329.0,68.3 L333.0,69.2 L337.0,70.1 L341.0,71.0 L345.0,72.0 L349.0,73.1 L353.0,74.1 L357.0,75.3 L361.0,76.4 L365.0,77.6 L369.0,78.9 L373.0,80.2 L377.0,81.5 L381.0,82.9 L385.0,84.3 L389.0,85.8 L393.0,87.3 L397.0,88.8" stroke="#222" stroke-width="2.2" fill="none"/>
+<path d="M100,240 Q250,300 400,240" stroke="#222" stroke-width="2.2" fill="none"/>
+<line x1="250.0" y1="20.0" x2="250.0" y2="300.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="420.0" y="90.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">M<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<text x="420.0" y="248.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">M<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="236.0" y="50.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="end">穴</text>
+<line x1="236.0" y1="270.0" x2="264.0" y2="270.0" stroke="#c0392b" stroke-width="3"/>
+<text x="274.0" y="262.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#c0392b" text-anchor="start">物体</text>
+<line x1="60.0" y1="60.0" x2="60.0" y2="270.0" stroke="#222" stroke-width="1" marker-end="url(#q-ak)" marker-start="url(#q-ak)"/>
+<text x="48.0" y="170.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">D</text>
+<line x1="60.0" y1="60.0" x2="242.0" y2="60.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="60.0" y1="270.0" x2="234.0" y2="270.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+</svg>

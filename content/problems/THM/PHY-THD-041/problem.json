@@ -1,0 +1,122 @@
+{
+ "id": "PHY-THD-041",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "比熱の異なる2気体を入れた等圧の気球（内部の熱交換による浮力の変化と，熱的に結合した気体の断熱上昇）",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，熱を通さない薄い膜でできた2つの袋を，熱を通す状態と通さない状態を切り替えられる仕切りをはさんでつなぎ，下にゴンドラをつるした気球がある．上の袋には単原子分子理想気体 A が，下の袋には二原子分子理想気体 B が，それぞれ $n$ [mol] ずつ入っている．袋は力を伴わずに自由に伸び縮みするので，各袋の中の気体の圧力はつねにその高さの大気圧に等しい．A，B の定積モル比熱はそれぞれ $\\frac32R$，$\\frac52R$，定圧モル比熱は $\\frac52R$，$\\frac72R$ である（$R$ は気体定数）．\n\n気球全体（気体・袋・ゴンドラ・ヒーターを含む）の質量を $m$ とし，袋以外の部分の体積は無視する．大気はモル質量 $M$ の理想気体で，その温度は高さによらず $T_0$ で一定，地上の大気圧は $p_0$ である．気球は十分小さく，浮力は気球の位置での大気の密度を用いて計算してよい．温度が一定の大気では，高さが $\\Delta h$ 増すごとに大気圧は $\\exp\\left(-\\dfrac{Mg\\Delta h}{RT_0}\\right)$ 倍になる．重力加速度の大きさを $g$ とし，$m>2nM$ とする．対数は自然対数とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "はじめ気球は地上にあり，A，B の温度は $T_0$ であった．仕切りを熱を通す状態にして，ヒーターで両気体をゆっくり加熱したところ，両気体の温度が $T_1$ になったとき気球が地面を離れた．$T_1$ と，それまでにヒーターが気体に与えた熱量 $Q_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "次に，気球を地上にとどめたまま両気体を同じ温度 $T_2$ まで加熱し，ヒーターを止めて仕切りを熱を通さない状態にしてから気球を放した．気球はゆっくり上昇し，大気圧が $ap_0$（$0<a<1$）の高さで静止した．上昇中，各気体は外部とも互いとも熱をやりとりせず，それぞれ $pV^{\\gamma}=$ 一定（$\\gamma$ は各気体の比熱比）に従って変化した．このように静止するための $T_2$ を $m,\\ n,\\ M,\\ T_0,\\ a$ で表せ．また，静止したときの A，B の温度 $T_{\\rm A}$，$T_{\\rm B}$ を $T_2$ と $a$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "静止した気球を，その高さのまま，鉛直に張った質量・体積の無視できるロープ（このとき張力は $0$）で地面につないだ．次に，仕切りを熱を通す状態にして，両気体の温度が等しくなるまで待った．この間，気体全体は外部と熱をやりとりしない．\n  \\begin{enumerate}\n    \\item 等しくなったときの温度 $T_{\\rm f}$ を $T_{\\rm A}$，$T_{\\rm B}$ で表せ．\n    \\item このときのロープの張力 $S$ を $m,\\ g,\\ a$ で表せ．また，$S>0$ であることを示せ．\n  \\end{enumerate}"
+     },
+     {
+      "id": "4",
+      "tex": "その後，仕切りを熱を通す状態のままロープを外すと，気球はゆっくり上昇して新たな高さで静止した．上昇中，両気体はつねに同じ温度に保たれ，気体全体は外部と熱をやりとりしない．\n  \\begin{enumerate}\n    \\item 上昇中，気体の温度 $T$ と圧力 $p$ の間には $T\\propto p^{k}$ の関係が成り立つ．定数 $k$ を求めよ．\n    \\item 気球が (3) の高さから上昇した高さ $\\Delta h$ を $R,\\ T_0,\\ M,\\ g,\\ a$ で表せ．\n  \\end{enumerate}"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：比熱の異なる2気体を入れた等圧の気球（内部の熱交換による浮力の変化と，熱的に結合した気体の断熱上昇）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_1=\\dfrac{mT_0}{2nM}$，$Q_1=\\dfrac{3RT_0(m-2nM)}{M}$"
+   },
+   {
+    "id": "2",
+    "tex": "$T_2=\\dfrac{mT_0}{nM\\left(a^{2/5}+a^{2/7}\\right)}$，$T_{\\rm A}=a^{2/5}T_2$，$T_{\\rm B}=a^{2/7}T_2$"
+   },
+   {
+    "id": "3",
+    "tex": "(a) $T_{\\rm f}=\\dfrac{5T_{\\rm A}+7T_{\\rm B}}{12}$　(b) $S=\\dfrac{mg\\left(a^{2/7}-a^{2/5}\\right)}{6\\left(a^{2/5}+a^{2/7}\\right)}$（$0<a<1$ より $a^{2/7}>a^{2/5}$ なので $S>0$）"
+   },
+   {
+    "id": "4",
+    "tex": "(a) $k=\\dfrac13$　(b) $\\Delta h=\\dfrac{3RT_0}{Mg}\\log\\dfrac{5a^{2/5}+7a^{2/7}}{6\\left(a^{2/5}+a^{2/7}\\right)}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{浮力の表し方（全体の鍵）}　高さ $h$ での大気圧を $p$ とすると，大気の密度は $\\rho=\\dfrac{pM}{RT_0}$．袋内の気体の圧力も $p$ なので，袋の体積の和は $V=\\dfrac{nR(T_{\\rm A}+T_{\\rm B})}{p}$．よって浮力は\n\\[ \\rho gV=\\frac{pM}{RT_0}\\,g\\cdot\\frac{nR(T_{\\rm A}+T_{\\rm B})}{p}=\\frac{nMg\\,(T_{\\rm A}+T_{\\rm B})}{T_0} \\]\nとなり，圧力（高さ）によらず，袋の中の温度の和 $T_{\\rm A}+T_{\\rm B}$ だけで決まる．気球が静止する条件は $\\dfrac{nMg(T_{\\rm A}+T_{\\rm B})}{T_0}=mg$，すなわち\n\\[ T_{\\rm A}+T_{\\rm B}=\\frac{mT_0}{nM}\\quad\\cdots(*) \\]\nで，これはどの高さでも同じである．\n\n\\textbf{(1)}　$T_{\\rm A}=T_{\\rm B}=T_1$ を $(*)$ に入れて $T_1=\\boldsymbol{\\dfrac{mT_0}{2nM}}$（$m>2nM$ より $T_1>T_0$）．地上では圧力 $p_0$ 一定のまま加熱するので，熱量は定圧モル比熱で\n\\[ Q_1=n\\cdot\\frac52R(T_1-T_0)+n\\cdot\\frac72R(T_1-T_0)=6nR(T_1-T_0)=\\boldsymbol{\\frac{3RT_0(m-2nM)}{M}}. \\]\n\n\\textbf{(2)}　各気体は断熱的なので $pV^\\gamma=$ 一定と $pV=nRT$ から $Tp^{(1-\\gamma)/\\gamma}=$ 一定．A は $\\gamma=\\frac53$ で $\\frac{\\gamma-1}{\\gamma}=\\frac25$，B は $\\gamma=\\frac75$ で $\\frac{\\gamma-1}{\\gamma}=\\frac27$ なので\n\\[ T_{\\rm A}=\\boldsymbol{a^{2/5}T_2},\\qquad T_{\\rm B}=\\boldsymbol{a^{2/7}T_2}. \\]\nこれを $(*)$ に入れて $T_2\\left(a^{2/5}+a^{2/7}\\right)=\\dfrac{mT_0}{nM}$ より $T_2=\\boldsymbol{\\dfrac{mT_0}{nM\\left(a^{2/5}+a^{2/7}\\right)}}$．なお $0<a<1$ では $a^{2/7}>a^{2/5}$ なので $T_{\\rm B}>T_{\\rm A}$（比熱比の小さい B の方が冷えにくい）．\n\n\\textbf{(3)(a)}　ロープで高さが固定されるので圧力は $ap_0$ のまま．各気体は定圧で熱をやりとりするので，A が受け取る熱は $\\frac52nR(T_{\\rm f}-T_{\\rm A})$，B が受け取る熱は $\\frac72nR(T_{\\rm f}-T_{\\rm B})$．外部と熱のやりとりはないので和が $0$：\n\\[ \\frac52(T_{\\rm f}-T_{\\rm A})+\\frac72(T_{\\rm f}-T_{\\rm B})=0\\quad\\therefore\\ T_{\\rm f}=\\boldsymbol{\\frac{5T_{\\rm A}+7T_{\\rm B}}{12}}. \\]\n保存されるのは $T_{\\rm A}+T_{\\rm B}$ ではなく「定圧モル比熱で重みをつけた和」であることに注意する（体積の変化に伴う大気への仕事があるので，内部エネルギーの和も保存しない）．\n\n\\textbf{(3)(b)}　温度の和は\n\\[ 2T_{\\rm f}-(T_{\\rm A}+T_{\\rm B})=\\frac{5T_{\\rm A}+7T_{\\rm B}-6T_{\\rm A}-6T_{\\rm B}}{6}=\\frac{T_{\\rm B}-T_{\\rm A}}{6} \\]\nだけ増える．浮力は温度の和に比例するので，増えた浮力がそのままロープの張力になる：\n\\[ S=\\frac{nMg}{T_0}\\cdot\\frac{T_{\\rm B}-T_{\\rm A}}{6}=\\frac{nMgT_2}{6T_0}\\left(a^{2/7}-a^{2/5}\\right)=\\boldsymbol{\\frac{mg\\left(a^{2/7}-a^{2/5}\\right)}{6\\left(a^{2/5}+a^{2/7}\\right)}}. \\]\n$0<a<1$ で $\\frac27<\\frac25$ より $a^{2/7}>a^{2/5}$ だから $S>0$．外から熱を加えていないのに，比熱の大きい B から小さい A へ熱が移るだけで体積が増え，気球は上に引っ張られる．\n\n\\textbf{(4)(a)}　両気体が同じ温度 $T$ のとき，内部エネルギーは $U=\\left(\\frac32+\\frac52\\right)nRT=4nRT$，体積は $V=\\dfrac{2nRT}{p}$．外部と熱をやりとりしないので $\\Delta U=-p\\Delta V$：\n\\[ 4nR\\,\\Delta T=-p\\,\\Delta\\!\\left(\\frac{2nRT}{p}\\right)=-2nR\\,\\Delta T+2nRT\\frac{\\Delta p}{p}\\quad\\therefore\\ \\frac{\\Delta T}{T}=\\frac13\\frac{\\Delta p}{p}. \\]\nよって $T\\propto p^{1/3}$，$k=\\boldsymbol{\\dfrac13}$．熱的につながった2気体は，比熱比 $\\dfrac{(5/2+7/2)R}{(3/2+5/2)R}=\\dfrac32$ の1つの気体のようにふるまう（$\\frac{\\gamma-1}{\\gamma}=\\frac13$）．\n\n\\textbf{(4)(b)}　静止する条件 $(*)$ は $2T=2T_1$，すなわち $T=T_1$．上昇後の圧力を $p'$ とすると $T_{\\rm f}\\left(\\dfrac{p'}{ap_0}\\right)^{1/3}=T_1$ より $\\dfrac{ap_0}{p'}=\\left(\\dfrac{T_{\\rm f}}{T_1}\\right)^3$．ここで $T_1=\\frac12(T_{\\rm A}+T_{\\rm B})=\\frac12\\left(a^{2/5}+a^{2/7}\\right)T_2$ を用いると\n\\[ \\frac{T_{\\rm f}}{T_1}=\\frac{5a^{2/5}+7a^{2/7}}{6\\left(a^{2/5}+a^{2/7}\\right)}\\ (>1). \\]\n大気圧が $\\exp\\left(-\\frac{Mg\\Delta h}{RT_0}\\right)$ 倍になることから $\\Delta h=\\dfrac{RT_0}{Mg}\\log\\dfrac{ap_0}{p'}$ なので\n\\[ \\Delta h=\\boldsymbol{\\frac{3RT_0}{Mg}\\log\\frac{5a^{2/5}+7a^{2/7}}{6\\left(a^{2/5}+a^{2/7}\\right)}}. \\]\n上昇すると気体が冷えて浮力が減るので，この静止位置は安定である．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "大気圧と等しい圧力に保たれる袋の浮力は，袋の中の気体の $\\sum n_iT_i$ だけで決まり，等温大気では高さにもよらない．定圧のもとでの内部の熱交換で保存されるのは $\\sum n_iC_{p,i}T_i$ なので，比熱の異なる気体の間で熱が移るだけで体積（浮力）が変わる．熱的に結合した2気体は比熱比 $\\sum C_p/\\sum C_V$ の1つの気体として断熱変化する．"
+ },
+ "concepts": [
+  "first-law",
+  "heat-temperature"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "気球",
+  "浮力",
+  "定圧変化",
+  "断熱変化",
+  "熱交換",
+  "比熱比"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

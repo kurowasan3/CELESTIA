@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<rect x="60" y="200" width="400" height="50" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="400.0" y="232.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">ガラス平板（1.70）</text>
+<polygon points="110.0,120.0 110.0,183.7 115.0,184.8 120.0,185.9 125.0,186.9 130.0,187.8 135.0,188.7 140.0,189.6 145.0,190.5 150.0,191.3 155.0,192.1 160.0,192.8 165.0,193.5 170.0,194.2 175.0,194.8 180.0,195.4 185.0,196.0 190.0,196.5 195.0,197.0 200.0,197.4 205.0,197.8 210.0,198.2 215.0,198.6 220.0,198.9 225.0,199.1 230.0,199.4 235.0,199.6 240.0,199.7 245.0,199.8 250.0,199.9 255.0,200.0 260.0,200.0 265.0,200.0 270.0,199.9 275.0,199.8 280.0,199.7 285.0,199.6 290.0,199.4 295.0,199.1 300.0,198.9 305.0,198.6 310.0,198.2 315.0,197.8 320.0,197.4 325.0,197.0 330.0,196.5 335.0,196.0 340.0,195.4 345.0,194.8 350.0,194.2 355.0,193.5 360.0,192.8 365.0,192.1 370.0,191.3 375.0,190.5 380.0,189.6 385.0,188.7 390.0,187.8 395.0,186.9 400.0,185.9 405.0,184.8 410.0,183.7 410.0,120.0" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="260.0" y="142.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">平凸レンズ（1.50）</text>
+<line x1="380.0" y1="193.6" x2="470.0" y2="160.0" stroke="#222" stroke-width="1"/>
+<text x="500.0" y="158.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">液体</text>
+<text x="500.0" y="178.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">n</text>
+<line x1="170.0" y1="30.0" x2="170.0" y2="114.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="260.0" y1="30.0" x2="260.0" y2="114.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="350.0" y1="30.0" x2="350.0" y2="114.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="365.0" y="48.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">λ</text>
+<circle cx="260.0" cy="200.0" r="3" fill="#222"/>
+<text x="256.0" y="220.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">O</text>
+<line x1="370.0" y1="191.3" x2="370.0" y2="260.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="260.0" y1="264.0" x2="370.0" y2="264.0" stroke="#222" stroke-width="1" marker-end="url(#q-ak)" marker-start="url(#q-ak)"/>
+<text x="315.0" y="282.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">r</text>
+<line x1="260.0" y1="200.0" x2="260.0" y2="270.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="150.0" y="290.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">（すき間の厚さは誇張して描いてある）</text>
+</svg>

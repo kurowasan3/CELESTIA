@@ -1,0 +1,135 @@
+{
+ "id": "PHY-OPT-009",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "2つの波長を含む光によるマイケルソン干渉計の縞の消失と波長差の決定",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のマイケルソン干渉計で，光源 S から出た光は半透明鏡 H で2つに分かれ，平面鏡 M$_1$，M$_2$ で反射して再び H で重なり，検出器 D に入る．装置は真空中にある．M$_1$ の位置を，2つの光の経路の長さが等しくなる位置から M$_1$ に垂直な向きに $x$ だけずらす．反射による位相の変化は2つの光で共通である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "波長 $\\lambda$ の単色光だけを用いる．$x$ を 0 からゆっくり増やすとき，D の光の強さは極大・極小を繰り返す．$x$ を $X$ だけ増やす間に強さが極大になる回数を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "光源が，強さの等しい2つの波長 $\\lambda_1$，$\\lambda_2\\ (\\lambda_1<\\lambda_2)$ の光を同時に出している．2つの波長の光は互いに干渉せず，D での強さはそれぞれの波長の光による強さの和になる．$x$ を 0 から増やすと，強さの極大・極小の差（明暗のはっきりさ）が次第に小さくなり，ある位置で明暗がまったくなくなった．そのときの $x$ を $\\lambda_1$，$\\lambda_2$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) で $x$ をさらに増やすと，明暗は再びはっきりし，その後また消える．ある「明暗の消える位置」から次の「明暗の消える位置」まで M$_1$ を $L=0.2894\\ \\mathrm{mm}$ 動かす間に，D の強さは 982 回極大になった．$\\lambda_1$，$\\lambda_2$ をそれぞれ有効数字4桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "2つの波長の光の強さが $9:1$ だった場合，明暗はどの位置でも完全には消えない．(2) で明暗が消えていた位置の付近での，D の強さの最大値と最小値の比を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：2つの波長を含む光によるマイケルソン干渉計の縞の消失と波長差の決定",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：2つの波長を含む光によるマイケルソン干渉計の縞の消失と波長差の決定",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{2X}{\\lambda}$ 回"
+   },
+   {
+    "id": "2",
+    "tex": "$x=\\dfrac{\\lambda_1\\lambda_2}{4(\\lambda_2-\\lambda_1)}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\lambda_1=589.1\\ \\mathrm{nm}$，$\\lambda_2=589.7\\ \\mathrm{nm}$"
+   },
+   {
+    "id": "4",
+    "tex": "$9$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　M$_1$ を $x$ ずらすと，その光は往復で $2x$ だけ長く進むので光路差は $2x$ になる．光路差が $\\lambda$ 増えるごとに1回極大になるから，$x$ を $X$ 増やす間の回数は $\\boldsymbol{\\dfrac{2X}{\\lambda}}$．\n\n\\textbf{(2)}　各波長の光だけによる強さは，波長 $\\lambda_i$ に対して\n\\[ I_i=I_0\\left\\{1+\\cos\\left(2\\pi\\frac{2x}{\\lambda_i}\\right)\\right\\} \\]\nと書ける．2つは干渉しないので強さは和 $I=I_1+I_2$ になる．和積の公式で\n\\[ I=2I_0\\left\\{1+\\cos\\left(2\\pi x\\left(\\frac1{\\lambda_1}+\\frac1{\\lambda_2}\\right)\\right)\\cos\\left(2\\pi x\\left(\\frac1{\\lambda_1}-\\frac1{\\lambda_2}\\right)\\right)\\right\\} \\]\n前の $\\cos$ は $x$ とともに速く変化して細かい明暗をつくり，後ろの $\\cos$ はゆっくり変化して明暗のはっきりさ（振幅）を決める．言いかえると，一方の波長の明暗が極大のところで他方が極小になる（両者の明暗が半周期ずれる）と，強さの和が一定になり明暗が消える．初めて消えるのは\n\\[ 2\\pi x\\left(\\frac1{\\lambda_1}-\\frac1{\\lambda_2}\\right)=\\frac\\pi2\\qquad\\therefore\\ \\boldsymbol{x=\\frac{\\lambda_1\\lambda_2}{4(\\lambda_2-\\lambda_1)}} \\]\n（光路差 $2x$ に含まれる波の数の差が $\\frac12$ になるところ．）\n\n\\textbf{(3)}　明暗が消える位置の間隔 $L$ は，後ろの $\\cos$ の位相が $\\pi$ 進む距離だから\n\\[ 2\\pi L\\left(\\frac1{\\lambda_1}-\\frac1{\\lambda_2}\\right)=\\pi\\qquad\\therefore\\ \\frac1{\\lambda_1}-\\frac1{\\lambda_2}=\\frac{1}{2L} \\]\n細かい明暗は前の $\\cos$ の位相が $2\\pi$ 進むごとに1回極大になるので，その回数 $N$ は\n\\[ N=L\\left(\\frac1{\\lambda_1}+\\frac1{\\lambda_2}\\right)\\qquad\\therefore\\ \\frac1{\\lambda_1}+\\frac1{\\lambda_2}=\\frac NL \\]\n2式から\n\\[ \\lambda_1=\\frac{4L}{2N+1},\\qquad \\lambda_2=\\frac{4L}{2N-1} \\]\n$4L=1.1576\\times10^{-3}\\ \\mathrm{m}$，$2N\\pm1=1965,\\ 1963$ を代入して\n\\[ \\boldsymbol{\\lambda_1\\fallingdotseq589.1\\ \\mathrm{nm}},\\qquad \\boldsymbol{\\lambda_2\\fallingdotseq589.7\\ \\mathrm{nm}} \\]\n波長差は $\\lambda_2-\\lambda_1=\\dfrac{\\lambda_1\\lambda_2}{2L}\\fallingdotseq0.60\\ \\mathrm{nm}$ で，ナトリウムの D 線の2本に相当する．細かい明暗の回数（約 $\\lambda/\\Delta\\lambda$）を数えることで，わずかな波長差が求まる．\n\n\\textbf{(4)}　強さが $9I'$，$I'$ の場合，(2) で明暗が消えていた位置付近では2つの明暗が半周期ずれているので，$\\varphi$ を細かい明暗の位相として\n\\[ I=9I'(1+\\cos\\varphi)+I'(1-\\cos\\varphi)=10I'+8I'\\cos\\varphi \\]\n最大値 $18I'$，最小値 $2I'$ で，比は $\\boldsymbol{9}$（強さの比そのもの）．明暗は弱くなるが消えない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "互いに干渉しない2つの波長の光では，検出される強さは各波長の干渉模様の和になる．鏡の移動で2つの模様の明暗が半周期ずれると強さの和が一定となって明暗が消え，これが周期的に繰り返される．消える位置の間隔は波数の差，その間の極大の回数は波数の和で決まるので，2つを合わせると2つの波長が別々に求まる．強さが等しくないと，明暗が最も弱い位置での最大・最小の比が強さの比そのものになる．"
+ },
+ "concepts": [
+  "light-interference",
+  "beats",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "マイケルソン干渉計",
+  "2波長",
+  "うなり",
+  "干渉縞の消失",
+  "ナトリウムD線"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

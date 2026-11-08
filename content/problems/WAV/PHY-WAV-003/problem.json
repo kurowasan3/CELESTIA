@@ -1,0 +1,122 @@
+{
+ "id": "PHY-WAV-003",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "浮力で張力が変わる弦の共振と腹の数の変化",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，水平な台の左端にある振動源の点 A に，線密度 $\\rho=1.0\\times10^{-3}\\,\\mathrm{kg/m}$ の弦の一端をつなぎ，弦の他端は台の右端の滑車を通して，密度 $\\sigma=2.7\\times10^{3}\\,\\mathrm{kg/m^3}$，底面積 $s=2.0\\times10^{-4}\\,\\mathrm{m^2}$，高さ $h=0.12\\,\\mathrm{m}$ の一様な円柱のおもりをつるした．弦は台上のコマ B で支えられ，B の位置は自由に動かせる．A と B はともに定常波の節となり，AB 間の距離を $a$ とする．振動源の振動数は一定であり，重力加速度の大きさを $g=9.8\\,\\mathrm{m/s^2}$ とする．滑車はなめらかで，AB 間の弦の張力は一様とする．おもりの真下には液体を入れた容器があり，容器をゆっくり持ち上げると，おもりを鉛直に保ったまま液体に沈めることができる（おもりは容器の底に触れない）．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "おもりが空気中にあるとき，$a$ を少しずつ大きくしていくと，$a=0.60\\,\\mathrm{m}$ で弦が共振し，その次に $a=0.75\\,\\mathrm{m}$ で共振した．弦を伝わる波の波長，$a=0.75\\,\\mathrm{m}$ のときの AB 間の腹の数，振動源の振動数を求めよ．振動数は有効数字2桁で答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$a=0.75\\,\\mathrm{m}$ に固定し，密度 $\\rho_{\\mathrm L}$ の液体の入った容器をゆっくり持ち上げて，おもりを上面まで完全に沈めた．沈め始める前の状態を除き，おもりが完全に沈んだ状態までの間に弦がちょうど1回だけ共振するための $\\rho_{\\mathrm L}$ の範囲を求めよ．ただし，完全に沈んだ状態で共振する場合も1回と数える．"
+     },
+     {
+      "id": "3",
+      "tex": "液体が水（密度 $1.0\\times10^{3}\\,\\mathrm{kg/m^3}$）のとき，(2) の過程で弦が共振するのは，おもりの下面が水面下何 cm まで沈んだときか．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) でおもりを完全に水中に沈めた後，コマ B をできるだけ短い距離だけ動かして弦を再び共振させたい．B をどちら向きに何 cm 動かせばよいか．有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：浮力で張力が変わる弦の共振と腹の数の変化",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "波長 $0.30\\,\\mathrm{m}$，腹の数 5 個，振動数 $84\\,\\mathrm{Hz}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\frac{11}{36}\\sigma\\le\\rho_{\\mathrm L}<\\frac{24}{49}\\sigma$，すなわち $8.25\\times10^{2}\\,\\mathrm{kg/m^3}\\le\\rho_{\\mathrm L}<1.32\\times10^{3}\\,\\mathrm{kg/m^3}$"
+   },
+   {
+    "id": "3",
+    "tex": "$9.9\\,\\mathrm{cm}$"
+   },
+   {
+    "id": "4",
+    "tex": "A に近づく向き（左）に $3.6\\,\\mathrm{cm}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 隣り合う共振位置の差は半波長}\n\n振動数 $f$ は振動源で決まり，波の速さ $v=\\sqrt{T/\\rho}$（$T$ は張力）も変わらないので，波長 $\\lambda=v/f$ は一定である．A，B がともに節となる共振は $a$ が $\\frac{\\lambda}{2}$ の整数倍のときに起こるから，隣り合う共振位置の差が半波長である．\n\\[ \\frac{\\lambda}{2}=0.75-0.60=0.15 \\quad\\therefore\\ \\lambda=\\boldsymbol{0.30\\,\\mathrm{m}} \\]\n腹の数は $0.75\\div0.15=\\boldsymbol{5}$ 個（$a=0.60\\,\\mathrm{m}$ では 4 個）．\n\nおもりの質量は $\\sigma s h$ なので張力は $T_0=\\sigma s h g=2.7\\times10^{3}\\times2.0\\times10^{-4}\\times0.12\\times9.8\\fallingdotseq0.635\\,\\mathrm{N}$．\n\\[ v_0=\\sqrt{\\frac{T_0}{\\rho}}\\fallingdotseq25.2\\,\\mathrm{m/s},\\qquad f=\\frac{v_0}{\\lambda}\\fallingdotseq\\boldsymbol{84\\,\\mathrm{Hz}} \\]\n\n\\textbf{(2) 張力が連続的に減るときの共振条件}\n\nおもりの下面が液面下 $x$ まで沈んだとき，おもりはゆっくり動くのでつり合っており，浮力 $\\rho_{\\mathrm L}sxg$ の分だけ張力が減る．\n\\[ T(x)=\\sigma shg-\\rho_{\\mathrm L}sxg=T_0\\left(1-\\frac{\\rho_{\\mathrm L}x}{\\sigma h}\\right) \\]\n$a=0.75\\,\\mathrm{m}$，$f$ は一定のまま，腹が $n$ 個の共振が起こるには $a=n\\cdot\\frac{\\lambda_n}{2}$，$\\lambda_n=\\frac{1}{f}\\sqrt{\\frac{T}{\\rho}}$ が必要である．はじめ（$T=T_0$）は $n=5$ なので，$\\lambda_n\\propto\\sqrt{T}$ より\n\\[ \\frac{\\lambda_n}{\\lambda}=\\frac{5}{n}\\quad\\Longrightarrow\\quad T_n=T_0\\left(\\frac{5}{n}\\right)^2\\quad(n=6,7,\\dots) \\]\n張力は $T_0$ から完全に沈んだときの最小値 $T_{\\min}=T_0\\left(1-\\frac{\\rho_{\\mathrm L}}{\\sigma}\\right)$ まで単調に減るので，沈める途中で起こる共振は $T_n\\ge T_{\\min}$ を満たす $n\\ge6$ の個数だけある．ちょうど1回（$n=6$ のみ）となる条件は $T_6\\ge T_{\\min}>T_7$，すなわち\n\\[ \\frac{25}{36}\\ge1-\\frac{\\rho_{\\mathrm L}}{\\sigma}>\\frac{25}{49}\\quad\\therefore\\ \\boldsymbol{\\frac{11}{36}\\sigma\\le\\rho_{\\mathrm L}<\\frac{24}{49}\\sigma} \\]\n$\\sigma=2.7\\times10^{3}\\,\\mathrm{kg/m^3}$ を代入して $8.25\\times10^{2}\\,\\mathrm{kg/m^3}\\le\\rho_{\\mathrm L}<1.32\\times10^{3}\\,\\mathrm{kg/m^3}$．\n\n\\textbf{(3)} 水 $\\rho_{\\mathrm L}=1.0\\times10^{3}\\,\\mathrm{kg/m^3}$ は (2) の範囲内なので，$n=6$ の共振が1回だけ起こる．$T(x)=T_6$ より\n\\[ 1-\\frac{\\rho_{\\mathrm L}x}{\\sigma h}=\\frac{25}{36}\\quad\\therefore\\ x=\\frac{11\\sigma h}{36\\rho_{\\mathrm L}}=\\frac{11\\times2.7\\times10^{3}\\times0.12}{36\\times1.0\\times10^{3}}=0.099\\,\\mathrm{m}=\\boldsymbol{9.9\\,\\mathrm{cm}} \\]\n$x<h=12\\,\\mathrm{cm}$ なので，確かに完全に沈む前に起こる．\n\n\\textbf{(4) 最も近い共振位置を探す}\n\n完全に沈んだ後の張力は $T_0\\left(1-\\frac{1.0}{2.7}\\right)=\\frac{17}{27}T_0$ なので，波長は\n\\[ \\lambda'=\\lambda\\sqrt{\\frac{17}{27}}\\fallingdotseq0.30\\times0.7935\\fallingdotseq0.238\\,\\mathrm{m},\\qquad\\frac{\\lambda'}{2}\\fallingdotseq0.119\\,\\mathrm{m} \\]\n共振する $a$ は $\\frac{\\lambda'}{2}$ の整数倍で，$0.75\\div0.119\\fallingdotseq6.3$ だから，$0.75\\,\\mathrm{m}$ をはさむのは腹6個の $a=0.714\\,\\mathrm{m}$ と腹7個の $a=0.833\\,\\mathrm{m}$ である．移動距離はそれぞれ $0.036\\,\\mathrm{m}$，$0.083\\,\\mathrm{m}$ なので，B を \\textbf{A に近づく向き（左）}に $\\boldsymbol{3.6\\,\\mathrm{cm}}$ 動かせばよい．\n\n張力が減って波長が短くなったので「腹を増やす向き（右）」に動かしたくなるが，$a$ を小さくして腹6個に戻す方が近い．最も近い共振位置は，半波長の整数倍を実際に並べて確かめる必要がある．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "振動数一定の弦では波長が一定なので，隣り合う共振位置の差が半波長になる．張力（ここでは浮力で連続的に減る）が変わると $\\lambda\\propto\\sqrt{T}$ で波長が変わり，固定した長さに入る腹の数が増える．その回数を張力の変化幅から数え，最も近い共振位置を整数倍の列から選ぶ．"
+ },
+ "concepts": [
+  "wave-basics",
+  "string-resonance",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "弦の共振",
+  "定常波",
+  "浮力",
+  "張力",
+  "波長"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

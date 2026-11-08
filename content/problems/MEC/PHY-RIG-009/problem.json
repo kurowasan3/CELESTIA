@@ -1,0 +1,130 @@
+{
+ "id": "PHY-RIG-009",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "円周上を加速する一輪車（接触力が重心を通る条件と，傾きの向き・すべり出し）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "一輪車と乗り手を，下端に動力つきの車輪が付いた長さ $L$，質量 $m$ の一様な剛体棒でモデル化する（車輪の大きさと質量は無視する）．車輪と水平な路面の間には静止摩擦力だけがはたらき，静止摩擦係数を $\\mu$ とする．重力加速度の大きさを $g$ とし，空気抵抗は無視する．\n\n図のように，この一輪車が，路面上の点 O を中心とする半径 $R$ の円周に沿って車輪の接地点が動くように，静止状態から出発し，接線方向の加速度の大きさ $a$ $(a<\\mu g)$ を一定に保って加速する．$R\\gg L$ であり，棒の傾きによる重心の円軌道の半径の変化は無視してよい．また，棒の傾きの変化はゆっくりで，各瞬間において棒は回転していない（重心のまわりの角運動量の変化は無視できる）ものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒が路面から受ける力（垂直抗力と静止摩擦力の合力）の作用線は，棒の重心を通らなければならない．その理由を述べよ．"
+     },
+     {
+      "id": "2",
+      "tex": "出発してから時間 $t$ がたち，まだすべりが起きていないとき，棒が鉛直となす角を $\\theta$ とする．$\\tan\\theta$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) のとき，棒の上端を路面に真上から投影した点は，接地点から見て，進行方向から中心 O の側へ角 $\\psi$ だけ回った向きにある．$\\tan\\psi$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "車輪がすべり出す時刻 $t_{\\mathrm s}$ を求めよ．また，その瞬間の $\\tan\\theta$ と $\\tan\\psi$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "すべり出すまでに接地点が進む道のり $s$ を求めよ．$a$ を小さくしていくと $s$ はどうなり，すべり出すときの速さはどんな値に近づくか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：円周上を加速する一輪車（接触力が重心を通る条件と，傾きの向き・すべり出し）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "棒は回転しないので重心のまわりの力のモーメントの和が $0$．重力は重心にはたらくので，路面からの力も重心のまわりのモーメントが $0$，すなわち重心を通る．"
+   },
+   {
+    "id": "2",
+    "tex": "$\\tan\\theta=\\dfrac{\\sqrt{a^2+\\left(\\dfrac{a^2t^2}{R}\\right)^2}}{g}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\tan\\psi=\\dfrac{at^2}{R}$"
+   },
+   {
+    "id": "4",
+    "tex": "$t_{\\mathrm s}=\\dfrac{1}{a}\\sqrt{R\\sqrt{\\mu^2g^2-a^2}}$，$\\tan\\theta=\\mu$，$\\tan\\psi=\\dfrac{\\sqrt{\\mu^2g^2-a^2}}{a}$"
+   },
+   {
+    "id": "5",
+    "tex": "$s=\\dfrac{R\\sqrt{\\mu^2g^2-a^2}}{2a}$．$a\\to0$ で $s$ は限りなく大きくなり，すべり出す速さは $\\sqrt{\\mu gR}$ に近づく．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 力が重心を通る理由}　棒は（各瞬間において）回転していないので，重心のまわりの力のモーメントの和は $0$ である．棒にはたらく力は重力と路面からの力だけで，重力は重心にはたらくので重心のまわりのモーメントをもたない．よって路面からの力も重心のまわりのモーメントが $0$，すなわち\\textbf{作用線が重心を通る}．路面からの力は接地点（棒の下端）にはたらくので，この力は「接地点から重心に向かう向き」，つまり\\textbf{棒に沿った向き}を向く．\n\n\\textbf{(2) 傾きの角}　時刻 $t$ の速さは $v=at$．重心の加速度は，接線方向に $a$，中心向きに $\\dfrac{v^2}{R}=\\dfrac{a^2t^2}{R}$，鉛直方向に $0$．路面からの力を $\\vec F$ とすると $m\\vec\\alpha=\\vec F+m\\vec g$ なので\n\\[ \\vec F=\\left(ma\\ (\\text{前向き}),\\ \\frac{ma^2t^2}{R}\\ (\\text{中心向き}),\\ mg\\ (\\text{上向き})\\right) \\]\n$\\vec F$ の向きが棒の向きだから，鉛直となす角は\n\\[ \\tan\\theta=\\frac{\\text{水平成分}}{\\text{鉛直成分}}=\\boldsymbol{\\frac{1}{g}\\sqrt{a^2+\\left(\\frac{a^2t^2}{R}\\right)^2}} \\]\n（棒とともに動く立場で見れば，重力・接線方向の慣性力・遠心力の合力「見かけの重力」の逆向きに棒が沿う，と言っても同じである．）\n\n\\textbf{(3) 傾く向き}　棒の水平方向の傾きは $\\vec F$ の水平成分の向きで，前向き成分 $ma$ と中心向き成分 $\\dfrac{ma^2t^2}{R}$ の比から\n\\[ \\tan\\psi=\\frac{ma^2t^2/R}{ma}=\\boldsymbol{\\frac{at^2}{R}} \\]\n出発直後は前のめり（$\\psi\\fallingdotseq0$），速くなるにつれて傾く向きが中心側へ回っていく．\n\n\\textbf{(4) すべり出し}　垂直抗力は $mg$，静止摩擦力は $\\vec F$ の水平成分で，すべらない条件は $\\sqrt{a^2+\\left(\\dfrac{a^2t^2}{R}\\right)^2}\\le\\mu g$．等号から\n\\[ \\left(\\frac{a^2t_{\\mathrm s}^2}{R}\\right)^2=\\mu^2g^2-a^2\\qquad\\Longrightarrow\\qquad t_{\\mathrm s}=\\boldsymbol{\\frac1a\\sqrt{R\\sqrt{\\mu^2g^2-a^2}}} \\]\nこのとき $\\tan\\theta$ は（摩擦力）/（垂直抗力）$=\\mu g/g$ だから\n\\[ \\tan\\theta=\\boldsymbol{\\mu},\\qquad \\tan\\psi=\\frac{at_{\\mathrm s}^2}{R}=\\boldsymbol{\\frac{\\sqrt{\\mu^2g^2-a^2}}{a}} \\]\nすべり出す瞬間の傾きの角は，加速の仕方によらず摩擦角 $\\tan^{-1}\\mu$ に等しい．棒の向きが路面からの力の向きそのものだからである．\n\n\\textbf{(5) すべり出すまでの道のり}　\n\\[ s=\\frac12at_{\\mathrm s}^2=\\boldsymbol{\\frac{R\\sqrt{\\mu^2g^2-a^2}}{2a}} \\]\n$a\\to0$ では $s\\to\\infty$（\\textbf{限りなく大きくなる}）．すべり出す速さは $v_{\\mathrm s}^2=2as=R\\sqrt{\\mu^2g^2-a^2}\\to\\mu gR$ より $\\boldsymbol{\\sqrt{\\mu gR}}$ に近づく．これは接線方向の加速度がないとき（等速円運動）に，摩擦力がすべて向心力に使われる場合の限界の速さである．接線方向に加速すると摩擦力の一部がそれに使われるので，すべり出す速さは小さくなる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回転しない剛体棒では，下端にはたらく路面からの力が重心を通るので，棒は路面からの力の向き（重心の加速度と重力から決まる）にそろう．接線加速度と向心加速度を合わせた摩擦力の大きさが $\\mu mg$ に達するときすべり出し，その瞬間の傾きの角は加速の仕方によらず摩擦角に等しい．"
+ },
+ "concepts": [
+  "torque",
+  "circular-motion",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "剛体のつり合い",
+  "円運動",
+  "接線加速度",
+  "静止摩擦力",
+  "摩擦角"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

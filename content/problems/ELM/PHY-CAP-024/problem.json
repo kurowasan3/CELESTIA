@@ -1,0 +1,131 @@
+{
+ "id": "PHY-CAP-024",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "等温の気体を封じた可変コンデンサーによる交流ブリッジ圧力計と，測定電圧の静電気力による読みのずれ",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "断面積 $S$ の円筒容器の左端に金属の極板 A が固定され，容器内には極板 A と平行な金属の極板 B がなめらかに動けるように入っている（図）．A と B の間には一定量の理想気体が封じられ，B の右側は圧力 $p$ を測りたい気体につながっている．気体の温度は常に一定に保たれ，A と B の間の気体の誘電率を $\\varepsilon$ とする．A，B は平行板コンデンサーとみなせ，その間隔を $x$ とする．極板 A，B の電荷が $0$ のとき，B の右側の圧力が $p_0$ ならば $x=L_0$ になる．\n\n極板 A，B を図のように抵抗値 $R_1$，$R_2$ の抵抗，電気容量 $C_{\\rm v}$ を調節できる可変コンデンサー，検流計 G，電圧 $E_0\\sin\\omega t$ の交流電源とつないでブリッジをつくる．極板 B は十分に重く，交流の周期は B の動きに比べて十分短いので，B は静電気力の時間平均を受けて静止しているとみなせる．電気量 $\\pm Q$ をもつ平行板コンデンサー（面積 $S$）の極板間にはたらく引力の大きさは $\\dfrac{Q^2}{2\\varepsilon S}$ である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "静電気力が無視できるとき，間隔 $x$ と極板 A，B のコンデンサーの電気容量 $C_x$ を，$p$ を用いて表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "検流計に常に電流が流れないように $C_{\\rm v}$ を調節した．このときの $C_{\\rm v}$ を $R_1$，$R_2$，$C_x$ で表せ．また，静電気力を無視したときの $p$ を $C_{\\rm v}$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の状態で $\\omega R_1C_x=1$ になっていた．極板 A，B 間の電圧の振幅を $E_0$ で表し，極板 B が受ける静電気力の時間平均を $\\varepsilon$，$S$，$E_0$，$x$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) のとき，静電気力を考えに入れた正しい圧力 $p$ を，$x$ と $\\varepsilon$，$E_0$，$p_0$，$L_0$ で表せ．静電気力を無視すると $p$ を大きく見積もるか小さく見積もるか．"
+     },
+     {
+      "id": "5",
+      "tex": "$S=1.00\\times10^{-2}\\ {\\rm m^2}$，$\\varepsilon=8.85\\times10^{-12}\\ {\\rm F/m}$，$p_0=1.00\\times10^{2}\\ {\\rm Pa}$，$L_0=1.00\\ {\\rm mm}$，$R_1=R_2$，$E_0=4.00\\times10^2\\ {\\rm V}$ で，つり合ったときの $C_{\\rm v}$ は $1.77\\times10^{-10}\\ {\\rm F}$ であり，$\\omega R_1C_x=1$ であった．静電気力を無視して求めた圧力と正しい圧力の差，および正しい圧力を有効数字3桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：等温の気体を封じた可変コンデンサーによる交流ブリッジ圧力計と，測定電圧の静電気力による読みのずれ",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$x=\\dfrac{p_0L_0}{p}$，$C_x=\\dfrac{\\varepsilon S}{p_0L_0}\\,p$（$p$ に比例）"
+   },
+   {
+    "id": "2",
+    "tex": "$C_{\\rm v}=\\dfrac{R_1}{R_2}C_x$，$p=\\dfrac{p_0L_0R_2}{\\varepsilon SR_1}C_{\\rm v}$"
+   },
+   {
+    "id": "3",
+    "tex": "振幅 $\\dfrac{E_0}{\\sqrt2}$，力 $\\dfrac{\\varepsilon SE_0^2}{8x^2}$"
+   },
+   {
+    "id": "4",
+    "tex": "$p=\\dfrac{p_0L_0}{x}-\\dfrac{\\varepsilon E_0^2}{8x^2}$，大きく見積もる"
+   },
+   {
+    "id": "5",
+    "tex": "差 $0.708\\ {\\rm Pa}$，正しい圧力 $1.99\\times10^2\\ {\\rm Pa}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 等温の気体ばねと容量}\n\n封入気体は温度一定なので $p_1x=p_0L_0$（$p_1$ は A，B 間の気体の圧力）．静電気力がなければ B のつり合いは $p_1S=pS$ なので\n\\[ \\boldsymbol{x=\\frac{p_0L_0}{p}},\\qquad \\boldsymbol{C_x=\\frac{\\varepsilon S}{x}=\\frac{\\varepsilon S}{p_0L_0}\\,p}. \\]\n電気容量は圧力に比例し，目盛りが一様な圧力計になる．\n\n\\textbf{(2) ブリッジのつり合い}\n\n検流計に電流が流れないとき，$R_1$ と $C_x$ を流れる電流 $I_1$ は等しく，$R_2$ と $C_{\\rm v}$ を流れる電流 $I_2$ も等しい．検流計の両端が常に等電位なので，各瞬間に\n\\[ R_1I_1=R_2I_2,\\qquad \\frac{q_1}{C_x}=\\frac{q_2}{C_{\\rm v}} \\]\n（$q_1$，$q_2$ は各コンデンサーの電気量）．第2式の変化の割合をとると $\\dfrac{I_1}{C_x}=\\dfrac{I_2}{C_{\\rm v}}$．第1式と比べて $\\dfrac{I_1}{I_2}=\\dfrac{R_2}{R_1}=\\dfrac{C_x}{C_{\\rm v}}$，よって\n\\[ \\boldsymbol{C_{\\rm v}=\\frac{R_1}{R_2}C_x}. \\]\nこの条件は $\\omega$ や $E_0$ によらない．(1) と合わせて $\\boldsymbol{p=\\dfrac{p_0L_0R_2}{\\varepsilon SR_1}C_{\\rm v}}$．\n\n\\textbf{(3) 測定電圧による静電気力}\n\n$R_1$ と $C_x$ の直列部分のインピーダンスは $\\sqrt{R_1^2+(1/\\omega C_x)^2}$ なので，$C_x$ の電圧の振幅は\n\\[ V_C=\\frac{E_0/(\\omega C_x)}{\\sqrt{R_1^2+(1/\\omega C_x)^2}}=\\frac{E_0}{\\sqrt{1+(\\omega R_1C_x)^2}}=\\boldsymbol{\\frac{E_0}{\\sqrt2}}. \\]\n電気量は $Q=C_xV$，引力は $\\dfrac{Q^2}{2\\varepsilon S}=\\dfrac{\\varepsilon S}{2x^2}V^2$ で，$V^2$ の時間平均は $\\dfrac{V_C^2}{2}=\\dfrac{E_0^2}{4}$．よって\n\\[ \\overline{F}=\\boldsymbol{\\frac{\\varepsilon SE_0^2}{8x^2}}. \\]\n\n\\textbf{(4) 補正した圧力}\n\nB のつり合いは「封入気体が右へ押す力 $=$ 測る気体が左へ押す力 $+$ 静電気力（左向き）」：\n\\[ \\frac{p_0L_0}{x}S=pS+\\frac{\\varepsilon SE_0^2}{8x^2}\\quad\\Longrightarrow\\quad \\boldsymbol{p=\\frac{p_0L_0}{x}-\\frac{\\varepsilon E_0^2}{8x^2}}. \\]\n静電気力が B を A に引き寄せて $x$ を小さく（$C_x$ を大きく）するので，静電気力を無視した $\\dfrac{p_0L_0}{x}$ は真の圧力より大きい．\\textbf{大きく見積もる}．\n\n\\textbf{(5) 数値}\n\n$R_1=R_2$ より $C_x=C_{\\rm v}=1.77\\times10^{-10}\\ {\\rm F}$，\n\\[ x=\\frac{\\varepsilon S}{C_x}=\\frac{8.85\\times10^{-14}}{1.77\\times10^{-10}}=5.00\\times10^{-4}\\ {\\rm m}. \\]\n静電気力を無視すると $\\dfrac{p_0L_0}{x}=\\dfrac{1.00\\times10^2\\times1.00\\times10^{-3}}{5.00\\times10^{-4}}=2.00\\times10^2\\ {\\rm Pa}$．差は\n\\[ \\frac{\\varepsilon E_0^2}{8x^2}=\\frac{8.85\\times10^{-12}\\times(4.00\\times10^2)^2}{8\\times(5.00\\times10^{-4})^2}=\\boldsymbol{0.708\\ {\\rm Pa}}, \\]\n正しい圧力は $200-0.708=199.29\\fallingdotseq\\boldsymbol{1.99\\times10^2\\ {\\rm Pa}}$（ずれは約 $0.35\\%$）．ずれは $E_0^2$ に比例するので，測定電圧を下げれば小さくできるが，検流計の感度は下がる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "等温の気体を封じた可変コンデンサーは，間隔が圧力に反比例するので電気容量が圧力に比例し，RC ブリッジのつり合い $C_{\\rm v}=\\frac{R_1}{R_2}C_x$（周波数・電圧によらない）で一様目盛りの圧力計になる．一方，測定に使う交流電圧は時間平均 $\\varepsilon SE_0^2/(8x^2)$ の引力を極板に及ぼし，気体ばねのつり合いをずらすので，読みは真の圧力より $\\varepsilon E_0^2/(8x^2)$ だけ大きくなる．"
+ },
+ "concepts": [
+  "capacitor",
+  "equilibrium",
+  "first-law"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "平行板コンデンサー",
+  "交流ブリッジ",
+  "等温変化",
+  "静電気力",
+  "測定の補正",
+  "電圧の2乗平均"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

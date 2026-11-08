@@ -1,0 +1,144 @@
+{
+ "id": "PHY-RIG-005",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "材質の異なる2つの支点を近づけるときの交互の滑りと重心の決定",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $L$，質量 $M$ の細くまっすぐな棒があり，その重心 G の位置は外から見てもわからない．図のように棒を水平にして2つの支点 a，b の上に載せる．支点 a の表面はゴム，b の表面は金属でできていて，棒との静止摩擦係数・動摩擦係数は，a では $\\mu_{\\mathrm a}$，$\\mu_{\\mathrm a}'$，b では $\\mu_{\\mathrm b}$，$\\mu_{\\mathrm b}'$ である（$\\mu_{\\mathrm a}'<\\mu_{\\mathrm a}$，$\\mu_{\\mathrm b}'<\\mu_{\\mathrm b}$）．支点の位置は，棒の端 A から棒に沿って測った長さで表し，a の位置を $p$，b の位置を $q$，G の位置を $l$ とする．はじめ a は端 A（$p=0$），b は端 B（$q=L$）にある．2つの支点を同じ高さに保ったまま，十分ゆっくりと互いに近づけていく．棒の加速度は常に無視でき，棒の太さも無視する．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒が支点 a，b から受ける垂直抗力の大きさ $N_{\\mathrm a}$，$N_{\\mathrm b}$ を $p,q,l,M,g$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "近づけ始めると，棒は一方の支点とは一緒に動き，他方の支点の上を滑った．先に b の上で滑りが起こるための条件を求めよ．また，G が B の側に寄っている（$l>\\frac{L}{2}$）にもかかわらず，先に b の上で滑りが起こることはあり得るか．理由とともに答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の条件が満たされているとする．b の上の滑りが止まるときの $q$ の値 $q_1$ を，$l$ と摩擦係数を用いて表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "続いて a の上で滑りが起こって $p=p_2$ で止まり，再び b の上で滑りが起こって $q=q_3$ で止まった．$l$，$\\dfrac{\\mu_{\\mathrm b}'}{\\mu_{\\mathrm a}}$，$\\dfrac{\\mu_{\\mathrm a}'}{\\mu_{\\mathrm b}}$ をそれぞれ $q_1,p_2,q_3$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "実際の測定値は $q_1=0.60L$，$p_2=0.30L$，$q_3=0.45L$ であった．$l$ を求めよ．また，次に a の上の滑りが止まる位置 $p_4$ を予測し，支点を近づけ続けると最終的にどうなるかを答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：材質の異なる2つの支点を近づけるときの交互の滑りと重心の決定",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：材質の異なる2つの支点を近づけるときの交互の滑りと重心の決定",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$N_{\\mathrm a}=\\dfrac{q-l}{q-p}Mg$，$N_{\\mathrm b}=\\dfrac{l-p}{q-p}Mg$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\mu_{\\mathrm b}\\,l<\\mu_{\\mathrm a}(L-l)$．あり得る（$\\dfrac{\\mu_{\\mathrm b}}{\\mu_{\\mathrm a}}<\\dfrac{L-l}{l}<1$ のとき）"
+   },
+   {
+    "id": "3",
+    "tex": "$q_1=\\left(1+\\dfrac{\\mu_{\\mathrm b}'}{\\mu_{\\mathrm a}}\\right)l$"
+   },
+   {
+    "id": "4",
+    "tex": "$l=\\dfrac{q_1p_2}{q_1+p_2-q_3}$，$\\dfrac{\\mu_{\\mathrm b}'}{\\mu_{\\mathrm a}}=\\dfrac{q_1-q_3}{p_2}$，$\\dfrac{\\mu_{\\mathrm a}'}{\\mu_{\\mathrm b}}=\\dfrac{p_2(q_3-p_2)}{q_1(q_1-q_3)}$"
+   },
+   {
+    "id": "5",
+    "tex": "$l=0.40L$，$p_4=0.375L$．滑りが交互に起こりながら2つの支点は G の真下に近づき，最終的に G の真下で合わさる"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 垂直抗力の配分}　棒の加速度は無視できるので，力と力のモーメントはつり合う．支点 b のまわりのモーメントのつり合い $N_{\\mathrm a}(q-p)=Mg(q-l)$ と，鉛直方向のつり合いから\n\\[ \\boldsymbol{N_{\\mathrm a}=\\frac{q-l}{q-p}Mg,\\qquad N_{\\mathrm b}=\\frac{l-p}{q-p}Mg} \\]\nG に近い支点ほど大きな垂直抗力を受ける．摩擦力は水平なので，このモーメントのつり合いには影響しない．\n\n\\textbf{(2) どちらが先に滑るか}　支点どうしが近づくので，棒が両方の支点と一緒に動くことはできず，どちらかの上で必ず滑る．水平方向のつり合いから，2つの支点から棒が受ける摩擦力は大きさが等しく逆向きである．支点を近づけるにつれて必要な摩擦力は増え，先に最大摩擦力に達した側で滑りが始まる．最初（$p=0$，$q=L$）の最大摩擦力は\n\\[ \\mu_{\\mathrm a}N_{\\mathrm a}=\\mu_{\\mathrm a}\\frac{L-l}{L}Mg,\\qquad \\mu_{\\mathrm b}N_{\\mathrm b}=\\mu_{\\mathrm b}\\frac{l}{L}Mg \\]\nなので，b の上で先に滑る条件は $\\boldsymbol{\\mu_{\\mathrm b}\\,l<\\mu_{\\mathrm a}(L-l)}$．\n\n「G から遠い支点（垂直抗力の小さい方）が先に滑る」のは，両方の支点の材質が同じときだけである．$l>\\frac{L}{2}$ で b が G に近くても，$\\dfrac{\\mu_{\\mathrm b}}{\\mu_{\\mathrm a}}<\\dfrac{L-l}{l}\\,(<1)$ であれば b の上で先に滑る．よって\\textbf{あり得る}．\n\n\\textbf{(3) 滑りが止まる位置}　b の上で滑っている間，棒は a と一緒に動くので $p=0$ のまま．b での摩擦力は動摩擦力 $\\mu_{\\mathrm b}'N_{\\mathrm b}$ で，これと等しい大きさの静止摩擦力が a ではたらく．$q$ が減ると $N_{\\mathrm b}$ は増え $N_{\\mathrm a}$ は減るので，やがて a での静止摩擦力が最大値に達する：\n\\[ \\mu_{\\mathrm b}'N_{\\mathrm b}=\\mu_{\\mathrm a}N_{\\mathrm a}\\quad\\Longleftrightarrow\\quad \\mu_{\\mathrm b}'(l-0)=\\mu_{\\mathrm a}(q_1-l) \\]\nこの瞬間から a の上で滑りが始まり，b では必要な摩擦力 $\\mu_{\\mathrm a}N_{\\mathrm a}=\\mu_{\\mathrm b}'N_{\\mathrm b}$ が最大摩擦力 $\\mu_{\\mathrm b}N_{\\mathrm b}$ より小さいので，b は棒と一緒に動く（滑りが止まる）．よって\n\\[ q_1=\\boldsymbol{\\left(1+\\frac{\\mu_{\\mathrm b}'}{\\mu_{\\mathrm a}}\\right)l} \\]\n\n\\textbf{(4) 測定値からの決定}　G からの距離で表すと，滑りが切り替わるたびに次の関係が成り立つ（(3) と同様）．\n\\[ q_1-l=r_{\\mathrm b}\\,l,\\qquad l-p_2=r_{\\mathrm a}(q_1-l),\\qquad q_3-l=r_{\\mathrm b}(l-p_2) \\]\nここで $r_{\\mathrm b}=\\dfrac{\\mu_{\\mathrm b}'}{\\mu_{\\mathrm a}}$（b が滑る間の「滑っている側の動摩擦÷止まっている側の静止摩擦」），$r_{\\mathrm a}=\\dfrac{\\mu_{\\mathrm a}'}{\\mu_{\\mathrm b}}$．1式目と3式目の比から $r_{\\mathrm b}$ を消去すると $(q_1-l)(l-p_2)=l(q_3-l)$，整理して $l(q_1+p_2-q_3)=q_1p_2$：\n\\[ l=\\boldsymbol{\\frac{q_1p_2}{q_1+p_2-q_3}} \\]\nこれを戻して $q_1-l=\\dfrac{q_1(q_1-q_3)}{q_1+p_2-q_3}$，$l-p_2=\\dfrac{p_2(q_3-p_2)}{q_1+p_2-q_3}$ より\n\\[ \\frac{\\mu_{\\mathrm b}'}{\\mu_{\\mathrm a}}=\\frac{q_1-l}{l}=\\boldsymbol{\\frac{q_1-q_3}{p_2}},\\qquad \\frac{\\mu_{\\mathrm a}'}{\\mu_{\\mathrm b}}=\\frac{l-p_2}{q_1-l}=\\boldsymbol{\\frac{p_2(q_3-p_2)}{q_1(q_1-q_3)}} \\]\n未知数は $l$，$r_{\\mathrm a}$，$r_{\\mathrm b}$ の3つなので，止まる位置が3つあれば決まる．\n\n\\textbf{(5) 数値}　$l=\\dfrac{0.60\\times0.30}{0.60+0.30-0.45}L=\\boldsymbol{0.40L}$，$r_{\\mathrm b}=\\dfrac{0.15}{0.30}=0.5$，$r_{\\mathrm a}=\\dfrac{0.30\\times0.15}{0.60\\times0.15}=0.5$．次の a の滑りは $l-p_4=r_{\\mathrm a}(q_3-l)=0.5\\times0.05L$ で止まるので $p_4=\\boldsymbol{0.375L}$．\n\nG から支点までの距離は，滑りが1往復するごとに $r_{\\mathrm a}r_{\\mathrm b}=\\dfrac{\\mu_{\\mathrm a}'\\mu_{\\mathrm b}'}{\\mu_{\\mathrm a}\\mu_{\\mathrm b}}\\ (<1)$ 倍（ここでは $\\frac14$ 倍）になる（解答図）．この比は材質によらず1より小さいので，滑りが交互に繰り返されながら\\textbf{2つの支点は G の真下に集まり，棒は G の真下で支えられて終わる}．材質が違っても最終位置は G で，材質の違いは途中の止まり方（どちらが先に滑るか，どこで止まるか）にしか現れない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "水平な棒を2点で支えるとき垂直抗力は重心からの距離の逆比に配分され，支点を近づけると「最大摩擦力の小さい側」が滑る．滑りは動摩擦力が反対側の最大静止摩擦力に追いつく位置で止まって交互に切り替わり，止まる位置の列から重心と摩擦係数の比が逆算できる．材質が異なると重心に近い支点が先に滑ることもあるが，最終的には必ず重心の真下に集まる．"
+ },
+ "concepts": [
+  "torque",
+  "momentum-conservation",
+  "static-friction"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "摩擦力",
+  "力のモーメント",
+  "重心",
+  "静止摩擦と動摩擦",
+  "交互の滑り",
+  "逆問題"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

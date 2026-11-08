@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330">
+<defs><marker id="a-ak" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0,1 L9,5 L0,9 z" fill="#222"/></marker><marker id="a-ab" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0,1 L9,5 L0,9 z" fill="#1f5fbf"/></marker><marker id="a-ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0,1 L9,5 L0,9 z" fill="#c0392b"/></marker></defs>
+<rect x="55.0" y="101.3" width="225.0" height="132.0" stroke="none" stroke-width="0" fill="#888" fill-opacity="0.18"/>
+<line x1="55.0" y1="270.0" x2="290.0" y2="270.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<line x1="55.0" y1="270.0" x2="55.0" y2="40.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<line x1="55.0" y1="233.3" x2="280.0" y2="233.3" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="51.0" y="238.3" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="end">400</text>
+<line x1="55.0" y1="101.3" x2="280.0" y2="101.3" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="51.0" y="106.3" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="end">760</text>
+<line x1="111.2" y1="270.0" x2="111.2" y2="274.0" stroke="#222" stroke-width="1"/>
+<text x="111.2" y="287.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="middle">100</text>
+<line x1="167.5" y1="270.0" x2="167.5" y2="274.0" stroke="#222" stroke-width="1"/>
+<text x="167.5" y="287.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="middle">200</text>
+<line x1="223.8" y1="270.0" x2="223.8" y2="274.0" stroke="#222" stroke-width="1"/>
+<text x="223.8" y="287.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="middle">300</text>
+<line x1="280.0" y1="270.0" x2="280.0" y2="274.0" stroke="#222" stroke-width="1"/>
+<text x="280.0" y="287.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="middle">400</text>
+<text x="282.0" y="302.0" font-size="13" fill="#222" text-anchor="end"><tspan font-family="Times New Roman, serif" font-style="italic">d</tspan><tspan font-family="Noto Sans CJK JP, sans-serif"> [nm]</tspan></text>
+<text x="59.0" y="36.0" font-size="13" fill="#222" text-anchor="start"><tspan font-family="Times New Roman, serif" font-style="italic">λ</tspan><tspan font-family="Noto Sans CJK JP, sans-serif"> [nm]</tspan></text>
+<line x1="107.7" y1="270.0" x2="213.2" y2="50.0" stroke="#1f5fbf" stroke-width="1.6"/>
+<text x="216.2" y="47.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#1f5fbf" text-anchor="start">m=1</text>
+<line x1="160.5" y1="270.0" x2="280.0" y2="145.3" stroke="#1f5fbf" stroke-width="1.6"/>
+<text x="283.0" y="142.3" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#1f5fbf" text-anchor="start">m=2</text>
+<line x1="213.2" y1="270.0" x2="280.0" y2="223.6" stroke="#1f5fbf" stroke-width="1.6"/>
+<text x="283.0" y="220.6" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#1f5fbf" text-anchor="start">m=3</text>
+<line x1="265.9" y1="270.0" x2="280.0" y2="262.7" stroke="#1f5fbf" stroke-width="1.6"/>
+<line x1="55.0" y1="268.0" x2="125.3" y2="268.0" stroke="#c0392b" stroke-width="4"/>
+<line x1="188.6" y1="268.0" x2="195.6" y2="268.0" stroke="#c0392b" stroke-width="4"/>
+<text x="167.5" y="24.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">液体（両方で π ずれる）</text>
+<rect x="365.0" y="101.3" width="225.0" height="132.0" stroke="none" stroke-width="0" fill="#888" fill-opacity="0.18"/>
+<line x1="365.0" y1="270.0" x2="600.0" y2="270.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<line x1="365.0" y1="270.0" x2="365.0" y2="40.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<line x1="365.0" y1="233.3" x2="590.0" y2="233.3" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="361.0" y="238.3" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="end">400</text>
+<line x1="365.0" y1="101.3" x2="590.0" y2="101.3" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="361.0" y="106.3" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="end">760</text>
+<line x1="421.2" y1="270.0" x2="421.2" y2="274.0" stroke="#222" stroke-width="1"/>
+<text x="421.2" y="287.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="middle">100</text>
+<line x1="477.5" y1="270.0" x2="477.5" y2="274.0" stroke="#222" stroke-width="1"/>
+<text x="477.5" y="287.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="middle">200</text>
+<line x1="533.8" y1="270.0" x2="533.8" y2="274.0" stroke="#222" stroke-width="1"/>
+<text x="533.8" y="287.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="middle">300</text>
+<line x1="590.0" y1="270.0" x2="590.0" y2="274.0" stroke="#222" stroke-width="1"/>
+<text x="590.0" y="287.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#222" text-anchor="middle">400</text>
+<text x="592.0" y="302.0" font-size="13" fill="#222" text-anchor="end"><tspan font-family="Times New Roman, serif" font-style="italic">d</tspan><tspan font-family="Noto Sans CJK JP, sans-serif"> [nm]</tspan></text>
+<text x="369.0" y="36.0" font-size="13" fill="#222" text-anchor="start"><tspan font-family="Times New Roman, serif" font-style="italic">λ</tspan><tspan font-family="Noto Sans CJK JP, sans-serif"> [nm]</tspan></text>
+<line x1="407.2" y1="270.0" x2="491.6" y2="50.0" stroke="#1f5fbf" stroke-width="1.6"/>
+<text x="494.6" y="47.0" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#1f5fbf" text-anchor="start">m=0</text>
+<line x1="491.6" y1="270.0" x2="590.0" y2="184.4" stroke="#1f5fbf" stroke-width="1.6"/>
+<text x="593.0" y="181.4" font-family="Noto Sans CJK JP, sans-serif" font-size="11" fill="#1f5fbf" text-anchor="start">m=1</text>
+<line x1="575.9" y1="270.0" x2="590.0" y2="262.7" stroke="#1f5fbf" stroke-width="1.6"/>
+<line x1="365.0" y1="268.0" x2="421.2" y2="268.0" stroke="#c0392b" stroke-width="4"/>
+<line x1="471.9" y1="268.0" x2="533.8" y2="268.0" stroke="#c0392b" stroke-width="4"/>
+<text x="477.5" y="24.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="middle">空気（一方だけ π ずれる）</text>
+<text x="320.0" y="322.0" font-size="12" fill="#222" text-anchor="middle"><tspan font-family="Noto Sans CJK JP, sans-serif">灰色：可視光の範囲　赤：強め合う可視光がない </tspan><tspan font-family="Times New Roman, serif" font-style="italic">d</tspan><tspan font-family="Noto Sans CJK JP, sans-serif"> の範囲</tspan></text>
+</svg>

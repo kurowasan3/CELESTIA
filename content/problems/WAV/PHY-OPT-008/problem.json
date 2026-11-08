@@ -1,0 +1,121 @@
+{
+ "id": "PHY-OPT-008",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "回転台上の反射型回折格子でレーザー光が光源に戻る角度と回折光の本数",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "表面に間隔 $d$ で平行な溝が刻まれた反射型回折格子が，溝に平行な軸のまわりに回転できる台の上にある．波長 $\\lambda$ のレーザー光を，溝に垂直な面内で格子面の法線と角 $\\alpha$ をなす向きから当てる．図のように，回折光の向きを格子面の法線からの角 $\\beta$ で表し，入射光のある側を正とする（正反射光は $\\beta=-\\alpha$）．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "隣り合う溝で反射した光の経路差を考え，回折光が強め合う向き $\\beta$ の条件を $d$，$\\alpha$，$\\lambda$，整数 $m$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$d=1.60\\ \\mu\\mathrm{m}$，$\\lambda=650\\ \\mathrm{nm}$ とする．$\\alpha$ を $0^\\circ$ から $90^\\circ$ まで増やしていくとき，$\\alpha=0^\\circ$ 以外で回折光がちょうどレーザーに向かって戻る角度はいくつあるか．また，そのうち最も大きい $\\alpha$ について $\\sin\\alpha$ の値を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の格子で $\\alpha=30^\\circ$ のとき，観測される回折光（正反射光を含む）は何本か．また，入射光のある側（$\\beta>0$）で法線から最も大きく傾いた回折光の $\\sin\\beta$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "溝の間隔 $d'$ の分からない別の格子に (2) と同じレーザー光を当て，$\\alpha$ を $0^\\circ$ から $90^\\circ$ まで増やすと，$\\alpha=0^\\circ$ 以外で光がレーザーに戻る角度はちょうど3つあり，そのうち1つは $\\sin\\alpha=0.60$ であった．$d'$ を有効数字3桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：回転台上の反射型回折格子でレーザー光が光源に戻る角度と回折光の本数",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$d(\\sin\\alpha+\\sin\\beta)=m\\lambda$"
+   },
+   {
+    "id": "2",
+    "tex": "4つ，$\\sin\\alpha=0.8125$"
+   },
+   {
+    "id": "3",
+    "tex": "5本，$\\sin\\beta\\fallingdotseq0.719$"
+   },
+   {
+    "id": "4",
+    "tex": "$d'=1.08\\ \\mu\\mathrm{m}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　隣り合う溝で反射する2本の光線を考える．入射側では一方が他方より $d\\sin\\alpha$ だけ長く進み，反射後に $\\beta$ の向き（入射側を正）へ進むとき，同じ光が今度は $d\\sin\\beta$ だけ長く進む（$\\beta=-\\alpha$ の正反射では両者が打ち消して経路差 0 になることで符号を確かめられる）．経路差 $d(\\sin\\alpha+\\sin\\beta)$ が波長の整数倍のとき強め合うので\n\\[ \\boldsymbol{d(\\sin\\alpha+\\sin\\beta)=m\\lambda}\\qquad(m=0,\\pm1,\\pm2,\\ldots) \\]\n\n\\textbf{(2)}　光がレーザーに戻るのは $\\beta=\\alpha$ のときで\n\\[ 2d\\sin\\alpha=m\\lambda\\qquad\\therefore\\ \\sin\\alpha=\\frac{m\\lambda}{2d} \\]\n$0<\\sin\\alpha<1$ となる正の整数 $m$ の個数を数える．$\\dfrac{\\lambda}{2d}=\\dfrac{0.650}{3.20}=0.203125$ より，$m=1,2,3,4$（$\\sin\\alpha=0.203,\\ 0.406,\\ 0.609,\\ 0.8125$）の \\textbf{4つ}．最も大きい角は $m=4$ で $\\boldsymbol{\\sin\\alpha=0.8125}$（$\\alpha\\fallingdotseq54^\\circ$）．\n\n\\textbf{(3)}　$\\sin\\alpha=0.5$，$\\dfrac\\lambda d=0.40625$ を (1) に代入すると\n\\[ \\sin\\beta=0.40625\\,m-0.5 \\]\n$-1<\\sin\\beta<1$ となるのは $-1.23<m<3.69$，すなわち $m=-1,0,1,2,3$ で \\textbf{5本}．$\\sin\\beta$ はそれぞれ $-0.906,\\ -0.5,\\ -0.094,\\ 0.313,\\ 0.719$ で，入射側で最も傾いたものは $m=3$ の $\\boldsymbol{\\sin\\beta\\fallingdotseq0.719}$．入射が斜めなので，回折光は法線に関して非対称に並ぶ．\n\n\\textbf{(4)}　戻る条件は $\\sin\\alpha=\\dfrac{m\\lambda}{2d'}$．戻る角度がちょうど3つあるのは，$\\dfrac{m\\lambda}{2d'}<1$ を満たす正の整数 $m$ が $1,2,3$ だけのときで\n\\[ 3<\\frac{2d'}{\\lambda}\\leqq4 \\]\n（$2d'/\\lambda=4$ なら $m=4$ は $\\alpha=90^\\circ$ ですれすれになり，戻る光として観測されない．）一方，$\\sin\\alpha=0.60$ がそのうちの1つ（次数 $m_0$）なので\n\\[ \\frac{2d'}{\\lambda}=\\frac{m_0}{0.60} \\]\n$m_0=1,2,3$ に対して $\\dfrac{2d'}{\\lambda}=1.67,\\ 3.33,\\ 5.00$ で，条件を満たすのは $m_0=2$ だけである．よって\n\\[ d'=\\frac{3.33\\cdots\\times650}{2}\\ \\mathrm{nm}=\\frac53\\times650\\ \\mathrm{nm}\\fallingdotseq\\boldsymbol{1.08\\ \\mu\\mathrm{m}} \\]\n（他の2つは $\\sin\\alpha=0.30,\\ 0.90$ である．）\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "反射型回折格子に斜めに入射させると，経路差は入射側と回折側の和 $d(\\sin\\alpha+\\sin\\beta)$ になり，回折光は法線に関して非対称に並ぶ．回折光が光源に戻る（$\\beta=\\alpha$）条件 $2d\\sin\\alpha=m\\lambda$ では，戻る角度の個数が $2d/\\lambda$ の整数部分で決まるので，「戻る角度の個数」と「そのうち1つの角度」から次数と格子間隔を逆算できる．"
+ },
+ "concepts": [
+  "light-interference",
+  "torque"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "回折格子",
+  "反射型回折格子",
+  "斜め入射",
+  "次数",
+  "リトロー配置"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

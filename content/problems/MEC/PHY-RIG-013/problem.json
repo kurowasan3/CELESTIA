@@ -1,0 +1,122 @@
+{
+ "id": "PHY-RIG-013",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "4本の同じばねで支えた剛体板の1本だけを持ち上げたときの力の配分（ねじれの変形とばねが床を離れた後）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，一辺の長さ $2a$，質量 $M$ の一様な正方形の板ABCDを，四隅の真下に置いたばね定数 $k$ の同じ4本の軽いばねで水平な床の上に支える．ばねの上端は板に固定されているが，下端は床に置いてあるだけである．板は曲がらず，ばねはつねに鉛直を保ち，板の傾きは十分小さいとする．重力加速度の大きさを $g$ とし，板の各隅の「上昇量」は，はじめに板が水平に静止していた状態からの鉛直方向の変位とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "Aのばねの下端と床の間にだけ厚さ $h$ の薄い板をはさむ．4本のばねが板を押す力の大きさ $F_{\\rm A}$，$F_{\\rm B}$，$F_{\\rm C}$，$F_{\\rm D}$ と，板の四隅の上昇量を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "かわりに，AとBの2本のばねの下にそれぞれ厚さ $h$ の板をはさんだ場合について，(1)と同じものを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(1)の状態で，さらに辺ABの中点Eに重さ $W$ の物体をのせる．$h$ を $0$ から少しずつ大きくしていくと，ある $h$ でいずれかのばねの下端が床から離れ始める．どのばねか．また，そのときの $h$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3)の状況で $h=\\dfrac{2Mg}{k}$ としたとき，床に接しているばねが板を押す力をすべて求めよ．また，床から離れたばねの下端の床からの高さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：4本の同じばねで支えた剛体板の1本だけを持ち上げたときの力の配分（ねじれの変形とばねが床を離れた後）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F_{\\rm A}=F_{\\rm C}=\\dfrac{Mg+kh}{4}$，$F_{\\rm B}=F_{\\rm D}=\\dfrac{Mg-kh}{4}$；上昇量 A：$\\dfrac{3h}{4}$，B：$\\dfrac h4$，C：$-\\dfrac h4$（下がる），D：$\\dfrac h4$"
+   },
+   {
+    "id": "2",
+    "tex": "4本とも $\\dfrac{Mg}{4}$（変わらない）；上昇量 A，B：$h$，C，D：$0$"
+   },
+   {
+    "id": "3",
+    "tex": "D，$h=\\dfrac{Mg}{k}$（$W$ によらない）"
+   },
+   {
+    "id": "4",
+    "tex": "$F_{\\rm A}=\\dfrac{Mg+W}{2}$，$F_{\\rm B}=\\dfrac W2$，$F_{\\rm C}=\\dfrac{Mg}{2}$；Dの下端の高さ $\\dfrac{Mg}{k}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "板の中心Gを原点とし，A$(a,a)$，B$(-a,a)$，C$(-a,-a)$，D$(a,-a)$ となるように水平な $x$，$y$ 軸をとる．\n\n\\textbf{つり合いの式と「平面」の条件}\n\n板にはたらく力は重力とばねの4つの力（上向き）．つり合いの条件は「力の和」と「$x$ 軸・$y$ 軸のまわりのモーメント」の3つしかなく，未知の力は4つあるので，つり合いだけでは決まらない（不静定）．そこで変形の条件を加える．板は曲がらないので四隅の上昇量 $z_{\\rm A},\\dots,z_{\\rm D}$ は1つの平面上にあり，正方形の対角線の中点が一致することから\n\\[ z_{\\rm A}+z_{\\rm C}=z_{\\rm B}+z_{\\rm D}\\qquad\\cdots(\\ast) \\]\nばねの力の増加は「縮みの増加 $\\times k$」で，隅 $i$ の下にはさむ厚さを $w_i$ とすると $\\Delta F_i=k(w_i-z_i)$ である．\n\n\\textbf{(1) Aだけを持ち上げる}\n\n力の増加分 $\\Delta F_i$ の和は $0$，$x$ 軸まわり・$y$ 軸まわりのモーメントも $0$ だから\n\\[ \\Delta F_{\\rm A}+\\Delta F_{\\rm B}+\\Delta F_{\\rm C}+\\Delta F_{\\rm D}=0,\\quad \\Delta F_{\\rm A}+\\Delta F_{\\rm B}=\\Delta F_{\\rm C}+\\Delta F_{\\rm D},\\quad \\Delta F_{\\rm A}+\\Delta F_{\\rm D}=\\Delta F_{\\rm B}+\\Delta F_{\\rm C} \\]\nこれより $\\Delta F_{\\rm A}=\\Delta F_{\\rm C}=f$，$\\Delta F_{\\rm B}=\\Delta F_{\\rm D}=-f$ の形に限られる（対角の組が同じ増減をする「ねじれ」の形）．$z_i=w_i-\\Delta F_i/k$ を $(\\ast)$ に代入すると\n\\[ \\left(h-\\frac fk\\right)+\\left(0-\\frac fk\\right)=\\left(0+\\frac fk\\right)+\\left(0+\\frac fk\\right)\\quad\\Longrightarrow\\quad f=\\frac{kh}{4} \\]\nよって\n\\[ \\boldsymbol{F_{\\rm A}=F_{\\rm C}=\\frac{Mg+kh}{4},\\qquad F_{\\rm B}=F_{\\rm D}=\\frac{Mg-kh}{4}} \\]\n上昇量は $z_{\\rm A}=h-\\dfrac h4=\\boldsymbol{\\dfrac{3h}{4}}$，$z_{\\rm B}=z_{\\rm D}=\\boldsymbol{\\dfrac h4}$，$z_{\\rm C}=\\boldsymbol{-\\dfrac h4}$．持ち上げた隅と対角のCは，力が増えて逆に\\textbf{下がる}．\n\n\\textbf{(2) AとBを持ち上げる}\n\n$\\Delta F_i=0$（すべて）とすると $z_{\\rm A}=z_{\\rm B}=h$，$z_{\\rm C}=z_{\\rm D}=0$ で，$(\\ast)$ も $h+0=h+0$ で成り立つ．つり合いと変形の条件をすべて満たす解はこれ1つなので，力は\\textbf{4本とも $\\boldsymbol{Mg/4}$ のまま}で，板が辺CDを軸に傾くだけである．上昇量は A，B が $\\boldsymbol h$，C，D が $\\boldsymbol 0$．\n\n\\textbf{(3) 物体をのせて $h$ を増やす}\n\nばねがすべて床についている間は力は重ね合わせで求まる．Eにのせた $W$ だけによる力は，$x$ 方向の対称性から $\\Delta F_{\\rm A}=\\Delta F_{\\rm B}$，$\\Delta F_{\\rm C}=\\Delta F_{\\rm D}$ で，$x$ 軸まわりのモーメント $a(\\Delta F_{\\rm A}+\\Delta F_{\\rm B})-a(\\Delta F_{\\rm C}+\\Delta F_{\\rm D})=Wa$ と和 $=W$ から $\\Delta F_{\\rm A}=\\Delta F_{\\rm B}=\\dfrac W2$，$\\Delta F_{\\rm C}=\\Delta F_{\\rm D}=0$（四隅の上昇量は平面上にあるので $(\\ast)$ も満たす）．したがって\n\\[ F_{\\rm A}=\\frac{Mg}{4}+\\frac W2+\\frac{kh}{4},\\ \\ F_{\\rm B}=\\frac{Mg}{4}+\\frac W2-\\frac{kh}{4},\\ \\ F_{\\rm C}=\\frac{Mg}{4}+\\frac{kh}{4},\\ \\ F_{\\rm D}=\\frac{Mg}{4}-\\frac{kh}{4} \\]\n最初に $0$ になるのは $\\boldsymbol{\\rm D}$ で，そのとき $\\boldsymbol{h=\\dfrac{Mg}{k}}$．物体はDから遠い辺ABの上にあるのでDの力には寄与せず，$W$ の大きさによらない．\n\n\\textbf{(4) Dが離れた後}\n\n$h>\\dfrac{Mg}{k}$ ではDのばねは板からぶら下がるだけで力を出さない（ばねの下端は床から離れ，ばねは自然長）．板を支えるのはA，B，Cの3本で，未知の力3つに対しつり合いの式が3つあるので，力はつり合いだけで決まる：\n\\[ F_{\\rm A}+F_{\\rm B}+F_{\\rm C}=Mg+W,\\quad a(F_{\\rm A}+F_{\\rm B}-F_{\\rm C})=Wa,\\quad a(F_{\\rm A}-F_{\\rm B}-F_{\\rm C})=0 \\]\n\\[ \\boldsymbol{F_{\\rm A}=\\frac{Mg+W}{2},\\quad F_{\\rm B}=\\frac W2,\\quad F_{\\rm C}=\\frac{Mg}{2}} \\]\nこれは $h=\\dfrac{Mg}{k}$ での(3)の値と連続につながり，それ以上 $h$ を大きくしても変わらない（板はA，B，Cの高さで決まる平面に沿って傾くだけ）．各ばねの縮みは力から決まり，Dの位置の板の高さは自然長の位置より $h-\\dfrac{Mg}{k}$ 高い．$h=\\dfrac{2Mg}{k}$ のとき，Dのばねの下端の床からの高さは $\\boldsymbol{\\dfrac{Mg}{k}}$．\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "4点で支えた剛体板は力のつり合いだけでは支点の力が決まらず，板が平面であるという変形の条件 $z_{\\rm A}+z_{\\rm C}=z_{\\rm B}+z_{\\rm D}$ を加えて初めて決まる．1隅だけを持ち上げると対角の組の力が同じだけ増減する「ねじれ」の分配になり（持ち上げた隅の対角は下がる），1辺を持ち上げても力は変わらない．ばねが床を離れると3点支持の静定問題に切り替わり，以後は $h$ によらない．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "不静定",
+  "剛体のつり合い",
+  "ばね",
+  "重ね合わせ",
+  "状態の切り替わり"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280">
+  <defs><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+  <line x1="60" y1="230" x2="540" y2="230" stroke="#222" stroke-width="1" marker-end="url(#a-ak)"/>
+  <line x1="120" y1="230" x2="120" y2="40" stroke="#222" stroke-width="1" marker-end="url(#a-ak)"/>
+  <text x="545" y="235" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">t</text>
+  <text x="128" y="50" font-family="Noto Sans CJK JP, sans-serif"  font-size="13" fill="#222">聞こえる振動数</text>
+  <polyline points="60,150 120,150 120,100 215,100 215,150 350,150 350,195 470,195 470,150 530,150" fill="none" stroke="#1f5fbf" stroke-width="1.8"/>
+  <text x="22" y="155" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">f<tspan baseline-shift="sub" font-size="10" font-style="normal">0</tspan></text>
+  <text x="126" y="92" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">f₀(c+w)/c</text>
+  <text x="356" y="213" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">f₀c/(c+w)</text>
+  <line x1="215" y1="230" x2="215" y2="100" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="350" y1="230" x2="350" y2="150" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="470" y1="230" x2="470" y2="150" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="116" y="250" font-family="Noto Sans CJK JP, sans-serif"  font-size="13" fill="#222">0</text>
+  <text x="190" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="13" fill="#222">L/(c+w)</text>
+  <text x="346" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="13" fill="#222">T</text>
+  <text x="440" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="13" fill="#222">T+L/c</text>
+  <text x="130" y="180" font-family="Noto Sans CJK JP, sans-serif"  font-size="12" fill="#c0392b">風が吹く</text>
+  <line x1="120" y1="190" x2="350" y2="190" stroke="#c0392b" stroke-width="1" marker-start="url(#a-ak)" marker-end="url(#a-ak)"/>
+</svg>

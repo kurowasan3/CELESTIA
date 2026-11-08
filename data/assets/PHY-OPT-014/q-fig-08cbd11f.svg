@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<line x1="40" y1="140" x2="530" y2="140" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="110" y1="30" x2="110" y2="107" stroke="#222" stroke-width="2.4"/>
+<line x1="110" y1="113" x2="110" y2="167" stroke="#222" stroke-width="2.4"/>
+<line x1="110" y1="173" x2="110" y2="245" stroke="#222" stroke-width="2.4"/>
+<line x1="300" y1="30" x2="300" y2="87" stroke="#222" stroke-width="2.4"/>
+<line x1="300" y1="93" x2="300" y2="187" stroke="#222" stroke-width="2.4"/>
+<line x1="300" y1="193" x2="300" y2="245" stroke="#222" stroke-width="2.4"/>
+<line x1="520" y1="30" x2="520" y2="245" stroke="#222" stroke-width="2.4"/>
+<circle cx="62" cy="110" r="10" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="56.0,113.0 59.0,106.0 62.0,113.0 65.0,106.0 68.0,113.0" fill="none" stroke="#222" stroke-width="1"/>
+<circle cx="62" cy="170" r="10" fill="none" stroke="#222" stroke-width="1.6"/>
+<polyline points="56.0,173.0 59.0,166.0 62.0,173.0 65.0,166.0 68.0,173.0" fill="none" stroke="#222" stroke-width="1"/>
+<text x="30" y="92" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">電球</text>
+<text x="30" y="200" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">電球</text>
+<text x="116" y="104" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">A<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="116" y="188" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">A<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<text x="306" y="84" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">S<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="306" y="208" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">S<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<line x1="110" y1="110" x2="300" y2="90" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="300" y1="90" x2="520" y2="70" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="110" y1="110" x2="300" y2="190" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="300" y1="190" x2="520" y2="70" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="520" cy="70" r="3" fill="#222"/>
+<text x="528" y="75" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">P</text>
+<text x="528" y="158" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">O</text>
+<line x1="550" y1="140" x2="550" y2="40" stroke="#222" stroke-width="1.6" marker-end="url(#q-ak)"/>
+<text x="556" y="46" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">x</text>
+<line x1="546" y1="140" x2="554" y2="140" stroke="#222" stroke-width="1.2"/>
+<line x1="96" y1="110" x2="96" y2="170" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="80" y="145" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">s</text>
+<line x1="286" y1="90" x2="286" y2="190" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="270" y="145" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">d</text>
+<line x1="110" y1="270" x2="300" y2="270" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="201.0" y="264" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">L</text>
+<line x1="300" y1="270" x2="520" y2="270" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="406.0" y="264" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">R</text>
+<text x="104" y="22" font-family="Noto Sans CJK JP, sans-serif" font-size="14" text-anchor="start" fill="#222">A</text>
+<text x="294" y="22" font-family="Noto Sans CJK JP, sans-serif" font-size="14" text-anchor="start" fill="#222">B</text>
+<text x="514" y="22" font-family="Noto Sans CJK JP, sans-serif" font-size="14" text-anchor="start" fill="#222">C</text>
+</svg>

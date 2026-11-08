@@ -1,0 +1,123 @@
+{
+ "id": "PHY-OPT-010",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "ピストン付き容器内の気体を通る光の干渉縞の移動と気体の密度・温度",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，鉛直なシリンダーに単原子分子理想気体が入っており，なめらかに動くピストンによって気体の圧力はつねに一定に保たれる（ピストンを留め具で固定することもできる）．シリンダーの下部には向かい合う2つの窓があり，干渉計の一方の光路の光（真空中の波長 $\\lambda$）が気体の中を水平に長さ $w$ だけ通過する．干渉計のもう一方の光路は真空中にあり，変化しない．光の通る部分はつねに気体中にある．検出器では，干渉の明暗が明→暗→明と1回移り変わるごとに「縞が1本移動した」と数える．\n\n気体の屈折率を $n$ とすると，$n-1$ は気体の密度に比例する．はじめ気体の温度は $T_0$ で，このとき $n-1=\\delta_0$ である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "ピストンを固定したまま，気体を温度 $2T_0$ まで加熱した．この間に縞は何本移動するか．"
+     },
+     {
+      "id": "2",
+      "tex": "はじめの状態に戻し，ピストンを自由にして，気体をゆっくり温度 $T$ まで加熱した．この間に移動する縞の本数 $N$ を $\\delta_0$，$w$，$\\lambda$，$T_0$，$T$ で表せ．また，加熱をどれだけ続けても $N$ が超えない値を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\lambda=633\\ \\mathrm{nm}$，$w=0.100\\ \\mathrm{m}$，$\\delta_0=2.53\\times10^{-4}$，$T_0=300\\ \\mathrm{K}$ とする．(2) の加熱で縞が 10 本移動し，その間に気体に加えた熱量は $41.6\\ \\mathrm{J}$ であった．加熱後の温度 $T$ と気体の物質量を有効数字3桁で求めよ．気体定数は $8.31\\ \\mathrm{J/(mol\\cdot K)}$ とする．"
+     },
+     {
+      "id": "4",
+      "tex": "はじめの状態に戻し，今度はピストンを押して，気体を断熱的にゆっくり圧縮し，体積をはじめの $\\frac12$ にした．この間に移動する縞の本数と，圧縮後の温度を，(3) の数値を用いて求めよ．$2^{2/3}=1.587$ とする．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：ピストン付き容器内の気体を通る光の干渉縞の移動と気体の密度・温度",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "0本"
+   },
+   {
+    "id": "2",
+    "tex": "$N=\\dfrac{\\delta_0 w}{\\lambda}\\left(1-\\dfrac{T_0}{T}\\right)$，上限 $\\dfrac{\\delta_0 w}{\\lambda}$"
+   },
+   {
+    "id": "3",
+    "tex": "$T=400\\ \\mathrm{K}$，$2.00\\times10^{-2}\\ \\mathrm{mol}$"
+   },
+   {
+    "id": "4",
+    "tex": "40本，$476\\ \\mathrm{K}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{考え方}　気体の中を通る光路の光学距離は $nw$ で，真空中の光路との光路差は $(n-1)w$ である．縞が1本移動するごとに光路差が $\\lambda$ だけ変わるので，移動する縞の本数は\n\\[ \\frac{|\\Delta(n-1)|\\,w}{\\lambda} \\]\nであり，$n-1$ は密度に比例するから，\\textbf{縞の移動は密度の変化だけで決まる}．温度や圧力が変わっても，光の通る部分の密度が変わらなければ縞は動かない．\n\n\\textbf{(1)}　ピストンを固定すると体積が変わらず，気体の質量も変わらないので密度は一定である．よって $n$ は変わらず，縞は $\\boldsymbol{0}$ \\textbf{本}（温度が2倍になり圧力も2倍になるが，それは縞に現れない）．\n\n\\textbf{(2)}　圧力一定では，状態方程式より密度は $\\dfrac1T$ に比例する．よって\n\\[ n-1=\\delta_0\\frac{T_0}{T} \\]\n\\[ N=\\frac{w}{\\lambda}\\left(\\delta_0-\\delta_0\\frac{T_0}{T}\\right)=\\boldsymbol{\\frac{\\delta_0 w}{\\lambda}\\left(1-\\frac{T_0}{T}\\right)} \\]\n$T\\to\\infty$ でも $1-\\dfrac{T_0}{T}<1$ なので，$N$ は $\\boldsymbol{\\dfrac{\\delta_0 w}{\\lambda}}$ を超えない（気体が光路から完全になくなった場合に相当する）．\n\n\\textbf{(3)}　$\\dfrac{\\delta_0 w}{\\lambda}=\\dfrac{2.53\\times10^{-4}\\times0.100}{633\\times10^{-9}}\\fallingdotseq40.0$．$N=10$ より\n\\[ 1-\\frac{300}{T}=\\frac{10}{40.0}\\qquad\\therefore\\ \\boldsymbol{T=400\\ \\mathrm{K}} \\]\n定圧変化で気体が受け取る熱量は，内部エネルギーの増加 $\\frac32\\nu R\\Delta T$ と外への仕事 $p\\Delta V=\\nu R\\Delta T$ の和で $Q=\\frac52\\nu R\\Delta T$．よって\n\\[ \\nu=\\frac{2Q}{5R\\Delta T}=\\frac{2\\times41.6}{5\\times8.31\\times100}\\fallingdotseq\\boldsymbol{2.00\\times10^{-2}\\ \\mathrm{mol}} \\]\n\n\\textbf{(4)}　体積が $\\frac12$ になると密度は2倍になり，$n-1$ は $\\delta_0$ から $2\\delta_0$ に増える．断熱変化でも密度だけで縞の本数は決まるので\n\\[ \\frac{(2\\delta_0-\\delta_0)w}{\\lambda}=\\frac{\\delta_0 w}{\\lambda}\\fallingdotseq\\boldsymbol{40\\ \\text{本}} \\]\n温度は，単原子分子理想気体の断熱変化 $TV^{\\frac23}=$一定 より\n\\[ T'=T_0\\left(\\frac{V}{V/2}\\right)^{\\frac23}=300\\times2^{\\frac23}=300\\times1.587\\fallingdotseq\\boldsymbol{476\\ \\mathrm{K}} \\]\n温度は (3) より高くなるが，縞の本数は温度ではなく密度の変化を反映する．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "気体の屈折率は $n-1$ が密度に比例するので，干渉縞の移動本数は光路上の気体の密度変化だけを測る．定積加熱では温度が上がっても縞は動かず，定圧加熱では密度が $1/T$ に比例して縞の本数に上限が生じ，断熱圧縮では温度によらず体積比だけで本数が決まる．縞の本数から温度を読み取り，熱力学第一法則と組み合わせて物質量を求める．"
+ },
+ "concepts": [
+  "light-interference",
+  "first-law",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "干渉計",
+  "屈折率",
+  "気体の密度",
+  "定圧変化",
+  "断熱変化",
+  "熱力学第一法則"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

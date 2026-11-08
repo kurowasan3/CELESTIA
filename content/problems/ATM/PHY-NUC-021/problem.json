@@ -1,0 +1,123 @@
+{
+ "id": "PHY-NUC-021",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "原子核の中に粒子を閉じ込める条件（相対論的な運動エネルギー $pc$ と静電気力の位置エネルギーがともに $1/R$ に比例すること）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "原子核の内部に負電荷の粒子を閉じ込められるかを，次の模型で考える．原子核を半径 $R$ の球とし，電気量 $Ze$ が一様に分布しているとする．このとき，原子核の中心にある電気量 $-e$ の粒子の静電気力による位置エネルギーは，無限遠を基準として $-\\dfrac{3kZe^2}{2R}$ である（$k$ はクーロンの法則の比例定数）．\n\n原子核の中に閉じ込められた粒子の物質波は，図のように直径 $2R$ にちょうど半波長が入る定在波（波長 $\\lambda=4R$）であるとし，粒子の運動量の大きさを $p=h/\\lambda$（$h$ はプランク定数）とする．質量 $m$ の粒子のエネルギーは相対性理論により $E=\\sqrt{(pc)^2+(mc^2)^2}$（$c$ は光速）で，運動エネルギーは $K=E-mc^2$ である．粒子が原子核に閉じ込められる条件を，$K$ が中心での位置エネルギーの深さより小さいこと，すなわち\n\\[ K<\\frac{3kZe^2}{2R} \\]\nとする．数値は $hc=1240\\ \\mathrm{MeV\\cdot fm}$，$ke^2=1.44\\ \\mathrm{MeV\\cdot fm}$（$1\\ \\mathrm{fm}=10^{-15}\\ \\mathrm m$），電子の $mc^2=0.511\\ \\mathrm{MeV}$ を用いよ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$R=7.0\\ \\mathrm{fm}$ のとき，電子の $pc$ を $\\mathrm{MeV}$ 単位で求め，電子の運動エネルギーを $K\\fallingdotseq pc$ とみなせることを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$K=pc$ として，電子が閉じ込められるための $Z$ の条件を求めよ．その条件が $R$ によらないことを示し，条件を満たす最小の整数 $Z$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "もし誤って非相対論的な式 $K=\\dfrac{p^2}{2m}$ を用いると，$R=7.0\\ \\mathrm{fm}$ のとき電子の $K$ と，閉じ込められるための $Z$ の条件はどうなるか．有効数字2桁で答え，(2) との違いの原因を説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "電子の代わりに，電気量 $-e$，$mc^2=106\\ \\mathrm{MeV}$ の $\\mu$ 粒子を考える．$R=7.0\\ \\mathrm{fm}$ のときの $\\mu$ 粒子の運動エネルギー $K$ を有効数字2桁で求め，閉じ込められる最小の整数 $Z$ を求めよ．また，$\\mu$ 粒子の場合，閉じ込めの条件は $R$ によるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：原子核の中に粒子を閉じ込める条件（相対論的な運動エネルギー $pc$ と静電気力の位置エネルギーがともに $1/R$ に比例すること）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$pc=\\dfrac{hc}{4R}=44\\ \\mathrm{MeV}$．$mc^2=0.511\\ \\mathrm{MeV}$ の約 $90$ 倍なので $K=\\sqrt{(pc)^2+(mc^2)^2}-mc^2\\fallingdotseq pc$"
+   },
+   {
+    "id": "2",
+    "tex": "$Z>\\dfrac{hc}{6ke^2}\\fallingdotseq143.5$（$R$ が約分されて消える），最小の $Z=144$"
+   },
+   {
+    "id": "3",
+    "tex": "$K=1.9\\times10^3\\ \\mathrm{MeV}$，$Z>6.2\\times10^3$（運動エネルギーを約 $43$ 倍も過大評価し，しかも $1/R^2$ に比例するため $R$ によってしまう）"
+   },
+   {
+    "id": "4",
+    "tex": "$K=8.9\\ \\mathrm{MeV}$，最小の $Z=29$．$\\mu$ 粒子では条件は $R$ による（$R$ が大きいほど閉じ込めやすい）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 電子の運動量}　$\\lambda=4R=28\\ \\mathrm{fm}$ より\n\\[ pc=\\frac{hc}{4R}=\\frac{1240}{28}\\fallingdotseq\\boldsymbol{44\\ \\mathrm{MeV}}. \\]\nこれは $mc^2=0.511\\ \\mathrm{MeV}$ の約 $87$ 倍なので $\\sqrt{(pc)^2+(mc^2)^2}=pc\\sqrt{1+(mc^2/pc)^2}\\fallingdotseq pc$，よって $K=E-mc^2\\fallingdotseq pc-0.5\\ \\mathrm{MeV}\\fallingdotseq pc$ とみなせる（誤差は約 $1\\%$）．電子は光子と同じように「$E=pc$」でふるまう超相対論的な状態にある．\n\n\\textbf{(2) $R$ によらない条件}　\n\\[ \\frac{hc}{4R}<\\frac{3kZe^2}{2R}\\quad\\therefore\\quad \\boldsymbol{Z>\\frac{hc}{6ke^2}} \\]\n両辺がともに $1/R$ に比例するので $R$ が約分され，条件は原子核の大きさによらない．数値は $\\dfrac{1240}{6\\times1.44}=143.5$ で，\\textbf{最小の $Z=144$}．小さな原子核に閉じ込めようとすると運動エネルギーも位置エネルギーの深さも同じ割合で増えるので，「核を小さくすれば閉じ込められる」ということはなく，$Z$ だけで決まる．（$hc/ke^2=2\\pi\\times137$ であり，$Z$ の限界は微細構造定数の逆数 $137$ と同程度になる．）なお，$K$ を近似せずに計算すると限界は $Z\\fallingdotseq142$ となり，結論はほとんど変わらない．\n\n\\textbf{(3) 非相対論的に扱った場合}　\n\\[ K=\\frac{p^2}{2m}=\\frac{(pc)^2}{2mc^2}=\\frac{44.3^2}{2\\times0.511}\\fallingdotseq\\boldsymbol{1.9\\times10^3\\ \\mathrm{MeV}} \\]\nとなり，(1) の $pc$ の約 $43$ 倍にもなる．条件は\n\\[ \\frac{(hc)^2}{32R^2mc^2}<\\frac{3kZe^2}{2R}\\quad\\therefore\\quad Z>\\frac{(hc)^2}{48R\\,ke^2\\,mc^2}=\\frac{1240^2}{48\\times7.0\\times1.44\\times0.511}\\fallingdotseq\\boldsymbol{6.2\\times10^3} \\]\nとなる．$p\\gg mc$ のとき $p^2/2m$ は運動エネルギーを大きく過大評価する．さらに $1/R^2$ に比例するので，位置エネルギーの深さ（$1/R$）との比較で $R$ が残り，(2) の「$R$ によらない」という性質も失われる．非相対論の式は $pc\\ll mc^2$ のときだけ使える．\n\n\\textbf{(4) $\\mu$ 粒子}　$pc=44.3\\ \\mathrm{MeV}$ は (1) と同じだが，$mc^2=106\\ \\mathrm{MeV}$ と同程度なので近似せずに計算する：\n\\[ K=\\sqrt{44.3^2+106^2}-106=114.9-106\\fallingdotseq\\boldsymbol{8.9\\ \\mathrm{MeV}}. \\]\n条件は\n\\[ Z>\\frac{2RK}{3ke^2}=\\frac{2\\times7.0\\times8.9}{3\\times1.44}\\fallingdotseq28.8 \\]\nより\\textbf{最小の $Z=29$}．$\\mu$ 粒子では $K$ は $1/R$ に比例しない（$R$ が大きくなると非相対論的な $1/R^2$ に近づき，位置エネルギーの深さ $1/R$ より速く小さくなる）ので，\\textbf{条件は $R$ により}，$R$ が大きいほど閉じ込めやすい．質量の大きい粒子は同じ運動量でも運動エネルギーが小さく，原子核の中に入り込みやすい．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "原子核程度の領域に閉じ込めた電子は $pc\\gg mc^2$ の超相対論的な状態にあり，運動エネルギー $pc=hc/4R$ と一様帯電球の中心の位置エネルギーの深さ $3kZe^2/2R$ がともに $1/R$ に比例するので，閉じ込めの条件は核の大きさによらず $Z>hc/(6ke^2)$ だけで決まる．非相対論の $p^2/2m$ を使うと運動エネルギーを桁違いに過大評価し，$R$ 依存性も誤り，重い $\\mu$ 粒子では $R$ 依存性が復活する．"
+ },
+ "concepts": [
+  "bohr-model",
+  "coulomb-field",
+  "matter-wave"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "物質波",
+  "相対論的エネルギー",
+  "一様帯電球",
+  "原子核",
+  "閉じ込め",
+  "μ粒子"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

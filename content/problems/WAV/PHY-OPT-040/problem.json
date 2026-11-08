@@ -1,0 +1,128 @@
+{
+ "id": "PHY-OPT-040",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "すき間と遮へい部を入れかえた2枚の回折格子（相補的な格子の回折光の強さ）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ガラス板に幅 $d-w$ の金属の帯（光を通さない）を周期 $d$ で多数並べて付け，幅 $w$ のすき間から光が透過する回折格子 G をつくった．また，G の金属の部分とすき間の部分をちょうど入れかえた回折格子 G$'$（幅 $w$ の金属の帯，幅 $d-w$ のすき間，周期 $d$）もつくった．図のように，波長 $\\lambda$ の平行光線を格子面に垂直に入射させ，十分遠方のスクリーンで回折光を観測する．格子の本数は十分多く，$\\lambda<d$ とする．\n\nすき間の幅による回折を考えるため，幅のある1本のすき間を，すき間に沿って一様に並んだ多数の細い光源（どれも同じ振幅・同じ位相で振動する）の集まりとみなす．ある方向に進む光の振動を回転ベクトル（フェーザー）で表すと，1本のすき間の中の細い光源の回転ベクトルを順につないだ列は，全長が $w$ に比例し，全体として一定の角度だけ曲がった円弧になる．すき間全体からの光の振幅は，この円弧の両端を結ぶ弦の長さに比例する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "G について，$m$ 次（$m=1,2,\\dots$）の回折光の方向を $\\sin\\theta_m$ で表し，その方向に進む光について，1本のすき間の両端から出る光の位相差 $\\Phi_m$ を求めよ．さらに，$m$ 次の回折光の強さ $I_m$ と 0 次の回折光の強さ $I_0$ の比 $\\dfrac{I_m}{I_0}$ を $w,\\ d,\\ m$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "G$'$ の $m$ 次の回折光の強さを $I'_m$ とする．$m\\geq1$ のとき $I'_m=I_m$ であることを示せ．また，$\\dfrac{I'_0}{I_0}$ を求めよ．さらに，G と G$'$ を重ね合わせた板（全面がすき間の板）を考えて，$m\\geq1$ で $I'_m=I_m$ となる理由を簡潔に説明せよ．"
+     },
+     {
+      "id": "3",
+      "tex": "すき間の幅が分からない G 型の格子がある．1次と2次の回折光の強さの比を測ると $\\dfrac{I_2}{I_1}=\\dfrac14$ であった．$\\dfrac wd$ としてありうる値をすべて求めよ．また，回折光の測定とは別に，格子を透過した光の全パワーを測ると，格子を取り除いたときの $\\dfrac23$ 倍であった．$\\dfrac wd$ を決定し，このときの $\\dfrac{I_1}{I_0}$ と，現れない次数（$m\\geq1$）を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：すき間と遮へい部を入れかえた2枚の回折格子（相補的な格子の回折光の強さ）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：すき間と遮へい部を入れかえた2枚の回折格子（相補的な格子の回折光の強さ）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\sin\\theta_m=\\dfrac{m\\lambda}{d}$，$\\Phi_m=\\dfrac{2\\pi mw}{d}$，$\\dfrac{I_m}{I_0}=\\left\\{\\dfrac{\\sin(\\pi mw/d)}{\\pi mw/d}\\right\\}^2$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac{I'_0}{I_0}=\\left(\\dfrac{d-w}{w}\\right)^2$．G と G$'$ を重ねると全面がすき間になり，その光は $m\\geq1$ の方向には来ないので，G と G$'$ からの光はその方向で同じ振幅・逆位相である"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac wd=\\dfrac13$ または $\\dfrac23$；全パワーから $\\dfrac wd=\\dfrac23$，$\\dfrac{I_1}{I_0}=\\dfrac{27}{16\\pi^2}\\approx0.17$，現れない次数は $m=3,6,9,\\dots$（3の倍数）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 回転ベクトルの円弧}\n隣り合うすき間の対応する点から出る光の経路差は $d\\sin\\theta$ だから，強め合う方向は $\\boldsymbol{\\sin\\theta_m=\\dfrac{m\\lambda}{d}}$．この方向では，すべてのすき間からの光が同位相で重なる．\n\n1本のすき間の両端から出る光の経路差は $w\\sin\\theta_m$ なので，位相差は\n\\[ \\Phi_m=\\frac{2\\pi}{\\lambda}w\\sin\\theta_m=\\boldsymbol{\\frac{2\\pi mw}{d}}. \\]\nすき間の中の細い光源の回転ベクトルは，位置とともに一様に向きを変えるから，その列は全長 $\\ell$（$w$ に比例，$\\ell=kw$）で，中心角 $\\Phi_m$ の円弧になる．円弧の半径は $\\rho=\\dfrac{\\ell}{\\Phi_m}$ なので，弦の長さは\n\\[ 2\\rho\\sin\\frac{\\Phi_m}{2}=\\ell\\,\\frac{\\sin(\\Phi_m/2)}{\\Phi_m/2}=k\\,\\frac{d}{\\pi m}\\left|\\sin\\frac{\\pi mw}{d}\\right|. \\]\n0次（$\\theta=0$）では回転ベクトルは一直線に並び，長さ $\\ell=kw$．すき間の数を $N$ とすると，どの次数でも $N$ 本からの光は同位相で加わるので，振幅はそれぞれ $N$ 倍になる．強さは振幅の2乗に比例するから\n\\[ \\boldsymbol{\\frac{I_m}{I_0}=\\left\\{\\frac{\\sin(\\pi mw/d)}{\\pi mw/d}\\right\\}^2}. \\]\n\n\\textbf{(2) 相補的な格子}\nG$'$ のすき間の幅は $d-w$ なので，(1) と同様に $m$ 次の振幅は $Nk\\dfrac{d}{\\pi m}\\left|\\sin\\dfrac{\\pi m(d-w)}{d}\\right|$．ここで\n\\[ \\left|\\sin\\left(\\pi m-\\frac{\\pi mw}{d}\\right)\\right|=\\left|\\sin\\frac{\\pi mw}{d}\\right| \\]\nだから，$m\\geq1$ では G と G$'$ の振幅は等しく，$\\boldsymbol{I'_m=I_m}$．一方，0次の振幅はすき間の幅に比例するので\n\\[ \\boldsymbol{\\frac{I'_0}{I_0}=\\left(\\frac{d-w}{w}\\right)^2}. \\]\n\\textbf{理由}：G のすき間と G$'$ のすき間を合わせると全面がすき間の板になる．光の重ね合わせの原理から，（全面の板からの光）$=$（G からの光）$+$（G$'$ からの光）である．全面の板を通った平面波はまっすぐ進むだけで，$m\\geq1$ の方向には光が来ない．よってその方向では G からの光と G$'$ からの光が同じ振幅・逆位相で打ち消し合う関係にあり，それぞれ単独では同じ強さで観測される．0次の方向だけは全面の板からの光があるので，この関係は成り立たない．\n\n\\textbf{(3) 逆問題}\n$x=\\dfrac{\\pi w}{d}$（$0<x<\\pi$）とおくと\n\\[ \\frac{I_2}{I_1}=\\frac{\\{\\sin 2x/(2x)\\}^2}{(\\sin x/x)^2}=\\cos^2x=\\frac14 \\]\nより $\\cos x=\\pm\\dfrac12$，$x=\\dfrac{\\pi}{3},\\ \\dfrac{2\\pi}{3}$．よって $\\boldsymbol{\\dfrac wd=\\dfrac13}$ \\textbf{または} $\\boldsymbol{\\dfrac23}$．この2つは互いに相補的な格子であり，(2) より $m\\geq1$ の回折光の強さはすべて同じなので，0次以外の回折光をいくら測っても区別できない．\n\n区別するには0次の情報（または透過光の全量）が必要である．格子を透過する光の全パワーはすき間の面積の割合 $\\dfrac wd$ に比例するので，$\\dfrac wd=\\boldsymbol{\\dfrac23}$ に決まる．このとき $x=\\dfrac{2\\pi}{3}$ で\n\\[ \\frac{I_1}{I_0}=\\left(\\frac{\\sin(2\\pi/3)}{2\\pi/3}\\right)^2=\\left(\\frac{\\sqrt3}{2}\\cdot\\frac{3}{2\\pi}\\right)^2=\\boldsymbol{\\frac{27}{16\\pi^2}}\\approx0.17. \\]\n（相補的な $\\dfrac wd=\\dfrac13$ なら $\\dfrac{27}{4\\pi^2}\\approx0.68$ で，4倍の違いが0次の強さだけから生じている．）\n現れない次数は $\\sin\\dfrac{2\\pi m}{3}=0$，すなわち $m$ が3の倍数：$\\boldsymbol{m=3,6,9,\\dots}$（$\\dfrac{m\\lambda}{d}<1$ の範囲で観測される次数のうち）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "幅のあるすき間の回折光の振幅は，回転ベクトルの円弧の弦として $\\frac{d}{\\pi m}|\\sin(\\pi m w/d)|$ に比例するので，すき間と遮へい部を入れかえた相補的な格子は，0次以外のすべての回折光で同じ強さを与える（重ね合わせると全面の板になり，その光は斜め方向に来ないことの表れ）．そのため回折光の強さの比からは相補的な2つの構造を区別できず，0次または透過光の全量が決め手になる．"
+ },
+ "concepts": [
+  "light-interference",
+  "torque",
+  "string-resonance"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "回折格子",
+  "単スリット回折",
+  "回転ベクトル",
+  "欠ける次数",
+  "バビネの原理",
+  "重ね合わせの原理"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,143 @@
+{
+ "id": "PHY-OPT-011",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "副虹の角度・色の並びと主虹との間の暗い帯",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "半径 $r$ の球形の水滴（空気に対する屈折率 $n$）に，太陽光が平行光線として入射する．図のように，水滴の中心 O を含む平面内で，O を通る光線から距離 $b$ だけ離れた光線が入射角 $\\alpha$（屈折角 $\\beta$）で水滴に入り，水滴の内面で $k$ 回反射したのちに空気中へ出ていく場合を考える．出ていく光線の向きと太陽の方向（入射光の向きを逆にした向き）とのなす角を $\\Theta_k$ とする．太陽を背にした観測者は，自分の影の頭の方向（反太陽点）から角 $\\Theta_k$ だけ離れた方向にこの光を見る．虹は，$\\Theta_k$ が $\\alpha$ について極値をとる（入射位置を少し変えても $\\Theta_k$ がほとんど変わらない）方向に光が集中して明るく見えるものである．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "1回の屈折で光線の向きは $\\alpha-\\beta$ だけ，1回の内面反射で $\\pi-2\\beta$ だけ，いずれも同じ回転の向きに変わることを用いて，$\\Theta_1=4\\beta-2\\alpha$，$\\Theta_2=\\pi+2\\alpha-6\\beta$ となることを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\Theta_k$（$k=1,2$）が $\\alpha$ について極値をとる条件が $\\cos^2\\alpha=\\dfrac{n^2-1}{k(k+2)}$ であることを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$n=\\dfrac43$ のとき，主虹（$k=1$）と副虹（$k=2$）の角を度の単位で有効数字2桁で求めよ．また，図の $b$ を $0$ から $r$ まで変えたとき $\\Theta_1$ はこの極値以下，$\\Theta_2$ はこの極値以上の値しかとらないことを用いて，空のうち主虹と副虹にはさまれた帯が，主虹の内側や副虹の外側に比べて暗く見える理由を説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "屈折率は光の色によってわずかに異なる．極値をとる $\\alpha$ も $n$ によって変わることに注意しつつ，主虹・副虹の角が $n$ の増加によってそれぞれ増えるか減るかを判定し，主虹と副虹のそれぞれで赤と紫のどちらが外側（反太陽点から遠い側）に並ぶかを答えよ．ただし水の屈折率は赤い光で $1.331$，紫の光で $1.343$ である．さらに，主虹の赤と紫の角の差を，$n=\\dfrac43$ での値を用いて度の単位で有効数字2桁で見積もれ．"
+     },
+     {
+      "id": "5",
+      "tex": "透明な球の屈折率が大きいと虹が現れなくなる．主虹，副虹が現れるための $n\\ (>1)$ の条件をそれぞれ求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：副虹の角度・色の並びと主虹との間の暗い帯",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：副虹の角度・色の並びと主虹との間の暗い帯",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "全回転角 $D_k=2(\\alpha-\\beta)+k(\\pi-2\\beta)$ から $\\Theta_1=\\pi-D_1$，$\\Theta_2=D_2-\\pi$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac{d\\beta}{d\\alpha}=\\dfrac{\\cos\\alpha}{n\\cos\\beta}=\\dfrac{1}{k+1}$ を変形"
+   },
+   {
+    "id": "3",
+    "tex": "主虹 $42^\\circ$，副虹 $51^\\circ$．$k=1$ の光は $42^\\circ$ 以内にしか，$k=2$ の光は $51^\\circ$ 以上にしか届かないので，その間の帯にはどちらの光も来ず暗い"
+   },
+   {
+    "id": "4",
+    "tex": "主虹の角は $n$ とともに減少し赤が外側，副虹の角は $n$ とともに増加し紫が外側．主虹の幅は約 $1.7^\\circ$"
+   },
+   {
+    "id": "5",
+    "tex": "主虹 $1<n<2$，副虹 $1<n<3$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 曲がる角の合計}\n入射点で光線は $\\alpha-\\beta$，各内面反射で $\\pi-2\\beta$，出射点で再び $\\alpha-\\beta$ だけ，いずれも同じ回転の向きに曲がる（出射点での入射角は $\\beta$，屈折角は $\\alpha$）．$k$ 回反射したときの全回転角は\n\\[ D_k=2(\\alpha-\\beta)+k(\\pi-2\\beta) \\]\nである．$k=1$ では $D_1=\\pi+2\\alpha-4\\beta<\\pi$ なので，出ていく光と太陽の方向のなす角は $\\Theta_1=\\pi-D_1=\\boldsymbol{4\\beta-2\\alpha}$．$k=2$ では $D_2=2\\pi+2\\alpha-6\\beta>\\pi$ なので，$\\Theta_2=D_2-\\pi=\\boldsymbol{\\pi+2\\alpha-6\\beta}$．\n\n\\textbf{(2) 極値の条件}\n屈折の法則 $\\sin\\alpha=n\\sin\\beta$ を $\\alpha$ で微分すると $\\cos\\alpha=n\\cos\\beta\\,\\dfrac{d\\beta}{d\\alpha}$，すなわち $\\dfrac{d\\beta}{d\\alpha}=\\dfrac{\\cos\\alpha}{n\\cos\\beta}$．$\\Theta_k=\\pm\\{2\\alpha-2(k+1)\\beta\\}+(\\text{定数})$ と書けるので，極値の条件は\n\\[ \\frac{d\\beta}{d\\alpha}=\\frac1{k+1}\\quad\\Longleftrightarrow\\quad (k+1)\\cos\\alpha=n\\cos\\beta \\]\n両辺を2乗し $n^2\\cos^2\\beta=n^2-n^2\\sin^2\\beta=n^2-\\sin^2\\alpha=n^2-1+\\cos^2\\alpha$ を使うと\n\\[ (k+1)^2\\cos^2\\alpha=n^2-1+\\cos^2\\alpha \\qquad\\therefore\\quad \\boldsymbol{\\cos^2\\alpha=\\frac{n^2-1}{k(k+2)}} \\]\n\n\\textbf{(3) 主虹と副虹}\n$n=\\frac43$ で $n^2-1=\\frac79$．\n\n$k=1$：$\\cos^2\\alpha=\\frac{7}{27}$ より $\\alpha=59.4^\\circ$，$\\sin\\beta=\\frac34\\sin\\alpha=0.646$ より $\\beta=40.2^\\circ$．$\\Theta_1=4\\beta-2\\alpha=\\boldsymbol{42^\\circ}$．\n\n$k=2$：$\\cos^2\\alpha=\\frac{7}{72}$ より $\\alpha=71.8^\\circ$，$\\sin\\beta=0.713$ より $\\beta=45.4^\\circ$．$\\Theta_2=180^\\circ+2\\alpha-6\\beta=\\boldsymbol{51^\\circ}$．\n\n$b=r\\sin\\alpha$ を $0$ から $r$ まで変えると，$\\Theta_1$ は $0^\\circ$ から増えて $42^\\circ$ で最大になったのち減り，$\\Theta_2$ は $180^\\circ$ から減って $51^\\circ$ で最小になったのち増える（解答図）．したがって1回反射の光は反太陽点から $42^\\circ$ 以内の方向にしか来ず（そのため主虹の内側は明るい），2回反射の光は $51^\\circ$ より外側にしか来ない（副虹の外側は明るい）．$42^\\circ$ と $51^\\circ$ の間には，どちらの光も届かないので，この帯は暗く見える．\n\n\\textbf{(4) 色の並び}\n極値での角 $\\Theta_k^*(n)=\\Theta_k(\\alpha^*(n),n)$ を $n$ で微分すると，極値では $\\partial\\Theta_k/\\partial\\alpha=0$ なので，$\\alpha^*$ の変化の寄与は消え，$\\alpha$ を固定した偏微分だけが残る：\n\\[ \\frac{d\\Theta_k^*}{dn}=\\left.\\frac{\\partial\\Theta_k}{\\partial n}\\right|_{\\alpha} \\]\n$\\alpha$ を固定して $n\\sin\\beta=\\sin\\alpha$ を $n$ で微分すると $\\sin\\beta+n\\cos\\beta\\,\\dfrac{\\partial\\beta}{\\partial n}=0$，すなわち $\\dfrac{\\partial\\beta}{\\partial n}=-\\dfrac{\\tan\\beta}{n}<0$．よって\n\\[ \\frac{d\\Theta_1^*}{dn}=-\\frac{4\\tan\\beta}{n}<0,\\qquad \\frac{d\\Theta_2^*}{dn}=+\\frac{6\\tan\\beta}{n}>0 \\]\n屈折率の大きい紫は，主虹では角が小さく（内側），副虹では角が大きい（外側）．つまり\\textbf{主虹は赤が外側，副虹は紫が外側}で，色の並びが逆になる．\n\n主虹の幅：$n=\\frac43$，$\\beta=40.2^\\circ$（$\\tan\\beta=0.845$）で\n\\[ |\\Delta\\Theta_1|\\approx\\frac{4\\tan\\beta}{n}\\,\\Delta n=\\frac{4\\times0.845}{1.333}\\times0.012=0.030\\ \\mathrm{rad}\\approx\\boldsymbol{1.7^\\circ} \\]\n\n\\textbf{(5) 虹が現れる条件}\n極値は $0<\\cos^2\\alpha<1$ のときに限り存在する．$k=1$ では $\\dfrac{n^2-1}{3}<1$ より $\\boldsymbol{1<n<2}$，$k=2$ では $\\dfrac{n^2-1}{8}<1$ より $\\boldsymbol{1<n<3}$．実際，$\\Theta_1$ の傾き $\\dfrac{4\\cos\\alpha}{n\\cos\\beta}-2$ は $\\alpha=0$ で $\\dfrac4n-2$ であり，$n\\ge2$ では最初から負で，$\\cos\\alpha/\\cos\\beta$ は $\\alpha$ とともに減少するので，以後も負のまま極値をとらない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "虹の方向は偏向角が入射位置について停留する方向で，$k$ 回内面反射では $(k+1)\\cos\\alpha=n\\cos\\beta$ から $\\cos^2\\alpha=(n^2-1)/\\{k(k+2)\\}$ となる．主虹は偏向の最大，副虹は最小なので両者の間には光が来ず暗い帯ができ，停留点では $\\alpha$ の変化の寄与が消えるため，色による角の変化は $\\alpha$ 固定の偏微分の符号で決まり，主虹と副虹で色の並びが逆になる．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "虹",
+  "屈折",
+  "停留条件",
+  "分散",
+  "副虹",
+  "アレキサンダーの暗帯"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

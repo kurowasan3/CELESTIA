@@ -1,0 +1,128 @@
+{
+ "id": "PHY-RIG-001",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "壁も床も粗いはしご（不定な摩擦力と滑らない条件，下端のおもりの効果）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，長さ $L$，質量 $M$ の一様なはしご AB を，上端 A を粗い鉛直な壁に，下端 B を粗い水平な床につけて立てかける．B と壁の距離は $\\dfrac{3}{5}L$ である．はしごと壁の間の静止摩擦係数は $\\dfrac12$，はしごと床の間の静止摩擦係数は $\\mu$ である．はしごは壁に垂直な鉛直面内にあり，人やおもりは質点とみなす．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "はしごに何も乗っていないとき，A，B ではたらく 4 つの力（壁・床からの垂直抗力と摩擦力）は，つり合いの条件だけからは決まらないことを示せ．そのうえで，はしごが静止できるための $\\mu$ の最小値を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "以下 $\\mu=\\dfrac12$ とする．質量 $2M$ の人が B からはしごを登る．人が B からはしごに沿って距離 $x$ の位置にいるとき，はしごが静止していられる $x$ の範囲を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "人が A まで登れるようにするため，はしごの下端 B に小さなおもりを取り付ける．おもりの質量の最小値を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：壁も床も粗いはしご（不定な摩擦力と滑らない条件，下端のおもりの効果）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：壁も床も粗いはしご（不定な摩擦力と滑らない条件，下端のおもりの効果）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "未知数 4 個に対しつり合いの式は 3 本なので決まらない．$\\mu$ の最小値 $\\dfrac{6}{19}$"
+   },
+   {
+    "id": "2",
+    "tex": "$0\\leqq x\\leqq\\dfrac{17}{20}L$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac{9}{22}M$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{力の設定}\nB を原点，壁に向かう水平方向を正とする．床から B にはたらく垂直抗力を $N$，摩擦力を $F$（壁向きを正），壁から A にはたらく垂直抗力を $R$（壁から離れる向き），摩擦力を $f$（上向きを正）とする．はしごに乗っているもの全体の重さを $W$，その重心 G の B からの水平距離を $x_G$ とする（重心ははしご上にあり $0\\leqq x_G<\\frac35L$）．A は B から水平に $\\frac35L$，高さ $\\frac45L$ の位置にある．\n\\[ \\text{水平：}F=R,\\qquad \\text{鉛直：}N+f=W,\\qquad \\text{B のまわり：}\\tfrac45L\\,R+\\tfrac35L\\,f=Wx_G. \\]\n静止の条件は，これらを満たし，かつ $|F|\\leqq\\mu N$，$|f|\\leqq\\frac12R$ となる組が存在することである．\n\n\\textbf{(1)}\n未知数は $N,F,R,f$ の 4 個，独立な式は 3 本なので，$f$ を 1 つ与えるごとに残りが決まり，力は一意に定まらない（例えば $\\mu=\\frac12$ で $f=0$ としても，$f=\\frac{1}{10}Mg$ としても，すべての条件を満たす組がある）．このようなときは「\\textbf{条件を満たす組が 1 つでもあれば静止できる}」と考える．\n式から $R=\\dfrac{Wx_G-\\frac35Lf}{\\frac45L}$，$N=W-f$ であり，滑らない条件 $R\\leqq\\mu N$ は $\\dfrac{R}{N}\\leqq\\mu$．比 $\\dfrac{R}{N}=\\dfrac{Wx_G-\\frac35Lf}{\\frac45L(W-f)}$ を $f$ で微分すると分子の符号は $W(x_G-\\frac35L)<0$ となり，$f$ が大きいほど小さい．よって最も有利なのは壁の摩擦が上向き最大 $f=\\frac12R$ のときで，このとき\n\\[ \\tfrac45LR+\\tfrac{3}{10}LR=Wx_G\\ \\Rightarrow\\ R=\\frac{10Wx_G}{11L},\\qquad N=W-\\frac R2 . \\]\n条件 $R\\leqq\\mu\\left(W-\\frac R2\\right)$ を整理すると\n\\[ x_G\\leqq x_P\\equiv\\frac{11\\mu}{5(2+\\mu)}L. \\tag{$*$} \\]\n何も乗っていないとき $x_G=\\frac{3}{10}L$ なので，$\\dfrac{3}{10}\\leqq\\dfrac{11\\mu}{5(2+\\mu)}$ より $95\\mu\\geqq30$，すなわち $\\mu\\geqq\\boldsymbol{\\dfrac{6}{19}}$．\n\n\\textbf{(別解・図形的な見方)}\n両端とも滑り出す直前では，床の抗力も壁の抗力も法線から摩擦角 $\\lambda$（$\\tan\\lambda=$ 摩擦係数）だけ傾く．はしごには床・壁の抗力と全体の重力の 3 力がはたらくので，3 力の作用線は 1 点 P で交わる．$(*)$ の $x_P$ は，この 2 本の限界の作用線の交点 P の水平位置そのものであり，「重心が P の鉛直線より壁側に出ると，どう摩擦を配分しても支えられない」ことを表している．\n\n\\textbf{(2)}\n$\\mu=\\frac12$ のとき $x_P=\\dfrac{11\\cdot\\frac12}{5\\cdot\\frac52}L=\\dfrac{11}{25}L$．人の水平位置は $\\frac35x$ なので\n\\[ x_G=\\frac{M\\cdot\\frac{3}{10}L+2M\\cdot\\frac35x}{3M}=\\frac{L}{10}+\\frac{2x}{5}\\leqq\\frac{11}{25}L\\ \\Rightarrow\\ \\boldsymbol{x\\leqq\\frac{17}{20}L}. \\]\n$x$ がこれを越えると，どのような摩擦力の組も条件を満たさないので，はしごは必ず滑る．\n\n\\textbf{(3)}\n質量 $m'$ のおもりを B（$x=0$）に付け，人が A（水平位置 $\\frac35L$）にいるとき\n\\[ x_G=\\frac{M\\cdot\\frac{3}{10}L+2M\\cdot\\frac35L}{3M+m'}=\\frac{\\frac32ML}{3M+m'}\\leqq\\frac{11}{25}L\n\\ \\Rightarrow\\ m'\\geqq\\boldsymbol{\\frac{9}{22}M}. \\]\nB に付けたおもりは B のまわりのモーメントを増やさずに床の垂直抗力（したがって最大摩擦力）だけを増やすので，重心を B 側に引き寄せる効果をもつ．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "両端が粗いはしごでは摩擦力がつり合いの式だけでは決まらないが，静止できるかどうかは「条件を満たす力の組が存在するか」で決まり，両端の抗力が摩擦角だけ傾いた作用線の交点の鉛直線より重心が内側にあることと同値になる．"
+ },
+ "concepts": [
+  "torque",
+  "momentum-conservation",
+  "static-friction"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "剛体のつり合い",
+  "静止摩擦",
+  "不静定",
+  "摩擦角",
+  "3力の作用線",
+  "重心"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

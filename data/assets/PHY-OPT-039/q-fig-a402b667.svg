@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+<defs><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker></defs>
+<!-- water fill outline: paraboloid surface from x=120..360, center 240 -->
+<path d="M120,140 Q240,300 360,140" fill="none" stroke="#222" stroke-width="1.6"/>
+<!-- container walls and bottom -->
+<line x1="120" y1="80" x2="120" y2="280" stroke="#222" stroke-width="1.6"/>
+<line x1="360" y1="80" x2="360" y2="280" stroke="#222" stroke-width="1.6"/>
+<line x1="120" y1="280" x2="360" y2="280" stroke="#222" stroke-width="1.6"/>
+<!-- rest level -->
+<line x1="120" y1="180" x2="360" y2="180" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="372" y="185" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">静止時の水面</text>
+<!-- axis -->
+<line x1="240" y1="40" x2="240" y2="330" stroke="#888" stroke-width="1" stroke-dasharray="8,3,2,3"/>
+<!-- omega -->
+<path d="M212,58 A28,9 0 1 0 268,58" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#q-ar)"/>
+<text x="276" y="52" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">ω</text>
+<!-- O -->
+<circle cx="240" cy="220" r="2.5" fill="#222"/>
+<text x="246" y="238" font-family="Times New Roman, serif" font-size="15" fill="#222">O</text>
+<!-- H -->
+<line x1="96" y1="180" x2="96" y2="280" stroke="#222" stroke-width="1" marker-start="url(#q-ar)" marker-end="url(#q-ar)"/>
+<line x1="90" y1="180" x2="118" y2="180" stroke="#888" stroke-width="1"/>
+<text x="76" y="236" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">H</text>
+<!-- R -->
+<line x1="240" y1="305" x2="360" y2="305" stroke="#222" stroke-width="1" marker-start="url(#q-ar)" marker-end="url(#q-ar)"/>
+<text x="295" y="323" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">R</text>
+<!-- n label -->
+<text x="160" y="262" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">水（屈折率 <tspan font-family="Times New Roman, serif" font-style="italic">n</tspan>）</text>
+<!-- r and z axes small -->
+<line x1="400" y1="280" x2="450" y2="280" stroke="#222" stroke-width="1" marker-end="url(#q-ar)"/>
+<text x="452" y="292" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">r</text>
+<line x1="400" y1="280" x2="400" y2="230" stroke="#222" stroke-width="1" marker-end="url(#q-ar)"/>
+<text x="406" y="236" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">z</text>
+<!-- g -->
+<line x1="440" y1="90" x2="440" y2="140" stroke="#222" stroke-width="1.4" marker-end="url(#q-ar)"/>
+<text x="448" y="120" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">g</text>
+</svg>

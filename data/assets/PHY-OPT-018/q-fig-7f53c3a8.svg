@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<rect x="297" y="30" width="6" height="60" fill="#222"/>
+<rect x="297" y="170" width="6" height="60" fill="#222"/>
+<line x1="40" y1="130" x2="570" y2="130" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="70" cy="130" r="4" fill="#222"/>
+<text x="64" y="118" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">P</text>
+<circle cx="540" cy="130" r="3" fill="#222"/>
+<text x="542" y="118" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">Q</text>
+<text x="308" y="148" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">C</text>
+<line x1="70" y1="130" x2="300" y2="102" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="300" y1="102" x2="540" y2="130" stroke="#1f5fbf" stroke-width="1.8"/>
+<circle cx="300" cy="102" r="2.5" fill="#1f5fbf"/>
+<text x="282" y="96" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">X</text>
+<line x1="284" y1="102" x2="284" y2="130" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="270" y="122" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">ρ</text>
+<line x1="340" y1="90" x2="340" y2="130" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="346" y="122.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">a</text>
+<line x1="300" y1="90" x2="344" y2="90" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="70" y1="255" x2="300" y2="255" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="185.0" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">p</text>
+<line x1="300" y1="255" x2="540" y2="255" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="420.0" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">q</text>
+<text x="270" y="22" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">不透明な板</text>
+<text x="40" y="160" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">点光源</text>
+<path d="M 432 22 h 76 v 76 h -76 z M 492 60 A 22 22 0 1 0 448 60 A 22 22 0 1 0 492 60 z" fill="#888" fill-opacity="0.35" fill-rule="evenodd" stroke="#222" stroke-width="1.2"/>
+<line x1="470" y1="60" x2="492" y2="60" stroke="#222" stroke-width="1"/>
+<text x="476" y="56" font-family="Times New Roman, serif" font-style="italic" font-size="13" text-anchor="start" fill="#222">a</text>
+<circle cx="470" cy="60" r="1.8" fill="#222"/>
+<text x="432" y="114" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">板の正面図</text>
+</svg>

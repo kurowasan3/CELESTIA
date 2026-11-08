@@ -1,0 +1,113 @@
+{
+ "id": "PHY-RIG-010",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "支柱上の板に重ねた板の上を動く小物体（2段の転倒判定とはみ出し長さの限界）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，床に固定された2本のくさび形の支柱 C，D の上に，長さ $6a$，質量 $M$ の一様な板 AB（下板）が水平に置かれている．$\\mathrm{AC}=a$，$\\mathrm{DB}=2a$ である．下板の上に，長さ $4a$，質量 $m$ の一様な板（上板）を，その右端が B より右へ $b$（$0\\leqq b\\leqq2a$）だけはみ出すように重ねる．さらに上板の上に質量 $m$ の小物体をのせ，ゆっくり右へ動かす．小物体の位置を，B から右向きに測った水平距離 $s$ で表す（B より左なら $s<0$）．板は変形せず，どこも滑らないものとし，$M>2m$，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$M=5m$，$b=\\dfrac a2$ で小物体が B の真上（$s=0$）にあるとき，支柱 C，D が下板から受ける力の大きさ $N_{\\mathrm C}$，$N_{\\mathrm D}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "小物体を右へ動かしていくとき，上板が下板の上で傾き始める $s$ と，下板が支柱の上で傾き始める $s$ をそれぞれ求めよ．また，どちらが先に傾き始めるかは $b$ によらず $M$ と $m$ の大小だけで決まることを示し，その境目の $M$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "小物体を上板の右端まで動かしてもどちらの板も傾かないための $b$ の最大値 $b_{\\max}$ を，$M\\geqq4m$ と $2m<M<4m$ の場合に分けて求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：支柱上の板に重ねた板の上を動く小物体（2段の転倒判定とはみ出し長さの限界）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$N_{\\mathrm C}=\\dfrac56mg$，$N_{\\mathrm D}=\\dfrac{37}{6}mg$"
+   },
+   {
+    "id": "2",
+    "tex": "上板：$s>2a-b$，下板：$s>\\Bigl(\\dfrac Mm-2\\Bigr)a-b$．$M>4m$ なら上板が先，$M<4m$ なら下板が先（境目 $M=4m$ で同時）"
+   },
+   {
+    "id": "3",
+    "tex": "$M\\geqq4m$：$b_{\\max}=a$，$2m<M<4m$：$b_{\\max}=\\dfrac{(M-2m)a}{2m}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　傾き始める直前は，回転の支点以外の接触点の力が $0$ になる．上板が傾くときの支点は下板の右端 B，下板が傾くときの支点は支柱 D である．どちらも「支点より上にのっているもの全体」の力のモーメントで判定する．A を原点に右向きに座標をとると，C は $a$，D は $4a$，B は $6a$，下板の重心は $3a$，上板の重心は $6a+b-2a=4a+b$，小物体は $6a+s$．\n\n\\textbf{(1)}　下板・上板・小物体の全体について，鉛直方向のつり合い $N_{\\mathrm C}+N_{\\mathrm D}=(M+2m)g$ と，C のまわりのモーメントのつり合い\n\\[ N_{\\mathrm D}\\cdot3a=Mg\\cdot2a+mg(3a+b)+mg(5a+s) \\]\nより\n\\[ N_{\\mathrm C}=\\frac{g}{3a}\\bigl(Ma-2ma-mb-ms\\bigr). \\]\n$M=5m$，$b=a/2$，$s=0$ を入れると $N_{\\mathrm C}=\\dfrac{g}{3a}\\cdot\\dfrac52ma=\\boldsymbol{\\dfrac56mg}$，$N_{\\mathrm D}=7mg-\\dfrac56mg=\\boldsymbol{\\dfrac{37}{6}mg}$．\n\n\\textbf{(2)}　\\textbf{上板}：上板と小物体を一体とみると，下板から受ける力の作用点が B に来たとき傾き始める．B のまわりで，小物体の腕は $s$，上板の重心の腕は $2a-b$（B の左）なので，傾く条件は\n\\[ ms>m(2a-b)\\quad\\Longleftrightarrow\\quad \\boldsymbol{s>2a-b}. \\]\n\\textbf{下板}：下板が D のまわりに傾くのは $N_{\\mathrm C}<0$ が必要になるとき，すなわち (1) の式より\n\\[ Ma<m(2a+b+s)\\quad\\Longleftrightarrow\\quad \\boldsymbol{s>\\Bigl(\\frac Mm-2\\Bigr)a-b}. \\]\n2つのしきい値の差は $\\Bigl(\\dfrac Mm-2\\Bigr)a-b-(2a-b)=\\Bigl(\\dfrac Mm-4\\Bigr)a$ で $b$ を含まない（$b$ を増やすと上板の重心が右へずれ，どちらのしきい値も同じだけ下がる）．よって $\\boldsymbol{M>4m}$ \\textbf{なら上板が先，}$\\boldsymbol{M<4m}$ \\textbf{なら下板が先}に傾き，境目は $\\boldsymbol{M=4m}$．\n\n\\textbf{(3)}　小物体を右端（$s=b$）まで動かして傾かない条件は，2つのしきい値がどちらも $b$ 以上であること：\n\\[ b\\leqq2a-b,\\qquad b\\leqq\\Bigl(\\frac Mm-2\\Bigr)a-b. \\]\nすなわち $b\\leqq a$ かつ $b\\leqq\\dfrac{(M-2m)a}{2m}$．\n\\begin{itemize}\n  \\item $M\\geqq4m$ のとき $\\dfrac{(M-2m)a}{2m}\\geqq a$ なので $\\boldsymbol{b_{\\max}=a}$（上板で決まる）．\n  \\item $2m<M<4m$ のとき $\\boldsymbol{b_{\\max}=\\dfrac{(M-2m)a}{2m}}$（下板で決まる）．\n\\end{itemize}\n（$M\\leqq2m$ では $b=0$ でも小物体を B まで動かすと下板が傾くので除いた．）\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "重ねた剛体の転倒は段ごとに「その段より上にあるもの全体」の支点まわりのモーメントで判定する．上の板のはみ出しは両方のしきい値を同じだけ変えるので，どちらが先に倒れるかは質量比だけで決まり，到達できる限界は2つの不等式のうち厳しい方で決まる．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "力のモーメント",
+  "転倒",
+  "剛体のつり合い",
+  "重ねた板",
+  "場合分け"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

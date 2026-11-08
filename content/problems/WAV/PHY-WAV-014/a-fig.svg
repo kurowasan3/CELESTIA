@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380">
+  <defs>
+    <marker id="a-dim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="#222" stroke-width="1"/>
+    </marker>
+  </defs>
+  <line x1="30" y1="220" x2="500" y2="220" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- phase circle (diameter PS) -->
+  <path d="M60,220 A200,200 0 0 1 460,220" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="2,3"/>
+  <!-- energy circle (diameter PM) -->
+  <circle cx="160" cy="220" r="100" fill="none" stroke="#1f5fbf" stroke-width="1.6"/>
+  <!-- tangent lines from S -->
+  <line x1="460" y1="220" x2="120" y2="100" stroke="#c0392b" stroke-width="1.6"/>
+  <line x1="460" y1="220" x2="260" y2="290.6" stroke="#c0392b" stroke-width="1.6"/>
+  <line x1="160" y1="220" x2="193.3" y2="125.7" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="193.3" cy="125.7" r="3" fill="#222"/>
+  <text x="196" y="116" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">T</text>
+  <circle cx="60" cy="220" r="3" fill="#222"/><text x="46" y="240" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">P</text>
+  <circle cx="160" cy="220" r="3" fill="#222"/><text x="154" y="240" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">C</text>
+  <circle cx="260" cy="220" r="3" fill="#222"/><text x="254" y="240" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">M</text>
+  <path d="M452,214 L470,220 L452,226 z" fill="#222"/><text x="464" y="244" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">S</text>
+  <path d="M400,220 A60,60 0 0 1 403.4,200" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="378" y="212" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">α</text>
+  <text x="250" y="320" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf">エネルギーの位置 Q の軌跡（直径 PM）</text>
+  <text x="250" y="342" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#888">位相の位置（直径 PS）</text>
+  <line x1="60" y1="350" x2="160" y2="350" stroke="#222" stroke-width="1" marker-start="url(#a-dim)" marker-end="url(#a-dim)"/>
+  <text x="90" y="370" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">Vt<tspan font-style="normal">/4</tspan></text>
+  <line x1="160" y1="350" x2="460" y2="350" stroke="#222" stroke-width="1" marker-start="url(#a-dim)" marker-end="url(#a-dim)"/>
+  <text x="290" y="370" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">3Vt<tspan font-style="normal">/4</tspan></text>
+</svg>

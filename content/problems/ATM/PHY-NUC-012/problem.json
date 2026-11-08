@@ -1,0 +1,121 @@
+{
+ "id": "PHY-NUC-012",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "親核・娘核の崩壊系列で娘核の放射能だけを測るときの半減期の判定",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "放射性核種 A は崩壊して放射性核種 B になり，B は崩壊して安定な核種 C になる．A，B の崩壊定数（単位時間あたりに崩壊する原子核の割合）を $\\lambda_A$，$\\lambda_B$（$\\lambda_A\\ne\\lambda_B$），半減期を $T_A=\\dfrac{\\ln2}{\\lambda_A}$，$T_B=\\dfrac{\\ln2}{\\lambda_B}$ とする．\n\n時刻 $t=0$ に A だけを化学的に取り出した試料（A の原子核数 $N_0$）を用意し，B の出す放射線だけを数える検出器で B の計数率 $R_B(t)$ を測った．この検出器は B が1回崩壊するごとに一定の確率 $\\varepsilon$ で数える．A の放射線も同じ確率 $\\varepsilon$ で数えられるとし，$t=0$ に A の放射線を数えたときの計数率は $R_{A0}=\\varepsilon\\lambda_AN_0=1.00\\times10^4$ /s であった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "時刻 $t$ の B の原子核数 $N_B$ が満たす式（$\\dfrac{dN_B}{dt}$ を表す式）を立て，$N_B=C\\left(e^{-\\lambda_At}-e^{-\\lambda_Bt}\\right)$ がこれを満たすように定数 $C$ を決めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$R_B$ が最大になる時刻 $t_m$ では，B の放射能 $\\lambda_BN_B$ と A の放射能 $\\lambda_AN_A$ が等しいことを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "測定結果は図のようになった．十分に時間がたつと片対数グラフ上で直線になり，計数率は 8.0 時間ごとに半分になった．この直線を $t=0$ まで延長すると $1.33\\times10^4$ /s になり，$R_B$ は $t_m=5.3$ 時間で最大になった．ある学生は「遅い時刻の半減期 8.0 時間が B の半減期である」と考えた．\n\n(i) 遅い時刻の直線の傾きが表す半減期は，一般に A，B のどちらの半減期か．\n(ii) 直線の延長の値（$t=0$ での値）だけからは，$(T_A,\\ T_B)$ の組が2通り考えられる．それぞれ有効数字2桁で求めよ．\n(iii) $t_m$ を用いて正しい組を決め，学生の考えの正否を答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$R_B$ の最大値を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：親核・娘核の崩壊系列で娘核の放射能だけを測るときの半減期の判定",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{dN_B}{dt}=\\lambda_AN_0e^{-\\lambda_At}-\\lambda_BN_B$，$C=\\dfrac{\\lambda_AN_0}{\\lambda_B-\\lambda_A}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac{dN_B}{dt}=0$ より $\\lambda_AN_A=\\lambda_BN_B$"
+   },
+   {
+    "id": "3",
+    "tex": "(i) A，B のうち半減期の長い方（どちらのものかはこれだけでは決まらない）　(ii) $(T_A,T_B)=(8.0\\ \\text{h},\\ 2.0\\ \\text{h})$ または $(4.6\\ \\text{h},\\ 8.0\\ \\text{h})$　(iii) $(T_A,T_B)=(8.0\\ \\text{h},\\ 2.0\\ \\text{h})$．8.0 時間は親 A の半減期で，学生の考えは誤り"
+   },
+   {
+    "id": "4",
+    "tex": "$6.3\\times10^3$ /s"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 娘核の数の収支}\nA の数は $N_A=N_0e^{-\\lambda_At}$．B は A の崩壊で毎秒 $\\lambda_AN_A$ 個生まれ，自分の崩壊で毎秒 $\\lambda_BN_B$ 個減るので\n\\[ \\frac{dN_B}{dt}=\\lambda_AN_0e^{-\\lambda_At}-\\lambda_BN_B \\]\n$N_B=C(e^{-\\lambda_At}-e^{-\\lambda_Bt})$ を代入すると，$e^{-\\lambda_Bt}$ の項は両辺で $\\lambda_BCe^{-\\lambda_Bt}$ となり一致し，$e^{-\\lambda_At}$ の項を比べて $-\\lambda_AC=\\lambda_AN_0-\\lambda_BC$．よって\n\\[ C=\\boldsymbol{\\frac{\\lambda_AN_0}{\\lambda_B-\\lambda_A}} \\]\n（$t=0$ で $N_B=0$ も満たす．）\n\n\\textbf{(2)} $R_B=\\varepsilon\\lambda_BN_B$ が最大の瞬間は $\\dfrac{dN_B}{dt}=0$ なので，(1) の式から $\\lambda_AN_A=\\lambda_BN_B$．生まれる数と崩壊する数がつり合う瞬間であり，そのとき\\textbf{娘の放射能は親の放射能に等しい}．\n\n\\textbf{(3)(i) 遅い時刻に残るのは長い半減期}\n\\[ R_B(t)=\\varepsilon\\lambda_BN_B=R_{A0}\\frac{\\lambda_B}{\\lambda_B-\\lambda_A}\\left(e^{-\\lambda_At}-e^{-\\lambda_Bt}\\right) \\]\n十分時間がたつと，崩壊定数の大きい方の指数関数が先に消え，小さい方（\\textbf{半減期の長い方}）だけが残る．$\\lambda_A<\\lambda_B$ なら残るのは親 A の $e^{-\\lambda_At}$，$\\lambda_A>\\lambda_B$ なら娘 B の $e^{-\\lambda_Bt}$ である．しかも $R_B$ の時間変化の形 $\\dfrac{e^{-\\lambda_At}-e^{-\\lambda_Bt}}{\\lambda_B-\\lambda_A}$ は $\\lambda_A$ と $\\lambda_B$ を入れかえても変わらないので，形だけではどちらが親かわからない．\n\n\\textbf{(ii) 切片から2通り}\n遅い時刻の半減期 8.0 h に対応する崩壊定数を $\\lambda_L=\\dfrac{\\ln2}{8.0\\ \\mathrm h}$ とし，切片と $R_{A0}$ の比を $\\dfrac{1.33\\times10^4}{1.00\\times10^4}=\\dfrac43$ とする．\nア．親が長寿命（$\\lambda_A=\\lambda_L<\\lambda_B$）：切片は $R_{A0}\\dfrac{\\lambda_B}{\\lambda_B-\\lambda_A}$ なので $\\dfrac{\\lambda_B}{\\lambda_B-\\lambda_L}=\\dfrac43$，$\\lambda_B=4\\lambda_L$．$(T_A,T_B)=\\boldsymbol{(8.0\\ \\mathrm h,\\ 2.0\\ \\mathrm h)}$．\nイ．娘が長寿命（$\\lambda_B=\\lambda_L<\\lambda_A$）：切片は $R_{A0}\\dfrac{\\lambda_B}{\\lambda_A-\\lambda_B}$ なので $\\dfrac{\\lambda_L}{\\lambda_A-\\lambda_L}=\\dfrac43$，$\\lambda_A=\\dfrac74\\lambda_L$．$(T_A,T_B)=\\boldsymbol{(4.6\\ \\mathrm h,\\ 8.0\\ \\mathrm h)}$．\n\n\\textbf{(iii) 極大の時刻で判定}\n(2) の条件 $\\lambda_Ae^{-\\lambda_At}=\\lambda_Be^{-\\lambda_Bt}$ より $t_m=\\dfrac{\\ln(\\lambda_B/\\lambda_A)}{\\lambda_B-\\lambda_A}$．\nア：$t_m=\\dfrac{\\ln4}{3\\lambda_L}=\\dfrac{2\\ln2}{3}\\cdot\\dfrac{8.0}{\\ln2}=5.3$ h．\nイ：$t_m=\\dfrac{\\ln(7/4)}{\\frac34\\lambda_L}=\\dfrac43\\times8.0\\times\\dfrac{\\ln1.75}{\\ln2}=8.6$ h．\n測定値 5.3 h と合うのはアで，$\\boldsymbol{T_A=8.0\\ \\mathrm h,\\ T_B=2.0\\ \\mathrm h}$．遅い時刻に見えている 8.0 時間は\\textbf{親 A の半減期}であり（B は A から補給され続け，A とともに減る：過渡平衡），学生の考えは誤り．\n\n\\textbf{(4)} (2) より極大では B の放射能が A の放射能に等しいので\n\\[ R_B(t_m)=R_{A0}e^{-\\lambda_At_m}=1.00\\times10^4\\times2^{-5.33/8.0}=1.00\\times10^4\\times2^{-2/3}=\\boldsymbol{6.3\\times10^3\\ /\\mathrm s} \\]\n（イの組なら $1.00\\times10^4\\times e^{-\\frac74\\lambda_L\\times8.6}=2.7\\times10^3$ /s となり，極大の高さでも区別できる．）\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "娘核の数は「親から生まれる率−自分の崩壊率」で決まり，十分時間がたつと半減期の長い方の指数関数だけが残るので，遅い時刻の減衰から読めるのは「長い方の半減期」であって娘核の半減期とは限らない．娘核の放射能の時間変化の形は2つの崩壊定数について対称なので，どちらが親かは親の初期放射能との比（延長した直線の切片）と，極大の時刻・高さ（極大では親と娘の放射能が等しい）から判定する．"
+ },
+ "concepts": [
+  "bohr-model",
+  "nuclear-decay"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "放射性崩壊",
+  "半減期",
+  "崩壊系列",
+  "過渡平衡",
+  "片対数グラフ"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

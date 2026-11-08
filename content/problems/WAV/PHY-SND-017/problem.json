@@ -1,0 +1,144 @@
+{
+ "id": "PHY-SND-017",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "音叉の4点音源モデル：逆位相の2組の音源の干渉による4方向の消音と，片側をふさぐと大きく聞こえる理由",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "音叉の2本の腕は互いに逆向きに振動するので，腕の外側（振動方向）の空気が密になる瞬間には，腕の間に空気が吸い込まれて腕の側方の空気は疎になる．これを，上から見た図のような4つの点音源で表す．音源 P$(0,a)$，Q$(0,-a)$ は同位相で振動し，音源 R$(a,0)$，S$(-a,0)$ は互いに同位相で，P，Q とは逆位相で振動する．4つの音源の振動数は等しく，音の波長を $\\lambda$，$k=\\dfrac{2\\pi}{\\lambda}$ とする．\n観測者は原点 O から十分遠く（距離は $a$，$\\lambda$ よりずっと大きい），$x$ 軸から角 $\\varphi$ の向きにいる．各音源から観測者に届く音の圧力変化の振幅はどれも $A$ とし，届く音どうしの位相差は経路差だけで決まるとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "P，Q の2つだけが鳴っているとき，観測者の位置での合成音の振幅を $A$，$k$，$a$，$\\varphi$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "4つの音源がすべて鳴っているときの合成音の振幅 $A_{\\rm tot}(\\varphi)$ を求めよ．また，$a$ の大きさによらず音が消える向き $\\varphi$（$0\\le\\varphi<2\\pi$）をすべて求めよ．さらに，音が消える向きがこれらだけになるための $a$ の条件を $\\lambda$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "実際の音叉では $ka\\ll1$ である．$|x|\\ll1$ で $\\cos x\\approx1-\\dfrac{x^2}{2}$ を用いて，$A_{\\rm tot}(\\varphi)$ を $A$，$ka$，$\\varphi$ の簡単な式で近似せよ．最も大きく聞こえる向きと，そのときの振幅は1つの音源の何倍か．"
+     },
+     {
+      "id": "4",
+      "tex": "鳴っている音叉を耳の近くで，腕と平行な鉛直軸のまわりに毎秒 $n$ 回の割合でゆっくり一定の速さで回すと，音が聞こえなくなる瞬間は毎秒何回あるか．"
+     },
+     {
+      "id": "5",
+      "tex": "音源 S の側を管でおおい，S からの音だけが観測者に届かないようにした．$\\varphi=0$ の向きで聞く音の強さ（振幅の2乗に比例）は，おおう前の何倍になるか．$ka$ で近似式を表したうえで，音速 340 m/s，振動数 425 Hz，$a=2.0$ cm として有効数字1桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：音叉の4点音源モデル：逆位相の2組の音源の干渉による4方向の消音と，片側をふさぐと大きく聞こえる理由",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：音叉の4点音源モデル：逆位相の2組の音源の干渉による4方向の消音と，片側をふさぐと大きく聞こえる理由",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2A\\left|\\cos(ka\\sin\\varphi)\\right|$"
+   },
+   {
+    "id": "2",
+    "tex": "$A_{\\rm tot}=2A\\left|\\cos(ka\\sin\\varphi)-\\cos(ka\\cos\\varphi)\\right|$，消える向き $\\varphi=\\dfrac\\pi4,\\dfrac{3\\pi}4,\\dfrac{5\\pi}4,\\dfrac{7\\pi}4$，条件 $a<\\dfrac{\\lambda}{\\sqrt2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$A_{\\rm tot}\\approx A(ka)^2|\\cos2\\varphi|$，最大は $\\varphi=0,\\dfrac\\pi2,\\pi,\\dfrac{3\\pi}2$（振動方向と，それに垂直な向き）で $(ka)^2$ 倍"
+   },
+   {
+    "id": "4",
+    "tex": "$4n$ 回"
+   },
+   {
+    "id": "5",
+    "tex": "約 $\\dfrac{1}{(ka)^4}$ 倍，$2\\times10^3$ 倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}\\quad 十分遠くの観測者へは，各音源からの音はほぼ平行に進む．位置ベクトル $\\vec r$ の音源は，原点からの音より $\\vec r$ の観測方向成分だけ経路が短く，位相が $k\\times$（その長さ）だけ進む．P，Q の観測方向成分は $\\pm a\\sin\\varphi$ なので\n\\[ A e^{ika\\sin\\varphi}+Ae^{-ika\\sin\\varphi}=2A\\cos(ka\\sin\\varphi),\\qquad \\text{振幅}\\ \\boldsymbol{2A|\\cos(ka\\sin\\varphi)|}. \\]\n\n\\textbf{(2)}\\quad R，S は観測方向成分が $\\pm a\\cos\\varphi$ で，P，Q と逆位相だから\n\\[ \\boldsymbol{A_{\\rm tot}=2A\\left|\\cos(ka\\sin\\varphi)-\\cos(ka\\cos\\varphi)\\right|}. \\]\n$|\\sin\\varphi|=|\\cos\\varphi|$ なら2つの $\\cos$ は等しいので，$a$ によらず $\\boldsymbol{\\varphi=\\frac\\pi4,\\frac{3\\pi}4,\\frac{5\\pi}4,\\frac{7\\pi}4}$ で音が消える（2組の音源から見て対称な向き）．\nほかに消える向きがあるとすれば $ka\\sin\\varphi=\\pm ka\\cos\\varphi+2\\pi m$（$m\\ne0$ の整数）．$|\\sin\\varphi\\mp\\cos\\varphi|\\le\\sqrt2$ だから，$\\sqrt2\\,ka<2\\pi$ すなわち $\\boldsymbol{a<\\dfrac{\\lambda}{\\sqrt2}}$ ならこれは起こらない．\n\n\\textbf{(3)}\\quad $\\cos x\\approx1-\\frac{x^2}2$ を代入すると\n\\[ \\cos(ka\\sin\\varphi)-\\cos(ka\\cos\\varphi)\\approx\\frac{(ka)^2}{2}(\\cos^2\\varphi-\\sin^2\\varphi)=\\frac{(ka)^2}{2}\\cos2\\varphi \\]\nより $\\boldsymbol{A_{\\rm tot}\\approx A(ka)^2|\\cos2\\varphi|}$．最大は $\\boldsymbol{\\varphi=0,\\frac\\pi2,\\pi,\\frac{3\\pi}2}$ で，振幅は1つの音源の $\\boldsymbol{(ka)^2}$ 倍しかない．同じ向きに並んだ逆位相の音がほとんど打ち消し合うため，音叉の音は小さい．\n\n\\textbf{(4)}\\quad 音叉が1回転する間に，耳の向きは音叉から見た $\\varphi$ の全周を1回たどり，消える向き4つを1回ずつ通る．よって毎秒 $\\boldsymbol{4n}$ 回．\n\n\\textbf{(5)}\\quad $\\varphi=0$ では P，Q の位相は 0，R の位相は $ka$，S の位相は $-ka$．\nおおう前：$2A-A(e^{ika}+e^{-ika})=2A(1-\\cos ka)\\approx A(ka)^2$．\nおおった後：$2A-Ae^{ika}\\approx A(2-1-ika)=A(1-ika)$，振幅は $\\approx A$（$ka$ の1次の項は位相を少しずらすだけで，振幅には2次以上でしか効かない）．\nしたがって強さの比は $\\boldsymbol{\\approx\\dfrac{1}{(ka)^4}}$．数値は $\\lambda=\\frac{340}{425}=0.80$ m，$ka=\\frac{2\\pi\\times0.020}{0.80}\\approx0.157$ で $\\frac1{(0.157)^4}\\approx1.6\\times10^3$，有効数字1桁で $\\boldsymbol{2\\times10^3}$ 倍（近似を使わない値も約 $1.7\\times10^3$）．\n音源を1つ減らしたのに大きく聞こえるのは，ほぼ完全に起きていた打ち消し合いがくずれるからである．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "音叉は逆位相の2組の音源の重ね合わせとみなせ，遠方では経路差による位相のずれだけが打ち消し合いを破るので，振幅は $(ka)^2|\\cos2\\varphi|$ と小さく，45° ごとの4方向で消える．音源の一部をふさぐと打ち消し合いがくずれ，音はかえって $1/(ka)^4$ 倍ほど強くなる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "superposition",
+  "interference"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "干渉",
+  "経路差",
+  "逆位相",
+  "音叉",
+  "近似",
+  "四重極"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

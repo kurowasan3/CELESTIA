@@ -1,0 +1,126 @@
+{
+ "id": "PHY-OPT-037",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "眼と物体の間で動かす凹レンズによる視角の変化と明視の範囲",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "近視の人が，眼から距離 $D$ の位置にある高さ $h$ の小さな物体を見ている．焦点距離 $f$ の薄い凹レンズ（眼鏡のレンズ）を，光軸を眼と物体を結ぶ直線に合わせたまま眼から距離 $x$（$0<x<D$）の位置に置き，図のようにこのレンズを通して物体を見る．眼の大きさは無視し，像を見込む角（視角）$\\theta$ は小さいとして，$\\theta=(\\text{像の高さ})/(\\text{眼から像までの距離})$ と近似してよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "レンズによる物体の像の，眼からの距離 $y$ と，視角 $\\theta$ を $x,D,f,h$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "レンズを眼から物体まで動かすとき，$\\theta$ はどのように変化するか．$\\theta$ が最小になる $x$ と，そのときの $\\theta$ がレンズを眼に密着させたとき（$x\\to0$）の何倍かを求めよ．また，$\\theta(x)=\\theta(D-x)$ が成り立つことを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "この人は，眼から距離 $s$ 以内にある像しかはっきり見えない（近点は十分近いとする）．$D=1.00\\,\\mathrm{m}$，$f=0.50\\,\\mathrm{m}$，$s=0.80\\,\\mathrm{m}$ のとき，像がはっきり見える $x$ の範囲を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：眼と物体の間で動かす凹レンズによる視角の変化と明視の範囲",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：眼と物体の間で動かす凹レンズによる視角の変化と明視の範囲",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$y=x+\\dfrac{f(D-x)}{D+f-x}$，$\\theta=\\dfrac{fh}{fD+Dx-x^2}$"
+   },
+   {
+    "id": "2",
+    "tex": "はじめ減少し $x=\\dfrac D2$ で最小，その後増加して $x\\to D$ で $x\\to0$ のときの値に戻る．最小値は $\\dfrac{4f}{D+4f}$ 倍"
+   },
+   {
+    "id": "3",
+    "tex": "$0<x\\le0.57\\,\\mathrm{m}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 像の位置と視角}\nレンズから物体までの距離は $a=D-x$．凹レンズによる像は物体と同じ側にできる虚像で，そのレンズからの距離を $b$ とすると，写像公式 $\\dfrac1a-\\dfrac1b=-\\dfrac1f$ より\n\\[ b=\\frac{fa}{f+a}=\\frac{f(D-x)}{D+f-x}. \\]\n倍率は $\\dfrac ba=\\dfrac{f}{D+f-x}$（正立）．像は眼から見てレンズの向こう側にあるので\n\\[ y=x+b=\\boldsymbol{x+\\frac{f(D-x)}{D+f-x}}=\\frac{fD+Dx-x^2}{D+f-x}. \\]\n像の高さ $\\dfrac{fh}{D+f-x}$ を $y$ で割って\n\\[ \\theta=\\frac{fh}{D+f-x}\\cdot\\frac{D+f-x}{fD+Dx-x^2}=\\boldsymbol{\\frac{fh}{fD+Dx-x^2}}. \\]\n\n\\textbf{(2) 視角の変化}\n分母は\n\\[ g(x)=fD+x(D-x)=fD+\\frac{D^2}{4}-\\left(x-\\frac D2\\right)^2 \\]\nと書けるので，$x$ が $0$ から $D/2$ までは $g$ が増加（$\\theta$ は減少），$D/2$ から $D$ までは $g$ が減少（$\\theta$ は増加）する．よって $\\theta$ は $\\boldsymbol{x=D/2}$ で最小になる．$g(x)$ は $x$ と $D-x$ を入れかえても変わらないから $\\theta(x)=\\theta(D-x)$ である．\n\n両端では $\\theta=fh/(fD)=h/D$ で裸眼の視角と同じになる．レンズを眼に密着させると，眼に向かう光線はレンズの中心を通るので曲がらず，レンズを物体に密着させると像は物体そのものと重なるためである．最小値との比は\n\\[ \\frac{fh/(fD+D^2/4)}{h/D}=\\boldsymbol{\\frac{4f}{D+4f}}. \\]\n（眼の中心から角 $\\theta$ で出る光線を逆にたどる（光の逆進性）と，物体面での高さは $h=\\{D+x(D-x)/f\\}\\theta$ となり，これが $x$ と $D-x$ について対称であることが $\\theta(x)=\\theta(D-x)$ の意味である．）\n\n\\textbf{(3) はっきり見える範囲}\n$\\dfrac{dy}{dx}=1-\\dfrac{f^2}{(D+f-x)^2}>0$（$D+f-x>f$ より）なので，$y$ は $x$ とともに単調に増加し，$y(0)=\\dfrac{fD}{D+f}=0.33\\,\\mathrm{m}<s$，$y(D)=D>s$ である．$y=s$ とおくと\n\\[ x(D+f-x)+f(D-x)=s(D+f-x)\\quad\\Longrightarrow\\quad x^2-(D+s)x+s(D+f)-fD=0. \\]\n数値を代入すると $x^2-1.8x+0.70=0$ で，$0<x<D$ の解は\n\\[ x=\\frac{1.8-\\sqrt{0.44}}{2}=0.568\\,\\mathrm{m}. \\]\nよって像がはっきり見えるのは $\\boldsymbol{0<x\\le0.57\\,\\mathrm{m}}$．視角が最小になる $x=0.50\\,\\mathrm{m}$ はこの範囲に入るので，物体が「小さくなってから大きくなる」様子がはっきり見え，$x>0.57\\,\\mathrm{m}$ では像がぼやける．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "凹レンズを眼と物体の間で動かすと，視角は $\\theta=fh/\\{fD+x(D-x)\\}$ となり，眼側と物体側の入れかえ（$x\\leftrightarrow D-x$）について対称である．レンズが眼や物体に密着すると視角は裸眼と同じで，中点で最小になる．像の位置は単調に遠ざかるので，はっきり見える範囲は遠点の条件で決まる．"
+ },
+ "concepts": [
+  "light-interference",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "凹レンズ",
+  "視角",
+  "近視",
+  "写像公式",
+  "対称性"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

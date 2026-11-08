@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380" width="480" height="380">
+<defs>
+<marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#c0392b"/></marker>
+<marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#222"/></marker>
+<marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#888"/></marker>
+</defs>
+<line x1="26.81" y1="341.76" x2="413.19" y2="238.24" stroke="#222" stroke-width="1.6"/>
+<line x1="36.47" y1="339.18" x2="30.82" y2="348.97" stroke="#222" stroke-width="1"/>
+<line x1="46.13" y1="336.59" x2="40.48" y2="346.39" stroke="#222" stroke-width="1"/>
+<line x1="55.79" y1="334.00" x2="50.14" y2="343.80" stroke="#222" stroke-width="1"/>
+<line x1="65.45" y1="331.41" x2="59.80" y2="341.21" stroke="#222" stroke-width="1"/>
+<line x1="75.11" y1="328.82" x2="69.45" y2="338.62" stroke="#222" stroke-width="1"/>
+<line x1="84.77" y1="326.23" x2="79.11" y2="336.03" stroke="#222" stroke-width="1"/>
+<line x1="94.43" y1="323.65" x2="88.77" y2="333.44" stroke="#222" stroke-width="1"/>
+<line x1="104.09" y1="321.06" x2="98.43" y2="330.86" stroke="#222" stroke-width="1"/>
+<line x1="113.75" y1="318.47" x2="108.09" y2="328.27" stroke="#222" stroke-width="1"/>
+<line x1="123.41" y1="315.88" x2="117.75" y2="325.68" stroke="#222" stroke-width="1"/>
+<line x1="133.07" y1="313.29" x2="127.41" y2="323.09" stroke="#222" stroke-width="1"/>
+<line x1="142.73" y1="310.71" x2="137.07" y2="320.50" stroke="#222" stroke-width="1"/>
+<line x1="152.39" y1="308.12" x2="146.73" y2="317.92" stroke="#222" stroke-width="1"/>
+<line x1="162.04" y1="305.53" x2="156.39" y2="315.33" stroke="#222" stroke-width="1"/>
+<line x1="171.70" y1="302.94" x2="166.05" y2="312.74" stroke="#222" stroke-width="1"/>
+<line x1="181.36" y1="300.35" x2="175.71" y2="310.15" stroke="#222" stroke-width="1"/>
+<line x1="191.02" y1="297.76" x2="185.37" y2="307.56" stroke="#222" stroke-width="1"/>
+<line x1="200.68" y1="295.18" x2="195.02" y2="304.97" stroke="#222" stroke-width="1"/>
+<line x1="210.34" y1="292.59" x2="204.68" y2="302.39" stroke="#222" stroke-width="1"/>
+<line x1="220.00" y1="290.00" x2="214.34" y2="299.80" stroke="#222" stroke-width="1"/>
+<line x1="229.66" y1="287.41" x2="224.00" y2="297.21" stroke="#222" stroke-width="1"/>
+<line x1="239.32" y1="284.82" x2="233.66" y2="294.62" stroke="#222" stroke-width="1"/>
+<line x1="248.98" y1="282.24" x2="243.32" y2="292.03" stroke="#222" stroke-width="1"/>
+<line x1="258.64" y1="279.65" x2="252.98" y2="289.45" stroke="#222" stroke-width="1"/>
+<line x1="268.30" y1="277.06" x2="262.64" y2="286.86" stroke="#222" stroke-width="1"/>
+<line x1="277.96" y1="274.47" x2="272.30" y2="284.27" stroke="#222" stroke-width="1"/>
+<line x1="287.61" y1="271.88" x2="281.96" y2="281.68" stroke="#222" stroke-width="1"/>
+<line x1="297.27" y1="269.29" x2="291.62" y2="279.09" stroke="#222" stroke-width="1"/>
+<line x1="306.93" y1="266.71" x2="301.28" y2="276.50" stroke="#222" stroke-width="1"/>
+<line x1="316.59" y1="264.12" x2="310.94" y2="273.92" stroke="#222" stroke-width="1"/>
+<line x1="326.25" y1="261.53" x2="320.59" y2="271.33" stroke="#222" stroke-width="1"/>
+<line x1="335.91" y1="258.94" x2="330.25" y2="268.74" stroke="#222" stroke-width="1"/>
+<line x1="345.57" y1="256.35" x2="339.91" y2="266.15" stroke="#222" stroke-width="1"/>
+<line x1="355.23" y1="253.77" x2="349.57" y2="263.56" stroke="#222" stroke-width="1"/>
+<line x1="364.89" y1="251.18" x2="359.23" y2="260.98" stroke="#222" stroke-width="1"/>
+<line x1="374.55" y1="248.59" x2="368.89" y2="258.39" stroke="#222" stroke-width="1"/>
+<line x1="384.21" y1="246.00" x2="378.55" y2="255.80" stroke="#222" stroke-width="1"/>
+<line x1="393.87" y1="243.41" x2="388.21" y2="253.21" stroke="#222" stroke-width="1"/>
+<line x1="403.53" y1="240.82" x2="397.87" y2="250.62" stroke="#222" stroke-width="1"/>
+<line x1="413.19" y1="238.24" x2="407.53" y2="248.03" stroke="#222" stroke-width="1"/>
+<line x1="26.81" y1="341.76" x2="146.81" y2="341.76" stroke="#888" stroke-width="1" stroke-dasharray="5 4"/>
+<path d="M106.81,341.76 A80,80 0 0 0 104.09,321.06" stroke="#222" stroke-width="1.6" fill="none"/>
+<text x="118.8" y="335.8" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">β</text>
+<path d="M138.8,296.2 L293.4,254.8 L253.3,105.1 L98.7,146.5 Z" stroke="#888" stroke-width="1" fill="none"/>
+<circle cx="162.04" cy="305.53" r="3" fill="#222"/>
+<circle cx="277.96" cy="274.47" r="3" fill="#222"/>
+<text x="156.0" y="327.5" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">内輪</text>
+<text x="284.0" y="296.5" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">外輪</text>
+<circle cx="183.77" cy="154.77" r="3.5" fill="#222"/>
+<text x="167.8" y="148.8" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">G</text>
+<line x1="183.77" y1="154.77" x2="183.77" y2="224.77" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<text x="159.8" y="222.8" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1f5fbf" text-anchor="middle">mg</text>
+<line x1="183.77" y1="154.77" x2="238.85" y2="154.77" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<text x="244.84711363678713" y="148.77038431953045" font-size="15" fill="#1f5fbf"><tspan font-family="Times New Roman, serif" font-style="italic">m</tspan><tspan font-family="Times New Roman, serif" font-style="italic">v</tspan><tspan baseline-shift="super" font-size="10" font-family="Noto Sans CJK JP, sans-serif">2</tspan><tspan font-family="Noto Sans CJK JP, sans-serif">/</tspan><tspan font-family="Times New Roman, serif" font-style="italic">r</tspan></text>
+<line x1="183.77" y1="154.77" x2="238.85" y2="224.77" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<text x="288.8" y="230.8" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#c0392b" text-anchor="middle">見かけの重力</text>
+<line x1="238.85" y1="154.77" x2="238.85" y2="224.77" stroke="#888" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="183.77" y1="224.77" x2="238.85" y2="224.77" stroke="#888" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="183.77" y1="154.77" x2="220.00" y2="290.00" stroke="#888" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="183.77" y1="154.77" x2="277.96" y2="274.47" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="205.8" y="246.8" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">φ</text>
+<text x="250" y="30" font-size="13" fill="#222" text-anchor="middle"><tspan font-family="Noto Sans CJK JP, sans-serif">内輪が浮く瞬間：見かけの重力の作用線が外輪の接地点を通る（tan</tspan><tspan font-family="Times New Roman, serif" font-style="italic">φ</tspan><tspan font-family="Noto Sans CJK JP, sans-serif"> = </tspan><tspan font-family="Times New Roman, serif" font-style="italic">d</tspan><tspan font-family="Noto Sans CJK JP, sans-serif">/</tspan><tspan font-family="Times New Roman, serif" font-style="italic">h</tspan><tspan font-family="Noto Sans CJK JP, sans-serif">）</tspan></text>
+</svg>

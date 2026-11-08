@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260">
+  <defs>
+    <marker id="a-ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/></marker>
+  </defs>
+  <!-- E at x=-3h/4 ; scale h=160px -> E at 260-120=140, P at 260 ; O at y=40+160=200 ; F at 260+120=380 -->
+  <line x1="40" y1="40" x2="480" y2="40" stroke="#888" stroke-width="1" stroke-dasharray="6,4"/>
+  <circle cx="140" cy="40" r="3.5" fill="#222"/><circle cx="260" cy="40" r="3.5" fill="#222"/><circle cx="380" cy="40" r="3.5" fill="#222"/>
+  <circle cx="260" cy="200" r="3.5" fill="#222"/>
+  <text x="132" y="30" font-family="Times New Roman, serif" font-size="16" fill="#222">E</text>
+  <text x="254" y="30" font-family="Times New Roman, serif" font-size="16" fill="#222">P</text>
+  <text x="374" y="30" font-family="Times New Roman, serif" font-size="16" fill="#222">F</text>
+  <text x="254" y="222" font-family="Times New Roman, serif" font-size="16" fill="#222">O</text>
+  <line x1="140" y1="40" x2="260" y2="200" stroke="#c0392b" stroke-width="1.6"/>
+  <line x1="380" y1="40" x2="260" y2="200" stroke="#222" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="260" y1="40" x2="260" y2="200" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- velocity component -->
+  <line x1="140" y1="40" x2="200" y2="40" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+  <text x="180" y="62" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#1f5fbf">v</text>
+  <path d="M 164 40 A 24 24 0 0 1 154.4 59.2" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="150" y="80" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">θ</text>
+  <text x="150" y="130" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#c0392b">Vt<tspan baseline-shift="sub" font-size="10" font-style="normal">1</tspan></text>
+  <text x="268" y="125" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">h</text>
+  <text x="300" y="250" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">EP = </text>
+  <text x="336" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">vt<tspan baseline-shift="sub" font-size="10" font-style="normal">1</tspan></text>
+  <text x="356" y="250" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">，EO = </text>
+  <text x="410" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">Vt<tspan baseline-shift="sub" font-size="10" font-style="normal">1</tspan></text>
+  <text x="20" y="250" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">E：真上で見えた瞬間に聞く音を出した位置</text>
+</svg>

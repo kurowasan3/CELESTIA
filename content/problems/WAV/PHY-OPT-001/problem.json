@@ -1,0 +1,129 @@
+{
+ "id": "PHY-OPT-001",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "光導波路の受光条件と伝搬時間の広がり（入射側媒質による場合分け）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，屈折率 $n_1$ の平板状のコアを屈折率 $n_2$（$n_2<n_1$）のクラッドではさんだ，長さ $l$ の光導波路がある．入射端面は軸に垂直で，入射端面の外側は屈折率 $n_0$ の一様な媒質で満たされている．入射端面の中心に，紙面内のさまざまな向きから光が入射角 $\\alpha$（$0\\le\\alpha<90^\\circ$）で入射する．コア内での屈折角を $\\beta$ とする．コアとクラッドの境界で全反射しない光はクラッドへ逃げて失われるものとし，光線はすべて紙面内にあるとする．真空中の光速を $c$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "入射した光がコア内を全反射をくり返して進むための $\\alpha$ の条件を，$n_0,\\ n_1,\\ n_2$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "コア内を進む光が入射端から出射端に達するまでの時間を，$\\beta$ を用いて表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "時刻 $0$ に，ごく短いパルス光がさまざまな入射角で入射端面に入った．出射端に光が届き始めてから届き終わるまでの時間 $\\Delta t$ を求めよ．ただし，$n_0\\ge\\sqrt{n_1^2-n_2^2}$ の場合と $n_0<\\sqrt{n_1^2-n_2^2}$ の場合に分けて答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$n_1=1.60$，$n_2=1.20$，$l=1.0\\times10^3\\ \\mathrm{m}$，$c=3.0\\times10^8\\ \\mathrm{m/s}$ とする．入射側の媒質が空気（$n_0=1.00$）の場合と水（$n_0=1.33$）の場合のそれぞれについて，$\\Delta t$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の空気の場合で，$n_1=1.60$ は変えずにクラッドの屈折率 $n_2$ だけを少し変えても $\\Delta t$ が変わらないのは，$n_2$ がどのような範囲にあるときか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：光導波路の受光条件と伝搬時間の広がり（入射側媒質による場合分け）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$n_0\\sin\\alpha<\\sqrt{n_1^2-n_2^2}$（右辺が $n_0$ 以上なら，すべての $\\alpha$ で成り立つ）"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac{n_1l}{c\\cos\\beta}$"
+   },
+   {
+    "id": "3",
+    "tex": "$n_0\\ge\\sqrt{n_1^2-n_2^2}$ のとき $\\Delta t=\\dfrac{n_1l}{c}\\left(\\dfrac{n_1}{n_2}-1\\right)$，$n_0<\\sqrt{n_1^2-n_2^2}$ のとき $\\Delta t=\\dfrac{n_1l}{c}\\left(\\dfrac{n_1}{\\sqrt{n_1^2-n_0^2}}-1\\right)$"
+   },
+   {
+    "id": "4",
+    "tex": "空気：$1.5\\times10^{-6}\\ \\mathrm{s}$，水：$1.8\\times10^{-6}\\ \\mathrm{s}$"
+   },
+   {
+    "id": "5",
+    "tex": "$n_2<\\sqrt{1.56}\\approx1.25$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　コア内の光線の傾き $\\beta$ には上限があり，それは「側面で全反射すること」と「入射端で屈折できること（$\\alpha<90^\\circ$）」の2つの制約のうち厳しい方で決まる．出射端までの時間は軸方向の速度成分で決まるので，時間の広がりは $\\beta$ の上限だけで決まる．\n\n\\textbf{(1)}　入射端での屈折の法則より $n_0\\sin\\alpha=n_1\\sin\\beta$．側面への入射角は $90^\\circ-\\beta$ で，全反射の条件は\n\\[ n_1\\sin(90^\\circ-\\beta)>n_2\\quad\\Longleftrightarrow\\quad n_1\\cos\\beta>n_2 \\]\n両辺を2乗して $n_1^2(1-\\sin^2\\beta)>n_2^2$，$n_1\\sin\\beta=n_0\\sin\\alpha$ を代入すると\n\\[ \\boldsymbol{n_0\\sin\\alpha<\\sqrt{n_1^2-n_2^2}} \\]\nコアの上下の境界は平行なので，反射の法則により以後の反射でも入射角は $90^\\circ-\\beta$ のまま変わらず，全反射がくり返される．なお，右辺が $n_0$ 以上ならば，この条件はすべての $\\alpha$（$<90^\\circ$）で成り立つ．\n\n\\textbf{(2)}　コア内の光速は $\\dfrac{c}{n_1}$，その軸方向成分は $\\dfrac{c}{n_1}\\cos\\beta$．ジグザグの道のりを追わなくても，軸方向に $l$ 進む時間として\n\\[ \\boldsymbol{t(\\beta)=\\frac{n_1l}{c\\cos\\beta}} \\]\n\n\\textbf{(3)}　$t(\\beta)$ は $\\beta$ とともに増加する．最も早いのは $\\beta=0$ の光で $t=\\dfrac{n_1l}{c}$．最も遅いのは $\\beta$ が最大の光である．$\\beta$ には次の2つの制約がある．\n(i) 全反射：$\\cos\\beta>\\dfrac{n_2}{n_1}$，すなわち $\\sin\\beta<\\dfrac{\\sqrt{n_1^2-n_2^2}}{n_1}$\n\n(ii) 屈折：$\\sin\\beta=\\dfrac{n_0\\sin\\alpha}{n_1}<\\dfrac{n_0}{n_1}$\n$n_0\\ge\\sqrt{n_1^2-n_2^2}$ のときは (i) の方が厳しく，$\\cos\\beta$ の下限は $\\dfrac{n_2}{n_1}$ なので\n\\[ \\Delta t=\\frac{n_1l}{c}\\cdot\\frac{n_1}{n_2}-\\frac{n_1l}{c}=\\boldsymbol{\\frac{n_1l}{c}\\left(\\frac{n_1}{n_2}-1\\right)} \\]\n$n_0<\\sqrt{n_1^2-n_2^2}$ のときは (ii) の方が厳しく，すれすれの入射（$\\alpha\\to90^\\circ$）で $\\sin\\beta\\to\\dfrac{n_0}{n_1}$，$\\cos\\beta\\to\\dfrac{\\sqrt{n_1^2-n_0^2}}{n_1}$ となるので\n\\[ \\boldsymbol{\\Delta t=\\frac{n_1l}{c}\\left(\\frac{n_1}{\\sqrt{n_1^2-n_0^2}}-1\\right)} \\]\n\n\\textbf{(4)}　$\\sqrt{n_1^2-n_2^2}=\\sqrt{2.56-1.44}=\\sqrt{1.12}\\approx1.058$，$\\dfrac{n_1l}{c}=\\dfrac{1.60\\times1.0\\times10^3}{3.0\\times10^8}\\approx5.33\\times10^{-6}$ s．\n\n空気（$n_0=1.00<1.058$）：(ii) で決まり，$\\dfrac{1.60}{\\sqrt{1.56}}-1\\approx0.281$ より $\\Delta t\\approx\\boldsymbol{1.5\\times10^{-6}\\ \\mathrm{s}}$．\n\n水（$n_0=1.33>1.058$）：(i) で決まり，$\\dfrac{1.60}{1.20}-1=\\dfrac13$ より $\\Delta t\\approx\\boldsymbol{1.8\\times10^{-6}\\ \\mathrm{s}}$．\n\n入射側を水にすると受け入れられる光の範囲（受光角）が狭まる（$\\sin\\alpha<1.058/1.33$）にもかかわらず，コア内の最大傾きはかえって大きくなり，広がりは増える．空気中では，コアの全反射の限界より手前で「すれすれ入射」の限界に達しているためである．\n\n\\textbf{(5)}　空気の場合に $\\Delta t$ が $n_2$ によらないのは，(ii) で決まる場合，すなわち $1<\\sqrt{n_1^2-n_2^2}$ のときである．\n\\[ n_2^2<n_1^2-1=1.56\\qquad\\therefore\\ \\boldsymbol{n_2<\\sqrt{1.56}\\approx1.25} \\]\n（$n_2$ は $n_1$ より小さい正の値．）\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "コア内の光線の傾きの上限は，側面での全反射条件と入射端での屈折（すれすれ入射）の制約のうち厳しい方で決まり，入射側媒質の屈折率によって支配的な制約が入れ替わる．到達時間は軸方向の速度成分 (c/n)cosβ で決まるため，時間の広がりは傾きの上限だけで決まる．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "全反射",
+  "屈折の法則",
+  "臨界角",
+  "光ファイバー",
+  "場合分け"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

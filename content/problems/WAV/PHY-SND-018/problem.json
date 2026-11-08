@@ -1,0 +1,135 @@
+{
+ "id": "PHY-SND-018",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "円運動する観測者が静止音源から聞く音（視線方向の速度成分と音源が円の内側・外側にある場合の違い）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な床の上で，点 O を中心に一定の角速度 $\\omega$ で反時計回りに回転するアームの先端（O からの距離 $r$）に観測者 P が乗っている．床には，振動数 $f_0$ の音を出す小さなスピーカー S が固定されていて（回転しない），OS $=d$ である．図のように $\\angle{\\rm POS}=\\theta$ を OS から反時計回りに測る．音速を $V$ とし，風はなく，$\\omega r$，$\\omega d$ は $V$ より十分小さい．\n\n音源が静止しているので，観測者が聞く音の振動数は，その瞬間の観測者の速度の「S から P へ向かう向き」の成分 $v_{\\rm SP}$ を用いて $f=f_0\\,\\dfrac{V-v_{\\rm SP}}{V}$ と表される．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$v_{\\rm SP}$ を $r,\\ d,\\ \\omega,\\ \\theta$ で表せ．また，O から直線 SP に下ろした垂線の長さを $h$ とすると，$|v_{\\rm SP}|=\\omega h$ が成り立つことを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "図 (a) のように $d<r$ のとき，観測者が聞く音の最大の振動数 $f_{\\max}$ と最小の振動数 $f_{\\min}$ を求めよ．また，最小の振動数を聞くときの $\\cos\\theta$ の値を求めよ（$0<\\theta<\\pi$）．"
+     },
+     {
+      "id": "3",
+      "tex": "図 (b) のように $d>r$ のとき，同様に $f_{\\max}$，$f_{\\min}$ と，最小の振動数を聞くときの $\\cos\\theta$ の値を求めよ（$0<\\theta<\\pi$）．"
+     },
+     {
+      "id": "4",
+      "tex": "$r=5.0$ m，$\\omega=2.0$ rad/s の装置で，位置も振動数もわからない静止したスピーカーの音を聞いた．音速は $340$ m/s である．聞こえた音の振動数は最大 $700$ Hz，最小 $660$ Hz で，最小の振動数を聞いてから次に最大の振動数を聞くまでの時間は $\\dfrac{2\\pi}{3}$ s であった．\n  \\begin{enumerate}\n    \\item スピーカーの振動数 $f_0$ を求めよ．\n    \\item 時間の情報だけから考えられる $d$ の値を2つ求めよ．\n    \\item 振動数の情報を用いて，実際の $d$ の値を決めよ．\n  \\end{enumerate}"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：円運動する観測者が静止音源から聞く音（視線方向の速度成分と音源が円の内側・外側にある場合の違い）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：円運動する観測者が静止音源から聞く音（視線方向の速度成分と音源が円の内側・外側にある場合の違い）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_{\\rm SP}=\\dfrac{\\omega rd\\sin\\theta}{\\sqrt{r^2+d^2-2rd\\cos\\theta}}$（$h\\cdot{\\rm SP}=rd\\sin\\theta$ より $|v_{\\rm SP}|=\\omega h$）"
+   },
+   {
+    "id": "2",
+    "tex": "$f_{\\max}=f_0\\left(1+\\dfrac{\\omega d}{V}\\right)$，$f_{\\min}=f_0\\left(1-\\dfrac{\\omega d}{V}\\right)$，$\\cos\\theta=\\dfrac dr$"
+   },
+   {
+    "id": "3",
+    "tex": "$f_{\\max}=f_0\\left(1+\\dfrac{\\omega r}{V}\\right)$，$f_{\\min}=f_0\\left(1-\\dfrac{\\omega r}{V}\\right)$，$\\cos\\theta=\\dfrac rd$"
+   },
+   {
+    "id": "4",
+    "tex": "(a) $f_0=6.8\\times10^2$ Hz　(b) $d=2.5$ m，$10$ m　(c) $d=10$ m"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　O を原点，OS の向きを $x$ 軸にとると，P$(r\\cos\\theta,\\ r\\sin\\theta)$，S$(d,\\ 0)$，観測者の速度は $\\vec v=r\\omega(-\\sin\\theta,\\ \\cos\\theta)$．$\\overrightarrow{\\rm SP}=(r\\cos\\theta-d,\\ r\\sin\\theta)$ なので\n\\[ \\vec v\\cdot\\overrightarrow{\\rm SP}=r\\omega\\left\\{-\\sin\\theta(r\\cos\\theta-d)+r\\sin\\theta\\cos\\theta\\right\\}=r\\omega d\\sin\\theta, \\]\n\\[ v_{\\rm SP}=\\frac{\\vec v\\cdot\\overrightarrow{\\rm SP}}{|\\overrightarrow{\\rm SP}|}=\\boldsymbol{\\frac{\\omega rd\\sin\\theta}{\\sqrt{r^2+d^2-2rd\\cos\\theta}}}. \\]\n一方，三角形 OSP の面積を2通りに表すと $\\frac12rd|\\sin\\theta|=\\frac12h\\cdot{\\rm SP}$．よって $|v_{\\rm SP}|=\\omega\\cdot\\dfrac{rd|\\sin\\theta|}{\\rm SP}=\\omega h$．\n（回転する物体上の点の速度の，ある直線方向の成分は「角速度 × 回転中心からその直線までの距離」になる，ということである．）\n\n\\textbf{(2)}　$|v_{\\rm SP}|$ の最大は，S を通り円と交わる直線のうち，O からの距離 $h$ が最大のものを探せばよい．S を通る直線と O の距離は OS $=d$ 以下で，等号は直線が OS に垂直なとき．$d<r$ ならこの直線は円と交わるので，$|v_{\\rm SP}|$ の最大値は $\\omega d$．このとき P は S の真上（または真下）にあるので $\\cos\\theta=\\boldsymbol{\\dfrac dr}$．$0<\\theta<\\pi$ では $\\sin\\theta>0$ より $v_{\\rm SP}>0$（遠ざかる）なので，ここで最小の振動数を聞く．したがって\n\\[ f_{\\max}=\\boldsymbol{f_0\\left(1+\\frac{\\omega d}{V}\\right)},\\qquad f_{\\min}=\\boldsymbol{f_0\\left(1-\\frac{\\omega d}{V}\\right)}. \\]\n$r$ によらないことに注意する．\n\n\\textbf{(3)}　$d>r$ では，OS に垂直な直線は円と交わらない．円と交わる直線の O からの距離は $r$ 以下で，等号は直線 SP が円に接するとき（OP $\\perp$ SP）．よって最大値は $\\omega r$ で，OP $\\perp$ SP より $\\cos\\theta=\\dfrac{\\rm OP}{\\rm OS}=\\boldsymbol{\\dfrac rd}$．\n\\[ f_{\\max}=\\boldsymbol{f_0\\left(1+\\frac{\\omega r}{V}\\right)},\\qquad f_{\\min}=\\boldsymbol{f_0\\left(1-\\frac{\\omega r}{V}\\right)}. \\]\n（(1) の式を $c=\\cos\\theta$ で微分しても，極値の条件は $rdc^2-(r^2+d^2)c+rd=0$，すなわち $c=\\dfrac dr$ または $\\dfrac rd$ となり，$|c|\\le1$ を満たす方が選ばれる．）\n\n\\textbf{(4)(a)}　$f_{\\max}=f_0(1+x)$，$f_{\\min}=f_0(1-x)$ の形なので $f_0=\\dfrac{f_{\\max}+f_{\\min}}{2}=680$ Hz $=\\boldsymbol{6.8\\times10^2}$ Hz．\n\n\\textbf{(4)(b)}　最小を聞く角を $\\theta_0$（$0<\\theta_0<\\frac{\\pi}{2}$）とすると，最大を聞くのは $v_{\\rm SP}$ が負で最小となる $2\\pi-\\theta_0$．その間の時間は $\\dfrac{2\\pi-2\\theta_0}{\\omega}=\\dfrac{2\\pi}{3}$ s より $\\theta_0=\\pi-\\dfrac{2\\pi}{3}=\\dfrac{\\pi}{3}$，$\\cos\\theta_0=\\dfrac12$．(2) なら $\\dfrac dr=\\dfrac12$，(3) なら $\\dfrac rd=\\dfrac12$ なので，候補は\n\\[ d=\\boldsymbol{2.5\\ {\\rm m}}\\quad\\text{または}\\quad d=\\boldsymbol{10\\ {\\rm m}}. \\]\nこの2点は円に関して互いに反転の位置（$d_1d_2=r^2$）にあり，最大・最小を聞く方向は一致してしまう．\n\n\\textbf{(4)(c)}　$f_{\\max}-f_0=f_0\\dfrac{\\omega h_{\\max}}{V}$ より $h_{\\max}=\\dfrac{340\\times20}{680\\times2.0}=5.0$ m．$d=2.5$ m なら $h_{\\max}=d=2.5$ m（振れ幅は $\\pm10$ Hz）になるはずなので不適．$h_{\\max}=r$ となるのは S が円の外側にある場合で，$d=\\boldsymbol{10}$ m．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回転する観測者の速度の視線（SP）方向の成分は「角速度 × 回転中心から直線 SP までの距離」に等しいので，ドップラー効果の最大・最小は S を通る直線と中心の距離の最大で決まり，音源が円の内側なら $\\omega d$，外側なら SP が円に接するときの $\\omega r$ になる．極値を聞く方向の情報だけでは $d$ と $r^2/d$（円に関する反転）が区別できず，振れ幅で決まる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "circular-motion",
+  "torque"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "等速円運動",
+  "視線方向の速度成分",
+  "場合分け",
+  "逆問題"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

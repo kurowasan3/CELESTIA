@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 336">
+<defs><marker id="a-ak" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#222"/></marker>
+<marker id="a-ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#c0392b"/></marker></defs>
+<line x1="50" y1="280" x2="530" y2="280" stroke="#222" stroke-width="1.6" marker-end="url(#a-ak)"/>
+<line x1="50" y1="280" x2="50" y2="25" stroke="#222" stroke-width="1.6" marker-end="url(#a-ak)"/>
+<text x="300" y="324" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">V<tspan font-style="normal"> − </tspan>nb<tspan font-style="normal" font-family="Noto Sans CJK JP, sans-serif" font-size="12">（目盛りは対数）</tspan></text>
+<text x="30" y="22" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">T</text>
+<path d="M 280.0,225.0 L 274.6,223.0 L 269.2,220.9 L 263.8,218.8 L 258.5,216.6 L 253.1,214.3 L 247.7,211.9 L 242.3,209.5 L 236.9,206.9 L 231.5,204.3 L 226.2,201.5 L 220.8,198.7 L 215.4,195.7 L 210.0,192.7 L 204.6,189.5 L 199.2,186.3 L 193.8,182.9 L 188.5,179.4 L 183.1,175.7 L 177.7,171.9 L 172.3,168.0 L 166.9,164.0 L 161.5,159.8 L 156.2,155.4 L 150.8,150.9 L 145.4,146.2 L 140.0,141.4 L 134.6,136.4 L 129.2,131.2 L 123.8,125.8 L 118.5,120.2 L 113.1,114.5 L 107.7,108.5 L 102.3,102.3 L 96.9,95.8 L 91.5,89.2 L 86.2,82.3 L 80.8,75.1 L 75.4,67.7 L 70.0,60.0" fill="none" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<path d="M 280.0,60.0 L 285.4,67.7 L 290.8,75.1 L 296.2,82.3 L 301.5,89.2 L 306.9,95.8 L 312.3,102.3 L 317.7,108.5 L 323.1,114.5 L 328.5,120.2 L 333.8,125.8 L 339.2,131.2 L 344.6,136.4 L 350.0,141.4 L 355.4,146.2 L 360.8,150.9 L 366.2,155.4 L 371.5,159.8 L 376.9,164.0 L 382.3,168.0 L 387.7,171.9 L 393.1,175.7 L 398.5,179.4 L 403.8,182.9 L 409.2,186.3 L 414.6,189.5 L 420.0,192.7 L 425.4,195.7 L 430.8,198.7 L 436.2,201.5 L 441.5,204.3 L 446.9,206.9 L 452.3,209.5 L 457.7,211.9 L 463.1,214.3 L 468.5,216.6 L 473.8,218.8 L 479.2,220.9 L 484.6,223.0 L 490.0,225.0" fill="none" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<line x1="74.0" y1="60.0" x2="274.0" y2="60.0" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#a-ar)"/>
+<line x1="50" y1="225.0" x2="510" y2="225.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="50" y1="60.0" x2="290" y2="60.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+<line x1="70.0" y1="280" x2="70.0" y2="60.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="280.0" y1="280" x2="280.0" y2="60.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="490.0" y1="280" x2="490.0" y2="225.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="20" y="230.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">T<tspan baseline-shift="sub" font-size="10" font-style="normal">1</tspan></text>
+<text x="10" y="65.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">4<tspan font-family="Times New Roman, serif" font-style="italic">T</tspan><tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="56.0" y="298" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">u<tspan baseline-shift="sub" font-size="10" font-style="normal">2</tspan></text>
+<text x="256.0" y="298" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">8<tspan font-family="Times New Roman, serif" font-style="italic">u</tspan><tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<text x="462.0" y="298" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">64<tspan font-family="Times New Roman, serif" font-style="italic">u</tspan><tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<circle cx="280.0" cy="225.0" r="4" fill="#222"/><text x="288.0" y="243.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">1</text>
+<circle cx="70.0" cy="60.0" r="4" fill="#222"/><text x="66.0" y="50.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">2</text>
+<circle cx="280.0" cy="60.0" r="4" fill="#222"/><text x="286.0" y="50.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">3</text>
+<circle cx="490.0" cy="225.0" r="4" fill="#222"/><text x="496.0" y="215.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">4</text>
+<text x="120" y="48.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#c0392b">自由膨張（温度一定）</text>
+<text x="110" y="200" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf">断熱圧縮</text>
+<text x="360" y="120" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf">断熱膨張</text>
+<text x="300" y="25" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">u<tspan font-style="normal" font-family="Noto Sans CJK JP, sans-serif"> = </tspan>V<tspan font-style="normal"> − </tspan>nb<tspan font-style="normal" font-family="Noto Sans CJK JP, sans-serif">，</tspan>u<tspan baseline-shift="sub" font-size="10" font-style="normal">2</tspan><tspan font-style="normal"> = </tspan>V<tspan baseline-shift="sub" font-size="10" font-style="normal">2</tspan><tspan font-style="normal"> − </tspan>nb</text>
+</svg>

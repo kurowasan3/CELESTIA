@@ -1,0 +1,134 @@
+{
+ "id": "PHY-OPT-012",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "液面の上昇によるみかけの大きさの変化からの屈折率の決定",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，水平な底面をもつ容器の底に，長さ $L$ の目盛り板 AB が水平に置かれている．B の真上で底面から高さ $H$ の位置に，真下に向けた小型カメラ C が固定されている．カメラの前面は薄い平らなガラス窓で，視点はこの窓の位置にあるとみなす（窓の内側は空気）．容器に屈折率 $n$ の液体（空気に対する値）をゆっくり注いでいき，液体の深さを $D$ とする．カメラから見た AB の視角（A，B の像を見込む角）を $\\theta$ とする．角度はすべて十分小さく，$\\tan x\\approx\\sin x\\approx x$ の近似が使えるものとし，窓のガラスの厚さは無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$D<H$ のとき，$\\theta$ を $L,H,D,n$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$D>H$（窓が液体に浸かった状態）のとき，$\\theta$ を $L,H,n$ で表せ．また，$D=H$ の前後で $\\theta$ は連続的に変わるか．"
+     },
+     {
+      "id": "3",
+      "tex": "$n$，$H$，$L$ がいずれも未知であるとする．$D$ を変えながら $1/\\theta$（単位 $\\mathrm{rad}^{-1}$）を測ったところ，$D=0$ で $40.0$，$D=0.300\\ \\mathrm{m}$ で $32.5$ であり，$D$ がある値を超えると $30.0$ のまま変わらなくなった．$n$，$H$，$L$ を有効数字3桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "次に，(3) の目盛り板（$L$ は既知）を別の容器の底に置き，屈折率 $n'$ の液体を深さ $D_0$ まで入れた．$n'$ と $D_0$ はどちらも未知で，液体の量は変えられない．カメラの代わりに B の真上で眼を上下させ，底面からの眼の高さ $h$（$h>D_0$，既知）をいくつか変えて視角を測った．この測定からは $n'$ と $D_0$ を別々に決められないことを示し，決まる量を $n',D_0$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：液面の上昇によるみかけの大きさの変化からの屈折率の決定",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：液面の上昇によるみかけの大きさの変化からの屈折率の決定",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\theta=\\dfrac{L}{H-D+\\dfrac{D}{n}}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\theta=\\dfrac{nL}{H}$，連続である"
+   },
+   {
+    "id": "3",
+    "tex": "$n=1.33$，$H=0.400\\ \\mathrm{m}$，$L=1.00\\times10^{-2}\\ \\mathrm{m}$"
+   },
+   {
+    "id": "4",
+    "tex": "どの $h$ でも測定値は $\\dfrac{L}{\\theta}=h-D_0\\left(1-\\dfrac1{n'}\\right)$ を与えるだけなので，決まるのは $D_0\\left(1-\\dfrac{1}{n'}\\right)$（像の浮き上がりの量）のみ"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 液面より下に窓があるとき}\nB から出た光は鉛直に進んでカメラに入る．A から出てカメラに入る光が，液体中で鉛直となす角を $\\alpha$，空気中で鉛直となす角を $\\beta$ とすると，この光が窓に入る向きと鉛直のなす角が視角 $\\theta$ なので $\\theta=\\beta$ である．屈折の法則 $\\sin\\beta=n\\sin\\alpha$ は近似で $\\beta=n\\alpha$．A から C までの水平距離の和が $L$ だから\n\\[ L=D\\tan\\alpha+(H-D)\\tan\\beta\\approx D\\frac{\\theta}{n}+(H-D)\\theta \\qquad\\therefore\\quad \\theta=\\boldsymbol{\\frac{L}{H-D+\\dfrac{D}{n}}} \\]\n厚さ $D$ の液体の層は，厚さ $D/n$ の空気の層と同じはたらきをする（像の浮き上がり）．\n\n\\textbf{(2) 窓が液体に浸かったとき}\nA から C までの光路はすべて液体中なので，光は直進し，窓の直前で鉛直となす角は $\\alpha=L/H$．窓（液体→空気）で屈折して $\\theta=n\\alpha$：\n\\[ \\theta=\\boldsymbol{\\frac{nL}{H}} \\]\n(1) で $D=H$ とおくと $\\theta=\\dfrac{L}{H/n}=\\dfrac{nL}{H}$ となり，(2) と一致するので \\textbf{連続}である．$1/\\theta$ は $D<H$ では $D$ の1次関数で傾き $-\\dfrac{1}{L}\\left(1-\\dfrac1n\\right)$ で減少し，$D\\ge H$ では一定値 $\\dfrac{H}{nL}$ になる（解答図）．\n\n\\textbf{(3) グラフからの逆算}\n$D=0$：$\\dfrac{H}{L}=40.0$．\\quad 一定値：$\\dfrac{H}{nL}=30.0$．\\quad よって $n=\\dfrac{40.0}{30.0}=\\boldsymbol{1.33}$．\n\n$D=0.300\\ \\mathrm{m}$（$<H$ と仮定）：$\\dfrac{1}{L}\\left\\{H-0.300\\left(1-\\dfrac1n\\right)\\right\\}=32.5$ より\n\\[ \\frac{0.300\\times0.250}{L}=40.0-32.5=7.5 \\qquad\\therefore\\quad L=\\boldsymbol{1.00\\times10^{-2}\\ \\mathrm{m}} \\]\n$H=40.0L=\\boldsymbol{0.400\\ \\mathrm{m}}$．$0.300<0.400$ なので仮定は正しく，グラフは $D=0.400\\ \\mathrm{m}$ で折れて一定になる．\n\n\\textbf{(4) 眼の高さを変えるだけの場合}\n眼が液面より上にあるので (1) と同様に\n\\[ \\frac{L}{\\theta}=(h-D_0)+\\frac{D_0}{n'}=h-D_0\\left(1-\\frac1{n'}\\right) \\]\n$L$ と $h$ は既知なので，1回の測定で $D_0\\left(1-\\dfrac{1}{n'}\\right)$ が決まる．$h$ を変えても右辺の $h$ が変わるだけで，得られるのはいつも同じ組合せである．したがって $n'$ と $D_0$ を別々には決められず，決まるのは $\\boldsymbol{D_0\\left(1-\\dfrac1{n'}\\right)}$ だけである．(3) のように液体の深さそのものを変えるか，窓を液体に浸すなどの別の測定が必要になる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "近軸では屈折率 $n$ の層の厚さ $D$ は空気の厚さ $D/n$ と同等で，視角の逆数は見かけの距離に比例する．液面が視点を越えると光路全体が液体になって窓での屈折だけが効くため $1/\\theta$ は一定になり，グラフの初期値・傾き・折れ点の後の一定値から $n,H,L$ が分離して求まる．眼の高さを変えるだけでは浮き上がり量 $D(1-1/n)$ しか分からない．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "屈折",
+  "見かけの深さ",
+  "視角",
+  "近軸近似",
+  "グラフの読み取り"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "id": "PHY-WAV-020",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "パドルで押し出す水路の段波（運動量による波の速さとエネルギーの損失）",
+ "course": "物理",
+ "level": 5,
+ "minutes": 35,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "幅 $b$ の長い水平な水路に，深さ $h$ の水が静止している．水路の一端にある鉛直な板（パドル）を，時刻 $t=0$ から一定の速さ $v$ で水路に沿って押し込み続ける．すると図のように，水面の段差（段波）が一定の速さ $U$ で前方へ進み，パドルと段差の間の水は深さ $h+\\Delta$ で一様に速さ $v$ で動き，段差より前方の水は深さ $h$ のまま静止している．段差の幅は無視でき，水の密度を $\\rho$，重力加速度の大きさを $g$ とする．水路の底や側壁との摩擦は無視し，深さが一様な部分では水中の圧力は静水圧（水面からの深さ $z$ の点で $p_0+\\rho gz$，$p_0$ は大気圧）に等しいとする．大気圧による力と仕事は全体で打ち消し合うので考えなくてよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "水の体積が保存されることから，$v$ を $U$，$h$，$\\Delta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "時刻 $t$ における水全体の運動量と，水にはたらく水平方向の力を考えて，$U$ を $g$，$h$，$\\Delta$ で表せ．また，$\\Delta\\ll h$ の極限で $U$ はどのような値に近づくか．"
+     },
+     {
+      "id": "3",
+      "tex": "パドルが水にする仕事率を $P$，水の運動エネルギーの増加率を $K$，水の重力による位置エネルギーの増加率を $G$ とする．$P$，$K$，$G$ をそれぞれ $\\rho$，$g$，$b$，$h$，$\\Delta$，$U$，$v$ のうち必要なもので表し，$Q=P-K-G$ を $\\rho$，$g$，$b$，$U$，$h$，$\\Delta$ で表せ．$Q$ の符号から何がわかるか．"
+     },
+     {
+      "id": "4",
+      "tex": "段差の前後で力学的エネルギーが保存される（$Q=0$）と誤って仮定すると，段差の速さは $U_E$ と求まる．$U_E$ を $g$，$h$，$\\Delta$ で表せ．また，$h=1.0\\ {\\rm m}$，$\\Delta=0.20\\ {\\rm m}$，$g=9.8\\ {\\rm m/s^2}$ のとき，$U$ と $U_E$ を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：パドルで押し出す水路の段波（運動量による波の速さとエネルギーの損失）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=\\dfrac{\\Delta}{h+\\Delta}U$"
+   },
+   {
+    "id": "2",
+    "tex": "$U=\\sqrt{\\dfrac{g(h+\\Delta)(2h+\\Delta)}{2h}}$；$\\Delta\\ll h$ で $U\\to\\sqrt{gh}$"
+   },
+   {
+    "id": "3",
+    "tex": "$P=\\dfrac12\\rho gb(h+\\Delta)^2v$，$K=\\dfrac12\\rho bhUv^2$，$G=\\dfrac12\\rho gbh\\Delta U$，$Q=\\dfrac{\\rho gbU\\Delta^3}{4(h+\\Delta)}>0$（段差で力学的エネルギーが熱などに失われる）"
+   },
+   {
+    "id": "4",
+    "tex": "$U_E=(h+\\Delta)\\sqrt{\\dfrac{g}{h}}$；$U\\fallingdotseq3.6\\ {\\rm m/s}$，$U_E\\fallingdotseq3.8\\ {\\rm m/s}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　時刻 $t$ にパドルは $vt$，段差は $Ut$ の位置にある．はじめ $0\\le x\\le Ut$ にあった深さ $h$ の水が，$vt\\le x\\le Ut$ に深さ $h+\\Delta$ で入っているから\n\\[ (h+\\Delta)(U-v)t=hUt\\quad\\therefore\\quad v=\\boldsymbol{\\frac{\\Delta}{h+\\Delta}U} \\]\n\n\\textbf{(2)}　\\textbf{運動量}：動いている水の質量は $\\rho b(h+\\Delta)(U-v)t=\\rho bhUt$ で，速さ $v$ をもつから，水全体の運動量は $\\rho bhUvt$．その増加率は $\\rho bhUv$ で一定である．\n\n\\textbf{力}：水路の水全体（段差より十分前方の，水路の断面までの水）にはたらく水平方向の力は，パドルが押す力 $\\dfrac12\\rho gb(h+\\Delta)^2$（静水圧 $\\rho gz$ を深さ $0$ から $h+\\Delta$ まで積分したもの）と，前方の静止した水が押し返す力 $\\dfrac12\\rho gbh^2$ である．段差の中で水どうしが及ぼし合う力は内力なので，運動量の変化には効かない．運動量の変化率＝力より\n\\[ \\rho bhUv=\\frac12\\rho gb\\{(h+\\Delta)^2-h^2\\}=\\frac12\\rho gb\\Delta(2h+\\Delta) \\]\n(1) の $v$ を代入して $\\dfrac{hU^2\\Delta}{h+\\Delta}=\\dfrac12g\\Delta(2h+\\Delta)$，すなわち\n\\[ U=\\boldsymbol{\\sqrt{\\frac{g(h+\\Delta)(2h+\\Delta)}{2h}}} \\]\nこの結果は近似を使っていない．$\\Delta\\ll h$ では $\\boldsymbol{U\\to\\sqrt{gh}}$ となり，これが浅い水を伝わる小さな波の速さである．\n\n\\textbf{(3)}　パドルの面にはたらく力（大気圧を除く）は $\\dfrac12\\rho gb(h+\\Delta)^2$ で，パドルは速さ $v$ で動くから\n\\[ P=\\boldsymbol{\\frac12\\rho gb(h+\\Delta)^2v} \\]\n前方の静止した水との境界（固定した断面）は動かないので仕事をしない．\n\n運動エネルギーは $\\dfrac12(\\rho bhUt)v^2$ だから $K=\\boldsymbol{\\dfrac12\\rho bhUv^2}$．\n\n位置エネルギーは，深さ $H$ の水では長さ1あたり $\\dfrac12\\rho gbH^2$（重心の高さ $H/2$）なので，時刻 $t$ までの増加は\n\\[ \\frac12\\rho gb\\{(h+\\Delta)^2(U-v)t-h^2Ut\\}=\\frac12\\rho gb\\{(h+\\Delta)h-h^2\\}Ut=\\frac12\\rho gbh\\Delta Ut \\]\n（(1) の $(h+\\Delta)(U-v)=hU$ を使った）．よって $G=\\boldsymbol{\\dfrac12\\rho gbh\\Delta U}$．\n\n$v=\\dfrac{\\Delta U}{h+\\Delta}$ を代入すると $P=\\dfrac12\\rho gb(h+\\Delta)\\Delta U$ なので $P-G=\\dfrac12\\rho gb\\Delta^2U$．また $K=\\dfrac12\\rho bh\\dfrac{\\Delta^2U^3}{(h+\\Delta)^2}$．(2) の $U^2$ を使うと $\\dfrac{hU^2}{(h+\\Delta)^2}=\\dfrac{g(2h+\\Delta)}{2(h+\\Delta)}$ なので\n\\[ Q=\\frac12\\rho b\\Delta^2U\\left\\{g-\\frac{g(2h+\\Delta)}{2(h+\\Delta)}\\right\\}=\\boldsymbol{\\frac{\\rho gbU\\Delta^3}{4(h+\\Delta)}} \\]\n$Q>0$ だから，パドルの仕事の一部は水の力学的エネルギーにならず，段差の部分の渦や乱れを通して熱になって失われる．ただし $Q$ は $\\Delta^3$ に比例するので，振幅が小さい波（$\\Delta\\ll h$）ではこの損失は無視でき，力学的エネルギーはほぼ保存する．\n\n\\textbf{(4)}　$Q=0$ とおくと $g=\\dfrac{hU^2}{(h+\\Delta)^2}$ より\n\\[ U_E=\\boldsymbol{(h+\\Delta)\\sqrt{\\frac{g}{h}}} \\]\n数値を代入すると\n\\[ U=\\sqrt{\\frac{9.8\\times1.2\\times2.2}{2\\times1.0}}\\fallingdotseq\\boldsymbol{3.6\\ {\\rm m/s}},\\qquad U_E=1.2\\times\\sqrt{9.8}\\fallingdotseq\\boldsymbol{3.8\\ {\\rm m/s}} \\]\n（いずれも $\\sqrt{gh}\\fallingdotseq3.1\\ {\\rm m/s}$ より大きい．）正しいのは運動量から求めた $U$ である．段差では内部の乱れによって力学的エネルギーが失われるが，その原因である水どうしの力は内力なので運動量の収支には影響しない．したがって，状態が不連続に変わる段差の前後では運動量の関係を使わなければならず，力学的エネルギー保存は使えない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "段波の速さは，体積保存と「押し込まれた水の運動量の増加率＝両側の静水圧による力の差」から近似なしで $U^2=g(h+\\Delta)(2h+\\Delta)/(2h)$ と決まり，振幅が小さい極限で浅水波の速さ $\\sqrt{gh}$ になる（ピストンで押した気体中の音速の導出と同じ構造）．段差では力学的エネルギーが $\\Delta^3$ に比例して失われるので，エネルギー保存を使うと誤った速さになる．"
+ },
+ "concepts": [
+  "wave-basics",
+  "momentum-conservation",
+  "mechanical-energy"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "運動量と力積",
+  "浅水波",
+  "段波",
+  "エネルギー損失",
+  "静水圧",
+  "波の速さ"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

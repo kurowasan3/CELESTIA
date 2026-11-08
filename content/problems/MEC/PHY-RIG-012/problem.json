@@ -1,0 +1,144 @@
+{
+ "id": "PHY-RIG-012",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "加速・減速するトラックの運転台の壁に立てかけた棒（壁から離れるか滑るかの判定と，止まっていると立てない棒が減速中に立つ条件）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，水平な道路を前後に走るトラックの荷台に，長さ $L$，質量 $M$ の一様な細い棒が，運転台の後ろのなめらかな鉛直の壁に立てかけてある．棒の上端Bは壁に，下端Aはあらい荷台の床に接し，棒は壁と角 $\\theta$（$0<\\theta<\\frac{\\pi}{2}$）をなす鉛直面内にある．Aと床の間の静止摩擦係数を $\\mu$，重力加速度の大きさを $g$ とする．トラックの加速度はゆっくり変えるものとし，棒が荷台に対して静止している間を考える．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "トラックが止まっているとき，棒が静止できる $\\theta$ の条件を $\\tan\\theta$ と $\\mu$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "トラックが前向きに大きさ $a$ の加速度で進んでいるとき，Bが壁から受ける垂直抗力 $N_{\\rm B}$ と，Aが床から受ける摩擦力 $F_{\\rm A}$ の大きさと向きを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "静止状態から，前向きの加速度 $a$ を $0$ からゆっくり大きくしていく．「Bが壁から離れる」と「Aが滑り出す」のどちらが先に起こるかは $\\tan\\theta$ と $\\mu$ の大小で決まる．その条件と，それぞれの場合に起こるときの $a$ を求めよ．ただし $\\tan\\theta<2\\mu$ とする．"
+     },
+     {
+      "id": "4",
+      "tex": "次に，トラックが大きさ $b$ の加速度で減速しているとき（加速度は後ろ向きに大きさ $b$），$F_{\\rm A}$ を求め，その向きが $b$ によって入れかわることを示せ．また，棒が静止できる $b$ の範囲を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\tan\\theta>2\\mu$ の角で立てかけた棒は，止まったトラックの上では静止できない．ところが，トラックが減速している間ならば静止できることがある．そのための $b$ の範囲を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：加速・減速するトラックの運転台の壁に立てかけた棒（壁から離れるか滑るかの判定と，止まっていると立てない棒が減速中に立つ条件）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：加速・減速するトラックの運転台の壁に立てかけた棒（壁から離れるか滑るかの判定と，止まっていると立てない棒が減速中に立つ条件）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\tan\\theta\\leqq2\\mu$"
+   },
+   {
+    "id": "2",
+    "tex": "$N_{\\rm B}=\\dfrac{M}{2}(g\\tan\\theta-a)$，$F_{\\rm A}=\\dfrac{M}{2}(g\\tan\\theta+a)$（前向き）"
+   },
+   {
+    "id": "3",
+    "tex": "$\\tan\\theta<\\mu$ ならBが先に離れる（$a=g\\tan\\theta$），$\\tan\\theta>\\mu$ ならAが先に後ろへ滑る（$a=g(2\\mu-\\tan\\theta)$）"
+   },
+   {
+    "id": "4",
+    "tex": "$F_{\\rm A}=\\dfrac M2(g\\tan\\theta-b)$（前向きを正．$b>g\\tan\\theta$ で後ろ向き），$0<b\\leqq g(\\tan\\theta+2\\mu)$"
+   },
+   {
+    "id": "5",
+    "tex": "$g(\\tan\\theta-2\\mu)\\leqq b\\leqq g(\\tan\\theta+2\\mu)$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{見かけの重力の考え方}\n\nトラックとともに動く座標系で考え，前向きを正とするトラックの加速度を $\\alpha$ とすると，棒には重力 $Mg$（下向き）のほかに慣性力 $M\\alpha$（後ろ向き）が重心にはたらく．棒にはたらく力は，Bでの垂直抗力 $N_{\\rm B}$（壁は前にあるので後ろ向き），Aでの垂直抗力 $N_{\\rm A}$（上向き），摩擦力 $F_{\\rm A}$（前向きを正）である．\n\\[ \\text{水平：}\\ F_{\\rm A}-N_{\\rm B}-M\\alpha=0,\\qquad \\text{鉛直：}\\ N_{\\rm A}=Mg \\]\nAのまわりのモーメントのつり合い（反時計回り・時計回りを図に合わせて書く）：$N_{\\rm B}$ の腕は $L\\cos\\theta$，重力の腕は $\\frac L2\\sin\\theta$，慣性力の腕は $\\frac L2\\cos\\theta$ で，重力は棒を壁に押しつける向き，慣性力（後ろ向き）は壁から引きはがす向きにはたらくので\n\\[ N_{\\rm B}L\\cos\\theta=Mg\\cdot\\frac L2\\sin\\theta-M\\alpha\\cdot\\frac L2\\cos\\theta \\]\n\\[ N_{\\rm B}=\\frac M2(g\\tan\\theta-\\alpha),\\qquad F_{\\rm A}=N_{\\rm B}+M\\alpha=\\frac M2(g\\tan\\theta+\\alpha) \\]\n未知数3つに式が3つなので，力はつり合いだけで決まる．静止の条件は $N_{\\rm B}\\geqq0$ と $|F_{\\rm A}|\\leqq\\mu N_{\\rm A}=\\mu Mg$ である．\n\n\\textbf{(1)} $\\alpha=0$ で $F_{\\rm A}=\\frac M2g\\tan\\theta\\leqq\\mu Mg$ より $\\boldsymbol{\\tan\\theta\\leqq2\\mu}$．\n\n\\textbf{(2)} $\\alpha=a$ として\n\\[ \\boldsymbol{N_{\\rm B}=\\frac M2(g\\tan\\theta-a)},\\qquad \\boldsymbol{F_{\\rm A}=\\frac M2(g\\tan\\theta+a)}\\ \\text{（前向き）} \\]\n前向きに加速すると慣性力が棒を壁から引きはがす向きにはたらくので $N_{\\rm B}$ は減り，その分も含めて床の摩擦力が棒を前に引っぱらなければならない．\n\n\\textbf{(3) どちらが先か}\n\nBが離れるのは $N_{\\rm B}=0$，すなわち $a=g\\tan\\theta$．Aが滑るのは $F_{\\rm A}=\\mu Mg$，すなわち $a=g(2\\mu-\\tan\\theta)$（Aは後ろ向きに滑る）．小さい方が先に起こるので\n\\begin{itemize}\n\\item $\\tan\\theta<\\mu$ のとき：$g\\tan\\theta<g(2\\mu-\\tan\\theta)$ なので，\\textbf{Bが先に壁から離れる}（$a=g\\tan\\theta$）．\n\\item $\\tan\\theta>\\mu$ のとき：\\textbf{Aが先に後ろへ滑り出す}（$a=g(2\\mu-\\tan\\theta)$）．\n\\end{itemize}\n境目 $\\tan\\theta=\\mu$ では両方が同時に起こる（解答図の赤と青の直線の交点）．\n\n\\textbf{(4) 減速中}\n\n$\\alpha=-b$ とすると\n\\[ N_{\\rm B}=\\frac M2(g\\tan\\theta+b)>0,\\qquad F_{\\rm A}=\\boldsymbol{\\frac M2(g\\tan\\theta-b)} \\]\n$N_{\\rm B}$ は常に正で，Bが離れることはない．$F_{\\rm A}$ は $b<g\\tan\\theta$ では前向き，$b>g\\tan\\theta$ では後ろ向きになり，$b=g\\tan\\theta$ で摩擦力が $0$ になる（このとき重力と慣性力の合力，つまり見かけの重力が棒に平行になり，Aでの抗力だけで支えられる）．静止の条件 $|F_{\\rm A}|\\leqq\\mu Mg$ より\n\\[ g(\\tan\\theta-2\\mu)\\leqq b\\leqq g(\\tan\\theta+2\\mu) \\]\n(1)の条件 $\\tan\\theta\\leqq2\\mu$ のもとでは左側は自動的に満たされるので，$\\boldsymbol{0<b\\leqq g(\\tan\\theta+2\\mu)}$．これを超えるとAは前へ滑る．\n\n\\textbf{(5) 止まっていると立てない棒}\n\n$\\tan\\theta>2\\mu$ のときも(4)の不等式はそのまま使え，左側が正になるので\n\\[ \\boldsymbol{g(\\tan\\theta-2\\mu)\\leqq b\\leqq g(\\tan\\theta+2\\mu)} \\]\nの減速中だけ棒は静止できる．減速の慣性力が棒を壁に押しつけ，床が棒を前に押す必要が減るためである．トラックが停止して $b=0$ に戻った瞬間に，棒は後ろへ滑り出す．\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "トラックとともに動く系で慣性力を重心に加えると，壁がなめらかなので未知の力は3つでつり合いだけで決まり，下端まわりのモーメントから $N_{\\rm B}=\\frac M2(g\\tan\\theta-\\alpha)$，水平のつり合いから $F_{\\rm A}=\\frac M2(g\\tan\\theta+\\alpha)$ が得られる．静止の条件は $N_{\\rm B}\\geqq0$ と $|F_{\\rm A}|\\leqq\\mu Mg$ の連立で，加速中は「壁から離れる」と「滑る」のどちらが先かが $\\tan\\theta$ と $\\mu$ の大小で決まり，減速中は摩擦力の向きが反転して，止まっていると立てない角度でも静止できる範囲が生じる．"
+ },
+ "concepts": [
+  "torque",
+  "momentum-conservation",
+  "static-friction"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "剛体のつり合い",
+  "慣性力",
+  "静止摩擦",
+  "力のモーメント",
+  "状態の切り替わり",
+  "見かけの重力"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

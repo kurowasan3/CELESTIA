@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380"><defs><marker id="a-ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/></marker><marker id="a-ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 z" fill="#c0392b"/></marker><marker id="a-ak" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 z" fill="#222"/></marker></defs>
+<line x1="110.0" y1="320.0" x2="440.0" y2="320.0" stroke="#222" stroke-width="1.6"/>
+<line x1="110.0" y1="320.0" x2="105.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="119.0" y1="320.0" x2="114.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="128.0" y1="320.0" x2="123.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="137.0" y1="320.0" x2="132.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="146.0" y1="320.0" x2="141.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="155.0" y1="320.0" x2="150.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="164.0" y1="320.0" x2="159.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="173.0" y1="320.0" x2="168.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="182.0" y1="320.0" x2="177.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="191.0" y1="320.0" x2="186.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="200.0" y1="320.0" x2="195.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="209.0" y1="320.0" x2="204.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="218.0" y1="320.0" x2="213.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="227.0" y1="320.0" x2="222.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="236.0" y1="320.0" x2="231.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="245.0" y1="320.0" x2="240.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="254.0" y1="320.0" x2="249.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="263.0" y1="320.0" x2="258.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="272.0" y1="320.0" x2="267.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="281.0" y1="320.0" x2="276.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="290.0" y1="320.0" x2="285.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="299.0" y1="320.0" x2="294.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="308.0" y1="320.0" x2="303.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="317.0" y1="320.0" x2="312.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="326.0" y1="320.0" x2="321.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="335.0" y1="320.0" x2="330.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="344.0" y1="320.0" x2="339.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="353.0" y1="320.0" x2="348.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="362.0" y1="320.0" x2="357.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="371.0" y1="320.0" x2="366.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="380.0" y1="320.0" x2="375.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="389.0" y1="320.0" x2="384.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="398.0" y1="320.0" x2="393.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="407.0" y1="320.0" x2="402.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="416.0" y1="320.0" x2="411.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="425.0" y1="320.0" x2="420.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="434.0" y1="320.0" x2="429.1" y2="327.0" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="320.0" x2="110.0" y2="30.0" stroke="#222" stroke-width="1.6"/>
+<line x1="110.0" y1="320.0" x2="103.0" y2="324.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="311.0" x2="103.0" y2="315.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="302.0" x2="103.0" y2="306.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="293.0" x2="103.0" y2="297.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="284.0" x2="103.0" y2="288.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="275.0" x2="103.0" y2="279.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="266.0" x2="103.0" y2="270.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="257.0" x2="103.0" y2="261.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="248.0" x2="103.0" y2="252.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="239.0" x2="103.0" y2="243.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="230.0" x2="103.0" y2="234.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="221.0" x2="103.0" y2="225.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="212.0" x2="103.0" y2="216.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="203.0" x2="103.0" y2="207.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="194.0" x2="103.0" y2="198.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="185.0" x2="103.0" y2="189.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="176.0" x2="103.0" y2="180.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="167.0" x2="103.0" y2="171.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="158.0" x2="103.0" y2="162.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="149.0" x2="103.0" y2="153.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="140.0" x2="103.0" y2="144.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="131.0" x2="103.0" y2="135.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="122.0" x2="103.0" y2="126.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="113.0" x2="103.0" y2="117.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="104.0" x2="103.0" y2="108.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="95.0" x2="103.0" y2="99.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="86.0" x2="103.0" y2="90.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="77.0" x2="103.0" y2="81.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="68.0" x2="103.0" y2="72.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="59.0" x2="103.0" y2="63.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="50.0" x2="103.0" y2="54.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="41.0" x2="103.0" y2="45.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="32.0" x2="103.0" y2="36.9" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="64.0" x2="302.0" y2="320.0" stroke="#222" stroke-width="1.6"/>
+<text x="92.0" y="68.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">A</text>
+<text x="306.0" y="340.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">B</text>
+<circle cx="161.2" cy="38.4" r="3.5" fill="#c0392b"/>
+<text x="169.2" y="32.4" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#c0392b" text-anchor="start">P</text>
+<line x1="302.0" y1="320.0" x2="224.6" y2="165.1" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<text x="254.6" y="215.1" font-size="13" fill="#1f5fbf" text-anchor="start" font-family="Noto Sans CJK JP, sans-serif">床からの抗力</text>
+<line x1="302.0" y1="320.0" x2="161.2" y2="38.4" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="110.0" y1="64.0" x2="140.7" y2="48.6" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<text x="122.0" y="88.0" font-size="13" fill="#1f5fbf" text-anchor="start" font-family="Noto Sans CJK JP, sans-serif">壁からの抗力</text>
+<line x1="110.0" y1="64.0" x2="161.2" y2="38.4" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="161.2" y1="38.4" x2="161.2" y2="320.0" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="161.2" cy="132.3" r="3.5" fill="#222"/>
+<text x="171.2" y="136.3" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="start">G</text>
+<text x="171.2" y="154.3" font-size="12" fill="#222" text-anchor="start" font-family="Noto Sans CJK JP, sans-serif">（人とはしごの重心，限界の位置）</text>
+<line x1="161.2" y1="132.3" x2="161.2" y2="202.3" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<line x1="302.0" y1="320.0" x2="302.0" y2="250.0" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="308.0" y="270.0" font-size="13" fill="#222" text-anchor="start" font-family="Noto Sans CJK JP, sans-serif">tan<tspan font-family="Times New Roman, serif" font-style="italic">λ</tspan>=<tspan font-family="Times New Roman, serif" font-style="italic">μ</tspan></text>
+<line x1="110.0" y1="64.0" x2="190.0" y2="64.0" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+</svg>

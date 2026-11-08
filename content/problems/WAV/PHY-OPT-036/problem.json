@@ -1,0 +1,113 @@
+{
+ "id": "PHY-OPT-036",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "レンズを動かして得る2つの実像の大きさから物体の大きさ・距離・焦点距離を決める（ベッセル法）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "光学台の上に，大きさの分からない物体（光軸に垂直な矢印）と，位置を固定したスクリーンがある．物体とスクリーンの距離 $D$ も分からない．その間で焦点距離の分からない薄い凸レンズを光軸に沿って動かしたところ，スクリーン上に鮮明な像が2か所で得られ，像の大きさはそれぞれ $12.0\\ \\mathrm{mm}$ と $3.0\\ \\mathrm{mm}$ であった．また，2つのレンズの位置の間の距離は $30.0\\ \\mathrm{cm}$ であった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "物体の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "物体とスクリーンの距離 $D$ と，レンズの焦点距離 $f$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "次にスクリーンを物体にゆっくり近づけていくと，鮮明な像が得られる2つのレンズの位置は互いに近づき，やがて1か所になり，さらに近づけると像が得られなくなる．1か所になるときの物体とスクリーンの距離と，そのときの像の大きさを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：レンズを動かして得る2つの実像の大きさから物体の大きさ・距離・焦点距離を決める（ベッセル法）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$6.0\\ \\mathrm{mm}$"
+   },
+   {
+    "id": "2",
+    "tex": "$D=90.0\\ \\mathrm{cm}$，$f=20.0\\ \\mathrm{cm}$"
+   },
+   {
+    "id": "3",
+    "tex": "$80.0\\ \\mathrm{cm}$，$6.0\\ \\mathrm{mm}$（倒立）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{2つの位置の関係}　物体からレンズまでを $a$，レンズからスクリーンまでを $b$ とすると $a+b=D$，$\\dfrac1a+\\dfrac1b=\\dfrac1f$．この2式は $a$ と $b$ の入れかえについて対称なので，1つの解 $(a,b)$ があれば $(b,a)$ も解である．したがって2つの位置での倍率は $\\dfrac ba$ と $\\dfrac ab$ で，互いに逆数になる．\n\n\\textbf{(1)}　物体の大きさを $y$ とすると，$12.0=y\\cdot\\dfrac ba$，$3.0=y\\cdot\\dfrac ab$．辺々かけて $y^2=12.0\\times3.0$ より $\\boldsymbol{y=6.0\\ \\mathrm{mm}}$（2つの像の大きさの相乗平均）．\n\n\\textbf{(2)}　辺々割って $\\left(\\dfrac ba\\right)^2=4$ より $\\dfrac ba=2$（大きい像の位置）．2つの位置の差は $|b-a|=30.0\\ \\mathrm{cm}$ なので $a=30.0\\ \\mathrm{cm}$，$b=60.0\\ \\mathrm{cm}$．\n\\[ \\boldsymbol{D=a+b=90.0\\ \\mathrm{cm}},\\qquad f=\\frac{ab}{a+b}=\\frac{30.0\\times60.0}{90.0}=\\boldsymbol{20.0\\ \\mathrm{cm}} \\]\n\n\\textbf{(3)}　$a+b=D$，$ab=Df$ より $a$ は $t^2-Dt+Df=0$ の解．2つの解が一致するのは判別式 $D^2-4Df=0$，すなわち $D=4f=\\boldsymbol{80.0\\ \\mathrm{cm}}$．このとき $a=b=2f$ で倍率は $1$，像の大きさは物体と同じ $\\boldsymbol{6.0\\ \\mathrm{mm}}$（倒立）．$D<4f$ では実数解がなく，スクリーン上に像はできない．\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "物体とスクリーンの距離を固定するとレンズの式は $a$ と $b$ の入れかえについて対称なので，2つの結像位置の倍率は互いに逆数になる．そのため2つの像の大きさの積から物体の大きさ（相乗平均）が，比と位置の差から距離と焦点距離が決まり，2つの位置が一致する $D=4f$ が像のできる限界になる．"
+ },
+ "concepts": [
+  "light-interference",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "凸レンズ",
+  "レンズの式",
+  "倍率",
+  "ベッセル法",
+  "判別式"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

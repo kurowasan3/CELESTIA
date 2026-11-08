@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 230" width="580" height="230">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<line x1="40.0" y1="110.0" x2="520.0" y2="110.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<path d="M30,110 Q55,82 80,110 Q55,138 30,110 Z" fill="none" stroke="#222" stroke-width="1.6"/>
+<circle cx="62" cy="110" r="7" fill="#222"/>
+<text x="55.0" y="158.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">眼</text>
+<path d="M248,55 L272,55 Q263,110 272,165 L248,165 Q257,110 248,55 Z" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="260" y="44" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">凹レンズ（焦点距離 <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16">f</tspan>）</text>
+<line x1="500.0" y1="110.0" x2="500.0" y2="60.0" stroke="#222" stroke-width="1.8" marker-end="url(#q-ak)"/>
+<text x="514.0" y="86.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">h</text>
+<text x="500.0" y="132.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">物体</text>
+<line x1="62.0" y1="118.0" x2="62.0" y2="200.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="260.0" y1="168.0" x2="260.0" y2="175.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="500.0" y1="140.0" x2="500.0" y2="200.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="62.0" y1="170.0" x2="260.0" y2="170.0" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="161.0" y="164.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">x</text>
+<line x1="62.0" y1="196.0" x2="500.0" y2="196.0" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="281.0" y="190.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">D</text>
+</svg>

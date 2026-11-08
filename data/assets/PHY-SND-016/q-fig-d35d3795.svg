@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200">
+  <defs><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+  <!-- source -->
+  <rect x="60" y="92" width="12" height="20" fill="none" stroke="#222" stroke-width="1.6"/>
+  <path d="M72,92 L88,80 L88,124 L72,112" fill="none" stroke="#222" stroke-width="1.6"/>
+  <text x="58" y="70" font-family="Noto Sans CJK JP, sans-serif"  font-size="15" fill="#222">音源 S</text>
+  <!-- observer -->
+  <circle cx="470" cy="90" r="9" fill="none" stroke="#222" stroke-width="1.6"/>
+  <line x1="470" y1="99" x2="470" y2="125" stroke="#222" stroke-width="1.6"/>
+  <line x1="470" y1="125" x2="460" y2="142" stroke="#222" stroke-width="1.6"/><line x1="470" y1="125" x2="480" y2="142" stroke="#222" stroke-width="1.6"/>
+  <line x1="456" y1="108" x2="484" y2="108" stroke="#222" stroke-width="1.6"/>
+  <text x="455" y="70" font-family="Noto Sans CJK JP, sans-serif"  font-size="15" fill="#222">観測者 O</text>
+  <line x1="40" y1="145" x2="520" y2="145" stroke="#222" stroke-width="1"/>
+  <line x1="80" y1="165" x2="470" y2="165" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+  <text x="268" y="185" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">L</text>
+  <!-- wind arrow (outline) -->
+  <path d="M190,28 L330,28 L330,18 L362,36 L330,54 L330,44 L190,44 Z" fill="none" stroke="#1f5fbf" stroke-width="1.6"/>
+  <text x="205" y="41" font-family="Noto Sans CJK JP, sans-serif"  font-size="13" fill="#1f5fbf">風（速さ </text><text x="267" y="41" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#1f5fbf">w</text><text x="277" y="41" font-family="Noto Sans CJK JP, sans-serif"  font-size="13" fill="#1f5fbf">）</text>
+  <!-- wave crests -->
+  <path d="M110,78 Q118,102 110,126" fill="none" stroke="#888" stroke-width="1"/><path d="M144,78 Q152,102 144,126" fill="none" stroke="#888" stroke-width="1"/><path d="M178,78 Q186,102 178,126" fill="none" stroke="#888" stroke-width="1"/><path d="M212,78 Q220,102 212,126" fill="none" stroke="#888" stroke-width="1"/><path d="M246,78 Q254,102 246,126" fill="none" stroke="#888" stroke-width="1"/><path d="M280,78 Q288,102 280,126" fill="none" stroke="#888" stroke-width="1"/><path d="M314,78 Q322,102 314,126" fill="none" stroke="#888" stroke-width="1"/><path d="M348,78 Q356,102 348,126" fill="none" stroke="#888" stroke-width="1"/><path d="M382,78 Q390,102 382,126" fill="none" stroke="#888" stroke-width="1"/><path d="M416,78 Q424,102 416,126" fill="none" stroke="#888" stroke-width="1"/>
+</svg>

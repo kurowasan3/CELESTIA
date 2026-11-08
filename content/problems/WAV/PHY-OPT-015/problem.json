@@ -1,0 +1,135 @@
+{
+ "id": "PHY-OPT-015",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "中央スリットに膜を付けた3スリット干渉と明線の強弱の入れ替わり",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，間隔 $a$ で並んだ3本の十分に細いスリット $\\mathrm{S_1}$，$\\mathrm{S_0}$，$\\mathrm{S_2}$（$\\mathrm{S_0}$ が中央）に，波長 $\\lambda$ の平面波を垂直に入射させ，スリット面に平行で距離 $\\ell$ だけ離れたスクリーン上の点 P で干渉を観察する．P の位置は，$\\mathrm{S_0}$ の正面の点 O からの距離 $x$ で表す．スクリーンは十分遠く（$a,\\ |x|\\ll\\ell$），各スリットから P へ向かう光は平行とみなしてよい．各スリットから P に届く光の振幅はどれも $A$ で，P での光の強さは合成波の振幅の2乗に比例するとする．\n\n中央の $\\mathrm{S_0}$ だけを，厚さ $t$，屈折率 $n$（$n>1$）の薄い透明な膜で覆う．膜での反射や吸収は無視し，空気の屈折率は $1$ とする．隣り合うスリットから P に届く光の位相差（膜の影響を除いたもの）を $\\delta=\\dfrac{2\\pi a x}{\\lambda\\ell}$，膜による $\\mathrm{S_0}$ からの光の位相の遅れを $\\varphi$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\varphi$ を $n,\\ t,\\ \\lambda$ で表せ．また，P での合成波の振幅の2乗を $A,\\ \\delta,\\ \\varphi$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "膜がないとき（$\\varphi=0$）は，強い明線と弱い明線が交互に並ぶ．膜を厚くしていくとき，すべての明線が同じ明るさになる最小の $t$ を求めよ．また，そのときの明線の間隔と，(明線の強さ)：(最も暗い所の強さ) を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "膜をさらに厚くしていくとき，O の強さは膜がないときの何倍まで小さくなるか．そのときの $t$ の最小値も求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "O を完全な暗点にしたい．膜の厚さは(3)の値のままにして，$\\mathrm{S_0}$ の幅だけを変え，$\\mathrm{S_0}$ から届く光の振幅を $kA$ にする．$k$ を求めよ．また，このとき暗線が現れる位置 $x$ と，最も強い明線の強さが膜も幅の変更もない元の装置の最も強い明線の何倍かを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：中央スリットに膜を付けた3スリット干渉と明線の強弱の入れ替わり",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：中央スリットに膜を付けた3スリット干渉と明線の強弱の入れ替わり",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\varphi=\\dfrac{2\\pi(n-1)t}{\\lambda}$，振幅の2乗は $A^2(4\\cos^2\\delta+4\\cos\\delta\\cos\\varphi+1)$"
+   },
+   {
+    "id": "2",
+    "tex": "$t=\\dfrac{\\lambda}{4(n-1)}$，明線の間隔 $\\dfrac{\\lambda\\ell}{2a}$，強さの比 $5:1$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac19$ 倍（$t=\\dfrac{\\lambda}{2(n-1)}$）"
+   },
+   {
+    "id": "4",
+    "tex": "$k=2$，暗線は $x=\\dfrac{j\\lambda\\ell}{a}$（$j$ は整数），$\\dfrac{16}{9}$ 倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　膜の中では光路長が $nt$，膜がなければ $t$ なので，$\\mathrm{S_0}$ からの光は光路長が $(n-1)t$ だけ長くなる．よって\n\\[ \\varphi=\\boldsymbol{\\frac{2\\pi(n-1)t}{\\lambda}} \\]\n$\\mathrm{S_0}$ から P への光の位相を基準にとると（膜の影響を除く），$\\mathrm{S_1}$，$\\mathrm{S_2}$ からの光は $\\mathrm{S_0}$ に対して位相がそれぞれ $+\\delta$，$-\\delta$ ずれ，$\\mathrm{S_0}$ からの光は膜で $\\varphi$ 遅れる．各波を長さ $A$ の矢印（回転ベクトル）で表すと，$\\mathrm{S_1}$ と $\\mathrm{S_2}$ の矢印は基準方向から $\\pm\\delta$ だけ対称に傾いているので，その和は基準方向を向いた長さ $2A\\cos\\delta$ の矢印になる．これと，基準方向から $\\varphi$ だけ遅れた長さ $A$ の矢印の和を余弦定理で求めると\n\\[ (\\text{振幅})^2=(2A\\cos\\delta)^2+A^2+2\\cdot2A\\cos\\delta\\cdot A\\cos\\varphi=\\boldsymbol{A^2(4\\cos^2\\delta+4\\cos\\delta\\cos\\varphi+1)} \\]\n（$2A\\cos\\delta<0$ のときは逆向きの矢印と考えればよく，式はそのまま成り立つ．）\n\n\\textbf{(2)}　$c=\\cos\\delta$ とおくと，強さ $I=A^2(4c^2+4c\\cos\\varphi+1)$ は $c$ の下に凸な2次関数なので，$-1\\le c\\le1$ での極大（明線）は両端 $c=\\pm1$，すなわち $\\delta=j\\pi$（$j$ は整数）だけで起こる．\n\\[ c=1:\\ I=A^2(5+4\\cos\\varphi),\\qquad c=-1:\\ I=A^2(5-4\\cos\\varphi) \\]\n$\\varphi=0$ なら $9A^2$ と $A^2$ が交互に並ぶ（解答図の黒破線）．両者が等しくなるのは $\\cos\\varphi=0$ のときで，最小の厚さは $\\varphi=\\dfrac\\pi2$ より\n\\[ \\frac{2\\pi(n-1)t}{\\lambda}=\\frac\\pi2\\quad\\Longrightarrow\\quad t=\\boldsymbol{\\frac{\\lambda}{4(n-1)}} \\]\nこのとき $I=A^2(4\\cos^2\\delta+1)$ で，明線は $\\delta=j\\pi$ に並ぶ．$\\delta$ が $\\pi$ 変わるごとに明線が現れるので，間隔は\n\\[ \\Delta x=\\frac{\\lambda\\ell}{2\\pi a}\\cdot\\pi=\\boldsymbol{\\frac{\\lambda\\ell}{2a}} \\]\nと膜がないときの強い明線の間隔の半分になる．明線の強さは $5A^2$，最も暗い所（$\\cos\\delta=0$）は $A^2$ で，完全な暗線はなくなるので，比は $\\boldsymbol{5:1}$ である（青線）．\n\n\\textbf{(3)}　O（$\\delta=0$）の強さは $A^2(5+4\\cos\\varphi)$ で，$\\cos\\varphi=-1$ のとき最小値 $A^2$ をとる．膜がないときは $9A^2$ なので $\\boldsymbol{\\dfrac19}$ \\textbf{倍}．そのときの最小の厚さは $\\varphi=\\pi$ より $t=\\boldsymbol{\\dfrac{\\lambda}{2(n-1)}}$．このとき $I=A^2(2\\cos\\delta-1)^2$ となり，強い明線（$9A^2$）は $\\delta=\\pi$ の位置に移って，膜がないときと強弱の配置が入れ替わる（赤線）．O を完全に暗くできないのは，$\\mathrm{S_1}$ と $\\mathrm{S_2}$ の和の矢印（長さ $2A$）を長さ $A$ の矢印1本では打ち消せないからである．\n\n\\textbf{(4)}　$\\varphi=\\pi$ で $\\mathrm{S_0}$ の振幅を $kA$ にすると，合成振幅は $A(2\\cos\\delta-k)$．O（$\\delta=0$）で $0$ になるには\n\\[ 2-k=0\\quad\\Longrightarrow\\quad k=\\boldsymbol{2} \\]\nこのとき強さは $I=4A^2(1-\\cos\\delta)^2$ で，$0$ になるのは $\\cos\\delta=1$，すなわち $\\delta=2\\pi j$ のときだけである．\n\\[ \\frac{2\\pi a x}{\\lambda\\ell}=2\\pi j\\quad\\Longrightarrow\\quad x=\\boldsymbol{\\frac{j\\lambda\\ell}{a}}\\ (j\\ \\text{は整数}) \\]\n最も強い明線は $\\cos\\delta=-1$ のときで $I=16A^2$．元の装置の最も強い明線は $9A^2$ なので $\\boldsymbol{\\dfrac{16}{9}}$ \\textbf{倍}である．\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "3つのスリットからの光を回転ベクトルで合成すると，両端の2つは常に長さ $2A\\cos\\delta$ の1本の矢印にまとまり，明線の強弱は中央の光との位相関係で決まる．中央に位相差 $\\varphi$ を付けると強弱の配置が入れ替わり，$\\varphi=\\pi/2$ では全明線が等しくなる代わりに暗線が消える．完全な暗点は位相だけでなく振幅の大きさの条件もそろわないと作れない．"
+ },
+ "concepts": [
+  "light-interference",
+  "torque",
+  "interference"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "3スリット",
+  "回転ベクトル",
+  "位相差",
+  "薄膜",
+  "干渉縞の強さ"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

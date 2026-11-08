@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <marker id="q-ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/>
+    </marker>
+    <marker id="q-ar2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,4 L0,8 z" fill="#c0392b"/>
+    </marker>
+    <marker id="q-dim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="#222" stroke-width="1"/>
+    </marker>
+  </defs>
+  <!-- panel (a) shallow -->
+  <text x="20" y="24" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">(a) 浅い水（波の速さ <tspan font-family="Times New Roman, serif" font-style="italic">c</tspan> 一定）</text>
+  <line x1="20" y1="150" x2="270" y2="150" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="272" y="146" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">X</text>
+  <line x1="240" y1="150" x2="60" y2="86" stroke="#222" stroke-width="1.6"/>
+  <line x1="240" y1="150" x2="60" y2="214" stroke="#222" stroke-width="1.6"/>
+  <path d="M205,150 A35,35 0 0 1 207,138" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="185" y="140" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">θ</text>
+  <path d="M232,144 L250,150 L232,156 z" fill="#222"/>
+  <line x1="245" y1="170" x2="275" y2="170" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ar)"/>
+  <text x="250" y="190" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">V</text>
+  <text x="80" y="250" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">船の後方のくさび形の波面</text>
+  <!-- panel (b) deep -->
+  <text x="320" y="24" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">(b) 深い水</text>
+  <line x1="315" y1="200" x2="590" y2="200" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="580" y="220" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">X</text>
+  <circle cx="340" cy="200" r="3.5" fill="#222"/>
+  <text x="330" y="222" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">P</text>
+  <path d="M552,194 L570,200 L552,206 z" fill="#222"/>
+  <text x="556" y="188" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">S</text>
+  <line x1="340" y1="250" x2="560" y2="250" stroke="#222" stroke-width="1" marker-start="url(#q-dim)" marker-end="url(#q-dim)"/>
+  <text x="440" y="270" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">Vt</text>
+  <!-- direction phi -->
+  <line x1="340" y1="200" x2="470" y2="105" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar2)"/>
+  <path d="M385,200 A45,45 0 0 0 376,173" fill="none" stroke="#222" stroke-width="1"/>
+  <text x="390" y="190" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">φ</text>
+  <!-- crests perpendicular to direction -->
+  <g stroke="#1f5fbf" stroke-width="1.2">
+    <line x1="395" y1="128" x2="439" y2="188"/>
+    <line x1="420" y1="110" x2="464" y2="170"/>
+    <line x1="445" y1="92" x2="489" y2="152"/>
+  </g>
+  <circle cx="402" cy="155" r="3" fill="#222"/>
+  <text x="380" y="150" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">Q</text>
+  <text x="478" y="98" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222">進行方向</text>
+  <text x="500" y="140" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#1f5fbf">波の山</text>
+</svg>

@@ -1,0 +1,130 @@
+{
+ "id": "PHY-NUC-015",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "ボーア模型の対応原理（大きな量子数での光の振動数と電子の周回の振動数）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "古典電磁気学では，円運動する電子は周回の振動数と同じ振動数の電磁波を出す．ボーアの水素原子模型がこれとどのようにつながるかを調べる．\n\n電気量 $+e$ の原子核は静止しているとし，電気量 $-e$，質量 $m$ の電子がクーロン力を向心力として等速円運動する．クーロンの法則の比例定数を $k_0$，プランク定数を $h$，真空中の光の速さを $c$ とする．量子条件は $mvr=\\dfrac{nh}{2\\pi}$（$n$ は正の整数）である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "量子数 $n$ の軌道の半径 $r_n$ と，電子が 1 秒間に軌道を回る回数（周回の振動数）$f_n$ を，$k_0,\\ e,\\ m,\\ h,\\ n$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "電子が量子数 $n$ の状態から $n-1$ の状態に移るときに放出される光の振動数 $\\nu$ を求め，$f_n<\\nu<f_{n-1}$ であることを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\dfrac{\\nu}{f_n}$ を $n$ だけで表し，$n\\to\\infty$ の極限を求めよ．また，$\\nu$ と $f_n$ のずれ $\\dfrac{\\nu}{f_n}-1$ が $1\\,\\%$ 未満になる最小の $n$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "量子数 $n$ の状態から $n-2$ の状態に移るときの光の振動数を $\\nu'$ とする．$n$ が十分大きいとき，$\\nu'$ は $f_n$ のおよそ何倍か．"
+     },
+     {
+      "id": "5",
+      "tex": "リュードベリ定数を $R$ とすると，$f_n=\\dfrac{2Rc}{n^3}$ と書けることを示せ．星間空間の希薄な水素では，量子数が $100$ を超える状態の間の遷移による電波が観測される．$R=1.10\\times10^{7}\\ \\mathrm{/m}$，$c=3.00\\times10^{8}\\ \\mathrm{m/s}$ として，$n=110$ から $109$ への遷移で出る電波の波長 $\\lambda$ を有効数字 2 桁で求めよ．また，周回の振動数 $f_{110}$ をもとに古典論で予想される波長 $\\dfrac{c}{f_{110}}$ も有効数字 3 桁で求め，両者を比べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：ボーア模型の対応原理（大きな量子数での光の振動数と電子の周回の振動数）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$r_n=\\dfrac{n^2h^2}{4\\pi^2k_0me^2}$，$f_n=\\dfrac{4\\pi^2k_0^{\\,2}me^4}{n^3h^3}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\nu=\\dfrac{2\\pi^2k_0^{\\,2}me^4}{h^3}\\cdot\\dfrac{2n-1}{n^2(n-1)^2}$（$\\dfrac{\\nu}{f_n}=\\dfrac{n(2n-1)}{2(n-1)^2}>1$，$\\dfrac{\\nu}{f_{n-1}}=\\dfrac{(n-1)(2n-1)}{2n^2}<1$）"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac{\\nu}{f_n}=\\dfrac{n(2n-1)}{2(n-1)^2}\\to1$，最小の $n=152$"
+   },
+   {
+    "id": "4",
+    "tex": "約 $2$ 倍"
+   },
+   {
+    "id": "5",
+    "tex": "$\\lambda\\fallingdotseq6.0\\times10^{-2}\\ \\mathrm{m}$，$\\dfrac{c}{f_{110}}\\fallingdotseq6.05\\times10^{-2}\\ \\mathrm{m}$（ずれは約 $1\\,\\%$ でほぼ一致）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　運動方程式 $m\\dfrac{v^2}{r}=\\dfrac{k_0e^2}{r^2}$ と量子条件 $mvr=\\dfrac{nh}{2\\pi}$ から $v$ を消去する．運動方程式より $mv^2r=k_0e^2$，これを量子条件の 2 乗 $m^2v^2r^2=\\dfrac{n^2h^2}{4\\pi^2}$ で割って\n\\[ r_n=\\boldsymbol{\\frac{n^2h^2}{4\\pi^2k_0me^2}},\\qquad v_n=\\frac{nh}{2\\pi mr_n}=\\frac{2\\pi k_0e^2}{nh} \\]\n周回の振動数は\n\\[ f_n=\\frac{v_n}{2\\pi r_n}=\\boldsymbol{\\frac{4\\pi^2k_0^{\\,2}me^4}{n^3h^3}} \\]\n\n\\textbf{(2)}　全エネルギーは $E_n=\\dfrac12mv_n^2-\\dfrac{k_0e^2}{r_n}=-\\dfrac{k_0e^2}{2r_n}=-\\dfrac{2\\pi^2k_0^{\\,2}me^4}{n^2h^2}$．振動数条件 $h\\nu=E_n-E_{n-1}$ より\n\\[ \\nu=\\frac{2\\pi^2k_0^{\\,2}me^4}{h^3}\\left\\{\\frac{1}{(n-1)^2}-\\frac1{n^2}\\right\\}=\\boldsymbol{\\frac{2\\pi^2k_0^{\\,2}me^4}{h^3}\\cdot\\frac{2n-1}{n^2(n-1)^2}} \\]\n$f_n$ との比は\n\\[ \\frac{\\nu}{f_n}=\\frac{n(2n-1)}{2(n-1)^2},\\qquad \\frac{\\nu}{f_{n-1}}=\\frac{(n-1)(2n-1)}{2n^2} \\]\n$n\\ge2$ で $n(2n-1)-2(n-1)^2=3n-2>0$，$2n^2-(n-1)(2n-1)=3n-1>0$ なので $f_n<\\nu<f_{n-1}$．放出される光の振動数は，遷移の前後の 2 つの軌道の周回の振動数の間にある．\n\n\\textbf{(3)}　$\\dfrac{\\nu}{f_n}=\\boldsymbol{\\dfrac{n(2n-1)}{2(n-1)^2}}=\\dfrac{2-\\frac1n}{2\\left(1-\\frac1n\\right)^2}\\to\\boldsymbol{1}$．\nずれは $\\dfrac{\\nu}{f_n}-1=\\dfrac{3n-2}{2(n-1)^2}$．$0.01$ 未満の条件は $3n-2<0.02(n-1)^2$．$n=151$ で $451>450$，$n=152$ で $454<456.02$ なので，最小の $n$ は $\\boldsymbol{152}$（左辺は $n$ について減少するので以後も成り立つ）．\n量子数が大きいと，量子論の結果（振動数条件）が古典論の結果（周回の振動数で放射）に一致する．これが\\textbf{対応原理}である．\n\n\\textbf{(4)}　$\\nu'=\\dfrac{2\\pi^2k_0^{\\,2}me^4}{h^3}\\left\\{\\dfrac1{(n-2)^2}-\\dfrac1{n^2}\\right\\}=\\dfrac{2\\pi^2k_0^{\\,2}me^4}{h^3}\\cdot\\dfrac{4(n-1)}{n^2(n-2)^2}$．よって\n\\[ \\frac{\\nu'}{f_n}=\\frac{2n(n-1)}{(n-2)^2}\\to2 \\]\nで，およそ $\\boldsymbol{2}$ 倍．古典論では，だ円軌道の電子は周回の振動数の整数倍（倍音）の電磁波も出すので，$n\\to n-k$ の遷移は $k$ 倍音に対応する．\n\n\\textbf{(5)}　$\\dfrac1\\lambda=R\\left(\\dfrac1{n'^2}-\\dfrac1{n^2}\\right)$ と (2) の $\\nu=\\dfrac{c}{\\lambda}$ を比べると $Rc=\\dfrac{2\\pi^2k_0^{\\,2}me^4}{h^3}$．よって $f_n=\\dfrac{4\\pi^2k_0^{\\,2}me^4}{n^3h^3}=\\dfrac{2Rc}{n^3}$．\n$n=110\\to109$ では\n\\[ \\frac1\\lambda=1.10\\times10^7\\times\\left(\\frac1{109^2}-\\frac1{110^2}\\right)\\fallingdotseq1.10\\times10^7\\times1.523\\times10^{-6}\\fallingdotseq16.8\\ \\mathrm{/m} \\]\nより $\\lambda\\fallingdotseq\\boldsymbol{6.0\\times10^{-2}\\ \\mathrm{m}}$（約 $6\\ \\mathrm{cm}$ の電波）．一方\n\\[ \\frac{c}{f_{110}}=\\frac{110^3}{2R}=\\frac{1.331\\times10^6}{2.20\\times10^7}\\fallingdotseq\\boldsymbol{6.05\\times10^{-2}\\ \\mathrm{m}} \\]\n両者のずれは (3) の式で $n=110$ とした $\\dfrac{3n-2}{2(n-1)^2}\\fallingdotseq1.4\\,\\%$ 程度で，ほぼ一致する．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "ボーア模型で隣り合う準位間の遷移で出る光の振動数は，前後の軌道の周回の振動数の間にあり，量子数が大きいほど周回の振動数（古典論での放射の振動数）に近づく（ずれ $\\frac{3n-2}{2(n-1)^2}$）．$n\\to n-2$ の遷移は倍音に対応し，星間水素の電波の波長が古典的な周回から見積もれる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "wave-basics",
+  "nuclear-decay"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ボーア模型",
+  "対応原理",
+  "振動数条件",
+  "リュードベリ定数",
+  "電波"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

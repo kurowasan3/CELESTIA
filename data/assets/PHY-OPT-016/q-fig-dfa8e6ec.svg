@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" width="560" height="320">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<line x1="230" y1="25" x2="230" y2="52" stroke="#222" stroke-width="2.4"/>
+<line x1="230" y1="58" x2="230" y2="73" stroke="#222" stroke-width="2.4"/>
+<line x1="230" y1="77" x2="230" y2="132" stroke="#222" stroke-width="2.4"/>
+<line x1="230" y1="138" x2="230" y2="153" stroke="#222" stroke-width="2.4"/>
+<line x1="230" y1="157" x2="230" y2="212" stroke="#222" stroke-width="2.4"/>
+<line x1="230" y1="218" x2="230" y2="233" stroke="#222" stroke-width="2.4"/>
+<line x1="230" y1="237" x2="230" y2="292" stroke="#222" stroke-width="2.4"/>
+<line x1="230" y1="298" x2="230" y2="312" stroke="#222" stroke-width="2.4"/>
+<text x="200" y="60" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S</text>
+<text x="200" y="81" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S′</text>
+<text x="200" y="140" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S</text>
+<text x="200" y="161" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S′</text>
+<text x="200" y="220" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S</text>
+<text x="200" y="241" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S′</text>
+<text x="200" y="300" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S</text>
+<line x1="40" y1="50" x2="150" y2="50" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="40" y1="130" x2="150" y2="130" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="40" y1="210" x2="150" y2="210" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="40" y1="290" x2="150" y2="290" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="60" y="40" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#1f5fbf">λ</text>
+<line x1="230" y1="215" x2="288" y2="215" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="230" y1="295" x2="288" y2="295" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="230" y1="235" x2="262" y2="235" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="282" y1="215" x2="282" y2="295" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="288" y="260.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">d</text>
+<line x1="256" y1="215" x2="256" y2="235" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="264" y="239.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">s</text>
+<line x1="230" y1="135" x2="406.16493236768963" y2="63.82474725097671" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar)"/>
+<line x1="230" y1="155" x2="406.16493236768963" y2="83.82474725097671" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar)"/>
+<line x1="230" y1="135" x2="420" y2="135" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M 290 135 A 60 60 0 0 0 285.6 112.5" fill="none" stroke="#222" stroke-width="1"/>
+<text x="296" y="127" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">θ</text>
+<text x="380" y="200" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S</text>
+<text x="392" y="200" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">：振幅</text>
+<text x="440" y="200" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">A</text>
+<text x="380" y="222" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">S′</text>
+<text x="396" y="222" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">：振幅</text>
+<text x="444" y="222" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">rA</text>
+<text x="380" y="252" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">（十分遠くのスクリーン</text>
+<text x="380" y="268" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">で観察）</text>
+</svg>

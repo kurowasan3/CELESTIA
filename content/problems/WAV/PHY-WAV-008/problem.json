@@ -1,0 +1,135 @@
+{
+ "id": "PHY-WAV-008",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "つり下げたロープを伝わる横波パルス（場所によって変わる波の速さ）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $L$，線密度（単位長さあたりの質量）$\\rho$ の一様で柔らかいロープの上端を天井に固定し，図のように鉛直につり下げる．下端は自由である．重力加速度の大きさを $g$ とし，ロープの下端からの高さを $y$ とする．ロープの一部を横に小さくはじくと，横波のパルスがロープに沿って伝わる．パルスの振幅は十分小さく，2つのパルスは互いに影響せずにすれ違うものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "張力の大きさ $S$ のロープを伝わる横波の速さ $v$ は $S$ と $\\rho$ だけで決まり，$v=CS^{p}\\rho^{q}$（$C$ は単位をもたない定数）と書けるとする．両辺の単位（次元）を比べて $p,q$ を求めよ．以下では $C=1$ とする．"
+     },
+     {
+      "id": "2",
+      "tex": "高さ $y$ の点を通過するときのパルスの速さを $g,y$ で表せ．また，下端のごく近くから時刻 $t=0$ に上向きに出たパルスの高さ $y$ を $t$ の関数として求め，パルスが上端に達する時刻 $t_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "時刻 $t=0$ に，下端のごく近くから上向きのパルスと，上端のごく近くから下向きのパルスを同時に送り出した．2つのパルスがすれ違う時刻と高さを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "ロープの下端に質量 $M$ の小さなおもりをつけた．パルスが下端から上端まで伝わるのにかかる時間を $g,L,M,\\rho$ で表せ．また，この時間が (2) の $t_1$ のちょうど半分になるときの $M$ を $\\rho,L$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：つり下げたロープを伝わる横波パルス（場所によって変わる波の速さ）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：つり下げたロープを伝わる横波パルス（場所によって変わる波の速さ）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$p=\\dfrac12$，$q=-\\dfrac12$（$v=\\sqrt{S/\\rho}$）"
+   },
+   {
+    "id": "2",
+    "tex": "$v=\\sqrt{gy}$，$y=\\dfrac14gt^2$，$t_1=2\\sqrt{\\dfrac Lg}$"
+   },
+   {
+    "id": "3",
+    "tex": "時刻 $\\sqrt{\\dfrac Lg}$，下端から高さ $\\dfrac L4$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{2}{\\sqrt g}\\left(\\sqrt{L+\\dfrac M\\rho}-\\sqrt{\\dfrac M\\rho}\\right)$，$M=\\dfrac{9}{16}\\rho L$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 次元解析}\n$[v]=\\mathrm{m\\,s^{-1}}$，$[S]=\\mathrm{kg\\,m\\,s^{-2}}$，$[\\rho]=\\mathrm{kg\\,m^{-1}}$．$S^p\\rho^q$ の次元は $\\mathrm{kg}^{p+q}\\mathrm{m}^{p-q}\\mathrm{s}^{-2p}$ なので\n\\[ p+q=0,\\quad p-q=1,\\quad -2p=-1 \\qquad\\therefore\\quad \\boldsymbol{p=\\tfrac12,\\ q=-\\tfrac12} \\]\n3つの式を2つの未知数が同時に満たすので，$v=C\\sqrt{S/\\rho}$ の形に決まる．\n\n\\textbf{(2) 場所によって変わる波の速さ}\n高さ $y$ の点の張力は，その点より下のロープ（長さ $y$）の重さを支えているので $S=\\rho gy$．よって\n\\[ v=\\sqrt{\\frac{\\rho gy}{\\rho}}=\\boldsymbol{\\sqrt{gy}} \\]\n線密度 $\\rho$ によらない．パルスの高さ $y(t)$ は $\\dfrac{dy}{dt}=\\sqrt{gy}$ を満たす．$\\dfrac{dy}{\\sqrt y}=\\sqrt g\\,dt$ を積分して，$t=0$ で $y=0$ とすると $2\\sqrt y=\\sqrt g\\,t$，すなわち\n\\[ y=\\boldsymbol{\\frac14gt^2} \\]\nこれは加速度 $\\dfrac g2$ の等加速度運動と同じ形である（実際，$v^2=gy=2\\cdot\\dfrac g2\\cdot y$）．$y=L$ となる時刻は\n\\[ t_1=\\boldsymbol{2\\sqrt{\\frac Lg}} \\]\n\n\\textbf{(3) すれ違い}\n上端から下向きに出たパルスも，各点を速さ $\\sqrt{gy}$ で通過する．$\\dfrac{dy}{dt}=-\\sqrt{gy}$，$t=0$ で $y=L$ から $\\sqrt y=\\sqrt L-\\dfrac{\\sqrt g}{2}t$（(2) の運動を時間を逆向きにたどったもの）．すれ違うのは2つの $\\sqrt y$ が等しいときで\n\\[ \\frac{\\sqrt g}{2}t=\\sqrt L-\\frac{\\sqrt g}{2}t \\qquad\\therefore\\quad t=\\boldsymbol{\\sqrt{\\frac Lg}},\\qquad y=\\frac14g\\cdot\\frac Lg=\\boldsymbol{\\frac L4} \\]\n時刻は全体の伝搬時間 $t_1$ のちょうど半分だが，高さは中点ではなく下から $\\dfrac L4$ である．下の方ほど張力が小さく波が遅いため，すれ違いは下に寄る（解答図）．\n\n\\textbf{(4) おもりをつけた場合}\n高さ $y$ の張力は $S=(M+\\rho y)g$ なので，$m=\\dfrac{M}{\\rho}$ とおくと $v=\\sqrt{g(y+m)}$．伝わる時間は\n\\[ t_M=\\int_0^L\\frac{dy}{\\sqrt{g(y+m)}}=\\frac{2}{\\sqrt g}\\left(\\sqrt{L+m}-\\sqrt m\\right)=\\boldsymbol{\\frac{2}{\\sqrt g}\\left(\\sqrt{L+\\frac M\\rho}-\\sqrt{\\frac M\\rho}\\right)} \\]\n（$M\\to0$ で $t_1$ に戻り，$M\\gg\\rho L$ では $t_M\\approx L\\sqrt{\\rho/(Mg)}$ と張力一定 $Mg$ の弦の結果になる．）\n\n$t_M=\\dfrac12t_1=\\sqrt{\\dfrac Lg}$ とすると $\\sqrt{L+m}-\\sqrt m=\\dfrac{\\sqrt L}{2}$．$\\sqrt{L+m}=\\sqrt m+\\dfrac{\\sqrt L}{2}$ の両辺を2乗して\n\\[ L+m=m+\\sqrt{Lm}+\\frac L4 \\qquad\\therefore\\quad \\sqrt m=\\frac34\\sqrt L,\\quad m=\\frac{9}{16}L \\]\nよって $M=\\boldsymbol{\\dfrac{9}{16}\\rho L}$．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "張力が場所によって変わるロープでは波の速さ $\\sqrt{S/\\rho}$ が位置の関数になり，伝わる時間は $dy/v$ を足し合わせて求める．つり下げたロープでは $v=\\sqrt{gy}$ なので，下端から出たパルスは加速度 $g/2$ の等加速度運動と同じ位置変化をし，上下から同時に出たパルスは中点ではなく下から $L/4$ の高さですれ違う．"
+ },
+ "concepts": [
+  "wave-basics",
+  "uniform-acceleration",
+  "string-resonance"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "弦を伝わる波の速さ",
+  "次元解析",
+  "張力",
+  "伝搬時間",
+  "つり下げたロープ"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

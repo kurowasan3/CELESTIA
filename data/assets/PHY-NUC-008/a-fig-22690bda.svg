@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320">
+<defs>
+<marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker>
+</defs>
+<line x1="60.0" y1="70.0" x2="173.1" y2="70.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<text x="116.56" y="58" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="middle" fill="#222">p<tspan baseline-shift="sub" font-size="10">d</tspan></text>
+<line x1="60.0" y1="70.0" x2="170.1" y2="287.6" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<text x="104.56" y="191.32" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="end" fill="#222">p<tspan baseline-shift="sub" font-size="10">α</tspan></text>
+<line x1="173.1" y1="292.6" x2="173.1" y2="73.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<text x="181.12" y="181.32" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">p<tspan baseline-shift="sub" font-size="10">p</tspan></text>
+<path d="M 161.12 70 L 161.12 82 L 173.12 82" fill="none" stroke="#222" stroke-width="1"/>
+<path d="M 100 70 A 40 40 0 0 1 78.2 105.6" fill="none" stroke="#222" stroke-width="1"/>
+<text x="102" y="102" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">φ</text>
+<text x="215" y="150" font-size="16" text-anchor="start" fill="#222"><tspan font-family="Times New Roman, serif" font-style="italic">p</tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="sub" font-size="10">α</tspan></tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="super" font-size="10">2</tspan> = </tspan><tspan font-family="Times New Roman, serif" font-style="italic">p</tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="sub" font-size="10">d</tspan></tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="super" font-size="10">2</tspan> + </tspan><tspan font-family="Times New Roman, serif" font-style="italic">p</tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="sub" font-size="10">p</tspan></tspan><tspan font-family="Times New Roman, serif"><tspan baseline-shift="super" font-size="10">2</tspan></tspan></text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<line x1="60.0" y1="100.0" x2="520.0" y2="100.0" stroke="#222" stroke-width="1.6"/>
+<line x1="60.0" y1="60.0" x2="60.0" y2="140.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<line x1="60.0" y1="140.0" x2="60.0" y2="60.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="50" y="122" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="end">O</text>
+<line x1="528.0" y1="45.0" x2="528.0" y2="155.0" stroke="#222" stroke-width="2.4"/>
+<ellipse cx="524" cy="100" rx="5" ry="8" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="538" y="65" font-size="14" fill="#222" text-anchor="start"><tspan font-family="Times New Roman, serif" font-style="italic">W</tspan><tspan font-family="Noto Sans CJK JP, sans-serif">（</tspan><tspan font-family="Times New Roman, serif" font-style="italic">x</tspan><tspan font-family="Noto Sans CJK JP, sans-serif"> = 2</tspan><tspan font-family="Times New Roman, serif" font-style="italic">λ</tspan><tspan font-family="Noto Sans CJK JP, sans-serif">）</tspan></text>
+<text x="540" y="150" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">自由端</text>
+<line x1="60.0" y1="96.0" x2="60.0" y2="104.0" stroke="#222" stroke-width="1"/>
+<line x1="290.0" y1="96.0" x2="290.0" y2="104.0" stroke="#222" stroke-width="1"/>
+<line x1="520.0" y1="96.0" x2="520.0" y2="104.0" stroke="#222" stroke-width="1"/>
+<text x="290" y="122" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">λ</text>
+<circle cx="491.2" cy="100" r="4" fill="#c0392b"/>
+<text x="491.25" y="88" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">P</text>
+<line x1="491.25" y1="60" x2="520" y2="60" stroke="#222" stroke-width="1" marker-start="url(#q-ak)" marker-end="url(#q-ak)"/>
+<text x="505.625" y="52" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">d</text>
+<line x1="491.2" y1="64.0" x2="491.2" y2="94.0" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="520.0" y1="64.0" x2="520.0" y2="94.0" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="100.0" y1="40.0" x2="180.0" y2="40.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="190" y="45" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">入射波の進む向き</text>
+<text x="320" y="160" font-size="13" fill="#222" text-anchor="middle"><tspan font-family="Times New Roman, serif" font-style="italic">x</tspan><tspan font-family="Noto Sans CJK JP, sans-serif"> 軸</tspan></text>
+</svg>

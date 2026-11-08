@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="130 15 440 230">
+<defs><marker id="a-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<line x1="150" y1="150" x2="550" y2="150" stroke="#888" stroke-width="1" stroke-dasharray="6 4"/>
+<path d="M198.2,252.9 A300,300 0 0 1 206.1,27.7" fill="none" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="480" y1="40" x2="480" y2="230" stroke="#222" stroke-width="1.6"/>
+<text x="486" y="50" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">S</text>
+<line x1="201.8" y1="37.6" x2="480" y2="150" stroke="#222" stroke-width="1"/>
+<line x1="201.8" y1="37.6" x2="440" y2="115" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="180.0" y1="150.0" x2="440" y2="115" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="4 3"/>
+<circle cx="440" cy="115" r="3" fill="#222"/><text x="436" y="107" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">Q(<tspan font-family="Times New Roman, serif" font-style="italic">x</tspan>, <tspan font-family="Times New Roman, serif" font-style="italic">y</tspan>)</text>
+<circle cx="480" cy="150" r="3" fill="#222"/><text x="486" y="168" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">F（焦点）</text>
+<circle cx="180.0" cy="150" r="3" fill="#222"/><text x="150.0" y="168" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">W<tspan baseline-shift="sub" font-size="10" font-style="normal">0</tspan></text>
+<circle cx="201.8" cy="37.6" r="3" fill="#222"/><text x="179.8" y="31.6" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">W</text>
+<path d="M410,150 A70,70 0 0 1 415.1,123.8" fill="none" stroke="#222" stroke-width="1"/>
+<text x="385" y="142" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">β</text>
+<text x="190" y="230" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">波面（F を中心とする半径 <tspan font-family="Times New Roman, serif" font-style="italic">r</tspan> の球面）</text>
+</svg>

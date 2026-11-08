@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 330" width="620" height="330">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<line x1="115.0" y1="60.0" x2="205.0" y2="60.0" stroke="#222" stroke-width="1.6"/>
+<line x1="115.0" y1="60.0" x2="120.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="123.0" y1="60.0" x2="128.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="131.0" y1="60.0" x2="136.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="139.0" y1="60.0" x2="144.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="147.0" y1="60.0" x2="152.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="155.0" y1="60.0" x2="160.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="163.0" y1="60.0" x2="168.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="171.0" y1="60.0" x2="176.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="179.0" y1="60.0" x2="184.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="187.0" y1="60.0" x2="192.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="195.0" y1="60.0" x2="200.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="203.0" y1="60.0" x2="208.6" y2="52.0" stroke="#222" stroke-width="1"/>
+<line x1="160.0" y1="60.0" x2="63.5" y2="193.8" stroke="#222" stroke-width="1.2"/>
+<line x1="160.0" y1="60.0" x2="256.5" y2="150.0" stroke="#222" stroke-width="1.2"/>
+<line x1="63.5" y1="193.8" x2="256.5" y2="150.0" stroke="#222" stroke-width="4"/>
+<line x1="160.0" y1="60.0" x2="160.0" y2="211.9" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<circle cx="160.0" cy="171.9" r="3" fill="#222"/>
+<text x="172.0" y="78.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">P</tspan></text>
+<text x="51.5" y="199.8" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">A</tspan></text>
+<text x="268.5" y="156.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">B</tspan></text>
+<text x="172.0" y="189.9" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">G</tspan></text>
+<text x="101.7" y="126.9" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="end">h<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="218.3" y="105.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">h<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<text x="160.0" y="315.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">図1</text>
+<line x1="443.0" y1="40.0" x2="523.0" y2="40.0" stroke="#222" stroke-width="1.6"/>
+<line x1="443.0" y1="40.0" x2="448.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="451.0" y1="40.0" x2="456.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="459.0" y1="40.0" x2="464.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="467.0" y1="40.0" x2="472.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="475.0" y1="40.0" x2="480.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="483.0" y1="40.0" x2="488.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="491.0" y1="40.0" x2="496.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="499.0" y1="40.0" x2="504.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="507.0" y1="40.0" x2="512.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="515.0" y1="40.0" x2="520.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<polygon points="385,250 560,265 505,205" fill="#888" fill-opacity="0.18" stroke="#222" stroke-width="1.6"/>
+<line x1="483.0" y1="40.0" x2="385.0" y2="250.0" stroke="#222" stroke-width="1.2"/>
+<line x1="483.0" y1="40.0" x2="560.0" y2="265.0" stroke="#222" stroke-width="1.2"/>
+<line x1="483.0" y1="40.0" x2="505.0" y2="205.0" stroke="#222" stroke-width="1.2"/>
+<line x1="483.0" y1="40.0" x2="483.0" y2="270.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<circle cx="483.3" cy="240.0" r="3" fill="#222"/>
+<text x="497.0" y="58.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">P</tspan></text>
+<text x="373.0" y="256.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">A</tspan></text>
+<text x="572.0" y="271.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">B</tspan></text>
+<text x="519.0" y="207.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">C</tspan></text>
+<text x="497.3" y="258.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">G</tspan></text>
+<text x="426.0" y="145.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="end">h<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="530" y="135" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">h<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<text x="507" y="188" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">h<tspan baseline-shift="sub" font-size="10">3</tspan></text>
+<text x="470.0" y="315.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">図2</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 520">
+  <defs><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+  <polygon points="80.0,170.0 135.0,115.0 300.0,280.0 300.0,500.0 80.0,280.0" fill="#1f5fbf" fill-opacity="0.15" stroke="none"/>
+  <line x1="80" y1="170" x2="333.0" y2="170" stroke="#222" stroke-width="1" marker-end="url(#a-ak)"/>
+  <line x1="80" y1="522.0" x2="80" y2="27.0" stroke="#222" stroke-width="1" marker-end="url(#a-ak)"/>
+  <text x="337.0" y="175" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">tan<tspan font-family="Times New Roman, serif" font-style="italic">θ</tspan></text>
+  <text x="88" y="35.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">加速度/<tspan font-family="Times New Roman, serif" font-style="italic">g</tspan>（前向き正）</text>
+  <line x1="80" y1="170" x2="201.0" y2="48.999999999999986" stroke="#c0392b" stroke-width="1.6"/>
+  <line x1="80" y1="60.0" x2="300.0" y2="280.0" stroke="#1f5fbf" stroke-width="1.6"/>
+  <line x1="80" y1="280.0" x2="300.0" y2="500.0" stroke="#1f5fbf" stroke-width="1.6"/>
+  <text x="207.2" y="59.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b">B が壁を離れる</text>
+  <text x="217.5" y="203.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#1f5fbf">A が後ろへすべる</text>
+  <text x="93.2" y="472.5" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#1f5fbf">A が前へすべる</text>
+  <text x="129.5" y="269.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">静止できる</text>
+  <text x="50" y="65.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">2μ</text>
+  <text x="42" y="285.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">−2μ</text>
+  <line x1="135.0" y1="115.0" x2="135.0" y2="170" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="129.0" y="188" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">μ</text>
+  <line x1="190.0" y1="166" x2="190.0" y2="174" stroke="#222" stroke-width="1"/>
+  <text x="182.0" y="188" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222">2μ</text>
+</svg>

@@ -1,0 +1,141 @@
+{
+ "id": "PHY-WAV-001",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "2点の振動グラフと密疎の情報から縦波の進行方向を決める",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$x$ 軸に沿って正弦波の縦波が伝わっているが，進む向きは分かっていない．媒質の $x$ 軸正の向きへの変位を正として $y$ で表す．図1は $x=0$ の点 P，図2は $x=3.0\\ \\mathrm{cm}$ の点 Q における変位 $y$ の時間変化である．また，時刻 $t=0$ には点 P の位置で媒質が最も密になっていたことが分かっている．波長は $3.0\\ \\mathrm{cm}$ より長いとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "図1と図2だけからは，波の進む向きと波長の組は2通り考えられる．その2通りを答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "「$t=0$ に点 P で最も密」という条件から波の進む向きを決定し，波の速さを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$t=0$ において，$0\\le x\\le15\\ \\mathrm{cm}$ の範囲で媒質が最も疎になっている位置をすべて求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$t=0.10\\ \\mathrm{s}$ において，$0\\le x\\le15\\ \\mathrm{cm}$ の範囲で媒質の速度が $x$ 軸の負の向きに最大になっている位置を求めよ．また，その位置で媒質は密か疎か．"
+     },
+     {
+      "id": "5",
+      "tex": "$t>0$ で，点 Q の位置の媒質が初めて最も密になる時刻を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：2点の振動グラフと密疎の情報から縦波の進行方向を決める",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：2点の振動グラフと密疎の情報から縦波の進行方向を決める",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$+x$ 向きで波長 $12\\ \\mathrm{cm}$，または $-x$ 向きで波長 $4.0\\ \\mathrm{cm}$"
+   },
+   {
+    "id": "2",
+    "tex": "$+x$ 向き，$30\\ \\mathrm{cm/s}$"
+   },
+   {
+    "id": "3",
+    "tex": "$x=6.0\\ \\mathrm{cm}$"
+   },
+   {
+    "id": "4",
+    "tex": "$x=9.0\\ \\mathrm{cm}$，疎"
+   },
+   {
+    "id": "5",
+    "tex": "$0.10\\ \\mathrm{s}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 図より周期 $T=0.40\\ \\mathrm{s}$．P は $t=0$ で変位 0 から増え始め，Q は $t=0$ で $-2.0\\ \\mathrm{mm}$（最小）にあるので，Q の振動は P より $\\dfrac T4$ 遅れている（$\\dfrac{3T}{4}$ 進んでいると見ても同じ）．\n\n・$+x$ 向きなら，P の振動が距離 $3.0\\ \\mathrm{cm}$ 進んで Q に届く．$3.0=\\left(m+\\dfrac14\\right)\\lambda$（$m=0,1,\\dots$），$\\lambda>3.0$ より $\\lambda=12\\ \\mathrm{cm}$．\n\n・$-x$ 向きなら，Q の振動が P に届くので Q が P より進んでいて，その進みは $\\dfrac{3T}{4}$．$3.0=\\left(m+\\dfrac34\\right)\\lambda$，$\\lambda>3.0$ より $\\lambda=4.0\\ \\mathrm{cm}$．\nよって $\\boldsymbol{+x\\ \\text{向き・}12\\ \\mathrm{cm}}$ または $\\boldsymbol{-x\\ \\text{向き・}4.0\\ \\mathrm{cm}}$．\n\n\\textbf{(2)} 横波表示では，変位 0 の点で $y$–$x$ グラフが右下がりなら，左側の媒質は $+x$ 向きに，右側の媒質は $-x$ 向きにずれて寄り集まるので「密」，右上がりなら「疎」．$t=0$ に P は変位 0 で，この後 $y$ が増える．$+x$ 向きに進む波では，少し後の P の変位は今の P のすぐ左の変位に等しいので，P の左側は $y>0$，すなわちグラフは P で右下がりで密．$-x$ 向きでは右側が $y>0$ で右上がり，疎になる．よって $\\boldsymbol{+x}$ 向きで $\\lambda=12\\ \\mathrm{cm}$，速さ $v=\\dfrac{\\lambda}{T}=\\boldsymbol{30\\ \\mathrm{cm/s}}$．\n\n\\textbf{(3)} $t=0$ の波形は $y=-A\\sin\\dfrac{2\\pi x}{12}$（$A=2.0\\ \\mathrm{mm}$）．変位 0 で右上がりになる点が疎なので，$\\boldsymbol{x=6.0\\ \\mathrm{cm}}$（$x=0,\\ 12\\ \\mathrm{cm}$ は密）．\n\n\\textbf{(4)} $t=0.10\\ \\mathrm{s}=\\dfrac T4$ の波形は，$t=0$ の波形を $\\dfrac{\\lambda}{4}=3.0\\ \\mathrm{cm}$ だけ右へずらしたもので，$y=A\\cos\\dfrac{2\\pi x}{12}$．媒質の速さは変位 0 の点で最大．$+x$ 向きに進む波では $\\dfrac{\\Delta y}{\\Delta t}=-v\\dfrac{\\Delta y}{\\Delta x}$（波形を右へずらしたときの変化）なので，速度が $-x$ 向きに最大なのは，グラフが変位 0 で右上がりの点，すなわち疎の点である．$y=A\\cos\\dfrac{2\\pi x}{12}$ が 0 で右上がりなのは $\\boldsymbol{x=9.0\\ \\mathrm{cm}}$ で，そこは $\\boldsymbol{\\text{疎}}$．（$+x$ 向きに進む縦波では，密の点の媒質は進行方向へ，疎の点の媒質は逆向きへ最大の速さで動く．）\n\n\\textbf{(5)} $t=0$ に P（$x=0$）にあった密の部分が $30\\ \\mathrm{cm/s}$ で進んで Q に届く時刻だから $\\dfrac{3.0}{30}=\\boldsymbol{0.10\\ \\mathrm{s}}$．図2でも $t=0.10\\ \\mathrm{s}$ に Q は変位 0 で $+x$ 向き（進行方向）に最大の速さで動いており，(4) の関係と一致する．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "縦波の横波表示では，変位0で $y$–$x$ グラフが右下がりの点が密になる．2点の $y$–$t$ グラフだけでは進行方向と波長に2通りの可能性が残り，密疎の情報（変位の空間的な傾き）で進行方向が決まる．媒質の速度は $\\Delta y/\\Delta t=-v\\,\\Delta y/\\Delta x$ で密疎と結びつく．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "縦波",
+  "横波表示",
+  "疎密",
+  "波の進行方向",
+  "y-tグラフ"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

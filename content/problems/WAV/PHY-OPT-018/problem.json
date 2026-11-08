@@ -1,0 +1,143 @@
+{
+ "id": "PHY-OPT-018",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "円形の穴による光軸上の明暗とレンズの公式（フレネル帯）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，十分に薄い不透明な板に半径 $a$ の円形の穴があけてある．穴の中心 C を通り板に垂直な直線（光軸）上で，板から距離 $p$ の点 P に波長 $\\lambda$ の単色の点光源を置き，板の反対側の光軸上で板から距離 $q$ の点 Q における光の強さを調べる．$a$ は $p,\\ q$ より十分小さく，$|x|\\ll1$ のとき $\\sqrt{1+x}\\approx1+\\dfrac x2$ と近似してよい．\n\n穴の中の点 X（C からの距離 $\\rho$）を通る経路 $\\mathrm{P\\to X\\to Q}$ の長さは，$\\rho$ が大きいほど長い．そこで穴を，経路 $\\mathrm{P\\to C\\to Q}$ より長さが $0\\sim\\dfrac\\lambda2$，$\\dfrac\\lambda2\\sim\\lambda$，$\\lambda\\sim\\dfrac{3\\lambda}2$，$\\cdots$ だけ長くなる部分ごとに，C を中心とする輪帯（第1帯，第2帯，$\\cdots$）に分ける．各輪帯を通って Q に届く光は，隣り合う輪帯どうしで打ち消し合うとみなしてよい．したがって，穴にちょうど奇数個の輪帯が含まれるとき Q は明るくなり（強さが極大），ちょうど偶数個の輪帯が含まれるとき Q はほぼ真っ暗になる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "経路 $\\mathrm{P\\to X\\to Q}$ と経路 $\\mathrm{P\\to C\\to Q}$ の長さの差 $\\Delta L$ を，$\\rho,\\ p,\\ q$ で表せ．また，各輪帯の面積は輪帯の番号によらないことを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "穴に含まれる輪帯の数 $N$（端数も含めた値）を，$a,\\ \\lambda,\\ p,\\ q$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "P を固定し，Q を板から非常に遠い位置から板に近づけていく．Q がはじめて明るくなる位置 $q_1$ が満たす式を，$p,\\ q_1$ と $f=\\dfrac{a^2}{\\lambda}$ を用いて表せ．また，そのような位置が存在するための $p$ の条件を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$a=1.0\\,\\mathrm{mm}$，$\\lambda=5.0\\times10^{-7}\\,\\mathrm m$，$p=4.0\\,\\mathrm m$ のとき，$q_1$ を求めよ．また，Q を $q_1$ からさらに板に近づけたとき，Q がはじめてほぼ真っ暗になる位置 $q_2$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "（4）で P だけを $p=1.6\\,\\mathrm m$ の位置に移した．Q を板から非常に遠い位置から近づけていくとき，最初に現れるのは明るくなる位置と真っ暗になる位置のどちらか．また，その位置 $q$ を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：円形の穴による光軸上の明暗とレンズの公式（フレネル帯）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：円形の穴による光軸上の明暗とレンズの公式（フレネル帯）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\Delta L=\\dfrac{\\rho^2}{2}\\left(\\dfrac1p+\\dfrac1q\\right)$，各輪帯の面積はどれも $\\dfrac{\\pi\\lambda pq}{p+q}$"
+   },
+   {
+    "id": "2",
+    "tex": "$N=\\dfrac{a^2}{\\lambda}\\left(\\dfrac1p+\\dfrac1q\\right)$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac1p+\\dfrac1{q_1}=\\dfrac1f$，条件は $p>f$"
+   },
+   {
+    "id": "4",
+    "tex": "$q_1=4.0\\,\\mathrm m$，$q_2=1.3\\,\\mathrm m$"
+   },
+   {
+    "id": "5",
+    "tex": "真っ暗になる位置が先に現れ，$q=2.7\\,\\mathrm m$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　$\\mathrm{PX}=\\sqrt{p^2+\\rho^2}=p\\sqrt{1+\\dfrac{\\rho^2}{p^2}}\\approx p+\\dfrac{\\rho^2}{2p}$，同様に $\\mathrm{XQ}\\approx q+\\dfrac{\\rho^2}{2q}$ だから\n\\[ \\Delta L=\\boldsymbol{\\frac{\\rho^2}{2}\\left(\\frac1p+\\frac1q\\right)} \\]\n第 $j$ 帯の外周の半径 $\\rho_j$ は $\\Delta L=\\dfrac{j\\lambda}{2}$ より $\\rho_j^{\\,2}=\\dfrac{j\\lambda pq}{p+q}$．よって第 $j$ 帯の面積は\n\\[ \\pi\\left(\\rho_j^{\\,2}-\\rho_{j-1}^{\\,2}\\right)=\\frac{\\pi\\lambda pq}{p+q} \\]\nで $j$ によらない．$\\Delta L$ が $\\rho^2$，つまり面積に比例するので，半波長ごとに区切った輪帯は等しい面積をもつ．これが「隣り合う輪帯の光がほぼ同じ大きさで打ち消し合う」根拠である．\n\n\\textbf{(2)}　穴の縁（$\\rho=a$）での $\\Delta L$ を $\\dfrac\\lambda2$ で割ったものが輪帯の数だから\n\\[ N=\\frac{\\Delta L(a)}{\\lambda/2}=\\boldsymbol{\\frac{a^2}{\\lambda}\\left(\\frac1p+\\frac1q\\right)} \\]\n\n\\textbf{(3)}　$f=\\dfrac{a^2}{\\lambda}$ とおくと $N=f\\left(\\dfrac1p+\\dfrac1q\\right)$．Q を遠方から近づけると $\\dfrac1q$ が増えるので，$N$ は $\\dfrac fp$ から単調に増加する（解答図）．$N$ がはじめて奇数（$N=1$）になる位置で Q は明るくなるが，そのためには出発点で $N<1$，つまり $\\dfrac fp<1$ が必要である．このとき $N=1$ の条件は\n\\[ \\boldsymbol{\\frac1p+\\frac1{q_1}=\\frac1f},\\qquad \\text{条件}\\ \\boldsymbol{p>f} \\]\nこれは焦点距離 $f$ の凸レンズの写像公式と同じ形であり，穴が光を Q に集める「レンズ」のようにはたらく．$p<f$ のときは $q_1<0$ となって解がなく，凸レンズで物体が焦点の内側にあると実像ができないことに対応する．\n\n\\textbf{(4)}　$f=\\dfrac{(1.0\\times10^{-3})^2}{5.0\\times10^{-7}}=2.0\\,\\mathrm m$．$p=4.0\\,\\mathrm m>f$ なので(3)が使えて\n\\[ \\frac{1}{q_1}=\\frac1{2.0}-\\frac1{4.0}=0.25\\quad\\Longrightarrow\\quad q_1=\\boldsymbol{4.0\\,\\mathrm m} \\]\nさらに近づけると $N$ は増え，次に $N=2$ で真っ暗になる．\n\\[ f\\left(\\frac1p+\\frac1{q_2}\\right)=2\\quad\\Longrightarrow\\quad\\frac1{q_2}=\\frac{2}{2.0}-\\frac1{4.0}=0.75\\quad\\Longrightarrow\\quad q_2=1.33\\cdots\\approx\\boldsymbol{1.3\\,\\mathrm m} \\]\n\n\\textbf{(5)}　$p=1.6\\,\\mathrm m<f$ なので，Q が非常に遠いときすでに $N=\\dfrac{2.0}{1.6}=1.25>1$ である．Q を近づけると $N$ は $1.25$ から増えるので，$N=1$ になることはなく，最初に出会う整数は $N=2$ である．よって\\textbf{真っ暗になる位置が先に現れる}．\n\\[ \\frac1q=\\frac{2}{2.0}-\\frac1{1.6}=0.375\\quad\\Longrightarrow\\quad q=2.66\\cdots\\approx\\boldsymbol{2.7\\,\\mathrm m} \\]\nレンズの公式と同じ形の式で考えると「焦点の内側にある光源の像はできない」だけに見えるが，穴は単なるレンズではなく，輪帯の数の偶奇で明暗が決まるので，$p<f$ では暗点が先に現れる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "穴を通る経路の長さの超過は $\\rho^2$（面積）に比例するので，半波長ごとの輪帯は等しい面積をもち，光軸上の明暗は穴に含まれる輪帯の数の偶奇で決まる．輪帯がちょうど1つになる条件はレンズの写像公式と同じ形（$f=a^2/\\lambda$）になるが，光源が「焦点」より内側にあると輪帯の数が最初から1を超えるので，観測点を近づけて最初に出会うのは暗点になる．"
+ },
+ "concepts": [
+  "light-interference",
+  "lens-imaging",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "回折",
+  "フレネル帯",
+  "経路差の近似",
+  "レンズの公式",
+  "場合分け"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

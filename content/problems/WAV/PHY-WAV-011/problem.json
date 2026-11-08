@@ -1,0 +1,143 @@
+{
+ "id": "PHY-WAV-011",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "2層の板を伝わる縦波・横波の先頭波（モード変換を含む屈折と走時グラフの逆問題）",
+ "course": "物理",
+ "level": 5,
+ "minutes": 35,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，厚さ $h$ の板 A を十分に厚い板 B の上にすきまなく貼り合わせた．板 A，B の中を伝わる縦波の速さをそれぞれ $V_{\\rm A},\\ V_{\\rm B}$ とし，どちらの物質でも横波の速さは縦波の速さの $\\dfrac1k$ 倍 $(k>1)$ である．また $\\dfrac{V_{\\rm B}}{k}>V_{\\rm A}$ とする．板 A の表面上の点 O に置いた発振器から，短い縦波のパルスを板 A の中へあらゆる向きに送り出し，O から距離 $x$ の表面上の点 D に置いた検出器で到達時刻 $t$ を測る．検出器は縦波だけを検出する．境界面に波が入射すると，縦波と横波の両方の反射波・屈折波が生じうる．表面や境界面に沿って伝わる特別な波（表面波）は考えない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "板 A から境界面に入射角 $\\alpha$ で縦波の平面波が入射するとき，波面と境界面の交線は境界面に沿って速さ $\\dfrac{V_{\\rm A}}{\\sin\\alpha}$ で動く．反射波・屈折波の波面もこの交線を共有することを用いて，板 B へ屈折する横波の屈折角 $\\phi'$ と，板 A へ反射する横波の反射角 $\\theta'$ について，$\\sin\\phi'$ と $\\sin\\theta'$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\alpha$ をしだいに大きくすると，板 B に屈折する縦波，横波がそれぞれ境界面に沿って進むようになる入射角 $\\alpha_{\\rm P},\\ \\alpha_{\\rm S}$ がある．$\\sin\\alpha_{\\rm P},\\ \\sin\\alpha_{\\rm S}$ を求め，どちらが大きいか答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "境界面に沿って板 B の中を速さ $c\\ (c>V_{\\rm A})$ で進む波は，その通り道の各点から板 A の中に縦波を送り出し，それらが重なって板 A の中を角 $\\alpha_c$（表面の法線となす角）の向きに進む平面波ができる．$\\sin\\alpha_c$ を求めよ．また，O から角 $\\alpha_c$ で下り，境界面に沿って速さ $c$ で進み，再び角 $\\alpha_c$ で上って D に届く波（先頭波）の到達時刻 $t$ を $x$ の関数として表し，この波が D に届くための $x$ の条件を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$x$ を変えて測定したところ，到達時刻が $x$ に対して直線的に変わる3種類の縦波が検出された：\n\\[ \\text{(a)}\\ t=\\frac{x}{3.0\\ {\\rm mm/\\mu s}},\\qquad \\text{(b)}\\ t=\\frac{x}{5.0\\ {\\rm mm/\\mu s}}+6.4\\ {\\rm \\mu s},\\qquad \\text{(c)}\\ \\text{傾きが}\\ \\frac{1}{3.75\\ {\\rm mm/\\mu s}}\\ \\text{の直線} \\]\nただし (b)，(c) は $x$ がある値以上のときだけ検出された．$V_{\\rm A},\\ V_{\\rm B},\\ k,\\ h$ を求め，(c) の直線の $t$ 切片と，(b)，(c) が検出され始める $x$ の値を求めよ．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の板で，最初に届く波（初動）は $x$ によってどれになるか．(c) が初動になることはあるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：2層の板を伝わる縦波・横波の先頭波（モード変換を含む屈折と走時グラフの逆問題）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：2層の板を伝わる縦波・横波の先頭波（モード変換を含む屈折と走時グラフの逆問題）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\sin\\phi'=\\dfrac{V_{\\rm B}\\sin\\alpha}{kV_{\\rm A}}$，$\\sin\\theta'=\\dfrac{\\sin\\alpha}{k}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\sin\\alpha_{\\rm P}=\\dfrac{V_{\\rm A}}{V_{\\rm B}}$，$\\sin\\alpha_{\\rm S}=\\dfrac{kV_{\\rm A}}{V_{\\rm B}}$，$\\alpha_{\\rm S}$ の方が大きい"
+   },
+   {
+    "id": "3",
+    "tex": "$\\sin\\alpha_c=\\dfrac{V_{\\rm A}}{c}$，$t=\\dfrac{x}{c}+2h\\sqrt{\\dfrac{1}{V_{\\rm A}^2}-\\dfrac{1}{c^2}}$，$x\\ge2h\\tan\\alpha_c=\\dfrac{2hV_{\\rm A}}{\\sqrt{c^2-V_{\\rm A}^2}}$"
+   },
+   {
+    "id": "4",
+    "tex": "$V_{\\rm A}=3.0\\times10^3\\ {\\rm m/s}$，$V_{\\rm B}=5.0\\times10^3\\ {\\rm m/s}$，$k=1.3\\ \\left(=\\dfrac43\\right)$，$h=12\\ {\\rm mm}$，(c) の切片 $4.8\\ {\\rm \\mu s}$，(b) は $x\\ge18\\ {\\rm mm}$，(c) は $x\\ge32\\ {\\rm mm}$ で検出される"
+   },
+   {
+    "id": "5",
+    "tex": "$x<48\\ {\\rm mm}$ では (a)，$x>48\\ {\\rm mm}$ では (b)．(c) が初動になることはない"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 境界に沿った交線の速さの一致}　入射波の波面と境界面の交線は速さ $\\dfrac{V_{\\rm A}}{\\sin\\alpha}$ で境界面に沿って動く．反射波・屈折波はこの交線から生まれるので，それぞれの波面と境界面の交線も同じ速さで動く必要がある．速さ $V$ の波が角 $\\beta$ で進むとき交線の速さは $\\dfrac{V}{\\sin\\beta}$ なので，\n\\[ \\frac{V_{\\rm A}}{\\sin\\alpha}=\\frac{V_{\\rm B}/k}{\\sin\\phi'}=\\frac{V_{\\rm A}/k}{\\sin\\theta'} \\]\nよって $\\sin\\phi'=\\boldsymbol{\\dfrac{V_{\\rm B}\\sin\\alpha}{kV_{\\rm A}}}$，$\\sin\\theta'=\\boldsymbol{\\dfrac{\\sin\\alpha}{k}}$．波の種類が変わっても，「速さ$/\\sin$（角）」が共通という屈折の法則が成り立つ．\\hfill$\\square$\n\n\\textbf{(2) 臨界角}　屈折縦波は $\\dfrac{V_{\\rm A}}{\\sin\\alpha}=\\dfrac{V_{\\rm B}}{\\sin90^\\circ}$ のとき境界面に沿うので $\\sin\\alpha_{\\rm P}=\\boldsymbol{\\dfrac{V_{\\rm A}}{V_{\\rm B}}}$．屈折横波は $\\sin\\alpha_{\\rm S}=\\boldsymbol{\\dfrac{kV_{\\rm A}}{V_{\\rm B}}}$（$\\dfrac{V_{\\rm B}}{k}>V_{\\rm A}$ なので $1$ より小さく，この角は存在する）．$k>1$ なので \\textbf{$\\alpha_{\\rm S}$ の方が大きい}．$\\alpha_{\\rm P}<\\alpha<\\alpha_{\\rm S}$ では板 B に横波だけが屈折し，$\\alpha>\\alpha_{\\rm S}$ では板 B へは何も屈折しない．\\hfill$\\square$\n\n\\textbf{(3) 先頭波}　境界面上の波が速さ $c$ で進むと，各点が送り出す素元波（半径 $V_{\\rm A}\\tau$）の包絡面は，(1) の逆向きの関係から交線の速さが $c$ となる平面波で，$\\dfrac{V_{\\rm A}}{\\sin\\alpha_c}=c$，すなわち\n\\[ \\sin\\alpha_c=\\boldsymbol{\\frac{V_{\\rm A}}{c}} \\]\n（これは臨界角そのもの．臨界角で入射した波が境界面に沿う波をつくり，その波が同じ角で板 A に波を送り返す．）\n\n到達時刻は，板 A を斜めに下る・上る部分（各 $\\dfrac{h}{\\cos\\alpha_c}$，速さ $V_{\\rm A}$）と境界面に沿う部分（$x-2h\\tan\\alpha_c$，速さ $c$）の和で\n\\[ t=\\frac{2h}{V_{\\rm A}\\cos\\alpha_c}+\\frac{x-2h\\tan\\alpha_c}{c}=\\frac xc+\\frac{2h}{V_{\\rm A}\\cos\\alpha_c}\\left(1-\\frac{V_{\\rm A}\\sin\\alpha_c}{c}\\right)=\\frac xc+\\frac{2h\\cos\\alpha_c}{V_{\\rm A}} \\]\n\\[ \\therefore\\ t=\\boldsymbol{\\frac xc+2h\\sqrt{\\frac{1}{V_{\\rm A}^2}-\\frac{1}{c^2}}} \\]\n（この経路は，境界面に沿う区間の長さを変えたときの所要時間が最小となる経路でもある．）境界面に沿う区間の長さが負にならないことが条件で\n\\[ x\\ \\boldsymbol{\\ge\\ 2h\\tan\\alpha_c=\\frac{2hV_{\\rm A}}{\\sqrt{c^2-V_{\\rm A}^2}}} \\]\n$t$ は $x$ の1次式で，傾きが $\\dfrac1c$，切片が $2h\\sqrt{\\dfrac1{V_{\\rm A}^2}-\\dfrac1{c^2}}$ である．\\hfill$\\square$\n\n\\textbf{(4) 測定からの決定}（以下，速さは ${\\rm mm/\\mu s}={\\rm km/s}$ で計算する）\n\n(a) は原点を通るので，板 A の表面に沿って O から D へ直接進む縦波で，$V_{\\rm A}=\\boldsymbol{3.0\\times10^3\\ {\\rm m/s}}$．\n\n(b)，(c) は (3) の形の先頭波で，境界面に沿う速さは $5.0$ と $3.75$．板 B の縦波の速さ $V_{\\rm B}$ と横波の速さ $\\dfrac{V_{\\rm B}}{k}$ $(<V_{\\rm B})$ のうち，速い方が (b) である．よって $V_{\\rm B}=\\boldsymbol{5.0\\times10^3\\ {\\rm m/s}}$，$k=\\dfrac{5.0}{3.75}=\\boldsymbol{\\dfrac43\\fallingdotseq1.3}$．(c) は「縦波で下り，板 B の中は横波として境界面に沿って進み，再び縦波として上る」波である．\n\n(b) の切片から\n\\[ 2h\\sqrt{\\frac1{3.0^2}-\\frac1{5.0^2}}=2h\\cdot\\frac{4}{15}=6.4\\quad\\Longrightarrow\\quad h=\\boldsymbol{12\\ {\\rm mm}} \\]\n(c) の切片は $2h\\sqrt{\\dfrac1{3.0^2}-\\dfrac1{3.75^2}}=24\\times\\dfrac{3}{15}=\\boldsymbol{4.8\\ {\\rm \\mu s}}$．\n\n検出され始める $x$：(b) は $\\sin\\alpha_{\\rm P}=\\dfrac35$，$\\tan\\alpha_{\\rm P}=\\dfrac34$ より $x\\ge2\\times12\\times\\dfrac34=\\boldsymbol{18\\ {\\rm mm}}$．(c) は $\\sin\\alpha_{\\rm S}=\\dfrac45$，$\\tan\\alpha_{\\rm S}=\\dfrac43$ より $x\\ge\\boldsymbol{32\\ {\\rm mm}}$．\\hfill$\\square$\n\n\\textbf{(5) 初動}　3本の直線（解答図）を比べる（$t$ は ${\\rm \\mu s}$，$x$ は ${\\rm mm}$）．\n・(a) と (b)：$\\dfrac x3=\\dfrac x5+6.4$ より $x=48$．$x>48$ で (b) が早い．\n\n・(a) と (c)：$\\dfrac x3<\\dfrac{x}{3.75}+4.8 \\iff x<72$．$x<72$ では (a) の方が早い．\n\n・(b) と (c)：$\\dfrac x5+6.4<\\dfrac{x}{3.75}+4.8\\iff x>24$．(c) が存在する $x\\ge32$ では (b) の方が早い．\n\nしたがって初動は \\textbf{$x<48\\ {\\rm mm}$ では (a)，$x>48\\ {\\rm mm}$ では (b)} で，\\textbf{(c) が初動になることはない}（$x<72$ では (a) に，$x\\ge32$ では (b) に負ける）．なお，境界面で反射して戻る縦波の到達時刻 $\\dfrac{2}{V_{\\rm A}}\\sqrt{h^2+\\left(\\dfrac x2\\right)^2}$ は常に (a) より遅く，初動にはならない．(c) は初動のあとに届く「後続の波」として観測され，その傾きから横波の速さ，すなわち $k$ が分かる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "境界面で生じる反射波・屈折波は波の種類（縦波・横波）によらず，波面と境界面の交線の速さ（速さ$/\\sin$角）が入射波と共通になる．屈折波が境界面に沿う臨界角で入射すると，境界に沿って速さ $c$ で進む波ができ，それが同じ臨界角で送り返す波（先頭波）の到達時刻は $x/c+2h\\sqrt{1/V_{\\rm A}^2-1/c^2}$ と $x$ の1次式になる．到達時刻の直線の傾きと切片から，下の層の縦波・横波の速さと上の層の厚さが決まる．"
+ },
+ "concepts": [
+  "wave-basics",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "屈折の法則",
+  "臨界角",
+  "ホイヘンスの原理",
+  "縦波と横波",
+  "先頭波",
+  "走時"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

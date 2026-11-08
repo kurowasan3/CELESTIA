@@ -1,0 +1,136 @@
+{
+ "id": "PHY-OSC-057",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "2本の棒にのせた直角の軽い枠の頂点の小球（糸のない振り子と動く支点）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，水平な床に立てた2本の支柱の上端に，なめらかで細い水平な棒 P$_1$，P$_2$ が紙面に垂直に固定されている．P$_1$ と P$_2$ は同じ高さにあり，その間隔は $d$ である．P$_1$P$_2$ の中点を O とする．質量の無視できる2本のまっすぐな細い棒を直角につないだ枠の頂点 C に，質量 $m$ の小球を取り付ける．枠の腕の長さはどちらも $d$ より十分長い．小球が P$_1$P$_2$ より下にくるようにして，左の腕を P$_1$ に，右の腕を P$_2$ にのせ（P$_1$，P$_2$ は直角の外側から腕に接して支える），枠は常に紙面内で運動するものとする．線分 OC が鉛直下向きとなす角を $\\varphi$ とし，C が P$_2$ の側にあるときを正とする．はじめ $\\varphi=\\varphi_0$（$0<\\varphi_0<\\frac{\\pi}{2}$）で静かに放した．重力加速度の大きさを $g$ とし，空気抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小球はある円周上を動く．その円の中心と半径を答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "角 $\\varphi$ のときの小球の速さ $v$ を求めよ．また，枠が小球に及ぼす力は C から O の向きを向くことを示し，その大きさ $G$ を $m,\\ g,\\ \\varphi,\\ \\varphi_0$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "角 $\\varphi$ のとき，P$_1$，P$_2$ が枠に及ぼす力の大きさ $N_1$，$N_2$ をそれぞれ $m,\\ g,\\ \\varphi,\\ \\varphi_0$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "次に，2本の支柱を，なめらかで水平な床の上を左右に自由に動ける台車（支柱を含めた質量 $M$）に固定し，台車・枠・小球をすべて静止させた状態で $\\varphi=\\varphi_0$ から静かに放した．台車は傾かず，水平に並進運動するだけとする．\n  \\begin{enumerate}\n    \\item[(a)] $|\\varphi_0|$ が十分小さいとき，小球の振動の周期 $T$ を求めよ．\n    \\item[(b)] $\\varphi_0$ が小さいとは限らないとき，運動中の台車の速さの最大値 $V_{\\max}$ を求めよ．\n  \\end{enumerate}"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：2本の棒にのせた直角の軽い枠の頂点の小球（糸のない振り子と動く支点）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：2本の棒にのせた直角の軽い枠の頂点の小球（糸のない振り子と動く支点）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "中心 O，半径 $\\dfrac{d}{2}$"
+   },
+   {
+    "id": "2",
+    "tex": "$v=\\sqrt{gd(\\cos\\varphi-\\cos\\varphi_0)}$，$G=mg(3\\cos\\varphi-2\\cos\\varphi_0)$"
+   },
+   {
+    "id": "3",
+    "tex": "$N_1=mg(3\\cos\\varphi-2\\cos\\varphi_0)\\cos\\left(\\dfrac{\\pi}{4}+\\dfrac{\\varphi}{2}\\right)$，$N_2=mg(3\\cos\\varphi-2\\cos\\varphi_0)\\cos\\left(\\dfrac{\\pi}{4}-\\dfrac{\\varphi}{2}\\right)$"
+   },
+   {
+    "id": "4",
+    "tex": "(a) $T=2\\pi\\sqrt{\\dfrac{Md}{2(M+m)g}}$　(b) $V_{\\max}=m\\sqrt{\\dfrac{gd(1-\\cos\\varphi_0)}{M(M+m)}}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 小球の軌跡}\\\\\n腕は P$_1$，P$_2$ に接したまま動き，C での角はつねに直角である．$\\angle\\mathrm{P_1CP_2}=90^\\circ$ だから，円周角の定理（直径に対する円周角は直角）より，C は P$_1$P$_2$ を直径とする円周上にある．よって中心 O，半径 $\\boldsymbol{d/2}$ の円周上を動く．枠の形・腕の長さにはよらない．\n\n\\textbf{(2) 枠が小球に及ぼす力の向き}\\\\\nなめらかな棒が腕に及ぼす力は腕に垂直である．左の腕 CP$_1$ に垂直な向きは右の腕 CP$_2$ に平行だから，P$_1$ からの力 $N_1$ は P$_1$ を通り CP$_2$ に平行な直線上にあり，同様に $N_2$ は P$_2$ を通り CP$_1$ に平行な直線上にある．この2直線は，長方形 CP$_1$QP$_2$ の4つ目の頂点 Q で交わる（解答図）．\\\\\n枠の質量は0なので，枠にはたらく力（$N_1$，$N_2$，小球から受ける力）の和も，任意の点のまわりのモーメントの和も0でなければならない（そうでないと加速度・角加速度が無限大になる）．小球から受ける力は C にはたらくので，C のまわりのモーメントを考えると，$N_1$ と $N_2$ の合力の作用線は C を通る．一方，$N_1,N_2$ の作用線はともに Q を通るから，合力の作用線は直線 QC である．長方形の対角線 QC は他方の対角線 P$_1$P$_2$ の中点 O を通るので，合力は C→O の向き（小球を円の中心へ引き寄せる向き）である．枠が小球に及ぼす力はこの合力に等しい（枠の力のつり合い）．\\\\\nつまり枠は「O につるした長さ $d/2$ の糸」と同じはたらきをする．この力は速度に垂直で仕事をしないので，力学的エネルギーが保存する．$\\varphi_0$ からの高さの低下は $\\frac d2(\\cos\\varphi-\\cos\\varphi_0)$ なので\n\\[ \\frac12mv^2=mg\\cdot\\frac d2(\\cos\\varphi-\\cos\\varphi_0) \\quad\\therefore\\quad \\boldsymbol{v=\\sqrt{gd(\\cos\\varphi-\\cos\\varphi_0)}} \\]\n中心方向の運動方程式 $m\\dfrac{v^2}{d/2}=G-mg\\cos\\varphi$ より\n\\[ \\boldsymbol{G=mg(3\\cos\\varphi-2\\cos\\varphi_0)} \\]\n$|\\varphi|\\le\\varphi_0$ では $\\cos\\varphi\\ge\\cos\\varphi_0>0$ なので $G>0$ である．\n\n\\textbf{(3) 2本の棒からの力}\\\\\n$\\triangle\\mathrm{OCP_1}$ は $\\mathrm{OC=OP_1}=d/2$ の二等辺三角形で，頂角は $\\angle\\mathrm{COP_1}=\\frac{\\pi}{2}+\\varphi$ だから，$\\angle\\mathrm{OCP_1}=\\frac{\\pi}{4}-\\frac{\\varphi}{2}$．同様に $\\angle\\mathrm{OCP_2}=\\frac{\\pi}{4}+\\frac{\\varphi}{2}$．\\\\\n$N_1$ は CP$_2$ に平行，$N_2$ は CP$_1$ に平行で互いに直交するから，合力 $G$（向き CO）をこの2方向に分解すると\n\\[ N_1=G\\cos\\angle\\mathrm{OCP_2},\\qquad N_2=G\\cos\\angle\\mathrm{OCP_1} \\]\n\\[ \\boldsymbol{N_1=mg(3\\cos\\varphi-2\\cos\\varphi_0)\\cos\\left(\\frac{\\pi}{4}+\\frac{\\varphi}{2}\\right)},\\quad \\boldsymbol{N_2=mg(3\\cos\\varphi-2\\cos\\varphi_0)\\cos\\left(\\frac{\\pi}{4}-\\frac{\\varphi}{2}\\right)} \\]\n$|\\varphi|<\\frac{\\pi}{2}$ でともに正なので，腕が棒から離れることはない．小球に近い側の棒ほど強く押す（$N_2/N_1=\\tan(\\frac\\pi4+\\frac\\varphi2)$）．\n\n\\textbf{(4) 動ける台車の場合}\\\\\n(2) の議論は枠の質量が0であることと幾何だけを使っているので，台車が加速していても成り立つ．したがって小球は「台車上の点 O から長さ $d/2$ の糸でつるした振り子」と同じ運動をし，台車は O で糸の張力を受けるのと同じである．\\\\\n(a) 台車の位置を $X$，小球の水平位置を $x=X+\\frac d2\\sin\\varphi$ とする．水平方向に外力はないので重心は水平に動かず，$MX+mx=$ 一定．よって $X=\\text{一定}-\\frac{m}{M+m}\\cdot\\frac d2\\sin\\varphi$ であり，小球の水平変位は台車に対して $\\frac d2\\sin\\varphi$，静止した重心から見ると $\\frac{M}{M+m}\\cdot\\frac d2\\sin\\varphi$ である．\\\\\n微小振動では張力 $\\approx mg$ で，その水平成分 $-mg\\varphi$ が小球を戻すから\n\\[ m\\ddot x=-mg\\varphi,\\qquad x-x_{\\rm G}=\\frac{M}{M+m}\\cdot\\frac d2\\varphi \\]\n（$x_{\\rm G}$ は重心の位置で一定）．よって $\\ddot x=-\\dfrac{2(M+m)g}{Md}(x-x_{\\rm G})$ となり，\n\\[ \\boldsymbol{T=2\\pi\\sqrt{\\frac{Md}{2(M+m)g}}} \\]\n台車が固定のとき（$M\\to\\infty$）の $2\\pi\\sqrt{d/(2g)}$ より短い．\n\n(b) 台車の加速度は枠から受ける力（$-G$ の向き，C→O の逆）の水平成分で決まり，その向きは $\\varphi$ の符号とともに変わるから，台車の速さは $\\varphi=0$ で最大になる．このとき小球の速度は水平．台車の速度を $V$，小球の速度を $u$ とすると，水平方向の運動量保存と力学的エネルギー保存（枠からの力は台車と小球の間の内力で，枠は仕事をたくわえない）より\n\\[ MV+mu=0,\\qquad \\frac12MV^2+\\frac12mu^2=mg\\frac d2(1-\\cos\\varphi_0) \\]\n$u=-MV/m$ を代入して $\\frac12MV^2\\cdot\\frac{M+m}{m}=\\frac{mgd}{2}(1-\\cos\\varphi_0)$，\n\\[ \\boldsymbol{V_{\\max}=m\\sqrt{\\frac{gd(1-\\cos\\varphi_0)}{M(M+m)}}} \\]\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "直角の頂点は，それを支える2点を結ぶ線分を直径とする円の上を動く（円周角の定理）．質量のない枠ではなめらかな2支点の垂直抗力の合力が頂点を通らねばならず，2本の作用線は長方形の4つ目の頂点で交わるので，合力は円の中心を向き，枠は「中心につるした長さ $d/2$ の糸」と同じになる．台車が動いても同じ議論が成り立ち，動く支点の振り子に帰着する．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "simple-pendulum",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "円周角の定理",
+  "質量のない物体のつり合い",
+  "振り子",
+  "垂直抗力の分解",
+  "運動量保存",
+  "動く支点"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

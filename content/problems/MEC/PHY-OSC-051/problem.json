@@ -1,0 +1,143 @@
+{
+ "id": "PHY-OSC-051",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "穴を通した糸をゆっくり引き上げる円すい振り子（射影した面積速度の保存と断熱不変量）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，水平な天井板に小さな穴Oがあり，軽くて伸びない糸が通されている．糸の下端には質量 $m$ のおもりがつけられ，おもりは穴の下で，糸と鉛直線のなす角 $\\theta$ を保って水平面内で等速円運動（円すい振り子の運動）をしている．穴より下の糸の長さを $l$，円運動の半径を $r$，角速度を $\\omega$ とする．\n\n穴より上の糸を手で持ち，ゆっくりと引き上げて $l$ を減らしていく．「ゆっくり」とは，1回転の間の $l$ の変化がごくわずかで，各瞬間の運動を円すい振り子の運動とみなしてよいことをいう．糸と穴の間の摩擦，空気抵抗は無視し，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "長さ $l$，角 $\\theta$ の円すい振り子の角速度 $\\omega$ と，糸の張力の大きさ $T$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "引き上げている間も，おもりの運動を水平面に射影した運動の面積速度 $\\frac12r^2\\omega$ は一定に保たれる．その理由を説明せよ．これと(1)を用いて，$l^3\\dfrac{\\sin^4\\theta}{\\cos\\theta}$ が一定に保たれることを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "はじめ $l=l_0$，$\\theta=60^\\circ$ であった．$l=\\dfrac{l_0}{2}$ まで引き上げたときの $\\cos\\theta$ が満たす方程式を求め，$\\theta$ を有効数字3桁で求めよ（方程式は数値的に解いてよい）．"
+     },
+     {
+      "id": "4",
+      "tex": "(3)の間に手が糸を通してした仕事は $mgl_0$ の何倍か．有効数字3桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\theta$ が十分小さいとき，$\\theta$ は $l$ の何乗に比例して変化するか．また，このとき，そのときの長さ $l$ での最下点（Oの真下 $l$ の点）を基準としたおもりの力学的エネルギー $E$ と角速度 $\\omega$ の比 $E/\\omega$ が一定に保たれることを確かめよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：穴を通した糸をゆっくり引き上げる円すい振り子（射影した面積速度の保存と断熱不変量）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：穴を通した糸をゆっくり引き上げる円すい振り子（射影した面積速度の保存と断熱不変量）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\omega=\\sqrt{\\dfrac{g}{l\\cos\\theta}}$，$T=\\dfrac{mg}{\\cos\\theta}$"
+   },
+   {
+    "id": "2",
+    "tex": "張力の水平成分は回転軸（Oを通る鉛直線）を向き，重力は鉛直なので，射影した運動は中心力による運動になる；$r^4\\omega^2=g\\,l^3\\dfrac{\\sin^4\\theta}{\\cos\\theta}$ が一定"
+   },
+   {
+    "id": "3",
+    "tex": "$(1-\\cos^2\\theta)^2=9\\cos\\theta$，$\\theta\\approx83.8^\\circ$"
+   },
+   {
+    "id": "4",
+    "tex": "$1.97$ 倍"
+   },
+   {
+    "id": "5",
+    "tex": "$\\theta\\propto l^{-3/4}$；$E\\approx mgl\\theta^2$，$\\omega\\approx\\sqrt{g/l}$ より $E/\\omega\\approx m\\sqrt g\\,(l^{3/4}\\theta)^2$ で一定"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 円すい振り子}\n\nおもりにはたらく力は張力 $T$（糸に沿ってO向き）と重力 $mg$ である．鉛直方向のつり合いと水平方向の円運動の式は\n\\[ T\\cos\\theta=mg,\\qquad m r\\omega^2=T\\sin\\theta\\quad(r=l\\sin\\theta) \\]\nこれより $\\boldsymbol{T=\\dfrac{mg}{\\cos\\theta}}$，$ml\\sin\\theta\\,\\omega^2=mg\\tan\\theta$ から $\\boldsymbol{\\omega=\\sqrt{\\dfrac{g}{l\\cos\\theta}}}$．\n\n\\textbf{(2) 射影した運動の面積速度が保たれる理由}\n\n糸は穴Oを通っているので，糸を引いている間も張力はつねにおもりからOへ向かう．Oは回転軸（Oを通る鉛直線）上にあるから，張力の水平成分はおもりの真上の軸の点を向く．重力は鉛直で水平成分をもたない．したがって，おもりの運動を水平面に射影すると，射影した点にはたらく力は軸の足（円の中心）を向く中心力だけになり，面積速度が一定に保たれる．糸を引くことで張力の大きさや $l$ が変わっても，力の向きが軸を向くことは変わらない．（エネルギーは手の仕事によって変わるので保存しない．）\n\nゆっくり引くので各瞬間に(1)の関係が成り立ち，$r=l\\sin\\theta$，$\\omega^2=\\dfrac{g}{l\\cos\\theta}$ を用いると\n\\[ (r^2\\omega)^2=r^4\\omega^2=l^4\\sin^4\\theta\\cdot\\frac{g}{l\\cos\\theta}=g\\,l^3\\frac{\\sin^4\\theta}{\\cos\\theta} \\]\n左辺が一定なので $\\boldsymbol{l^3\\dfrac{\\sin^4\\theta}{\\cos\\theta}}$ も一定である．\n\n\\textbf{(3) 引き上げた後の角}\n\nはじめの値は $l_0^3\\cdot\\dfrac{(\\sqrt3/2)^4}{1/2}=\\dfrac98l_0^3$．$l=\\dfrac{l_0}{2}$ では\n\\[ \\frac{l_0^3}{8}\\cdot\\frac{\\sin^4\\theta}{\\cos\\theta}=\\frac98l_0^3\\quad\\Longrightarrow\\quad\\boldsymbol{(1-\\cos^2\\theta)^2=9\\cos\\theta} \\]\n$c=\\cos\\theta$ とおくと $f(c)=(1-c^2)^2-9c$ は $0<c<1$ で単調減少で，$f(0.10)=0.08$，$f(0.11)=-0.014$．さらに詰めると $c\\approx0.1085$，$\\theta\\approx\\boldsymbol{83.8^\\circ}$．糸を短くすると，おもりは水平に近い大きな角で速く回るようになる．\n\n\\textbf{(4) 手がした仕事}\n\n糸は軽く穴に摩擦はないので，手がした仕事は張力がおもりにした仕事に等しく，おもりの力学的エネルギーの増加になる．Oを位置エネルギーの基準にとると，(1)より運動エネルギーは $\\frac12m(l\\sin\\theta)^2\\omega^2=\\dfrac{mgl\\sin^2\\theta}{2\\cos\\theta}$ なので\n\\[ E(l,\\theta)=mgl\\left(\\frac{\\sin^2\\theta}{2\\cos\\theta}-\\cos\\theta\\right) \\]\nはじめ：$E_0=mgl_0\\left(\\dfrac{3/4}{1}-\\dfrac12\\right)=0.250\\,mgl_0$．\n\nあと：$\\sin^2\\theta=1-0.1085^2\\approx0.9882$ より $E_1=\\dfrac{mgl_0}{2}\\left(\\dfrac{0.9882}{0.2170}-0.1085\\right)\\approx2.223\\,mgl_0$．\n\nよって $W=E_1-E_0\\approx\\boldsymbol{1.97\\,mgl_0}$．（張力の大きさ $mg/\\cos\\theta$ を $l$ について積分しても同じ値になる．）\n\n\\textbf{(5) 小さい角の場合}\n\n$\\theta\\ll1$ では $\\sin\\theta\\approx\\theta$，$\\cos\\theta\\approx1$ なので，(2)は $l^3\\theta^4=$ 一定，すなわち\n\\[ \\boldsymbol{\\theta\\propto l^{-3/4}} \\]\nこのとき $\\omega\\approx\\sqrt{g/l}$．最下点基準の力学的エネルギーは，運動エネルギー $\\frac12m(l\\theta)^2\\dfrac gl=\\frac12mgl\\theta^2$ と位置エネルギー $mgl(1-\\cos\\theta)\\approx\\frac12mgl\\theta^2$ の和で $E\\approx mgl\\theta^2$．よって\n\\[ \\frac{E}{\\omega}\\approx\\frac{mgl\\theta^2}{\\sqrt{g/l}}=m\\sqrt g\\,\\left(l^{3/4}\\theta\\right)^2 \\]\nで，$l^{3/4}\\theta$ が一定だから $E/\\omega$ も一定である．小振幅の円すい振り子は互いに垂直な2つの単振動の合成なので，これは「振り子の糸をゆっくり縮めると，振動のエネルギーと振動数が同じ割合で変わる（$E/\\omega$ が一定）」という性質の一例になっている．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "穴を通した糸の張力は回転軸上の点を向くので，引き上げても水平面に射影した運動の面積速度 $\\frac12r^2\\omega$ は保たれる．ゆっくり引けば各瞬間に円すい振り子の関係が成り立つので，両者から $l^3\\sin^4\\theta/\\cos\\theta$ が一定となり，手の仕事はエネルギーの差で求まる．小角では $\\theta\\propto l^{-3/4}$ となって $E/\\omega$ が一定に保たれる（断熱不変量）．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "universal-gravitation",
+  "simple-pendulum"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "円すい振り子",
+  "面積速度一定",
+  "ゆっくりした変化",
+  "断熱不変量",
+  "仕事とエネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,143 @@
+{
+ "id": "PHY-WAV-005",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "遠ざかる壁で固定端反射する波の式とうなりの周期",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$x$ 軸上を速さ $v$ で伝わる波を考える．原点 O にある波源 S は，原点の変位が時刻 $t$ において $y=A\\sin2\\pi ft$ となるように振動し，$x$ 軸の正・負の両向きに波を送り出している．$\\lambda=\\frac{v}{f}$ とする．図のように $x>0$ の側に反射壁 R があり，時刻 $t$ における R の位置は $X(t)=L+ut$（$0<u<v$）である．波は R で固定端反射し，反射によって振幅は変わらない．以下，十分時間が経った後を考える．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "O から R に向かう入射波の変位 $y_1(x,t)$ を求めよ（$0\\le x\\le X(t)$）．"
+     },
+     {
+      "id": "2",
+      "tex": "位置 $x$，時刻 $t$ に届く反射波が R で反射された時刻を $t_{\\rm r}$ とする．$t_{\\rm r}$ を $x,t$ で表し，反射波の変位 $y_2(x,t)$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "反射波の振動数 $f'$ と波長 $\\lambda'$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "O より左側（$x<0$）では，O から直接左へ進む波と反射波が重なり，合成波の振幅がゆっくりと周期的に変化する．この周期 $T_{\\rm b}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "R が静止しているとき（位置 $L$），$x<0$ での合成波の振幅は $2A\\left|\\sin\\frac{2\\pi L}{\\lambda}\\right|$ となる．この式の $L$ を，観測時刻 $t$ での R の位置 $X(t)$ に置き換えて振幅変化の周期を見積もったものを $T_{\\rm q}$ とする．$T_{\\rm q}$ を求めよ．また，$T_{\\rm q}$ が $T_{\\rm b}$ と一致しない理由を説明し，静止壁の式を正しく使うには $L$ を何に置き換えればよいか答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：遠ざかる壁で固定端反射する波の式とうなりの周期",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：遠ざかる壁で固定端反射する波の式とうなりの周期",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$y_1=A\\sin2\\pi\\left(ft-\\frac{x}{\\lambda}\\right)$"
+   },
+   {
+    "id": "2",
+    "tex": "$t_{\\rm r}=\\frac{vt+x-L}{v+u}$，$y_2=-A\\sin2\\pi\\left\\{\\frac{v-u}{v+u}\\left(ft+\\frac{x-L}{\\lambda}\\right)-\\frac{L}{\\lambda}\\right\\}$"
+   },
+   {
+    "id": "3",
+    "tex": "$f'=\\frac{v-u}{v+u}f$，$\\lambda'=\\frac{v+u}{v-u}\\lambda$"
+   },
+   {
+    "id": "4",
+    "tex": "$T_{\\rm b}=\\frac{v+u}{2uf}$"
+   },
+   {
+    "id": "5",
+    "tex": "$T_{\\rm q}=\\frac{v}{2uf}$；振幅を決めるのは観測時刻の壁の位置ではなく，その波を反射した時刻 $t_{\\rm r}$ の壁の位置 $X(t_{\\rm r})$ であり，これは速さ $\\frac{uv}{v+u}$ でしか変化しないから．$L\\to X(t_{\\rm r})$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 原点の振動が位置 $x$ に届くには $\\frac{x}{v}$ かかるので，$x$ での時刻 $t$ の変位は原点での時刻 $t-\\frac{x}{v}$ の変位に等しい．\n\\[ y_1=A\\sin2\\pi f\\left(t-\\frac{x}{v}\\right)=\\boldsymbol{A\\sin2\\pi\\left(ft-\\frac{x}{\\lambda}\\right)} \\]\n\n\\textbf{(2) 反射の瞬間の壁の位置で考える}\n\n時刻 $t_{\\rm r}$ に位置 $X(t_{\\rm r})=L+ut_{\\rm r}$ で反射した波が，距離 $X(t_{\\rm r})-x$ を速さ $v$ で進んで時刻 $t$ に $x$ に届くから\n\\[ t-t_{\\rm r}=\\frac{L+ut_{\\rm r}-x}{v}\\quad\\therefore\\ \\boldsymbol{t_{\\rm r}=\\frac{vt+x-L}{v+u}} \\]\n固定端反射なので，反射点での反射波の変位は入射波の変位の符号を変えたもの：\n\\[ y_2(x,t)=-y_1\\bigl(X(t_{\\rm r}),t_{\\rm r}\\bigr)=-A\\sin2\\pi\\left(ft_{\\rm r}-\\frac{L+ut_{\\rm r}}{\\lambda}\\right)=-A\\sin2\\pi\\left\\{\\left(1-\\frac{u}{v}\\right)ft_{\\rm r}-\\frac{L}{\\lambda}\\right\\} \\]\n$\\left(1-\\frac{u}{v}\\right)ft_{\\rm r}=\\frac{v-u}{v}\\cdot\\frac{f(vt+x-L)}{v+u}=\\frac{v-u}{v+u}\\left(ft+\\frac{x-L}{\\lambda}\\right)$ より\n\\[ \\boldsymbol{y_2=-A\\sin2\\pi\\left\\{\\frac{v-u}{v+u}\\left(ft+\\frac{x-L}{\\lambda}\\right)-\\frac{L}{\\lambda}\\right\\}} \\]\n$u=0$ とすると $-A\\sin2\\pi\\left(ft+\\frac{x-2L}{\\lambda}\\right)$ となり，静止壁の結果に戻る．また $y_2$ は $t+\\frac{x}{v}$ だけの関数なので，確かに $-x$ 向きに速さ $v$ で進む．\n\n\\textbf{(3)} 位相の $t$ の係数から $\\boldsymbol{f'=\\frac{v-u}{v+u}f}$，$x$ の係数から $\\boldsymbol{\\lambda'=\\frac{v+u}{v-u}\\lambda}$（$f'\\lambda'=v$）．これは「壁を観測者として受け取る振動数 $\\frac{v-u}{v}f$ を，遠ざかる音源として出す」というドップラー効果の2段階の考え方と一致する．\n\n\\textbf{(4)} $x<0$ では，直接波は $y_3=A\\sin2\\pi\\left(ft+\\frac{x}{\\lambda}\\right)$．振動数 $f$ と $f'$ の2つの波が同じ向きに進んで重なるので，固定点で観測するとうなりが生じ，その周期は\n\\[ T_{\\rm b}=\\frac{1}{f-f'}=\\frac{1}{f}\\cdot\\frac{v+u}{2u}=\\boldsymbol{\\frac{v+u}{2uf}} \\]\n\n\\textbf{(5) 準静的な見積もりとのずれ}\n\n$2A\\left|\\sin\\frac{2\\pi(L+ut)}{\\lambda}\\right|$ は $\\frac{2\\pi ut}{\\lambda}$ が $\\pi$ 増えるごとに同じ値に戻るので\n\\[ T_{\\rm q}=\\frac{\\lambda}{2u}=\\boldsymbol{\\frac{v}{2uf}}\\quad\\left(\\frac{T_{\\rm b}}{T_{\\rm q}}=\\frac{v+u}{v}\\right) \\]\n実際に $y_2+y_3$ の位相差を計算すると，$t_{\\rm r}$ を用いて\n\\[ 2\\pi\\left(ft+\\frac{fx}{v}\\right)-\\left[2\\pi\\left\\{\\frac{v-u}{v+u}\\left(ft+\\frac{x-L}{\\lambda}\\right)-\\frac{L}{\\lambda}\\right\\}+\\pi\\right]=\\frac{4\\pi X(t_{\\rm r})}{\\lambda}-\\pi \\]\nとなり，合成波の振幅は $2A\\left|\\sin\\frac{2\\pi X(t_{\\rm r})}{\\lambda}\\right|$ である．すなわち振幅を決めるのは，いま届いている反射波を反射したときの壁の位置 $X(t_{\\rm r})$（$L\\to X(t_{\\rm r})$ と置き換える）であって，観測時刻の位置 $X(t)$ ではない．$\\frac{dt_{\\rm r}}{dt}=\\frac{v}{v+u}<1$ だから $X(t_{\\rm r})$ は速さ $\\frac{uv}{v+u}$ でしか変化せず，\n\\[ T_{\\rm b}=\\frac{\\lambda}{2}\\cdot\\frac{v+u}{uv}=\\frac{v+u}{2uf} \\]\nと (4) に一致する．ずれは $\\frac{u}{v}$ の1次の大きさで，$u\\ll v$ ならほぼ $T_{\\rm q}$ でよい．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "反射波の式は，その波が反射された瞬間の反射点の位置と時刻にさかのぼって作る（固定端では符号反転）．反射点が動くと，この遅れの関係から振動数・波長の変化（ドップラー効果）が自然に出てくる．うなりの周期は「反射時の壁の位置」の変化の速さで決まるので，観測時刻の壁の位置で見積もるとずれる．"
+ },
+ "concepts": [
+  "wave-basics",
+  "doppler",
+  "beats"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "波の式",
+  "固定端反射",
+  "ドップラー効果",
+  "うなり",
+  "干渉"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

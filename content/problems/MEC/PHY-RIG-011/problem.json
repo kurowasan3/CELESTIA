@@ -1,0 +1,135 @@
+{
+ "id": "PHY-RIG-011",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "液体の底にちょうつがいで留めた軽い棒（鉛直の安定・不安定と，傾いた状態で液面によらない量）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，密度 $\\rho_0$ の液体を入れた水槽の底の点 O に，長さ $l$，断面積 $S$，密度 $\\rho$（$\\rho<\\rho_0$）の一様な細い棒の一端を，なめらかなちょうつがいでとめた．棒は O を通る鉛直面内で自由に回転できる．O から液面までの高さを $d$ とし，水槽は十分広く，棒の傾きによる液面の変化は無視する．棒は十分細く，浮力は棒の液中部分の中点に，鉛直上向きにはたらくとしてよい．重力加速度の大きさを $g$ とし，棒が水平となす角を $\\theta$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$d\\geqq l$ のとき，棒は鉛直に立って静止する．ちょうつがいが棒に及ぼす力の向きと大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$d<l$ で，棒が鉛直に立ち上端の一部が液面から出ている状態を考える．ちょうつがいが棒に及ぼす力を求めよ．また，棒を鉛直からわずかに傾けたとき鉛直に戻る（この状態が安定である）ための $d$ の条件を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の条件を満たさないとき，棒は傾いた状態で静止する．このときの棒の液中部分の長さ，$\\sin\\theta$，およびちょうつがいが棒に及ぼす力の大きさを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\rho=0.36\\rho_0$ とする．はじめ $d=l$ で，液面をゆっくり下げていく．棒が傾き始めるときの $d$ と，$d=0.30l$ のときの $\\theta$ を求めよ．また，$d=0.80l$ と $d=0.30l$ のときのちょうつがいの力の大きさを $\\rho_0Slg$ の何倍かで答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：液体の底にちょうつがいで留めた軽い棒（鉛直の安定・不安定と，傾いた状態で液面によらない量）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：液体の底にちょうつがいで留めた軽い棒（鉛直の安定・不安定と，傾いた状態で液面によらない量）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "鉛直下向きに $(\\rho_0-\\rho)Slg$"
+   },
+   {
+    "id": "2",
+    "tex": "鉛直下向きに $(\\rho_0d-\\rho l)Sg$；$d>l\\sqrt{\\dfrac{\\rho}{\\rho_0}}$"
+   },
+   {
+    "id": "3",
+    "tex": "液中の長さ $l\\sqrt{\\dfrac{\\rho}{\\rho_0}}$，$\\sin\\theta=\\dfrac dl\\sqrt{\\dfrac{\\rho_0}{\\rho}}$，力 $Slg\\sqrt\\rho\\,(\\sqrt{\\rho_0}-\\sqrt\\rho)$（鉛直下向き）"
+   },
+   {
+    "id": "4",
+    "tex": "$d=0.60l$，$\\theta=30^\\circ$；$0.44$ 倍，$0.24$ 倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　棒にはたらく力は重力，浮力，ちょうつがいの力の3つで，重力と浮力は鉛直なので，水平方向のつり合いからちょうつがいの力も鉛直である．回転のつり合いは O のまわりのモーメントで考える（ちょうつがいの力のモーメントは $0$）．重力は棒の中点（O から $l/2$），浮力は液中部分（長さ $s$）の中点（O から $s/2$）にはたらく．\n\n\\textbf{(1)}　全体が液中にあり，浮力 $\\rho_0Slg$ は重力 $\\rho Slg$ より大きい．鉛直のときモーメントは $0$ で，ちょうつがいの力は\n\\[ \\boldsymbol{\\text{鉛直下向きに }(\\rho_0-\\rho)Slg}. \\]\n\n\\textbf{(2)}　液中の長さは $d$ なので，浮力は $\\rho_0Sdg$．鉛直方向のつり合いから，ちょうつがいの力は \\textbf{鉛直下向きに $(\\rho_0d-\\rho l)Sg$}（負なら上向き）．\n\n鉛直から小さな角 $\\phi$ だけ傾けると，液中の長さは $d/\\cos\\phi\\fallingdotseq d$．O のまわりで，浮力は棒を鉛直に戻す向きに $\\rho_0Sdg\\cdot\\dfrac d2\\sin\\phi$，重力は倒す向きに $\\rho Slg\\cdot\\dfrac l2\\sin\\phi$ のモーメントをもつ（重力については O を支点とする倒立振り子である）．戻る条件は\n\\[ \\rho_0d^2>\\rho l^2\\quad\\Longleftrightarrow\\quad \\boldsymbol{d>l\\sqrt{\\frac{\\rho}{\\rho_0}}}. \\]\nこのときは $d>l\\rho/\\rho_0$ でもあり，ちょうつがいの力は確かに下向きである．\n\n\\textbf{(3)}　傾いて上端が液面から出ているとき，液中の長さは $s=\\dfrac{d}{\\sin\\theta}$．O のまわりのモーメントのつり合い\n\\[ \\rho_0Ssg\\cdot\\frac s2\\cos\\theta=\\rho Slg\\cdot\\frac l2\\cos\\theta \\]\nより，$\\cos\\theta$ が約分されて\n\\[ \\boldsymbol{s=l\\sqrt{\\frac{\\rho}{\\rho_0}}},\\qquad \\sin\\theta=\\frac ds=\\boldsymbol{\\frac dl\\sqrt{\\frac{\\rho_0}{\\rho}}}. \\]\n$\\sin\\theta<1$ は (2) の条件を満たさないこと（$d<l\\sqrt{\\rho/\\rho_0}$）と同じで，ちょうど鉛直が不安定になる範囲で傾いた状態が現れる．ちょうつがいの力は鉛直下向きに\n\\[ \\rho_0Ssg-\\rho Slg=\\boldsymbol{Slg\\sqrt\\rho\\,(\\sqrt{\\rho_0}-\\sqrt\\rho)}. \\]\n液中の長さもちょうつがいの力も $d$ によらない．液面が下がると，棒は液中の長さを保つように寝ていく．\n\n\\textbf{(4)}　$\\sqrt{\\rho/\\rho_0}=0.60$ なので，傾き始めるのは $\\boldsymbol{d=0.60l}$．$d=0.30l$ では $\\sin\\theta=\\dfrac{0.30}{0.60}=\\dfrac12$，$\\boldsymbol{\\theta=30^\\circ}$．\nちょうつがいの力は，$d=0.80l$（鉛直で一部が出ている）では $(\\rho_0\\cdot0.80l-0.36\\rho_0l)Sg=\\boldsymbol{0.44}\\rho_0Slg$，$d=0.30l$（傾いた状態）では $Slg\\sqrt{\\rho_0}\\cdot0.6\\sqrt{\\rho_0}\\cdot(1-0.6)=\\boldsymbol{0.24}\\rho_0Slg$．$d=0.60l$ で両者は $0.24\\rho_0Slg$ に一致し，力は連続に変わる（解答図）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "底に留めた軽い棒では，浮力が鉛直に戻す向き，重力が倒す向き（倒立振り子）のモーメントをもち，液中の長さの2乗と全長の2乗の比較で鉛直の安定が決まる．傾いた状態ではモーメントのつり合いから液中の長さが $l\\sqrt{\\rho/\\rho_0}$ に固定されるので，液面を下げても液中の長さと支点の力は変わらず，傾きだけが変わる．"
+ },
+ "concepts": [
+  "torque",
+  "simple-pendulum",
+  "equilibrium"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "浮力",
+  "力のモーメント",
+  "安定性",
+  "ちょうつがい",
+  "剛体のつり合い"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

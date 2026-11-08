@@ -1,0 +1,135 @@
+{
+ "id": "PHY-WAV-017",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "質量の異なるばね・質点列の境界での縦波の反射と透過（反射パルスからの質量の決定と有限区間での多重反射）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $m$ の小球を，ばね定数 $G$ の軽いばねで平衡状態での間隔が $d$ になるように一直線に多数つないだものを媒質 I，小球の質量だけを $M$ に替えた（ばね定数 $G$，間隔 $d$ は共通）ものを媒質 II とする．小球はばねに沿った $x$ 方向にだけ振動し，平衡位置が $x$ の小球の変位を $z$ とする．波長やパルスの幅は $d$ に比べて十分長く，媒質は連続的とみなせる．このとき，媒質 I を進む縦波の速さは $v=d\\sqrt{G/m}$ で，振幅 $A$，角振動数 $\\omega$ の正弦波が単位時間に運ぶエネルギーは $\\dfrac{\\omega^2}{2d}mvA^2$ である（媒質 II では $m$ を $M$ に替える）．$\\mu=\\sqrt{M/m}$ とおく．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "図の媒質 I（$x<0$）と媒質 II（$x\\geqq0$ の全体）を $x=0$ でつなぐ．入射波 $z=A\\sin(\\omega t-kx)$（$A>0$）が $x=0$ に達し，反射波 $z=B\\sin(\\omega t+kx)$ と透過波 $z=C\\sin(\\omega t-Kx)$ が生じた（$B$，$C$ は正負の値をとりうる）．$x=0$ での変位の連続性とエネルギーの保存を用いて，$B$，$C$ を $A$，$\\mu$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1)の装置で $M$ が未知であるとする．媒質 I から高さ $A_0$ の山形のパルスを送ったところ，$x=0$ から戻ってきたパルスは谷形で，深さが $\\dfrac12A_0$ であった．$M$ を $m$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "次に，(2)で求めた質量 $M$ の媒質 II を区間 $0\\leqq x\\leqq\\ell$ だけにし，$x>\\ell$ を再び媒質 I にした（図）．(2)と同じパルスを左から送ると，$x>\\ell$ の側へ時間をおいて次々にパルスが出ていった．1 番目のパルスの高さ，2 番目以降のパルスの高さが直前のパルスの何倍になるか（山形か谷形かも），およびパルスが出ていく時間間隔を $\\ell$，$v$ で表せ．$\\ell$ は媒質 II でのパルスの幅より十分長いとする．"
+     },
+     {
+      "id": "4",
+      "tex": "(3)で，はじめのパルスのエネルギーのうち，最終的に $x>\\ell$ の側へ出ていくエネルギーの割合と，$x<0$ の側へ戻ってくるエネルギーの割合をそれぞれ求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：質量の異なるばね・質点列の境界での縦波の反射と透過（反射パルスからの質量の決定と有限区間での多重反射）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：質量の異なるばね・質点列の境界での縦波の反射と透過（反射パルスからの質量の決定と有限区間での多重反射）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$B=\\dfrac{1-\\mu}{1+\\mu}A$，$C=\\dfrac{2}{1+\\mu}A$"
+   },
+   {
+    "id": "2",
+    "tex": "$M=9m$"
+   },
+   {
+    "id": "3",
+    "tex": "1 番目は高さ $\\dfrac34A_0$ の山形，以後は $\\dfrac14$ 倍ずつ（すべて山形），時間間隔 $\\dfrac{6\\ell}{v}$"
+   },
+   {
+    "id": "4",
+    "tex": "$x>\\ell$ 側へ $\\dfrac35$，$x<0$ 側へ $\\dfrac25$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 反射波と透過波の振幅}\n\n$x=0$ で媒質はつながっているので変位は連続である：\n\\[ A+B=C\\qquad\\cdots① \\]\n媒質 II の波の速さは $V=d\\sqrt{G/M}$ で，$mv=d\\sqrt{Gm}$，$MV=d\\sqrt{GM}=\\mu\\,mv$．$x=0$ で単位時間に入ってくるエネルギーが，反射波と透過波が運び去るエネルギーの和に等しいので（振動数は共通）\n\\[ \\frac{\\omega^2}{2d}mvA^2=\\frac{\\omega^2}{2d}mvB^2+\\frac{\\omega^2}{2d}MVC^2\\quad\\therefore\\quad A^2-B^2=\\mu C^2\\qquad\\cdots② \\]\n①を②に代入すると $(A+B)(A-B)=\\mu(A+B)^2$．$A+B=0$ とすると $C=0$ となり，$x=0$ の小球は静止し続けるが，この小球には媒質 I 側のばねから振動する力がはたらき，II 側は静止したままなので矛盾する．よって $A-B=\\mu(A+B)$ で\n\\[ B=\\boldsymbol{\\frac{1-\\mu}{1+\\mu}A},\\qquad C=\\boldsymbol{\\frac{2}{1+\\mu}A} \\]\n（$A-B=\\mu C$ は，境界をはさむばねの力（$Gd\\,\\partial z/\\partial x$）の連続，すなわち $k(A-B)=KC$，$K/k=v/V=\\mu$ と同じ条件である．）\n$\\mu>1$（重い媒質へ入射）では $B<0$ で反射波は逆位相，$\\mu<1$ では同位相になる．\n\n\\textbf{(2) 反射パルスから質量を決める}\n\n(1)の比 $B/A$，$C/A$ は $\\omega$ によらないので，どんな形のパルスもその形のまま，高さだけがこの比になって反射・透過する．谷形で深さ $\\frac12A_0$ なので $\\dfrac{1-\\mu}{1+\\mu}=-\\dfrac12$，$\\mu=3$，よって $M=\\mu^2m=\\boldsymbol{9m}$．\n\n\\textbf{(3) 有限区間での多重反射}\n\n$\\mu=3$ のとき，I → II（$x=0$ への入射）では反射 $-\\frac12$ 倍，透過 $\\frac12$ 倍．II → I では(1)の $\\mu$ を $\\frac1\\mu=\\frac13$ に替えて，反射 $\\dfrac{1-1/3}{1+1/3}=+\\dfrac12$ 倍，透過 $\\dfrac{2}{1+1/3}=\\dfrac32$ 倍である．II 内では反射のたびに $+\\frac12$ 倍（同位相）になる．\n\n1 番目のパルス：$x=0$ を透過（$\\frac12$ 倍）し，$x=\\ell$ を透過（$\\frac32$ 倍）して，高さ $\\boldsymbol{\\frac34A_0}$ の山形．\n2 番目以降：II 内を 1 往復するたびに $x=\\ell$ と $x=0$ で 1 回ずつ反射するので $\\left(\\frac12\\right)^2=\\boldsymbol{\\frac14}$ 倍で，すべて山形．\n時間間隔は II 内の往復時間で，$V=d\\sqrt{G/9m}=\\dfrac v3$ より $\\dfrac{2\\ell}{V}=\\boldsymbol{\\frac{6\\ell}{v}}$．（解答図）\n\n\\textbf{(4) エネルギーの行方}\n\n各パルスの継続時間は境界を通っても変わらない（振動数が変わらないのと同じ理由）．パルスのエネルギーは，(1)の単位時間あたりのエネルギーの式から $(mv\\text{ または }MV)\\times(\\text{高さ})^2\\times(\\text{継続時間})$ に比例するので，媒質 I にあるパルスどうしでは高さの 2 乗に比例する．\n\n$x>\\ell$ 側へ出るパルスの高さは $\\frac34A_0,\\ \\frac34\\cdot\\frac14A_0,\\ \\dots$ なので，エネルギーの割合は\n\\[ \\left(\\frac34\\right)^2\\left\\{1+\\frac1{16}+\\left(\\frac1{16}\\right)^2+\\cdots\\right\\}=\\frac9{16}\\cdot\\frac{16}{15}=\\boldsymbol{\\frac35} \\]\n$x<0$ 側へ戻るのは，最初の反射 $-\\frac12A_0$ と，II から出てくる $\\frac12\\cdot\\frac12\\cdot\\frac32A_0=\\frac38A_0$，以後 $\\frac14$ 倍ずつのパルスなので\n\\[ \\left(\\frac12\\right)^2+\\left(\\frac38\\right)^2\\cdot\\frac{16}{15}=\\frac14+\\frac{3}{20}=\\boldsymbol{\\frac25} \\]\n和は $\\frac35+\\frac25=1$ で，II 内に残るエネルギーは最終的に $0$ になり，エネルギーが保存されていることが確かめられる．なお，最初の境界での分配（反射 $\\frac14$，透過 $\\mu\\cdot\\left(\\frac12\\right)^2=\\frac34$）も和が $1$ になっている．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "境界での変位の連続とエネルギー流の保存から，反射・透過の振幅比は $\\sqrt{\\text{質量}}$ の比（媒質のインピーダンス）だけで決まり，振動数によらないのでパルスの形は保たれる．反射パルスの向きと高さから媒質の質量を逆算でき，有限の区間では内部の多重反射が等比数列をつくって，出ていくエネルギーの総和が1になる．"
+ },
+ "concepts": [
+  "wave-basics",
+  "ac-circuit"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "縦波",
+  "反射と透過",
+  "インピーダンス",
+  "多重反射",
+  "等比級数",
+  "エネルギーの流れ"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

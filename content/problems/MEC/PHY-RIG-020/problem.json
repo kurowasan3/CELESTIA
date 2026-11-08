@@ -1,0 +1,135 @@
+{
+ "id": "PHY-RIG-020",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "回転する輪の張力から円弧・扇形の重心を求め，切断した輪の断片の運動に使う",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "重力のはたらかない宇宙空間で，質量 $M$，半径 $R$ の細い一様な円形の輪が，中心 O を静止させたまま，輪の面内で一定の角速度 $\\omega$ で回転している．輪は伸び縮みせず，太さは無視できる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "輪の各部分にはたらく張力の大きさ $T$ を $M,R,\\omega$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "輪のうち中心角 $2\\alpha$（$0<\\alpha\\le\\pi$）の円弧の部分を考える．この部分にはたらく力は，両端で隣の部分から引かれる張力だけである．また，この部分の重心 G は O のまわりを角速度 $\\omega$ で等速円運動する．これらを用いて，O から円弧の重心 G までの距離 $d(\\alpha)$ を求めよ．積分は用いないこと．"
+     },
+     {
+      "id": "3",
+      "tex": "ある瞬間に，図の輪上の2点 A，B で同時に輪を切断した．短い方の弧 AB の中心角を $2\\alpha$（$0<\\alpha<\\frac\\pi2$）とする．切断後，2つの断片はそれぞれ回転しながら飛び去る．(a) 短い断片の重心の速さ $v_1$ と長い断片の重心の速さ $v_2$ の比 $v_1/v_2$ を求めよ．(b) 切断してから時間 $t$ 後の，2つの断片の重心の間の距離 $D(t)$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "質量が一様に分布した半径 $R$，中心角 $2\\alpha$ の薄い扇形の板（図右）の重心と扇形の頂点との距離を，(2) の結果を用いて求めよ．積分は用いず，扇形を頂点を共有する多数の細い三角形に分けて考えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：回転する輪の張力から円弧・扇形の重心を求め，切断した輪の断片の運動に使う",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：回転する輪の張力から円弧・扇形の重心を求め，切断した輪の断片の運動に使う",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T=\\dfrac{MR\\omega^2}{2\\pi}$"
+   },
+   {
+    "id": "2",
+    "tex": "$d(\\alpha)=\\dfrac{R\\sin\\alpha}{\\alpha}$"
+   },
+   {
+    "id": "3",
+    "tex": "(a) $\\dfrac{v_1}{v_2}=\\dfrac{\\pi-\\alpha}{\\alpha}$　(b) $D(t)=R\\sin\\alpha\\left(\\dfrac1\\alpha+\\dfrac1{\\pi-\\alpha}\\right)\\sqrt{1+\\omega^2t^2}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{2R\\sin\\alpha}{3\\alpha}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　中心角 $\\Delta\\theta$ の微小部分（質量 $\\frac{\\Delta\\theta}{2\\pi}M$）は，両端で大きさ $T$ の張力に引かれる．2つの張力はそれぞれ円の接線方向で，なす角が $\\Delta\\theta$ だから，合力は O 向きに $2T\\sin\\frac{\\Delta\\theta}{2}\\approx T\\Delta\\theta$．これが半径 $R$ の等速円運動の向心力なので\n\\[ \\frac{\\Delta\\theta}{2\\pi}MR\\omega^2=T\\Delta\\theta\\quad\\text{より}\\quad T=\\boldsymbol{\\frac{MR\\omega^2}{2\\pi}}. \\]\n\n\\textbf{(2)}　円弧の質量は $\\frac{2\\alpha}{2\\pi}M=\\frac{\\alpha}{\\pi}M$．両端の張力は端での接線方向を向き，円弧の対称軸（O と円弧の中点を結ぶ直線）に垂直な成分は打ち消し合い，対称軸に沿って O 向きの成分 $T\\sin\\alpha$ ずつが残る（解答図）．よって円弧が受ける力の合力は O 向きに $2T\\sin\\alpha$．\n\n円弧は形を変えずに O のまわりを回転するので，円弧に固定された点 G は半径 $d$ の等速円運動をする．重心の運動方程式（全質量×重心の加速度＝外力の和）より\n\\[ \\frac{\\alpha}{\\pi}M\\cdot d\\,\\omega^2=2T\\sin\\alpha=\\frac{MR\\omega^2}{\\pi}\\sin\\alpha \\quad\\text{より}\\quad d(\\alpha)=\\boldsymbol{\\frac{R\\sin\\alpha}{\\alpha}}. \\]\n（確認：$\\alpha\\to0$ で $d\\to R$，$\\alpha=\\pi$（輪全体）で $d=0$，半円 $\\alpha=\\frac\\pi2$ では $d=\\frac{2R}{\\pi}$．）\n\n\\textbf{(3)}　切断の直前，各断片の重心は O のまわりを半径 $d$ の円運動しており，速度は O と重心を結ぶ直線に垂直で大きさ $\\omega d$ である．切断後は各断片に力がはたらかないので，重心はこの速度で等速直線運動を続ける（断片自体は回転を続けるが，重心は直進する）．\n\n(a)　短い断片の重心は $d_1=\\frac{R\\sin\\alpha}{\\alpha}$，長い断片（中心角 $2(\\pi-\\alpha)$）の重心は O をはさんで反対側の $d_2=\\frac{R\\sin(\\pi-\\alpha)}{\\pi-\\alpha}=\\frac{R\\sin\\alpha}{\\pi-\\alpha}$ にあるので\n\\[ \\frac{v_1}{v_2}=\\frac{\\omega d_1}{\\omega d_2}=\\boldsymbol{\\frac{\\pi-\\alpha}{\\alpha}}. \\]\n（検算：質量は $\\frac\\alpha\\pi M$ と $\\frac{\\pi-\\alpha}{\\pi}M$ なので運動量の大きさはどちらも $\\frac{MR\\omega\\sin\\alpha}{\\pi}$ で，向きが逆．全運動量 $0$ が保たれていて矛盾がない．）\n\n(b)　切断の瞬間，2つの重心は O を通る1直線上に距離 $D_0=d_1+d_2=R\\sin\\alpha\\left(\\frac1\\alpha+\\frac1{\\pi-\\alpha}\\right)$ だけ離れている．どちらの速度もこの直線に垂直で，回転の向きが同じなので互いに逆向きであり，相対速度の大きさは $\\omega(d_1+d_2)=\\omega D_0$ である．よって $t$ 後には，初めの直線に垂直な方向に $\\omega D_0t$ だけずれ，\n\\[ D(t)=\\sqrt{D_0^2+(\\omega D_0t)^2}=\\boldsymbol{R\\sin\\alpha\\left(\\frac1\\alpha+\\frac1{\\pi-\\alpha}\\right)\\sqrt{1+\\omega^2t^2}}. \\]\n\n\\textbf{(4)}　扇形を，頂点を共有し中心角の等しい $n$ 個の細い二等辺三角形に分ける．$n$ を大きくすると，各三角形の重心は頂点から中線の $\\frac23$，すなわち頂点から距離 $\\frac23R$ の位置にあり，各三角形の質量は等しい．したがって扇形の重心は，「半径 $\\frac23R$，中心角 $2\\alpha$ の円弧上に一様に並んだ等しい質点」の重心，すなわち半径 $\\frac23R$ の一様な円弧の重心と一致する．(2) より\n\\[ \\boldsymbol{\\frac{2R\\sin\\alpha}{3\\alpha}}. \\]\n（例：半円板 $\\alpha=\\frac\\pi2$ では $\\frac{4R}{3\\pi}$．）\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回転する輪の一部分を取り出すと，それに働く外力は両端の張力だけで，その合力 $2T\\sin\\alpha$ が部分の重心の向心力になる．張力は輪全体の微小部分の円運動から決まるので，積分なしに円弧の重心 $R\\sin\\alpha/\\alpha$ が得られ，切断後の断片の重心速度（運動量保存の確認）や，三角形分割による扇形の重心へとつながる．"
+ },
+ "concepts": [
+  "torque",
+  "circular-motion",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "重心",
+  "張力",
+  "円運動",
+  "運動量保存",
+  "円弧"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

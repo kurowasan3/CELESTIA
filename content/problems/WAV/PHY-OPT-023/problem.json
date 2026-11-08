@@ -1,0 +1,130 @@
+{
+ "id": "PHY-OPT-023",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "偏光板を重ねて偏光の向きを回す方法と，板の吸収がある場合の最適な枚数",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$y$ 方向に振動する直線偏光（強さ $I_0$）を，強さをできるだけ保ったまま角 $\\Theta$（$0<\\Theta\\le\\frac{\\pi}{2}$）だけ回転させたい．そこで，$N$ 枚の偏光板 $\\mathrm P_1,\\mathrm P_2,\\dots,\\mathrm P_N$ を光の進路に垂直に順に並べ，$\\mathrm P_k$ の透過軸を $y$ 軸から同じ向きに角 $\\dfrac{k\\Theta}{N}$ だけ傾けておく（$\\mathrm P_N$ の透過軸が目標の向き）．各偏光板は，入射光の電場のうち透過軸に平行な成分だけを通し，垂直な成分を完全に遮断する．さらに，透過軸に平行な成分についても，光の強さの割合 $t$（$0<t\\le1$）だけが透過し，残りは吸収される．光の強さは電場の振幅の2乗に比例する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\mathrm P_N$ を通過した光の強さ $I_N$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$t=1$ とする．$N$ が十分大きいとき，$\\log_e I_N$ を $\\dfrac1N$ の1次まで求め，$N\\to\\infty$ で $I_N\\to I_0$ となることを示せ．また，$\\Theta=\\dfrac{\\pi}{2}$ のとき $I_N\\ge0.90I_0$ となる最小の $N$ を求めよ．ただし，$|x|\\ll1$ で $\\log_e\\cos x\\fallingdotseq-\\dfrac{x^2}{2}$，$\\log_e 0.90=-0.105$，$\\pi^2=9.87$ を用いてよい．"
+     },
+     {
+      "id": "3",
+      "tex": "$t<1$ のときは，枚数を増やすと吸収による損失が増えるので，$I_N$ を最大にする $N$ がある．(2) の近似を用いて，$I_N$ を最大にする $N$（実数として扱う）を $\\Theta$ と $t$ で表し，そのときの $I_N/I_0$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$t=0.98$，$\\Theta=\\dfrac{\\pi}{2}$ のとき，$I_N$ を最大にする整数 $N$ と，そのときの $I_N/I_0$ を有効数字2桁で求めよ．$\\log_e 0.98=-0.0202$ とする．"
+     },
+     {
+      "id": "5",
+      "tex": "同じ偏光板（$t=0.98$）を用い，$\\Theta=\\dfrac{\\pi}{2}$ の回転を，最適な枚数で $\\dfrac{\\pi}{4}$ ずつ2段に分けて行う（$\\dfrac{\\pi}{4}$ 回転用の最適な並びを2組つなぐ）ことを考える．これは (4) と比べて得か損か，(3) の結果を用いて理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：偏光板を重ねて偏光の向きを回す方法と，板の吸収がある場合の最適な枚数",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I_N=I_0\\,t^N\\cos^{2N}\\dfrac{\\Theta}{N}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\log_e I_N\\fallingdotseq\\log_e I_0-\\dfrac{\\Theta^2}{N}$，$N=24$"
+   },
+   {
+    "id": "3",
+    "tex": "$N^*=\\dfrac{\\Theta}{\\sqrt{\\log_e(1/t)}}$，$\\dfrac{I_N}{I_0}=e^{-2\\Theta\\sqrt{\\log_e(1/t)}}$"
+   },
+   {
+    "id": "4",
+    "tex": "$N=11$，$I_N/I_0=0.64$"
+   },
+   {
+    "id": "5",
+    "tex": "同じ（損得なし）．最適値の対数 $-2\\Theta\\sqrt{\\log_e(1/t)}$ が $\\Theta$ に比例するので，$\\frac{\\pi}{4}$ ずつの2段の積は $\\frac{\\pi}{2}$ を1段で行う最適値に等しい（全体として最適な並びそのものになる）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 1枚ごとの変化}\n$\\mathrm P_{k-1}$ を出た光の偏光は $\\mathrm P_{k-1}$ の透過軸の向きで，$\\mathrm P_k$ の透過軸とは角 $\\Theta/N$ をなす．透過軸方向の成分の振幅は $\\cos(\\Theta/N)$ 倍，強さは $\\cos^2(\\Theta/N)$ 倍になり，さらに $t$ 倍される．最初の $\\mathrm P_1$ も入射偏光（$y$ 方向）と角 $\\Theta/N$ をなすので，$N$ 枚すべてで同じ因子がかかり，\n\\[ \\boldsymbol{I_N=I_0\\,t^N\\cos^{2N}\\frac{\\Theta}{N}}. \\]\n\n\\textbf{(2) 損失のない場合}\n$\\log_e I_N=\\log_e I_0+2N\\log_e\\cos\\dfrac{\\Theta}{N}\\fallingdotseq\\log_e I_0+2N\\Bigl(-\\dfrac{\\Theta^2}{2N^2}\\Bigr)=\\boldsymbol{\\log_e I_0-\\dfrac{\\Theta^2}{N}}$．\\\\\n$N\\to\\infty$ で第2項は 0 に近づくので $I_N\\to I_0$：角を細かく刻めば，偏光板だけで偏光の向きをほぼ損失なく回せる．\\\\\n$\\Theta=\\frac{\\pi}{2}$ で $I_N\\ge0.90I_0$ となる条件は $-\\dfrac{\\pi^2}{4N}\\ge\\log_e0.90=-0.105$，すなわち $N\\ge\\dfrac{9.87}{0.42}=23.5$．よって最小の $N$ は $\\boldsymbol{24}$．\\\\\n（注：$I_N\\fallingdotseq I_0(1-\\pi^2/4N)$ とさらに近似すると $N\\ge25$ となり1枚ずれる．$1/N$ の展開は対数に対して行うのが正確で，実際 $\\cos^{48}(\\pi/48)=0.902$，$\\cos^{46}(\\pi/46)=0.898$ である．）\n\n\\textbf{(3) 吸収がある場合の最適枚数}\n\\[ \\log_e\\frac{I_N}{I_0}\\fallingdotseq-N\\log_e\\frac1t-\\frac{\\Theta^2}{N}. \\]\n第1項は $N$ に比例して損失が増え，第2項は $N$ に反比例して減る．$\\lambda=\\log_e(1/t)$ とおき，相加平均・相乗平均の関係を用いると $N\\lambda+\\dfrac{\\Theta^2}{N}\\ge2\\Theta\\sqrt{\\lambda}$ で，等号は $N\\lambda=\\Theta^2/N$ のとき．よって\n\\[ \\boldsymbol{N^*=\\frac{\\Theta}{\\sqrt{\\log_e(1/t)}}},\\qquad \\boldsymbol{\\frac{I_N}{I_0}=e^{-2\\Theta\\sqrt{\\log_e(1/t)}}}. \\]\n最適な並びでは，吸収による損失と角のずれによる損失がちょうど等しくなっている．\n\n\\textbf{(4) 数値}\n$N^*=\\dfrac{1.571}{\\sqrt{0.0202}}=\\dfrac{1.571}{0.142}=11.1$．$N=11$ と $12$ を (3) の式で比べると，$-N\\lambda-\\Theta^2/N$ は $N=11$ で $-0.2222-0.2243=-0.4465$，$N=12$ で $-0.2424-0.2056=-0.4480$ なので $N=\\boldsymbol{11}$．このとき $\\dfrac{I_N}{I_0}=e^{-0.4465}=\\boldsymbol{0.64}$．（(1) の式で直接計算しても $0.639$．）\n\n\\textbf{(5) 2段に分けた場合}\n(3) より，角 $\\Theta$ を最適に回すときの $\\log_e(I_N/I_0)$ は $-2\\Theta\\sqrt{\\lambda}$ で，$\\Theta$ に比例する．$\\frac{\\pi}{4}$ の最適な並び（$N^*=\\frac{\\pi/4}{\\sqrt\\lambda}$，刻み角 $\\sqrt\\lambda$）を2組つないだ全体の対数は $2\\times\\bigl(-2\\cdot\\frac{\\pi}{4}\\sqrt\\lambda\\bigr)=-\\pi\\sqrt\\lambda$ で，$\\frac{\\pi}{2}$ を一度に最適化した値と等しい．実際，最適な刻み角 $\\Theta/N^*=\\sqrt{\\lambda}$ は $\\Theta$ によらないので，2組をつないだものは $\\frac{\\pi}{2}$ 用の最適な並びそのものである．よって\\textbf{損も得もない}（整数への丸めを除けば同じ）．効率を決めるのは「1枚あたりの回転角」だけである．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "偏光板1枚ごとに強さは（角のずれ）$\\cos^2$ と（吸収）$t$ の積で減るので，$N$ 枚では $\\log I$ が「$N$ に比例する吸収損失」と「$1/N$ に比例する角度損失」の和になる．無損失なら $N\\to\\infty$ で偏光を損失なく回せるが，吸収があると両者が等しくなる最適枚数があり，最適な刻み角 $\\sqrt{\\log(1/t)}$ は回転角によらない．"
+ },
+ "concepts": [
+  "light-interference",
+  "torque"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "偏光",
+  "マリュスの法則",
+  "偏光板",
+  "最適化",
+  "近似",
+  "対数"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

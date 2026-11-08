@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 205" width="500" height="205">
+<defs>
+<marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<g transform="translate(0,-60)"><line x1="80" y1="230" x2="197.16" y2="230" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<line x1="197.16" y1="230" x2="197.16" y2="112.84" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<line x1="197.16" y1="112.84" x2="80" y2="230" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<text x="138.57999999999998" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">p<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="207.16" y="171.42000000000002" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">p<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<text x="124.57999999999998" y="165.42000000000002" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="end">p<tspan baseline-shift="sub" font-size="10">3</tspan></text>
+<path d="M183.16,230 L183.16,216 L197.16,216" fill="none" stroke="#222" stroke-width="1"/>
+<text x="110" y="222" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">45°</text>
+<text x="181.16" y="146.84" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">45°</text>
+<text x="260" y="90" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">運動量の和が 0 なので</text>
+<text x="260" y="108" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">3 つの運動量は閉じた三角形をつくる</text>
+<text x="260" y="130" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">内角 = 180° − （光子どうしのなす角）</text>
+<text x="260" y="152" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">正弦定理：</text>
+<text x="330" y="152" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="start">p</text>
+<text x="338" y="152" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">の大きさは</text>
+<text x="260" y="170" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">向かい合う内角の正弦に比例</text>
+</g></svg>

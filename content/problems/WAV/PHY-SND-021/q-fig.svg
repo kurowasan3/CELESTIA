@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 385">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<circle cx="260.0" cy="185.0" r="112" stroke="#222" stroke-width="1.6" fill="none"/>
+<circle cx="260.0" cy="185.0" r="126" stroke="#222" stroke-width="1.6" fill="none"/>
+<rect x="108" y="175" width="20" height="20" stroke="#222" stroke-width="1.6" fill="#ddd"/>
+<line x1="128.0" y1="185.0" x2="134.0" y2="185.0" stroke="#222" stroke-width="1.6"/>
+<text x="98.0" y="190.0" font-family="Noto Sans CJK JP, sans-serif" font-size="16" fill="#222" text-anchor="end">P</text>
+<text x="118.0" y="221.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">音源</text>
+<text x="260.0" y="375.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">（図は(1)(2)の状況）</text>
+<circle cx="400.0" cy="185.0" r="9" stroke="#222" stroke-width="1.6" fill="#ddd"/>
+<line x1="386.0" y1="185.0" x2="391.0" y2="185.0" stroke="#222" stroke-width="1.6"/>
+<text x="416.0" y="190.0" font-family="Noto Sans CJK JP, sans-serif" font-size="16" fill="#222" text-anchor="start">Q</text>
+<text x="388.0" y="221.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">マイクロホン</text>
+<text x="260.0" y="47.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">ℓ<tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">（上の半周）</tspan></text>
+<text x="260.0" y="337.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">ℓ<tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">（下の半周）</tspan></text>
+<path d="M176.4,154.6 L177.8,150.9 L179.3,147.4 L181.1,143.9 L182.9,140.5 L184.9,137.2 L187.1,134.0 L189.4,130.8 L191.8,127.8 L194.4,124.9 L197.1,122.1 L199.9,119.4 L202.8,116.8 L205.8,114.4 L209.0,112.1 L212.2,109.9 L215.5,107.9 L218.9,106.1 L222.4,104.3 L225.9,102.8 L229.6,101.4" stroke="#1f5fbf" stroke-width="1.8" fill="none" marker-end="url(#q-ab)"/>
+<path d="M343.6,215.4 L342.2,219.1 L340.7,222.6 L338.9,226.1 L337.1,229.5 L335.1,232.8 L332.9,236.0 L330.6,239.2 L328.2,242.2 L325.6,245.1 L322.9,247.9 L320.1,250.6 L317.2,253.2 L314.2,255.6 L311.0,257.9 L307.8,260.1 L304.5,262.1 L301.1,263.9 L297.6,265.7 L294.1,267.2 L290.4,268.6" stroke="#1f5fbf" stroke-width="1.8" fill="none" marker-end="url(#q-ab)"/>
+<text x="260.0" y="180.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#1f5fbf" text-anchor="middle">管内の空気の流れ</text>
+<text x="260.0" y="203.0" font-family="Times New Roman, serif" font-style="italic" font-size="13" fill="#1f5fbf" text-anchor="middle"><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">（時計回り，管に対する速さ </tspan>u<tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">）</tspan></text>
+</svg>

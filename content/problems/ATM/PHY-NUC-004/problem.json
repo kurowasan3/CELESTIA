@@ -1,0 +1,122 @@
+{
+ "id": "PHY-NUC-004",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "未知の中性放射線の正体判定（光子仮説の破綻と反跳核のエネルギーからの質量決定）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ある元素に $\\alpha$ 線を当てると，電場や磁場で曲がらない透過力の強い放射線 R が出る．図のように，R を静止した水素原子核（陽子，質量 $m$）を含む物質と，静止した窒素原子核（質量 $14m$）を含む物質にそれぞれ当て，はね飛ばされた原子核の運動エネルギーを測ったところ，その最大値は陽子で $K_{\\mathrm p}=5.7\\,\\mathrm{MeV}$，窒素原子核で $K_{\\mathrm N}=1.4\\,\\mathrm{MeV}$ であった．R の粒子はすべて同じエネルギーをもつとする．はね飛ばされた原子核の運動は非相対論的に扱い，光速を $c$，$mc^2=938\\,\\mathrm{MeV}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "R がエネルギー $E$ の光子（$\\gamma$ 線）であると仮定する．光子が静止した質量 $M$ の原子核に正面から当たって真後ろにはね返るとき（このとき原子核が得るエネルギーは最大となる），原子核が得る運動エネルギーを $K$ とする．$E$ を $K$，$M$，$c$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1)の仮定のもとで，陽子のデータを説明するのに必要な光子のエネルギー $E_{\\mathrm p}$ と，窒素原子核のデータを説明するのに必要な光子のエネルギー $E_{\\mathrm N}$ を，それぞれ MeV 単位で有効数字2桁で求めよ．また，エネルギー $E_{\\mathrm p}$ の光子が窒素原子核に与えうる運動エネルギーの最大値を有効数字1桁で求め，光子という仮定が測定と矛盾することを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "次に，R は質量 $\\mu$，運動エネルギー $K_0$ の電気的に中性な粒子であり，原子核とは弾性衝突すると仮定する．静止した質量 $X$ の原子核が得る運動エネルギーの最大値を $\\mu$，$X$，$K_0$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3)の仮定のもとで，測定値から $\\mu/m$ と $K_0$ を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：未知の中性放射線の正体判定（光子仮説の破綻と反跳核のエネルギーからの質量決定）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$E=\\dfrac12\\left(K+\\sqrt{2Mc^2K}\\right)$"
+   },
+   {
+    "id": "2",
+    "tex": "$E_{\\mathrm p}\\fallingdotseq55\\,\\mathrm{MeV}$，$E_{\\mathrm N}\\fallingdotseq97\\,\\mathrm{MeV}$．$E_{\\mathrm p}$ の光子では窒素原子核は最大 $0.4\\,\\mathrm{MeV}$ しか得られず，測定値 $1.4\\,\\mathrm{MeV}$ と矛盾する"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac{4\\mu X}{(\\mu+X)^2}K_0$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\mu/m\\fallingdotseq0.98$，$K_0\\fallingdotseq5.7\\,\\mathrm{MeV}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　光子の運動量は $E/c$．はね返った光子のエネルギーを $E'$，原子核の運動量を $P$ とすると，$K=\\dfrac{P^2}{2M}$ より $P=\\sqrt{2MK}$．入射方向を正として\n\\[ \\text{エネルギー保存：}E=E'+K,\\qquad \\text{運動量保存：}\\frac Ec=-\\frac{E'}{c}+\\sqrt{2MK} \\]\n2式を辺々足して $E'$ を消去すると $2E=K+c\\sqrt{2MK}$，すなわち\n\\[ E=\\boldsymbol{\\frac12\\left(K+\\sqrt{2Mc^2K}\\right)} \\]\n光子がはね返るとき運動量の変化が最大（$E/c+E'/c$）になるので，この配置で $K$ が最大になる．\n\n\\textbf{(2)}　陽子（$Mc^2=938\\,\\mathrm{MeV}$，$K=5.7\\,\\mathrm{MeV}$）：\n\\[ E_{\\mathrm p}=\\frac12\\left(5.7+\\sqrt{2\\times938\\times5.7}\\right)=\\frac12(5.7+103.4)\\fallingdotseq\\boldsymbol{55\\,\\mathrm{MeV}} \\]\n窒素（$Mc^2=14\\times938\\,\\mathrm{MeV}$，$K=1.4\\,\\mathrm{MeV}$）：\n\\[ E_{\\mathrm N}=\\frac12\\left(1.4+\\sqrt{2\\times13132\\times1.4}\\right)=\\frac12(1.4+191.8)\\fallingdotseq\\boldsymbol{97\\,\\mathrm{MeV}} \\]\n逆に $E=E_{\\mathrm p}\\fallingdotseq54.6\\,\\mathrm{MeV}$ の光子が窒素原子核に与える最大の $K$ は $K+\\sqrt{2\\times13132\\,K}=2E_{\\mathrm p}$ を満たす．$K\\ll\\sqrt{2\\times13132K}$ なので $K\\fallingdotseq\\dfrac{(2E_{\\mathrm p})^2}{2\\times13132}\\fallingdotseq\\boldsymbol{0.4\\,\\mathrm{MeV}}$．これは測定値 $1.4\\,\\mathrm{MeV}$ の3分の1にも満たない．同じ R を当てたのに，標的によって必要な光子エネルギーが大きく食い違うので，R を光子とする仮定は成り立たない．光子では原子核の得るエネルギーがおよそ $E^2/(Mc^2)$ と標的の質量に反比例して急に小さくなるのに対し，測定値の比は $K_{\\mathrm p}/K_{\\mathrm N}\\fallingdotseq4$ にすぎないことが矛盾の本質である．\n\n\\textbf{(3)}　粒子の衝突前の速さを $V$，衝突後の粒子・原子核の速度を $v'$，$V_X$ とする．最大のエネルギー移行は正面衝突で起こり，\n\\[ \\mu V=\\mu v'+XV_X,\\qquad \\frac12\\mu V^2=\\frac12\\mu v'^2+\\frac12XV_X^2 \\]\n$v'$ を消去して $V_X\\neq0$ の解を取ると $V_X=\\dfrac{2\\mu}{\\mu+X}V$．よって\n\\[ K_X=\\frac12XV_X^2=\\boldsymbol{\\frac{4\\mu X}{(\\mu+X)^2}K_0} \\]\n\n\\textbf{(4)}　(3)で $X=m$，$14m$ とした式の比を取ると，未知の $K_0$ が消えて\n\\[ \\frac{K_{\\mathrm p}}{K_{\\mathrm N}}=\\frac{(\\mu+14m)^2}{14(\\mu+m)^2}\\quad\\Longrightarrow\\quad\\frac{\\mu+14m}{\\mu+m}=\\sqrt{\\frac{14K_{\\mathrm p}}{K_{\\mathrm N}}}=\\sqrt{57}\\fallingdotseq7.55 \\]\n（左辺は正なので正の平方根）．これを解いて\n\\[ \\frac{\\mu}{m}=\\frac{14-7.55}{7.55-1}\\fallingdotseq\\boldsymbol{0.98} \\]\nさらに $K_0=\\dfrac{(\\mu+m)^2}{4\\mu m}K_{\\mathrm p}=\\dfrac{(1.985)^2}{4\\times0.985}\\times5.7\\fallingdotseq\\boldsymbol{5.7\\,\\mathrm{MeV}}$．質量が陽子とほぼ等しい中性粒子（中性子）とすれば，2つの測定が同時に説明できる．陽子とほぼ同じ質量なので，正面衝突で陽子は粒子のエネルギーをほぼすべて受け取る（$K_{\\mathrm p}\\fallingdotseq K_0$）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "同じ放射線を質量の異なる2種の標的に当てたときの最大反跳エネルギーを，「光子」と「質量をもつ中性粒子」の2つの仮説で比べる．光子では反跳エネルギーがほぼ $E^2/(Mc^2)$ で標的質量に反比例するため2つの標的で必要な光子エネルギーが食い違い，弾性衝突の仮説では2つの測定値の比から入射エネルギーが消えて粒子の質量が決まる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "restitution",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "中性子の発見",
+  "光子の運動量",
+  "弾性衝突",
+  "反跳エネルギー",
+  "仮説の検証"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

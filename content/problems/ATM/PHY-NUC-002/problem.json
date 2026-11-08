@@ -1,0 +1,130 @@
+{
+ "id": "PHY-NUC-002",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "遠ざかる連星の水素スペクトル線から質量比と各星の質量を求める",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量の異なる2つの星が，共通の重心のまわりを同じ周期で等速円運動している（連星）．この連星全体（重心）は，観測者から一定の速さ $V$ で遠ざかっている．観測者は軌道面内のはるか遠方に静止しており，星の出す光に含まれる水素の $\\mathrm{H}_\\beta$ 線（量子数 $n=4$ の状態から $n=2$ の状態への遷移で出る光）を観測する．水素原子の量子数 $n$ のエネルギー準位は $-\\dfrac{hcR}{n^2}$（$h$：プランク定数，$c$：光速，$R$：リュードベリ定数）で与えられる．万有引力定数を $G$ とし，星の大きさは無視する．また，光源が視線方向に速度成分 $w$（観測者から遠ざかる向きを正）で動くとき，観測される波長は，光源が静止しているときの波長 $\\lambda_0$ を用いて $\\lambda_0\\left(1+\\dfrac{w}{c}\\right)$ で与えられるものとする．\n\n観測すると，図のように，時刻 $t=0$ には波長 $\\lambda_{\\mathrm A}$ の1本の線が見え，その後2本に分かれ，$t=\\tau$ に初めて再び1本になった．2本の線の間隔が最大になったとき，それらの波長は $\\lambda_{\\mathrm B}$，$\\lambda_{\\mathrm C}$（$\\lambda_{\\mathrm B}<\\lambda_{\\mathrm C}$）であった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\mathrm{H}_\\beta$ 線の静止波長 $\\lambda_0$ を $R$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "連星の公転周期 $T$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$V$ と，波長 $\\lambda_{\\mathrm B}$，$\\lambda_{\\mathrm C}$ の線を出している星の公転の速さ $v_{\\mathrm B}$，$v_{\\mathrm C}$ を，$\\lambda_0$，$\\lambda_{\\mathrm A}$，$\\lambda_{\\mathrm B}$，$\\lambda_{\\mathrm C}$，$c$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\lambda_{\\mathrm B}$ の線を出す星と $\\lambda_{\\mathrm C}$ の線を出す星のどちらが重いか．$\\lambda_{\\mathrm A}$ と $\\dfrac{\\lambda_{\\mathrm B}+\\lambda_{\\mathrm C}}{2}$ の大小で答えよ．また，それぞれの星の質量 $M_{\\mathrm B}$，$M_{\\mathrm C}$ を $v_{\\mathrm B}$，$v_{\\mathrm C}$，$\\tau$，$G$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "2つの星の間の距離を $v_{\\mathrm B}$，$v_{\\mathrm C}$，$\\tau$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：遠ざかる連星の水素スペクトル線から質量比と各星の質量を求める",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\lambda_0=\\dfrac{16}{3R}$"
+   },
+   {
+    "id": "2",
+    "tex": "$T=2\\tau$"
+   },
+   {
+    "id": "3",
+    "tex": "$V=\\dfrac{\\lambda_{\\mathrm A}-\\lambda_0}{\\lambda_0}c$，$v_{\\mathrm B}=\\dfrac{\\lambda_{\\mathrm A}-\\lambda_{\\mathrm B}}{\\lambda_0}c$，$v_{\\mathrm C}=\\dfrac{\\lambda_{\\mathrm C}-\\lambda_{\\mathrm A}}{\\lambda_0}c$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\lambda_{\\mathrm A}<\\dfrac{\\lambda_{\\mathrm B}+\\lambda_{\\mathrm C}}{2}$ なら $\\lambda_{\\mathrm B}$ の星，$\\lambda_{\\mathrm A}>\\dfrac{\\lambda_{\\mathrm B}+\\lambda_{\\mathrm C}}{2}$ なら $\\lambda_{\\mathrm C}$ の星が重い．$M_{\\mathrm B}=\\dfrac{v_{\\mathrm C}(v_{\\mathrm B}+v_{\\mathrm C})^2\\tau}{\\pi G}$，$M_{\\mathrm C}=\\dfrac{v_{\\mathrm B}(v_{\\mathrm B}+v_{\\mathrm C})^2\\tau}{\\pi G}$"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac{(v_{\\mathrm B}+v_{\\mathrm C})\\tau}{\\pi}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{考え方}　観測される波長のずれは「重心の運動」と「公転運動」の視線方向成分の和で決まる．2本が1本に重なるのは両星の公転速度が視線に垂直なとき（重心の運動だけが効く），間隔が最大になるのは公転速度が視線に平行なときである．重心の運動があるので，重なったときの波長 $\\lambda_{\\mathrm A}$ は静止波長 $\\lambda_0$ と一致しない．\n\n\\textbf{(1)}　$\\dfrac{hc}{\\lambda_0}=-\\dfrac{hcR}{4^2}-\\left(-\\dfrac{hcR}{2^2}\\right)=\\dfrac{3}{16}hcR$ より $\\boldsymbol{\\lambda_0=\\dfrac{16}{3R}}$．\n\n\\textbf{(2)}　2つの星は常に重心をはさんで反対側にあり，速度も逆向きである．両方の公転速度が視線に垂直になるのは，公転の位相が半周進むごとである．$t=0$ と $t=\\tau$ が続けて1本になる時刻だから，$\\tau$ は半周期で $\\boldsymbol{T=2\\tau}$．\n\n\\textbf{(3)}　$t=0$ では公転速度の視線方向成分が0なので，$w=V$ で\n\\[ \\lambda_{\\mathrm A}=\\lambda_0\\left(1+\\frac{V}{c}\\right)\\quad\\therefore\\ \\boldsymbol{V=\\frac{\\lambda_{\\mathrm A}-\\lambda_0}{\\lambda_0}c} \\]\n間隔が最大のとき，一方の星は観測者に近づく向きに $v_{\\mathrm B}$，他方は遠ざかる向きに $v_{\\mathrm C}$ で動いている（短波長側 $\\lambda_{\\mathrm B}$ が近づく星）．\n\\[ \\lambda_{\\mathrm B}=\\lambda_0\\left(1+\\frac{V-v_{\\mathrm B}}{c}\\right),\\qquad \\lambda_{\\mathrm C}=\\lambda_0\\left(1+\\frac{V+v_{\\mathrm C}}{c}\\right) \\]\n$\\lambda_{\\mathrm A}$ の式を引いて\n\\[ \\boldsymbol{v_{\\mathrm B}=\\frac{\\lambda_{\\mathrm A}-\\lambda_{\\mathrm B}}{\\lambda_0}c,\\qquad v_{\\mathrm C}=\\frac{\\lambda_{\\mathrm C}-\\lambda_{\\mathrm A}}{\\lambda_0}c} \\]\n（重心の速度 $V$ を差し引くには，静止波長 $\\lambda_0$ ではなく $\\lambda_{\\mathrm A}$ からのずれを測ればよい．）\n\n\\textbf{(4)}　重心のまわりの公転では，重心からの距離 $a_{\\mathrm B}$，$a_{\\mathrm C}$ について $M_{\\mathrm B}a_{\\mathrm B}=M_{\\mathrm C}a_{\\mathrm C}$．周期が共通なので速さは半径に比例し，\n\\[ M_{\\mathrm B}v_{\\mathrm B}=M_{\\mathrm C}v_{\\mathrm C} \\]\n（重心系で全運動量が0，と見てもよい）．よって\\textbf{重い星ほど遅く，その線は $\\lambda_{\\mathrm A}$ からのずれが小さい}．\n\\[ \\frac{\\lambda_{\\mathrm B}+\\lambda_{\\mathrm C}}{2}-\\lambda_{\\mathrm A}=\\frac{\\lambda_0}{2c}(v_{\\mathrm C}-v_{\\mathrm B}) \\]\nだから，$\\lambda_{\\mathrm A}<\\dfrac{\\lambda_{\\mathrm B}+\\lambda_{\\mathrm C}}{2}$（$v_{\\mathrm B}<v_{\\mathrm C}$）なら $\\boldsymbol{\\lambda_{\\mathrm B}}$ \\textbf{の星が重く}，$\\lambda_{\\mathrm A}>\\dfrac{\\lambda_{\\mathrm B}+\\lambda_{\\mathrm C}}{2}$ なら $\\boldsymbol{\\lambda_{\\mathrm C}}$ \\textbf{の星が重い}．\n\n半径は $a_{\\mathrm B}=\\dfrac{v_{\\mathrm B}T}{2\\pi}$，$a_{\\mathrm C}=\\dfrac{v_{\\mathrm C}T}{2\\pi}$ で，星間距離は $a=a_{\\mathrm B}+a_{\\mathrm C}=\\dfrac{(v_{\\mathrm B}+v_{\\mathrm C})T}{2\\pi}$．万有引力は星間距離 $a$（重心からの距離ではない）で決まることに注意して，$\\lambda_{\\mathrm B}$ の星の円運動の式は\n\\[ M_{\\mathrm B}\\frac{v_{\\mathrm B}^{\\,2}}{a_{\\mathrm B}}=\\frac{GM_{\\mathrm B}M_{\\mathrm C}}{a^2}\\quad\\therefore\\ M_{\\mathrm C}=\\frac{v_{\\mathrm B}^{\\,2}a^2}{Ga_{\\mathrm B}}=\\frac{v_{\\mathrm B}(v_{\\mathrm B}+v_{\\mathrm C})^2T}{2\\pi G} \\]\n同様に $M_{\\mathrm B}=\\dfrac{v_{\\mathrm C}(v_{\\mathrm B}+v_{\\mathrm C})^2T}{2\\pi G}$．$T=2\\tau$ を代入して\n\\[ \\boldsymbol{M_{\\mathrm B}=\\frac{v_{\\mathrm C}(v_{\\mathrm B}+v_{\\mathrm C})^2\\tau}{\\pi G},\\qquad M_{\\mathrm C}=\\frac{v_{\\mathrm B}(v_{\\mathrm B}+v_{\\mathrm C})^2\\tau}{\\pi G}} \\]\n（確認：$M_{\\mathrm B}v_{\\mathrm B}=M_{\\mathrm C}v_{\\mathrm C}$ を満たし，和 $M_{\\mathrm B}+M_{\\mathrm C}=\\dfrac{(v_{\\mathrm B}+v_{\\mathrm C})^3T}{2\\pi G}$ はケプラーの第3法則 $\\dfrac{a^3}{T^2}=\\dfrac{G(M_{\\mathrm B}+M_{\\mathrm C})}{4\\pi^2}$ と一致する．）\n\n\\textbf{(5)}　$a=\\dfrac{(v_{\\mathrm B}+v_{\\mathrm C})T}{2\\pi}=\\boldsymbol{\\dfrac{(v_{\\mathrm B}+v_{\\mathrm C})\\tau}{\\pi}}$\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "重心が視線方向に動く連星では，2本の線が重なったときの波長が重心の運動だけによるずれを表すので，公転速度はその重なり波長からのずれで測る．運動量の釣り合い $M_{\\mathrm B}v_{\\mathrm B}=M_{\\mathrm C}v_{\\mathrm C}$ から，ずれの小さい線の星が重く，各星の円運動の式（引力は星間距離で決まる）から質量が別々に求まる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "universal-gravitation",
+  "circular-motion"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "連星",
+  "バルマー系列",
+  "万有引力",
+  "重心"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

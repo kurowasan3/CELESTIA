@@ -1,0 +1,144 @@
+{
+ "id": "PHY-CAP-018",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "電荷一定の極板間引力（一定の力）を受けるばね連結2極板の重心運動と相対振動",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，面積 $S$ の4枚の金属極板 P，A，B，C が水平に置かれている．P と C は固定されており，A と B（質量はともに $m$）は水平を保ったまま鉛直方向になめらかに動ける．A と B はばね定数 $k$ の軽い絶縁体のばねでつながれている．P，A，B，C にはそれぞれ電荷 $+Q$，$-Q$，$+q$，$-q$（$Q>0,\\ q>0$）が与えられており，P–A 間，B–C 間はそれぞれ平行板コンデンサーとみなせる（極板間隔は極板の大きさに比べて十分小さく，端の効果は無視する）．2つのコンデンサーは十分離れていて，互いの電場は影響しない．はじめ，P–A 間，B–C 間の間隔はともに $d$ で，すべての極板は静止していた．B と C は，開いたスイッチを含む柔らかく軽い導線でつながれている．真空の誘電率を $\\varepsilon_0$，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "P–A 間の間隔が $x$ のときの静電エネルギーを求め，A を $\\Delta x$ だけ P から遠ざけるのに必要な仕事を考えることで，A が P から受ける引力の大きさ $F_1$ を求めよ．$F_1$ が間隔 $x$ によらないことに注意せよ．"
+     },
+     {
+      "id": "2",
+      "tex": "はじめの静止状態について，ばねの自然長からの伸びと，$Q$ を $q,\\ m,\\ g,\\ \\varepsilon_0,\\ S$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "時刻 $t=0$ にスイッチを閉じると，B と C の電荷は瞬時に中和された（A，P の電荷は変わらない）．その後 A が P に達するまでの間について，A と B の重心の加速度の大きさと向きを求めよ．また，ばねの張力の最大値と最小値を求め，ばねが縮むことはないことを示せ．"
+     },
+     {
+      "id": "4",
+      "tex": "上向きを正として，$t\\ge0$ における A の加速度 $a_{\\rm A}(t)$ と速度 $v_{\\rm A}(t)$ を求めよ．ただし $\\omega=\\sqrt{\\dfrac{2k}{m}}$ を用いてよい．A は P に達するまで一度も下向きに動かないことを示せ．"
+     },
+     {
+      "id": "5",
+      "tex": "スイッチを閉じた後，ばねの長さが初めてはじめの長さに戻る瞬間に A がちょうど P に達するように，はじめの間隔 $d$ を選んでおく．このときの $d$ と，A が P に達する直前の A の速さを，$q,\\ \\varepsilon_0,\\ S,\\ m,\\ k$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：電荷一定の極板間引力（一定の力）を受けるばね連結2極板の重心運動と相対振動",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：電荷一定の極板間引力（一定の力）を受けるばね連結2極板の重心運動と相対振動",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{Q^2x}{2\\varepsilon_0S}$，$F_1=\\dfrac{Q^2}{2\\varepsilon_0S}$"
+   },
+   {
+    "id": "2",
+    "tex": "伸び $\\dfrac{1}{k}\\left(mg+\\dfrac{q^2}{2\\varepsilon_0S}\\right)$，$Q=\\sqrt{q^2+4\\varepsilon_0Smg}$"
+   },
+   {
+    "id": "3",
+    "tex": "上向きに $\\dfrac{q^2}{4\\varepsilon_0Sm}$，張力の最大値 $mg+\\dfrac{q^2}{2\\varepsilon_0S}$，最小値 $mg\\ (>0)$"
+   },
+   {
+    "id": "4",
+    "tex": "$a_{\\rm A}=\\dfrac{q^2}{4\\varepsilon_0Sm}(1-\\cos\\omega t)$，$v_{\\rm A}=\\dfrac{q^2}{4\\varepsilon_0Sm}\\left(t-\\dfrac{\\sin\\omega t}{\\omega}\\right)$"
+   },
+   {
+    "id": "5",
+    "tex": "$d=\\dfrac{\\pi^2q^2}{4\\varepsilon_0Sk}$，速さ $\\dfrac{\\pi q^2}{2\\varepsilon_0S\\sqrt{2mk}}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "以下，$F_2=\\dfrac{q^2}{2\\varepsilon_0S}$ とおく．\n\n\\textbf{(1)} 間隔 $x$ のとき容量は $C=\\dfrac{\\varepsilon_0S}{x}$ なので，静電エネルギーは\n\\[ U(x)=\\frac{Q^2}{2C}=\\frac{Q^2x}{2\\varepsilon_0S} \\]\nP と A は孤立していて電荷 $Q$ は一定である．A を引力に逆らってゆっくり $\\Delta x$ 遠ざける外力の仕事は，すべて静電エネルギーの増加になるので\n\\[ F_1\\Delta x=U(x+\\Delta x)-U(x)=\\frac{Q^2}{2\\varepsilon_0S}\\Delta x\n\\quad\\therefore\\quad \\boldsymbol{F_1=\\frac{Q^2}{2\\varepsilon_0S}} \\]\n電荷が一定なら極板間の電場 $Q/(\\varepsilon_0S)$ は間隔によらないので，力も間隔によらない．\\textbf{電荷一定の極板間の引力は，重力と同じく「一定の力」としてはたらく}ことが以下の鍵になる．\\hfill$\\square$\n\n\\textbf{(2)} 同様に B は C から下向きの引力 $F_2$ を受ける．ばねの張力を $T_0$（伸びているとき，ばねは A を下へ，B を上へ引く）とすると，\n\\[ \\text{B：}\\ T_0=mg+F_2,\\qquad \\text{A：}\\ F_1=mg+T_0 \\]\nよって伸びは $\\boldsymbol{\\dfrac{T_0}{k}=\\dfrac1k\\left(mg+\\dfrac{q^2}{2\\varepsilon_0S}\\right)}$．また $F_1=2mg+F_2$ より $\\dfrac{Q^2}{2\\varepsilon_0S}=2mg+\\dfrac{q^2}{2\\varepsilon_0S}$，すなわち $\\boldsymbol{Q=\\sqrt{q^2+4\\varepsilon_0Smg}}$．\\hfill$\\square$\n\n\\textbf{(3)} スイッチを閉じた後，B は電荷を失い C から力を受けない．A には一定の力 $F_1$ がはたらき続ける（(1)）．A と B をひとまとめにした系にはたらく外力は，$F_1$（上向き）と重力 $2mg$ だけで，ばねの力は内力である．重心の加速度は\n\\[ \\frac{F_1-2mg}{2m}=\\frac{F_2}{2m}=\\boldsymbol{\\frac{q^2}{4\\varepsilon_0Sm}}\\quad(\\text{上向き，一定}) \\]\n次に相対運動を考える．A，B の上向きの変位を $x_{\\rm A},\\ x_{\\rm B}$，張力を $T=T_0+k(x_{\\rm A}-x_{\\rm B})$ とすると\n\\[ m\\ddot x_{\\rm A}=F_1-mg-T,\\qquad m\\ddot x_{\\rm B}=T-mg \\]\n差をとると\n\\[ \\frac{d^2}{dt^2}(x_{\\rm A}-x_{\\rm B})=\\frac{F_1-2T}{m}=-\\frac{2k}{m}\\left\\{(x_{\\rm A}-x_{\\rm B})-\\frac{F_1-2T_0}{2k}\\right\\} \\]\nしたがって伸びの変化 $x_{\\rm A}-x_{\\rm B}$ は，角振動数 $\\omega=\\sqrt{2k/m}$ で，中心 $\\dfrac{F_1-2T_0}{2k}=-\\dfrac{F_2}{2k}$ のまわりに単振動する．$t=0$ で $x_{\\rm A}-x_{\\rm B}=0$，相対速度 $0$ なので振幅は $\\dfrac{F_2}{2k}$ で\n\\[ x_{\\rm A}-x_{\\rm B}=-\\frac{F_2}{2k}(1-\\cos\\omega t),\\qquad T=T_0-\\frac{F_2}{2}(1-\\cos\\omega t)=mg+\\frac{F_2}{2}(1+\\cos\\omega t) \\]\nよって張力の\\textbf{最大値は} $\\boldsymbol{mg+\\dfrac{q^2}{2\\varepsilon_0S}}$（$=T_0$，はじめの値），\\textbf{最小値は} $\\boldsymbol{mg}$ で，常に正だからばねは常に伸びていて縮むことはない．\\hfill$\\square$\n\n\\textbf{(4)} 重心の変位 $X=\\dfrac{F_2}{4m}t^2$ と相対変位を合わせて\n\\[ x_{\\rm A}=X+\\frac12(x_{\\rm A}-x_{\\rm B})=\\frac{F_2}{4m}t^2-\\frac{F_2}{4k}(1-\\cos\\omega t) \\]\n$\\dfrac{1}{k}=\\dfrac{2}{m\\omega^2}$ に注意して微分すると\n\\[ \\boldsymbol{a_{\\rm A}=\\frac{F_2}{2m}(1-\\cos\\omega t)=\\frac{q^2}{4\\varepsilon_0Sm}(1-\\cos\\omega t)},\\qquad\n\\boldsymbol{v_{\\rm A}=\\frac{q^2}{4\\varepsilon_0Sm}\\left(t-\\frac{\\sin\\omega t}{\\omega}\\right)} \\]\n（$t=0$ で $a_{\\rm A}=0$ となるのは，スイッチを閉じた瞬間 A にはたらく力がまだつり合っているからである．）\n$a_{\\rm A}\\ge0$ で $v_{\\rm A}(0)=0$ だから $v_{\\rm A}\\ge0$ であり（$|\\sin\\omega t|\\le\\omega t$ からも分かる），A は下向きに動くことがない．A の速度は，重心の速度 $\\dfrac{F_2}{2m}t$ のまわりを波打ちながら階段状に増える（解答図）．\\hfill$\\square$\n\n\\textbf{(5)} (3) より，ばねの長さの変化 $x_{\\rm A}-x_{\\rm B}=-\\dfrac{F_2}{2k}(1-\\cos\\omega t)$ が初めて $0$ に戻るのは $t_1=\\dfrac{2\\pi}{\\omega}$（相対運動の1周期後）である．このとき相対変位も相対速度も $0$ なので，A の位置・速度は重心と一致し\n\\[ d=x_{\\rm A}(t_1)=\\frac{F_2}{4m}t_1^{\\,2}=\\frac{F_2}{4m}\\cdot\\frac{4\\pi^2}{\\omega^2}=\\frac{F_2}{4m}\\cdot\\frac{2\\pi^2m}{k}=\\boldsymbol{\\frac{\\pi^2q^2}{4\\varepsilon_0Sk}} \\]\n\\[ v_{\\rm A}(t_1)=\\frac{F_2}{2m}t_1=\\frac{F_2}{2m}\\cdot2\\pi\\sqrt{\\frac{m}{2k}}=\\boldsymbol{\\frac{\\pi q^2}{2\\varepsilon_0S\\sqrt{2mk}}} \\]\nとなる．A は P に達するまでの間ずっと上向きに進み（(4)），途中で P に達してしまうことはない．なお，結果に $m$ を含まない $d$ が得られるのは，重心の加速度 $\\propto1/m$ と周期の2乗 $\\propto m$ が打ち消すためである．\n\n\\textbf{検算（エネルギー）}：$0\\le t\\le t_1$ で，一定の力 $F_1$ と重力がする仕事の和は $(F_1-2mg)d=F_2d$ であり，$t_1$ ではばねの伸びが元に戻っているので，これがすべて A，B の運動エネルギー $2\\cdot\\frac12mv_{\\rm A}^{\\,2}$ になる．実際 $mv_{\\rm A}^{\\,2}=m\\cdot\\dfrac{\\pi^2F_2^{\\,2}}{2mk}=F_2\\cdot\\dfrac{\\pi^2F_2}{2k}=F_2d$ で一致する．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電荷が一定の平行板コンデンサーの極板間の引力は間隔によらない一定の力になり，重力と同じ「一定の外力」として扱える．ばねでつながった2物体の系に一定の外力がはたらくと，重心は等加速度運動し，相対運動はばねによる単振動になるので，各物体の運動は両者の重ね合わせとして求まる．"
+ },
+ "concepts": [
+  "capacitor",
+  "uniform-acceleration",
+  "kinematics-components"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "極板間引力",
+  "電荷一定",
+  "重心運動",
+  "相対運動",
+  "単振動",
+  "エネルギー保存"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

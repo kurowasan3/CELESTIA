@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340"><defs><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<line x1="50.0" y1="300.0" x2="530.0" y2="300.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<text x="534.0" y="318" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="end">x</text>
+<line x1="230.0" y1="300.0" x2="230.0" y2="36.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<text x="222" y="42.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="end">t</text>
+<text x="224" y="318" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="end">O</text>
+<line x1="290.0" y1="300.0" x2="364.4" y2="52.0" stroke="#222" stroke-width="1.8"/>
+<text x="370.4" y="56.0" font-size="14" fill="#222" text-anchor="start" xml:space="preserve"><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">R：</tspan><tspan font-family="Times New Roman, serif" font-style="italic">x</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal"> = </tspan><tspan font-family="Times New Roman, serif" font-style="italic">L</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">+</tspan><tspan font-family="Times New Roman, serif" font-style="italic">ut</tspan></text>
+<text x="290.0" y="318" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">L</text>
+<line x1="230.0" y1="287.2" x2="321.2" y2="196.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<line x1="321.2" y1="196.0" x2="198.0" y2="72.8" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<circle cx="198.0" cy="72.80000000000001" r="3" stroke="#222" stroke-width="1.6" fill="#222"/>
+<text x="192.0" y="64.80000000000001" font-size="14" fill="#222" text-anchor="end" xml:space="preserve"><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">(</tspan><tspan font-family="Times New Roman, serif" font-style="italic">x</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">, </tspan><tspan font-family="Times New Roman, serif" font-style="italic">t</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">)</tspan></text>
+<line x1="230.0" y1="196.0" x2="321.2" y2="196.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="224" y="201.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="end">t<tspan baseline-shift="sub" font-size="10" font-style="normal">r</tspan></text>
+<line x1="321.2" y1="300.0" x2="321.2" y2="196.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="325.20000000000005" y="318" font-size="14" fill="#222" text-anchor="start" xml:space="preserve"><tspan font-family="Times New Roman, serif" font-style="italic">X</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">(</tspan><tspan font-family="Times New Roman, serif" font-style="italic">t</tspan><tspan baseline-shift="sub" font-size="10" font-family="Times New Roman, serif">r</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">)</tspan></text>
+<line x1="230.0" y1="104.8" x2="198.0" y2="72.8" stroke="#888" stroke-width="1.2" stroke-dasharray="6,3"/>
+<text x="110.0" y="180.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">直接波と反射波が</text>
+<text x="110.0" y="196.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">同じ点に到達</text>
+</svg>

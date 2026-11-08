@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 400" width="440" height="400">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<line x1="200.0" y1="40.0" x2="300.0" y2="40.0" stroke="#222" stroke-width="1.6"/>
+<line x1="200.0" y1="40.0" x2="205.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="208.0" y1="40.0" x2="213.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="216.0" y1="40.0" x2="221.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="224.0" y1="40.0" x2="229.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="232.0" y1="40.0" x2="237.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="240.0" y1="40.0" x2="245.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="248.0" y1="40.0" x2="253.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="256.0" y1="40.0" x2="261.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="264.0" y1="40.0" x2="269.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="272.0" y1="40.0" x2="277.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="280.0" y1="40.0" x2="285.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="288.0" y1="40.0" x2="293.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="296.0" y1="40.0" x2="301.6" y2="32.0" stroke="#222" stroke-width="1"/>
+<line x1="250.0" y1="40.0" x2="250.0" y2="110.0" stroke="#222" stroke-width="1.2"/>
+<text x="262.0" y="75.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">糸</text>
+<line x1="250.0" y1="110.0" x2="302.5" y2="271.7" stroke="#222" stroke-width="3"/>
+<line x1="302.5" y1="271.7" x2="152.4" y2="351.5" stroke="#222" stroke-width="3"/>
+<circle cx="302.5" cy="271.7" r="5" fill="#fff" fill-opacity="0" stroke="#222" stroke-width="1.6"/>
+<text x="236.0" y="114.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">T</tspan></text>
+<text x="318.5" y="277.7" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">O</tspan></text>
+<text x="140.4" y="357.5" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle"><tspan font-style="normal">S</tspan></text>
+<line x1="250.0" y1="110.0" x2="250.0" y2="260.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<path d="M250.0,150.0 A40,40 0 0 0 262.4,148.0" fill="none" stroke="#222" stroke-width="1"/>
+<text x="259.0" y="168.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">α</text>
+<path d="M292.6,241.2 A32,32 0 0 0 274.3,286.7" fill="none" stroke="#222" stroke-width="1"/>
+<text x="259.9" y="259.4" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="middle">φ</text>
+<text x="288.3" y="194.8" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">針の脚 <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16">m</tspan></text>
+<text x="241.5" y="341.6" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">鉛筆の脚 <tspan font-family="Times New Roman, serif" font-style="italic" font-size="16">M</tspan></text>
+</svg>

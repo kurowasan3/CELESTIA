@@ -1,0 +1,123 @@
+{
+ "id": "PHY-WAV-007",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "水路の両側壁で反射を繰り返す波の縞模様と見かけの波長・速さ",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，幅 $D$ の真っすぐな水路が2枚の平行な壁ではさまれている．水路の中には振動数 $f$ の水面波があり，その様子は，壁に対して角 $\\theta\\ (0<\\theta<90^\\circ)$ をなす向きに進む平面波と，それが壁で反射してできた，壁に対して $-\\theta$ の向きに進む平面波の重ね合わせとみなせる．水面波の（本来の）波長を $\\lambda$，速さを $v$ とする．波は壁で位相を変えずに反射するので，壁際はつねに振動の腹になる．水路に沿って $x$ 軸，水路を横切る向きに $y$ 軸をとる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "壁に沿って（$x$ 軸方向に）見ると，水面の山は等間隔に並んで $+x$ 向きに動いていく．その間隔 $\\Lambda$ と動く速さ $V$ を $\\lambda$，$v$，$\\theta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "観測すると，水路の中央線上だけが常に振動しておらず，それ以外に振動しない線はなかった．$D$，$\\lambda$，$\\theta$ の間に成り立つ関係式を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$D=0.30\\ \\mathrm{m}$，$f=2.0\\ \\mathrm{Hz}$ のとき，壁に沿った山の間隔は $\\Lambda=0.80\\ \\mathrm{m}$ であった．(2) の状態であるとして，水面波の速さ $v$ と，壁に沿って山が動く速さ $V$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "水深を変えずに（$v$ を一定に保って）振動数 $f$ をゆっくり下げていく．(2) のような「中央線だけが振動しない」波の状態をつくれなくなる振動数の値を (3) の数値を用いて有効数字2桁で求めよ．また，$f$ がその値に近づくとき $\\Lambda$ と $V$ はどうなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：水路の両側壁で反射を繰り返す波の縞模様と見かけの波長・速さ",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\Lambda=\\dfrac{\\lambda}{\\cos\\theta}$，$V=\\dfrac{v}{\\cos\\theta}$"
+   },
+   {
+    "id": "2",
+    "tex": "$D=\\dfrac{\\lambda}{2\\sin\\theta}$"
+   },
+   {
+    "id": "3",
+    "tex": "$v=0.96\\ \\mathrm{m/s}$，$V=1.6\\ \\mathrm{m/s}$"
+   },
+   {
+    "id": "4",
+    "tex": "$1.6\\ \\mathrm{Hz}$，$\\Lambda$，$V$ はともに限りなく大きくなる"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　平面波の山（波面）は進行方向に垂直な直線で，進行方向に測った間隔が $\\lambda$ である．波面と $x$ 軸のなす角は $90^\\circ-\\theta$ なので，$x$ 軸上で測った山の間隔は\n\\[ \\Lambda\\cos\\theta=\\lambda\\qquad\\therefore\\ \\boldsymbol{\\Lambda=\\frac{\\lambda}{\\cos\\theta}} \\]\n1周期 $T=1/f$ の間に，$x$ 軸上の山は隣の山の位置まで進むから\n\\[ V=\\frac{\\Lambda}{T}=f\\Lambda=\\boldsymbol{\\frac{v}{\\cos\\theta}} \\]\n反射波についても同じで，2つの平面波の山の交点（強め合いの点）も $x$ 方向に間隔 $\\Lambda$，速さ $V$ で動く．$V$ は $v$ より大きいが，これは模様（位相）の動く速さであり，何かが $v$ より速く運ばれるわけではない．\n\n\\textbf{(2)}　$y$ 方向に見ると，$+y$ 向き成分をもつ波と $-y$ 向き成分をもつ波が重なる．$y$ 軸上の山の間隔は，(1) と同様に\n\\[ \\lambda_y=\\frac{\\lambda}{\\sin\\theta} \\]\nであり，$y$ 方向には波長 $\\lambda_y$ の波が逆向きに進んで重なった定常波ができる．（式で書けば，2つの波の和は $2A\\cos\\!\\left(\\dfrac{2\\pi y}{\\lambda_y}\\right)\\cos\\!\\left(\\dfrac{2\\pi x}{\\Lambda}-2\\pi ft\\right)$ となる．）\n\n腹の間隔は $\\lambda_y/2$，壁際（$y=0$，$y=D$）が腹で，その間に節線が中央の1本だけあるのは $D$ が腹の間隔にちょうど等しいときだから\n\\[ D=\\frac{\\lambda_y}{2}\\qquad\\therefore\\ \\boldsymbol{D=\\frac{\\lambda}{2\\sin\\theta}} \\]\n\n\\textbf{(3)}　(1)(2) から $\\cos\\theta=\\dfrac{\\lambda}{\\Lambda}$，$\\sin\\theta=\\dfrac{\\lambda}{2D}$．$\\sin^2\\theta+\\cos^2\\theta=1$ より\n\\[ \\lambda^2\\left(\\frac{1}{4D^2}+\\frac{1}{\\Lambda^2}\\right)=1\\qquad\\therefore\\ \\lambda=\\frac{2D\\Lambda}{\\sqrt{4D^2+\\Lambda^2}}=\\frac{2\\times0.30\\times0.80}{\\sqrt{0.36+0.64}}=0.48\\ \\mathrm{m} \\]\n\\[ v=f\\lambda=2.0\\times0.48=0.96\\ \\mathrm{m/s}\\ \\to\\ \\boldsymbol{v=0.96\\ \\mathrm{m/s}} \\]\n\\[ V=f\\Lambda=2.0\\times0.80=\\boldsymbol{1.6\\ \\mathrm{m/s}} \\]\n（$\\sin\\theta=0.8$，$\\cos\\theta=0.6$ で矛盾はない．）\n\n\\textbf{(4)}　$v$ 一定で $f$ を下げると $\\lambda=v/f$ が長くなる．(2) の条件 $\\sin\\theta=\\dfrac{\\lambda}{2D}$ を満たす $\\theta$ が存在するには $\\lambda\\leqq2D$，すなわち\n\\[ f\\geqq\\frac{v}{2D}=\\frac{0.96}{2\\times0.30}=1.6\\ \\mathrm{Hz} \\]\nが必要である．よって $\\boldsymbol{1.6\\ \\mathrm{Hz}}$ を下回るとこの状態はつくれない．\n\n$f\\to1.6\\ \\mathrm{Hz}$ では $\\sin\\theta\\to1$，$\\theta\\to90^\\circ$（波は壁の間を垂直に往復するだけになる）で，$\\cos\\theta\\to0$ だから\n\\[ \\Lambda=\\frac{\\lambda}{\\cos\\theta}\\to\\infty,\\qquad V=\\frac{v}{\\cos\\theta}\\to\\infty \\]\nとなり，$\\boldsymbol{\\Lambda,\\ V}$ は\\textbf{ともに限りなく大きくなる}（水路全体が同位相で上下する定常波に近づく）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "斜めに進む平面波をある直線に沿って見ると，見かけの波長は $\\lambda/\\cos\\theta$，模様の動く速さは $v/\\cos\\theta$ と本来の値より大きくなる．入射波と反射波を重ねると，壁に垂直な方向には波長 $\\lambda/\\sin\\theta$ の定常波，壁に沿った方向には進行波ができ，壁の境界条件が $\\theta$ を離散的に決める．その条件が満たせなくなる振動数で見かけの波長と速さが発散する．"
+ },
+ "concepts": [
+  "wave-basics",
+  "superposition",
+  "interference"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "波の干渉",
+  "反射",
+  "平面波",
+  "定常波",
+  "見かけの波長",
+  "水面波"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

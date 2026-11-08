@@ -1,0 +1,144 @@
+{
+ "id": "PHY-OPT-035",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "半球レンズを通る光線の厳密な作図（近軸の焦点・球面収差・全反射による口径の上限）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，屈折率 $n$（$n>1$）のガラスでできた半径 $R$ の半球を，平らな面を左に向けて真空中に置く．平らな面の中心を C，C を通り平らな面に垂直な直線を光軸とし，球面と光軸の交点を V とする．光軸に平行な単色光の光線を，光軸からの高さ $y$（$0<y<R$）の位置で平らな面に垂直に入射させる．光線は平らな面では曲がらずに進み，球面上の点 A に達する．A での入射角を $\\theta$，屈折角を $\\varphi$ とし，球面から出た光線が光軸と交わる点を F とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\sin\\theta$ と $\\sin\\varphi$ を $n$，$y$，$R$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "三角形 ACF に着目して，距離 CF を $R$，$\\theta$，$\\varphi$ で表せ．また，$y\\to0$ の極限（近軸光線）での CF の値 $\\mathrm{CF_0}$ と，V からその点 F$_0$ までの距離を $n$，$R$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "球面から外へ出られる光線の高さ $y$ の上限 $y_{\\rm c}$ を求めよ．また，$y$ を $y_{\\rm c}$ に近づけたときの CF の極限を $n$，$R$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$n=\\sqrt3$ とする．$y=\\dfrac R2$ の光線について CF を求めよ．また，F$_0$ の位置に光軸に垂直なスクリーンを置いたとき，この光線がスクリーンに当たる点と光軸との距離を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "この半球を，屈折率 $n_{\\rm A}$（$1<n_{\\rm A}<n$）の液体中に入れた．$y_{\\rm c}$ と，近軸光線が光軸と交わる点の V からの距離を，$n$，$n_{\\rm A}$，$R$ で表せ．また，$n_{\\rm A}$ を $n$ に近づけると，これらはそれぞれどうなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：半球レンズを通る光線の厳密な作図（近軸の焦点・球面収差・全反射による口径の上限）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：半球レンズを通る光線の厳密な作図（近軸の焦点・球面収差・全反射による口径の上限）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\sin\\theta=\\dfrac yR$，$\\sin\\varphi=\\dfrac{ny}{R}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\mathrm{CF}=\\dfrac{R\\sin\\varphi}{\\sin(\\varphi-\\theta)}$，$\\mathrm{CF_0}=\\dfrac{nR}{n-1}$，$\\mathrm{VF_0}=\\dfrac{R}{n-1}$"
+   },
+   {
+    "id": "3",
+    "tex": "$y_{\\rm c}=\\dfrac Rn$，$\\mathrm{CF}\\to\\dfrac{nR}{\\sqrt{n^2-1}}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\mathrm{CF}=\\sqrt3R$，スクリーン上で光軸から $\\dfrac{\\sqrt3-1}{2}R$（光線と反対側）"
+   },
+   {
+    "id": "5",
+    "tex": "$y_{\\rm c}=\\dfrac{n_{\\rm A}R}{n}$，距離 $\\dfrac{n_{\\rm A}R}{n-n_{\\rm A}}$；$n_{\\rm A}\\to n$ で $y_{\\rm c}\\to R$（ほぼすべての光線が出られる），距離は限りなく大きくなる（集光しなくなる）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　A での法線は半径 CA の向きで，光軸と角 $\\theta$ をなす．光線は光軸に平行なので入射角は $\\theta$ で，$\\sin\\theta=\\boldsymbol{\\dfrac{y}{R}}$．屈折の法則 $n\\sin\\theta=1\\cdot\\sin\\varphi$ より $\\sin\\varphi=\\boldsymbol{\\dfrac{ny}{R}}$．\n\n\\textbf{(2)}　出射光は法線から外側（光軸側）へ $\\varphi$ だけ傾くので，光軸となす角は $\\varphi-\\theta$ である．三角形 ACF の内角は C で $\\theta$，F で $\\varphi-\\theta$，A で $\\pi-\\varphi$ だから，正弦定理 $\\dfrac{\\mathrm{CF}}{\\sin(\\pi-\\varphi)}=\\dfrac{\\mathrm{CA}}{\\sin(\\varphi-\\theta)}$ より\n\\[ \\mathrm{CF}=\\boldsymbol{\\frac{R\\sin\\varphi}{\\sin(\\varphi-\\theta)}}. \\]\n$y\\to0$ では $\\theta\\fallingdotseq\\dfrac yR$，$\\varphi\\fallingdotseq\\dfrac{ny}{R}$ と近似でき，\n\\[ \\mathrm{CF_0}=\\frac{R\\cdot\\frac{ny}{R}}{\\frac{(n-1)y}{R}}=\\boldsymbol{\\frac{nR}{n-1}},\\qquad \\mathrm{VF_0}=\\mathrm{CF_0}-R=\\boldsymbol{\\frac{R}{n-1}}. \\]\nこれは平凸レンズの焦点距離の公式と一致する．$y$ が有限のときは CF が $y$ によって変わる（解答図）．\n\n\\textbf{(3)}　球面から出られるのは $\\sin\\varphi=\\dfrac{ny}{R}<1$ のときで，$y_{\\rm c}=\\boldsymbol{\\dfrac Rn}$．それより高い光線は球面で全反射する．$y\\to y_{\\rm c}$ では $\\varphi\\to\\dfrac\\pi2$，$\\sin\\theta\\to\\dfrac1n$ なので\n\\[ \\mathrm{CF}\\to\\frac{R}{\\sin(\\frac\\pi2-\\theta)}=\\frac{R}{\\cos\\theta}=\\boldsymbol{\\frac{nR}{\\sqrt{n^2-1}}}. \\]\nCF は $y$ とともに単調に減少するので，出られる光線は CF $=\\dfrac{nR}{\\sqrt{n^2-1}}$ から $\\dfrac{nR}{n-1}$ までの範囲で光軸と交わる（球面収差）．\n\n\\textbf{(4)}　$\\sin\\theta=\\dfrac12$ より $\\theta=30^\\circ$，$\\sin\\varphi=\\dfrac{\\sqrt3}{2}$ より $\\varphi=60^\\circ$．\n\\[ \\mathrm{CF}=\\frac{R\\sin60^\\circ}{\\sin30^\\circ}=\\boldsymbol{\\sqrt3R}\\ (\\fallingdotseq1.73R). \\]\n一方 $\\mathrm{CF_0}=\\dfrac{\\sqrt3R}{\\sqrt3-1}=\\dfrac{(3+\\sqrt3)R}{2}\\ (\\fallingdotseq2.37R)$．光線は F を通過した後も光軸と $30^\\circ$ をなして進み，F$_0$ までに $\\mathrm{CF_0}-\\mathrm{CF}=\\dfrac{(3-\\sqrt3)R}{2}$ 進むので，スクリーン上で光軸から\n\\[ \\frac{(3-\\sqrt3)R}{2}\\tan30^\\circ=\\boldsymbol{\\frac{\\sqrt3-1}{2}R}\\ (\\fallingdotseq0.37R) \\]\nだけ（入射した側と反対側に）離れた点に当たる．近軸の焦点にピントを合わせても，高い光線はこれだけぼける．\n\n\\textbf{(5)}　液体中では屈折の法則が $n\\sin\\theta=n_{\\rm A}\\sin\\varphi$ となり，(1)〜(3) の $n$ を相対屈折率 $\\dfrac{n}{n_{\\rm A}}$ に置きかえればよい．\n\\[ y_{\\rm c}=\\boldsymbol{\\frac{n_{\\rm A}R}{n}},\\qquad \\mathrm{VF_0}=\\frac{R}{\\frac{n}{n_{\\rm A}}-1}=\\boldsymbol{\\frac{n_{\\rm A}R}{n-n_{\\rm A}}}. \\]\n$n_{\\rm A}\\to n$ では $y_{\\rm c}\\to R$ で全反射する光線はほとんどなくなるが，屈折自体が弱くなるので $\\mathrm{VF_0}$ は限りなく大きくなり，レンズとしてはたらかなくなる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "球面での屈折を正弦定理で厳密に追うと，光線が光軸と交わる点は高さ $y$ によって変わり，$y\\to0$ の極限だけが焦点距離 $R/(n-1)$ を与える．高い光線ほど手前で交わり（球面収差），$y>R/n$ では全反射して出られないので，交わる点の範囲は全反射の限界と近軸極限ではさまれる．液体中では相対屈折率に置きかわり，この上限と焦点距離がともに変わる．"
+ },
+ "concepts": [
+  "light-interference",
+  "string-resonance",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "屈折の法則",
+  "球面レンズ",
+  "近軸近似",
+  "球面収差",
+  "全反射",
+  "相対屈折率"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

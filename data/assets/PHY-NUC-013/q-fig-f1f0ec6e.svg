@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" width="600" height="230">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<circle cx="105" cy="110" r="10" fill="#222"/>
+<circle cx="105" cy="110" r="30" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="133.7" cy="118.9" r="3" fill="#222"/>
+<circle cx="76.3" cy="101.1" r="3" fill="#222"/>
+<circle cx="105" cy="110" r="52" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="154.7" cy="125.4" r="3" fill="#222"/>
+<circle cx="129.3" cy="156.0" r="3" fill="#222"/>
+<circle cx="89.6" cy="159.7" r="3" fill="#222"/>
+<circle cx="59.0" cy="134.3" r="3" fill="#222"/>
+<circle cx="55.3" cy="94.6" r="3" fill="#222"/>
+<circle cx="80.7" cy="64.0" r="3" fill="#222"/>
+<circle cx="120.4" cy="60.3" r="3" fill="#222"/>
+<circle cx="151.0" cy="85.7" r="3" fill="#222"/>
+<circle cx="105" cy="110" r="74" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="175.7" cy="131.9" r="3" fill="#222"/>
+<circle cx="159.2" cy="160.4" r="3" fill="#222"/>
+<circle cx="132.0" cy="178.9" r="3" fill="#222"/>
+<circle cx="99.4" cy="183.8" r="3" fill="#222"/>
+<circle cx="67.9" cy="174.1" r="3" fill="#222"/>
+<circle cx="43.8" cy="151.6" r="3" fill="#222"/>
+<circle cx="31.8" cy="121.0" r="3" fill="#222"/>
+<circle cx="34.3" cy="88.1" r="3" fill="#222"/>
+<circle cx="50.8" cy="59.6" r="3" fill="#222"/>
+<circle cx="78.0" cy="41.1" r="3" fill="#222"/>
+<circle cx="110.6" cy="36.2" r="3" fill="#222"/>
+<circle cx="142.1" cy="45.9" r="3" fill="#222"/>
+<circle cx="166.2" cy="68.4" r="3" fill="#222"/>
+<circle cx="178.2" cy="99.0" r="3" fill="#222"/>
+<text x="105" y="215" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">(a) 中性原子（電子は一部のみ描画）</text>
+<circle cx="290" cy="110" r="10" fill="#222"/>
+<text x="290" y="88" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">裸の原子核 X</text>
+<line x1="320" y1="110" x2="380" y2="110" stroke="#222" stroke-width="1.6" marker-end="url(#q-ak)"/>
+<circle cx="440" cy="110" r="10" fill="#222"/>
+<circle cx="440" cy="110" r="30" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="470" cy="110" r="4" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="440" y="68" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">Y（K殻に電子1個）</text>
+<polyline points="450.0,124.0 450.5,126.8 453.3,126.3 456.0,125.9 456.5,128.6 457.0,131.4 459.8,131.0 462.6,130.5 463.0,133.3 463.5,136.1 466.3,135.6 469.1,135.2 469.5,137.9 470.0,140.7 472.8,140.3 475.6,139.8 476.0,142.6 476.5,145.4 479.3,144.9 482.1,144.5 482.5,147.2 483.0,150.0 485.8,149.6 488.6,149.1 489.1,151.9 489.5,154.7 492.3,154.2 495.1,153.8 495.6,156.5 496.0,159.3 498.8,158.9 501.6,158.4 502.1,161.2 502.5,164.0 505.3,163.5 508.1,163.1 508.6,165.8 509.1,168.6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+<line x1="510.2162768692984" y1="167.01162633521312" x2="520" y2="174" stroke="#c0392b" stroke-width="1.8" marker-end="url(#q-ar)"/>
+<text x="500" y="192" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">反ニュートリノ</text>
+<text x="380" y="215" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">(b) 生じた電子が K 殻に束縛される β⁻ 崩壊</text>
+</svg>

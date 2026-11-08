@@ -1,0 +1,131 @@
+{
+ "id": "PHY-OPT-024",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "直交偏光板の間の複屈折板による白色光の暗線（溝つきスペクトル）と，2枚の板の重ね合わせ",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "透過軸が $y$ 軸に平行な偏光板 A と，透過軸が $x$ 軸に平行な偏光板 B の間に，厚さ $d$ の透明な結晶板を光の進路（$z$ 軸）に垂直に置く．結晶板には互いに直交する2つの特別な方向 $u$，$w$ があり，電場が $u$ 方向に振動する光の屈折率は $w$ 方向の場合より $\\Delta n$（$>0$，波長によらない）だけ大きい．$u$ 方向は $y$ 軸から角 $\\varphi$ だけ傾いている．電場の $u$ 成分と $w$ 成分は結晶板中をそれぞれの屈折率で独立に進み，反射・吸収はない．A を通過した直後の光の強さを $I_0$ とし，光の強さは電場の振幅の2乗に比例する．波長はすべて真空中の値とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "波長 $\\lambda$ の光について，結晶板を出たときの $u$ 成分の $w$ 成分に対する位相の遅れを $\\Gamma$ とする．$\\Gamma$ を求め，B を通過した光の強さ $I$ を $I_0$，$\\varphi$，$\\Gamma$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\varphi=\\dfrac{\\pi}{4}$ とし，A の手前から白色光（波長 410 nm〜700 nm の光を連続的に含む）を入れて，B を通過した光を分光器で調べた．すると，ある波長で光が完全に消える暗線が現れ，そのうち隣り合う2本の暗線の波長が 600 nm と 500 nm であった．$\\Delta n\\,d$ を求めよ．また，410 nm〜700 nm に現れる暗線の波長をすべて求め，$I=I_0$ となる波長もすべて求めよ（有効数字3桁）．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の状態から $\\varphi$ だけを $\\dfrac{\\pi}{8}$ に変えた．暗線の波長は変わるか．また $I$ の最大値はいくらになるか．"
+     },
+     {
+      "id": "4",
+      "tex": "次に B の透過軸を $y$ 軸に平行に（A と平行に）変え，$\\varphi=\\dfrac{\\pi}{8}$ のまま白色光を入れた．このとき光が完全に消える波長はあるか．$I$ の最小値とともに答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "A，B を (2) の配置（直交，$\\varphi=\\frac{\\pi}{4}$）に戻し，(2) の結晶板と同じ物質でできた厚さ $d'$ の板を，その $u$ 方向が最初の板の $w$ 方向に一致するように重ねた．すると 410 nm〜700 nm には暗線がただ1本，500 nm にだけ現れ，しかも $I=I_0$ となる波長はこの範囲に1つもなかった．$\\Delta n=9.0\\times10^{-3}$ として $d$ と $d'$ を求めよ（有効数字2桁，$d'$ は可能なものをすべて）．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：直交偏光板の間の複屈折板による白色光の暗線（溝つきスペクトル）と，2枚の板の重ね合わせ",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\Gamma=\\dfrac{2\\pi\\Delta n\\,d}{\\lambda}$，$I=I_0\\sin^2 2\\varphi\\,\\sin^2\\dfrac{\\Gamma}{2}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\Delta n\\,d=3.00\\times10^3$ nm．暗線 600 nm，500 nm，429 nm．$I=I_0$ は 667 nm，545 nm，462 nm"
+   },
+   {
+    "id": "3",
+    "tex": "暗線の波長は変わらない．最大値 $\\dfrac{I_0}{2}$"
+   },
+   {
+    "id": "4",
+    "tex": "完全に消える波長はない．$I=I_0\\bigl(1-\\frac12\\sin^2\\frac{\\Gamma}{2}\\bigr)$ の最小値は $\\dfrac{I_0}{2}$（545 nm などで）"
+   },
+   {
+    "id": "5",
+    "tex": "$d=3.3\\times10^2\\ \\mu$m，$d'=2.8\\times10^2\\ \\mu$m または $3.9\\times10^2\\ \\mu$m"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 強さの式}\n光路差は $\\Delta n\\,d$ なので $\\boldsymbol{\\Gamma=\\dfrac{2\\pi\\Delta n\\,d}{\\lambda}}$．A を出た光の振幅を $E_0$（$I_0\\propto E_0^2$）とし，$(x,y)$ 成分で $u$ 方向の単位ベクトルを $(\\sin\\varphi,\\cos\\varphi)$，$w$ 方向を $(\\cos\\varphi,-\\sin\\varphi)$ とすると，$y$ 方向の電場は $u$ 成分 $E_0\\cos\\varphi$，$w$ 成分 $-E_0\\sin\\varphi$ に分かれる．B の透過軸（$x$ 方向）への射影は，$u$ 成分から $E_0\\cos\\varphi\\sin\\varphi$，$w$ 成分から $-E_0\\sin\\varphi\\cos\\varphi$ で，前者が位相 $\\Gamma$ だけ遅れる．合成振幅は\n\\[ \\tfrac12E_0\\sin2\\varphi\\,\\bigl|e^{-i\\Gamma}-1\\bigr|=E_0\\sin2\\varphi\\,\\Bigl|\\sin\\frac{\\Gamma}{2}\\Bigr|, \\]\n（三角関数で書けば $\\tfrac12E_0\\sin2\\varphi\\{\\sin(\\omega t-\\Gamma)-\\sin\\omega t\\}$ の振幅）．よって\n\\[ \\boldsymbol{I=I_0\\sin^2 2\\varphi\\,\\sin^2\\frac{\\Gamma}{2}}. \\]\n$\\Gamma=0$ なら2成分は打ち消し合い，$\\Gamma=\\pi$ なら偏光の向きが $2\\varphi$ 回転して B を通る．\n\n\\textbf{(2) 暗線から光路差を決める}\n暗線は $\\sin\\frac{\\Gamma}{2}=0$，すなわち $\\Delta n\\,d=m\\lambda$（$m$ は自然数）．波長が長い方が $m$ は小さいので，隣り合う暗線について $m\\cdot600=(m+1)\\cdot500$，$m=5$．よって $\\boldsymbol{\\Delta n\\,d=3.00\\times10^3}$ nm．\\\\\n暗線：$\\lambda=3000/m$ nm が 410〜700 nm に入る $m=5,6,7$ で，$\\boldsymbol{600,\\ 500,\\ 429}$ nm．\\\\\n$I=I_0$：$\\sin^2\\frac{\\Gamma}{2}=1$，$\\Delta n\\,d=(m+\\frac12)\\lambda$．$\\lambda=3000/(m+\\frac12)$ nm が範囲に入る $m=4,5,6$ で，$\\boldsymbol{667,\\ 545,\\ 462}$ nm．\n\n\\textbf{(3) 板を回した場合}\n暗線の条件 $\\sin\\frac{\\Gamma}{2}=0$ は $\\varphi$ を含まないので，\\textbf{暗線の波長は変わらない}．$\\sin^22\\varphi=\\frac12$ なので最大値は $\\boldsymbol{\\dfrac{I_0}{2}}$ に下がる．（暗線は「板が偏光を変えない波長」で決まり，板の向きに関係しない．）\n\n\\textbf{(4) 平行偏光板の場合}\nB が $y$ 方向なら，(1) と同様に $y$ 方向への射影を合成して\n\\[ I_{/\\!/}=I_0\\Bigl(1-\\sin^22\\varphi\\,\\sin^2\\frac{\\Gamma}{2}\\Bigr)=I_0-I_{\\perp} \\]\n（エネルギー保存：$x$，$y$ 成分の強さの和は $I_0$）．$\\varphi=\\frac{\\pi}{8}$ では $I_{/\\!/}=I_0\\bigl(1-\\frac12\\sin^2\\frac{\\Gamma}{2}\\bigr)\\ge\\frac{I_0}{2}$ なので，\\textbf{完全に消える波長はない}．最小値は $\\boldsymbol{\\dfrac{I_0}{2}}$ で，(2) で $I=I_0$ となった 667，545，462 nm で起こる．完全な消光には $\\sin^22\\varphi=1$（$\\varphi=\\frac{\\pi}{4}$）が必要．\n\n\\textbf{(5) 2枚を重ねた板}\n2枚目は $u$，$w$ が入れかわって重なるので，最初の板で $u$ 成分が受けた遅れ $2\\pi\\Delta n\\,d/\\lambda$ から，2枚目で $w$ 成分が受ける遅れ $2\\pi\\Delta n\\,d'/\\lambda$ が差し引かれ，全体は厚さ $|d-d'|$ の1枚の板と同じ（$\\Gamma=2\\pi\\Delta n|d-d'|/\\lambda$）になる．$X=\\Delta n|d-d'|$ とおく．\\\\\n暗線は $\\lambda=X/m$．500 nm が暗線なので $X=500m$ nm．\n\\begin{itemize}\n\\item $m=1$（$X=500$ nm）：暗線は 500 nm のみ（250 nm は範囲外）．$I=I_0$ は $X/(m'+\\frac12)=1000,\\ 333,\\dots$ nm で範囲内になし．\\textbf{条件を満たす}．\n\\item $m=2$（$X=1000$ nm）：暗線は 500 nm のみだが，$I=I_0$ が 667 nm に現れるので不適．\n\\item $m\\ge3$：$X=1500$ nm では 600 nm に $I=I_0$，$X\\ge2000$ nm では暗線が2本以上（例：$X=2000$ で 667 nm と 500 nm）となり不適．（$m$ が大きいほど暗線の間隔が詰まり，範囲内の本数が増える．）\n\\end{itemize}\nよって $\\Delta n|d-d'|=500$ nm，$|d-d'|=\\dfrac{500\\times10^{-9}}{9.0\\times10^{-3}}=5.6\\times10^{-5}$ m．また $d=\\dfrac{3.00\\times10^{-6}}{9.0\\times10^{-3}}=3.3\\times10^{-4}$ m．\n\\[ \\boldsymbol{d=3.3\\times10^2\\ \\mu\\mathrm m},\\qquad \\boldsymbol{d'=2.8\\times10^2\\ \\mu\\mathrm m\\ \\ \\text{または}\\ \\ 3.9\\times10^2\\ \\mu\\mathrm m}. \\]\n重ねた板は差の厚みだけがはたらくので，スペクトルからは $d'$ が $d$ より薄いか厚いかは区別できない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "複屈折板を直交偏光板ではさむと，透過光は $\\sin^22\\varphi\\,\\sin^2(\\pi\\Delta n d/\\lambda)$ となり，暗線の位置は板の向きによらず光路差 $\\Delta n d$ だけで決まるので，隣り合う暗線の波長から次数と光路差が求まる．$u$，$w$ を入れかえて重ねた2枚の板は厚さの差の1枚と同じになるため，スペクトルからは差しか分からず，厚さに2通りの可能性が残る．"
+ },
+ "concepts": [
+  "light-interference",
+  "superposition",
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "偏光",
+  "複屈折",
+  "光路差",
+  "白色光",
+  "暗線",
+  "重ね合わせ"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

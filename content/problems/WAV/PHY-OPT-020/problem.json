@@ -1,0 +1,152 @@
+{
+ "id": "PHY-OPT-020",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "球形の金魚鉢の中の魚の見かけの位置と大きさ（球面1枚での屈折の結像公式）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，半径 $r$，中心 O の球形の金魚鉢に屈折率 $n\\,(>1)$ の水が満たされており，鉢の外は屈折率 1 の空気である．鉢のガラスの厚さは無視できる．鉢の直径 WV の延長上で，V 側の十分遠くから鉢の中を観察する．直径 WV 上の点 F（V からの距離 $a$，$0<a\\le2r$）にいる小さな魚を考える．光軸 WV に十分近い光線だけを考え，光線が光軸や球面の法線となす角を $\\theta$ とするとき $\\sin\\theta\\fallingdotseq\\tan\\theta\\fallingdotseq\\theta$ と近似する．また，光線が球面を通る点の光軸からの高さに比べて，その点と V との光軸方向のずれは無視できるものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "F から出て，光軸からの高さ $y$ の球面上の点 P で空気中へ屈折した光線を，逆向きに延長すると光軸と点 F$'$ で交わる．F$'$ の V からの距離を $b$（F$'$ が V より鉢の側にあるときを正）とする．このとき\n  \\[ \\frac{n}{a}-\\frac{1}{b}=\\frac{n-1}{r} \\]\n  が $y$ によらずに成り立つことを示せ．これより，魚は V から距離 $b$ の位置に見える．"
+     },
+     {
+      "id": "2",
+      "tex": "魚の大きさ（光軸に垂直な方向の長さ）が，見かけ上 $m=\\dfrac{nb}{a}$ 倍に見えることを示せ．ただし $a\\ne r$ とし，O を通る光線を考えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "魚が中心 O にいるとき（$a=r$），魚の見かけの位置と，見かけの大きさは実際の何倍かを答えよ（(2) の結果で $a\\to r$ としてよい）．"
+     },
+     {
+      "id": "4",
+      "tex": "$n=\\dfrac43$ とする．魚が鉢の奥の壁 W の位置にいるとき（$a=2r$），魚は V から距離いくらの位置に見えるか．また，見かけの大きさは実際の何倍か．"
+     },
+     {
+      "id": "5",
+      "tex": "鉢を屈折率 $n'$ の別の透明な液体で満たしたとき，W の位置の魚の像が鉢の手前（観察者の側の空気中）にできるための $n'$ の条件を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "$n=\\dfrac43$ とする．直径 WV 上で，魚が実際の位置に見える点をすべて求めよ．また，魚が実際より手前に見えるのは $a$ がどの範囲にあるときか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：球形の金魚鉢の中の魚の見かけの位置と大きさ（球面1枚での屈折の結像公式）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：球形の金魚鉢の中の魚の見かけの位置と大きさ（球面1枚での屈折の結像公式）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "解説参照"
+   },
+   {
+    "id": "2",
+    "tex": "解説参照"
+   },
+   {
+    "id": "3",
+    "tex": "実際の位置（中心 O）に見え，大きさは $n$ 倍"
+   },
+   {
+    "id": "4",
+    "tex": "V から $3r$（W よりさらに $r$ 奥），2 倍"
+   },
+   {
+    "id": "5",
+    "tex": "$n'>2$"
+   },
+   {
+    "id": "6",
+    "tex": "V（$a=0$）と O（$a=r$）；$0<a<r$ のとき手前に見える"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 球面での屈折}\n\n光線 FP，法線 OP，見かけの光線 F$'$P が光軸となす角を，P の高さ $y$ を使って表す（V と P の光軸方向のずれは無視）：\n\\[ \\angle\\text{PFV}\\fallingdotseq\\frac{y}{a},\\qquad \\angle\\text{POV}\\fallingdotseq\\frac{y}{r},\\qquad \\angle\\text{PF}'\\text{V}\\fallingdotseq\\frac{y}{b}. \\]\nP での入射角（水中）と屈折角（空気中）は，それぞれ光線と法線 OP の傾きの差なので\n\\[ \\theta_1=\\frac{y}{a}-\\frac{y}{r},\\qquad \\theta_2=\\frac{y}{b}-\\frac{y}{r} \\]\n（$a>r$ のときなどは負になるが，向きを含めて扱えば同じ式でよい）．屈折の法則 $n\\sin\\theta_1=\\sin\\theta_2$ を近似して $n\\theta_1=\\theta_2$：\n\\[ n\\left(\\frac1a-\\frac1r\\right)=\\frac1b-\\frac1r\\quad\\therefore\\quad \\boldsymbol{\\frac{n}{a}-\\frac{1}{b}=\\frac{n-1}{r}}. \\]\n$y$ が消えるので，F を出て V 付近を通るすべての光線が同じ点 F$'$ から出たように見え，魚は F$'$ に見える．\n\n\\textbf{(2) 見かけの大きさ}\n\n魚の頭が光軸から高さ $h$ の点 Q にあるとする．Q から O に向かう光線は球面に垂直に当たるので曲がらず，その延長上（O と Q を結ぶ直線上）に Q の像がある．像は深さ $b$ の位置にあるから，O からの光軸方向の距離の比で\n\\[ h'=h\\cdot\\frac{r-b}{r-a}. \\]\n(1) より $b=\\dfrac{ar}{nr-(n-1)a}$ なので $r-b=\\dfrac{nr(r-a)}{nr-(n-1)a}$，よって\n\\[ m=\\frac{h'}{h}=\\frac{nr}{nr-(n-1)a}=\\boldsymbol{\\frac{nb}{a}}. \\]\n\n\\textbf{(3) 中心の魚}\n\n$a=r$ を (1) に代入すると $\\dfrac{n}{r}-\\dfrac1b=\\dfrac{n-1}{r}$ より $b=r$．中心から出た光線はすべて球面に垂直に出るので曲がらず，魚は\\textbf{実際の位置（中心 O）}に見える．大きさは $m=\\dfrac{nr}{r}=\\boldsymbol{n}$ \\textbf{倍}に拡大して見える．\n\n\\textbf{(4) 奥の壁の魚}\n\n$a=2r$，$n=\\frac43$：$\\dfrac1b=\\dfrac{4/3}{2r}-\\dfrac{1/3}{r}=\\dfrac{1}{3r}$ より $b=\\boldsymbol{3r}$．W は V から $2r$ なので，魚は鉢の外，W よりさらに $r$ 奥に見える（解答図）．大きさは $m=\\dfrac{(4/3)\\cdot3r}{2r}=\\boldsymbol{2}$ \\textbf{倍}（正立）．\n\n\\textbf{(5) 像が手前にできる条件}\n\n$a=2r$ で $\\dfrac1b=\\dfrac{n'}{2r}-\\dfrac{n'-1}{r}=\\dfrac{2-n'}{2r}$．像が手前の空気中にできるのは $b<0$ のときで，$\\boldsymbol{n'>2}$（$n'=2$ では屈折後の光線が光軸に平行になり，像は無限遠）．このとき光線は実際に V の手前の点 $\\dfrac{2r}{n'-2}$ に集まる（実像）．\n\n\\textbf{(6) 実際の位置に見える点}\n\n$b=a$ とおくと $\\dfrac{n-1}{a}=\\dfrac{n-1}{r}$ より $a=r$．$a\\to0$ でも $b\\to0$ となるので，\\textbf{V と O} の 2 点だけである．$n=\\frac43$ では $b=\\dfrac{3ar}{4r-a}$ で\n\\[ b-a=\\frac{a(a-r)}{4r-a} \\]\nとなり，$\\boldsymbol{0<a<r}$ では $b<a$（実際より手前に見える），$r<a\\le2r$ では $b>a$（実際より奥に見える）．平らな水面の「見かけの深さ」（常に浅く見える）とは異なり，球面では中心より奥の魚はかえって遠くに，大きく見える．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "球面 1 枚での近軸屈折では，入射角・屈折角を「光線の傾き $-$ 法線の傾き」で表すと $\\frac{n}{a}-\\frac1b=\\frac{n-1}{r}$ が光線によらず成り立ち，横倍率は中心を通る直進光線から $nb/a$ と求まる．中心の物体は同じ位置に $n$ 倍に見え，中心より奥では実際より遠く大きく見えるなど，平面の見かけの深さとは逆の結果が場合分けで現れる．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "屈折",
+  "球面",
+  "近軸光線",
+  "見かけの位置",
+  "倍率",
+  "金魚鉢"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

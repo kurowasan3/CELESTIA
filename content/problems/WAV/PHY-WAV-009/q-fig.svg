@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320">
+  <defs>
+    <marker id="q-ak" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#222"/></marker>
+    <marker id="q-ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/></marker>
+  </defs>
+  <!-- wall hatch -->
+  <line x1="30" y1="250" x2="480" y2="250" stroke="#222" stroke-width="1.6"/>
+  <g stroke="#222" stroke-width="1">
+    <path d="M40,250 l-10,12 M55,250 l-10,12 M70,250 l-10,12 M85,250 l-10,12 M100,250 l-10,12 M115,250 l-10,12 M130,250 l-10,12 M145,250 l-10,12 M160,250 l-10,12 M175,250 l-10,12 M190,250 l-10,12 M205,250 l-10,12 M220,250 l-10,12 M235,250 l-10,12 M280,250 l-10,12 M295,250 l-10,12 M310,250 l-10,12 M325,250 l-10,12 M340,250 l-10,12 M355,250 l-10,12 M370,250 l-10,12 M385,250 l-10,12 M400,250 l-10,12 M415,250 l-10,12 M430,250 l-10,12 M445,250 l-10,12 M460,250 l-10,12 M475,250 l-10,12"/>
+  </g>
+  <text x="380" y="285" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">壁</text>
+  <!-- axes -->
+  <line x1="20" y1="250" x2="500" y2="250" stroke="#222" stroke-width="1" marker-end="url(#q-ak)"/>
+  <line x1="250" y1="300" x2="250" y2="30" stroke="#222" stroke-width="1" marker-end="url(#q-ak)"/>
+  <text x="504" y="255" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">x</text>
+  <text x="257" y="36" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222">y</text>
+  <circle cx="250" cy="250" r="3.5" fill="#fff" stroke="#222" stroke-width="1.2"/>
+  <text x="256" y="270" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">O</text>
+  <!-- source -->
+  <circle cx="250" cy="110" r="5" fill="#222"/>
+  <text x="260" y="105" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">S(0, <tspan font-family="Times New Roman, serif" font-style="italic">h</tspan>)</text>
+  <!-- point P -->
+  <circle cx="380" cy="180" r="4" fill="#222"/>
+  <text x="388" y="176" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">P(<tspan font-family="Times New Roman, serif" font-style="italic">x</tspan>, <tspan font-family="Times New Roman, serif" font-style="italic">y</tspan>)</text>
+  <!-- flow arrows -->
+  <g stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)">
+    <line x1="50" y1="70" x2="100" y2="70"/><line x1="50" y1="120" x2="100" y2="120"/><line x1="50" y1="170" x2="100" y2="170"/><line x1="50" y1="220" x2="100" y2="220"/>
+  </g>
+  <text x="66" y="150" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1f5fbf">V</text>
+  <text x="290" y="60" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">水面（水は一様に流れている）</text>
+</svg>

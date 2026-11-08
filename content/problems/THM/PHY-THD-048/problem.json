@@ -1,0 +1,150 @@
+{
+ "id": "PHY-THD-048",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "分子の大きさを考えた気体の断熱変化（微小変化からの断熱の関係の導出と自由膨張）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "分子自身の大きさを考えに入れた気体のモデルとして，$n$ モルの気体の圧力 $p$，体積 $V$，温度 $T$ の間に\n\\[ p\\,(V-nb)=nRT \\]\nが成り立ち，内部エネルギーが $E=\\frac32nRT$ で体積によらない気体を考える（$b$ は正の定数，$R$ は気体定数，$V>nb$）．この気体を，なめらかに動くピストンのついた断熱容器に入れる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "ピストンをゆっくり動かして体積を $V$ から $V+\\Delta V$ へわずかに変えたところ，温度が $T$ から $T+\\Delta T$ に変わった．$\\dfrac{\\Delta T}{\\Delta V}$ を $T,V,n,b$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$C,a$ を定数として $T=C\\,(V-nb)^a$ が成り立つと仮定し，(1) の結果と比べて $a$ を求めよ．ただし $|\\varepsilon|\\ll1$ のとき $(1+\\varepsilon)^a\\approx1+a\\varepsilon$ としてよい．"
+     },
+     {
+      "id": "3",
+      "tex": "体積 $V_1$，温度 $T_1$ の状態から，ゆっくりと体積 $V_2$（$nb<V_2<V_1$）まで圧縮した．この間に気体がされた仕事 $W$ を $n,R,T_1,V_1,V_2,b$ で表せ．また，同じ $V_1,T_1,V_2$ で $b=0$ の理想気体を圧縮した場合と比べて，圧縮後の温度はどちらが高いか．理由とともに答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "以下 $V_1-nb=8\\,(V_2-nb)$ とする．(3) の圧縮後の温度 $T_2$ を $T_1$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の状態で，容器につないだ断熱の真空容器への弁を開き，全体積が $V_1$ になるまで気体を自由に膨張させた．膨張が終わったときの温度 $T_3$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "さらにその後，ピストンをゆっくり動かして断熱膨張させ，温度を $T_1$ に戻した．このときの体積を $V_4$ とするとき，$V_4-nb$ を $V_1-nb$ で表せ．また (3)〜(6) の全過程で気体がされた仕事の総和を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：分子の大きさを考えた気体の断熱変化（微小変化からの断熱の関係の導出と自由膨張）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：分子の大きさを考えた気体の断熱変化（微小変化からの断熱の関係の導出と自由膨張）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{\\Delta T}{\\Delta V}=-\\dfrac{2T}{3(V-nb)}$"
+   },
+   {
+    "id": "2",
+    "tex": "$a=-\\dfrac23$"
+   },
+   {
+    "id": "3",
+    "tex": "$W=\\dfrac32nRT_1\\left\\{\\left(\\dfrac{V_1-nb}{V_2-nb}\\right)^{2/3}-1\\right\\}$；この気体の方が高い（$\\frac{V_1-nb}{V_2-nb}>\\frac{V_1}{V_2}$ のため）"
+   },
+   {
+    "id": "4",
+    "tex": "$T_2=4T_1$"
+   },
+   {
+    "id": "5",
+    "tex": "$T_3=4T_1$"
+   },
+   {
+    "id": "6",
+    "tex": "$V_4-nb=8\\,(V_1-nb)$；仕事の総和 $0$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　断熱なので熱の出入りはなく，第1法則より $\\Delta E=-p\\Delta V$．$E=\\frac32nRT$ と状態方程式 $p=\\dfrac{nRT}{V-nb}$ を用いて\n\\[ \\frac32nR\\,\\Delta T=-\\frac{nRT}{V-nb}\\Delta V\\quad\\therefore\\ \\boldsymbol{\\frac{\\Delta T}{\\Delta V}=-\\frac{2T}{3(V-nb)}} . \\]\n\n\\textbf{(2)}　$T+\\Delta T=C(V-nb+\\Delta V)^a=C(V-nb)^a\\left(1+\\dfrac{\\Delta V}{V-nb}\\right)^a\\approx T\\left(1+\\dfrac{a\\Delta V}{V-nb}\\right)$ より $\\dfrac{\\Delta T}{\\Delta V}=\\dfrac{aT}{V-nb}$．(1) と比べて $\\boldsymbol{a=-\\frac23}$，すなわち $T(V-nb)^{2/3}=$ 一定．理想気体の $TV^{2/3}=$ 一定で $V$ を「分子が自由に動ける体積」$V-nb$ に置きかえた形になる．\n\n\\textbf{(3)}　圧縮後の温度は $T_2=T_1\\left(\\dfrac{V_1-nb}{V_2-nb}\\right)^{2/3}$．断熱なので気体がされた仕事は内部エネルギーの増加に等しい：\n\\[ W=\\frac32nR(T_2-T_1)=\\boldsymbol{\\frac32nRT_1\\left\\{\\left(\\frac{V_1-nb}{V_2-nb}\\right)^{2/3}-1\\right\\}} . \\]\n$\\dfrac{V_1-nb}{V_2-nb}-\\dfrac{V_1}{V_2}=\\dfrac{nb(V_1-V_2)}{V_2(V_2-nb)}>0$ なので，自由に動ける体積の比の方が大きく，\\textbf{この気体の方が高温になる}．同じ体積変化でも自由に動ける体積がより大きな割合で減り，圧力が高い分だけ多くの仕事をされるからである．\n\n\\textbf{(4)}　$T_2=T_1\\cdot8^{2/3}=\\boldsymbol{4T_1}$．\n\n\\textbf{(5)}　真空への自由膨張では気体は外へ仕事をせず（真空は押し返さない），断熱なので熱も出入りしない．よって $\\Delta E=0$．この気体の内部エネルギーは温度だけで決まるので温度は変わらず $\\boldsymbol{T_3=4T_1}$．（体積は $V_1$ に戻ったが，(3) の始めの状態には戻らない．）\n\n\\textbf{(6)}　$T(V-nb)^{2/3}$ 一定より $4T_1(V_1-nb)^{2/3}=T_1(V_4-nb)^{2/3}$，\n\\[ \\boldsymbol{V_4-nb=4^{3/2}(V_1-nb)=8\\,(V_1-nb)} . \\]\n仕事の総和：圧縮でされた仕事 $\\frac32nR(4T_1-T_1)$，自由膨張で $0$，断熱膨張でされた仕事 $\\frac32nR(T_1-4T_1)$ なので合計 $\\boldsymbol{0}$．全過程で熱の出入りがなく，最初と最後の温度が等しいので，第1法則からも $0$ とわかる．それでも最後の体積は始めより大きく，自由膨張という不可逆な過程をはさむと同じ温度に戻っても状態は元に戻らない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "準静的な断熱変化の微小変化 $\\Delta E=-p\\Delta V$ に状態方程式を組み合わせ，べき関数を仮定して断熱の関係を導く．分子の大きさがあると $V$ の代わりに自由に動ける体積 $V-nb$ が現れ，同じ体積比の圧縮でもより高温になる．内部エネルギーが温度だけで決まるので自由膨張では温度が変わらず，その後の断熱膨張で温度を戻しても体積は元に戻らない．"
+ },
+ "concepts": [
+  "first-law",
+  "ideal-gas"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "断熱変化",
+  "第1法則",
+  "微小変化",
+  "状態方程式",
+  "自由膨張"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

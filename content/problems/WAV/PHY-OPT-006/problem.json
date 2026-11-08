@@ -1,0 +1,135 @@
+{
+ "id": "PHY-OPT-006",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "段差をまたぐくさび形空気層の干渉縞のずれと2波長による段差の決定",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，ガラス板の上面に高さ $t$ の段差があり，奥側の半分（B側）が手前側の半分（A側）より $t$ だけ高い．その上に平らなガラス板をわずかに傾けてのせると，上のガラス板は B 側の上面と直線 G で接し，G から距離 $x$ の位置での B 側の空気層の厚さは $\\varepsilon x$（$\\varepsilon$ は微小な定数），A 側の空気層の厚さは $\\varepsilon x+t$ となる．段差の境界線は $x$ 軸に平行である．真上から波長 $\\lambda$ の単色光を当て，反射光を真上から観察すると，A 側にも B 側にも $x$ 軸に垂直な暗線が等間隔に並び，A 側の暗線は B 側の暗線に対して横にずれて見えた．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "暗線の間隔 $a$ を $\\lambda$，$\\varepsilon$ で表せ．また，同じ次数（同じ整数 $m$）の暗線どうしを比べると，A 側の暗線は B 側の暗線に対して G に近づく向き・遠ざかる向きのどちらへ，どれだけずれているか．"
+     },
+     {
+      "id": "2",
+      "tex": "A 側の各暗線は，そのすぐ G から遠い側にある B 側の暗線よりも G の側に $b\\ (0\\leqq b<a)$ だけずれて見えた．$t$ を $\\lambda$，$a$，$b$ と0以上の整数 $k$ を用いて表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "波長 $600\\ \\mathrm{nm}$ の光では $b/a=0.40$，波長 $480\\ \\mathrm{nm}$ の光では $b/a=0.50$ であった．別の測定から $0.90\\ \\mu\\mathrm{m}\\leqq t\\leqq2.00\\ \\mu\\mathrm{m}$ であることがわかっている．$t$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の2つの波長の測定結果だけからでは，$t$ にはある長さ $\\tau$ の整数倍の不定性が残る．$\\tau$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：段差をまたぐくさび形空気層の干渉縞のずれと2波長による段差の決定",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：段差をまたぐくさび形空気層の干渉縞のずれと2波長による段差の決定",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$a=\\dfrac{\\lambda}{2\\varepsilon}$，G に近づく向きに $\\dfrac{t}{\\varepsilon}$"
+   },
+   {
+    "id": "2",
+    "tex": "$t=\\left(k+\\dfrac ba\\right)\\dfrac{\\lambda}{2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$t=1.32\\ \\mu\\mathrm{m}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\tau=1.20\\ \\mu\\mathrm{m}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　干渉するのは上のガラス板の下面で反射する光と，下のガラス板の上面で反射する光である．前者（ガラス→空気）は位相が変わらず，後者（空気→ガラス）は位相が $\\pi$ ずれる．空気層の厚さを $e$ とすると，暗線の条件は\n\\[ 2e=m\\lambda\\qquad(m=0,1,2,\\ldots) \\]\nB 側では $e=\\varepsilon x$ だから暗線の位置は $x_m^{\\mathrm B}=\\dfrac{m\\lambda}{2\\varepsilon}$，A 側では $e=\\varepsilon x+t$ だから $x_m^{\\mathrm A}=\\dfrac{m\\lambda/2-t}{\\varepsilon}$．よって暗線の間隔は\n\\[ \\boldsymbol{a=\\frac{\\lambda}{2\\varepsilon}} \\]\nで両側共通であり，同じ次数どうしでは\n\\[ x_m^{\\mathrm B}-x_m^{\\mathrm A}=\\frac{t}{\\varepsilon} \\]\nA 側は空気層が $t$ だけ厚いので，同じ厚さになる位置が G 寄りになる．すなわち \\textbf{G に近づく向きに} $\\boldsymbol{\\dfrac{t}{\\varepsilon}}$ ずれている．\n\n\\textbf{(2)}　(1) のずれ $\\dfrac t\\varepsilon$ を間隔 $a$ で測ると $\\dfrac{t/\\varepsilon}{a}=\\dfrac{2t}{\\lambda}$．暗線は等間隔に並んで見分けがつかないので，観察できるのはこのずれから $a$ の整数倍を除いた端数 $b$ だけである．すなわち\n\\[ \\frac{t}{\\varepsilon}=ka+b\\qquad(k=0,1,2,\\ldots) \\]\n$\\dfrac1\\varepsilon=\\dfrac{2a}{\\lambda}$ を用いて\n\\[ \\boldsymbol{t=\\left(k+\\frac ba\\right)\\frac{\\lambda}{2}} \\]\n\n\\textbf{(3)}　(2) より，各波長で $t$ の候補は次のとおり（単位 $\\mu\\mathrm{m}$）．\n\\[ 600\\ \\mathrm{nm}:\\ t=(k+0.40)\\times0.300=\\ldots,\\ 1.02,\\ 1.32,\\ 1.62,\\ 1.92,\\ldots \\]\n\\[ 480\\ \\mathrm{nm}:\\ t=(k'+0.50)\\times0.240=\\ldots,\\ 1.08,\\ 1.32,\\ 1.56,\\ 1.80,\\ldots \\]\n$0.90\\leqq t\\leqq2.00$ の範囲で両方に共通なのは $1.32$ だけである．\n\\[ \\boldsymbol{t=1.32\\ \\mu\\mathrm{m}} \\]\n（実際，$2t/\\lambda$ は $600\\ \\mathrm{nm}$ で $4.40$，$480\\ \\mathrm{nm}$ で $5.50$ となり，端数が観測値と一致する．）\n\n\\textbf{(4)}　$t$ を $\\Delta t$ だけ変えても両方の端数が変わらないのは，$\\Delta t$ が $0.300\\ \\mu\\mathrm{m}$ の整数倍でありかつ $0.240\\ \\mu\\mathrm{m}$ の整数倍であるときである．$0.300=5\\times0.060$，$0.240=4\\times0.060$ より，その最小値は最小公倍数\n\\[ \\tau=20\\times0.060=\\boldsymbol{1.20\\ \\mu\\mathrm{m}} \\]\nよって，事前に $t$ を幅 $1.20\\ \\mu\\mathrm{m}$ より狭い範囲に絞れていれば $t$ が1つに決まる．(3) の範囲（幅 $1.10\\ \\mu\\mathrm{m}$）はこれを満たしている．1つの波長だけでは不定性は $\\lambda/2$（$0.300\\ \\mu\\mathrm{m}$ や $0.240\\ \\mu\\mathrm{m}$）なので，2波長を使うことで測定できる範囲が大きく広がる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "段差をまたぐくさび形空気層では，段差 $t$ が同じ次数の暗線を $t/\\varepsilon$ だけずらすが，暗線は等間隔で見分けがつかないため，観測できるのは $2t/\\lambda$ の端数だけである．端数の情報は $t$ を $\\lambda/2$ を法として決めるにとどまるので，2つの波長の端数を組み合わせて不定性の周期を最小公倍数まで広げ，事前の大まかな範囲と合わせて $t$ を一意に決める．"
+ },
+ "concepts": [
+  "light-interference",
+  "interference",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "くさび形薄膜",
+  "干渉縞",
+  "段差測定",
+  "2波長法",
+  "反射の位相変化"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

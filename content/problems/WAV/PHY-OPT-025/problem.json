@@ -1,0 +1,144 @@
+{
+ "id": "PHY-OPT-025",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "多モード平板光導波路のブラッグ格子：モードごとに異なる反射波長から導波路の厚さと格子の周期を決める",
+ "course": "物理",
+ "level": 5,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，屈折率 $n_1$，厚さ $D$ の平板状のコア層を，屈折率 $n_2$（$<n_1$）のクラッド層ではさんだ光導波路がある．光はコア中を，軸（$z$ 方向）と角 $\\theta$ をなして上下の境界面で全反射を繰り返しながら進む．空気（屈折率 1）中での波長が $\\lambda$ の光は，コア中では波長 $\\lambda/n_1$ をもつ．コアの厚さ方向の波面の間隔を $\\lambda_{\\mathrm R}$ とし，簡単のため，自然数 $N$ に対して $D=\\dfrac N2\\lambda_{\\mathrm R}$ を満たす光だけが弱まらずに進めるものとする（$N$ で区別される光をモード $N$ とよぶ）．\n\nさらにコアには，軸に垂直な薄い層が軸方向に周期 $a$ で並んだ構造（ブラッグ格子）があり，各層は光のごく一部を散乱する．モード $N$ の光は，隣り合う層で軸と逆向きに散乱された波が強め合うときだけ，同じモード $N$ のまま入射側へ強く反射されるとする（強め合いは，軸方向の波面間隔をもとに考え，最も長い波長のものだけを考える）．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "モード $N$ の光の $\\sin\\theta$ を $\\lambda$，$n_1$，$D$，$N$ で表せ．また，軸方向の波面の間隔 $\\lambda_z$ を $\\lambda$，$n_1$，$\\theta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "モード $N$ の光が格子で反射される空気中の波長 $\\lambda_N$ が\n  \\[ \\frac{1}{\\lambda_N^{\\,2}}=\\frac{1}{(2n_1a)^2}+\\frac{N^2}{(2n_1D)^2} \\]\n  を満たすことを示し，$\\lambda_N$ を求めよ．また，このときの $\\tan\\theta$ を $a$，$D$，$N$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "モード $N$ の光がコアとクラッドの境界面で全反射されるための条件を，$N$，$a$，$D$，$n_1$，$n_2$ の不等式で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$n_1=1.50$，$n_2=1.46$ の導波路に，空気中の波長 1350 nm〜1550 nm の光を連続的に含む光を入れたところ，反射光は 1492.6 nm と 1470.9 nm の2つの波長にだけ現れた．$a$ と $D$ を有効数字3桁で求めよ．また，この結果が (3) の条件と矛盾しないことを確かめよ．$\\sqrt{0.1184}=0.344$ を用いてよい．"
+     },
+     {
+      "id": "5",
+      "tex": "この導波路を軸方向に一様に引き伸ばし，$a$ を $a(1+\\varepsilon)$（$\\varepsilon=1.0\\times10^{-3}$）にした．$D$ と $n_1$ は変わらないとする．2つの反射波長はそれぞれ何 nm ずれるか（有効数字2桁）．また，2つの反射波長の差は増えるか減るか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：多モード平板光導波路のブラッグ格子：モードごとに異なる反射波長から導波路の厚さと格子の周期を決める",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：多モード平板光導波路のブラッグ格子：モードごとに異なる反射波長から導波路の厚さと格子の周期を決める",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\sin\\theta=\\dfrac{N\\lambda}{2n_1D}$，$\\lambda_z=\\dfrac{\\lambda}{n_1\\cos\\theta}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\lambda_N=\\dfrac{2n_1a}{\\sqrt{1+(Na/D)^2}}$，$\\tan\\theta=\\dfrac{Na}{D}$"
+   },
+   {
+    "id": "3",
+    "tex": "$N<\\dfrac{D}{a}\\cdot\\dfrac{\\sqrt{n_1^{\\,2}-n_2^{\\,2}}}{n_2}$"
+   },
+   {
+    "id": "4",
+    "tex": "$a=500$ nm，$D=5.00\\ \\mu$m（$N<2.36$ でモード 1，2 だけが導かれ，モード 3 の 1437 nm が現れないことと一致）"
+   },
+   {
+    "id": "5",
+    "tex": "長い方 $1.5$ nm，短い方 $1.4$ nm だけ長波長側へずれ，差は（約 0.06 nm）増える"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 厚さ方向と軸方向の波面間隔}\nコア中の波長 $\\lambda/n_1$ の波面は進行方向に垂直である．厚さ方向（軸に垂直）に測った波面の間隔は $\\lambda_{\\mathrm R}=\\dfrac{\\lambda/n_1}{\\sin\\theta}$，軸方向に測った間隔は $\\boldsymbol{\\lambda_z=\\dfrac{\\lambda}{n_1\\cos\\theta}}$．モードの条件 $D=\\frac N2\\lambda_{\\mathrm R}$ より\n\\[ \\boldsymbol{\\sin\\theta=\\frac{N\\lambda}{2n_1D}}. \\]\n\n\\textbf{(2) モードごとの反射波長}\n軸方向に進む波面が距離 $a$ 離れた2つの層で散乱され，逆向きに戻るとき，その経路差は軸方向に往復の $2a$ である．軸方向の波面間隔 $\\lambda_z$ を波長とみなすと，強め合う最も長い波長は $2a=\\lambda_z$，すなわち\n\\[ \\lambda=2n_1a\\cos\\theta. \\]\n$\\cos\\theta=\\dfrac{\\lambda}{2n_1a}$ と (1) の $\\sin\\theta=\\dfrac{N\\lambda}{2n_1D}$ を $\\sin^2\\theta+\\cos^2\\theta=1$ に代入すると\n\\[ \\frac{\\lambda_N^{\\,2}}{(2n_1a)^2}+\\frac{N^2\\lambda_N^{\\,2}}{(2n_1D)^2}=1\\iff\\boldsymbol{\\frac{1}{\\lambda_N^{\\,2}}=\\frac{1}{(2n_1a)^2}+\\frac{N^2}{(2n_1D)^2}}, \\]\n\\[ \\boldsymbol{\\lambda_N=\\frac{2n_1a}{\\sqrt{1+(Na/D)^2}}},\\qquad \\boldsymbol{\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}=\\frac{Na}{D}}. \\]\n高次のモードほど軸に対して大きく傾き，軸方向の波面間隔が長くなるので，同じ格子で反射される波長は短くなる．1本の格子でもモードの数だけ反射波長が現れる．\n\n\\textbf{(3) 全反射の条件}\n境界面への入射角は $\\frac{\\pi}{2}-\\theta$ なので，全反射の条件は $\\sin(\\frac\\pi2-\\theta)=\\cos\\theta>\\frac{n_2}{n_1}$，すなわち\n\\[ \\tan\\theta<\\frac{\\sqrt{n_1^{\\,2}-n_2^{\\,2}}}{n_2}\\iff \\boldsymbol{N<\\frac{D}{a}\\cdot\\frac{\\sqrt{n_1^{\\,2}-n_2^{\\,2}}}{n_2}}. \\]\n（$\\tan\\theta_N=Na/D$ は波長によらないので，導かれるモードの数は $a$ と $D$ の比で決まる．）\n\n\\textbf{(4) 測定値から $a$，$D$ を決める}\n$1/\\lambda_N^{\\,2}$ は $N^2$ の1次式なので，2つの波長（長い方が $N=1$，短い方が $N=2$）から\n\\[ \\frac{1}{(2n_1D)^2}=\\frac13\\Bigl(\\frac1{1470.9^2}-\\frac1{1492.6^2}\\Bigr)=\\frac13(4.6221-4.4887)\\times10^{-7}=4.447\\times10^{-9}\\ \\mathrm{nm^{-2}}, \\]\n$2n_1D=1.500\\times10^4$ nm より $\\boldsymbol{D=5.00\\ \\mu\\mathrm m}$．\n\\[ \\frac{1}{(2n_1a)^2}=4.4887\\times10^{-7}-4.447\\times10^{-9}=4.444\\times10^{-7}\\ \\mathrm{nm^{-2}}, \\]\n$2n_1a=1.500\\times10^3$ nm より $\\boldsymbol{a=500\\ \\mathrm{nm}}$．\\\\\n確認：(3) の右辺は $\\dfrac{5.00\\times10^3}{500}\\times\\dfrac{\\sqrt{2.25-2.1316}}{1.46}=10\\times\\dfrac{0.344}{1.46}=2.36$．よって導かれるのは $N=1,2$ だけで，モード 3 の反射波長 $\\lambda_3=\\dfrac{1500}{\\sqrt{1.09}}=1437$ nm は光源の範囲内にあるのに現れない．観測と一致する．\n\n\\textbf{(5) 伸ばしたときのずれ}\n$\\log\\lambda_N=\\log(2n_1a)-\\frac12\\log\\bigl(1+N^2a^2/D^2\\bigr)$ を $a$ で微分して\n\\[ \\frac{\\Delta\\lambda_N}{\\lambda_N}=\\varepsilon\\Bigl(1-\\frac{N^2a^2/D^2}{1+N^2a^2/D^2}\\Bigr)=\\frac{\\varepsilon}{1+(Na/D)^2}. \\]\n$Na/D=0.1N$ なので，$N=1$：$\\Delta\\lambda_1=\\dfrac{1492.6\\times1.0\\times10^{-3}}{1.01}=\\boldsymbol{1.5}$ nm，$N=2$：$\\Delta\\lambda_2=\\dfrac{1470.9\\times1.0\\times10^{-3}}{1.04}=\\boldsymbol{1.4}$ nm．ともに長波長側へずれる．長い方のずれが大きい（$1.478$ nm と $1.414$ nm）ので，\\textbf{波長の差は約 0.06 nm 増える}．伸びは軸方向の周期だけを変え，横方向の閉じ込め（$D$）は変えないので，傾きの大きい高次モードほど感度が下がる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "導波路のモードは軸方向と横方向の波数の分解で表され，ブラッグ格子は軸方向の波面間隔（$\\lambda/n_1\\cos\\theta$）に対して反射条件をつくるので，モードごとに反射波長が $1/\\lambda_N^2=1/(2n_1a)^2+N^2/(2n_1D)^2$ と分かれる．$1/\\lambda^2$ が $N^2$ の1次式になることから，2本の反射ピークだけで格子の周期とコアの厚さが同時に決まり，全反射の条件（$\\tan\\theta_N=Na/D$）が現れるピークの本数を決める．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "光導波路",
+  "全反射",
+  "ブラッグ反射",
+  "モード",
+  "波面の分解",
+  "ひずみセンサー"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

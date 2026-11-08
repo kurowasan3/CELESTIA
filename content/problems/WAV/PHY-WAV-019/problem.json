@@ -1,0 +1,134 @@
+{
+ "id": "PHY-WAV-019",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "表面張力を含む水面波の分散関係・最小位相速度と流れの中の障害物がつくる波",
+ "course": "物理",
+ "level": 5,
+ "minutes": 35,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "深さが十分にある水面を，振幅 $a$，波数 $k=\\dfrac{2\\pi}{\\lambda}$（$\\lambda$ は波長），角振動数 $\\omega$ の正弦波が $x$ 軸の正の向きに位相速度 $v=\\dfrac{\\omega}{k}$ で進んでいる．水面の各点の水は鉛直面内で半径 $a$，角速度 $\\omega$ の等速円運動をしており，波の山では水の速度は波の進む向きに大きさ $a\\omega$，谷では逆向きに大きさ $a\\omega$ である．水の密度を $\\rho$，重力加速度の大きさを $g$，水の表面張力を $\\sigma$ とし，$a$ は波長に比べて十分小さいとする．\n\n表面張力のため，水面が曲がっている所では，水面のすぐ下の水の圧力は大気圧 $p_0$ と $\\dfrac{\\sigma}{R}$ だけ異なる（$R$ は水面の曲率半径で，水面が上に凸ならば水側の圧力が $p_0$ より高く，下に凸ならば低い）．水面の形が $y=a\\cos kx$ のとき，山と谷での曲率半径はいずれも $R=\\dfrac{1}{ak^2}$ である．また，定常な流れでは，1本の流線に沿って $p+\\dfrac12\\rho u^2+\\rho g y$ が一定に保たれる（ベルヌーイの定理．$p$ は圧力，$u$ は流速，$y$ は高さ）．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "波とともに速さ $v$ で動く座標系では，水面の形は変わらず，水面に沿った水の流れは定常である．この系で水面のすぐ下を通る流線の山と谷にベルヌーイの定理を適用し，$v^2$ を $k$，$g$，$\\sigma$，$\\rho$ で表せ．ただし $a$ の2次以上の項は無視せよ．"
+     },
+     {
+      "id": "2",
+      "tex": "位相速度 $v$ には最小値 $v_{\\min}$ がある．$v_{\\min}$ と，そのときの波長 $\\lambda_{\\rm m}$ を $g$，$\\sigma$，$\\rho$ で表せ．また，$\\rho=1.0\\times10^3\\ {\\rm kg/m^3}$，$\\sigma=7.3\\times10^{-2}\\ {\\rm N/m}$，$g=9.8\\ {\\rm m/s^2}$ として，それぞれ有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "群速度 $v_{\\rm g}=\\dfrac{d\\omega}{dk}$ と位相速度の比 $\\dfrac{v_{\\rm g}}{v}$ を $k$，$g$，$\\sigma$，$\\rho$ で表せ．また，波長 $\\lambda_{\\rm m}$ の波では $v_{\\rm g}=v$ となることを示し，波長が非常に長い極限と非常に短い極限での $\\dfrac{v_{\\rm g}}{v}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "一定の速さ $U=0.30\\ {\\rm m/s}$ で流れる川に細い棒を鉛直に立てると，棒を通る流れの方向の直線上の上流側と下流側に，棒に対して静止した波の模様ができる．これらは，水に対して流れと逆向きに位相速度 $U$ で進む波である．波のエネルギーは水に対して群速度で運ばれ，模様は棒から（棒に対して）エネルギーが運ばれていく側にだけできるものとして，上流側・下流側にできる波の波長をそれぞれ有効数字2桁で求めよ．また，流れの速さが $v_{\\min}$ より小さいとき，この直線上の波の模様はどうなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：表面張力を含む水面波の分散関係・最小位相速度と流れの中の障害物がつくる波",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：表面張力を含む水面波の分散関係・最小位相速度と流れの中の障害物がつくる波",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v^2=\\dfrac{g}{k}+\\dfrac{\\sigma k}{\\rho}$"
+   },
+   {
+    "id": "2",
+    "tex": "$v_{\\min}=\\left(\\dfrac{4g\\sigma}{\\rho}\\right)^{1/4}\\fallingdotseq0.23\\ {\\rm m/s}$，$\\lambda_{\\rm m}=2\\pi\\sqrt{\\dfrac{\\sigma}{\\rho g}}\\fallingdotseq1.7\\times10^{-2}\\ {\\rm m}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac{v_{\\rm g}}{v}=\\dfrac{\\rho g+3\\sigma k^2}{2(\\rho g+\\sigma k^2)}$；長波長の極限 $\\dfrac12$，短波長の極限 $\\dfrac32$"
+   },
+   {
+    "id": "4",
+    "tex": "上流側 $5.6\\times10^{-3}\\ {\\rm m}$，下流側 $5.2\\times10^{-2}\\ {\\rm m}$；$U<v_{\\min}$ では棒に対して静止できる波がなく，模様はできない"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　波とともに動く系では，水は水面に沿って全体として負の向きに流れ，山での流速は $v-a\\omega$，谷での流速は $v+a\\omega$ である．この流れは定常なので，水面のすぐ下の流線にベルヌーイの定理が使える．\n\n山は上に凸なので水面直下の圧力は $p_0+\\dfrac{\\sigma}{R}=p_0+\\sigma ak^2$，谷は下に凸なので $p_0-\\sigma ak^2$ である．山の高さは $a$，谷は $-a$ だから\n\\[ p_0+\\sigma ak^2+\\frac12\\rho(v-a\\omega)^2+\\rho ga=p_0-\\sigma ak^2+\\frac12\\rho(v+a\\omega)^2-\\rho ga \\]\n$a^2$ の項は両辺で打ち消し合い，$2\\rho va\\omega=2\\rho ga+2\\sigma ak^2$，すなわち $v\\omega=g+\\dfrac{\\sigma k^2}{\\rho}$．$\\omega=vk$ を代入して\n\\[ \\boldsymbol{v^2=\\frac{g}{k}+\\frac{\\sigma k}{\\rho}} \\]\n第1項（重力）は長い波で，第2項（表面張力）は短い波で効く．$\\sigma=0$ とすれば深水波の $v=\\sqrt{g/k}$ に戻る．\n\n\\textbf{(2)}　相加平均・相乗平均の関係から\n\\[ v^2=\\frac{g}{k}+\\frac{\\sigma k}{\\rho}\\ge2\\sqrt{\\frac{g\\sigma}{\\rho}} \\]\n等号は $\\dfrac{g}{k}=\\dfrac{\\sigma k}{\\rho}$，すなわち $k_{\\rm m}=\\sqrt{\\dfrac{\\rho g}{\\sigma}}$ のとき．よって\n\\[ v_{\\min}=\\boldsymbol{\\left(\\frac{4g\\sigma}{\\rho}\\right)^{1/4}},\\qquad \\lambda_{\\rm m}=\\frac{2\\pi}{k_{\\rm m}}=\\boldsymbol{2\\pi\\sqrt{\\frac{\\sigma}{\\rho g}}} \\]\n数値を代入すると $v_{\\min}=\\left(\\dfrac{4\\times9.8\\times7.3\\times10^{-2}}{1.0\\times10^3}\\right)^{1/4}\\fallingdotseq\\boldsymbol{0.23\\ {\\rm m/s}}$，$\\lambda_{\\rm m}\\fallingdotseq\\boldsymbol{1.7\\times10^{-2}\\ {\\rm m}}$．\n\n\\textbf{(3)}　$\\omega^2=v^2k^2=gk+\\dfrac{\\sigma k^3}{\\rho}$ の両辺を $k$ で微分すると $2\\omega\\dfrac{d\\omega}{dk}=g+\\dfrac{3\\sigma k^2}{\\rho}$．$\\omega=vk$ で割って\n\\[ \\frac{v_{\\rm g}}{v}=\\frac{g+3\\sigma k^2/\\rho}{2\\left(g+\\sigma k^2/\\rho\\right)}=\\boldsymbol{\\frac{\\rho g+3\\sigma k^2}{2(\\rho g+\\sigma k^2)}} \\]\n$k=k_{\\rm m}$ では $\\sigma k_{\\rm m}^2=\\rho g$ なので $\\dfrac{v_{\\rm g}}{v}=\\dfrac{4\\rho g}{4\\rho g}=1$．これは，$v_{\\rm g}=\\dfrac{d(vk)}{dk}=v+k\\dfrac{dv}{dk}$ で，$v$ が最小の点では $\\dfrac{dv}{dk}=0$ となることの表れでもある．$k\\to0$（長波長）で $\\boldsymbol{\\dfrac12}$，$k\\to\\infty$（短波長）で $\\boldsymbol{\\dfrac32}$．また $k>k_{\\rm m}$ では $v_{\\rm g}>v$，$k<k_{\\rm m}$ では $v_{\\rm g}<v$ である．\n\n\\textbf{(4)}　棒に対して静止する波は，水に対して上流向きに位相速度 $U$ で進む波だから $v(k)=U$：\n\\[ \\frac{g}{k}+\\frac{\\sigma k}{\\rho}=U^2\\iff\\frac{\\sigma}{\\rho}k^2-U^2k+g=0 \\]\n判別式 $U^4-\\dfrac{4g\\sigma}{\\rho}\\ge0$，すなわち $U\\ge v_{\\min}$ のときに限り解があり，$U>v_{\\min}$ なら $k_{\\rm m}$ の両側に2つの解 $k_1<k_{\\rm m}<k_2$ がある．数値を代入すると\n\\[ k=\\frac{U^2\\pm\\sqrt{U^4-4g\\sigma/\\rho}}{2\\sigma/\\rho}:\\quad k_1\\fallingdotseq1.2\\times10^2\\ {\\rm m^{-1}},\\quad k_2\\fallingdotseq1.1\\times10^3\\ {\\rm m^{-1}} \\]\n波長は $\\lambda_1=\\dfrac{2\\pi}{k_1}\\fallingdotseq5.2\\times10^{-2}\\ {\\rm m}$，$\\lambda_2=\\dfrac{2\\pi}{k_2}\\fallingdotseq5.6\\times10^{-3}\\ {\\rm m}$．\n\nどちらに現れるかはエネルギーの運ばれ方で決まる．波のエネルギーは水に対して上流向きに $v_{\\rm g}$ で運ばれ，水自体は下流向きに $U=v$ で流れているので，棒に対しては上流向きに $v_{\\rm g}-v$ で運ばれる．(3) より，短い波（$k_2>k_{\\rm m}$）では $v_{\\rm g}>v$ でエネルギーは上流へ，長い波（$k_1<k_{\\rm m}$）では $v_{\\rm g}<v$ で下流へ運ばれる．よって\n\\[ \\text{上流側：}\\boldsymbol{5.6\\times10^{-3}\\ {\\rm m}}\\ (\\text{表面張力波}),\\qquad\\text{下流側：}\\boldsymbol{5.2\\times10^{-2}\\ {\\rm m}}\\ (\\text{重力波}) \\]\n（数値でも，$k_2$ で $v_{\\rm g}\\fallingdotseq0.42\\ {\\rm m/s}>U$，$k_1$ で $v_{\\rm g}\\fallingdotseq0.18\\ {\\rm m/s}<U$．）\n\n$U<v_{\\min}$ では $v(k)=U$ となる波が存在しないので，\\textbf{棒の上流・下流の直線上には静止した波の模様はできない}．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "波とともに動く系で表面張力による圧力差を含めたベルヌーイの定理を山と谷に使うと，分散関係 $v^2=g/k+\\sigma k/\\rho$ が得られ，位相速度に最小値ができる．最小点で群速度と位相速度が一致し，それより短い表面張力波では群速度が位相速度を上回るので，流れの中の障害物に対して静止する2つの波のうち短い波は上流側，長い波は下流側に現れる（流速が最小位相速度未満なら現れない）．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "分散関係",
+  "群速度",
+  "表面張力",
+  "ベルヌーイの定理",
+  "水面波",
+  "最小位相速度"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

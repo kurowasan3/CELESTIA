@@ -1,0 +1,126 @@
+{
+ "id": "PHY-WAV-002",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "自由端反射でできる定常波と端からの距離による振幅",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，$x$ 軸に沿って $x=0$ から $x=2\\lambda$ まで張ったひもがある．端 W（$x=2\\lambda$）は，なめらかな棒にはめた軽い輪につながれていて自由端となっている．静止していたひもの端 O（$x=0$）を，時刻 $t=0$ から変位 $y=A\\sin\\dfrac{2\\pi t}{T}$ で振動させ続けると，波長 $\\lambda$，周期 $T$ の正弦波が $x$ 軸の正の向きに進み，W で反射した．反射波が O に戻る前の $0\\le t<4T$ の範囲だけを考える．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "反射波が届いた後に振動しなくなる点（節）の位置を，$0<x<2\\lambda$ の範囲ですべて求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "W から距離 $d$（$0<d<\\dfrac{\\lambda}{2}$）の点 P について，反射波が届いた後の P の振幅を求めよ．また，反射波が届いた後の振幅が，届く前の振幅 $A$ より小さくなるための $d$ の範囲を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$d=\\dfrac{\\lambda}{8}$ とする．P が振動を始める時刻 $t_1$，反射波が P に届く時刻 $t_2$，および $t\\ge t_2$ で P の変位が初めて最大になる時刻 $t_3$ とそのときの変位を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：自由端反射でできる定常波と端からの距離による振幅",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：自由端反射でできる定常波と端からの距離による振幅",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$x=\\dfrac{\\lambda}{4},\\ \\dfrac{3\\lambda}{4},\\ \\dfrac{5\\lambda}{4},\\ \\dfrac{7\\lambda}{4}$"
+   },
+   {
+    "id": "2",
+    "tex": "$2A\\left|\\cos\\dfrac{2\\pi d}{\\lambda}\\right|$，$\\dfrac{\\lambda}{6}<d<\\dfrac{\\lambda}{3}$"
+   },
+   {
+    "id": "3",
+    "tex": "$t_1=\\dfrac{15}{8}T$，$t_2=\\dfrac{17}{8}T$，$t_3=\\dfrac94T$，変位 $\\sqrt2A$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 自由端 W は定常波の腹になる．節は腹から $\\dfrac{\\lambda}{4}$ の位置にあり，以後 $\\dfrac{\\lambda}{2}$ おきに並ぶ．$x=2\\lambda-\\dfrac{\\lambda}{4}-k\\cdot\\dfrac{\\lambda}{2}$ で $0<x<2\\lambda$ のものは\n\\[ \\boldsymbol{x=\\frac{7\\lambda}{4},\\ \\frac{5\\lambda}{4},\\ \\frac{3\\lambda}{4},\\ \\frac{\\lambda}{4}} \\]\n（最も遠い $x=\\dfrac{\\lambda}{4}$ にも，反射波は $t=\\dfrac{15}{4}T<4T$ に届く．）\n\n\\textbf{(2)} 波の速さを $v=\\dfrac{\\lambda}{T}$ とする．入射波は O の振動が $\\dfrac xv$ 遅れて届くので $y_1=A\\sin\\dfrac{2\\pi}{T}\\left(t-\\dfrac xv\\right)$．自由端反射では位相は変わらず，反射波は O から W を経て $x$ まで道のり $4\\lambda-x$ を進むので $y_2=A\\sin\\dfrac{2\\pi}{T}\\left(t-\\dfrac{4\\lambda-x}{v}\\right)$．P（$x=2\\lambda-d$）では\n\\[ y_1=A\\sin\\left(\\frac{2\\pi t}{T}+\\frac{2\\pi d}{\\lambda}\\right),\\qquad y_2=A\\sin\\left(\\frac{2\\pi t}{T}-\\frac{2\\pi d}{\\lambda}\\right) \\]\n（$4\\pi$ の整数倍は省いた）．和をとると\n\\[ y=y_1+y_2=2A\\cos\\frac{2\\pi d}{\\lambda}\\,\\sin\\frac{2\\pi t}{T} \\]\nよって振幅は $\\boldsymbol{2A\\left|\\cos\\dfrac{2\\pi d}{\\lambda}\\right|}$．これが $A$ より小さいのは $\\left|\\cos\\dfrac{2\\pi d}{\\lambda}\\right|<\\dfrac12$，すなわち $\\dfrac{\\pi}{3}<\\dfrac{2\\pi d}{\\lambda}<\\dfrac{2\\pi}{3}$ のときで\n\\[ \\boldsymbol{\\frac{\\lambda}{6}<d<\\frac{\\lambda}{3}} \\]\n入射波と反射波の経路差 $2d$ がほぼ半波長のとき，反射波は振動を打ち消す側に働く．\n\n\\textbf{(3)} $t_1=\\dfrac{2\\lambda-d}{v}=\\boldsymbol{\\dfrac{15}{8}T}$，$t_2=\\dfrac{2\\lambda+d}{v}=\\boldsymbol{\\dfrac{17}{8}T}$．$t\\ge t_2$ では (2) より $y=2A\\cos\\dfrac{\\pi}{4}\\sin\\dfrac{2\\pi t}{T}=\\sqrt2A\\sin\\dfrac{2\\pi t}{T}$．変位が最大 $\\sqrt2A$ になるのは $\\dfrac{2\\pi t}{T}=\\dfrac{\\pi}{2}+2\\pi m$，すなわち $t=\\dfrac T4+mT$ のときで，$t\\ge\\dfrac{17}{8}T$ を満たす最初のものは\n\\[ \\boldsymbol{t_3=\\frac94T},\\qquad\\text{変位}\\ \\boldsymbol{\\sqrt2A} \\]\n確認：$t_2$ の直前は入射波だけで $y=A\\sin\\left(\\dfrac{2\\pi t}{T}+\\dfrac{\\pi}{4}\\right)$，$t=\\dfrac{17}{8}T$ で $A$．直後の式でも $\\sqrt2A\\sin\\dfrac{17\\pi}{4}=A$ となり，変位は連続につながる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "自由端反射では端が腹になり，端から距離 $d$ の点の定常波の振幅は $2A|\\cos(2\\pi d/\\lambda)|$ になる．入射波と反射波の経路差 $2d$ による位相差で振幅が決まるため，反射波が届くとかえって振幅が小さくなる点もある．"
+ },
+ "concepts": [
+  "wave-basics",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "自由端反射",
+  "定常波",
+  "腹と節",
+  "経路差",
+  "波の重ね合わせ"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

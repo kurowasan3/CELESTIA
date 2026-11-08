@@ -1,0 +1,144 @@
+{
+ "id": "PHY-OSC-056",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "動ける台の「円弧＋水平区間＋円弧」の溝での往復運動（振幅に依存する周期と，周期の測定から台の質量と区間の長さを決める）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平な床の上に，質量 $M$ の台 P が置かれている．台 P の上面には，図のように，半径 $R$ の2つの円弧面 BC，DE が長さ $\\ell$ の水平な面 CD でなめらかにつながれた溝がある（円弧面 BC，DE の中心をそれぞれ G，G$'$ とし，GC，G$'$D は鉛直である）．溝の上を質量 $m$ の小物体 Q が摩擦なしに運動する．台 P は床から離れず，水平方向（図の左右）にのみ動ける．重力加速度の大きさを $g$ とし，空気抵抗は無視する．\nはじめ台 P を静止させ，Q を円弧面 BC 上の点 Q$_0$（$\\angle\\mathrm{Q_0GC}=\\varphi_0$）で台に対して静かに放すと同時に，台 P も静かに放した．$\\varphi_0$ は十分に小さく，$\\sin\\varphi_0\\fallingdotseq\\varphi_0$，$1-\\cos\\varphi_0\\fallingdotseq\\frac{\\varphi_0^2}{2}$ の近似を用いてよい．Q は B や E を越えることはない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "Q が水平な面 CD 上を動いているときの，台 P に対する Q の速さ $u$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "Q が円弧面 BC 上にあるとき，台 P に対する Q の位置を角 $\\varphi=\\angle\\mathrm{QGC}$ で表す．床から見た系全体の力学的エネルギーを $\\varphi$ と $\\dot\\varphi=\\frac{d\\varphi}{dt}$ で表すことにより，Q の台に対する運動が単振動とみなせることを示し，その角振動数 $\\omega$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "Q が円弧面 DE 上で達する最高点の角 $\\angle\\mathrm{QG'D}$ を求めよ．また，Q が Q$_0$ を出てから初めて Q$_0$ に戻るまでの時間 $T$ を，$m,M,g,R,\\ell,\\varphi_0$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "この運動の間に台 P が床の上を動く範囲の幅（最も左の位置と最も右の位置の差）を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "次に，$m$，$R$，$g$ はわかっているが，$M$ と $\\ell$ がわからない台について，$\\varphi_0=\\varphi_1$ として測った時間 $T$ が $T_1$，$\\varphi_0=2\\varphi_1$ として測った時間 $T$ が $T_2$ であった．$M$ と $\\ell$ を $m,R,g,\\varphi_1,T_1,T_2$ で表せ．また，測定値 $T_1$，$T_2$ が満たしていなければならない不等式を（$T_1>T_2$ 以外に）1つ答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：動ける台の「円弧＋水平区間＋円弧」の溝での往復運動（振幅に依存する周期と，周期の測定から台の質量と区間の長さを決める）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：動ける台の「円弧＋水平区間＋円弧」の溝での往復運動（振幅に依存する周期と，周期の測定から台の質量と区間の長さを決める）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$u=\\varphi_0\\sqrt{gR\\left(1+\\frac{m}{M}\\right)}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega=\\sqrt{\\frac{g}{R}\\left(1+\\frac{m}{M}\\right)}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\varphi_0$，$T=\\sqrt{\\frac{MR}{(M+m)g}}\\left(2\\pi+\\frac{2\\ell}{R\\varphi_0}\\right)$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\frac{m}{M+m}(\\ell+2R\\varphi_0)$"
+   },
+   {
+    "id": "5",
+    "tex": "$M=\\frac{g(2T_2-T_1)^2}{4\\pi^2R-g(2T_2-T_1)^2}\\,m$，$\\ell=\\frac{2\\pi R\\varphi_1(T_1-T_2)}{2T_2-T_1}$，不等式 $2T_2-T_1<2\\pi\\sqrt{\\frac{R}{g}}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　床はなめらかなので，P と Q からなる系には水平方向の外力がはたらかず，水平方向の運動量が保存する（はじめ 0）．また垂直抗力は P と Q の間で対になってはたらき，接触面に垂直なので，両者の仕事の和は 0 であり，系の力学的エネルギーも保存する．この2つで台の速度を消去し，「台に対する Q の運動」だけの問題に直す．\n\n\\textbf{(1)}　水平面 CD 上では Q の床に対する速度を $v$，P の速度を $V$ とすると，運動量保存より $mv+MV=0$，相対速度は $u=v-V$．よって $v=\\frac{M}{M+m}u$，$V=-\\frac{m}{M+m}u$ で，運動エネルギーの和は\n\\[ \\frac12mv^2+\\frac12MV^2=\\frac12\\cdot\\frac{mM}{M+m}u^2 . \\]\nこれが Q の高さの減少分 $mgR(1-\\cos\\varphi_0)\\fallingdotseq\\frac12mgR\\varphi_0^2$ に等しいので\n\\[ u=\\varphi_0\\sqrt{\\frac{(M+m)gR}{M}}=\\boldsymbol{\\varphi_0\\sqrt{gR\\left(1+\\frac{m}{M}\\right)}} . \\]\n\n\\textbf{(2)}　円弧上で，台に対する Q の速度は円弧の接線方向に大きさ $R|\\dot\\varphi|$ で，微小角ではほぼ水平である（鉛直成分は $\\varphi$ の1次の小ささ）．したがって (1) と同じ計算が各瞬間に成り立ち，運動エネルギーの和は $\\frac12\\mu(R\\dot\\varphi)^2$（$\\mu=\\frac{mM}{M+m}$）．位置エネルギーは $mgR(1-\\cos\\varphi)\\fallingdotseq\\frac12mgR\\varphi^2$ なので\n\\[ E=\\frac12\\mu R^2\\dot\\varphi^2+\\frac12mgR\\varphi^2=\\text{一定}. \\]\nこれはばね振り子 $\\frac12m'\\dot x^2+\\frac12k'x^2=$一定 と同じ形（$m'=\\mu R^2$，$k'=mgR$）だから，$\\varphi$ は単振動し，\n\\[ \\omega=\\sqrt{\\frac{mgR}{\\mu R^2}}=\\boldsymbol{\\sqrt{\\frac{g}{R}\\left(1+\\frac{m}{M}\\right)}} . \\]\n台が固定されているとき（$M\\to\\infty$）の $\\sqrt{g/R}$ より大きい．\n\n\\textbf{(3)}　Q が最高点にあるとき台に対して静止しているので，P と Q の速度は等しく，運動量 0 より両方とも静止している．すると運動エネルギーは 0 で，エネルギー保存より Q の高さははじめと同じ．円弧の半径も等しいので最高点の角は $\\boldsymbol{\\varphi_0}$．\n\n時間は次の4区間に分けられる．\n\\begin{itemize}\n  \\item 円弧 BC 上：Q$_0$（振動の端）から C（振動の中心）まで，単振動の $\\frac14$ 周期 $\\frac{\\pi}{2\\omega}$．C での相対速さは $R\\omega\\varphi_0$ で，(1) の $u$ と一致する．\n  \\item 水平面 CD 上：P も Q も外力の水平成分を受けないので等速．時間は $\\frac{\\ell}{u}$．\n  \\item 円弧 DE 上：D から最高点に行って D に戻るまで $\\frac{\\pi}{\\omega}$（半周期）．\n  \\item 帰りの水平面 $\\frac{\\ell}{u}$，円弧 BC 上の C から Q$_0$ まで $\\frac{\\pi}{2\\omega}$．\n\\end{itemize}\n合計して，$u=R\\omega\\varphi_0$ を用いると\n\\[ T=\\frac{2\\pi}{\\omega}+\\frac{2\\ell}{u}=\\frac{1}{\\omega}\\left(2\\pi+\\frac{2\\ell}{R\\varphi_0}\\right)=\\boldsymbol{\\sqrt{\\frac{MR}{(M+m)g}}\\left(2\\pi+\\frac{2\\ell}{R\\varphi_0}\\right)} . \\]\n円弧部分は等時的だが，水平区間の時間は振幅 $\\varphi_0$ に反比例するので，全体の周期は振幅に依存する．\n\n\\textbf{(4)}　系の重心は水平方向に動かない（運動量 0）．台に対する Q の水平位置を $\\xi$，台の位置を $X$ とすると，$MX+m(X+\\xi)=$一定 より $\\Delta X=-\\frac{m}{M+m}\\Delta\\xi$．$\\xi$ の動く範囲は，左端 $R\\sin\\varphi_0$（C の左）から右端 $R\\sin\\varphi_0$（D の右）までで，幅は $\\ell+2R\\varphi_0$．よって台の動く範囲の幅は $\\boldsymbol{\\frac{m}{M+m}(\\ell+2R\\varphi_0)}$．\n\n\\textbf{(5)}　(3) より $T(\\varphi)=\\frac{2\\pi}{\\omega}+\\frac{2\\ell}{R\\omega\\varphi}$ である．\n\\[ T_1=\\frac{2\\pi}{\\omega}+\\frac{2\\ell}{R\\omega\\varphi_1},\\qquad T_2=\\frac{2\\pi}{\\omega}+\\frac{\\ell}{R\\omega\\varphi_1}. \\]\n$2T_2-T_1=\\frac{2\\pi}{\\omega}$ で $\\ell$ の項が消え，$\\omega=\\frac{2\\pi}{2T_2-T_1}$．また $T_1-T_2=\\frac{\\ell}{R\\omega\\varphi_1}$ より\n\\[ \\ell=R\\omega\\varphi_1(T_1-T_2)=\\boldsymbol{\\frac{2\\pi R\\varphi_1(T_1-T_2)}{2T_2-T_1}} . \\]\n$\\omega^2=\\frac{g}{R}\\left(1+\\frac mM\\right)$ より $\\frac mM=\\frac{4\\pi^2R}{g(2T_2-T_1)^2}-1$，したがって\n\\[ M=\\boldsymbol{\\frac{g(2T_2-T_1)^2}{4\\pi^2R-g(2T_2-T_1)^2}\\,m}. \\]\n$M>0$（$m/M>0$）であるためには，$\\omega>\\sqrt{g/R}$，すなわち\n\\[ \\boldsymbol{2T_2-T_1<2\\pi\\sqrt{\\frac Rg}} \\]\nが必要である．「周期から水平区間の寄与を除いた円弧の部分」は，台が動けるぶん固定した台の振り子の周期より必ず短い．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "円弧＋水平区間の溝では，円弧部分は振幅によらない単振動の一部だが，水平区間の通過時間は振幅に反比例するので，往復の周期は振幅に依存する．動ける台では運動量保存で台の速度を消去すると，相対運動の慣性が換算質量 $mM/(M+m)$ になり，角振動数・水平区間の相対速さがともに $\\sqrt{1+m/M}$ 倍になる．振幅を変えた2回の周期の組み合わせ $2T_2-T_1$ で水平区間の寄与が消え，台の質量と区間の長さが分離して求まる．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "kinematics-components",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "運動量保存",
+  "換算質量",
+  "単振動",
+  "動ける台",
+  "振幅依存の周期",
+  "逆問題"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

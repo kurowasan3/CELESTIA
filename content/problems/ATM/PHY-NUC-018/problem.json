@@ -1,0 +1,136 @@
+{
+ "id": "PHY-NUC-018",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "運動量をもつ電子・陽電子対の対消滅：γ線のエネルギー差と向きのずれ（PETの位置のぼけ）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "陽電子断層撮影（PET）では，体内で電子と陽電子が対消滅して生じる2個の $\\gamma$ 線光子を，被験者を囲む円周上に並べた多数の検出器で同時に検出し，2つの検出器を結ぶ直線上で対消滅が起きたと推定する．図のように，検出器は点 O を中心とする半径 $R$ の円周上にすき間なく並んでいるとする．\n\n点 O で，電子と陽電子が対消滅した．対消滅の直前の電子と陽電子の運動量の和を $\\vec P$（大きさ $P$）とする．電子・陽電子の質量を $m$，真空中の光の速さを $c$ とし，$P\\ll mc$ として，$\\frac{P}{mc}$ について1次までの近似で答えよ（対消滅前の電子と陽電子の運動エネルギーの和は $mc^2$ に比べて無視できる）．エネルギー $E$ の光子の運動量の大きさは $E/c$ である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$P=0$ のとき，2つの光子は互いに逆向きに進み，エネルギーはともに $mc^2$ に等しいことを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "光子1が $\\vec P$ と角 $\\alpha\\ (0\\le\\alpha\\le\\pi)$ をなす向きに放出されたとする．光子1，2のエネルギー $E_1,\\ E_2$ と，光子2の進む向きが光子1と正反対の向きからずれる角 $\\delta$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "2つの光子を検知した検出器を結ぶ直線と点 O との距離 $d$ を求めよ．また，$P$ が一定のとき，$d$ が最大になるのはどのような向きに光子が放出されたときか．そのとき $E_1$ と $E_2$ の関係はどうなるか．"
+     },
+     {
+      "id": "4",
+      "tex": "点 O に置いた較正用の線源で $R=0.40\\,$m の装置を用いたところ，ある1回の対消滅について，$E_1-E_2=2.0\\,$keV，$d=0.60\\,$mm であった．$mc^2=511\\,$keV として，$Pc$ の値〔keV〕と $\\cos\\alpha$ の値を求めよ．さらに，陽電子は静止していたとして，対消滅直前の電子の運動エネルギーを eV の単位で求めよ．答えはいずれも有効数字2桁とする．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：運動量をもつ電子・陽電子対の対消滅：γ線のエネルギー差と向きのずれ（PETの位置のぼけ）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：運動量をもつ電子・陽電子対の対消滅：γ線のエネルギー差と向きのずれ（PETの位置のぼけ）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "解説参照"
+   },
+   {
+    "id": "2",
+    "tex": "$E_1=mc^2+\\dfrac12Pc\\cos\\alpha$，$E_2=mc^2-\\dfrac12Pc\\cos\\alpha$，$\\delta=\\dfrac{P\\sin\\alpha}{mc}$"
+   },
+   {
+    "id": "3",
+    "tex": "$d=\\dfrac{RP\\sin\\alpha}{2mc}$，$\\vec P$ に垂直な向き（$\\alpha=\\frac{\\pi}{2}$）に放出されたとき最大で，このとき $E_1=E_2$"
+   },
+   {
+    "id": "4",
+    "tex": "$Pc\\approx2.5\\,$keV，$\\cos\\alpha\\approx0.79$，電子の運動エネルギー $\\approx6.2\\,$eV"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　対消滅の前後で運動量とエネルギーが保存する．光子1の進む向きを基準に，$\\vec P$ を「光子の進む向きに平行な成分 $P\\cos\\alpha$」と「垂直な成分 $P\\sin\\alpha$」に分けると，平行成分は2つの光子の\\textbf{エネルギーの差}に，垂直成分は\\textbf{進む向きのずれ}に現れる．\n\n\\textbf{(1)}　$P=0$ なら，運動量保存より $\\vec p_1+\\vec p_2=\\vec 0$ で，2つの光子は互いに逆向きに進み，運動量の大きさが等しいのでエネルギーも等しい．エネルギー保存 $E_1+E_2=2mc^2$ より $E_1=E_2=mc^2$．\n\n\\textbf{(2)}　光子1の進む向きに $x$ 軸，それに垂直に $y$ 軸をとる．光子1の運動量は $(E_1/c,\\ 0)$ で，運動量保存より光子2の運動量は\n\\[ \\vec p_2=\\Bigl(P\\cos\\alpha-\\frac{E_1}{c},\\ P\\sin\\alpha\\Bigr) \\]\n$E_1\\approx mc^2$ だから $x$ 成分は大きさ約 $mc$ の負の値，$y$ 成分は1次の微小量である．大きさは $|\\vec p_2|=\\sqrt{p_{2x}^2+p_{2y}^2}$ で，$p_{2y}^2$ は2次の微小量なので1次までの近似で $|\\vec p_2|=\\frac{E_1}{c}-P\\cos\\alpha$，すなわち $E_2=E_1-Pc\\cos\\alpha$．エネルギー保存 $E_1+E_2=2mc^2$ と合わせて\n\\[ \\boldsymbol{E_1=mc^2+\\frac12Pc\\cos\\alpha},\\qquad \\boldsymbol{E_2=mc^2-\\frac12Pc\\cos\\alpha} \\]\n光子2の向きの，$-x$ 方向からのずれの角は\n\\[ \\delta\\approx\\tan\\delta=\\frac{P\\sin\\alpha}{|p_{2x}|}\\approx\\boldsymbol{\\frac{P\\sin\\alpha}{mc}} \\]\n\n\\textbf{(3)}　光子1は O から半径方向に進んで検出器 A に，光子2は O から A と正反対の向きから $\\delta$ ずれた向きに進んで検出器 B に達する．A，B は半径 $R$ の円周上にあり，$\\angle$AOB$=\\pi-\\delta$．二等辺三角形 OAB の底辺 AB と頂点 O の距離は\n\\[ d=R\\cos\\frac{\\pi-\\delta}{2}=R\\sin\\frac\\delta2\\approx\\frac{R\\delta}{2}=\\boldsymbol{\\frac{RP\\sin\\alpha}{2mc}} \\]\n$d$ は $\\sin\\alpha=1$，つまり光子が $\\vec P$ に\\textbf{垂直}な向きに放出されたとき最大で，このとき $\\cos\\alpha=0$ より $\\boldsymbol{E_1=E_2}$．位置の誤差が最大の事象ほど，エネルギーには運動量の痕跡が残らない．逆に $\\vec P$ に平行に放出されると $d=0$ で，エネルギーの差 $Pc$ だけが現れる．\n\n\\textbf{(4)}　(2)，(3)より\n\\[ Pc\\cos\\alpha=E_1-E_2=2.0\\,\\text{keV},\\qquad Pc\\sin\\alpha=\\frac{2mc^2d}{R}=\\frac{2\\times511\\times0.60\\times10^{-3}}{0.40}\\,\\text{keV}\\approx1.53\\,\\text{keV} \\]\nよって\n\\[ Pc=\\sqrt{2.0^2+1.53^2}\\,\\text{keV}\\approx\\boldsymbol{2.5\\,\\text{keV}},\\qquad \\cos\\alpha=\\frac{2.0}{2.52}\\approx\\boldsymbol{0.79} \\]\n陽電子が静止していれば電子の運動量の大きさが $P$ で，$P\\ll mc$ だから運動エネルギーは\n\\[ K=\\frac{P^2}{2m}=\\frac{(Pc)^2}{2mc^2}=\\frac{(2.52\\times10^3\\,\\text{eV})^2}{2\\times511\\times10^3\\,\\text{eV}}\\approx\\boldsymbol{6.2\\,\\text{eV}} \\]\nこれは原子内の電子のエネルギー（数 eV〜十数 eV）程度であり，PET では原子に束縛された電子の運動が，対消滅位置の推定に 1 mm 程度のぼけを生むことがわかる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "対消滅する電子・陽電子対の運動量を光子の進む向きに平行・垂直な成分に分けると，平行成分は2光子のエネルギー差 $Pc\\cos\\alpha$ に，垂直成分は正反対からの向きのずれ $P\\sin\\alpha/(mc)$ に1次で現れる．位置のぼけが最大の事象ではエネルギー差が0になり，エネルギー差とぼけの両方を測れば対の運動量を逆算できる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "momentum-conservation",
+  "photon"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "対消滅",
+  "運動量保存",
+  "光子の運動量",
+  "PET",
+  "近似計算",
+  "逆問題"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

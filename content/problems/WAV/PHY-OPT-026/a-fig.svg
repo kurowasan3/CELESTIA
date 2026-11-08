@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 275">
+<defs><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<path d="M120,200 L300,20 L480,200 Z" stroke="#222" stroke-width="1.6" fill="none"/>
+<path d="M60,200 L540,200 L540,228 L60,228 Z" stroke="#222" stroke-width="1.2" fill="none"/>
+<path d="M70,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M86,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M102,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M118,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M134,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M150,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M166,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M182,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M198,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M214,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M230,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M246,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M262,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M278,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M294,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M310,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M326,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M342,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M358,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M374,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M390,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M406,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M422,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M438,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M454,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M470,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M486,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M502,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M518,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<path d="M534,212 q4,-4 8,0 q4,4 8,0" stroke="#888" stroke-width="0.8" fill="none"/>
+<line x1="50.0" y1="228.0" x2="550.0" y2="228.0" stroke="#222" stroke-width="1.6"/>
+<line x1="56.0" y1="228.0" x2="50.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="68.0" y1="228.0" x2="62.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="80.0" y1="228.0" x2="74.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="92.0" y1="228.0" x2="86.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="104.0" y1="228.0" x2="98.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="116.0" y1="228.0" x2="110.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="128.0" y1="228.0" x2="122.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="140.0" y1="228.0" x2="134.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="152.0" y1="228.0" x2="146.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="164.0" y1="228.0" x2="158.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="176.0" y1="228.0" x2="170.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="188.0" y1="228.0" x2="182.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="200.0" y1="228.0" x2="194.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="212.0" y1="228.0" x2="206.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="224.0" y1="228.0" x2="218.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="236.0" y1="228.0" x2="230.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="248.0" y1="228.0" x2="242.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="260.0" y1="228.0" x2="254.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="272.0" y1="228.0" x2="266.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="284.0" y1="228.0" x2="278.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="296.0" y1="228.0" x2="290.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="308.0" y1="228.0" x2="302.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="320.0" y1="228.0" x2="314.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="332.0" y1="228.0" x2="326.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="344.0" y1="228.0" x2="338.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="356.0" y1="228.0" x2="350.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="368.0" y1="228.0" x2="362.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="380.0" y1="228.0" x2="374.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="392.0" y1="228.0" x2="386.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="404.0" y1="228.0" x2="398.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="416.0" y1="228.0" x2="410.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="428.0" y1="228.0" x2="422.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="440.0" y1="228.0" x2="434.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="452.0" y1="228.0" x2="446.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="464.0" y1="228.0" x2="458.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="476.0" y1="228.0" x2="470.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="488.0" y1="228.0" x2="482.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="500.0" y1="228.0" x2="494.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="512.0" y1="228.0" x2="506.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="524.0" y1="228.0" x2="518.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="536.0" y1="228.0" x2="530.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<line x1="548.0" y1="228.0" x2="542.0" y2="236.0" stroke="#222" stroke-width="1"/>
+<text x="555.0" y="219.0" font-family="Noto Sans CJK JP, sans-serif" font-size="1" fill="#222" text-anchor="middle"></text>
+<text x="300.0" y="14.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="middle">A</text>
+<text x="108.0" y="196.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="middle">B</text>
+<text x="492.0" y="196.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="middle">C</text>
+<text x="300.0" y="260.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222" text-anchor="middle">液体（屈折率 <tspan font-family="Times New Roman, serif" font-style="italic">n</tspan><tspan baseline-shift="sub" font-size="10">L</tspan>）</text>
+<path d="M279,41 A30,30 0 0 0 321,41" stroke="#222" stroke-width="1" fill="none"/>
+<text x="300.0" y="68.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="middle">α</text>
+<line x1="30.0" y1="178.4" x2="141.6" y2="178.4" stroke="#c0392b" stroke-width="1.6"/>
+<path d="M141.6,178.4 L212.8,200.0 L417.8,137.8" stroke="#c0392b" stroke-width="1.6" fill="none"/>
+<line x1="417.8" y1="137.8" x2="570.0" y2="137.8" stroke="#c0392b" stroke-width="1.6" marker-end="url(#a-ar)"/>
+<line x1="30.0" y1="146.0" x2="174.0" y2="146.0" stroke="#1f5fbf" stroke-width="1.6"/>
+<path d="M174.0,146.0 L352.0,200.0 L450.2,170.2" stroke="#1f5fbf" stroke-width="1.6" fill="none"/>
+<line x1="450.2" y1="170.2" x2="570.0" y2="170.2" stroke="#1f5fbf" stroke-width="1.6" marker-end="url(#a-ab)"/>
+<line x1="212.8" y1="130.0" x2="212.8" y2="205.0" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="200.8" y="160.0" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="middle">θ₂</text>
+<text x="40.0" y="95.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">上下が入れかわる</text>
+</svg>

@@ -1,0 +1,114 @@
+{
+ "id": "PHY-RIG-017",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "一方の脚の先でつるしたコンパスのちょうつがいを最も高くする開き角（脚の質量が異なる場合）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $l$ の一様な細い棒2本（脚）の端どうしを，ちょうつがい O でつないだコンパスがある．針の脚 OT の質量は $m$，鉛筆の脚 OS の質量は $M$ である．開き角 $\\varphi=\\angle\\mathrm{TOS}$（$0<\\varphi<\\pi$）は自由に設定でき，つるした後は変わらないとする．図のように，針の先 T に軽い糸をつけてコンパスを静かにつるす．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "つり合いの状態で，T から O に向かう脚 TO が鉛直下向きとなす角を $\\alpha$（$0<\\alpha<\\dfrac{\\pi}{2}$）とする．$\\tan\\alpha$ を $m,M,\\varphi$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "O の位置を最も高くする（T から O までの深さ $l\\cos\\alpha$ を最小にする）開き角 $\\varphi$ について，$\\cos\\varphi$ を求めよ．また，そのとき脚 OS はどの向きになっているか．"
+     },
+     {
+      "id": "3",
+      "tex": "$M=2m$ とする．針の先 T でつるす場合と，鉛筆の先 S でつるす場合のそれぞれについて，開き角を最適にしたときの，糸をつけた点から O までの深さを $l$ で表せ．どちらでつるす方が O を高くできるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：一方の脚の先でつるしたコンパスのちょうつがいを最も高くする開き角（脚の質量が異なる場合）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\tan\\alpha=\\dfrac{M\\sin\\varphi}{m+2M-M\\cos\\varphi}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\cos\\varphi=\\dfrac{M}{m+2M}$，脚 OS は水平"
+   },
+   {
+    "id": "3",
+    "tex": "T でつるす：$\\dfrac{\\sqrt{21}}{5}l\\ (\\approx0.92l)$，S でつるす：$\\dfrac{\\sqrt{15}}{4}l\\ (\\approx0.97l)$．針の先 T（軽い脚の先）でつるす方が高くできる"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{つり合いの条件}\nコンパスにはたらく力は糸の張力（T で鉛直上向き）と2本の脚の重力だけである．T のまわりの力のモーメントのつり合いから，全体の重心は T の真下にある．\n\n\\textbf{(1) 脚の傾き}\nT を原点，水平右向きを正とし，O が T の右下にあるとする．O の水平座標は $l\\sin\\alpha$．O から T に向かう向きは鉛直上向きから角 $\\alpha$ だけ左に傾いており，それをさらに $\\varphi$ だけ回した向きが O から S に向かう向きなので，脚 OS は鉛直上向きから角 $\\alpha+\\varphi$ だけ左に傾く．よって S の水平座標は $l\\sin\\alpha-l\\sin(\\alpha+\\varphi)$．各脚の重心は中点にあるので，T のまわりのモーメントのつり合いは\n\\[ mg\\cdot\\frac l2\\sin\\alpha+Mg\\left\\{l\\sin\\alpha-\\frac l2\\sin(\\alpha+\\varphi)\\right\\}=0 \\]\n\\[ \\Longrightarrow\\quad (m+2M)\\sin\\alpha=M\\sin(\\alpha+\\varphi). \\tag{*} \\]\n右辺を展開して $\\cos\\alpha$ で割ると $(m+2M)\\tan\\alpha=M(\\tan\\alpha\\cos\\varphi+\\sin\\varphi)$，すなわち\n\\[ \\tan\\alpha=\\boldsymbol{\\frac{M\\sin\\varphi}{m+2M-M\\cos\\varphi}}. \\]\n\n\\textbf{(2) O を最も高くする開き角}\n深さ $l\\cos\\alpha$ を最小にするには $\\alpha$ を最大にすればよい．(*) で $\\sin(\\alpha+\\varphi)\\le1$ だから\n\\[ \\sin\\alpha\\le\\frac{M}{m+2M}, \\]\n等号は $\\alpha+\\varphi=\\dfrac\\pi2$ のときに成り立つ．このとき $\\cos\\varphi=\\sin\\alpha$ だから\n\\[ \\cos\\varphi=\\boldsymbol{\\frac{M}{m+2M}}. \\]\n$\\alpha+\\varphi=\\dfrac\\pi2$ は，脚 OS が鉛直上向きから $90^\\circ$ 傾いている，すなわち\\textbf{脚 OS が水平}であることを意味する．脚 OS の重力が O を横へ押し出すモーメントの腕が最大になる配置である．\n\n（別解：$f(\\varphi)=\\dfrac{\\sin\\varphi}{K-\\cos\\varphi}$，$K=\\dfrac{m+2M}{M}$ とおくと，$f'(\\varphi)$ の分子は $\\cos\\varphi(K-\\cos\\varphi)-\\sin^2\\varphi=K\\cos\\varphi-1$ なので，$\\cos\\varphi=1/K$ で $\\tan\\alpha$ が最大になり，同じ結果を得る．）\n\n\\textbf{(3) $M=2m$ の場合}\nT でつるすとき：$\\sin\\alpha=\\dfrac{2m}{m+4m}=\\dfrac25$ より，深さは\n\\[ l\\cos\\alpha=l\\sqrt{1-\\frac{4}{25}}=\\boldsymbol{\\frac{\\sqrt{21}}{5}l}\\approx0.92l. \\]\nS でつるすとき：つるす脚と他方の脚の役割が入れかわり，(*) の $m$ と $M$ を入れかえればよい．$\\sin\\alpha=\\dfrac{m}{2m+2m}=\\dfrac14$ より\n\\[ l\\cos\\alpha=l\\sqrt{1-\\frac1{16}}=\\boldsymbol{\\frac{\\sqrt{15}}{4}l}\\approx0.97l. \\]\nよって\\textbf{針の先 T でつるす方が O を高くできる}．つるさない側の脚が重いほど，その脚が O を横へ押し出す効果が大きいからである．なお，いずれの場合も重心は T（または S）より下にあり，安定なつり合いである．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "糸でつるした物体の重心は支点の真下に来る．T のまわりのモーメントのつり合い $(m+2M)\\sin\\alpha=M\\sin(\\alpha+\\varphi)\\le M$ から，ちょうつがいを横に押し出す効果は他方の脚が水平のとき最大となり，最適な開き角は $\\cos\\varphi=M/(m+2M)$ で決まる．つるさない側の脚が重いほどちょうつがいを高くできる．"
+ },
+ "concepts": [
+  "torque",
+  "momentum-conservation",
+  "equilibrium"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "重心",
+  "力のモーメント",
+  "つり合い",
+  "最大最小",
+  "剛体"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

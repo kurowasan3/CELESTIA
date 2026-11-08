@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 245"><defs><marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="a-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<text x="15" y="75" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">直接音</text>
+<text x="15" y="135" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">反射音</text>
+<rect x="110" y="60" width="286.0" height="20" stroke="#1f5fbf" stroke-width="1.6" fill="none"/>
+<rect x="330.0" y="120" width="154.0" height="20" stroke="#c0392b" stroke-width="1.6" fill="none"/>
+<rect x="330.0" y="60" width="66.0" height="80" stroke="#888" stroke-width="1" fill="none"/>
+<line x1="330.0" y1="82.0" x2="334.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="336.0" y1="82.0" x2="340.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="342.0" y1="82.0" x2="346.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="348.0" y1="82.0" x2="352.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="354.0" y1="82.0" x2="358.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="360.0" y1="82.0" x2="364.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="366.0" y1="82.0" x2="370.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="372.0" y1="82.0" x2="376.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="378.0" y1="82.0" x2="382.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="384.0" y1="82.0" x2="388.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<line x1="390.0" y1="82.0" x2="394.0" y2="86.0" stroke="#888" stroke-width="0.8"/>
+<text x="363.0" y="106" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">うなり</text>
+<line x1="100.0" y1="190.0" x2="524.0" y2="190.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<text x="530.0" y="195" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">t</text>
+<line x1="110.0" y1="186.0" x2="110.0" y2="194.0" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="60.0" x2="110.0" y2="186.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="110" y="212" font-size="13" fill="#222" text-anchor="middle" xml:space="preserve"><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">0</tspan></text>
+<line x1="330.0" y1="186.0" x2="330.0" y2="194.0" stroke="#222" stroke-width="1"/>
+<line x1="330.0" y1="60.0" x2="330.0" y2="186.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="330.0" y="212" font-size="13" fill="#222" text-anchor="middle" xml:space="preserve"><tspan font-family="Times New Roman, serif" font-style="italic">2D</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">/</tspan><tspan font-family="Times New Roman, serif" font-style="italic">V</tspan></text>
+<line x1="396.0" y1="186.0" x2="396.0" y2="194.0" stroke="#222" stroke-width="1"/>
+<line x1="396.0" y1="60.0" x2="396.0" y2="186.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="396.0" y="212" font-size="13" fill="#222" text-anchor="middle" xml:space="preserve"><tspan font-family="Times New Roman, serif" font-style="italic">T</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">(</tspan><tspan font-family="Times New Roman, serif" font-style="italic">V</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">+</tspan><tspan font-family="Times New Roman, serif" font-style="italic">v</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">)/</tspan><tspan font-family="Times New Roman, serif" font-style="italic">V</tspan></text>
+<line x1="484.0" y1="186.0" x2="484.0" y2="194.0" stroke="#222" stroke-width="1"/>
+<line x1="484.0" y1="140.0" x2="484.0" y2="186.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="494.0" y="234" font-size="13" fill="#222" text-anchor="middle" xml:space="preserve"><tspan font-family="Times New Roman, serif" font-style="italic">T</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">+(2</tspan><tspan font-family="Times New Roman, serif" font-style="italic">D</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">−</tspan><tspan font-family="Times New Roman, serif" font-style="italic">vT</tspan><tspan font-family="Noto Sans CJK JP, sans-serif" font-style="normal">)/</tspan><tspan font-family="Times New Roman, serif" font-style="italic">V</tspan></text>
+</svg>

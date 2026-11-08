@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker></defs>
+<line x1="60.0" y1="190.0" x2="420.0" y2="190.0" stroke="#222" stroke-width="1" marker-end="url(#q-ak)"/>
+<line x1="230.0" y1="340.0" x2="230.0" y2="30.0" stroke="#222" stroke-width="1" marker-end="url(#q-ak)"/>
+<text x="422.0" y="208.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="middle" fill="#222">x</text>
+<text x="242.0" y="40.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="middle" fill="#222">y</text>
+<text x="220.0" y="208.0" font-family="Noto Sans CJK JP, sans-serif" font-size="14" text-anchor="middle" fill="#222">O</text>
+<polygon points="200.0,145.0 260.0,145.0 260.0,155.0 200.0,155.0" stroke="#222" stroke-width="1.6" fill="#bbb"/>
+<line x1="185.0" y1="150.0" x2="185.0" y2="128.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<polygon points="200.0,225.0 260.0,225.0 260.0,235.0 200.0,235.0" stroke="#222" stroke-width="1.6" fill="#bbb"/>
+<line x1="185.0" y1="230.0" x2="185.0" y2="252.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="178.0" y="118.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="end" fill="#1f5fbf">腕の振動</text>
+<circle cx="230.0" cy="110.0" r="7" stroke="#222" stroke-width="1.6" fill="#222"/>
+<text x="212.0" y="104.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" text-anchor="middle" fill="#222">P</text>
+<circle cx="230.0" cy="270.0" r="7" stroke="#222" stroke-width="1.6" fill="#222"/>
+<text x="212.0" y="288.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" text-anchor="middle" fill="#222">Q</text>
+<circle cx="310.0" cy="190.0" r="7" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<text x="314.0" y="176.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" text-anchor="middle" fill="#222">R</text>
+<circle cx="150.0" cy="190.0" r="7" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<text x="144.0" y="176.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" text-anchor="middle" fill="#222">S</text>
+<line x1="230.0" y1="295.0" x2="310.0" y2="295.0" stroke="#888" stroke-width="1"/>
+<line x1="310.0" y1="198.0" x2="310.0" y2="300.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="270.0" y="312.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="middle" fill="#222">a</text>
+<line x1="260.0" y1="110.0" x2="260.0" y2="190.0" stroke="#888" stroke-width="1"/>
+<line x1="238.0" y1="110.0" x2="264.0" y2="110.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="270.0" y="142.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">a</text>
+<line x1="230.0" y1="190.0" x2="396.4" y2="135.9" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#q-ar)"/>
+<path d="M280,190 A50,50 0 0,0 277.6,174.5" stroke="#c0392b" stroke-width="1.2" fill="none"/>
+<text x="286.0" y="186.0" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#c0392b">φ</text>
+<text x="401.4" y="125.9" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#c0392b">遠くの観測者へ</text>
+<circle cx="420.0" cy="300.0" r="6" stroke="#222" stroke-width="1.6" fill="#222"/>
+<text x="432.0" y="305.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">P，Q：同位相</text>
+<circle cx="420.0" cy="325.0" r="6" stroke="#222" stroke-width="1.6" fill="#fff"/>
+<text x="432.0" y="330.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">R，S：P，Q と逆位相</text>
+<text x="90.0" y="40.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="middle" fill="#222">（上から見た図）</text>
+</svg>

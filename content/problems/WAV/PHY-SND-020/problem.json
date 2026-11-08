@@ -1,0 +1,143 @@
+{
+ "id": "PHY-SND-020",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "管の中でたたかれた自由ピストンが両側に音波を出して止まる運動（速さに比例する音波の抵抗力）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，断面積 $S$ の細長い水平な管が左右に十分長く伸びていて，中は圧力 $p_0$，密度 $\\rho_0$ の空気で満たされている．管の中ほどに質量 $M$ の薄いピストンが，摩擦なく，すきまなくはまっている．空気の圧縮・膨張は速く，空気の各部分は断熱的に変化するので，空気の圧力 $p$ と密度 $\\rho$ の間には $p\\rho^{-\\gamma}=$一定（$\\gamma$ は比熱比）が成り立つ．圧力・密度の変化は $p_0$，$\\rho_0$ に比べて十分小さく，$|\\varepsilon|\\ll1$ のとき $(1+\\varepsilon)^{\\gamma}\\fallingdotseq1+\\gamma\\varepsilon$ と近似してよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "まず，静止していたピストンを時刻 $0$ から一定の速さ $u$ で右へ押し続ける場合を考える．ピストンの右側には速さ $v$ で右へ進む波面 F ができ，ピストンと F の間の空気は一様に密度 $\\rho_0+\\Delta\\rho$，圧力 $p_0+\\Delta p$ となってピストンと同じ速さ $u$ で動き，F より右の空気は乱されていない．$u\\ll v$ とする．時刻 $t$ までの空気の質量の保存と運動量の変化を考えて，$\\dfrac{\\Delta\\rho}{\\rho_0}$（$\\dfrac uv$ の 1 次まで）と $\\Delta p$ を $\\rho_0$，$u$，$v$ で表せ．さらに $v$ を $p_0$，$\\rho_0$，$\\gamma$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1)のとき，ピストンの左側の空気の圧力は $p_0$ からいくら変化するか．(1)と同様に考えて答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "次に，静止しているピストンを時刻 $0$ にたたいて，右向きの速さ $u_0$（$u_0\\ll v$）を与えた．その後ピストンには空気以外から水平方向の力ははたらかない．ピストンの速さが変わっていく場合でも，ピストンの両面での圧力の変化は，(1)(2)の結果にその瞬間の速さを代入したものに等しい．ピストンの速さ $u$ を時刻 $t$ の関数として求めよ．また，ピストンが最終的に移動する距離 $D$ を，$M$，$u_0$，$S$，$p_0$，$\\rho_0$，$\\gamma$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3)のとき，時刻 $t$ におけるピストンの右側の空気の圧力の変化 $\\Delta p$ を，ピストンのはじめの位置から右へ測った距離 $x$（$0<x<vt$）の関数として求めよ．ピストンの移動距離は $vt$ に比べて無視してよい．また，$\\Delta p$ が最も大きいのはどこか，その値とともに答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(3)で十分に時間がたった後，ピストンの右側を進む音波の中で動いている空気の運動エネルギーの総和 $K$ を求めよ．また，ピストンが右側の空気に，圧力の増加分 $\\Delta p$ を通してした仕事の総和 $W$ を求め，$W$ と $K$ の差が何のエネルギーにあたるか答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：管の中でたたかれた自由ピストンが両側に音波を出して止まる運動（速さに比例する音波の抵抗力）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：管の中でたたかれた自由ピストンが両側に音波を出して止まる運動（速さに比例する音波の抵抗力）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{\\Delta\\rho}{\\rho_0}=\\dfrac uv$，$\\Delta p=\\rho_0vu$，$v=\\sqrt{\\dfrac{\\gamma p_0}{\\rho_0}}$"
+   },
+   {
+    "id": "2",
+    "tex": "$-\\rho_0vu$（$\\rho_0vu$ だけ下がる）"
+   },
+   {
+    "id": "3",
+    "tex": "$u=u_0e^{-t/\\tau}$，$\\tau=\\dfrac{M}{2S\\sqrt{\\gamma p_0\\rho_0}}$，$D=\\dfrac{Mu_0}{2S\\sqrt{\\gamma p_0\\rho_0}}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta p=\\rho_0vu_0\\exp\\left\\{-\\dfrac{1}{\\tau}\\left(t-\\dfrac xv\\right)\\right\\}$；波面 F の直後（$x=vt$）で最大値 $\\rho_0vu_0=u_0\\sqrt{\\gamma p_0\\rho_0}$"
+   },
+   {
+    "id": "5",
+    "tex": "$K=\\dfrac18Mu_0^2$，$W=\\dfrac14Mu_0^2$，$W-K=\\dfrac18Mu_0^2$ は空気が圧縮されたことによる（弾性）エネルギーで，$K$ に等しい"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 圧縮波の密度・圧力と音速}\n\n時刻 $t$ では，F は $x=vt$，ピストンは $x=ut$ にある（ピストンのはじめの位置を原点とする）．はじめ $0<x<vt$ にあった質量 $\\rho_0Svt$ の空気が，いまは長さ $(v-u)t$ の部分に詰まっているので\n\\[ \\rho_0Svt=(\\rho_0+\\Delta\\rho)S(v-u)t\\quad\\therefore\\quad\\frac{\\Delta\\rho}{\\rho_0}=\\frac{u}{v-u}\\fallingdotseq\\boldsymbol{\\frac uv} \\]\nこの空気（質量 $\\rho_0Svt$）は静止状態から速さ $u$ になったので，運動量の変化は $\\rho_0Svtu$．この空気が受ける力は，左からピストンの $(p_0+\\Delta p)S$，右から乱されていない空気の $p_0S$ で，正味 $\\Delta p\\,S$ である．運動量の変化＝力積より\n\\[ \\rho_0Svtu=\\Delta p\\,S\\,t\\quad\\therefore\\quad\\Delta p=\\boldsymbol{\\rho_0vu} \\]\n一方，断熱の関係 $p\\rho^{-\\gamma}=$一定から $\\dfrac{p_0+\\Delta p}{p_0}=\\left(1+\\dfrac{\\Delta\\rho}{\\rho_0}\\right)^{\\gamma}\\fallingdotseq1+\\gamma\\dfrac{\\Delta\\rho}{\\rho_0}$，すなわち $\\Delta p=\\gamma p_0\\dfrac{u}{v}$．これと $\\Delta p=\\rho_0vu$ を等しいとおくと\n\\[ \\rho_0v^2=\\gamma p_0\\quad\\therefore\\quad v=\\boldsymbol{\\sqrt{\\frac{\\gamma p_0}{\\rho_0}}} \\]\n$v$ は $u$ によらない音速であり，波面 F は音波の先頭である．\n\n\\textbf{(2) 左側の膨張波}\n\n左側では，ピストンが空気から遠ざかるので，(1)の $u$ を $-u$ にした状況（左へ進む波面の後ろで空気が右へ速さ $u$ で動く）になる．左側の空気について同様に運動量の変化を考えると，今度は空気を右へ加速するのは左の乱されていない空気の圧力 $p_0$ と，ピストン側の低い圧力との差で，圧力の変化は $\\boldsymbol{-\\rho_0vu}$（$\\rho_0vu$ だけ下がる）．\n\n\\textbf{(3) ピストンの運動}\n\nピストンには右側から $(p_0+\\rho_0vu)S$ が左向きに，左側から $(p_0-\\rho_0vu)S$ が右向きにはたらく．正味の力は左向きに $2\\rho_0vSu$ で，速さに比例する抵抗力になる．運動方程式は\n\\[ M\\frac{du}{dt}=-2\\rho_0vSu \\]\nこれは速さに比例する抵抗を受ける運動（$RL$ 回路の電流の減衰と同じ形）で，\n\\[ u=\\boldsymbol{u_0e^{-t/\\tau}},\\qquad \\tau=\\frac{M}{2\\rho_0vS}=\\boldsymbol{\\frac{M}{2S\\sqrt{\\gamma p_0\\rho_0}}} \\]\n（$\\rho_0v=\\sqrt{\\gamma p_0\\rho_0}$）．移動距離は\n\\[ D=\\int_0^\\infty u\\,dt=u_0\\tau=\\boldsymbol{\\frac{Mu_0}{2S\\sqrt{\\gamma p_0\\rho_0}}} \\]\n摩擦がないのにピストンが止まるのは，ピストンの運動エネルギーが音波として両側へ運び去られるからである．なお，速さが変わっても圧力が瞬間の速さで決まるのは，速さの小さな変化ごとに(1)と同じ小さな段差の波が生じ，それらが重なり合って音速で遠ざかり，戻ってこないからである．\n\n\\textbf{(4) 圧力の分布}\n\n時刻 $t$ に位置 $x$ にある空気の状態は，時刻 $t-\\dfrac xv$ にピストンから出た波が運んできたものである．その時刻のピストンの速さは $u_0e^{-(t-x/v)/\\tau}$ なので\n\\[ \\Delta p=\\boldsymbol{\\rho_0vu_0\\exp\\left\\{-\\frac1\\tau\\left(t-\\frac xv\\right)\\right\\}}\\quad(0<x<vt) \\]\n$\\Delta p$ は $x$ とともに増加し，波面 F の直後（$x=vt$）で最大値 $\\boldsymbol{\\rho_0vu_0=u_0\\sqrt{\\gamma p_0\\rho_0}}$ をとる．F は最初にたたいた瞬間の情報を減衰せずに運び，ピストンの近くほど圧力の変化は小さい（解答図）．$x>vt$ では $\\Delta p=0$ である．\n\n\\textbf{(5) 音波のエネルギー}\n\n(1)と同様，音波の中の空気の速さは，その部分を出したときのピストンの速さに等しく，$u(x)=u_0e^{-s/\\tau}$（$s=t-x/v$）．$dx=v\\,ds$ なので，十分時間がたった後\n\\[ K=\\int\\frac12\\rho_0Su(x)^2\\,dx=\\frac12\\rho_0Svu_0^2\\int_0^\\infty e^{-2s/\\tau}ds=\\frac14\\rho_0Svu_0^2\\tau=\\boldsymbol{\\frac18Mu_0^2} \\]\n圧力の増加分を通してした仕事は\n\\[ W=\\int_0^\\infty\\Delta p\\,S\\,u\\,dt=\\int_0^\\infty\\rho_0vSu_0^2e^{-2t/\\tau}dt=\\frac12\\rho_0vSu_0^2\\tau=\\boldsymbol{\\frac14Mu_0^2} \\]\n左側にも同じだけの仕事をするので，合計 $\\frac12Mu_0^2$ はピストンが失った運動エネルギーに等しい（$p_0$ の部分の仕事は左右で打ち消し合う）．$W-K=\\boldsymbol{\\frac18Mu_0^2}$ は，空気が圧縮されたことで蓄えられたエネルギー（弾性エネルギー）で，音波では運動エネルギーと等しく半分ずつに分かれている．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "音波を出しながら動く物体の面では，運動量の保存から圧力の変化が $\\rho_0vu$（音速×密度×面の速さ）となり，物体は速さに比例する抵抗力を受ける．両側に音波を出すピストンは摩擦がなくても指数関数的に減速し，その運動エネルギーは圧力分布が指数関数形の音波として運び去られる（運動エネルギーと弾性エネルギーが半分ずつ）．"
+ },
+ "concepts": [
+  "string-resonance",
+  "momentum-conservation",
+  "static-friction"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "音速の導出",
+  "運動量と力積",
+  "音響抵抗",
+  "指数関数的減衰",
+  "音波のエネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

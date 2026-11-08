@@ -1,0 +1,110 @@
+{
+ "id": "PHY-RIG-018",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "1点から複数の糸でつるした棒・板の張力（張力が糸の長さに比例する理由）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "図1のように，長さ $L$，重さ $W$ の一様な棒 AB の両端に長さ $h_1$，$h_2$ の軽い糸をつけ，糸の他端を共通の点 P に結んでつるす（$h_1+h_2>L$，$|h_1-h_2|<L$）．つり合いの状態で，棒の重心 G は P の真下にあることを示し，糸 PA，PB の張力 $T_1,T_2$ が糸の長さに比例すること（$T_1:T_2=h_1:h_2$）を示せ．さらに $T_1,T_2$ を $W,h_1,h_2,L$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "棒が一様でなく，重心 G が AB を $1:2$ に内分する（A に近い）場合，$T_1:T_2$ を $h_1,h_2$ で表せ．$L=0.60\\,\\mathrm{m}$，$h_1=0.50\\,\\mathrm{m}$，$h_2=0.40\\,\\mathrm{m}$ のとき，$T_1,T_2$ はそれぞれ $W$ の何倍か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "図2のように，1辺 $a$ の一様な正三角形の板 ABC（重さ $W$）の頂点に長さ $h_1,h_2,h_3$ の軽い糸をつけ，共通の点 P からつるす．各糸の張力を $W,h_1,h_2,h_3,a$ で表せ．$a=0.40\\,\\mathrm{m}$，$h_1=0.50\\,\\mathrm{m}$，$h_2=0.60\\,\\mathrm{m}$，$h_3=0.70\\,\\mathrm{m}$ のとき，それぞれ $W$ の何倍か有効数字2桁で答えよ．必要なら，三角形 ABC の重心 G と任意の点 P について $\\mathrm{PA}^2+\\mathrm{PB}^2+\\mathrm{PC}^2=3\\mathrm{PG}^2+\\mathrm{GA}^2+\\mathrm{GB}^2+\\mathrm{GC}^2$ が成り立つことを用いてよい．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：1点から複数の糸でつるした棒・板の張力（張力が糸の長さに比例する理由）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_1=\\dfrac{Wh_1}{\\sqrt{2(h_1^2+h_2^2)-L^2}}$，$T_2=\\dfrac{Wh_2}{\\sqrt{2(h_1^2+h_2^2)-L^2}}$"
+   },
+   {
+    "id": "2",
+    "tex": "$T_1:T_2=2h_1:h_2$，$T_1=0.89W$，$T_2=0.36W$"
+   },
+   {
+    "id": "3",
+    "tex": "$T_i=\\dfrac{Wh_i}{\\sqrt{3(h_1^2+h_2^2+h_3^2-a^2)}}$（$i=1,2,3$），$0.30W$，$0.36W$，$0.42W$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 一様な棒}\n棒にはたらく力は，張力 $\\vec T_1$（A から P の向き），$\\vec T_2$（B から P の向き），重力（G に鉛直下向き）である．P のまわりの力のモーメントを考えると，2つの張力の作用線は P を通るのでモーメントは $0$．よって重力の作用線も P を通らなければならず，\\textbf{G は P の真下}にある．\n\n張力を，糸のベクトルの定数倍として $\\vec T_1=\\lambda_1\\overrightarrow{\\mathrm{AP}}$，$\\vec T_2=\\lambda_2\\overrightarrow{\\mathrm{BP}}$ と書く（$\\lambda_1=T_1/h_1$，$\\lambda_2=T_2/h_2$）．$\\overrightarrow{\\mathrm{AP}}=\\overrightarrow{\\mathrm{AG}}+\\overrightarrow{\\mathrm{GP}}$，$\\overrightarrow{\\mathrm{BP}}=\\overrightarrow{\\mathrm{BG}}+\\overrightarrow{\\mathrm{GP}}$，G は中点なので $\\overrightarrow{\\mathrm{BG}}=-\\overrightarrow{\\mathrm{AG}}$．力のつり合いは\n\\[ (\\lambda_1-\\lambda_2)\\overrightarrow{\\mathrm{AG}}+(\\lambda_1+\\lambda_2)\\overrightarrow{\\mathrm{GP}}=(\\text{鉛直上向きで大きさ }W\\text{ のベクトル}). \\]\n$\\overrightarrow{\\mathrm{GP}}$ は鉛直上向き，$\\overrightarrow{\\mathrm{AG}}$ は鉛直でない（$|h_1-h_2|<L$ より棒は鉛直にならない）ので，水平成分から $\\lambda_1=\\lambda_2\\,(=\\lambda)$．すなわち\n\\[ \\frac{T_1}{h_1}=\\frac{T_2}{h_2}\\quad\\Longrightarrow\\quad \\boldsymbol{T_1:T_2=h_1:h_2}. \\]\n鉛直成分から $2\\lambda\\,\\mathrm{PG}=W$．中線定理 $h_1^2+h_2^2=2\\mathrm{PG}^2+2\\left(\\dfrac L2\\right)^2$ より $2\\mathrm{PG}=\\sqrt{2(h_1^2+h_2^2)-L^2}$ なので\n\\[ T_1=\\boldsymbol{\\frac{Wh_1}{\\sqrt{2(h_1^2+h_2^2)-L^2}}},\\qquad T_2=\\boldsymbol{\\frac{Wh_2}{\\sqrt{2(h_1^2+h_2^2)-L^2}}}. \\]\n\n\\textbf{(2) 重心がずれた棒}\n$\\mathrm{AG}:\\mathrm{GB}=1:2$ なので $\\overrightarrow{\\mathrm{BG}}=-2\\overrightarrow{\\mathrm{AG}}$．同様に\n\\[ (\\lambda_1-2\\lambda_2)\\overrightarrow{\\mathrm{AG}}+(\\lambda_1+\\lambda_2)\\overrightarrow{\\mathrm{GP}}=(\\text{鉛直上向き}) \\]\nより $\\lambda_1=2\\lambda_2$，よって $\\boldsymbol{T_1:T_2=2h_1:h_2}$（張力/長さの比は重心による内分比の逆比になる）．\n\n$\\mathrm{AG}=0.20\\,\\mathrm{m}$，$\\mathrm{GB}=0.40\\,\\mathrm{m}$．$\\angle\\mathrm{PGA}$ と $\\angle\\mathrm{PGB}$ は補角なので，2つの三角形の余弦定理から $\\cos$ を消去すると（スチュワートの定理）\n\\[ \\mathrm{PG}^2=\\frac{\\mathrm{GB}\\cdot h_1^2+\\mathrm{AG}\\cdot h_2^2}{L}-\\mathrm{AG}\\cdot\\mathrm{GB}=\\frac{0.40\\times0.25+0.20\\times0.16}{0.60}-0.080=0.14, \\]\n$\\mathrm{PG}=0.374\\,\\mathrm{m}$．鉛直成分のつり合い $(\\lambda_1+\\lambda_2)\\mathrm{PG}=3\\lambda_2\\mathrm{PG}=W$ より $\\lambda_2=\\dfrac{W}{3\\mathrm{PG}}$，\n\\[ T_2=\\lambda_2h_2=\\frac{0.40}{3\\times0.374}W=\\boldsymbol{0.36W},\\qquad T_1=2\\lambda_2h_1=\\frac{2\\times0.50}{3\\times0.374}W=\\boldsymbol{0.89W}. \\]\n\n\\textbf{(3) 正三角形の板}\n(1) と同じく，P のまわりのモーメントから G は P の真下にある．$\\vec T_i=\\lambda_i\\overrightarrow{\\mathrm{V}_i\\mathrm{P}}$（$\\mathrm V_1=\\mathrm A$ など）とおく．$\\lambda_1=\\lambda_2=\\lambda_3=\\lambda$ とすると，重心の性質 $\\overrightarrow{\\mathrm{GA}}+\\overrightarrow{\\mathrm{GB}}+\\overrightarrow{\\mathrm{GC}}=\\vec 0$ より\n\\[ \\sum_i\\lambda\\,\\overrightarrow{\\mathrm{V}_i\\mathrm{P}}=\\lambda\\sum_i\\left(\\overrightarrow{\\mathrm{V}_i\\mathrm{G}}+\\overrightarrow{\\mathrm{GP}}\\right)=3\\lambda\\,\\overrightarrow{\\mathrm{GP}} \\]\nとなって鉛直上向きであり，$3\\lambda\\,\\mathrm{PG}=W$ でつり合う．3本の糸のベクトルは同一平面上にないので，鉛直上向きの力をそれらの和で表す表し方は1通りしかなく，これが唯一の解である．よって張力は糸の長さに比例し，$T_i=\\dfrac{Wh_i}{3\\mathrm{PG}}$．\n\n$\\mathrm{GA}=\\mathrm{GB}=\\mathrm{GC}=\\dfrac{a}{\\sqrt3}$ なので，与えられた関係式より $h_1^2+h_2^2+h_3^2=3\\mathrm{PG}^2+a^2$，\n\\[ T_i=\\boldsymbol{\\frac{Wh_i}{\\sqrt{3(h_1^2+h_2^2+h_3^2-a^2)}}}. \\]\n数値は $\\sqrt{3(0.25+0.36+0.49-0.16)}=\\sqrt{2.82}=1.68$ より\n\\[ T_1=\\boldsymbol{0.30W},\\quad T_2=\\boldsymbol{0.36W},\\quad T_3=\\boldsymbol{0.42W}. \\]\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "1点から糸でつるすと張力の作用線はすべてその点を通るので，重心が支点の真下に来る．張力を「（張力/糸の長さ）×糸のベクトル」と書くと，力のつり合いは重心を基準にした重みつき和となり，一様な物体では張力/長さがすべての糸で等しい（張力が糸の長さに比例する）．重心がずれると，その比は重心による内分比の逆比になる．"
+ },
+ "concepts": [
+  "torque",
+  "momentum-conservation",
+  "equilibrium"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "力のつり合い",
+  "重心",
+  "ベクトル",
+  "張力",
+  "中線定理"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

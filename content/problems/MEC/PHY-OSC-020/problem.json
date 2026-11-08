@@ -1,0 +1,135 @@
+{
+ "id": "PHY-OSC-020",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "動ける台の半円レール内の小球の単振動と，台を途中で止めたときの振幅の変化",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平でなめらかな床の上に質量 $M$ の台が置かれている．台の内側には，中心 C，半径 $R$ の半円形のなめらかなレールが鉛直面内に取り付けられており，質量 $m$ の小球がレールに沿って運動する．台は床の上を図の左右方向にだけ摩擦なく動ける．床に固定した水平な $x$ 軸を，はじめのレールの最下点 P の真下の点 O を原点として図の向きにとる．\n\nはじめ台は静止しており，小球を P から $+x$ 側へ水平距離 $L$ のレール上の点 Q で静かにはなす．$L$ は $R$ に比べて十分小さく，角 $\\theta$ が十分小さいとき $\\sin\\theta\\fallingdotseq\\theta$，$\\cos\\theta\\fallingdotseq1$ と近似してよい．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小球の単振動の周期 $T_1$ を求めよ．また，台が床の上で動く範囲の幅を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "小球が初めて P を通過するまでの時間と，その瞬間の小球の床に対する速さ $v_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "図のように，台の右端から距離 $d$ の位置にストッパーを置いておくと，(2) の瞬間にちょうど台がストッパーに当たり，台は瞬時に止まって以後は床に固定された．$d$ を求めよ．また，この後の小球の単振動の振幅（P からの水平距離の最大値）と，台が止まるときに失われた力学的エネルギーを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "小球をはなしてから，小球が初めて最も $-x$ 側の点に達するまでの時間と，その点の $x$ 座標を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：動ける台の半円レール内の小球の単振動と，台を途中で止めたときの振幅の変化",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：動ける台の半円レール内の小球の単振動と，台を途中で止めたときの振幅の変化",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_1=2\\pi\\sqrt{\\dfrac{MR}{(M+m)g}}$，幅 $\\dfrac{2mL}{M+m}$"
+   },
+   {
+    "id": "2",
+    "tex": "時間 $\\dfrac{\\pi}{2}\\sqrt{\\dfrac{MR}{(M+m)g}}$，$v_1=L\\sqrt{\\dfrac{Mg}{(M+m)R}}$"
+   },
+   {
+    "id": "3",
+    "tex": "$d=\\dfrac{mL}{M+m}$，振幅 $L\\sqrt{\\dfrac{M}{M+m}}$，失われたエネルギー $\\dfrac{m^2gL^2}{2(M+m)R}$"
+   },
+   {
+    "id": "4",
+    "tex": "時間 $\\dfrac{\\pi}{2}\\sqrt{\\dfrac{R}{g}}\\left(1+\\sqrt{\\dfrac{M}{M+m}}\\right)$，$x=\\dfrac{mL}{M+m}-L\\sqrt{\\dfrac{M}{M+m}}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 台が動けるときの単振動}\n\n小球と台の $x$ 座標をそれぞれ $x_1,\\ x_2$，台に対する小球の水平変位を $s=x_1-x_2$ とする．小球の位置の CP からの傾きを $\\theta$ とすると $s=R\\sin\\theta\\fallingdotseq R\\theta$．鉛直方向の加速度は $\\theta$ の2次の微小量なので，レールの垂直抗力は $N\\fallingdotseq mg$．その水平成分は小球に $-mg\\theta=-mg\\dfrac{s}{R}$，作用・反作用で台に $+mg\\dfrac{s}{R}$ である．\n\\[ m\\ddot x_1=-mg\\frac{s}{R},\\qquad M\\ddot x_2=mg\\frac{s}{R} \\]\n辺々をそれぞれ $m,\\ M$ で割って引くと\n\\[ \\ddot s=-\\frac{g}{R}\\left(1+\\frac{m}{M}\\right)s=-\\frac{(M+m)g}{MR}\\,s \\]\nよって $s$ は角振動数 $\\omega_1=\\sqrt{\\dfrac{(M+m)g}{MR}}$ の単振動をし\n\\[ T_1=\\boldsymbol{2\\pi\\sqrt{\\frac{MR}{(M+m)g}}} \\]\nこれは長さ $\\dfrac{M}{M+m}R$ の単振り子と同じである（台が逆向きに動くぶん，支点が実質的に小球に近づく）．\n\n水平方向には外力がないので，静止から始めた系の重心の $x$ 座標は変わらない：$mx_1+Mx_2=mL$．$x_1=x_2+s$ を代入して\n\\[ x_2=\\frac{m(L-s)}{M+m} \\]\n$s$ は $L$ から $-L$ まで変わるので，台は $0\\leqq x_2\\leqq\\dfrac{2mL}{M+m}$ の範囲を動き，幅は $\\boldsymbol{\\dfrac{2mL}{M+m}}$．\n\n\\textbf{(2)}\n\n$s$ は $s=L\\cos\\omega_1t$ と変化するので，初めて P を通過する（$s=0$）のは $\\dfrac{T_1}{4}=\\boldsymbol{\\dfrac{\\pi}{2}\\sqrt{\\dfrac{MR}{(M+m)g}}}$ 後．このとき相対速度の大きさは $L\\omega_1$ で，重心が静止していることから $\\dot x_1=\\dfrac{M}{M+m}\\dot s$，$\\dot x_2=-\\dfrac{m}{M+m}\\dot s$．よって\n\\[ v_1=\\frac{M}{M+m}L\\omega_1=\\boldsymbol{L\\sqrt{\\frac{Mg}{(M+m)R}}}\\quad(-x\\text{ 向き}),\\qquad V_2=\\frac{m}{M+m}L\\omega_1\\quad(+x\\text{ 向き}) \\]\n（エネルギー保存 $mg\\dfrac{L^2}{2R}=\\dfrac12mv_1^2+\\dfrac12MV_2^2$ と運動量保存 $mv_1=MV_2$ からも同じ結果が得られる．）\n\n\\textbf{(3) 台が止まる瞬間}\n\nこのとき $s=0$ なので $x_2=\\dfrac{mL}{M+m}$，すなわち台ははじめの位置から $+x$ 向きにこれだけ動いている．ストッパーまでの距離は\n\\[ d=\\boldsymbol{\\frac{mL}{M+m}} \\]\n台が止まる瞬間，ストッパーから台に大きな力積がはたらくが，小球は最下点 P にいてレールの面は水平なので，なめらかなレールは小球に水平方向の力を伝えられない．したがって\\textbf{小球の速度は $v_1$ のまま変わらない}．以後は固定されたレール上の角振動数 $\\omega_0=\\sqrt{g/R}$ の単振動で，P から速さ $v_1$ で出発するので振幅は\n\\[ \\frac{v_1}{\\omega_0}=\\boldsymbol{L\\sqrt{\\frac{M}{M+m}}} \\]\n失われた力学的エネルギーは台の運動エネルギーで\n\\[ \\frac12MV_2^2=\\frac12M\\left(\\frac{m}{M+m}\\right)^2L^2\\frac{(M+m)g}{MR}=\\boldsymbol{\\frac{m^2gL^2}{2(M+m)R}} \\]\n（検算：はじめの位置エネルギー $\\dfrac{mgL^2}{2R}$ から，最後の振動のエネルギー $\\dfrac{mg}{2R}\\cdot\\dfrac{ML^2}{M+m}$ を引いた値に等しい．）\n\n\\textbf{(4)}\n\n台が止まった後，小球は P（$x=d$）から $-x$ 向きに速さ $v_1$ で動き出し，周期 $2\\pi\\sqrt{R/g}$ の $\\dfrac14$ で最も $-x$ 側に達する．よって時間は\n\\[ \\frac{T_1}{4}+\\frac{\\pi}{2}\\sqrt{\\frac{R}{g}}=\\boldsymbol{\\frac{\\pi}{2}\\sqrt{\\frac{R}{g}}\\left(1+\\sqrt{\\frac{M}{M+m}}\\right)} \\]\nその位置は\n\\[ x=d-L\\sqrt{\\frac{M}{M+m}}=\\boldsymbol{\\frac{mL}{M+m}-L\\sqrt{\\frac{M}{M+m}}} \\]\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "なめらかな床上で動ける台の中の小球の微小振動では，水平方向の重心が動かないので相対変位が角振動数 $\\sqrt{(1+m/M)g/R}$ の単振動となり，長さ $\\frac{M}{M+m}R$ の単振り子と同じになる．最下点では面が水平なので台を急に止めても小球の速度は変わらず，以後の振幅は重心系で分配された小球の速さだけで決まって $\\sqrt{M/(M+m)}$ 倍に縮む．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "simple-pendulum",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "単振動",
+  "重心の運動",
+  "運動量保存",
+  "可動台",
+  "振幅の変化"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

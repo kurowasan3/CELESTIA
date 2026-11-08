@@ -1,0 +1,123 @@
+{
+ "id": "PHY-OPT-033",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "斜めに重ねたマイケルソン干渉計の縞の移動（ドップラーうなりとの対応と重力波の検出）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図1のようなマイケルソン干渉計がある．波長 $\\lambda$（振動数 $f=\\dfrac{c}{\\lambda}$，$c$ は真空中の光速）のレーザー光をハーフミラー H で経路 X と経路 Y に分け，それぞれ鏡 $\\text{M}_\\text{X}$，$\\text{M}_\\text{Y}$ で反射させたのち H で再び重ねてスクリーン F に当てる．H から $\\text{M}_\\text{X}$，$\\text{M}_\\text{Y}$ までの距離をそれぞれ $L_\\text{X}$，$L_\\text{Y}$ とする．経路 Y の光は F に垂直に入射し，経路 X の光は図2のように，進行方向が F の法線から $x$ 軸の正の向きへ小さな角 $\\theta$ だけ傾いて入射する．光は平面波で真空中を進み，F に届く2つの光の電場は同じ向きで，振幅はともに $E_0$ とする．$L_\\text{X}=L_\\text{Y}$ のとき，F 上の点 $x=0$ での2つの光の電場はともに $E_0\\sin2\\pi ft$ であった．F の明るさは，2つの光の電場の和の2乗を，光の周期に比べて十分長く縞の動きに比べて十分短い時間で平均したもの $I$ に比例するとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$L_\\text{X}=L_\\text{Y}$ のとき，F 上の位置 $x$ での $I(x)$ を求めよ．また明線の間隔を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "鏡 $\\text{M}_\\text{X}$ を H から遠ざかる向きに一定の速さ $u$（$u\\ll c$）で動かした．縞模様は $x$ 軸のどちら向きに，どれだけの速さで動くか．また，F 上の1点で明るさが変動する振動数を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2)の振動数を，動く鏡で反射した光のドップラー効果で説明したい．$\\text{M}_\\text{X}$ で反射して戻る光の振動数 $f'$ を $\\dfrac uc$ の1次まで求め，2つの光のうなりの振動数が(2)の結果と一致することを示せ．"
+     },
+     {
+      "id": "4",
+      "tex": "重力波が通過すると，$L_\\text{X}$ が $\\delta$ だけ伸びると同時に $L_\\text{Y}$ が $\\delta$ だけ縮む．このとき縞模様が動く向きと，動く距離が明線の間隔の何倍かを求めよ．さらに $L_\\text{X}=L_\\text{Y}=L=4.0\\,\\text{km}$，$\\delta=\\dfrac12\\varepsilon L$（$\\varepsilon=1.0\\times10^{-21}$），$\\lambda=1.1\\times10^{-6}\\,\\text{m}$ のとき，この倍率を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：斜めに重ねたマイケルソン干渉計の縞の移動（ドップラーうなりとの対応と重力波の検出）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I(x)=E_0^{\\,2}\\left\\{1+\\cos\\dfrac{2\\pi x\\sin\\theta}{\\lambda}\\right\\}=2E_0^{\\,2}\\cos^2\\dfrac{\\pi x\\sin\\theta}{\\lambda}$，間隔 $\\dfrac{\\lambda}{\\sin\\theta}$"
+   },
+   {
+    "id": "2",
+    "tex": "$x$ 軸の負の向きに速さ $\\dfrac{2u}{\\sin\\theta}$，振動数 $\\dfrac{2u}{\\lambda}$"
+   },
+   {
+    "id": "3",
+    "tex": "$f'=f\\left(1-\\dfrac{2u}{c}\\right)$，うなり $f-f'=\\dfrac{2uf}{c}=\\dfrac{2u}{\\lambda}$ で一致"
+   },
+   {
+    "id": "4",
+    "tex": "$x$ 軸の負の向きに，明線の間隔の $\\dfrac{4\\delta}{\\lambda}$ 倍；$7.3\\times10^{-12}$ 倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 斜めに重なる2つの平面波}　経路 X の光の進行方向は $(\\sin\\theta,\\,-\\cos\\theta)$（F に向かう向きを下向きとした）なので，同じ波面上では光源からの光路長が等しいので，F 上では位置 $x$ に届く光の光路長が $x=0$ より $x\\sin\\theta$ だけ長い（図2）．したがって\n\\[ E_\\text{X}=E_0\\sin\\left(2\\pi ft-\\frac{2\\pi x\\sin\\theta}{\\lambda}\\right),\\qquad E_\\text{Y}=E_0\\sin2\\pi ft. \\]\n$(E_\\text{X}+E_\\text{Y})^2=E_\\text{X}^2+E_\\text{Y}^2+2E_\\text{X}E_\\text{Y}$ の時間平均をとると，$E_\\text{X}^2$，$E_\\text{Y}^2$ の平均はそれぞれ $\\dfrac{E_0^2}{2}$，$2E_\\text{X}E_\\text{Y}=E_0^2\\left\\{\\cos\\dfrac{2\\pi x\\sin\\theta}{\\lambda}-\\cos\\left(4\\pi ft-\\dfrac{2\\pi x\\sin\\theta}{\\lambda}\\right)\\right\\}$ の平均は第1項だけが残るので\n\\[ \\boldsymbol{I(x)=E_0^{\\,2}\\left\\{1+\\cos\\frac{2\\pi x\\sin\\theta}{\\lambda}\\right\\}}. \\]\n明線は $x\\sin\\theta=m\\lambda$（$m$ は整数）なので，間隔は $\\boldsymbol{\\dfrac{\\lambda}{\\sin\\theta}}$（$\\theta$ が小さいので $\\approx\\dfrac{\\lambda}{\\theta}$）．\n\n\\textbf{(2) 縞の流れ}　鏡が $u$ で遠ざかると，経路 X の往復の光路長は時刻 $t$ までに $2ut$ だけ増え，\n\\[ I=E_0^{\\,2}\\left\\{1+\\cos\\frac{2\\pi(x\\sin\\theta+2ut)}{\\lambda}\\right\\}. \\]\n明線は $x\\sin\\theta+2ut=m\\lambda$，すなわち $x=\\dfrac{m\\lambda-2ut}{\\sin\\theta}$ なので，縞模様は形を保ったまま $\\boldsymbol{x\\text{ 軸の負の向きに速さ }\\dfrac{2u}{\\sin\\theta}}$ で動く．光路差が増えると，等しい光路差の点は X の光路が短い側（$x<0$ 側）へずれるからで，縞の動く向きから光路差の増減が分かる（$\\theta=0$ で重ねると全面が一様に明滅するだけで，向きは分からない）．F 上の1点では位相が単位時間あたり $\\dfrac{2\\pi\\cdot2u}{\\lambda}$ ずつ進むので，明るさの振動数は $\\boldsymbol{\\dfrac{2u}{\\lambda}}$．\n\n\\textbf{(3) ドップラー効果による見方}　遠ざかる鏡が受ける振動数は $f_1=f\\dfrac{c-u}{c}$．鏡は振動数 $f_1$ の光を出す遠ざかる波源とみなせるので，戻る光の振動数は\n\\[ f'=f_1\\frac{c}{c+u}=f\\frac{c-u}{c+u}\\approx\\boldsymbol{f\\left(1-\\frac{2u}{c}\\right)}. \\]\n振動数 $f$ と $f'$ の光を重ねると，明るさは差の振動数でうなるので\n\\[ f-f'=\\frac{2uf}{c}=\\frac{2u}{\\lambda}, \\]\nと(2)の結果に一致する．(2)は「光路差が変わって縞が流れる」，(3)は「振動数がずれてうなる」という同じ現象の2つの見方である．\n\n\\textbf{(4) 重力波}　経路 X の往復光路は $2\\delta$ 伸び，経路 Y の往復光路は $2\\delta$ 縮むので，光路差（X$-$Y）は $4\\delta$ 増える．明るさは光路差だけで決まるので，(2)と同様に明線の位置は $x$ 軸の負の向きに $\\dfrac{4\\delta}{\\sin\\theta}$ ずれ，これは明線の間隔 $\\dfrac{\\lambda}{\\sin\\theta}$ の $\\boldsymbol{\\dfrac{4\\delta}{\\lambda}}$ 倍である（一方の腕だけが変わる場合の2倍になる）．数値を入れると\n\\[ \\frac{4\\delta}{\\lambda}=\\frac{2\\varepsilon L}{\\lambda}=\\frac{2\\times1.0\\times10^{-21}\\times4.0\\times10^{3}}{1.1\\times10^{-6}}\\approx\\boldsymbol{7.3\\times10^{-12}}\\ \\text{倍} \\]\nで，きわめて小さい．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "2つの平面波を小さな角で重ねると光路差が位置の1次式になって平行な縞ができ，光路差が変わると縞全体が平行移動するので，その向きで光路差の増減が分かる．動く鏡による縞の流れの振動数は，反射光のドップラー効果によるうなりの振動数と同じ現象の2つの見方である．2本の腕が逆に伸び縮みすると効果が足し合わされる．"
+ },
+ "concepts": [
+  "light-interference",
+  "doppler",
+  "beats"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "マイケルソン干渉計",
+  "干渉縞",
+  "光路差",
+  "ドップラー効果",
+  "うなり",
+  "重力波"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

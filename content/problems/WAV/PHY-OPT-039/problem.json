@@ -1,0 +1,136 @@
+{
+ "id": "PHY-OPT-039",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "回転する水面がつくる凹レンズ（光路の場所による違いと見かけの深さ）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，内半径 $R$ の円筒形の透明な容器に，屈折率 $n\\,(>1)$ の水を深さ $H$ まで入れる．容器の底は水平で薄く平らであり，底での屈折の効果は水と空気の境界面として扱えばよい．容器を鉛直な中心軸のまわりに一定の角速度 $\\omega$ で回転させ，十分時間がたつと，水は容器とともに一体となって回転し，水面は静止した形になった．重力加速度の大きさを $g$，空気の屈折率を $1$ とする．水面の最も低い点を O，中心軸からの距離を $r$，底面からの高さを $z$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "容器とともに回転する観測者から見ると，水面はその点の水にはたらく重力と遠心力の合力に垂直である．このことから水面の傾き $\\dfrac{dz}{dr}$ を $r$ の関数として求め，水面の高さ $z(r)$ を $\\omega,\\ g,\\ H,\\ R,\\ r$ で表せ．必要なら，回転放物面 $z=cr^2$ と平面 $z=cR^2$ で囲まれる部分の体積が $\\dfrac{\\pi c R^4}{2}$ であることを用いてよい．また，底が水面から露出しないための $\\omega$ の条件を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "底の真下から，鉛直上向きに進む平行光線を入射させる．光軸（中心軸）の近くを通る光線だけを考え，水平面に対する水面の傾きの角 $\\alpha$ は十分小さいとする（$\\sin\\alpha\\approx\\tan\\alpha\\approx\\alpha$）．水面から出た光は，水面の上方から見ると中心軸上のある点 F から広がってくるように見える．F は O から鉛直下方にどれだけの距離にあるか．"
+     },
+     {
+      "id": "3",
+      "tex": "次に，光の向きを逆にして，水面の真上から鉛直下向きに平行光線を入射させる．底から出た光は，底の下から見ると中心軸上の点 F$'$ から広がってくるように見える．F$'$ は底面から鉛直上方にどれだけの距離 $D$ にあるか．$\\omega,\\ g,\\ n,\\ H,\\ R$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の配置で，(1) の条件を満たす範囲で $\\omega$ を変える．$D$ が $\\omega$ とともにどう変わるかを調べ，$D$ がとりうる値の下限を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：回転する水面がつくる凹レンズ（光路の場所による違いと見かけの深さ）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：回転する水面がつくる凹レンズ（光路の場所による違いと見かけの深さ）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{dz}{dr}=\\dfrac{\\omega^2 r}{g}$，$z(r)=H-\\dfrac{\\omega^2R^2}{4g}+\\dfrac{\\omega^2r^2}{2g}$，条件 $\\omega<\\dfrac{2\\sqrt{gH}}{R}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac{g}{(n-1)\\omega^2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$D=\\dfrac{g}{(n-1)\\omega^2}+\\dfrac1n\\left(H-\\dfrac{\\omega^2R^2}{4g}\\right)$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\omega$ について単調に減少し，下限は $\\dfrac{R^2}{4(n-1)H}$（$\\omega\\to\\dfrac{2\\sqrt{gH}}{R}$ の極限で，$g$ によらない）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 水面の形}\n回転系で水面上の質量 $m$ の水には，鉛直下向きの重力 $mg$ と中心から外向きの遠心力 $mr\\omega^2$ がはたらく．水面はこの合力に垂直だから，水面の傾きの角を $\\alpha$ とすると\n\\[ \\tan\\alpha=\\frac{dz}{dr}=\\frac{mr\\omega^2}{mg}=\\frac{\\omega^2 r}{g}. \\]\nこれを積分して $z(r)=z_0+\\dfrac{\\omega^2r^2}{2g}$（$z_0$ は O の高さ）．水の体積は回転前の $\\pi R^2H$ に等しい．半径 $R$，高さ $z_0+\\dfrac{\\omega^2R^2}{2g}$ の円柱から，与えられた回転放物面の部分（$c=\\dfrac{\\omega^2}{2g}$）を除いたものが水だから\n\\[ \\pi R^2\\left(z_0+\\frac{\\omega^2R^2}{2g}\\right)-\\frac{\\pi R^4}{2}\\cdot\\frac{\\omega^2}{2g}=\\pi R^2H\n\\quad\\therefore\\ z_0=H-\\frac{\\omega^2R^2}{4g}. \\]\nよって $\\boldsymbol{z(r)=H-\\dfrac{\\omega^2R^2}{4g}+\\dfrac{\\omega^2r^2}{2g}}$．底が露出しないのは $z_0>0$，すなわち $\\boldsymbol{\\omega<\\dfrac{2\\sqrt{gH}}{R}}$ のときである．\n\n\\textbf{(2) 下から入射する場合}\n底は水平なので，鉛直に入射した光は曲がらずに水中を上がり，水面に達する．距離 $r$ の点で水面の法線は鉛直から中心軸側へ $\\alpha$ だけ傾いているので，入射角は $\\alpha$ である．屈折角を $\\alpha'$ とすると $n\\sin\\alpha=\\sin\\alpha'$，小角では $\\alpha'=n\\alpha$．出ていく光線の鉛直からの傾きは\n\\[ \\delta=\\alpha'-\\alpha=(n-1)\\alpha=(n-1)\\frac{\\omega^2r}{g} \\]\nで，法線から遠ざかる向き，すなわち中心軸から離れる向きに曲がる（凹レンズの作用）．光軸近くでは水面の高さは $z_0$ とみなせるので，この光線を逆向きに延長すると，O から下方に $\\dfrac{r}{\\delta}$ の点で中心軸と交わる．\n\\[ \\frac{r}{\\delta}=\\frac{g}{(n-1)\\omega^2} \\]\nは $r$ によらないから，すべての光線が同じ点 F から出たように見え，$\\mathrm{OF}=\\boldsymbol{\\dfrac{g}{(n-1)\\omega^2}}$．\n\n（別解：光路長）底から高さ $Z$（水面より上）までの光路長は $nz(r)+\\{Z-z(r)\\}=Z+(n-1)z(r)$ で，中心から $r$ 離れた光は $(n-1)\\dfrac{\\omega^2r^2}{2g}$ だけ余分に遅れる．F を中心とする半径 $f$ の球面波は，中心軸上より $\\dfrac{r^2}{2f}$ だけ遅れるので，両者を等しいとおいても同じ結果を得る．水面は「中心ほど薄い」水の層なので凹レンズになる．\n\n\\textbf{(3) 上から入射する場合}\n水面での入射角は $\\alpha$ で，屈折角 $\\alpha/n$．水中の光線の鉛直からの傾きは $\\theta_{\\rm w}=\\alpha-\\dfrac{\\alpha}{n}=\\dfrac{n-1}{n}\\alpha$（中心軸から離れる向き）．光は水中を深さ $z_0$（光軸近く）だけ進んで底に達するので，底での位置は\n\\[ r_{\\rm b}=r+z_0\\theta_{\\rm w}. \\]\n底（水平面）での屈折で傾きは $n$ 倍になり，空気中で $\\delta=n\\theta_{\\rm w}=(n-1)\\alpha$．底の下から見ると，この光線は底から上方に $\\dfrac{r_{\\rm b}}{\\delta}$ の点から出たように見える．\n\\[ D=\\frac{r+z_0\\frac{n-1}{n}\\alpha}{(n-1)\\alpha}=\\frac{r}{(n-1)\\alpha}+\\frac{z_0}{n}=\\frac{g}{(n-1)\\omega^2}+\\frac{z_0}{n}. \\]\nこれも $r$ によらない．$z_0$ を代入して\n\\[ \\boldsymbol{D=\\frac{g}{(n-1)\\omega^2}+\\frac1n\\left(H-\\frac{\\omega^2R^2}{4g}\\right)}. \\]\n第2項は，厚さ $z_0$ の水の層が「見かけの深さ」$z_0/n$ の空気の層と同じはたらきをすることを表す．(2) の F が水面から測って $\\dfrac{g}{(n-1)\\omega^2}$ だったのに対し，(3) は底から測って水の厚さの分 $z_0/n$ だけ長い．厚さのあるレンズでは，光の入る向きによって「焦点までの距離」を測る基準の面が異なることに注意する．\n\n\\textbf{(4) $D$ の下限}\n$W=\\omega^2$ とおくと\n\\[ D=\\frac{g}{(n-1)W}+\\frac{H}{n}-\\frac{R^2}{4gn}W \\]\nで，第1項も第3項（負号込み）も $W$ の増加とともに減少するから，$D$ は $\\omega$ について単調に減少する．$\\omega$ を大きくすると，水面の曲がりが強くなる（第1項）だけでなく，中心の水が薄くなって見かけの深さの寄与も減る（第2・3項）．$\\omega$ は (1) の条件 $W<\\dfrac{4gH}{R^2}$ を満たさねばならないので，$D$ はその極限値より大きい．$W\\to\\dfrac{4gH}{R^2}$ で $z_0\\to0$ となり\n\\[ D\\to\\frac{g}{(n-1)}\\cdot\\frac{R^2}{4gH}=\\boldsymbol{\\frac{R^2}{4(n-1)H}}. \\]\nこれが下限で，$g$ によらない（$g$ が大きいと水面は曲がりにくいが，露出する限界の $\\omega$ も大きくなり，両者が打ち消す）．それ以上 $\\omega$ を大きくすると中心部の底が露出し，光軸近くの光は水を通らずにまっすぐ進むので，光軸近くの光に対するレンズのはたらきは失われる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回転する水面は回転放物面で，中心ほど薄い水の層の光路長の差 $(n-1)\\omega^2r^2/2g$ が $r^2$ に比例するので凹レンズとしてはたらき，焦点距離 $g/\\{(n-1)\\omega^2\\}$ が決まる．光を逆向きに通すと水の層が見かけの深さ $z_0/n$ として効き，体積保存で $z_0$ も $\\omega$ に依存するため，焦点の位置は底の露出という状態の切り替わりで下限をもつ．"
+ },
+ "concepts": [
+  "light-interference",
+  "projectile-motion",
+  "circular-motion"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "屈折",
+  "レンズ",
+  "光路長",
+  "回転放物面",
+  "見かけの深さ",
+  "遠心力"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

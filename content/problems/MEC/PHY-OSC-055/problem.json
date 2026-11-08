@@ -1,0 +1,143 @@
+{
+ "id": "PHY-OSC-055",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "回転する水平管から飛び出す小球（回転系と慣性系の乗りかえと落下点の遅れ）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，床からの高さ $h$ の水平面内に，長さ $L$ の細い直線の管 OA が置かれている．管は端 O を通る鉛直な軸のまわりに，上から見て反時計回りに一定の角速度 $\\omega$ で回り続ける．管の内面はなめらかである．管の中の O から距離 $r_0$（$0<r_0<L$）の位置に，質量 $m$ の小球を管に対して静止させて静かに放したところ，小球は管の中を外向きにすべり，端 A から飛び出して床に落ちた．小球が A を出てから床に落ちるまでの時間を $\\tau$ とし，$0<\\omega\\tau<\\dfrac{\\pi}{2}$ とする．床上で O の真下の点を O$'$ とする．空気抵抗は無視する．\n\n必要なら，管とともに回転する観測者から見ると，小球には回転軸から外向きに大きさ $m\\omega^2x$（$x$ は軸からの距離）の遠心力がはたらくほか，管に対して速さ $v$ で動く物体には，その運動の向きに垂直な向きに大きさ $2m\\omega v$ の見かけの力（コリオリの力）がはたらくことを用いてよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小球が A から出る瞬間の，管に対する小球の速さ $u$ を $\\omega,\\ L,\\ r_0$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "小球が A に達する直前に，管の側壁が小球に及ぼす水平方向の力の大きさ $N$ を求めよ．また，その力は管の回転の向きに押す力か，逆向きに押す力か答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "落下点を F とする．距離 O$'$F を $L,\\ \\omega,\\ \\tau,\\ u$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "上から見て，O$'$F の向きが，小球が A を出た瞬間の管の向き（OA の向き）から管の回転の向きに測って $45^\\circ$ になった．このときの $r_0$ を $L,\\ \\omega,\\ \\tau$ で表せ．また，このようなことが起こりうるための $\\omega\\tau$ の条件を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "小球が床に落ちた瞬間，管の真下の半直線（管を床に投影したもの）から見て，落下点 F は管の回転の向きと逆の側に角 $\\psi$ だけずれていた．$r_0=\\dfrac{\\sqrt3}{2}L$，$\\omega\\tau=1$ のときの $\\psi$ を度の単位で有効数字2桁で求めよ．さらに，$r_0$ と $\\omega\\tau$ の値によらず，常に $\\psi>0$ であることを示せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：回転する水平管から飛び出す小球（回転系と慣性系の乗りかえと落下点の遅れ）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：回転する水平管から飛び出す小球（回転系と慣性系の乗りかえと落下点の遅れ）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$u=\\omega\\sqrt{L^2-r_0^2}$"
+   },
+   {
+    "id": "2",
+    "tex": "$N=2m\\omega^2\\sqrt{L^2-r_0^2}$，回転の向きに押す力"
+   },
+   {
+    "id": "3",
+    "tex": "$\\mathrm{O'F}=\\sqrt{(L+u\\tau)^2+(\\omega L\\tau)^2}$"
+   },
+   {
+    "id": "4",
+    "tex": "$r_0=\\dfrac{L\\sqrt{2\\omega\\tau-1}}{\\omega\\tau}$，条件 $\\omega\\tau>1$"
+   },
+   {
+    "id": "5",
+    "tex": "$\\psi\\fallingdotseq 24^\\circ$（$\\psi=1-\\tan^{-1}\\frac23$ rad），常に $\\psi>0$ となる理由は解説参照"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　管の中では小球は管に拘束されているので，管とともに回る観測者（回転系）で考えると運動が1次元になる．管を出た後は管と無関係な放物運動なので，床の観測者（慣性系）で考える．\\textbf{管を出る瞬間に考える座標系を乗りかえる}のが要点である．\n\n\\textbf{(1) 管に対する速さ}\n\n回転系では，小球にはたらく力は重力・管からの垂直抗力・遠心力・コリオリの力である．重力と垂直抗力の鉛直成分はつり合い，側壁からの力とコリオリの力は管に垂直なので，管方向の運動に仕事をしない．仕事をするのは遠心力 $m\\omega^2x$ だけで，$r_0$ から $L$ までにする仕事は\n\\[ \\int_{r_0}^{L}m\\omega^2x\\,dx=\\frac12m\\omega^2(L^2-r_0^2). \\]\nこれが管に対する運動エネルギー $\\frac12mu^2$ になるので\n\\[ u=\\boldsymbol{\\omega\\sqrt{L^2-r_0^2}}. \\]\n\n\\textbf{(2) 側壁の力}\n\n回転系で，管に垂直な水平方向の力のつり合いを考える．小球は管に沿って外向きに速さ $u$ で動くので，コリオリの力は大きさ $2m\\omega u$ で，管の回転と逆向き（上から見て時計回りの側）にはたらく．管に垂直な方向には動かないので，側壁がこれとつり合う力を回転の向きに及ぼす：\n\\[ N=2m\\omega u=\\boldsymbol{2m\\omega^2\\sqrt{L^2-r_0^2}}\\quad(\\text{回転の向きに押す}). \\]\n（床の系で確かめる：小球の速度の回転方向成分は $\\omega x$ で，$x$ が増えるにつれて大きくなる．側壁の力が回転の向きに小球を加速しているのであり，角運動量 $m\\omega x^2$ の増加率 $2m\\omega x\\dot x$ が力のモーメント $Nx$ に等しいことからも $N=2m\\omega\\dot x$ が得られる．）\n\n\\textbf{(3) 落下点までの距離}\n\n床の系に乗りかえる．A を出る瞬間の管の向きを $X$ 軸，それに垂直で回転の向きを $Y$ 軸とする（上から見た水平面）．このとき小球の水平速度は，管に沿った成分 $u$ と，管とともに回る成分 $\\omega L$ の和：\n\\[ \\vec v=(u,\\ \\omega L). \\]\n管を出た後の水平方向は等速直線運動なので，落下点は\n\\[ \\mathrm{F}=(L+u\\tau,\\ \\omega L\\tau),\\qquad \\mathrm{O'F}=\\boldsymbol{\\sqrt{(L+u\\tau)^2+(\\omega L\\tau)^2}}. \\]\n\n\\textbf{(4) $45^\\circ$ になる条件}\n\nO$'$F が $X$ 軸と $45^\\circ$ をなすには $L+u\\tau=\\omega L\\tau$，すなわち\n\\[ u=L\\Bigl(\\omega-\\frac1\\tau\\Bigr). \\]\n$u\\ge 0$ が必要で，また $r_0>0$ より $u<\\omega L$ である．$u=\\omega\\sqrt{L^2-r_0^2}$ に代入して\n\\[ L^2-r_0^2=L^2\\Bigl(1-\\frac{1}{\\omega\\tau}\\Bigr)^2\\ \\ \\Longrightarrow\\ \\ r_0=\\boldsymbol{\\frac{L\\sqrt{2\\omega\\tau-1}}{\\omega\\tau}}. \\]\nここで $u=L(\\omega-1/\\tau)>0$ のためには $\\boldsymbol{\\omega\\tau>1}$ が必要である．$\\omega\\tau\\le 1$ だと，$r_0$ を $L$ に近づけて $u\\to0$ にしても角度は $\\tan^{-1}(\\omega\\tau)\\le 45^\\circ$ にしかならず，$u>0$ ではさらに小さくなるので $45^\\circ$ は実現しない．（式 $r_0=L\\sqrt{2\\omega\\tau-1}/(\\omega\\tau)$ は $\\frac12<\\omega\\tau<1$ でも $0<r_0<L$ の値を与えるが，それは $u<0$，すなわち小球が内向きに出る場合に対応し，不適である．）\n\n\\textbf{(5) 回転する観測者から見たずれ}\n\n小球が床に落ちるまでに管は角 $\\omega\\tau$ だけ回る．一方，落下点 F の向きは $X$ 軸から\n\\[ \\varphi=\\tan^{-1}\\frac{\\omega L\\tau}{L+u\\tau} \\]\nの向きにあるので，管の真下から見て F は回転と逆の側に\n\\[ \\psi=\\omega\\tau-\\tan^{-1}\\frac{\\omega L\\tau}{L+u\\tau} \\]\nだけずれる．$r_0=\\frac{\\sqrt3}{2}L$ のとき $u=\\frac12\\omega L$，$\\omega\\tau=1$ とすると\n\\[ \\psi=1-\\tan^{-1}\\frac{1}{1+\\frac12}=1-\\tan^{-1}\\frac23\\fallingdotseq1-0.588=0.412\\ \\text{rad}\\fallingdotseq\\boldsymbol{24^\\circ}. \\]\n\n\\textbf{常に $\\psi>0$ であること}　$u\\ge0$ より $\\dfrac{\\omega L\\tau}{L+u\\tau}\\le\\omega\\tau$．$\\tan^{-1}$ は増加関数で，$y>0$ に対して $\\tan^{-1}y<y$（$0<\\theta<\\frac{\\pi}{2}$ で $\\tan\\theta>\\theta$ であることによる）だから\n\\[ \\tan^{-1}\\frac{\\omega L\\tau}{L+u\\tau}\\le\\tan^{-1}(\\omega\\tau)<\\omega\\tau. \\]\nよって $\\psi>0$ である．床の系では小球は直線上を進むだけだが，管とともに回る観測者には，小球が管を出たあと回転と逆向きに曲がっていくように見える（コリオリの力の効果）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回転する管の中では回転系で考えると遠心力の仕事だけが管に沿った速さを決め，コリオリの力は側壁の抗力とつり合う．管を出た瞬間に慣性系へ乗りかえ，速度を「管に沿った成分＋管とともに回る成分 $\\omega L$」として直線運動させると落下点が求まる．回転系から見ると落下点は必ず回転と逆側に遅れ，その遅れは $\\omega\\tau-\\tan^{-1}\\frac{\\omega L\\tau}{L+u\\tau}>0$ で表される．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "projectile-motion",
+  "circular-motion"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "回転座標系",
+  "遠心力",
+  "コリオリの力",
+  "放物運動",
+  "座標系の乗りかえ"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

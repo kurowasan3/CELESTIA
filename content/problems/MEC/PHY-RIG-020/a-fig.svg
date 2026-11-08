@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320">
+<defs>
+<marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<path d="M173.6,70.4 A130,130 0 0 1 173.6,269.6" fill="none" stroke="#222" stroke-width="3.5"/>
+<circle cx="90" cy="170" r="2.5" fill="#222"/>
+<text x="70" y="176" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">O</text>
+<line x1="90.0" y1="170.0" x2="173.6" y2="70.4" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="90.0" y1="170.0" x2="173.6" y2="269.6" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="173.6" y1="70.4" x2="131.4" y2="35.1" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<text x="113.5623892592501" y="62.41422239453286" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">T</text>
+<line x1="173.6" y1="269.6" x2="131.4" y2="304.9" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<text x="113.5623892592501" y="291.5857776054671" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">T</text>
+<circle cx="204.1" cy="170.0" r="3.5" fill="#c0392b"/>
+<text x="182.11689512643392" y="160" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">G</text>
+<line x1="90.0" y1="170.0" x2="204.1" y2="170.0" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="150" y="190" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">d</text>
+<line x1="204.1" y1="200.0" x2="134.1" y2="200.0" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a-ar)"/>
+<text x="124.11689512643392" y="222" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#c0392b" text-anchor="start">合力 2T sinα</text>
+<path d="M108.0,148.6 A28,28 0 0 1 118.0,170" fill="none" stroke="#222" stroke-width="1"/>
+<text x="122" y="152" font-family="Times New Roman, serif" font-style="italic" font-size="14" fill="#222" text-anchor="start">α</text>
+<text x="240" y="60" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">張力は円の接線方向</text>
+</svg>

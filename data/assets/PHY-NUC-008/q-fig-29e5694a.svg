@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="540" height="320">
+<defs>
+<marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker>
+</defs>
+<circle cx="50" cy="150" r="12" fill="none" stroke="#222" stroke-width="1.6"/><text x="50" y="155" font-family="Times New Roman, serif" font-size="14" text-anchor="middle" fill="#222">d</text>
+<line x1="64.0" y1="150.0" x2="150.0" y2="150.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<text x="107" y="138" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="middle" fill="#222">K<tspan baseline-shift="sub" font-size="10">d</tspan></text>
+<circle cx="190" cy="150" r="20" fill="none" stroke="#222" stroke-width="1.6"/><text x="190" y="156" font-family="Times New Roman, serif" font-size="14" text-anchor="middle" fill="#222"><tspan baseline-shift="super" font-size="10">3</tspan>He</text>
+<text x="190" y="190" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="middle" fill="#888">静止</text>
+<line x1="210.0" y1="150.0" x2="520.0" y2="150.0" stroke="#888" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="190.0" y1="128.0" x2="190.0" y2="45.0" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<circle cx="190" cy="30" r="9" fill="none" stroke="#222" stroke-width="1.6"/><text x="190" y="35" font-family="Times New Roman, serif" font-size="13" text-anchor="middle" fill="#222">p</text>
+<text x="205" y="80" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">K<tspan baseline-shift="sub" font-size="10">p</tspan></text>
+<text x="205" y="100" font-family="Noto Sans CJK JP, sans-serif" font-size="12" text-anchor="start" fill="#222">（入射方向と垂直）</text>
+<line x1="208.0" y1="158.0" x2="251.3" y2="270.3" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#q-ab)"/>
+<circle cx="267.28871746483884" cy="290.2858807654296" r="18" fill="none" stroke="#222" stroke-width="1.6"/><text x="267.28871746483884" y="296.2858807654296" font-family="Times New Roman, serif" font-size="14" text-anchor="middle" fill="#222"><tspan baseline-shift="super" font-size="10">4</tspan>He</text>
+<path d="M 250 150 A 60 60 0 0 1 217.2 203.5" fill="none" stroke="#222" stroke-width="1"/>
+<text x="254" y="190" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="start" fill="#222">φ</text>
+</svg>

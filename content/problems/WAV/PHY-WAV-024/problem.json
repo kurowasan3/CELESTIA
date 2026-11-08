@@ -1,0 +1,144 @@
+{
+ "id": "PHY-WAV-024",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "平面波と円形波の重ね合わせ：同位相の点がつくる放物線と，山の交点（高い山）の速さ",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "十分に広い水面上に $xy$ 座標をとる．原点 O にある波源から円形波が広がり，同時に $y$ 軸の正の向きに進む平面波がある．時刻 $t$，位置 $(x,y)$ における水面の変位は，O からの距離を $r=\\sqrt{x^2+y^2}$ として，\n\\[ z_1=a\\cos 2\\pi\\!\\left(\\frac{t}{T}-\\frac{r}{\\lambda}\\right)\\ (\\text{円形波}),\\qquad z_2=a\\cos 2\\pi\\!\\left(\\frac{t}{T}-\\frac{y}{\\lambda}\\right)\\ (\\text{平面波}) \\]\nで表され，水面の変位は $z=z_1+z_2$ である．$a$，$T$，$\\lambda$ は正の定数で，波の速さを $v=\\lambda/T$ とする．円形波の振幅の減衰は無視する（O の近くは考えない）．図は時刻 $t=0$ における2つの波の山の位置を表す．2つの波の山が重なった点を「高い山」とよぶ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "2つの波が常に同位相で振動する点の集まりは，0 以上の整数 $n$ を用いて $r-y=n\\lambda$ と表される．$n\\ge1$ の場合に，この曲線を $y$ を $x$ の式で表した形で求め，どのような曲線か答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$y$ 軸の負の部分（$y<0$）の上で，水面が常に静止している点の位置をすべて求めよ．また，$x$ 軸上で常に同位相で振動する点の位置を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "時刻 $t=0$ に点 P$(4\\lambda,\\,3\\lambda)$ にある高い山は，その後，2つの波の山が重なったまま移動していく．$t=0$ における高い山の速度の $x$ 成分と $y$ 成分，および速さを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の高い山の速度の $x$ 成分が $\\dfrac{v}{4}$ になる時刻を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "曲線 $r-y=2\\lambda$ の上では，ある時刻に頂点で新しい高い山が2つ同時に現れ，互いに反対向きに離れていく．高い山が現れる時刻と頂点の座標を求めよ．また，現れてから時間 $\\tau$ 後の2つの高い山の間の距離を求め，現れた直後の高い山の速さについて述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：平面波と円形波の重ね合わせ：同位相の点がつくる放物線と，山の交点（高い山）の速さ",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：平面波と円形波の重ね合わせ：同位相の点がつくる放物線と，山の交点（高い山）の速さ",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$y=\\dfrac{x^2-n^2\\lambda^2}{2n\\lambda}$，O を焦点とし上に開いた放物線（頂点 $(0,-\\tfrac{n\\lambda}{2})$）"
+   },
+   {
+    "id": "2",
+    "tex": "静止する点：$y=-\\dfrac{(2k+1)\\lambda}{4}$（$k=0,1,2,\\dots$），$x$ 軸上：$x=\\pm n\\lambda$（$n=1,2,\\dots$）"
+   },
+   {
+    "id": "3",
+    "tex": "$\\left(\\dfrac{v}{2},\\ v\\right)$，速さ $\\dfrac{\\sqrt5}{2}v$"
+   },
+   {
+    "id": "4",
+    "tex": "$t=12T=\\dfrac{12\\lambda}{v}$"
+   },
+   {
+    "id": "5",
+    "tex": "時刻 $t=kT$（$k$ は整数），頂点 $(0,-\\lambda)$，距離 $4\\sqrt{\\lambda v\\tau}$．現れた直後の速さは限りなく大きい"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 同位相の点}\n\n$z_1$ と $z_2$ の位相差は $2\\pi\\dfrac{r-y}{\\lambda}$ で時刻によらない．常に同位相になるのは $r-y=n\\lambda$（$r\\ge y$ なので $n\\ge0$）のときである．$\\sqrt{x^2+y^2}=y+n\\lambda$ の両辺を2乗して $x^2=2n\\lambda y+n^2\\lambda^2$，\n\\[ \\boldsymbol{y=\\frac{x^2-n^2\\lambda^2}{2n\\lambda}}. \\]\nこれは O を焦点，直線 $y=-n\\lambda$ を準線とする上に開いた放物線で，頂点は $(0,-\\frac{n\\lambda}{2})$ である（$n=0$ は $y$ 軸の正の部分）．\n\n\\textbf{(2) 軸上の様子}\n\n$y<0$ の $y$ 軸上では $r=-y$ なので位相差は $2\\pi\\cdot\\dfrac{-2y}{\\lambda}$．2つの波は逆向きに進むので定常波ができ，振幅が等しいから逆位相の点で常に $z=0$ になる．$-2y=\\left(k+\\frac12\\right)\\lambda$ より\n\\[ \\boldsymbol{y=-\\frac{(2k+1)\\lambda}{4}}\\quad(k=0,1,2,\\dots). \\]\n節の間隔は $\\lambda/2$ である．$x$ 軸上では $y=0$，$r=|x|$ なので，同位相の点は $\\boldsymbol{x=\\pm n\\lambda}$．（$x$ 軸に沿って見ると，円形波の山は速さ $v$ で外へ進むが，平面波は $x$ 軸上のどこでも同時に振動する．）\n\n\\textbf{(3) 高い山の速度}\n\nP は $r=5\\lambda$，$y=3\\lambda$ で，$r-y=2\\lambda$ の放物線上にある．P を通る平面波の山は $y=3\\lambda+vt$，円形波の山は $r=5\\lambda+vt$ と動くので，高い山の位置は常に $\\dot y=v$，$\\dot r=v$ をみたす．$x^2+y^2=r^2$ を時間で微分すると $x\\dot x+y\\dot y=r\\dot r$ より\n\\[ \\dot x=\\frac{(r-y)v}{x}=\\frac{2\\lambda\\cdot v}{4\\lambda}=\\frac{v}{2}. \\]\nよって速度は $\\boldsymbol{\\left(\\dfrac{v}{2},\\ v\\right)}$，速さは $\\boldsymbol{\\dfrac{\\sqrt5}{2}v}$ で，波の速さ $v$ より大きい．高い山は物体ではなく「2つの山が重なる場所」なので，$v$ を超えても矛盾はない．\n\n\\textbf{(4) 速度の $x$ 成分の変化}\n\nこの高い山は放物線 $x^2=4\\lambda y+4\\lambda^2$ 上を，$y=3\\lambda+vt$ で動くので $x=\\sqrt{16\\lambda^2+4\\lambda vt}$，$\\dot x=\\dfrac{2\\lambda v}{x}$．$\\dot x=\\dfrac{v}{4}$ となるのは $x=8\\lambda$，すなわち $16\\lambda^2+4\\lambda vt=64\\lambda^2$ より $\\boldsymbol{t=\\dfrac{12\\lambda}{v}=12T}$．$\\dot x$ は $1/\\sqrt{t}$ のように $0$ に近づき，$\\dot y=v$ は一定のままである．\n\n\\textbf{(5) 頂点での高い山の誕生}\n\n$r-y=2\\lambda$ の放物線の頂点は $(0,-\\lambda)$ で，この曲線上で $y$ が最も小さい点である．山の重なる点は $y$ が $v$ で増え続けるので，平面波の山が $y=-\\lambda$ に達した瞬間に頂点で初めて現れる．頂点では $r=\\lambda$ であり，$z_2$ の山が $y=-\\lambda$ にくるのは $\\cos2\\pi(t/T+1)=1$，すなわち $\\boldsymbol{t=kT}$（$k$ は整数）のとき（このとき円形波も $r=\\lambda$ が山）．頂点の座標は $\\boldsymbol{(0,-\\lambda)}$．\n\n現れてから $\\tau$ 後には $y=-\\lambda+v\\tau$，$r=\\lambda+v\\tau$ なので\n\\[ x^2=r^2-y^2=4\\lambda v\\tau,\\qquad x=\\pm2\\sqrt{\\lambda v\\tau}. \\]\n2つの高い山の距離は $\\boldsymbol{4\\sqrt{\\lambda v\\tau}}$．$\\dot x=\\sqrt{\\lambda v/\\tau}$ は $\\tau\\to0$ で限りなく大きくなるので，\\textbf{現れた直後の高い山の速さは限りなく大きい}（放物線の頂点に平面波の山が接してから交わる瞬間に対応する）．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "平面波と円形波の位相差は $2\\pi(r-y)/\\lambda$ で決まるので，同位相の点は O を焦点とする放物線 $r-y=n\\lambda$ に並ぶ．2つの山の交点は $\\dot y=v$，$\\dot r=v$ を同時にみたして放物線上を動き，$x\\dot x=(r-y)v$ から速度が求まる．交点は物体ではないので速さは $v$ を超え，放物線の頂点では交点が2つずつ生まれて無限大の速さで離れ始める．"
+ },
+ "concepts": [
+  "wave-basics",
+  "projectile-motion",
+  "superposition"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "重ね合わせ",
+  "干渉",
+  "平面波",
+  "円形波",
+  "放物線",
+  "見かけの速さ"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

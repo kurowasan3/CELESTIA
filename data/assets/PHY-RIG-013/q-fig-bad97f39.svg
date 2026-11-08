@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 330">
+<defs><marker id="q-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker><marker id="q-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="q-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="q-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker></defs>
+<path d="M-60.0,337.6 L396.0,337.6 L600.0,242.4 L144.0,242.4 Z" fill="none" stroke="#888" stroke-width="1"/>
+<path d="M450.0,248.0 L450.0,243.0 L456.0,233.9 L444.0,224.7 L456.0,215.6 L444.0,206.4 L456.0,197.3 L444.0,188.1 L456.0,179.0 L444.0,169.9 L456.0,160.7 L444.0,151.6 L456.0,142.4 L444.0,133.3 L456.0,124.1 L450.0,115.0 L450.0,110.0" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M210.0,262.0 L210.0,257.0 L216.0,248.8 L204.0,240.6 L216.0,232.4 L204.0,224.2 L216.0,216.0 L204.0,207.8 L216.0,199.6 L204.0,191.4 L216.0,183.2 L210.0,175.0 L210.0,170.0" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M90.0,318.0 L90.0,313.0 L96.0,302.9 L84.0,292.7 L96.0,282.6 L84.0,272.4 L96.0,262.3 L84.0,252.1 L96.0,242.0 L84.0,231.9 L96.0,221.7 L84.0,211.6 L96.0,201.4 L84.0,191.3 L96.0,181.1 L90.0,171.0 L90.0,166.0" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M330.0,318.0 L330.0,313.0 L336.0,302.9 L324.0,292.7 L336.0,282.6 L324.0,272.4 L336.0,262.3 L324.0,252.1 L336.0,242.0 L324.0,231.9 L336.0,221.7 L324.0,211.6 L336.0,201.4 L324.0,191.3 L336.0,181.1 L330.0,171.0 L330.0,166.0" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M450.0,102.0 L210.0,102.0 L90.0,158.0 L330.0,158.0 Z" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M330.0,158.0 L90.0,158.0 L90.0,166.0 L330.0,166.0 Z" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M450.0,102.0 L330.0,158.0 L330.0,166.0 L450.0,110.0 Z" fill="none" stroke="#222" stroke-width="1.6"/>
+<path d="M434.0,262.0 L462.0,262.0 L462.0,248.0 L434.0,248.0 Z" fill="none" stroke="#222" stroke-width="1.2"/>
+<path d="M434.0,248.0 L444.0,240.0 L472.0,240.0 L462.0,248.0 Z" fill="none" stroke="#222" stroke-width="1.2"/>
+<path d="M462.0,262.0 L472.0,254.0 L472.0,240.0 L462.0,248.0 Z" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="478.0" y="258.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">厚さ</text>
+<text x="506.0" y="258.0" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222" text-anchor="start">h</text>
+<text x="458.0" y="96.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">A</text>
+<text x="192.0" y="96.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">B</text>
+<text x="70.0" y="166.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">C</text>
+<text x="338.0" y="172.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222" text-anchor="start">D</text>
+<circle cx="330.0" cy="102.0" r="3.5" fill="#c0392b"/>
+<text x="326.0" y="92.0" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#c0392b" text-anchor="start">E</text>
+<circle cx="270.0" cy="130.0" r="2.5" fill="#222"/>
+<text x="276.0" y="144.0" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">G</text>
+<text x="20" y="28" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">正方形の板（一辺 2<tspan font-family="Times New Roman, serif" font-style="italic">a</tspan>，質量 <tspan font-family="Times New Roman, serif" font-style="italic">M</tspan>）</text>
+<text x="20" y="48" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">4本の同じばね（ばね定数 <tspan font-family="Times New Roman, serif" font-style="italic">k</tspan>）</text>
+</svg>

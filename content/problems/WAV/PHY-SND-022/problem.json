@@ -1,0 +1,134 @@
+{
+ "id": "PHY-SND-022",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "風に流される音源のドップラー効果（空気の系への乗り換えと最接近点の振動数）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "地面に対して一定の速度で，速さ $w$ の一様な風が水平に吹いている．空気に対する音の速さは $V\\ (V>w)$ で，音は空気に対してあらゆる向きに速さ $V$ で広がり，その波面全体が風によって運ばれる．振動数 $f_0$ の音を出し続ける小さな気球 B が，空気に対して静止したまま風に流されて，風の向きに平行な直線上を進んでいる．この直線から距離 $D$ 離れた地点に観測者 O が地面に対して静止しており，図のように，B の進路上で O に最も近い点を H とする．高さの違いは無視し，すべて同じ水平面内で考えよ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "B が O からはるか風上にあるとき，およびはるか風下にあるときに O が聞く音の振動数 $f_+$，$f_-$ をそれぞれ求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "B が H を通過する瞬間に出した音を O が聞くときの振動数 $f_{\\rm H}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "O が聞く音の振動数がちょうど $f_0$ になるのは，B がどこで出した音か．H からの距離と，H の風上側か風下側かを答えよ．また，O がその音を聞く瞬間に B はどこにいるか．"
+     },
+     {
+      "id": "4",
+      "tex": "$f_{\\rm H}$ を $f_+$，$f_-$ だけで表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：風に流される音源のドップラー効果（空気の系への乗り換えと最接近点の振動数）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：風に流される音源のドップラー効果（空気の系への乗り換えと最接近点の振動数）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f_+=\\dfrac{V+w}{V}f_0$，$f_-=\\dfrac{V-w}{V}f_0$"
+   },
+   {
+    "id": "2",
+    "tex": "$f_{\\rm H}=\\left(1-\\dfrac{w^2}{V^2}\\right)f_0$"
+   },
+   {
+    "id": "3",
+    "tex": "H から風上側へ距離 $\\dfrac{w}{V}D$ の点で出した音．O が聞く瞬間，B はちょうど H にいる"
+   },
+   {
+    "id": "4",
+    "tex": "$f_{\\rm H}=\\dfrac{2f_+f_-}{f_++f_-}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{考え方}　B は空気に対して静止しているので，\\textbf{空気とともに動く座標系}で考えると，音源 B は静止し，音は B を中心とする球面波（波長 $\\lambda_0=V/f_0$）として広がる．この系では観測者 O だけが風上向きに速さ $w$ で動いている．したがってこれは「静止音源と動く観測者」のドップラー効果である．\n\n\\textbf{空気の系での振動数}　O の速度は $-\\vec w$．ある瞬間に O が受け取る波は，B から O へ向かう向き（単位ベクトル $\\vec n$）に進んでいる．O の速度の，B へ近づく向き（$-\\vec n$）の成分は $(-\\vec w)\\cdot(-\\vec n)=\\vec w\\cdot\\vec n$ なので\n\\[ f=\\frac{V+\\vec w\\cdot\\vec n}{\\lambda_0}=f_0\\left(1+\\frac{\\vec w\\cdot\\vec n}{V}\\right) \\]\nここで $\\vec n$ は，空気の系で\\textbf{音を聞く瞬間の} B から O への向きである．2点の相対位置は座標系によらないので，$\\vec n$ は地面の系で「聞く瞬間の B の位置」から O へ向かう向きと同じである（音を出した位置ではない点に注意）．\n\n\\textbf{(1)}　B がはるか風上にあれば，聞く瞬間の B も風上にあり $\\vec n$ は風の向き：$\\vec w\\cdot\\vec n=w$．はるか風下では $\\vec w\\cdot\\vec n=-w$．よって\n\\[ f_+=\\boldsymbol{\\frac{V+w}{V}f_0},\\qquad f_-=\\boldsymbol{\\frac{V-w}{V}f_0} \\]\n（地面の系でも，風上から近づく B の音は地面に対して $V+w$ で進み，B は速さ $w$ で近づくので $f_0\\dfrac{V+w}{(V+w)-w}$ となり一致する．）\n\n\\textbf{(2)}　B が H で音を出してから O が聞くまでの時間を $\\tau$ とする．空気の系では B は静止しており，音は B から距離 $V\\tau$ だけ進んで O に達する．地面の系で見ると，聞く瞬間に B は H から風下へ $w\\tau$ 進んだ位置にあり，そこから O までの距離が $V\\tau$ に等しい：\n\\[ (w\\tau)^2+D^2=(V\\tau)^2\\quad\\therefore\\quad\\tau=\\frac{D}{\\sqrt{V^2-w^2}} \\]\nこのとき $\\vec n$ は風下側の B から O への向きなので $\\vec w\\cdot\\vec n=-w\\cdot\\dfrac{w\\tau}{V\\tau}=-\\dfrac{w^2}{V}$．よって\n\\[ f_{\\rm H}=\\boldsymbol{\\left(1-\\frac{w^2}{V^2}\\right)f_0} \\]\nH では B は O に対して近づきも遠ざかりもしないが，振動数は $f_0$ にならず，わずかに低い．\n\n（別解：地面の系では，H から O への向き（風に垂直）に進む音の速さは $\\sqrt{V^2-w^2}$ で，B が H から $\\Delta x=w\\Delta t$ ずれて出した音は，O へ向かう向きが風に垂直からわずかに傾くため速さが $\\dfrac{w\\cdot w\\Delta t}{D}$ だけ減る（O までの距離の変化は $\\Delta t$ の2次なので無視できる）．到着時刻の遅れから，受け取る周期は $\\left(1+\\dfrac{w^2}{V^2-w^2}\\right)$ 倍となり，同じ結果を得る．）\n\n\\textbf{(3)}　$f=f_0$ となるのは $\\vec w\\cdot\\vec n=0$，すなわち聞く瞬間の B から O への向きが風に垂直なとき，つまり\\textbf{聞く瞬間に B がちょうど H にいる}ときである．このとき B と O の距離は $D=V\\tau'$（$\\tau'$ は音を出してから聞くまでの時間）なので $\\tau'=\\dfrac{D}{V}$．その間に B は $w\\tau'$ 進んだから，音を出したのは H から\\textbf{風上側へ} $\\boldsymbol{\\dfrac{w}{V}D}$ の点である．\n\n\\textbf{(4)}　$f_+f_-=\\left(1-\\dfrac{w^2}{V^2}\\right)f_0^2=f_0f_{\\rm H}$，$f_++f_-=2f_0$ より\n\\[ f_{\\rm H}=\\frac{f_+f_-}{f_0}=\\boldsymbol{\\frac{2f_+f_-}{f_++f_-}} \\]\nすなわち $f_{\\rm H}$ は $f_+$ と $f_-$ の調和平均で，相加平均 $f_0$ より小さい．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "風に流される音源は空気に対して静止しているので，空気の系に移ると「静止音源と風上へ動く観測者」のドップラー効果になり，振動数は聞く瞬間の音源の位置から観測者への向きと風のなす角だけで決まる．そのため最接近点で出た音は $f_0$ より低い（遠方での2つの振動数の調和平均）値になり，$f_0$ が聞こえるのは音源がちょうど最接近点にいる瞬間である．"
+ },
+ "concepts": [
+  "string-resonance",
+  "doppler"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "風",
+  "座標系の選択",
+  "調和平均",
+  "斜めのドップラー効果"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

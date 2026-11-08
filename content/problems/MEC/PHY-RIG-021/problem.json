@@ -1,0 +1,139 @@
+{
+ "id": "PHY-RIG-021",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "質量の無視できる棒でつないだ回転子への衝突と支点が受ける力積（打撃の中心）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "鉛直でなめらかな壁の面上の点 O に，質量の無視できる変形しない棒の1点がくぎで留められており，棒は O を軸として壁面に沿って（鉛直面内で）なめらかに回転できる．図のように，棒が鉛直に下がっているとき，O の上方 $\\ell$ の位置に質量 $m$ の小球 B，O の下方 $\\ell$ の位置に質量 $3m$ の小球 A が固定され，棒の下端 D は O の下方 $2\\ell$ にある．棒と小球をあわせて回転子とよぶ．D が最下点にあるとき，D は水平でなめらかな床のすぐ上にある．小球の大きさ，摩擦，空気抵抗は無視し，重力加速度の大きさを $g$ とする．\n\n棒の質量は無視できるので，棒にはたらく力の合力，および棒にはたらく O のまわりの力のモーメントの和は常に $0$ である．衝突のように短い時間にはたらく大きな力についても，その力積について同じ関係が成り立つ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒が鉛直下向きから角 $\\theta$ だけ回転した位置にあるとき，小球 A の円周方向の加速度を $a$（$\\theta$ が増す向きを正）とする．A と B の円周方向の運動方程式と棒のモーメントのつり合いから $a$ を $g$，$\\theta$ で表せ．また，回転子の微小振動の周期を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "回転子が静止して D が最下点にあるとき，床の上を速さ $u$ で進んできた質量 $2m$ の小物体 C が D に正面から衝突した．衝突の前後で C と回転子の運動エネルギーの和は保存されるものとする．衝突直後の C の速度と D の速さを求めよ．C の速度は衝突前の C の向きを正とする．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の衝突の間に，くぎが棒に及ぼした力積を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "棒の A より下の部分を取り除き，C が A に直接衝突するように床の高さを変えて，(2) と同じ条件で衝突させた．衝突直後の C の速度と A の速さ，およびくぎが棒に及ぼした力積（C の進む向きを正）を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(2) の衝突の直後に，くぎが棒に及ぼす力の向きと大きさを求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(2) の衝突の後，回転子が最下点から振れる最大の角を $\\theta_{\\max}$ とする．$\\cos\\theta_{\\max}$ を求めよ．また，回転子が最高点を越えて回り続けるための $u$ の条件を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：質量の無視できる棒でつないだ回転子への衝突と支点が受ける力積（打撃の中心）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$a=-\\dfrac{g}{2}\\sin\\theta$，周期 $2\\pi\\sqrt{\\dfrac{2\\ell}{g}}$"
+   },
+   {
+    "id": "2",
+    "tex": "C：$\\dfrac{u}{3}$，D：$\\dfrac{4u}{3}$"
+   },
+   {
+    "id": "3",
+    "tex": "$0$"
+   },
+   {
+    "id": "4",
+    "tex": "C：$-\\dfrac{u}{3}$（はね返る），A：$\\dfrac{2u}{3}$，力積 $-\\dfrac{4mu}{3}$（C の進む向きと逆向きに大きさ $\\dfrac{4mu}{3}$）"
+   },
+   {
+    "id": "5",
+    "tex": "鉛直上向きに $4mg+\\dfrac{8mu^2}{9\\ell}$"
+   },
+   {
+    "id": "6",
+    "tex": "$\\cos\\theta_{\\max}=1-\\dfrac{4u^2}{9g\\ell}$，$u>3\\sqrt{\\dfrac{g\\ell}{2}}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 質量のない棒を介した運動方程式}\n\nA と B は O から同じ距離 $\\ell$ にあるので，$\\theta$ が増す向きの円周方向の加速度はどちらも $a$ である．棒が A，B に及ぼす力の円周方向成分を $F_{\\rm A}$，$F_{\\rm B}$（$\\theta$ が増す向きを正）とする．A は O の下側，B は上側にあるので，重力の円周方向成分は A では $-3mg\\sin\\theta$，B では $+mg\\sin\\theta$ となり，\n\\[ 3ma=-3mg\\sin\\theta+F_{\\rm A},\\qquad ma=mg\\sin\\theta+F_{\\rm B}. \\]\n棒は A，B から $-F_{\\rm A}$，$-F_{\\rm B}$ を受け，どちらも O から $\\ell$ の点で同じ回転の向きにはたらくので，モーメントのつり合いは $(-F_{\\rm A}-F_{\\rm B})\\ell=0$ すなわち $F_{\\rm A}+F_{\\rm B}=0$．2式を加えて\n\\[ 4ma=-2mg\\sin\\theta\\quad\\Longrightarrow\\quad \\boldsymbol{a=-\\frac{g}{2}\\sin\\theta}. \\]\n微小振動では A の弧の変位 $x=\\ell\\theta$ に対し $a=-\\dfrac{g}{2\\ell}x$ となるので，周期は $\\boldsymbol{2\\pi\\sqrt{2\\ell/g}}$．長さ $2\\ell$ の単振り子と同じである．\n\n\\textbf{(2) D は質量 $m$ の物体のようにふるまう}\n\n衝突直後の回転子の角速度を $\\omega$ とすると，A，B の速さは $\\ell\\omega$，D の速さは $v_{\\rm D}=2\\ell\\omega$．衝突の間に C が D に及ぼす力積を $P$ とする．A，B が得た運動量 $3m\\ell\\omega$，$m\\ell\\omega$ は棒から受けた力積であり，棒はその反作用を受ける．衝突の間の重力やくぎの力のモーメント（くぎの力は O にはたらく）は無視できるので，棒の O のまわりの力積のモーメントのつり合いより\n\\[ P\\cdot 2\\ell=3m\\ell\\omega\\cdot\\ell+m\\ell\\omega\\cdot\\ell\\quad\\Longrightarrow\\quad P=2m\\ell\\omega=m v_{\\rm D}. \\]\n運動エネルギーは $\\frac12(3m+m)(\\ell\\omega)^2=\\frac12 m v_{\\rm D}^2$ と書ける．よって D は「質量 $m$ の物体」として扱える．C の衝突後の速度を $u'$ とすると\n\\[ 2mu=2mu'+mv_{\\rm D},\\qquad \\frac12(2m)u^2=\\frac12(2m)u'^2+\\frac12 mv_{\\rm D}^2 \\]\n（第1式は C の運動量変化 $=-P$）．$v_{\\rm D}\\neq0$ の解は $\\boldsymbol{u'=\\dfrac{u}{3}}$，$\\boldsymbol{v_{\\rm D}=\\dfrac{4u}{3}}$．\n\n\\textbf{(3) くぎの力積}\n\n衝突直後，A は C の向きに $\\ell\\omega$，B は逆向きに $\\ell\\omega$ で動く（$\\omega=\\dfrac{2u}{3\\ell}$）．くぎの力積を $J$（C の向きを正）とすると，棒の力積のつり合い（合力が $0$）は\n\\[ P-3m\\ell\\omega+m\\ell\\omega+J=0 \\quad\\Longrightarrow\\quad J=2m\\ell\\omega-P=\\boldsymbol{0}. \\]\n（回転子全体の運動量 $3m\\ell\\omega-m\\ell\\omega=2m\\ell\\omega$ が C からの力積 $P$ だけでまかなわれる，とみても同じ．）D は O からの距離が，この回転子と同じ周期の単振り子の長さ $2\\ell$ にちょうど等しい点（打撃の中心）であり，そこをたたいても軸は力積を受けない．\n\n\\textbf{(4) A に当てた場合}\n\nO のまわりの力積のモーメント $P\\ell=4m\\ell^2\\omega$ より $P=4m\\ell\\omega=4m v_{\\rm A}$．A は質量 $4m$ の物体のようにふるまう．\n\\[ 2mu=2mu''+4mv_{\\rm A},\\qquad mu^2=mu''^2+2mv_{\\rm A}^2 \\]\nより $\\boldsymbol{u''=-\\dfrac{u}{3}}$（C ははね返る），$\\boldsymbol{v_{\\rm A}=\\dfrac{2u}{3}}$．このとき $P=\\dfrac{8mu}{3}$，$\\omega=\\dfrac{2u}{3\\ell}$ で，力積のつり合い $P-3m\\ell\\omega+m\\ell\\omega+J=0$ から\n\\[ J=2m\\ell\\omega-P=\\frac{4mu}{3}-\\frac{8mu}{3}=\\boldsymbol{-\\frac{4mu}{3}}. \\]\nくぎは C の進む向きと逆向きに大きさ $\\dfrac{4mu}{3}$ の力積を与える（棒はくぎを C の向きに押す）．\n\n\\textbf{(5) 衝突直後のくぎの力}\n\n衝突直後，棒は鉛直なので重力のモーメントは $0$ であり，A，B の円周方向（水平）の加速度は $0$ である．よってくぎの力は鉛直方向のみ．A は O に向かう（上向き）向心加速度 $\\ell\\omega^2$，B は O に向かう（下向き）向心加速度 $\\ell\\omega^2$ をもつ．棒は質量がないので，A，B と棒をひとまとめにすると，外力はくぎの力 $F$（上向き正）と重力だけで，\n\\[ 3m\\ell\\omega^2-m\\ell\\omega^2=F-4mg\\quad\\Longrightarrow\\quad F=4mg+2m\\ell\\omega^2=\\boldsymbol{4mg+\\frac{8mu^2}{9\\ell}} \\]\n（鉛直上向き）．\n\n\\textbf{(6) 最大の振れ角}\n\n衝突後は力学的エネルギーが保存する．回転子の重心は O の下方 $\\dfrac{3m\\ell-m\\ell}{4m}=\\dfrac{\\ell}{2}$ にあるので，角 $\\theta$ での位置エネルギーの増加は $4mg\\cdot\\dfrac{\\ell}{2}(1-\\cos\\theta)$．運動エネルギー $\\frac12(4m)(\\ell\\omega)^2=2m\\ell^2\\omega^2$ がすべてこれに変わるので\n\\[ 2m\\ell^2\\omega^2=2mg\\ell(1-\\cos\\theta_{\\max})\\quad\\Longrightarrow\\quad \\boldsymbol{\\cos\\theta_{\\max}=1-\\frac{4u^2}{9g\\ell}}. \\]\n棒は変形しないので，最高点（$\\theta=\\pi$）で角速度が $0$ にならなければ回り続ける．$1-\\dfrac{4u^2}{9g\\ell}<-1$ より $\\boldsymbol{u>3\\sqrt{\\dfrac{g\\ell}{2}}}$．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "質量のない棒でつながれた回転子では，棒にはたらく力（力積）の O のまわりのモーメントが 0 という条件から，棒上の点ごとに「その点で見た実効的な質量」$I/r^2$ が決まり，衝突は1次元の衝突として解ける．軸の力積は運動量のつり合いから求まり，O からの距離が等価単振り子の長さに等しい点（打撃の中心）をたたいたときだけ 0 になる．"
+ },
+ "concepts": [
+  "torque",
+  "simple-pendulum",
+  "restitution"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "剛体の回転",
+  "力のモーメント",
+  "打撃の中心",
+  "弾性衝突",
+  "支点の力積",
+  "等価単振り子"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

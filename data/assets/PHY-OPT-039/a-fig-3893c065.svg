@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380">
+<defs><marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<g font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">
+<text x="40" y="24">(2) 下から入射</text><text x="330" y="24">(3) 上から入射</text></g>
+<!-- LEFT panel: center x=150, bottom y=300, vertex y=180, surface y=180+ (x-150)^2/200 -->
+<line x1="30" y1="300" x2="270" y2="300" stroke="#222" stroke-width="1.6"/>
+<path d="M50,140 Q150,220 250,140" fill="none" stroke="#222" stroke-width="1.6"/>
+<line x1="150" y1="40" x2="150" y2="360" stroke="#888" stroke-width="1" stroke-dasharray="8,3,2,3"/>
+<!-- rays at x=190 and 110: surface y = 180+ (40^2)/200=188 -->
+<line x1="190" y1="350" x2="190" y2="174" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="190" y1="174" x2="226" y2="60" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<line x1="110" y1="350" x2="110" y2="174" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="110" y1="174" x2="74" y2="60" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<line x1="190" y1="174" x2="150" y2="330" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="110" y1="174" x2="150" y2="330" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<circle cx="150" cy="330" r="3" fill="#c0392b"/>
+<text x="158" y="345" font-family="Times New Roman, serif" font-size="15" fill="#c0392b">F</text>
+<circle cx="150" cy="180" r="2.5" fill="#222"/><text x="132" y="176" font-family="Times New Roman, serif" font-size="14" fill="#222">O</text>
+<!-- normal at 190 -->
+<line x1="190" y1="174" x2="178" y2="114" stroke="#888" stroke-width="1"/>
+<text x="150" y="108" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222">法線</text>
+<text x="218" y="140" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#1f5fbf">δ</text>
+<!-- RIGHT panel: center x=450 -->
+<line x1="330" y1="300" x2="570" y2="300" stroke="#222" stroke-width="1.6"/>
+<path d="M350,140 Q450,220 550,140" fill="none" stroke="#222" stroke-width="1.6"/>
+<line x1="450" y1="40" x2="450" y2="370" stroke="#888" stroke-width="1" stroke-dasharray="8,3,2,3"/>
+<line x1="490" y1="50" x2="490" y2="174" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="490" y1="174" x2="505" y2="300" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="505" y1="300" x2="530" y2="365" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<line x1="410" y1="50" x2="410" y2="174" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="410" y1="174" x2="395" y2="300" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="395" y1="300" x2="370" y2="365" stroke="#1f5fbf" stroke-width="1.8" marker-end="url(#a-ab)"/>
+<line x1="505" y1="300" x2="450" y2="157" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<line x1="395" y1="300" x2="450" y2="157" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+<circle cx="450" cy="157" r="3" fill="#c0392b"/>
+<text x="456" y="150" font-family="Times New Roman, serif" font-size="15" fill="#c0392b">F′</text>
+<line x1="580" y1="157" x2="580" y2="300" stroke="#222" stroke-width="1" marker-start="url(#a-ar)" marker-end="url(#a-ar)"/>
+<line x1="455" y1="157" x2="585" y2="157" stroke="#888" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="584" y="235" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">D</text>
+<line x1="340" y1="180" x2="340" y2="300" stroke="#222" stroke-width="1" marker-start="url(#a-ar)" marker-end="url(#a-ar)"/>
+<text x="318" y="245" font-family="Times New Roman, serif" font-style="italic" font-size="15" fill="#222">z<tspan baseline-shift="sub" font-size="10">0</tspan></text>
+<line x1="335" y1="180" x2="450" y2="180" stroke="#888" stroke-width="1" stroke-dasharray="2,3"/>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260">
+<defs><marker id="q-ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fbf"/></marker></defs>
+<!-- pump cylinder -->
+<line x1="60" y1="100" x2="250" y2="100" stroke="#222" stroke-width="1.6"/>
+<line x1="60" y1="160" x2="250" y2="160" stroke="#222" stroke-width="1.6"/>
+<line x1="250" y1="100" x2="250" y2="122" stroke="#222" stroke-width="1.6"/>
+<line x1="250" y1="138" x2="250" y2="160" stroke="#222" stroke-width="1.6"/>
+<!-- piston -->
+<rect x="90" y="101" width="14" height="58" fill="#ddd" stroke="#222" stroke-width="1.6"/>
+<line x1="20" y1="130" x2="90" y2="130" stroke="#222" stroke-width="3"/>
+<line x1="20" y1="118" x2="20" y2="142" stroke="#222" stroke-width="3"/>
+<!-- swept volume brace -->
+<line x1="104" y1="180" x2="250" y2="180" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="104" y1="172" x2="104" y2="188" stroke="#888" stroke-width="1"/>
+<line x1="250" y1="172" x2="250" y2="188" stroke="#888" stroke-width="1"/>
+<text x="170" y="203" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">行程体積 <tspan font-family="Times New Roman, serif" font-style="italic">v</tspan></text>
+<!-- intake valve on top -->
+<line x1="200" y1="100" x2="200" y2="70" stroke="#222" stroke-width="1.6"/>
+<line x1="216" y1="100" x2="216" y2="70" stroke="#222" stroke-width="1.6"/>
+<polygon points="200,86 216,86 208,94" fill="#222"/>
+<text x="168" y="62" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">吸気弁</text>
+<!-- pipe to tank with valve K -->
+<line x1="250" y1="122" x2="360" y2="122" stroke="#222" stroke-width="1.6"/>
+<line x1="250" y1="138" x2="360" y2="138" stroke="#222" stroke-width="1.6"/>
+<polygon points="296,122 296,138 310,130" fill="#222"/>
+<line x1="311" y1="122" x2="311" y2="138" stroke="#222" stroke-width="1.6"/>
+<text x="296" y="113" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">K</text>
+<!-- tank -->
+<rect x="360" y="60" width="160" height="140" rx="14" fill="none" stroke="#222" stroke-width="1.6"/>
+<text x="405" y="125" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">タンク</text>
+<text x="420" y="150" font-family="Noto Sans CJK JP, sans-serif" font-size="15" fill="#222">容積 <tspan font-family="Times New Roman, serif" font-style="italic">V</tspan></text>
+<!-- atmosphere -->
+<text x="30" y="40" font-family="Noto Sans CJK JP, sans-serif" font-size="14" fill="#222">大気 圧力 <tspan font-family="Times New Roman, serif" font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="10">0</tspan></text>
+<text x="20" y="240" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222">ピストンを押しきると体積0（すき間なし）</text>
+</svg>

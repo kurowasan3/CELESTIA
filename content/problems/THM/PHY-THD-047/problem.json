@@ -1,0 +1,143 @@
+{
+ "id": "PHY-THD-047",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "飽和蒸気と気体を仕切るピストン（液体がなくなる瞬間に定圧から変圧へ切り替わる状態変化）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，断面積 $S$，高さ $H$ の円筒容器を鉛直に立て，なめらかに動く質量 $M$ の薄いピストンで上下の部屋 A，B に仕切った．容器の上端と下端は閉じている．ピストンと容器の A の部分は熱を通さない．\n\nB には物質 X が全部で $n_{\\rm B}$ mol 入っている．B の部分の壁は温度 $T_{\\rm B}$ の恒温槽に接していて，B 内の X はつねに温度 $T_{\\rm B}$ である．温度 $T_{\\rm B}$ での X の飽和蒸気圧を $p_{\\rm s}$，温度 $T_{\\rm B}$，圧力 $p_{\\rm s}$ のもとで X の液体 1 mol を蒸発させるのに必要な熱量を $L$ とする．X の液体の体積は無視でき，X の蒸気は理想気体として扱える．\n\nA には単原子分子理想気体が $n_{\\rm A}$ mol 入っていて，その温度 $T_{\\rm A}$ はヒーター兼冷却器によってゆっくり変えられる．気体定数を $R$，重力加速度の大きさを $g$ とし，$p_{\\rm s}S>Mg$ とする．ピストンの厚さは無視し，B の底からピストンまでの高さを $h$ とする．\n\nはじめ $T_{\\rm A}=T_0$ で，B の底には X の液体が少量残っていた．ここから $T_{\\rm A}$ をゆっくり下げていく．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "B に液体が残っている間の A の気体の圧力 $p_{\\rm A}$ を求め，$h$ を $T_{\\rm A}$ の式で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "液体がちょうどなくなるときの $T_{\\rm A}$ の値 $T_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$T_{\\rm A}<T_1$ では，$T_{\\rm A}$ を $h$ の式で表せ．また，$T_{\\rm A}$ を限りなく $0$ に近づけるとき，$h$ はどの値に近づくか．$n_{\\rm B}RT_{\\rm B}$ と $MgH$ の大小で場合分けして答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$h$ を $T_{\\rm A}$ の関数とみたグラフは $T_{\\rm A}=T_1$ で折れ曲がる．$h_1=\\dfrac{n_{\\rm B}RT_{\\rm B}}{p_{\\rm s}S}$ とおいて，$T_1$ のすぐ下とすぐ上での傾き $\\dfrac{dh}{dT_{\\rm A}}$ の比 $\\dfrac{(\\text{すぐ下の傾き})}{(\\text{すぐ上の傾き})}$ を求め，傾きの大きさはどちら側が大きいか答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$T_{\\rm A}$ を $T_0$ から $T_1$ まで下げる間に，B 内の X が恒温槽から吸収した熱量 $Q_{\\rm B}$ と，A の気体が放出した熱量 $Q_{\\rm A}$ を，$T_0$，$T_1$ などを用いて表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：飽和蒸気と気体を仕切るピストン（液体がなくなる瞬間に定圧から変圧へ切り替わる状態変化）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：飽和蒸気と気体を仕切るピストン（液体がなくなる瞬間に定圧から変圧へ切り替わる状態変化）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$p_{\\rm A}=p_{\\rm s}-\\dfrac{Mg}{S}$，$h=H-\\dfrac{n_{\\rm A}RT_{\\rm A}}{p_{\\rm s}S-Mg}$"
+   },
+   {
+    "id": "2",
+    "tex": "$T_1=\\dfrac{(p_{\\rm s}S-Mg)(p_{\\rm s}SH-n_{\\rm B}RT_{\\rm B})}{n_{\\rm A}Rp_{\\rm s}S}$"
+   },
+   {
+    "id": "3",
+    "tex": "$T_{\\rm A}=\\dfrac{(H-h)(n_{\\rm B}RT_{\\rm B}-Mgh)}{n_{\\rm A}Rh}$；$n_{\\rm B}RT_{\\rm B}<MgH$ のとき $h\\to\\dfrac{n_{\\rm B}RT_{\\rm B}}{Mg}$，$n_{\\rm B}RT_{\\rm B}\\geqq MgH$ のとき $h\\to H$（ピストンは上端に近づく）"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{h_1(p_{\\rm s}S-Mg)}{p_{\\rm s}SH-Mgh_1}$（$<1$），すぐ上（液体が残っている側）の方が大きい"
+   },
+   {
+    "id": "5",
+    "tex": "$Q_{\\rm B}=\\dfrac{n_{\\rm A}p_{\\rm s}SL\\,(T_0-T_1)}{(p_{\\rm s}S-Mg)T_{\\rm B}}$，$Q_{\\rm A}=\\dfrac52n_{\\rm A}R\\,(T_0-T_1)$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 液体が残っている間}\n\nB に液体と蒸気が共存している間，蒸気の圧力は温度 $T_{\\rm B}$ だけで決まる飽和蒸気圧 $p_{\\rm s}$ に等しく，B の体積が変わっても変化しない（体積が増えれば液体が蒸発し，減れば凝縮するだけである）．ピストンのつり合い $p_{\\rm s}S=p_{\\rm A}S+Mg$ より\n\\[ p_{\\rm A}=\\boldsymbol{p_{\\rm s}-\\frac{Mg}{S}} \\]\nで一定となり，A の気体は定圧変化をする．A の状態方程式 $p_{\\rm A}S(H-h)=n_{\\rm A}RT_{\\rm A}$ より\n\\[ h=\\boldsymbol{H-\\frac{n_{\\rm A}RT_{\\rm A}}{p_{\\rm s}S-Mg}} \\]\n$T_{\\rm A}$ を下げると A が縮んでピストンは上がり，B では液体が蒸発していく．\n\n\\textbf{(2) 液体がなくなる温度}\n\n液体がちょうどなくなるとき，$n_{\\rm B}$ mol すべてが圧力 $p_{\\rm s}$，温度 $T_{\\rm B}$ の蒸気なので，$p_{\\rm s}Sh_1=n_{\\rm B}RT_{\\rm B}$ より $h_1=\\dfrac{n_{\\rm B}RT_{\\rm B}}{p_{\\rm s}S}$．これを(1)の式に代入して\n\\[ T_1=\\frac{(p_{\\rm s}S-Mg)(H-h_1)}{n_{\\rm A}R}=\\boldsymbol{\\frac{(p_{\\rm s}S-Mg)(p_{\\rm s}SH-n_{\\rm B}RT_{\\rm B})}{n_{\\rm A}Rp_{\\rm s}S}} \\]\n\n\\textbf{(3) 液体がなくなった後}\n\nB の蒸気は物質量 $n_{\\rm B}$，温度 $T_{\\rm B}$ の理想気体になり，圧力は $p_{\\rm B}=\\dfrac{n_{\\rm B}RT_{\\rm B}}{Sh}$ と体積で変わるようになる．ピストンのつり合い $p_{\\rm B}S=p_{\\rm A}S+Mg$ に $p_{\\rm A}=\\dfrac{n_{\\rm A}RT_{\\rm A}}{S(H-h)}$ を代入して\n\\[ \\frac{n_{\\rm B}RT_{\\rm B}}{h}=\\frac{n_{\\rm A}RT_{\\rm A}}{H-h}+Mg\\quad\\therefore\\quad T_{\\rm A}=\\boldsymbol{\\frac{(H-h)(n_{\\rm B}RT_{\\rm B}-Mgh)}{n_{\\rm A}Rh}} \\]\n$h=h_1$ では $n_{\\rm B}RT_{\\rm B}/h_1=p_{\\rm s}S$ なので(2)の $T_1$ に一致し，グラフはつながっている．右辺は $h$ について単調に減少する（$(H-h)$ も $(n_{\\rm B}RT_{\\rm B}/h-Mg)$ も正で減少する）ので，$T_{\\rm A}$ を下げるとピストンは上がり続ける．\n\n$T_{\\rm A}\\to0$ では右辺の $(H-h)$ か $(n_{\\rm B}RT_{\\rm B}-Mgh)$ が $0$ に近づかなければならない．$n_{\\rm B}RT_{\\rm B}<MgH$ なら，先に $n_{\\rm B}RT_{\\rm B}-Mgh\\to0$ となり，$h\\to\\boldsymbol{\\dfrac{n_{\\rm B}RT_{\\rm B}}{Mg}}$（A の圧力が $0$ になり，B の蒸気だけでピストンを支える位置）．$n_{\\rm B}RT_{\\rm B}\\geqq MgH$ なら，B の蒸気はピストンを上端まで押し上げる力をもち，$h\\to\\boldsymbol{H}$ となる．\n\n\\textbf{(4) グラフの折れ曲がり}\n\nすぐ上（液体あり）では(1)より $\\dfrac{dh}{dT_{\\rm A}}=-\\dfrac{n_{\\rm A}R}{p_{\\rm s}S-Mg}$．\nすぐ下（液体なし）では(3)の式を $h$ で微分して\n\\[ \\frac{dT_{\\rm A}}{dh}=-\\frac{1}{n_{\\rm A}R}\\left\\{\\left(\\frac{n_{\\rm B}RT_{\\rm B}}{h}-Mg\\right)+(H-h)\\frac{n_{\\rm B}RT_{\\rm B}}{h^2}\\right\\} \\]\n$h=h_1$ で $\\dfrac{n_{\\rm B}RT_{\\rm B}}{h_1}=p_{\\rm s}S$ を使うと $\\dfrac{dT_{\\rm A}}{dh}=-\\dfrac{1}{n_{\\rm A}R}\\left\\{(p_{\\rm s}S-Mg)+\\dfrac{(H-h_1)p_{\\rm s}S}{h_1}\\right\\}$．したがって\n\\[ \\frac{(\\text{すぐ下})}{(\\text{すぐ上})}=\\frac{p_{\\rm s}S-Mg}{(p_{\\rm s}S-Mg)+\\frac{(H-h_1)p_{\\rm s}S}{h_1}}=\\boldsymbol{\\frac{h_1(p_{\\rm s}S-Mg)}{p_{\\rm s}SH-Mgh_1}} \\]\n$h_1<H$ なので分母の方が大きく，この比は $1$ より小さい．傾きの大きさは\\textbf{すぐ上（液体が残っている側）の方が大きい}．液体があるうちは B の圧力が一定で，B は「どこまでも柔らかいばね」として A の収縮をそのまま許すが，液体がなくなると B の圧力がピストンの上昇とともに下がって A の収縮に抵抗するため，ピストンは上がりにくくなる．\n\n\\textbf{(5) 熱量}\n\nA は定圧変化なので，単原子分子の定圧モル比熱 $\\frac52R$ を用いて $Q_{\\rm A}=\\boldsymbol{\\frac52n_{\\rm A}R(T_0-T_1)}$．\n\nB では，温度 $T_{\\rm B}$，圧力 $p_{\\rm s}$ のまま蒸気の体積が $S(h_1-h_0)$ だけ増えた（$h_0$ は $T_{\\rm A}=T_0$ でのピストンの高さ）．蒸発した物質量は\n\\[ \\Delta n=\\frac{p_{\\rm s}S(h_1-h_0)}{RT_{\\rm B}},\\qquad h_1-h_0=\\frac{n_{\\rm A}R(T_0-T_1)}{p_{\\rm s}S-Mg} \\]\n（(1)の式の差）より $\\Delta n=\\dfrac{n_{\\rm A}p_{\\rm s}S(T_0-T_1)}{(p_{\\rm s}S-Mg)T_{\\rm B}}$．蒸発は温度 $T_{\\rm B}$，圧力 $p_{\\rm s}$ のもとで起こるので，1 mol あたり $L$ の熱を恒温槽から吸収する（$L$ には蒸気がピストンを押す仕事の分も含まれている）．よって\n\\[ Q_{\\rm B}=L\\Delta n=\\boldsymbol{\\frac{n_{\\rm A}p_{\\rm s}SL\\,(T_0-T_1)}{(p_{\\rm s}S-Mg)T_{\\rm B}}} \\]\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "液体と蒸気が共存する限り B の圧力は温度だけで決まる一定値なので，ピストンを介して A は定圧変化をする．液体がなくなった瞬間に B は体積で圧力が変わる理想気体に切り替わり，A の温度とピストンの位置の関係が直線から曲線に変わって，グラフが折れ曲がる．"
+ },
+ "concepts": [
+  "first-law",
+  "equilibrium",
+  "ideal-gas"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "飽和蒸気圧",
+  "定圧変化",
+  "状態の切り替わり",
+  "ピストンのつり合い",
+  "蒸発熱"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

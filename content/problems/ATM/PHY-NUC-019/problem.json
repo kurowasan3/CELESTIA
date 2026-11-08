@@ -1,0 +1,131 @@
+{
+ "id": "PHY-NUC-019",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "距離の3乗に反比例する仮想的な引力を加えたボーア模型：量子数の2乗のずれ，基底状態の消失と線スペクトルの比による検出",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水素原子のボーア模型で，原子核は静止しているとし，電子（質量 $m$，電荷 $-e$）は原子核を中心とする半径 $r$ の等速円運動をする．クーロンの法則の比例定数を $k$，プランク定数を $h$ とし，量子条件は $mvr=n\\dfrac{h}{2\\pi}$（$n=1,2,3,\\dots$）とする．\nいま，クーロン力のほかに，電子と原子核の間に大きさ $\\dfrac{\\beta}{r^3}$（$\\beta>0$ は定数）の仮想的な引力がはたらくとする．$a_0=\\dfrac{h^2}{4\\pi^2mke^2}$，$E_0=\\dfrac{2\\pi^2mk^2e^4}{h^2}$，$\\varepsilon=\\dfrac{4\\pi^2m\\beta}{h^2}$ とおく．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "量子数 $n$ の軌道半径 $r_n$ を $a_0$，$n$，$\\varepsilon$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "無限遠を基準とした，この引力による位置エネルギーを $r$ の関数として求めよ．また，量子数 $n$ の状態のエネルギー $E_n$（運動エネルギーと2つの位置エネルギーの和）を $E_0$，$n$，$\\varepsilon$ で表し，$E_n=-\\dfrac{ke^2}{2r_n}$ が成り立つことを示せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\beta$ がある値 $\\beta_{\\rm c}$ 以上になると，$n=1$ の軌道が存在しなくなる．$\\beta_{\\rm c}$ を $m$，$h$ で表せ．また，その理由を，円運動に必要な向心力と2つの引力の $r$ による変わり方を比べて説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\varepsilon\\ll1$ とし，$\\varepsilon$ の1次までの近似を用いる．$n=2\\to1$ と $n=3\\to2$ の遷移で出る光子のエネルギーは，$\\varepsilon=0$ の場合に比べてそれぞれ何倍になるか．さらに，2つの光の波長の比 $\\rho=\\dfrac{\\lambda_{3\\to2}}{\\lambda_{2\\to1}}$ を求め，$\\rho$ を精密に測定することがこの引力を調べるのに適している理由を述べよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\beta=G'Mm$（$M$ は原子核の質量）で，$G'=GR$（$G$ は万有引力定数，$R=2.0\\times10^{-4}$ m）とする仮説を考える．$G=6.7\\times10^{-11}\\ {\\rm N\\cdot m^2/kg^2}$，$M=1.7\\times10^{-27}$ kg，$m=9.1\\times10^{-31}$ kg，$h=6.6\\times10^{-34}$ J$\\cdot$s として $\\varepsilon$ を有効数字1桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：距離の3乗に反比例する仮想的な引力を加えたボーア模型：量子数の2乗のずれ，基底状態の消失と線スペクトルの比による検出",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$r_n=a_0(n^2-\\varepsilon)$"
+   },
+   {
+    "id": "2",
+    "tex": "$-\\dfrac{\\beta}{2r^2}$，$E_n=-\\dfrac{E_0}{n^2-\\varepsilon}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\beta_{\\rm c}=\\dfrac{h^2}{4\\pi^2m}$．量子条件のもとで必要な向心力 $\\dfrac{n^2h^2}{4\\pi^2mr^3}$ と仮想的な引力がともに $r^{-3}$ に比例し，$\\beta\\ge\\beta_{\\rm c}$ では $n=1$ で引力の方がつねに大きく，クーロン力を加えるとどの $r$ でもつり合わないため"
+   },
+   {
+    "id": "4",
+    "tex": "$2\\to1$：$1+\\dfrac54\\varepsilon$ 倍，$3\\to2$：$1+\\dfrac{13}{36}\\varepsilon$ 倍，$\\rho\\approx\\dfrac{27}{5}\\Big(1+\\dfrac89\\varepsilon\\Big)$．比をとると $m$，$k$，$e$，$h$ の値がすべて消え，$27/5$ からのずれが $\\varepsilon$ だけで決まるため"
+   },
+   {
+    "id": "5",
+    "tex": "$\\varepsilon\\approx2\\times10^{-33}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}\\quad 円運動の運動方程式と量子条件 $v=\\dfrac{nh}{2\\pi mr}$ より\n\\[ \\frac{mv^2}{r}=\\frac{ke^2}{r^2}+\\frac{\\beta}{r^3}\\quad\\Longrightarrow\\quad \\frac{n^2h^2}{4\\pi^2mr^3}-\\frac{\\beta}{r^3}=\\frac{ke^2}{r^2}. \\]\n両辺に $r^3$ をかけて $r=\\dfrac{1}{ke^2}\\Big(\\dfrac{n^2h^2}{4\\pi^2m}-\\beta\\Big)$，すなわち $\\boldsymbol{r_n=a_0(n^2-\\varepsilon)}$．\n仮想的な引力は，量子数の2乗 $n^2$ を $n^2-\\varepsilon$ に置き換えるはたらきをする．\n\n\\textbf{(2)}\\quad $r$ から無限遠まで引力に逆らって運ぶ仕事は $\\int_r^\\infty\\frac{\\beta}{r'^3}dr'=\\frac{\\beta}{2r^2}$ なので，位置エネルギーは $\\boldsymbol{-\\dfrac{\\beta}{2r^2}}$．\n運動方程式から $\\frac12mv^2=\\frac{ke^2}{2r}+\\frac{\\beta}{2r^2}$．よって\n\\[ E_n=\\frac{ke^2}{2r_n}+\\frac{\\beta}{2r_n^2}-\\frac{ke^2}{r_n}-\\frac{\\beta}{2r_n^2}=-\\frac{ke^2}{2r_n}=\\boldsymbol{-\\frac{E_0}{n^2-\\varepsilon}}\\quad\\Big(\\frac{ke^2}{2a_0}=E_0\\Big). \\]\n$r^{-3}$ の力では，運動エネルギーへの寄与と位置エネルギーがちょうど打ち消すので，$-\\frac{ke^2}{2r}$ の形はクーロン力だけのときと変わらない．\n\n\\textbf{(3)}\\quad $n=1$ で $r_1>0$ となるには $\\varepsilon<1$，すなわち $\\beta<\\dfrac{h^2}{4\\pi^2m}$．よって $\\boldsymbol{\\beta_{\\rm c}=\\dfrac{h^2}{4\\pi^2m}}$．\n量子条件を使うと，必要な向心力は $\\frac{mv^2}{r}=\\frac{n^2h^2}{4\\pi^2mr^3}$ で $r^{-3}$ に比例する．仮想的な引力も $r^{-3}$ に比例するので，$n=1$ で $\\beta\\ge\\beta_{\\rm c}$ ならどの $r$ でも引力 $\\frac\\beta{r^3}$ が必要な向心力以上になり，そこにクーロン力まで加わると引力が過剰で円軌道のつり合いが成り立たない（電子は原子核に落ち込む）．$\\varepsilon\\to1$ で $E_1\\to-\\infty$ となることもこれを表す．\n\n\\textbf{(4)}\\quad $\\frac{1}{n^2-\\varepsilon}\\approx\\frac1{n^2}\\big(1+\\frac{\\varepsilon}{n^2}\\big)$ より $E_n\\approx-\\frac{E_0}{n^2}-\\frac{E_0\\varepsilon}{n^4}$．\n$2\\to1$：$E_2-E_1\\approx E_0\\big(\\frac34+\\frac{15}{16}\\varepsilon\\big)=\\frac34E_0\\big(1+\\boldsymbol{\\frac54}\\varepsilon\\big)$．\n$3\\to2$：$E_3-E_2\\approx E_0\\big(\\frac5{36}+\\frac{65}{1296}\\varepsilon\\big)=\\frac{5}{36}E_0\\big(1+\\boldsymbol{\\frac{13}{36}}\\varepsilon\\big)$．\n波長は光子のエネルギーに反比例するので\n\\[ \\rho=\\frac{E_2-E_1}{E_3-E_2}\\approx\\frac{27}{5}\\Big(1+\\frac54\\varepsilon-\\frac{13}{36}\\varepsilon\\Big)=\\boldsymbol{\\frac{27}{5}\\Big(1+\\frac89\\varepsilon\\Big)}. \\]\n各線の波長そのものは $E_0$（$m,k,e,h$ の値）に比例して変わるので，それらの定数の測定誤差と区別しにくい．比 $\\rho$ では $E_0$ が消え，$\\varepsilon=0$ なら厳密に $27/5$ になるので，そこからのずれがそのまま $\\varepsilon$ を示す．これは，ずれ方が $n$ によって異なる（$n^2$ に一定値を足すのと同等で，全体の拡大・縮小ではない）ためである．\n\n\\textbf{(5)}\\quad $\\varepsilon=\\dfrac{4\\pi^2mGRMm}{h^2}=\\dfrac{4\\times9.87\\times6.7\\times10^{-11}\\times2.0\\times10^{-4}\\times1.7\\times10^{-27}\\times(9.1\\times10^{-31})^2}{(6.6\\times10^{-34})^2}\\approx\\boldsymbol{2\\times10^{-33}}$．\n$\\rho$ の相対的なずれは $10^{-33}$ 程度で，この仮説による効果は水素のスペクトルでは到底検出できない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "距離の3乗に反比例する引力は，量子条件から決まる向心力と同じ $r^{-3}$ の形なので，ボーア模型では $n^2$ を $n^2-\\varepsilon$ に置き換える効果だけをもち，エネルギーは $-ke^2/(2r)$ の形を保つ．$\\varepsilon\\ge1$ で基底状態が消え，$\\varepsilon\\ll1$ では準位ごとにずれ方が異なるので，波長の比が理論値 $27/5$ からずれることで定数の値によらずに検出できる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "circular-motion",
+  "wave-basics"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ボーア模型",
+  "量子条件",
+  "位置エネルギー",
+  "近似",
+  "線スペクトル",
+  "仮想的な力"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

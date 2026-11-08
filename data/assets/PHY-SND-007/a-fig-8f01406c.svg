@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+<defs>
+<marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<line x1="70" y1="230" x2="570" y2="230" stroke="#222" stroke-width="1.6" marker-end="url(#a-ak)"/>
+<line x1="70" y1="230" x2="70" y2="40" stroke="#222" stroke-width="1.6" marker-end="url(#a-ak)"/>
+<text x="574" y="235" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">t</text>
+<text x="62" y="32" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">うなりの振動数</text>
+<polyline points="70.0,100.0 240.0,100.0 240.0,230.0 400.0,230.0 400.0,100.0 550.0,100.0" fill="none" stroke="#1f5fbf" stroke-width="2"/>
+<polyline points="70.0,104.0 240.0,104.0 240.0,165.0 400.0,165.0 400.0,227.0 550.0,227.0" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="6 4"/>
+<line x1="240" y1="230" x2="240" y2="60" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="400" y1="230" x2="400" y2="60" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="234" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">t<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="394" y="250" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="start" fill="#222">t<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+<text x="60" y="105" font-family="Noto Sans CJK JP, sans-serif" font-size="14" text-anchor="start" fill="#222"></text>
+<text x="62" y="104" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="end" fill="#222">f<tspan baseline-shift="sub" font-size="10">b</tspan></text>
+<text x="62" y="170" font-family="Times New Roman, serif" font-style="italic" font-size="15" text-anchor="end" fill="#222">fv/(c−v)</text>
+<line x1="70" y1="165" x2="240" y2="165" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="62" y="235" font-family="Noto Sans CJK JP, sans-serif" font-size="14" text-anchor="end" fill="#222">0</text>
+<line x1="330" y1="268" x2="360" y2="268" stroke="#1f5fbf" stroke-width="2"/>
+<text x="366" y="273" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">向きを反転（本問(2)）</text>
+<line x1="330" y1="290" x2="360" y2="290" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="366" y="295" font-family="Noto Sans CJK JP, sans-serif" font-size="13" text-anchor="start" fill="#222">停止（本問(3)）</text>
+<text x="320.0" y="60" font-family="Times New Roman, serif" font-style="italic" font-size="16" text-anchor="middle" fill="#222">τ</text>
+<line x1="240" y1="70" x2="400" y2="70" stroke="#222" stroke-width="1" marker-start="url(#a-ak)" marker-end="url(#a-ak)"/>
+</svg>

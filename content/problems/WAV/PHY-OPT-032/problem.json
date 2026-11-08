@@ -1,0 +1,149 @@
+{
+ "id": "PHY-OPT-032",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "有限距離の点光源に対するスリットカメラの最適スリット幅と分解能の限界",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，幅 $d$ の細長いスリットをもつ板と，板から距離 $f$ の位置に板と平行に置かれたスクリーンからなるスリットカメラがある．スリットの中心を通り板に垂直な直線上，板から距離 $a$ の位置に，波長 $\\lambda$ の単色光を出す点光源 S がある．スリットの長さの方向は紙面に垂直で，紙面内を進む光だけを考える．$\\lambda\\ll d\\ll a$，$\\lambda\\ll d\\ll f$ とし，角 $\\theta$ が小さいときは $\\sin\\theta\\fallingdotseq\\tan\\theta\\fallingdotseq\\theta$ を用いてよい．\nスクリーン上の像のぼやけ幅 $D$ は，次の2つの幅の和で表されるものとする．\n・幾何学的な幅：光が直進するとした場合に，S から出てスリットを通った光がスクリーン上を照らす範囲の幅．\n・回折による幅：スリットに入射する光を平行光とみなしたとき，回折光が直進方向を中心に初めて暗くなる向き $\\pm\\theta_1$ の間に広がることによって，スクリーン上にできる幅．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "幾何学的な幅を $a,\\ f,\\ d$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "スリットを幅 $\\frac{d}{2}$ の2つの部分に分け，それぞれの部分の対応する点を通る光の組を考えることで，$\\theta_1$ を $\\lambda,\\ d$ で表せ．また，回折による幅を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$D$ を最小にするスリット幅 $d^*$ と，そのときの $D$ の値 $D_{\\min}$ を求めよ．また，$\\frac{1}{F}=\\frac{1}{a}+\\frac{1}{f}$ で長さ $F$ を定めると，$d^*$ は $\\lambda$ と $F$ だけで表せる．その式を答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "S と同じく板から距離 $a$ の位置に，S から板に平行な向きに距離 $s$ だけ離れたもう1つの点光源 S$'$ を置く．スリット幅を $d^*$ にしたとき，スクリーン上の2つの像の中心の間隔が $D_{\\min}$ 以上であれば2つの光源を区別できるとする．区別できる $s$ の最小値 $s_{\\min}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$a$ を一定にして $f$ を大きくすると，$s_{\\min}$ はどう変わるか．$f\\to\\infty$ の極限の値 $s_\\infty$ を求めよ．また，$s_{\\min}=2s_\\infty$ となる $f$ を $a$ で表せ．"
+     },
+     {
+      "id": "6",
+      "tex": "$\\lambda=5.0\\times10^{-7}$ m，$a=10$ m，$f=0.20$ m のとき，$d^*$ と $s_{\\min}$ を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：有限距離の点光源に対するスリットカメラの最適スリット幅と分解能の限界",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：有限距離の点光源に対するスリットカメラの最適スリット幅と分解能の限界",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\frac{(a+f)d}{a}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\theta_1=\\frac{\\lambda}{d}$，回折による幅 $\\frac{2f\\lambda}{d}$"
+   },
+   {
+    "id": "3",
+    "tex": "$d^*=\\sqrt{\\frac{2af\\lambda}{a+f}}$，$D_{\\min}=2\\sqrt{\\frac{2f(a+f)\\lambda}{a}}$，$d^*=\\sqrt{2\\lambda F}$"
+   },
+   {
+    "id": "4",
+    "tex": "$s_{\\min}=2\\sqrt{\\frac{2a(a+f)\\lambda}{f}}$"
+   },
+   {
+    "id": "5",
+    "tex": "単調に減少する，$s_\\infty=2\\sqrt{2a\\lambda}$，$f=\\frac{a}{3}$"
+   },
+   {
+    "id": "6",
+    "tex": "$d^*=4.4\\times10^{-4}$ m，$s_{\\min}=4.5\\times10^{-2}$ m"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　スリットを広げると直進光の影は広がり，狭めると回折で広がる．ぼやけ幅は「$d$ に比例する項」と「$d$ に反比例する項」の和なので，相加平均・相乗平均の関係で最小値が決まる．光源が有限の距離にあると幾何学的な影が $\\frac{a+f}{a}$ 倍に広がるので，最適な幅も分解能も変わる．\n\n\\textbf{(1)}　S からスリットの両端を通る2本の光線は，スクリーン上で $\\frac{d}{2}\\cdot\\frac{a+f}{a}$ ずつ中心から離れた点に達する（相似な三角形）．よって幾何学的な幅は $\\boldsymbol{\\frac{(a+f)d}{a}}$．\n\n\\textbf{(2)}　スリットを上半分と下半分に分け，間隔 $\\frac{d}{2}$ だけ離れた対応する点を通る光の組を考える．角 $\\theta$ の向きの経路差は $\\frac{d}{2}\\sin\\theta$ で，これが $\\frac{\\lambda}{2}$ になると，すべての組が打ち消し合って暗くなる．初めて暗くなる角は\n\\[ \\frac{d}{2}\\sin\\theta_1=\\frac{\\lambda}{2}\\quad\\Longrightarrow\\quad \\theta_1\\fallingdotseq\\boldsymbol{\\frac{\\lambda}{d}} \\]\nスクリーン上では $\\pm f\\theta_1$ の範囲なので，回折による幅は $\\boldsymbol{\\frac{2f\\lambda}{d}}$．\n\n\\textbf{(3)}　\n\\[ D(d)=\\frac{a+f}{a}\\,d+\\frac{2f\\lambda}{d}\\ \\geqq\\ 2\\sqrt{\\frac{a+f}{a}\\cdot2f\\lambda} \\]\n（相加平均・相乗平均の関係）．等号は $\\frac{a+f}{a}d=\\frac{2f\\lambda}{d}$，すなわち2つの幅が等しいときに成り立つので\n\\[ d^*=\\boldsymbol{\\sqrt{\\frac{2af\\lambda}{a+f}}},\\qquad D_{\\min}=\\boldsymbol{2\\sqrt{\\frac{2f(a+f)\\lambda}{a}}} \\]\n$\\frac{af}{a+f}=F$ だから $d^*=\\boldsymbol{\\sqrt{2\\lambda F}}$．$a\\to\\infty$（遠方の光源）では $F=f$ となり $d^*=\\sqrt{2\\lambda f}$ に戻る．\n\n\\textbf{(4)}　S$'$ からスリットの中心を通る光線は直進して，S の像の中心から $\\frac{sf}{a}$ 離れた点に達する（倒立像）．条件 $\\frac{sf}{a}\\geqq D_{\\min}$ より\n\\[ s_{\\min}=\\frac{a}{f}D_{\\min}=\\boldsymbol{2\\sqrt{\\frac{2a(a+f)\\lambda}{f}}} \\]\n\n\\textbf{(5)}　$s_{\\min}=2\\sqrt{2a\\lambda}\\sqrt{1+\\frac{a}{f}}$ なので，$f$ を大きくすると $s_{\\min}$ は\\textbf{単調に減少する}が，\n\\[ s_\\infty=\\boldsymbol{2\\sqrt{2a\\lambda}} \\]\nより小さくはならない．箱をいくら長くしても，像は拡大されるが同じ割合でぼやけも広がり，分解能には上限がある．$\\sqrt{1+\\frac{a}{f}}=2$ より $f=\\boldsymbol{\\frac{a}{3}}$．\n\n\\textbf{(6)}　$F=\\frac{10\\times0.20}{10.2}=0.196$ m より $d^*=\\sqrt{2\\times5.0\\times10^{-7}\\times0.196}=\\boldsymbol{4.4\\times10^{-4}}$ m．\n$s_{\\min}=2\\sqrt{\\frac{2\\times10\\times10.2\\times5.0\\times10^{-7}}{0.20}}=2\\sqrt{5.1\\times10^{-4}}\\fallingdotseq\\boldsymbol{4.5\\times10^{-2}}$ m．\n（参考：$s_\\infty=6.3\\times10^{-3}$ m なので，$f=0.20$ m ではこの限界よりずっと粗い．）\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "スリットカメラのぼやけは「スリット幅に比例する幾何学的な影」と「スリット幅に反比例する回折の広がり」の和で，両者が等しいとき最小になる．光源が有限の距離 $a$ にあると影が $\\frac{a+f}{a}$ 倍に広がり，最適な幅は $\\sqrt{2\\lambda F}$（$\\frac1F=\\frac1a+\\frac1f$）となる．物体側に換算した分解能は箱を長くすると良くなるが，$2\\sqrt{2a\\lambda}$ という下限をもつ．"
+ },
+ "concepts": [
+  "light-interference"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ピンホールカメラ",
+  "単スリットの回折",
+  "最適化",
+  "分解能",
+  "相加平均と相乗平均"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

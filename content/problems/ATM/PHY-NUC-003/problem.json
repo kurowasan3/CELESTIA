@@ -1,0 +1,131 @@
+{
+ "id": "PHY-NUC-003",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "反跳によるγ線の放出・吸収エネルギーのずれと，動く線源による共鳴吸収の条件",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ある原子（または原子核）の励起状態と基底状態のエネルギー準位の差を $\\Delta E$，原子の質量を $M$（状態によらず一定とみなす），真空中の光速を $c$ とする．エネルギー $E$ の光子は大きさ $\\dfrac{E}{c}$ の運動量をもつ．原子の運動は非相対論的に扱い（運動エネルギーは $\\frac12Mv^2$），$\\Delta E\\ll Mc^2$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "静止している励起状態の原子が光子を1個放出して基底状態になる．放出される光子のエネルギー $E_{\\mathrm e}$ を，$\\dfrac{\\Delta E}{Mc^2}$ について1次の補正まで求めよ（$E_{\\mathrm e}\\fallingdotseq\\Delta E\\times(1+\\cdots)$ の形）．"
+     },
+     {
+      "id": "2",
+      "tex": "静止している基底状態の原子が光子を1個吸収して励起状態になるために必要な光子のエネルギー $E_{\\mathrm a}$ を，(1) と同じ精度で求めよ．また $E_{\\mathrm a}-E_{\\mathrm e}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "図のように，速さ $u$ で動いている励起状態の原子が，運動の向きと角 $\\theta$ をなす向きに光子を放出して基底状態になった．光子のエネルギー $E$ が満たす関係式を，近似を用いずに $\\Delta E$，$E$，$u$，$\\theta$，$M$，$c$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) で放出された光子が，静止している基底状態の同種の原子にちょうど吸収される（$E=E_{\\mathrm a}$）ための $\\cos\\theta$ を，近似を用いずに $E_{\\mathrm a}$，$M$，$u$，$c$ で表せ．また，このような向き $\\theta$ が存在するための $u$ の最小値 $u_{\\min}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "鉄の原子核 ${}^{57}\\mathrm{Fe}$ の $\\gamma$ 線（$\\Delta E=14.4\\,\\mathrm{keV}$，$M=57\\times1.66\\times10^{-27}\\,\\mathrm{kg}$）について，$E_{\\mathrm a}-E_{\\mathrm e}$ を $\\mathrm{eV}$ 単位で，$u_{\\min}$ を $\\mathrm{m/s}$ 単位で求めよ．また，$u=1.0\\times10^{2}\\,\\mathrm{m/s}$ のとき吸収が起こる角 $\\theta$ を求めよ．さらに，水素原子の可視光（$\\Delta E=1.9\\,\\mathrm{eV}$，$M=1.7\\times10^{-27}\\,\\mathrm{kg}$）の場合の $u_{\\min}$ を求めよ．数値はいずれも有効数字2桁とし，$c=3.0\\times10^{8}\\,\\mathrm{m/s}$，$1\\,\\mathrm{eV}=1.6\\times10^{-19}\\,\\mathrm J$ とする．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：反跳によるγ線の放出・吸収エネルギーのずれと，動く線源による共鳴吸収の条件",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$E_{\\mathrm e}\\fallingdotseq\\Delta E\\left(1-\\dfrac{\\Delta E}{2Mc^2}\\right)$"
+   },
+   {
+    "id": "2",
+    "tex": "$E_{\\mathrm a}\\fallingdotseq\\Delta E\\left(1+\\dfrac{\\Delta E}{2Mc^2}\\right)$，$E_{\\mathrm a}-E_{\\mathrm e}\\fallingdotseq\\dfrac{(\\Delta E)^2}{Mc^2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\Delta E=E\\left(1-\\dfrac{u}{c}\\cos\\theta+\\dfrac{E}{2Mc^2}\\right)$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\cos\\theta=\\dfrac{E_{\\mathrm a}}{Muc}$，$u_{\\min}=\\dfrac{E_{\\mathrm a}}{Mc}$"
+   },
+   {
+    "id": "5",
+    "tex": "$E_{\\mathrm a}-E_{\\mathrm e}\\fallingdotseq3.9\\times10^{-3}\\,\\mathrm{eV}$，$u_{\\min}\\fallingdotseq81\\,\\mathrm{m/s}$，$\\theta\\fallingdotseq36^\\circ$；水素では $u_{\\min}\\fallingdotseq0.60\\,\\mathrm{m/s}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{考え方}　光子は運動量をもつので，放出・吸収のたびに原子は反跳し，その運動エネルギーの分だけ光子のエネルギーが準位差からずれる．放出では光子が小さく，吸収では光子が大きくなければならないので，静止した同種の原子どうしでは「出した光子をそのまま吸収できない」ことがある．線源を動かすとドップラー効果でこのずれを埋められる．使うのは運動量保存則（ベクトル）と，準位のエネルギーまで含めたエネルギー保存則である．\n\n\\textbf{(1)}　反跳した原子の速さを $V$ とすると，運動量保存より $MV=\\dfrac{E_{\\mathrm e}}{c}$．エネルギー保存より\n\\[ \\Delta E=E_{\\mathrm e}+\\frac12MV^2=E_{\\mathrm e}+\\frac{E_{\\mathrm e}^{\\,2}}{2Mc^2} \\]\n$E_{\\mathrm e}$ と $\\Delta E$ の差は $\\Delta E$ に比べて小さいので，右辺第2項では $E_{\\mathrm e}\\fallingdotseq\\Delta E$ としてよく，\n\\[ \\boldsymbol{E_{\\mathrm e}\\fallingdotseq\\Delta E-\\frac{(\\Delta E)^2}{2Mc^2}=\\Delta E\\left(1-\\frac{\\Delta E}{2Mc^2}\\right)} \\]\n\n\\textbf{(2)}　吸収後の原子の速さを $V'$ とすると，$MV'=\\dfrac{E_{\\mathrm a}}{c}$，\n\\[ E_{\\mathrm a}=\\Delta E+\\frac12MV'^2=\\Delta E+\\frac{E_{\\mathrm a}^{\\,2}}{2Mc^2}\\qquad\\cdots(*) \\]\n同様に近似して $\\boldsymbol{E_{\\mathrm a}\\fallingdotseq\\Delta E\\left(1+\\dfrac{\\Delta E}{2Mc^2}\\right)}$．よって\n\\[ \\boldsymbol{E_{\\mathrm a}-E_{\\mathrm e}\\fallingdotseq\\frac{(\\Delta E)^2}{Mc^2}} \\]\n反跳エネルギー $\\dfrac{(\\Delta E)^2}{2Mc^2}$ の2倍のずれがある．\n\n\\textbf{(3)}　原子の運動方向を $x$ 軸，光子を放出した側を $y$ 軸の正の向きにとる．放出後の原子の速度を $(u_x,u_y)$ とすると，運動量保存より\n\\[ Mu_x=Mu-\\frac{E}{c}\\cos\\theta,\\qquad Mu_y=-\\frac{E}{c}\\sin\\theta \\]\n2乗して加えると\n\\[ u_x^{\\,2}+u_y^{\\,2}=u^2-\\frac{2uE\\cos\\theta}{Mc}+\\frac{E^2}{M^2c^2} \\]\nエネルギー保存 $\\frac12Mu^2+\\Delta E=\\frac12M(u_x^{\\,2}+u_y^{\\,2})+E$ に代入して\n\\[ \\boldsymbol{\\Delta E=E\\left(1-\\frac{u}{c}\\cos\\theta+\\frac{E}{2Mc^2}\\right)} \\]\n第2項がドップラー効果，第3項が反跳の効果を表す（$u=0$ なら (1) の式に戻る）．\n\n\\textbf{(4)}　(3) で $E=E_{\\mathrm a}$ とおき，$(*)$ から $\\Delta E=E_{\\mathrm a}-\\dfrac{E_{\\mathrm a}^{\\,2}}{2Mc^2}$ を代入すると\n\\[ E_{\\mathrm a}-\\frac{E_{\\mathrm a}^{\\,2}}{2Mc^2}=E_{\\mathrm a}-\\frac{u}{c}E_{\\mathrm a}\\cos\\theta+\\frac{E_{\\mathrm a}^{\\,2}}{2Mc^2}\\quad\\therefore\\ \\boldsymbol{\\cos\\theta=\\frac{E_{\\mathrm a}}{Muc}} \\]\n（近似は一切使っていない．）$\\cos\\theta\\leqq1$ が必要なので\n\\[ u\\geqq\\frac{E_{\\mathrm a}}{Mc}\\quad\\therefore\\ \\boldsymbol{u_{\\min}=\\frac{E_{\\mathrm a}}{Mc}} \\]\n$u=u_{\\min}$ のときは真正面（$\\theta=0$）だけ，$u>u_{\\min}$ では運動方向を軸とする円錐面上の向きで吸収が起こる．$Mu_{\\min}=\\dfrac{E_{\\mathrm a}}{c}$，すなわち「線源の原子の運動量が光子の運動量に等しい」ことが条件になっている．\n\n\\textbf{(5)}　$Mc^2=57\\times1.66\\times10^{-27}\\times(3.0\\times10^{8})^2\\,\\mathrm J\\fallingdotseq8.52\\times10^{-9}\\,\\mathrm J\\fallingdotseq5.32\\times10^{10}\\,\\mathrm{eV}$．\n\\[ E_{\\mathrm a}-E_{\\mathrm e}\\fallingdotseq\\frac{(1.44\\times10^{4})^2}{5.32\\times10^{10}}\\,\\mathrm{eV}\\fallingdotseq\\boldsymbol{3.9\\times10^{-3}\\,\\mathrm{eV}} \\]\n$E_{\\mathrm a}\\fallingdotseq\\Delta E$ として\n\\[ u_{\\min}=\\frac{1.44\\times10^{4}\\times1.6\\times10^{-19}}{57\\times1.66\\times10^{-27}\\times3.0\\times10^{8}}\\fallingdotseq\\boldsymbol{81\\,\\mathrm{m/s}} \\]\n$u=1.0\\times10^{2}\\,\\mathrm{m/s}$ では $\\cos\\theta=\\dfrac{u_{\\min}}{u}\\fallingdotseq0.81$ より $\\boldsymbol{\\theta\\fallingdotseq36^\\circ}$．\\\\\n水素では $u_{\\min}=\\dfrac{1.9\\times1.6\\times10^{-19}}{1.7\\times10^{-27}\\times3.0\\times10^{8}}\\fallingdotseq\\boldsymbol{0.60\\,\\mathrm{m/s}}$．\n\n水素では，常温での熱運動の速さ（$10^{3}\\,\\mathrm{m/s}$ 程度）に比べて $u_{\\min}$ がはるかに小さく，反跳のずれはドップラー効果に埋もれてしまう．一方 $\\gamma$ 線では，ずれ自体が $(\\Delta E)^2$ に比例して大きくなり，それを埋めるのに必要な速さは約 $10^{2}\\,\\mathrm{m/s}$ と，水素の場合の100倍以上になる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "光子の放出・吸収では原子の反跳エネルギーの分だけ光子エネルギーが準位差からずれ，放出エネルギーは吸収に必要なエネルギーより $(\\Delta E)^2/Mc^2$ だけ小さい．動く原子からの放出をベクトルの運動量保存と準位を含むエネルギー保存で扱うと，ドップラー項と反跳項が同時に現れ，共鳴吸収の条件は近似なしで $\\cos\\theta=E_{\\mathrm a}/(Muc)$（線源の運動量が光子の運動量以上）となる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "momentum-conservation",
+  "mechanical-energy"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "光子の運動量",
+  "反跳",
+  "ドップラー効果",
+  "共鳴吸収",
+  "γ線",
+  "エネルギー準位"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

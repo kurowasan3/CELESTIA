@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" width="560" height="340">
+<defs>
+<marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<line x1="70.0" y1="280.0" x2="535.0" y2="280.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)" fill="none"/>
+<line x1="70.0" y1="280.0" x2="70.0" y2="35.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)" fill="none"/>
+<text x="530.0" y="314.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">波長 <tspan font-family="Times New Roman, serif" font-style="italic">λ</tspan> [cm]（対数目盛）</text>
+<text x="62.0" y="28.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="start">位相速度 <tspan font-family="Times New Roman, serif" font-style="italic">v</tspan> [m/s]</text>
+<line x1="70.0" y1="280.0" x2="70.0" y2="285.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="70.0" y="298.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">0.2</text>
+<line x1="181.8" y1="280.0" x2="181.8" y2="285.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="181.8" y="298.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">0.5</text>
+<line x1="266.3" y1="280.0" x2="266.3" y2="285.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="266.3" y="298.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">1</text>
+<line x1="350.9" y1="280.0" x2="350.9" y2="285.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="350.9" y="298.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">2</text>
+<line x1="462.7" y1="280.0" x2="462.7" y2="285.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="462.7" y="298.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">5</text>
+<line x1="65.0" y1="234.0" x2="70.0" y2="234.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="62.0" y="238.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">0.1</text>
+<line x1="65.0" y1="188.0" x2="70.0" y2="188.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="62.0" y="192.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">0.2</text>
+<line x1="65.0" y1="142.0" x2="70.0" y2="142.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="62.0" y="146.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">0.3</text>
+<line x1="65.0" y1="96.0" x2="70.0" y2="96.0" stroke="#222" stroke-width="1" fill="none"/>
+<text x="62.0" y="100.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="end">0.4</text>
+<polyline points="70.0,58.2 71.5,59.5 73.0,60.9 74.5,62.2 76.0,63.5 77.5,64.8 79.0,66.0 80.5,67.3 82.0,68.6 83.5,69.8 85.1,71.1 86.6,72.3 88.1,73.6 89.6,74.8 91.1,76.0 92.6,77.2 94.1,78.4 95.6,79.6 97.1,80.8 98.6,82.0 100.1,83.1 101.6,84.3 103.1,85.4 104.6,86.6 106.1,87.7 107.6,88.8 109.1,89.9 110.6,91.1 112.1,92.2 113.6,93.2 115.2,94.3 116.7,95.4 118.2,96.5 119.7,97.5 121.2,98.6 122.7,99.6 124.2,100.7 125.7,101.7 127.2,102.7 128.7,103.8 130.2,104.8 131.7,105.8 133.2,106.8 134.7,107.7 136.2,108.7 137.7,109.7 139.2,110.7 140.7,111.6 142.2,112.6 143.7,113.5 145.3,114.4 146.8,115.4 148.3,116.3 149.8,117.2 151.3,118.1 152.8,119.0 154.3,119.9 155.8,120.8 157.3,121.6 158.8,122.5 160.3,123.4 161.8,124.2 163.3,125.1 164.8,125.9 166.3,126.7 167.8,127.6 169.3,128.4 170.8,129.2 172.3,130.0 173.8,130.8 175.4,131.6 176.9,132.4 178.4,133.1 179.9,133.9 181.4,134.7 182.9,135.4 184.4,136.2 185.9,136.9 187.4,137.6 188.9,138.4 190.4,139.1 191.9,139.8 193.4,140.5 194.9,141.2 196.4,141.9 197.9,142.6 199.4,143.2 200.9,143.9 202.4,144.6 203.9,145.2 205.5,145.9 207.0,146.5 208.5,147.1 210.0,147.8 211.5,148.4 213.0,149.0 214.5,149.6 216.0,150.2 217.5,150.8 219.0,151.4 220.5,151.9 222.0,152.5 223.5,153.1 225.0,153.6 226.5,154.2 228.0,154.7 229.5,155.2 231.0,155.8 232.5,156.3 234.0,156.8 235.6,157.3 237.1,157.8 238.6,158.3 240.1,158.8 241.6,159.2 243.1,159.7 244.6,160.2 246.1,160.6 247.6,161.1 249.1,161.5 250.6,161.9 252.1,162.3 253.6,162.8 255.1,163.2 256.6,163.6 258.1,164.0 259.6,164.3 261.1,164.7 262.6,165.1 264.1,165.4 265.7,165.8 267.2,166.1 268.7,166.5 270.2,166.8 271.7,167.1 273.2,167.5 274.7,167.8 276.2,168.1 277.7,168.4 279.2,168.6 280.7,168.9 282.2,169.2 283.7,169.4 285.2,169.7 286.7,169.9 288.2,170.2 289.7,170.4 291.2,170.6 292.7,170.8 294.2,171.1 295.8,171.3 297.3,171.4 298.8,171.6 300.3,171.8 301.8,172.0 303.3,172.1 304.8,172.3 306.3,172.4 307.8,172.6 309.3,172.7 310.8,172.8 312.3,172.9 313.8,173.0 315.3,173.1 316.8,173.2 318.3,173.3 319.8,173.3 321.3,173.4 322.8,173.5 324.3,173.5 325.9,173.5 327.4,173.6 328.9,173.6 330.4,173.6 331.9,173.6 333.4,173.6 334.9,173.6 336.4,173.6 337.9,173.5 339.4,173.5 340.9,173.5 342.4,173.4 343.9,173.4 345.4,173.3 346.9,173.2 348.4,173.1 349.9,173.0 351.4,172.9 352.9,172.8 354.4,172.7 356.0,172.6 357.5,172.5 359.0,172.3 360.5,172.2 362.0,172.0 363.5,171.9 365.0,171.7 366.5,171.5 368.0,171.3 369.5,171.1 371.0,170.9 372.5,170.7 374.0,170.5 375.5,170.3 377.0,170.0 378.5,169.8 380.0,169.5 381.5,169.3 383.0,169.0 384.5,168.7 386.1,168.4 387.6,168.2 389.1,167.9 390.6,167.6 392.1,167.2 393.6,166.9 395.1,166.6 396.6,166.3 398.1,165.9 399.6,165.6 401.1,165.2 402.6,164.8 404.1,164.5 405.6,164.1 407.1,163.7 408.6,163.3 410.1,162.9 411.6,162.5 413.1,162.1 414.6,161.6 416.2,161.2 417.7,160.8 419.2,160.3 420.7,159.9 422.2,159.4 423.7,158.9 425.2,158.4 426.7,158.0 428.2,157.5 429.7,157.0 431.2,156.5 432.7,155.9 434.2,155.4 435.7,154.9 437.2,154.4 438.7,153.8 440.2,153.3 441.7,152.7 443.2,152.1 444.7,151.6 446.3,151.0 447.8,150.4 449.3,149.8 450.8,149.2 452.3,148.6 453.8,148.0 455.3,147.4 456.8,146.7 458.3,146.1 459.8,145.4 461.3,144.8 462.8,144.1 464.3,143.5 465.8,142.8 467.3,142.1 468.8,141.4 470.3,140.7 471.8,140.0 473.3,139.3 474.8,138.6 476.4,137.9 477.9,137.2 479.4,136.4 480.9,135.7 482.4,134.9 483.9,134.2 485.4,133.4 486.9,132.6 488.4,131.8 489.9,131.1 491.4,130.3 492.9,129.5 494.4,128.7 495.9,127.8 497.4,127.0 498.9,126.2 500.4,125.4 501.9,124.5 503.4,123.7 504.9,122.8 506.5,121.9 508.0,121.1 509.5,120.2 511.0,119.3 512.5,118.4 514.0,117.5 515.5,116.6 517.0,115.7 518.5,114.8 520.0,113.8" stroke="#222" stroke-width="1.6" fill="none"/>
+<line x1="70.0" y1="142.0" x2="520.0" y2="142.0" stroke="#1f5fbf" stroke-width="1.2" stroke-dasharray="6,4" fill="none"/>
+<text x="323.7" y="134.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#1f5fbf" text-anchor="middle"><tspan font-family="Times New Roman, serif" font-style="italic">U</tspan> = 0.30 m/s</text>
+<circle cx="196.7" cy="142.0" r="3.5" fill="#c0392b"/>
+<line x1="196.7" y1="142.0" x2="196.7" y2="280.0" stroke="#c0392b" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+<circle cx="467.4" cy="142.0" r="3.5" fill="#c0392b"/>
+<line x1="467.4" y1="142.0" x2="467.4" y2="280.0" stroke="#c0392b" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+<text x="192.7" y="112.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="start">上流側に現れる</text>
+<text x="192.7" y="128.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="start">0.56 cm</text>
+<text x="461.4" y="112.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="end">下流側に現れる</text>
+<text x="461.4" y="128.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#c0392b" text-anchor="end">5.2 cm</text>
+<circle cx="332.1" cy="173.6" r="3.5" fill="#222"/>
+<line x1="70.0" y1="173.6" x2="332.1" y2="173.6" stroke="#888" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+<text x="332.1" y="195.6" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle"><tspan font-family="Times New Roman, serif" font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="10">min</tspan> = 0.23 m/s（<tspan font-family="Times New Roman, serif" font-style="italic">λ</tspan> = 1.7 cm）</text>
+<text x="119.5" y="73.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">表面張力波</text>
+<text x="484.9" y="73.0" font-family="Noto Sans CJK JP, sans-serif" font-size="12" fill="#222" text-anchor="middle">重力波</text>
+</svg>

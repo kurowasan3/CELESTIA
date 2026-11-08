@@ -1,0 +1,131 @@
+{
+ "id": "PHY-NUC-006",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "核融合のクーロン障壁と重心系の相対運動エネルギー（温度見積もりの落とし穴）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "重陽子 d（質量 $2m$，電荷 $e$）と三重陽子 t（質量 $3m$，電荷 $e$）が核融合反応 $\\mathrm d+\\mathrm t\\to{}^4\\mathrm{He}+\\mathrm n$ を起こすには，図のように両者の中心間距離が $R$ まで近づく必要があるとする．d，t は点電荷とみなしてクーロン力だけがはたらくとし，クーロンの法則の比例定数を $k_0$，$U=\\dfrac{k_0e^2}{R}$ とおく．運動は非相対論的に扱う．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "静止している t に d を正面から入射させるとき，反応が起こるための d の運動エネルギーの最小値 $K_{\\mathrm d}$ を $U$ で表せ．また，静止している d に t を正面から入射させるときの t の運動エネルギーの最小値 $K_{\\mathrm t}$ を $U$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "d，t が一直線上をそれぞれ速度 $v_1$，$v_2$（右向きを正，$v_1>v_2$）で近づく一般の場合，反応が起こる条件は $\\dfrac12\\mu(v_1-v_2)^2\\ge U$ の形に書ける．$\\mu$ を $m$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "d と t の混合気体が温度 $T$ にある．d の速度 $\\vec v_1$ と t の速度 $\\vec v_2$ は互いに無関係で，それぞれの向きはまったくでたらめであり，d，t の1個あたりの平均運動エネルギーはどちらも $\\dfrac32k_BT$（$k_B$ はボルツマン定数）である．$\\dfrac12\\mu|\\vec v_1-\\vec v_2|^2$ の平均値を $k_B$，$T$ で表せ．さらに，この平均値が $U$ に等しくなる温度 $T_1$ を有効数字2桁で求めよ．ただし $R=4.0\\times10^{-15}\\,\\mathrm m$，$k_0=9.0\\times10^9\\,\\mathrm{N\\cdot m^2/C^2}$，$e=1.6\\times10^{-19}\\,\\mathrm C$，$k_B=1.4\\times10^{-23}\\,\\mathrm{J/K}$ とする．"
+     },
+     {
+      "id": "4",
+      "tex": "ある人は「d，t それぞれの平均運動エネルギー $\\frac32k_BT$ が $U/2$ になれば，2つ合わせて $U$ のエネルギーで障壁を越えられる」と考えて温度 $T_2$ を見積もった．$T_2/T_1$ を求め，この見積もりが何を見落としているかを説明せよ．"
+     },
+     {
+      "id": "5",
+      "tex": "仮に d と t が1つの原子核 X だけになる反応 $\\mathrm d+\\mathrm t\\to\\mathrm X$ があり，X の静止エネルギーが d と t の静止エネルギーの和より小さいとする．この反応は，d，t がどのような速度で衝突しても起こりえないことを示せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：核融合のクーロン障壁と重心系の相対運動エネルギー（温度見積もりの落とし穴）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$K_{\\mathrm d}=\\dfrac53U$，$K_{\\mathrm t}=\\dfrac52U$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\mu=\\dfrac65m$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\dfrac32k_BT$，$T_1=\\dfrac{2U}{3k_B}\\fallingdotseq2.7\\times10^9\\,\\mathrm K$"
+   },
+   {
+    "id": "4",
+    "tex": "$T_2/T_1=\\dfrac12$．重心の運動のエネルギー（平均 $\\frac32k_BT$）は障壁を越えるのに使えないことを見落としている"
+   },
+   {
+    "id": "5",
+    "tex": "重心系で考えると反応後の X は静止し，エネルギー保存が満たせない（解説参照）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　最接近の瞬間（ちょうど距離 $R$ に達する瞬間）には2粒子の速度が等しい．外力がないので運動量が保存し，d（速さ $v$）が静止 t に当たる場合の共通の速度は $V=\\dfrac{2m v}{5m}$．このとき残っている運動エネルギーは $\\dfrac12(5m)V^2=\\dfrac25K_{\\mathrm d}$．力学的エネルギー保存より，ちょうど届く条件は\n\\[ K_{\\mathrm d}-\\frac25K_{\\mathrm d}=U\\quad\\Longrightarrow\\quad K_{\\mathrm d}=\\boldsymbol{\\frac53U} \\]\n同様に t（質量 $3m$）が静止 d に当たる場合は $K_{\\mathrm t}-\\dfrac35K_{\\mathrm t}=U$ より $K_{\\mathrm t}=\\boldsymbol{\\dfrac52U}$．重い方を打ち込むと，重心の運動に持っていかれるエネルギーが多いので不利になる．\n\n\\textbf{(2)}　運動量保存より最接近時の共通速度は重心速度 $V_G=\\dfrac{2mv_1+3mv_2}{5m}$．このとき失われた運動エネルギーは\n\\[ \\frac12(2m)v_1^2+\\frac12(3m)v_2^2-\\frac12(5m)V_G^2=\\frac12\\cdot\\frac{2m\\cdot3m}{5m}(v_1-v_2)^2 \\]\n（展開して確かめられる）．これが $U$ 以上であればよいので $\\mu=\\boldsymbol{\\dfrac65m}$（換算質量）．重心の運動エネルギーは保存則で決まっていて変えられず，近づくのに使えるのは相対運動の部分だけである．\n\n\\textbf{(3)}　$|\\vec v_1-\\vec v_2|^2=|\\vec v_1|^2+|\\vec v_2|^2-2\\vec v_1\\cdot\\vec v_2$．$\\vec v_1$ と $\\vec v_2$ は無関係で向きがでたらめなので $\\vec v_1\\cdot\\vec v_2$ の平均は $0$．また $\\overline{v_1^2}=\\dfrac{3k_BT}{2m}$，$\\overline{v_2^2}=\\dfrac{3k_BT}{3m}$．よって\n\\[ \\overline{\\frac12\\mu|\\vec v_1-\\vec v_2|^2}=\\frac12\\cdot\\frac65m\\left(\\frac{3k_BT}{2m}+\\frac{3k_BT}{3m}\\right)=\\boldsymbol{\\frac32k_BT} \\]\n質量によらず，1個の粒子の平均運動エネルギーと同じになる．これを $U$ と等しくおいて\n\\[ U=\\frac{9.0\\times10^9\\times(1.6\\times10^{-19})^2}{4.0\\times10^{-15}}=5.76\\times10^{-14}\\,\\mathrm J\\ (=0.36\\,\\mathrm{MeV}) \\]\n\\[ T_1=\\frac{2U}{3k_B}=\\frac{2\\times5.76\\times10^{-14}}{3\\times1.4\\times10^{-23}}\\fallingdotseq\\boldsymbol{2.7\\times10^9\\,\\mathrm K} \\]\n\n\\textbf{(4)}　$\\frac32k_BT_2=\\dfrac U2$ より $T_2=\\dfrac{U}{3k_B}$，$\\boldsymbol{T_2/T_1=\\dfrac12}$．2粒子の運動エネルギーの和の平均は $3k_BT$ だが，そのうち重心の運動エネルギーの平均 $\\frac12(5m)\\overline{V_G^2}$ も $\\frac32k_BT$ であり（(3)と同様に計算できる），これは保存則により衝突中も変わらないので障壁を越えるのには使えない．使えるのは相対運動の $\\frac32k_BT$ だけである．$T_2$ の見積もりは「2粒子が常に重心静止の状態で正面衝突する」特別な場合を平均として扱い，重心運動の分を見落としている．\n\n\\textbf{(5)}　d と t の重心とともに動く観測者（慣性系．外力がないので重心は等速直線運動）から見ると，衝突前の全運動量は $0$．反応後に X だけになるなら，運動量保存から X はこの系で静止する．一方，衝突前の全エネルギーは「d と t の静止エネルギーの和＋（0以上の）運動エネルギー」であり，X の静止エネルギーより大きい．X が静止していると余ったエネルギーの行き場がなく，エネルギー保存が満たされない．どの慣性系でも保存則は成り立つので，この反応はどんな衝突でも\\textbf{起こりえない}．エネルギーを運び去る第2の粒子（n や光子）が必要である．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "2粒子が近づくときクーロン障壁を越えるのに使えるのは重心系の相対運動エネルギー $\\frac12\\mu v_{\\rm rel}^2$ だけである．熱平衡では相対運動エネルギーの平均は質量によらず $\\frac32k_BT$ となり，「各粒子の $\\frac32 k_BT$ を足す」見積もりは重心運動の分を数えて温度を半分に誤る．重心系で考えると2体→1体の発熱的融合はエネルギーの行き場がなく不可能．"
+ },
+ "concepts": [
+  "bohr-model",
+  "kinematics-components",
+  "momentum-conservation"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "核融合",
+  "クーロン障壁",
+  "重心系",
+  "換算質量",
+  "熱運動",
+  "運動量保存"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

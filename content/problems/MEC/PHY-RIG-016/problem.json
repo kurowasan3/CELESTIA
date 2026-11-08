@@ -1,0 +1,143 @@
+{
+ "id": "PHY-RIG-016",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "水に浮かぶ半球殻の縁に小物体をのせたときの傾きと水の流入条件（浮力の作用線が球の中心を通る）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "半径 $R$，質量 $m$ の薄い一様な半球殻（おわん形の容器）を，口を上にして密度 $\\rho$ の水に浮かべると，殻の最下点が水面から深さ $\\dfrac R2$ の位置で静止した．殻の厚さは無視でき，殻の重心は球の中心Oから対称軸上 $\\dfrac R2$ の位置にある．半径 $R$ の球を，最下点からの高さ $h$ の水平面で切った部分（球欠）の体積は $\\dfrac{\\pi h^2(3R-h)}{3}$ である．\n\n次に，殻の縁の1点Aに質量 $m'$ の小物体をのせると，殻は図のように傾いて静止した．殻の対称軸が鉛直となす角を $\\theta$，殻の最下点の水面からの深さを $d$ とする．縁は水面より上にあり，容器に水は入っていないとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$m$ を $\\rho$，$R$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "水が殻を押す力の合力の作用線は，傾きによらずOを通る．その理由を述べよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\tan\\theta$ を $m$，$m'$ で表せ．また，$d$ が満たす式を $R$，$m$，$m'$ を用いて表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\dfrac{m'}{m}=0.20$ のとき，$\\theta$，$d$，および縁の最も低い点Aの水面からの高さを求めよ（$d$ と高さは $R$ の何倍かを有効数字2桁で）．"
+     },
+     {
+      "id": "5",
+      "tex": "容器に水が入らないための $\\dfrac{m'}{m}$ の最大値を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：水に浮かぶ半球殻の縁に小物体をのせたときの傾きと水の流入条件（浮力の作用線が球の中心を通る）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：水に浮かぶ半球殻の縁に小物体をのせたときの傾きと水の流入条件（浮力の作用線が球の中心を通る）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$m=\\dfrac{5}{24}\\pi\\rho R^3$"
+   },
+   {
+    "id": "2",
+    "tex": "水圧は面に垂直にはたらき，球面の法線はすべてOを通るから"
+   },
+   {
+    "id": "3",
+    "tex": "$\\tan\\theta=\\dfrac{2m'}{m}$，$\\dfrac{\\pi\\rho d^2(3R-d)}{3}=m+m'$（$d^2(3R-d)=\\dfrac58\\left(1+\\dfrac{m'}{m}\\right)R^3$）"
+   },
+   {
+    "id": "4",
+    "tex": "$\\theta=21.8^\\circ$，$d=0.55R$，Aの高さ $0.075R$"
+   },
+   {
+    "id": "5",
+    "tex": "$0.24$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 殻の質量}\n\n浮力（深さ $\\frac R2$ の球欠の体積の水の重さ）と重力のつり合いより\n\\[ m=\\rho\\cdot\\frac{\\pi\\left(\\frac R2\\right)^2\\left(3R-\\frac R2\\right)}{3}=\\boldsymbol{\\frac{5}{24}\\pi\\rho R^3} \\]\n\n\\textbf{(2) 浮力の作用線}\n\n水圧は殻の外面のどの点でも面に垂直にはたらく．殻の外面は中心Oの球面の一部なので，各点の法線はすべてOを通る．したがって水が殻を押す小さな力はすべてOを通る直線上にあり，その合力の作用線もOを通る．縁が水面より上にある限り，水に接するのは球面の部分だけなので，傾きによらずOを通る．\n\n\\textbf{(3) 傾きと沈み方}\n\nOのまわりの力のモーメントを考える．浮力はOを通るのでモーメントをもたない．殻の重心Gは軸上でOから $\\frac R2$ なので，Oから水平に $\\frac R2\\sin\\theta$ だけAと反対側にある．Aは縁上でOから水平距離 $R\\cos\\theta$ にある．つり合いより\n\\[ mg\\cdot\\frac R2\\sin\\theta=m'g\\cdot R\\cos\\theta\\quad\\Longrightarrow\\quad \\boldsymbol{\\tan\\theta=\\frac{2m'}{m}} \\]\n（浮力の大きさに関係なく傾きが決まる．）鉛直方向のつり合い：水中にある部分は，深さ $d$ の球欠（球面のうち水面より下の部分と水面で囲まれた部分）なので\n\\[ \\boldsymbol{\\rho\\cdot\\frac{\\pi d^2(3R-d)}{3}=m+m'}\\quad\\Longleftrightarrow\\quad d^2(3R-d)=\\frac58\\left(1+\\frac{m'}{m}\\right)R^3 \\]\n\n\\textbf{(4) $m'/m=0.20$ の場合}\n\n$\\tan\\theta=0.40$ より $\\boldsymbol{\\theta=21.8^\\circ}$，$\\sin\\theta=0.371$．$d=xR$ とおくと $x^2(3-x)=0.75$ で，数値的に解いて $x=0.554$，$\\boldsymbol{d=0.55R}$．Oは水面から $R-d=0.446R$ の高さにあり，Aは傾きによってOより $R\\sin\\theta=0.371R$ 低いので，Aの水面からの高さは\n\\[ 0.446R-0.371R=\\boldsymbol{0.075R} \\]\n（約 $0.07R$ と，まだ水は入らない．）\n\n\\textbf{(5) 水が入らない限界}\n\n$k=\\dfrac{m'}{m}$ とすると，Aの高さ $(R-d)-R\\sin\\theta$ が $0$ になるのが限界で\n\\[ 1-x=\\frac{2k}{\\sqrt{1+4k^2}},\\qquad x^2(3-x)=\\frac58(1+k) \\]\n$k=0.24$ で $\\sin\\theta=0.433$，$x=0.564$，$1-x=0.436>0.433$（入らない），$k=0.25$ で $\\sin\\theta=0.447$，$x=0.567$，$1-x=0.433<0.447$（入る）．数値的に解くと $k=0.242$，最大値は $\\boldsymbol{0.24}$．\n\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "球面の各点の法線はすべて中心を通るので，浮かぶ半球殻に水が及ぼす力の作用線は傾きによらず球の中心を通る．そのため中心のまわりのモーメントには浮力が現れず，傾きは殻の重心とのせた物体の重さだけで $\\tan\\theta=2m'/m$ と決まり，沈み方は鉛直方向のつり合い（球欠の体積）だけで決まる．2つを組み合わせて縁が水面に達する限界を求める．"
+ },
+ "concepts": [
+  "torque",
+  "momentum-conservation",
+  "equilibrium"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "浮力",
+  "力のモーメント",
+  "剛体のつり合い",
+  "作用線",
+  "数値的な解法"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

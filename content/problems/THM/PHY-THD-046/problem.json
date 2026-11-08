@@ -1,0 +1,135 @@
+{
+ "id": "PHY-THD-046",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "再生器でつないだ2温度シリンダーの機関（長方形サイクルの熱効率がカルノー効率になる理由）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，高温物体に接して絶対温度 $3T$ に保たれたシリンダー H と，低温物体に接して絶対温度 $T$ に保たれたシリンダー C を，再生器 G を含む細い管でつなぎ，全体に $1$ mol の理想気体を封入した．H，C にはなめらかに動くピストン $\\mathrm{P_H}$，$\\mathrm{P_C}$ がついていて，H，C 内の気体の体積をそれぞれ $V_{\\rm H}$，$V_{\\rm C}$ とする．管と再生器の体積は無視でき，気体の圧力 $p$ は装置内のどこでも等しい．H 内の気体はつねに温度 $3T$，C 内の気体はつねに温度 $T$ である．再生器 G は，C から H へ移る気体を温度 $T$ から $3T$ まで加熱し，H から C へ移る気体を $3T$ から $T$ まで冷却する．G は気体とだけ熱をやりとりし，1 サイクルの間に G が気体とやりとりする熱量の合計は $0$ である．気体定数を $R$ とする．\n\nピストンをゆっくり動かして，装置の状態を次のサイクル 1 → 2 → 3 → 4 → 1 に沿って変える（$V_0$ は正の定数）．\n1 → 2：$\\mathrm{P_C}$ を止めたまま $\\mathrm{P_H}$ を動かし，$(V_{\\rm H},V_{\\rm C})$ を $(V_0,\\,V_0)$ から $(4V_0,\\,V_0)$ へ．\n\n2 → 3：$\\mathrm{P_H}$ を止めたまま $\\mathrm{P_C}$ を動かし，$(4V_0,\\,V_0)$ から $(4V_0,\\,2V_0)$ へ．\n\n3 → 4：$\\mathrm{P_C}$ を止めたまま，$(4V_0,\\,2V_0)$ から $(V_0,\\,2V_0)$ へ．\n\n4 → 1：$\\mathrm{P_H}$ を止めたまま，$(V_0,\\,2V_0)$ から $(V_0,\\,V_0)$ へ．\n\n必要なら，$a>0$ として $\\displaystyle\\int_{x_1}^{x_2}\\frac{dx}{ax+b}=\\frac1a\\log\\frac{ax_2+b}{ax_1+b}$（$\\log$ は自然対数）を用いてよい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "圧力 $p$ を $V_{\\rm H}$，$V_{\\rm C}$，$R$，$T$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "1 サイクルの間に気体がピストン $\\mathrm{P_H}$ にした仕事 $Y$ と，ピストン $\\mathrm{P_C}$ にした仕事 $Z$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "H 内の気体の物質量が $\\Delta n_{\\rm H}$ だけ変化し，$\\mathrm{P_H}$ が $\\Delta V_{\\rm H}$ だけ動く微小な変化の間に，H 内の気体が高温物体から受け取る熱量は\n\\[ \\Delta Q=p\\,\\Delta V_{\\rm H}-3RT\\,\\Delta n_{\\rm H} \\]\nで与えられる（第 2 項は，H と管の境目で H 内の気体が管の気体を押し出す，または管の気体に押し込まれるときの仕事を表す）．1 サイクルの間に気体が高温物体から受け取る熱量 $Q_{\\rm H}$，低温物体へ放出する熱量 $Q_{\\rm C}$，およびこの機関の熱効率 $\\eta$ を求めよ．\n\n2 → 3 の過程では $\\mathrm{P_H}$ は止まっているが，H 内の気体は高温物体と熱をやりとりする．この過程で H 内の気体が高温物体から受け取る熱量を求め，それが正である理由を説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "状態 1 を $(V_{\\rm H},V_{\\rm C})=(a,\\,b)$ とし，$V_{\\rm H}$ を $a\\to a'$，$V_{\\rm C}$ を $b\\to b'$（$a<a'$，$b<b'$）と変える同じ形の長方形サイクルを考える．$a,\\,a',\\,b,\\,b'$ の値によらず，熱効率が(3)の $\\eta$ に等しいことを示せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：再生器でつないだ2温度シリンダーの機関（長方形サイクルの熱効率がカルノー効率になる理由）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：再生器でつないだ2温度シリンダーの機関（長方形サイクルの熱効率がカルノー効率になる理由）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$p=\\dfrac{3RT}{V_{\\rm H}+3V_{\\rm C}}$"
+   },
+   {
+    "id": "2",
+    "tex": "$Y=3RT\\log\\dfrac{49}{40}$，$Z=-RT\\log\\dfrac{49}{40}$"
+   },
+   {
+    "id": "3",
+    "tex": "$Q_{\\rm H}=3RT\\log\\dfrac{49}{40}$，$Q_{\\rm C}=RT\\log\\dfrac{49}{40}$，$\\eta=\\dfrac23$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{18}{35}RT$（C の膨張で圧力が下がり，H から気体が押し出されるので，H 内の気体は温度一定のまま外へ仕事をし，その分の熱を吸収する）　(5) どの長方形でも $Z=-\\dfrac13Y$ となるので $\\eta=1-\\dfrac13=\\dfrac23$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 圧力}\n\nH 内，C 内の物質量を $n_{\\rm H}$，$n_{\\rm C}$ とすると，状態方程式 $pV_{\\rm H}=n_{\\rm H}R\\cdot3T$，$pV_{\\rm C}=n_{\\rm C}RT$ と $n_{\\rm H}+n_{\\rm C}=1$ より\n\\[ \\frac{pV_{\\rm H}}{3RT}+\\frac{pV_{\\rm C}}{RT}=1 \\quad\\therefore\\quad p=\\boldsymbol{\\frac{3RT}{V_{\\rm H}+3V_{\\rm C}}} \\]\n圧力は $V_{\\rm H}+3V_{\\rm C}$ だけで決まる．H の気体は温度が 3 倍なので，同じ体積に入る物質量が $\\frac13$ になり，体積の「効き方」が C の $\\frac13$ になるのである．このため $V_{\\rm H}$–$V_{\\rm C}$ 平面上で等圧線は $V_{\\rm H}+3V_{\\rm C}=$一定 の直線になる（解答図）．\nまた $n_{\\rm H}=\\dfrac{pV_{\\rm H}}{3RT}=\\dfrac{V_{\\rm H}}{V_{\\rm H}+3V_{\\rm C}}$ で，状態 1，2，3，4 では $n_{\\rm H}=\\frac14,\\ \\frac47,\\ \\frac25,\\ \\frac17$ である．\n\n\\textbf{(2) 各ピストンにした仕事}\n\n$\\mathrm{P_H}$ が動くのは 1 → 2（$V_{\\rm C}=V_0$）と 3 → 4（$V_{\\rm C}=2V_0$）である．\n\\[ Y_{12}=\\int_{V_0}^{4V_0}\\frac{3RT\\,dV_{\\rm H}}{V_{\\rm H}+3V_0}=3RT\\log\\frac74,\\qquad Y_{34}=\\int_{4V_0}^{V_0}\\frac{3RT\\,dV_{\\rm H}}{V_{\\rm H}+6V_0}=3RT\\log\\frac7{10} \\]\n\\[ Y=Y_{12}+Y_{34}=3RT\\log\\frac{49}{40}=\\boldsymbol{3RT\\log\\frac{49}{40}}\\ (>0) \\]\n$\\mathrm{P_C}$ が動くのは 2 → 3（$V_{\\rm H}=4V_0$）と 4 → 1（$V_{\\rm H}=V_0$）である．\n\\[ Z_{23}=\\int_{V_0}^{2V_0}\\frac{3RT\\,dV_{\\rm C}}{4V_0+3V_{\\rm C}}=RT\\log\\frac{10}{7},\\qquad Z_{41}=\\int_{2V_0}^{V_0}\\frac{3RT\\,dV_{\\rm C}}{V_0+3V_{\\rm C}}=RT\\log\\frac47 \\]\n\\[ Z=RT\\log\\frac{40}{49}=\\boldsymbol{-RT\\log\\frac{49}{40}} \\]\n$\\mathrm{P_H}$ は圧力の高いとき（$V_{\\rm C}$ が小さいとき）に押し出され，低いときに押し戻されるので $Y>0$，$\\mathrm{P_C}$ はその逆なので $Z<0$ である．\n\n\\textbf{(3) 吸収する熱量と効率}\n\n与えられた式を 1 サイクルにわたって足し合わせると，\n\\[ Q_{\\rm H}=\\sum p\\,\\Delta V_{\\rm H}-3RT\\sum\\Delta n_{\\rm H}=Y-3RT\\times0=\\boldsymbol{3RT\\log\\frac{49}{40}} \\]\n1 サイクルで $n_{\\rm H}$ はもとに戻る（$\\sum\\Delta n_{\\rm H}=0$）からである．H に出入りする気体はどちらも温度 $3T$ なので，押し出しの仕事と押し込まれる仕事は 1 サイクルで打ち消し合う．\n\n次に装置全体（気体と G）のエネルギー保存を考える．1 サイクルで気体の状態はもとに戻り（内部エネルギーの変化 $0$），G が気体とやりとりする熱の合計も $0$ なので，熱力学第一法則より\n\\[ Q_{\\rm H}-Q_{\\rm C}=Y+Z \\quad\\therefore\\quad Q_{\\rm C}=Q_{\\rm H}-(Y+Z)=-Z=\\boldsymbol{RT\\log\\frac{49}{40}} \\]\nしたがって\n\\[ \\eta=\\frac{Y+Z}{Q_{\\rm H}}=\\frac{3RT\\log\\frac{49}{40}-RT\\log\\frac{49}{40}}{3RT\\log\\frac{49}{40}}=\\boldsymbol{\\frac23} \\]\nこれは温度 $3T$ と $T$ の間のカルノー効率 $1-\\dfrac{T}{3T}$ に等しい．\n\n\\textbf{(4) 2 → 3 で H が受け取る熱量}\n\n$\\Delta V_{\\rm H}=0$ なので $Q_{23}=-3RT\\,(n_{\\rm H3}-n_{\\rm H2})=-3RT\\left(\\frac25-\\frac47\\right)=\\boldsymbol{\\frac{18}{35}RT}$．\nC を膨張させると圧力が下がる．温度一定の H 内の気体は圧力が下がる分だけ膨張しようとして，管の側へ気体を押し出す（$n_{\\rm H}$ が減る）．H 内の気体は外へ仕事をするが温度（内部エネルギー）は変わらないので，その分の熱を高温物体から吸収する．ピストンが止まっていても熱の出入りがあることに注意する．\n\n（参考：各過程の $Q$ は $Q_{12}=3RT\\left(\\log\\frac74-\\frac{9}{28}\\right)$，$Q_{23}=\\frac{18}{35}RT$，$Q_{34}=3RT\\left(\\log\\frac7{10}+\\frac{9}{35}\\right)$，$Q_{41}=-\\frac{9}{28}RT$ で，$\\log$ を含まない部分の和は $0$ になる．）\n\n\\textbf{(5) 一般の長方形サイクル}\n\n(2)と同様に\n\\[ Y=3RT\\left(\\log\\frac{a'+3b}{a+3b}-\\log\\frac{a'+3b'}{a+3b'}\\right)=3RT\\log\\frac{(a'+3b)(a+3b')}{(a+3b)(a'+3b')} \\]\n\\[ Z=RT\\left(\\log\\frac{a'+3b'}{a'+3b}-\\log\\frac{a+3b'}{a+3b}\\right)=RT\\log\\frac{(a'+3b')(a+3b)}{(a'+3b)(a+3b')}=-\\frac13Y \\]\n(3)と同じ理由で $Q_{\\rm H}=Y$ なので，$\\eta=\\dfrac{Y+Z}{Y}=1-\\dfrac13=\\boldsymbol{\\frac23}$ となり，$a,a',b,b'$ によらない．\n\n圧力が $V_{\\rm H}+3V_{\\rm C}$ だけの関数であることから，$\\mathrm{P_C}$ への仕事は $\\mathrm{P_H}$ への仕事のちょうど $-\\dfrac{T}{3T}$ 倍になる．H と C の気体はそれぞれ一定温度で熱をやりとりし，G は気体を温度差なく加熱・冷却するので，この機関は可逆機関であり，サイクルの形によらずカルノー効率になる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "高温部と低温部に分かれた気体の圧力は $V_{\\rm H}/T_{\\rm H}+V_{\\rm C}/T_{\\rm C}$ だけで決まるので，低温側ピストンへの仕事は高温側ピストンへの仕事の $-T_{\\rm C}/T_{\\rm H}$ 倍になる．H に出入りする気体は同じ温度なので押し出しの仕事は1サイクルで打ち消し合い，吸熱量は高温側ピストンへの仕事に等しく，熱効率はサイクルの形によらずカルノー効率になる．"
+ },
+ "concepts": [
+  "first-law",
+  "work-energy",
+  "heat-temperature"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "再生器",
+  "スターリング機関",
+  "熱効率",
+  "カルノー効率",
+  "押し出し仕事"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

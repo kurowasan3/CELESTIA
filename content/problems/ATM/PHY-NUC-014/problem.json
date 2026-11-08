@@ -1,0 +1,135 @@
+{
+ "id": "PHY-NUC-014",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "静止したポジトロニウムの3光子消滅（運動量の三角形とエネルギーの上限）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電子と陽電子（質量はともに $m$）が束縛し合ったポジトロニウムが静止しており，これが3個の光子 $\\gamma_1$，$\\gamma_2$，$\\gamma_3$ に消滅する．束縛エネルギーは無視し，消滅前の全エネルギーを $2mc^2$ とする（$c$ は光速）．エネルギー $E$ の光子の運動量の大きさは $E/c$ である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "3個の光子の進む向きは同一平面内にあることを示せ．また，ポジトロニウムが光子1個だけに消滅することはできない理由を述べよ．"
+     },
+     {
+      "id": "2",
+      "tex": "図のように，$\\gamma_1$ と $\\gamma_2$，$\\gamma_2$ と $\\gamma_3$，$\\gamma_3$ と $\\gamma_1$ の進む向きのなす角が，それぞれ $90^\\circ$，$135^\\circ$，$135^\\circ$ であった．各光子のエネルギーを $mc^2$ を用いて表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "3光子消滅では，どの光子のエネルギーも $mc^2$ を超えないことを示せ．また，ちょうど $mc^2$ になるのはどのような場合か．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\gamma_1$ のエネルギーが $E_1=0.80\\,mc^2$ であったとき，$\\gamma_2$ と $\\gamma_3$ の進む向きのなす角 $\\psi$ のとりうる範囲を求めよ（角度は度単位で有効数字2桁）．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：静止したポジトロニウムの3光子消滅（運動量の三角形とエネルギーの上限）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：静止したポジトロニウムの3光子消滅（運動量の三角形とエネルギーの上限）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "運動量の和が $0$ なので $\\vec p_3=-(\\vec p_1+\\vec p_2)$ は $\\vec p_1$，$\\vec p_2$ の張る平面内にある．光子1個では運動量 $2mc\\ne0$ となり運動量保存に反する"
+   },
+   {
+    "id": "2",
+    "tex": "$E_1=E_2=(2-\\sqrt2)mc^2\\approx0.59mc^2$，$E_3=2(\\sqrt2-1)mc^2\\approx0.83mc^2$"
+   },
+   {
+    "id": "3",
+    "tex": "$E_1\\le E_2+E_3=2mc^2-E_1$ より $E_1\\le mc^2$．残り2個が同じ向き（その光子と正反対の向き）に出るとき"
+   },
+   {
+    "id": "4",
+    "tex": "$96^\\circ\\le\\psi\\le180^\\circ$（最小値は $\\cos\\frac\\psi2=\\frac23$）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 消滅前の運動量は $0$ なので $\\vec p_1+\\vec p_2+\\vec p_3=\\vec0$．$\\vec p_3=-(\\vec p_1+\\vec p_2)$ は $\\vec p_1$，$\\vec p_2$ を含む平面内にあるから，3個の光子は同一平面内を進む．\n光子1個に消滅すると，エネルギー保存からその光子のエネルギーは $2mc^2$，運動量の大きさは $2mc\\ne0$ となり，運動量保存に反する．\n\n\\textbf{(2) 運動量の三角形}\n3つの運動量を順につなぐと閉じた三角形になる（解答図）．$\\vec p_i$ と $\\vec p_j$ の向きのなす角を $\\varphi_{ij}$ とすると，三角形の $\\vec p_i$ と $\\vec p_j$ の辺がはさむ内角は $180^\\circ-\\varphi_{ij}$ で，その向かいの辺が $\\vec p_k$ である．正弦定理より\n\\[ E_1:E_2:E_3=\\sin\\varphi_{23}:\\sin\\varphi_{31}:\\sin\\varphi_{12}=\\sin135^\\circ:\\sin135^\\circ:\\sin90^\\circ=1:1:\\sqrt2 \\]\n$E_1+E_2+E_3=2mc^2$ より\n\\[ E_1=E_2=\\frac{2mc^2}{2+\\sqrt2}=\\boldsymbol{(2-\\sqrt2)mc^2}\\ (\\approx0.59mc^2),\\qquad E_3=\\boldsymbol{2(\\sqrt2-1)mc^2}\\ (\\approx0.83mc^2) \\]\n（別解：$\\gamma_1$ を $x$ 軸正，$\\gamma_2$ を $y$ 軸正の向きにとると $\\gamma_3$ は $(-\\frac1{\\sqrt2},-\\frac1{\\sqrt2})$ 方向で，$x$，$y$ 成分の保存から $E_1=E_2=E_3/\\sqrt2$．同じ結果になる．）\n\n\\textbf{(3) エネルギーの上限}\n三角不等式より $|\\vec p_1|=|\\vec p_2+\\vec p_3|\\le|\\vec p_2|+|\\vec p_3|$．$c$ 倍して $E_1\\le E_2+E_3=2mc^2-E_1$，よって $\\boldsymbol{E_1\\le mc^2}$（他の光子も同様）．等号は $\\vec p_2$ と $\\vec p_3$ が同じ向き，すなわち\\textbf{残り2個が，その光子と正反対の向きにそろって出るとき}．3光子消滅のエネルギー分布の上端は，2光子消滅の光子のエネルギー $mc^2$ に一致する．\n\n\\textbf{(4) 残り2個のなす角}\n$S=E_2+E_3=2mc^2-E_1=1.20\\,mc^2$ とおく．$|\\vec p_2+\\vec p_3|=E_1/c$ より\n\\[ E_2^{\\,2}+E_3^{\\,2}+2E_2E_3\\cos\\psi=E_1^{\\,2}\\quad\\Longrightarrow\\quad 1-\\cos\\psi=\\frac{S^2-E_1^{\\,2}}{2E_2E_3} \\]\n$E_2+E_3=S$ が一定なので $E_2E_3\\le\\dfrac{S^2}{4}$（等号は $E_2=E_3$）．したがって\n\\[ 1-\\cos\\psi\\ \\ge\\ \\frac{2(S^2-E_1^{\\,2})}{S^2}\\quad\\Longrightarrow\\quad\\cos\\psi\\le\\frac{2E_1^{\\,2}}{S^2}-1=2\\cdot\\frac{0.64}{1.44}-1=-\\frac19 \\]\n$\\cos\\psi=2\\cos^2\\dfrac\\psi2-1$ と比べると $\\cos\\dfrac{\\psi}{2}\\le\\dfrac{E_1}{S}=\\dfrac23$ となり，最小値は $\\psi_{\\min}=2\\cos^{-1}\\dfrac23=96.4^\\circ$．\n最大は，$\\vec p_2$ と $\\vec p_3$ が正反対の向き（$\\psi=180^\\circ$）で $|E_2-E_3|=E_1$，すなわち $E_2=mc^2$，$E_3=0.20mc^2$（またはその逆）のときで，これは許される．よって\n\\[ \\boldsymbol{96^\\circ\\le\\psi\\le180^\\circ} \\]\n残り2個のエネルギーが等しいとき，なす角は最も小さくなる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "静止した系が光子に消滅するとき運動量の和は $0$ なので，光子の運動量は閉じた三角形をつくり，光子どうしのなす角から正弦定理でエネルギー比が決まる．三角不等式から3光子消滅の各光子のエネルギーは $mc^2$ 以下（2光子消滅の線が分布の上端）となり，1個のエネルギーを決めたとき残り2個のなす角は，2個のエネルギーが等しいときに最小になる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "momentum-conservation",
+  "string-resonance"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "対消滅",
+  "光子の運動量",
+  "運動量保存",
+  "ポジトロニウム",
+  "正弦定理"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

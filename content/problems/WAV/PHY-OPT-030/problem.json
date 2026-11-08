@@ -1,0 +1,143 @@
+{
+ "id": "PHY-OPT-030",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "くさび形空気層の干渉縞の移動から下のガラス板の平行移動と傾きの変化を読み取る",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，屈折率 $1.5$ の2枚の平板ガラスを重ねる．上のガラス板は水平に固定してあり，下のガラス板は台にのせて上下に動かしたり傾けたりできる（板は変形しない）．はじめ，下のガラス板の上面は上のガラス板の下面と左端 O で接し，O から水平距離 $L$ の位置で両者の間隔が $D$ になるように傾いている（$D\\ll L$）．O を原点として右向きに $x$ 軸をとり，上のガラス板の上面の $x=\\frac{L}{4}$ の位置に印 P$_1$，$x=\\frac{3L}{4}$ の位置に印 P$_2$ をつけておく．\n真上から波長 $\\lambda$ の単色光を当て，2枚のガラスの間の空気層の上下の面で反射した光を真上から観察する．空気の屈折率を $1$ とし，光が屈折率の大きい媒質との境界で反射するときは位相が $\\pi$ ずれ，小さい媒質との境界で反射するときは位相は変化しないものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "位置 $x$ に暗線ができる条件を，整数 $m\\ (m=0,1,2,\\dots)$ を用いて表せ．また，暗線の間隔 $\\Delta x_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "次に，台を操作して下のガラス板をゆっくり動かした．操作の間，2枚のガラスの間隔は常に $x$ の1次式で，$x$ とともに増加しており，各位置での間隔は単調に変化した．すると，P$_1$ の下を暗線が O に近づく向きに $N_1$ 本通過し，P$_2$ の下を暗線が O から遠ざかる向きに $N_2$ 本通過した（操作のはじめと終わりには，どちらの印の位置にもちょうど暗線があった）．P$_1$，P$_2$ の位置での間隔の変化量（増加を正とする）をそれぞれ求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "操作の前後で間隔が変わらなかった点の $x$ 座標 $x^*$ と，操作後の O の位置での間隔 $h_0$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "操作後の暗線の間隔 $\\Delta x_1$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\lambda=6.0\\times10^{-7}$ m，$L=5.0\\times10^{-2}$ m，$D=2.0\\times10^{-5}$ m，$N_1=7$，$N_2=3$ のとき，$x^*$，$h_0$，$\\Delta x_0$，$\\Delta x_1$ を有効数字2桁で求めよ．また，操作後に O の位置は明るいか暗いかを答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：くさび形空気層の干渉縞の移動から下のガラス板の平行移動と傾きの変化を読み取る",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：くさび形空気層の干渉縞の移動から下のガラス板の平行移動と傾きの変化を読み取る",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\frac{2D}{L}x=m\\lambda$，$\\Delta x_0=\\frac{\\lambda L}{2D}$"
+   },
+   {
+    "id": "2",
+    "tex": "P$_1$：$+\\frac{N_1\\lambda}{2}$，P$_2$：$-\\frac{N_2\\lambda}{2}$"
+   },
+   {
+    "id": "3",
+    "tex": "$x^*=\\frac{(3N_1+N_2)L}{4(N_1+N_2)}$，$h_0=\\frac{(3N_1+N_2)\\lambda}{4}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta x_1=\\frac{\\lambda L}{2\\{D-(N_1+N_2)\\lambda\\}}$"
+   },
+   {
+    "id": "5",
+    "tex": "$x^*=3.0\\times10^{-2}$ m，$h_0=3.6\\times10^{-6}$ m，$\\Delta x_0=7.5\\times10^{-4}$ m，$\\Delta x_1=1.1\\times10^{-3}$ m，O は暗い"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{方針}　間隔を $g(x)$ とすると，暗線は「$2g$ が波長の整数倍」の位置にできる．どの操作でも $g(x)$ は $x$ の1次式 $g=h+bx$ なので，未知数は2つ（O での間隔 $h$ と傾き $b$）であり，2つの印での暗線の通過本数から両方が決まる．通過した「向き」が間隔の増減の符号を教えてくれる点が要である．\n\n\\textbf{(1)}　上のガラスの下面（ガラス→空気）での反射では位相は変わらず，下のガラスの上面（空気→ガラス）での反射では $\\pi$ ずれる．はじめの間隔は $g_0(x)=\\frac{D}{L}x$ で，2つの反射光の経路差は $2g_0$ だから，暗線の条件は\n\\[ 2\\cdot\\frac{D}{L}x=m\\lambda \\quad (m=0,1,2,\\dots) \\]\n$m$ が1増えると $x$ は $\\frac{\\lambda L}{2D}$ 増えるので $\\Delta x_0=\\boldsymbol{\\frac{\\lambda L}{2D}}$．（O は $m=0$ の暗線．）\n\n\\textbf{(2)}　$m$ 番目の暗線は $g=\\frac{m\\lambda}{2}$ の位置にある．間隔が $x$ とともに増加している限り，ある点 P で $g$ が増えると，以前 P にあった値 $g=\\frac{m\\lambda}{2}$ をとる位置は P より O 側（$x$ の小さい側）へ移る．つまり暗線は O に近づく向きに動く．逆に P で $g$ が減ると暗線は O から遠ざかる．また，P を暗線が1本通過するごとに P での $2g$ はちょうど $\\lambda$ 変化する（$g$ は $\\frac{\\lambda}{2}$ 変化する）．各点で $g$ は単調に変化したので，通過本数はそのまま変化量を表す．よって\n\\[ \\Delta g(\\tfrac{L}{4})=\\boldsymbol{+\\frac{N_1\\lambda}{2}},\\qquad \\Delta g(\\tfrac{3L}{4})=\\boldsymbol{-\\frac{N_2\\lambda}{2}} \\]\n\n\\textbf{(3)}　間隔の変化量 $\\Delta g(x)$ も $x$ の1次式なので，2点を結ぶ直線になる．傾きの変化は\n\\[ \\Delta b=\\frac{-\\frac{N_2\\lambda}{2}-\\frac{N_1\\lambda}{2}}{\\frac{L}{2}}=-\\frac{(N_1+N_2)\\lambda}{L} \\]\n$\\Delta g(x)=\\frac{N_1\\lambda}{2}+\\Delta b\\left(x-\\frac{L}{4}\\right)=0$ を解いて\n\\[ x^*=\\frac{L}{4}+\\frac{L}{2}\\cdot\\frac{N_1}{N_1+N_2}=\\boldsymbol{\\frac{(3N_1+N_2)L}{4(N_1+N_2)}} \\]\nO ではもとの間隔が $0$ なので $h_0=\\Delta g(0)=\\frac{N_1\\lambda}{2}+\\frac{L}{4}\\cdot\\frac{(N_1+N_2)\\lambda}{L}=\\boldsymbol{\\frac{(3N_1+N_2)\\lambda}{4}}$．\nすなわち下の板は，$x^*$ の位置を軸にして傾きが小さくなる向きに回転したのと同じで，O の側は下がり，右端の側は上がった．\n\n\\textbf{(4)}　操作後の傾きは $b_1=\\frac{D}{L}-\\frac{(N_1+N_2)\\lambda}{L}$ で，暗線の間隔は $2b_1\\Delta x_1=\\lambda$ から\n\\[ \\Delta x_1=\\boldsymbol{\\frac{\\lambda L}{2\\{D-(N_1+N_2)\\lambda\\}}} \\]\n（間隔が $x$ とともに増加しているという条件は $D>(N_1+N_2)\\lambda$ を意味する．）\n\n\\textbf{(5)}　$x^*=\\frac{24}{40}L=\\boldsymbol{3.0\\times10^{-2}}$ m，$h_0=\\frac{24}{4}\\lambda=6\\lambda=\\boldsymbol{3.6\\times10^{-6}}$ m．\n$\\Delta x_0=\\frac{6.0\\times10^{-7}\\times5.0\\times10^{-2}}{2\\times2.0\\times10^{-5}}=\\boldsymbol{7.5\\times10^{-4}}$ m．$D-10\\lambda=1.4\\times10^{-5}$ m より $\\Delta x_1=\\frac{3.0\\times10^{-8}}{2.8\\times10^{-5}}\\fallingdotseq\\boldsymbol{1.1\\times10^{-3}}$ m．\nO での経路差は $2h_0=12\\lambda$（波長の整数倍）なので，O は\\textbf{暗い}（O にはもとの $m=0$ の暗線ではなく，$m=12$ の暗線がある）．\nなお，条件 $D>10\\lambda=6.0\\times10^{-6}$ m は満たされている．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "くさび形空気層の間隔は $x$ の1次式なので，下の板の剛体的な動き（平行移動＋回転）は2つの量で決まり，2点での暗線の通過本数から求まる．暗線がある点を O の側へ通過すれば間隔が増え，O から遠ざかる向きに通過すれば減るので，向きを含めた本数から回転の軸の位置と新しい縞の間隔が決まる．"
+ },
+ "concepts": [
+  "light-interference",
+  "torque",
+  "interference"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "くさび形空気層",
+  "干渉縞の移動",
+  "光路差",
+  "反射による位相変化",
+  "逆問題"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

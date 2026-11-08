@@ -1,0 +1,136 @@
+{
+ "id": "PHY-RIG-004",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "バンク付きカーブを走る自動車の横転と横すべりの競合",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $m$ の自動車が，水平面に対して角 $\\beta$ だけ傾いた（外側ほど高い）路面上を，水平面内の半径 $r$ の円周に沿って一定の速さ $v$ で走行している．図は進行方向に垂直な断面であり，自動車の重心 G は左右の車輪の接地点の中点から路面に垂直に高さ $h$ のところにあり，左右の接地点の間隔は $2d$ である．$r$ は自動車の大きさに比べて十分大きく，前輪・後輪の区別やタイヤの幅は考えない．車輪と路面の間の静止摩擦係数を $\\mu$，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "路面が自動車に及ぼす摩擦力の合計を，路面に沿って内側（下り）向きを正として $F$ とする．$F$ と，内側・外側の車輪が路面から受ける垂直抗力 $N_1$，$N_2$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "速さを大きくしていくと，ある速さ $v_{\\mathrm t}$ で内側の車輪が浮き上がる．$\\dfrac{v_{\\mathrm t}^2}{gr}=\\tan(\\beta+\\varphi)$ と表せることを示し，$\\tan\\varphi$ を $d$，$h$ で表せ．ただし $\\beta+\\varphi<90^\\circ$ とする．"
+     },
+     {
+      "id": "3",
+      "tex": "速さを大きくしていくとき，横すべりと内側の車輪の浮き上がりのどちらが先に起こるかは，$\\beta$ によらず $\\mu$ と $\\dfrac dh$ の大小だけで決まることを示せ．ただし，(2) と同様に角度の和は $90^\\circ$ より小さいとする．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\beta=15^\\circ$，$\\dfrac dh=\\dfrac{1}{\\sqrt3}$，$\\mu=0.80$，$r=50\\,\\mathrm{m}$，$g=9.8\\,\\mathrm{m/s^2}$ とする．自動車が横すべりも浮き上がりもせずに走行できる速さの最大値を有効数字 2 桁で求めよ．また，停止している（$v=0$）ときにも横すべり・転倒が起こらないことを確かめよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：バンク付きカーブを走る自動車の横転と横すべりの競合",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：バンク付きカーブを走る自動車の横転と横すべりの競合",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F=m\\left(\\dfrac{v^2}{r}\\cos\\beta-g\\sin\\beta\\right)$，$N_1=\\dfrac m2\\left\\{g\\cos\\beta+\\dfrac{v^2}{r}\\sin\\beta-\\dfrac hd\\left(\\dfrac{v^2}{r}\\cos\\beta-g\\sin\\beta\\right)\\right\\}$，$N_2=\\dfrac m2\\left\\{g\\cos\\beta+\\dfrac{v^2}{r}\\sin\\beta+\\dfrac hd\\left(\\dfrac{v^2}{r}\\cos\\beta-g\\sin\\beta\\right)\\right\\}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\tan\\varphi=\\dfrac dh$"
+   },
+   {
+    "id": "3",
+    "tex": "$\\mu<\\dfrac dh$ なら横すべりが先，$\\mu>\\dfrac dh$ なら浮き上がりが先"
+   },
+   {
+    "id": "4",
+    "tex": "$22\\,\\mathrm{m/s}$（内側の車輪の浮き上がりで決まる）；$\\tan15^\\circ\\approx0.27$ は $\\mu$ と $\\dfrac dh$ のどちらよりも小さいので，停止時も安全"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{見かけの重力で考える}\n自動車とともに回る観測者から見ると，自動車は静止しており，G に重力 $mg$（鉛直下向き）と遠心力 $m\\dfrac{v^2}{r}$（水平外向き）がはたらく．この合力を「見かけの重力」と考えると，見かけの重力が路面に垂直になるときは傾いていない平地に止まっているのと同じであり，見かけの重力が路面の法線から傾くほど，路面に沿う成分（摩擦が受け持つ）と横転させるモーメントが増える．\n\n\\textbf{(1)} 路面に沿って外向き（上り）と路面に垂直な方向に分解する．\n\\[ \\text{路面に沿う方向：}\\ F=m\\frac{v^2}{r}\\cos\\beta-mg\\sin\\beta \\]\n\\[ \\text{路面に垂直な方向：}\\ N_1+N_2=mg\\cos\\beta+m\\frac{v^2}{r}\\sin\\beta \\]\n自動車は回転しないので，G のまわりの力のモーメントもつり合う．摩擦力は G から路面に垂直に $h$ 離れた接地面にはたらき，$F>0$（内向き）のとき外側に倒す向きのモーメント $Fh$ をつくるから\n\\[ N_2d-N_1d=Fh \\]\nこれらを解いて\n\\[ \\boldsymbol{N_1=\\frac m2\\left\\{g\\cos\\beta+\\frac{v^2}{r}\\sin\\beta-\\frac hd\\left(\\frac{v^2}{r}\\cos\\beta-g\\sin\\beta\\right)\\right\\}},\\quad \\boldsymbol{N_2=\\frac m2\\left\\{g\\cos\\beta+\\frac{v^2}{r}\\sin\\beta+\\frac hd\\left(\\frac{v^2}{r}\\cos\\beta-g\\sin\\beta\\right)\\right\\}} \\]\n\n\\textbf{(2)} $N_1=0$ となる速さが $v_{\\mathrm t}$ である．$N_1=0$ は\n\\[ d\\left(g\\cos\\beta+\\frac{v^2}{r}\\sin\\beta\\right)=h\\left(\\frac{v^2}{r}\\cos\\beta-g\\sin\\beta\\right) \\]\n\\[ \\frac{v_{\\mathrm t}^2}{gr}=\\frac{d\\cos\\beta+h\\sin\\beta}{h\\cos\\beta-d\\sin\\beta}=\\frac{\\tan\\beta+\\dfrac dh}{1-\\dfrac dh\\tan\\beta} \\]\n$\\tan\\varphi=\\boldsymbol{\\dfrac dh}$ とおけば，加法定理より $\\dfrac{v_{\\mathrm t}^2}{gr}=\\tan(\\beta+\\varphi)$．\n図形的には，見かけの重力の作用線が外側の車輪の接地点を通るとき（解答図）であり，そのとき見かけの重力と路面の法線のなす角が $\\varphi$，見かけの重力と鉛直のなす角が $\\beta+\\varphi$ で，$\\tan(\\beta+\\varphi)=\\dfrac{v^2/r}{g}$ となる．\n\n\\textbf{(3)} 横すべりの直前は $F=\\mu(N_1+N_2)$ だから\n\\[ \\frac{v^2}{r}\\cos\\beta-g\\sin\\beta=\\mu\\left(g\\cos\\beta+\\frac{v^2}{r}\\sin\\beta\\right)\\quad\\therefore\\ \\frac{v_{\\mathrm s}^2}{gr}=\\frac{\\tan\\beta+\\mu}{1-\\mu\\tan\\beta}=\\tan(\\beta+\\lambda) \\]\nただし $\\tan\\lambda=\\mu$（$\\lambda$ は摩擦角）．$0<\\beta+\\lambda,\\ \\beta+\\varphi<90^\\circ$ の範囲で $\\tan$ は単調増加なので\n\\[ v_{\\mathrm s}<v_{\\mathrm t}\\iff\\lambda<\\varphi\\iff\\mu<\\frac dh \\]\nとなり，どちらが先かは $\\beta$ によらない．$\\boldsymbol{\\mu<\\dfrac dh}$ \\textbf{なら横すべりが先}，$\\boldsymbol{\\mu>\\dfrac dh}$ \\textbf{なら浮き上がりが先}である．バンクは限界の速さそのものを $\\tan(\\cdot+\\beta)$ の形で引き上げるが，二つの限界の大小関係は変えない．\n\n\\textbf{(4)} $\\dfrac dh=\\dfrac1{\\sqrt3}\\approx0.58<\\mu=0.80$ なので，(3) より速さを上げると先に内側の車輪が浮き上がる．$\\varphi=30^\\circ$ だから\n\\[ v_{\\mathrm t}=\\sqrt{gr\\tan(15^\\circ+30^\\circ)}=\\sqrt{9.8\\times50\\times1}\\approx\\boldsymbol{22\\,\\mathrm{m/s}} \\]\n（横すべりの限界は $\\sqrt{gr\\tan(15^\\circ+\\lambda)}\\approx26\\,\\mathrm{m/s}$ でこれより大きい．）\n停止時は見かけの重力が鉛直下向きで，路面の法線とのなす角は $\\beta=15^\\circ$．すべらない条件は $\\tan\\beta\\le\\mu$，内側へ転倒しない条件は $\\tan\\beta\\le\\dfrac dh$（見かけの重力の作用線が内側の接地点より外側を通る）であり，$\\tan15^\\circ\\approx0.27$ はどちらも満たす．$0\\le v\\le v_{\\mathrm t}$ では見かけの重力の傾きは鉛直から $0^\\circ$〜$45^\\circ$，路面の法線から $-15^\\circ$〜$30^\\circ$ の範囲を連続に動くだけなので，途中で破綻することもない．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "重力と遠心力の合力（見かけの重力）が路面の法線となす角で考えると，横すべりの限界は摩擦角 $\\lambda$（$\\tan\\lambda=\\mu$），横転の限界は $\\tan\\varphi=d/h$ の角に対応する．バンク角 $\\beta$ は両方の限界を同じだけずらすだけなので，どちらが先に起こるかは $\\mu$ と $d/h$ の比較だけで決まる．"
+ },
+ "concepts": [
+  "torque",
+  "circular-motion",
+  "static-friction"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "剛体のつり合い",
+  "力のモーメント",
+  "遠心力",
+  "バンク",
+  "摩擦角",
+  "横転"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

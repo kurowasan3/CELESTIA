@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250">
+<defs>
+<marker id="a-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fbf"/></marker>
+<marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="a-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+</defs>
+<line x1="70.0" y1="210.0" x2="520.0" y2="210.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<line x1="70.0" y1="210.0" x2="70.0" y2="40.0" stroke="#222" stroke-width="1.2" marker-end="url(#a-ak)"/>
+<text x="525" y="215" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">t</text>
+<text x="78" y="50" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">u</text>
+<text x="100" y="50" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">（板に対する球の最下点の滑りの速さ）</text>
+<path d="M70,70 L300,210 L70,210 Z" fill="#1f5fbf" fill-opacity="0.15" stroke="none"/>
+<line x1="70" y1="70" x2="300" y2="210" stroke="#1f5fbf" stroke-width="1.8"/>
+<line x1="300" y1="210" x2="500" y2="210" stroke="#1f5fbf" stroke-width="3"/>
+<text x="28" y="76" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">u<tspan baseline-shift="sub" font-size="10">0</tspan></text>
+<text x="295" y="232" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#222" text-anchor="start">t<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+<text x="85" y="190" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">面積＝滑った距離</text>
+<text x="250" y="120" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">傾き −μg(7/2＋m/M)</text>
+<text x="330" y="195" font-family="Noto Sans CJK JP, sans-serif" font-size="13" fill="#222" text-anchor="start">転がり（摩擦0）</text>
+</svg>

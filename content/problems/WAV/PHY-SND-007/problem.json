@@ -1,0 +1,135 @@
+{
+ "id": "PHY-SND-007",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "壁に向かう音源の反転で一時的に消えるうなり",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，直線上の点 O に観測者が静止しており，O から距離 $L$ の位置に，この直線に垂直な平らな壁がある．壁は音を完全に反射し，反射によって振動数は変わらない．振動数 $f$ の音を出し続ける小さな音源 S が，時刻 $t=0$ に O のすぐそばを出発し，一定の速さ $v$ で壁に向かって直線上を進む．S は O から距離 $b$（$b<L$）の点 Q に達した瞬間に向きだけを逆にし，その後は同じ速さ $v$ で O に向かって進む．音速を $c$（$v<c$）とし，風はなく，向きを変えるのに要する時間は無視する．また，S が Q に達する時刻には，壁からの反射音はすでに O に届き続けているものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "S が向きを変える前に出した音が O に届いている間，O が聞くうなりの振動数 $f_{\\mathrm b}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "S が向きを変えた後，O ではうなりが一時的に聞こえなくなり，その後ふたたびうなりが聞こえるようになった．うなりが聞こえない時間 $\\tau$ と，ふたたび聞こえるうなりの振動数を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "S が Q で向きを変えずにその場で停止した場合，O が聞くうなりの振動数は時間とともにどう変わるか．うなりの振動数が変わる時刻を $b,\\,L,\\,v,\\,c$ で表し，それぞれの時間帯のうなりの振動数を答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "（2）の実験で $f=680\\,\\mathrm{Hz}$，$c=340\\,\\mathrm{m/s}$ のとき，はじめのうなりの振動数は $4.0\\,\\mathrm{Hz}$ で，うなりが聞こえなくなったのは時刻 $t_1=34.1\\,\\mathrm{s}$，ふたたび聞こえ始めたのは時刻 $t_2=34.6\\,\\mathrm{s}$ であった．$v$，$b$，$L$ をそれぞれ有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：壁に向かう音源の反転で一時的に消えるうなり",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：壁に向かう音源の反転で一時的に消えるうなり",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f_{\\mathrm b}=\\dfrac{2fcv}{c^2-v^2}$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\tau=\\dfrac{2(L-b)}{c}$，ふたたび聞こえるうなりの振動数は $\\dfrac{2fcv}{c^2-v^2}$（はじめと同じ）"
+   },
+   {
+    "id": "3",
+    "tex": "$t<\\dfrac bv+\\dfrac bc$ では $\\dfrac{2fcv}{c^2-v^2}$，$\\dfrac bv+\\dfrac bc<t<\\dfrac bv+\\dfrac{2L-b}{c}$ では $\\dfrac{fv}{c-v}$，$t>\\dfrac bv+\\dfrac{2L-b}{c}$ ではうなりは聞こえない"
+   },
+   {
+    "id": "4",
+    "tex": "$v=1.0\\,\\mathrm{m/s}$，$b=34\\,\\mathrm{m}$，$L=1.2\\times10^{2}\\,\\mathrm{m}$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{考え方}　O に届く音は，S から直接届く音（直接音）と壁で反射して届く音（反射音）の2つである．それぞれの振動数は「その音を S が出した瞬間の S の運動」で決まり，S の運動が変わったという知らせは，それぞれの経路の長さに応じた時間だけ遅れて O に届く．\n\n\\textbf{(1)}　S は O から遠ざかっているので，直接音の振動数は\n\\[ f_{\\mathrm d}=\\frac{c}{c+v}f \\]\nである．壁は S が近づいてくる静止した観測者とみなせるので，壁が受けて反射する音の振動数は $\\dfrac{c}{c-v}f$ であり，壁も O も静止しているので，O が聞く反射音の振動数も\n\\[ f_{\\mathrm r}=\\frac{c}{c-v}f \\]\nである．うなりの振動数は振動数の差だから\n\\[ f_{\\mathrm b}=f_{\\mathrm r}-f_{\\mathrm d}=\\left(\\frac{1}{c-v}-\\frac{1}{c+v}\\right)cf=\\boldsymbol{\\frac{2fcv}{c^2-v^2}} \\]\n\n\\textbf{(2)}　S が Q で向きを変えた時刻を $t_{\\mathrm Q}=\\dfrac bv$ とする．向きを変えた後は，S は O に近づき壁から遠ざかるので\n\\[ f_{\\mathrm d}'=\\frac{c}{c-v}f,\\qquad f_{\\mathrm r}'=\\frac{c}{c+v}f \\]\nとなり，直接音と反射音の振動数がちょうど入れ替わる．\n\nところが，向きを変えた後の音が O に届き始める時刻は経路によって違う．直接音は距離 $b$ を進むので時刻 $t_{\\mathrm Q}+\\dfrac bc$ に，反射音は Q から壁までの $L-b$ と壁から O までの $L$ を進むので時刻 $t_{\\mathrm Q}+\\dfrac{2L-b}{c}$ に届き始める．この2つの時刻の間，O には\n\\[ \\text{直接音（反転後）}\\ \\frac{c}{c-v}f,\\qquad \\text{反射音（反転前）}\\ \\frac{c}{c-v}f \\]\nが届き，両者の振動数が等しいのでうなりは聞こえない．その長さは\n\\[ \\tau=\\frac{2L-b}{c}-\\frac bc=\\boldsymbol{\\frac{2(L-b)}{c}} \\]\nその後は $f_{\\mathrm d}'$ と $f_{\\mathrm r}'$ が届き，うなりの振動数は\n\\[ f_{\\mathrm d}'-f_{\\mathrm r}'=\\boldsymbol{\\frac{2fcv}{c^2-v^2}} \\]\nで，はじめと同じである（高い音と低い音の役割が入れ替わっただけ）．\n\n\\textbf{(3)}　停止した後に S が出す音は，直接音も反射音も振動数 $f$ である．知らせが届く時刻は(2)と同じで，次のようになる．\n\n・$t<\\dfrac bv+\\dfrac bc$：直接音 $\\dfrac{c}{c+v}f$，反射音 $\\dfrac{c}{c-v}f$ で，うなりは $\\boldsymbol{\\dfrac{2fcv}{c^2-v^2}}$．\n\n・$\\dfrac bv+\\dfrac bc<t<\\dfrac bv+\\dfrac{2L-b}{c}$：直接音 $f$，反射音 $\\dfrac{c}{c-v}f$ で，うなりは $\\dfrac{c}{c-v}f-f=\\boldsymbol{\\dfrac{fv}{c-v}}$．\n\n・$t>\\dfrac bv+\\dfrac{2L-b}{c}$：どちらも $f$ で，\\textbf{うなりは聞こえない}．\n\n反転の場合は「うなり→消える→同じうなり」，停止の場合は「うなり→約半分の振動数のうなり→消える」となり，途中の時間帯の様子で両者を区別できる（解答図）．\n\n\\textbf{(4)}　$v\\ll c$ なので $f_{\\mathrm b}\\approx\\dfrac{2fv}{c}$ より\n\\[ v\\approx\\frac{cf_{\\mathrm b}}{2f}=\\frac{340\\times4.0}{2\\times680}=\\boldsymbol{1.0\\,\\mathrm{m/s}} \\]\n（$\\dfrac{2fcv}{c^2-v^2}=4.0$ を厳密に解いても有効数字2桁で同じ．）\n\nうなりが消えた時刻は反転後の直接音が届き始めた時刻だから\n\\[ t_1=\\frac bv+\\frac bc\\quad\\Longrightarrow\\quad b=\\frac{t_1}{\\dfrac1v+\\dfrac1c}=\\frac{34.1}{1+\\dfrac{1}{340}}\\approx 34.0\\,\\mathrm m=\\boldsymbol{34\\,\\mathrm m} \\]\nまた $t_2-t_1=\\tau=\\dfrac{2(L-b)}{c}$ より\n\\[ L=b+\\frac{c(t_2-t_1)}{2}=34+\\frac{340\\times0.5}{2}=119\\,\\mathrm m\\approx\\boldsymbol{1.2\\times10^{2}\\,\\mathrm m} \\]\nなお，反射音が O に届き始めるのは $t=\\dfrac{2L}{c}\\approx0.7\\,\\mathrm s$ で，$t_{\\mathrm Q}=34\\,\\mathrm s$ よりずっと前なので，問題の前提を満たしている．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "直接音と反射音では，音源の運動が変わったという知らせが O に届く時刻が経路の長さの差だけずれる．音源が向きを反転すると直接音と反射音の振動数がちょうど入れ替わるので，うなりの振動数は前後で同じだが，2つの到着時刻の間だけ両者が同じ振動数になってうなりが消え，その長さから反転位置と壁の距離が決まる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "doppler",
+  "beats"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "反射音",
+  "うなり",
+  "到着時刻",
+  "逆問題"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

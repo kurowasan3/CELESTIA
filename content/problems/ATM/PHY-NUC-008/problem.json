@@ -1,0 +1,144 @@
+{
+ "id": "PHY-NUC-008",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（鏡像核のクーロンエネルギー）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止しているヘリウム3原子核 ${}^3\\mathrm{He}$ に，運動エネルギー $K_{\\mathrm d}=2.00\\,\\mathrm{MeV}$ の重陽子 d を当てると，反応 $\\mathrm d+{}^3\\mathrm{He}\\to{}^4\\mathrm{He}+\\mathrm p$ が起こる．図のように，陽子 p が d の入射方向と垂直な方向に飛び出した事象で，陽子の運動エネルギーを測ると $K_{\\mathrm p}=15.49\\,\\mathrm{MeV}$ であった．運動はすべて非相対論的に扱い，運動量の計算では各粒子の質量の比を質量数の比としてよい．原子核の結合エネルギーは d：$2.22\\,\\mathrm{MeV}$，${}^4\\mathrm{He}$：$28.30\\,\\mathrm{MeV}$，${}^3\\mathrm H$：$8.48\\,\\mathrm{MeV}$ であり，${}^3\\mathrm{He}$ の結合エネルギー $B$ は未知とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "この反応で発生するエネルギー $Q$ を $B$ を用いて表せ（MeV 単位）．"
+     },
+     {
+      "id": "2",
+      "tex": "${}^4\\mathrm{He}$ の運動エネルギーを $K_\\alpha$ とする．$K_{\\mathrm d}$，$K_{\\mathrm p}$，$K_\\alpha$ の間に成り立つ関係式を，角度を含まない形で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$Q$ を $K_{\\mathrm d}$，$K_{\\mathrm p}$ で表し，$Q$ と $B$ の値を MeV 単位で小数第2位まで求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "${}^4\\mathrm{He}$ が飛ぶ向きと d の入射方向とのなす角を $\\varphi$ とする．$\\tan\\varphi$ を有効数字3桁で求め，$\\varphi$ はおよそ何度か，整数で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "${}^3\\mathrm H$ と ${}^3\\mathrm{He}$ は陽子と中性子を入れかえた関係にある．核力は陽子と中性子を区別しないとすると，両者の結合エネルギーの差は ${}^3\\mathrm{He}$ の2個の陽子の間のクーロン力による位置エネルギーによるとみなせる．2個の陽子の距離 $r$ を有効数字2桁で求めよ．クーロンの法則の比例定数 $k_0=9.0\\times10^9\\,\\mathrm{N\\cdot m^2/C^2}$，電気素量 $e=1.6\\times10^{-19}\\,\\mathrm C$，$1\\,\\mathrm{MeV}=1.6\\times10^{-13}\\,\\mathrm J$ とする．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（鏡像核のクーロンエネルギー）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：直角方向に出た陽子のエネルギーから Q 値と未知の結合エネルギーを決める（鏡像核のクーロンエネルギー）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Q=28.30-2.22-B=26.08-B$"
+   },
+   {
+    "id": "2",
+    "tex": "$2K_{\\mathrm d}+K_{\\mathrm p}=4K_\\alpha$"
+   },
+   {
+    "id": "3",
+    "tex": "$Q=\\dfrac{5K_{\\mathrm p}-2K_{\\mathrm d}}{4}\\fallingdotseq18.36\\,\\mathrm{MeV}$，$B\\fallingdotseq7.72\\,\\mathrm{MeV}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\tan\\varphi\\fallingdotseq1.97$，$\\varphi\\fallingdotseq63^\\circ$（入射方向に対して陽子と反対側）"
+   },
+   {
+    "id": "5",
+    "tex": "$r\\fallingdotseq1.9\\times10^{-15}\\,\\mathrm m$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　陽子・中性子がばらばらの状態を基準にすると，原子核の静止エネルギーは結合エネルギーの分だけ低い．反応の前後で陽子3個・中性子2個は変わらないので，ばらばらの状態は共通で，\n\\[ Q=(\\text{反応後の結合エネルギーの和})-(\\text{反応前の和})=28.30-(2.22+B)=\\boldsymbol{26.08-B}\\ [\\mathrm{MeV}] \\]\n（p は単独の核子なので結合エネルギー $0$．）\n\n\\textbf{(2)}　運動量の大きさは $p=\\sqrt{2MK}$．核子1個の質量を $m$ とし，運動量ベクトルを $\\vec p_{\\mathrm d}$，$\\vec p_{\\mathrm p}$，$\\vec p_\\alpha$ とすると，運動量保存 $\\vec p_{\\mathrm d}=\\vec p_{\\mathrm p}+\\vec p_\\alpha$ より $\\vec p_\\alpha=\\vec p_{\\mathrm d}-\\vec p_{\\mathrm p}$．$\\vec p_{\\mathrm p}\\perp\\vec p_{\\mathrm d}$ なので，解答図の直角三角形から三平方の定理で\n\\[ p_\\alpha^2=p_{\\mathrm d}^2+p_{\\mathrm p}^2\\quad\\Longrightarrow\\quad2(4m)K_\\alpha=2(2m)K_{\\mathrm d}+2mK_{\\mathrm p} \\]\n\\[ \\boldsymbol{2K_{\\mathrm d}+K_{\\mathrm p}=4K_\\alpha} \\]\n\n\\textbf{(3)}　エネルギー保存 $K_{\\mathrm d}+Q=K_{\\mathrm p}+K_\\alpha$ に $K_\\alpha=\\dfrac{2K_{\\mathrm d}+K_{\\mathrm p}}{4}$ を代入して\n\\[ Q=K_{\\mathrm p}+\\frac{2K_{\\mathrm d}+K_{\\mathrm p}}{4}-K_{\\mathrm d}=\\boldsymbol{\\frac{5K_{\\mathrm p}-2K_{\\mathrm d}}{4}}=\\frac{77.45-4.00}{4}\\fallingdotseq\\boldsymbol{18.36\\,\\mathrm{MeV}} \\]\n(1)より $B=26.08-18.36=\\boldsymbol{7.72\\,\\mathrm{MeV}}$．90° 方向の1つの測定だけで，未知の結合エネルギーが決まる．\n\n\\textbf{(4)}　解答図より $\\tan\\varphi=\\dfrac{p_{\\mathrm p}}{p_{\\mathrm d}}=\\sqrt{\\dfrac{2mK_{\\mathrm p}}{2(2m)K_{\\mathrm d}}}=\\sqrt{\\dfrac{15.49}{4.00}}\\fallingdotseq\\boldsymbol{1.97}$，$\\varphi\\fallingdotseq\\boldsymbol{63^\\circ}$．${}^4$He は入射方向に対して陽子と反対側に飛ぶ．（このとき $K_\\alpha=\\dfrac{4.00+15.49}{4}\\fallingdotseq4.87\\,\\mathrm{MeV}$．）\n\n\\textbf{(5)}　結合エネルギーの差は $8.48-7.72=0.76\\,\\mathrm{MeV}$．${}^3\\mathrm{He}$ では2個の陽子のクーロン斥力による位置エネルギー $\\dfrac{k_0e^2}{r}$ の分だけ結合が弱いとみなすと\n\\[ r=\\frac{k_0e^2}{0.76\\times1.6\\times10^{-13}}=\\frac{9.0\\times10^9\\times(1.6\\times10^{-19})^2}{1.216\\times10^{-13}}\\fallingdotseq\\boldsymbol{1.9\\times10^{-15}\\,\\mathrm m} \\]\n結合エネルギーはばらばらの核子を基準にした量なので，陽子と中性子の質量の違いはすでに差し引かれており，差はそのまま核子間の相互作用の違いを表す．得られた $r$ は原子核の大きさ程度で，もっともらしい．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "生成粒子の1つが入射方向と直角に出た事象では，運動量の三角形が直角三角形になり，角度を使わずに運動エネルギーの間の1次式が得られる．エネルギー保存と組み合わせると，1つの粒子のエネルギー測定だけから Q 値が決まり，結合エネルギーの差を通して未知の原子核の結合エネルギー（さらに鏡像核のクーロンエネルギーから陽子間距離）までたどれる．"
+ },
+ "concepts": [
+  "bohr-model",
+  "momentum-conservation",
+  "mechanical-energy"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "結合エネルギー",
+  "Q値",
+  "運動量保存",
+  "直角散乱",
+  "鏡像核",
+  "クーロンエネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

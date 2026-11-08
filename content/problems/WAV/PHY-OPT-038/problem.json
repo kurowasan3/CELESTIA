@@ -1,0 +1,131 @@
+{
+ "id": "PHY-OPT-038",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "フェルマーの原理による収差のない屈折面（楕円面・双曲面）と近軸公式",
+ "course": "物理",
+ "level": 4,
+ "minutes": 30,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "光はある点から別の点へ，光学距離（屈折率 $\\times$ 経路の長さ）が極値となる経路を通って進む（フェルマーの原理）．特に，1点から出た光がすべて別の1点に集まるとき（あるいは1点から出た光がすべて平面波になるとき），その間のすべての光線の光学距離は等しい．これを用いて，近軸近似を使わずに光を正確に集める（平行にする）ガラスの境界面の形を求めよう．ガラスの屈折率を $n\\ (>1)$，空気の屈折率を $1$ とし，境界面は $x$ 軸（光軸）のまわりに回転対称であるとして，$x$ 軸を含む断面（$xy$ 平面）で考える．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "図1のように，空気中を $x$ 軸に平行に進む光が，原点 O に頂点をもつ境界面からガラスに入り，ガラス中の点 F$(f,\\,0)$ に正確に集まるようにしたい．境界面上の点 P$(x,\\,y)$ が満たすべき式を光学距離の条件から立てよ．さらに，その式が楕円を表すことを示し，楕円の中心の座標と，$x$ 方向・$y$ 方向の半軸の長さを $n$，$f$ で表せ．また，F がこの楕円の焦点であることを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "頂点 O の近くでは，(1) の境界面は半径 $R$ の球面とみなせる（$|y|$ が小さいとき $x\\fallingdotseq\\dfrac{y^2}{2R}$）．$R$ を $n$，$f$ で表し，球面1枚での屈折の近軸公式 $\\dfrac{1}{a}+\\dfrac{n}{b}=\\dfrac{n-1}{R}$（$a$：空気側の物体までの距離，$b$：ガラス側の像までの距離）と矛盾しないことを確かめよ．"
+     },
+     {
+      "id": "3",
+      "tex": "次に図2のように，空気中の点光源 F（原点）から出た光が，頂点 A$(g,\\,0)$ をもつガラスの境界面で屈折したのち，すべて $x$ 軸に平行に進むようにしたい（ガラスの反対側は $x$ 軸に垂直な平面で，光はそこを垂直に通って出ていく）．境界面上の点 P について，FP $=r$，FP が $x$ 軸となす角を $\\theta$ とするとき，$r$ を $n$，$g$，$\\theta$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の境界面で平行光にできるのは，F から $x$ 軸と角 $\\theta_{\\max}$ より小さい角で出た光に限られる．$\\cos\\theta_{\\max}$ を求めよ．また，$n=1.5$ のときの $\\theta_{\\max}$ を度の単位で有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(3) の境界面の頂点 A の近くでの曲率半径 $R'$ を $n$，$g$ で表し，(2) の近軸公式で $b\\to\\infty$ としたときの物体の位置と一致することを確かめよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：フェルマーの原理による収差のない屈折面（楕円面・双曲面）と近軸公式",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$n\\sqrt{(f-x)^2+y^2}=nf-x$；中心 $\\left(\\dfrac{nf}{n+1},\\,0\\right)$，$x$ 方向の半軸 $\\dfrac{nf}{n+1}$，$y$ 方向の半軸 $f\\sqrt{\\dfrac{n-1}{n+1}}$（離心率 $\\dfrac1n$ で，焦点は $x=f$）"
+   },
+   {
+    "id": "2",
+    "tex": "$R=\\dfrac{n-1}{n}f$"
+   },
+   {
+    "id": "3",
+    "tex": "$r=\\dfrac{(n-1)g}{n\\cos\\theta-1}$"
+   },
+   {
+    "id": "4",
+    "tex": "$\\cos\\theta_{\\max}=\\dfrac1n$，$\\theta_{\\max}\\fallingdotseq48^\\circ$"
+   },
+   {
+    "id": "5",
+    "tex": "$R'=(n-1)g$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　平行光の波面（$x$ 軸に垂直な平面）$x=-L$ から F までの光学距離を比べる．軸上の光線は O を通り，光学距離は $L+nf$．点 P を通る光線は空気中を $x+L$，ガラス中を PF $=\\sqrt{(f-x)^2+y^2}$ 進むから\n\\[ (x+L)+n\\sqrt{(f-x)^2+y^2}=L+nf\\quad\\therefore\\quad\\boldsymbol{n\\sqrt{(f-x)^2+y^2}=nf-x} \\]\n両辺を2乗して整理すると $(n^2-1)x^2-2n(n-1)fx+n^2y^2=0$．$n-1$ で割って平方完成すると\n\\[ (n+1)\\left(x-\\frac{nf}{n+1}\\right)^2+\\frac{n^2}{n-1}y^2=\\frac{n^2f^2}{n+1} \\]\n両辺を右辺で割ると\n\\[ \\frac{\\left(x-\\frac{nf}{n+1}\\right)^2}{\\left(\\frac{nf}{n+1}\\right)^2}+\\frac{y^2}{\\frac{n-1}{n+1}f^2}=1 \\]\nとなり，中心 $\\boldsymbol{\\left(\\dfrac{nf}{n+1},\\,0\\right)}$，$x$ 方向の半軸 $\\alpha_0=\\boldsymbol{\\dfrac{nf}{n+1}}$，$y$ 方向の半軸 $\\beta_0=\\boldsymbol{f\\sqrt{\\dfrac{n-1}{n+1}}}$ の楕円である（$\\alpha_0>\\beta_0$）．中心から焦点までの距離は\n\\[ \\sqrt{\\alpha_0^2-\\beta_0^2}=f\\sqrt{\\frac{n^2-(n-1)(n+1)}{(n+1)^2}}=\\frac{f}{n+1} \\]\nなので，焦点の1つは $x=\\dfrac{nf}{n+1}+\\dfrac{f}{n+1}=f$，すなわち F である（離心率は $\\dfrac{f/(n+1)}{nf/(n+1)}=\\dfrac1n$）．境界面として使うのは，この楕円の O を含む側の部分である．\n\n\\textbf{(2)}　O の近くでは $x$ は $y^2$ 程度の微小量なので，$\\sqrt{(f-x)^2+y^2}\\fallingdotseq f-x+\\dfrac{y^2}{2f}$（$x^2$，$xy^2$ などを無視）．(1) の式に代入すると $n\\left(f-x+\\dfrac{y^2}{2f}\\right)=nf-x$，すなわち $x=\\dfrac{n}{n-1}\\cdot\\dfrac{y^2}{2f}$．これを $x=\\dfrac{y^2}{2R}$ と比べて\n\\[ R=\\boldsymbol{\\frac{n-1}{n}f} \\]\n（楕円の頂点での曲率半径の公式 $\\beta_0^2/\\alpha_0$ からも同じ値になる．）近軸公式で平行光（$a\\to\\infty$）とすると $\\dfrac{n}{b}=\\dfrac{n-1}{R}$，$b=\\dfrac{nR}{n-1}=f$ となり，F に集まるという条件と一致する．楕円面は近軸の範囲では球面と同じだが，球面と違って軸から離れた光も正確に F に集める．\n\n\\textbf{(3)}　ガラス中の光は $x$ 軸に平行に進むので，その波面はガラス中の平面 $x=X$（$X$ は一定）である．F から P を経てこの平面に至る光学距離は $r+n(X-x)$，軸上の光線では $g+n(X-g)$．これらが等しく，$x=r\\cos\\theta$ だから\n\\[ r+n(X-r\\cos\\theta)=g+n(X-g)\\quad\\therefore\\quad r(n\\cos\\theta-1)=(n-1)g \\]\n\\[ r=\\boldsymbol{\\frac{(n-1)g}{n\\cos\\theta-1}} \\]\n（直交座標では $\\sqrt{x^2+y^2}=nx-(n-1)g$ で，2乗すると $x^2$ と $y^2$ の係数の符号が異なるので双曲線である．$r=n\\left(x-\\frac{(n-1)g}{n}\\right)$ の形から，離心率は $n$ である．）\n\n\\textbf{(4)}　$r>0$ となるには $n\\cos\\theta-1>0$ が必要で，$\\theta\\to\\theta_{\\max}$ で $r\\to\\infty$（光線が双曲線の漸近線と平行になり，境界面に届かない）．よって\n\\[ \\cos\\theta_{\\max}=\\boldsymbol{\\frac1n} \\]\n$n=1.5$ では $\\cos\\theta_{\\max}=0.667$ より $\\theta_{\\max}\\fallingdotseq\\boldsymbol{48^\\circ}$．F から出た光の円錐のうち，半頂角 $48^\\circ$ より外側の光はどれほど大きなレンズでも平行にできない．\n\n\\textbf{(5)}　A の近くで $x=g+\\delta$（$\\delta$ は $y^2$ 程度の微小量）とおくと，$\\sqrt{(g+\\delta)^2+y^2}\\fallingdotseq g+\\delta+\\dfrac{y^2}{2g}$．(3) の直交座標の式に代入して $g+\\delta+\\dfrac{y^2}{2g}=n(g+\\delta)-(n-1)g=g+n\\delta$，すなわち $\\delta=\\dfrac{y^2}{2(n-1)g}$．これを $\\delta=\\dfrac{y^2}{2R'}$ と比べて\n\\[ R'=\\boldsymbol{(n-1)g} \\]\n近軸公式で $b\\to\\infty$（ガラス中で平行光）とすると $\\dfrac1a=\\dfrac{n-1}{R'}$，$a=\\dfrac{R'}{n-1}=g$ となり，光源 F の位置と一致する．ガラスの後ろの平面は平行光を曲げないので，これは焦点距離 $g$ の平凸レンズ（光源側が凸）であり，双曲面にすれば軸から離れた光も正確に平行にできる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "フェルマーの原理（等しい光学距離）を近似なしで課すと，平行光をガラス中の1点に集める境界面は離心率 $1/n$ の楕円（集光点が焦点），空気中の点光源の光を平行光にする境界面は離心率 $n$ の双曲線になる．頂点付近の曲率半径は球面1枚の近軸公式を再現し，双曲面では漸近線の向き $\\cos\\theta=1/n$ が平行にできる光の広がりの上限を与える．"
+ },
+ "concepts": [
+  "light-interference",
+  "refraction-light",
+  "lens-imaging"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "フェルマーの原理",
+  "光学距離",
+  "屈折",
+  "レンズ",
+  "楕円",
+  "双曲線"
+ ],
+ "provenance": {
+  "created": "2026-11-08",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

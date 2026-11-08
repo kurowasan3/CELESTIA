@@ -1,0 +1,135 @@
+{
+ "id": "PHY-SND-008",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "振動数を三角波状に変える音による距離と速さの測定（うなりの解釈の二義性）",
+ "course": "物理",
+ "level": 4,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，点 O に置いたスピーカーから音を出し，同じ位置のマイクで，スピーカーから直接届く音（直接音）と，直線上を運動する反射板で反射して戻ってくる音（反射音）を同時に受ける．スピーカーの音の振動数は，図のグラフのように中心値 $f_{\\mathrm c}$ のまわりで $f_{\\mathrm c}-\\dfrac{\\Delta f}{2}$ と $f_{\\mathrm c}+\\dfrac{\\Delta f}{2}$ の間を時間 $T$ ごとに一定の割合で上昇・下降させ続ける（変化の割合の大きさ $\\kappa=\\dfrac{\\Delta f}{T}$）．マイクは直接音と反射音の干渉によるうなりを観測する．振動数が上昇している間に観測されるうなりの振動数を $b_+$，下降している間に観測されるうなりの振動数を $b_-$ とする（ただし，上昇と下降が切り替わった直後のごく短い時間は除く）．音速を $V$ とし，風はない．反射板は O に向かう直線上を動き，反射板の運動による往復時間の変化，および 1 回の測定の間の反射板の移動は無視できるものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "反射板が O から距離 $L$ の位置に静止しているとき，$b_+$ を $\\kappa$，$L$，$V$ で表せ．$b_-$ はどうなるか．"
+     },
+     {
+      "id": "2",
+      "tex": "スピーカーが一定の振動数 $f$ の音を出しているとする．反射板が速さ $u$ で O に近づいているとき，O で受ける反射音の振動数を求めよ．また，$u\\ll V$ として $u/V$ の 1 次までの近似式で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "反射板が O から距離 $L$ の位置を速さ $u$ $(u\\ll V)$ で O に近づいている瞬間の $b_+$，$b_-$ を求めよ．ただし，反射によるドップラー効果の振動数のずれは，音の振動数を $f_{\\mathrm c}$ として計算してよい．"
+     },
+     {
+      "id": "4",
+      "tex": "$V=340\\ \\mathrm{m/s}$，$f_{\\mathrm c}=40.0\\ \\mathrm{kHz}$，$\\kappa=2.0\\times10^4\\ \\mathrm{Hz/s}$ の装置で，一定の速度で運動する反射板について次の測定値を得た．\n・時刻 $t_1$：$b_+=80\\ \\mathrm{Hz}$，$b_-=320\\ \\mathrm{Hz}$\n・時刻 $t_1+0.50\\ \\mathrm{s}$：$b_+=50\\ \\mathrm{Hz}$，$b_-=290\\ \\mathrm{Hz}$\n反射板が O に近づいているか遠ざかっているかを理由とともに答えよ．また，時刻 $t_1$ での反射板までの距離と反射板の速さを有効数字 2 桁で求めよ．時刻 $t_1$ の測定値だけでは決まらない理由も述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "問題図：振動数を三角波状に変える音による距離と速さの測定（うなりの解釈の二義性）",
+   "caption": ""
+  },
+  {
+   "id": "a-fig",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-fig.svg",
+   "alt": "解答図：振動数を三角波状に変える音による距離と速さの測定（うなりの解釈の二義性）",
+   "caption": "解答図"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$b_+=\\dfrac{2\\kappa L}{V}$，$b_-$ も同じ値"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac{V+u}{V-u}f\\fallingdotseq\\left(1+\\dfrac{2u}{V}\\right)f$"
+   },
+   {
+    "id": "3",
+    "tex": "$b_+=\\left|\\dfrac{2\\kappa L}{V}-\\dfrac{2uf_{\\mathrm c}}{V}\\right|$，$b_-=\\dfrac{2\\kappa L}{V}+\\dfrac{2uf_{\\mathrm c}}{V}$"
+   },
+   {
+    "id": "4",
+    "tex": "近づいている（$b_->b_+$ だから）．距離 $1.7\\ \\mathrm m$，速さ $0.51\\ \\mathrm{m/s}$（1回の測定では「距離による項」と「ドップラーの項」のどちらが大きいか区別できず，$1.0\\ \\mathrm m$，$0.85\\ \\mathrm{m/s}$ という解も残るため）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-fig"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1) 静止した反射板}　時刻 $t$ に O に戻った反射音は，往復時間 $\\tau=\\dfrac{2L}{V}$ だけ前にスピーカーを出た音である．反射板が静止していれば反射で振動数は変わらないから，反射音の振動数は「$\\tau$ だけ前の送信振動数」に等しい．上昇中は送信振動数が $\\kappa\\tau$ だけ低いので\n\\[ b_+=\\kappa\\tau=\\boldsymbol{\\frac{2\\kappa L}{V}} \\]\n下降中は反射音が $\\kappa\\tau$ だけ高いが，うなりの振動数は差の大きさなので $b_-$ も\\textbf{同じ値} $\\dfrac{2\\kappa L}{V}$ である．距離がうなりの振動数に「翻訳」される．\n\n\\textbf{(2) 動く反射板での反射}　反射板が受ける振動数は（観測者が近づく）$\\dfrac{V+u}{V}f$．反射板はこの振動数で音を出す音源として O に近づくので，O で受ける振動数は\n\\[ \\frac{V}{V-u}\\cdot\\frac{V+u}{V}f=\\boldsymbol{\\frac{V+u}{V-u}f}\\fallingdotseq\\boldsymbol{\\left(1+\\frac{2u}{V}\\right)f} \\]\n振動数のずれは $D=\\dfrac{2uf}{V}$ である．\n\n\\textbf{(3) 2つの効果の重ね合わせ}　反射音の振動数は，(1) の「時間遅れによるずれ」に (2) のずれ $D=\\dfrac{2uf_{\\mathrm c}}{V}$（高くなる向き）が加わったものである．\n・上昇中：反射音は $\\kappa\\tau$ だけ低くなり，$D$ だけ高くなる．差は $\\kappa\\tau-D$．\n・下降中：反射音は $\\kappa\\tau$ だけ高くなり，さらに $D$ だけ高くなる．差は $\\kappa\\tau+D$．\nうなりの振動数は差の大きさだから\n\\[ b_+=\\boldsymbol{\\left|\\frac{2\\kappa L}{V}-\\frac{2uf_{\\mathrm c}}{V}\\right|},\\qquad b_-=\\boldsymbol{\\frac{2\\kappa L}{V}+\\frac{2uf_{\\mathrm c}}{V}} \\]\n（解答図）．遠ざかる場合は $D$ の符号が逆になり，$b_+=\\kappa\\tau+|D|$，$b_-=|\\kappa\\tau-|D||$ となる．\n\n\\textbf{(4) 測定値の解釈}　\\textbf{向き}：近づく場合は $b_-=\\kappa\\tau+D$ が $b_+=|\\kappa\\tau-D|$ 以上，遠ざかる場合は $b_+$ が $b_-$ 以上になる．測定では $b_->b_+$ なので，反射板は\\textbf{近づいている}．\n\n\\textbf{大きさ}：$b_+$ に絶対値がついているため，1 回の測定からは2通りの解釈がある．\n・解釈 (i) $\\kappa\\tau>D$：$\\kappa\\tau=\\dfrac{b_++b_-}{2}$，$D=\\dfrac{b_--b_+}{2}$．\n・解釈 (ii) $\\kappa\\tau<D$：$\\kappa\\tau=\\dfrac{b_--b_+}{2}$，$D=\\dfrac{b_++b_-}{2}$．\n$L=\\dfrac{V\\kappa\\tau}{2\\kappa}$，$u=\\dfrac{VD}{2f_{\\mathrm c}}$ を用いて数値にすると（$\\dfrac{V}{2\\kappa}=8.5\\times10^{-3}\\ \\mathrm{m\\cdot s}$，$\\dfrac{V}{2f_{\\mathrm c}}=4.25\\times10^{-3}\\ \\mathrm m$）\n\\[ \\begin{array}{c|c|c} & \\text{時刻 }t_1\\ (80,\\,320) & 0.50\\ \\mathrm{s}\\text{ 後}\\ (50,\\,290)\\\\ \\hline \\text{解釈 (i)} & L=1.70\\ \\mathrm m,\\ u=0.510\\ \\mathrm{m/s} & L=1.445\\ \\mathrm m,\\ u=0.510\\ \\mathrm{m/s}\\\\ \\text{解釈 (ii)} & L=1.02\\ \\mathrm m,\\ u=0.850\\ \\mathrm{m/s} & L=1.02\\ \\mathrm m,\\ u=0.7225\\ \\mathrm{m/s} \\end{array} \\]\n反射板は一定の速度で近づいているので，2回の測定で速さは等しく，距離は $u\\times0.50\\ \\mathrm s$ だけ減っていなければならない．\n・(i)→(i)：速さはともに $0.51\\ \\mathrm{m/s}$，距離の減少 $0.255\\ \\mathrm m=0.51\\times0.50$．\\textbf{矛盾なし}．\n・(ii)→(ii)：距離が変わらないのに速さが $0$ でない．矛盾．\n・(i)→(ii)，(ii)→(i)：速さが変わる（後者は距離が増えている）．矛盾．\nよって時刻 $t_1$ での距離は $\\boldsymbol{1.7\\ \\mathrm m}$，速さは $\\boldsymbol{0.51\\ \\mathrm{m/s}}$ である．\n\n1 回の測定だけで決まらないのは，上昇区間のうなりが「距離による差 $\\kappa\\tau$」と「ドップラーによる差 $D$」の差の\\textbf{大きさ}しか与えず，どちらが大きいかがわからないからである．2回目の測定（あるいは $\\kappa$ を変えて測ること：$\\kappa\\tau$ だけが $\\kappa$ に比例して変わる）で区別できる．\\hfill$\\square$"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "振動数を一定の割合で変える音では，往復時間の遅れが振動数の差（うなり）に変わり，距離が測れる．動く反射体のドップラー効果によるずれは上昇・下降の区間で同じ向きに加わるので，2つのうなりの和と差から距離と速さを分離できるが，うなりは差の大きさなので2通りの解釈が残り，時間をおいた測定との整合性で一つに決まる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "doppler",
+  "beats"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "反射",
+  "うなり",
+  "周波数変調",
+  "距離測定"
+ ],
+ "provenance": {
+  "created": "2026-11-07",
+  "method": "AI生成（問題管理表から取り込み）"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": false,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}
