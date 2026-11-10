@@ -1,0 +1,120 @@
+{
+ "id": "ATM-PHT-201",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "光子のエネルギー・運動量の計算（可視光と紫外線）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中で波長 $\\lambda=500\\ \\mathrm{nm}$ の緑色の光を考える．プランク定数を $h=6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$，真空中の光速を $c=3.0\\times10^8\\ \\mathrm{m/s}$，電気素量を $e=1.6\\times10^{-19}\\ \\mathrm C$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "この光の振動数 $\\nu$ は何 Hz か．"
+     },
+     {
+      "id": "2",
+      "tex": "この光の光子1個のエネルギー $E$ は何 J か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$E$ は何 eV か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "この光の光子1個の運動量の大きさ $p$ は何 $\\mathrm{kg\\cdot m/s}$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "波長 $250\\ \\mathrm{nm}$ の紫外線の光子1個のエネルギーは，緑色の光の光子1個のエネルギーの何倍か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\nu=6.0\\times10^{14}\\ \\mathrm{Hz}$",
+    "grading": "6.0*10^14 [Hz]"
+   },
+   {
+    "id": "2",
+    "tex": "$E=4.0\\times10^{-19}\\ \\mathrm J$",
+    "grading": "4.0*10^(-19) [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$2.5\\ \\mathrm{eV}$",
+    "grading": "2.5 [eV]"
+   },
+   {
+    "id": "4",
+    "tex": "$p=1.3\\times10^{-27}\\ \\mathrm{kg\\cdot m/s}$",
+    "grading": "1.3*10^(-27) [kg·m/s]"
+   },
+   {
+    "id": "5",
+    "tex": "$2$ 倍",
+    "grading": "2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\nu=\\dfrac c\\lambda=\\dfrac{3.0\\times10^8}{500\\times10^{-9}}=6.0\\times10^{14}\\ \\mathrm{Hz}$．\n\n(2) $E=h\\nu=6.6\\times10^{-34}\\times6.0\\times10^{14}=3.96\\times10^{-19}\\fallingdotseq4.0\\times10^{-19}\\ \\mathrm J$．\n\n(3) $1\\ \\mathrm{eV}=1.6\\times10^{-19}\\ \\mathrm J$ なので $\\dfrac{3.96\\times10^{-19}}{1.6\\times10^{-19}}\\fallingdotseq2.5\\ \\mathrm{eV}$．（可視光の光子のエネルギーは数 eV 程度．）\n\n(4) $p=\\dfrac h\\lambda=\\dfrac{6.6\\times10^{-34}}{5.0\\times10^{-7}}=1.32\\times10^{-27}\\fallingdotseq1.3\\times10^{-27}\\ \\mathrm{kg\\cdot m/s}$．（$p=\\dfrac Ec$ としても同じ．）\n\n(5) $E=\\dfrac{hc}\\lambda$ は波長に反比例するので，波長が $\\dfrac12$ なら $2$ 倍．紫外線が日焼けなどの化学変化を起こしやすいのは，光子1個のエネルギーが大きいから．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "光子1個のエネルギー $E=h\\nu=\\dfrac{hc}\\lambda$，運動量 $p=\\dfrac h\\lambda=\\dfrac Ec$．単位の換算 $1\\ \\mathrm{eV}=1.6\\times10^{-19}\\ \\mathrm J$．"
+ },
+ "concepts": [
+  "photon"
+ ],
+ "laws": [
+  "photon-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "光子",
+  "エネルギー",
+  "運動量",
+  "eV"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

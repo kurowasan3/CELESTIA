@@ -1,0 +1,119 @@
+{
+ "id": "THM-FST-203",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "湖の底から浮き上がる泡の体積（水圧と温度の変化を含むボイル・シャルルの法則）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "深さ $20\\,\\mathrm m$ の湖の底（水温 $7^\\circ\\mathrm C$）で，体積 $1.0\\,\\mathrm{cm^3}$ の空気の泡が発生し，水面（水温 $27^\\circ\\mathrm C$）まで浮き上がった．大気圧を $1.0\\times10^5\\,\\mathrm{Pa}$ とし，水中の圧力は深さ $10\\,\\mathrm m$ ごとに $1.0\\times10^5\\,\\mathrm{Pa}$ ずつ増すものとする．泡の中の空気は理想気体で，泡の温度はまわりの水温に等しく，泡の中の圧力はその深さの水の圧力に等しいとする（表面張力は無視する）．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "湖の底での泡の中の空気の圧力を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "温度の違いを無視すると，水面での泡の体積は湖の底での何倍か．"
+     },
+     {
+      "id": "3",
+      "tex": "温度の違いも考えると，水面での泡の体積は何 $\\mathrm{cm^3}$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "温度の違いを無視するとき，泡の体積が湖の底での $2$ 倍になるのは，水面から深さ何 $\\mathrm m$ のところか．"
+     },
+     {
+      "id": "5",
+      "tex": "泡は浮き上がるにつれて，しだいに速く浮き上がるようになる．その理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$3.0\\times10^5\\,\\mathrm{Pa}$",
+    "grading": "3.0*10^5 [Pa]"
+   },
+   {
+    "id": "2",
+    "tex": "$3.0$ 倍",
+    "grading": "3倍"
+   },
+   {
+    "id": "3",
+    "tex": "$3.2\\,\\mathrm{cm^3}$",
+    "grading": "3.2"
+   },
+   {
+    "id": "4",
+    "tex": "$5\\,\\mathrm m$",
+    "grading": "5 [m]"
+   },
+   {
+    "id": "5",
+    "tex": "浮き上がると水圧が下がって泡の体積が大きくなり，泡が受ける浮力（押しのけた水の重さ）が大きくなるから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $1.0\\times10^5+\\dfrac{20}{10}\\times1.0\\times10^5=3.0\\times10^5\\,\\mathrm{Pa}$．\n\n(2) 温度一定なら $PV=$一定．圧力が $\\dfrac13$ 倍になるので体積は $3.0$ 倍．\n\n(3) $7^\\circ\\mathrm C=280\\,\\mathrm K$，$27^\\circ\\mathrm C=300\\,\\mathrm K$．$\\dfrac{3.0\\times10^5\\times1.0}{280}=\\dfrac{1.0\\times10^5\\times V}{300}$ より $V=1.0\\times3.0\\times\\dfrac{300}{280}=3.21\\cdots\\approx3.2\\,\\mathrm{cm^3}$．\n\n(4) 温度一定で体積が $2$ 倍になるのは，圧力が湖の底の $\\dfrac12$，つまり $1.5\\times10^5\\,\\mathrm{Pa}$ になるところ．大気圧を除いた水による圧力は $0.5\\times10^5\\,\\mathrm{Pa}$ なので，深さは $5\\,\\mathrm m$．（底から $15\\,\\mathrm m$ 浮き上がって $2$ 倍，残りの $5\\,\\mathrm m$ でさらに $1.5$ 倍になる．水面に近いほど，同じ距離の上昇で体積が大きく変わる．）\n\n(5) 泡が受ける浮力は泡が押しのけた水の重さ $\\rho_{\\text{水}}Vg$ で，泡の体積 $V$ に比例する．浮き上がるにつれて水圧が下がり，ボイルの法則により $V$ が大きくなるので，浮力が増えて泡はしだいに速く浮き上がる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "泡の中の圧力＝その深さの水の圧力（大気圧＋水の重さによる圧力）．$\\dfrac{PV}{T}=$一定 で体積を追う．"
+ },
+ "concepts": [
+  "ideal-gas"
+ ],
+ "laws": [
+  "ideal-gas-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ボイル・シャルルの法則",
+  "水圧",
+  "泡",
+  "浮力"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

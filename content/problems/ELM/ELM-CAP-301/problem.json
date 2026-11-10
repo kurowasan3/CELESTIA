@@ -1,0 +1,132 @@
+{
+ "id": "ELM-CAP-301",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "平行板コンデンサーの基本量と，電池を外して極板間隔を広げたときの変化",
+ "course": "物理",
+ "level": 0,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "面積 $0.40\\,\\mathrm{m^2}$ の2枚の極板を，間隔 $4.0\\,\\mathrm{mm}$ で平行に向かい合わせた平行板コンデンサーがある．極板間は真空で，真空の誘電率を $\\varepsilon_0=8.85\\times10^{-12}\\,\\mathrm{F/m}$ とする．このコンデンサーを電圧 $120\\,\\mathrm V$ の電池につないで十分時間がたった．答えは有効数字2桁で求めよ．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電気容量 $C$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "極板にたくわえられた電気量 $Q$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "極板間の電場の強さ $E$ は何 V/m か．"
+     },
+     {
+      "id": "4",
+      "tex": "たくわえられた静電エネルギー $U$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "次に，電池を外してから，極板の間隔を $8.0\\,\\mathrm{mm}$ にゆっくり広げた．極板間の電圧 $V$ と電場の強さ $E$（V/m）を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(5) の後の静電エネルギー $U_1$ と，極板を広げる間に外力がした仕事 $W$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$C=8.9\\times10^{-10}\\,\\mathrm F$",
+    "grading": "C：8.9*10^(-10) [F]"
+   },
+   {
+    "id": "2",
+    "tex": "$Q=1.1\\times10^{-7}\\,\\mathrm C$",
+    "grading": "Q：1.1*10^(-7) [C]"
+   },
+   {
+    "id": "3",
+    "tex": "$E=3.0\\times10^{4}\\,\\mathrm{V/m}$",
+    "grading": "E：3*10^4"
+   },
+   {
+    "id": "4",
+    "tex": "$U=6.4\\times10^{-6}\\,\\mathrm J$",
+    "grading": "U：6.4*10^(-6) [J]"
+   },
+   {
+    "id": "5",
+    "tex": "$V=2.4\\times10^{2}\\,\\mathrm V$，$E=3.0\\times10^{4}\\,\\mathrm{V/m}$（変わらない）",
+    "grading": "V：240 [V] ; E：3*10^4"
+   },
+   {
+    "id": "6",
+    "tex": "$U_1=1.3\\times10^{-5}\\,\\mathrm J$，$W=6.4\\times10^{-6}\\,\\mathrm J$",
+    "grading": "U_1：1.3*10^(-5) [J] ; W：6.4*10^(-6) [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "途中の計算は丸めずに進め，最後に有効数字2桁にする．\n\n(1) $C=\\varepsilon_0\\dfrac Sd=8.85\\times10^{-12}\\times\\dfrac{0.40}{4.0\\times10^{-3}}=8.85\\times10^{-10}\\fallingdotseq8.9\\times10^{-10}\\,\\mathrm F$．\n\n(2) $Q=CV=8.85\\times10^{-10}\\times120=1.062\\times10^{-7}\\fallingdotseq1.1\\times10^{-7}\\,\\mathrm C$．\n\n(3) 一様な電場なので $E=\\dfrac Vd=\\dfrac{120}{4.0\\times10^{-3}}=3.0\\times10^{4}\\,\\mathrm{V/m}$．\n\n(4) $U=\\dfrac12CV^2=\\dfrac12\\times8.85\\times10^{-10}\\times120^2=6.372\\times10^{-6}\\fallingdotseq6.4\\times10^{-6}\\,\\mathrm J$．\n\n(5) 電池を外したので，極板の電気量 $Q$ は変わらない（逃げ道がない）．間隔が2倍で $C$ は $\\dfrac12$ 倍になるので，$V=\\dfrac{Q}{C/2}=2\\times120=2.4\\times10^{2}\\,\\mathrm V$．電場は $E=\\dfrac{V}{d}=\\dfrac{240}{8.0\\times10^{-3}}=3.0\\times10^4\\,\\mathrm{V/m}$ で変わらない．電場の強さは極板の電荷の面密度だけで決まり（$E=\\dfrac{Q}{\\varepsilon_0S}$），間隔によらないからである．「間隔を広げると電場が弱くなる」と考えるのは，電圧が一定のときの話と混同している．\n\n(6) $U_1=\\dfrac{Q^2}{2(C/2)}=2U=1.2744\\times10^{-5}\\fallingdotseq1.3\\times10^{-5}\\,\\mathrm J$．電池はつながっていないので，エネルギーの増加分はすべて外力の仕事：$W=U_1-U=U\\fallingdotseq6.4\\times10^{-6}\\,\\mathrm J$．（極板どうしは引き合っているので，引き離すには外力が正の仕事をする必要がある．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$C=\\varepsilon_0\\dfrac Sd$．電池を外すと $Q$ が一定，電池につないだままなら $V$ が一定．電場は面密度 $\\dfrac QS$ で決まる．"
+ },
+ "concepts": [
+  "capacitor"
+ ],
+ "laws": [
+  "capacitance",
+  "capacitor-energy",
+  "uniform-field-potential"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "平行板コンデンサー",
+  "電気容量",
+  "静電エネルギー",
+  "電荷一定"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

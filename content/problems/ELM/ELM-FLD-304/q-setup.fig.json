@@ -1,0 +1,109 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    110,
+    70
+   ],
+   "to": [
+    190,
+    70
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    70
+   ],
+   "to": [
+    150,
+    170
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    170
+   ],
+   "to": [
+    138,
+    210
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    170
+   ],
+   "to": [
+    162,
+    210
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "circle",
+   "at": [
+    150,
+    175
+   ],
+   "r": 62,
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    66
+   ],
+   "text": "金属板",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    212,
+    214
+   ],
+   "text": "はく",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "block",
+   "at": [
+    150,
+    46
+   ],
+   "w": 90,
+   "h": 18,
+   "label": "+ + + +"
+  },
+  {
+   "t": "text",
+   "at": [
+    205,
+    38
+   ],
+   "text": "ガラス棒（正に帯電）",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  }
+ ]
+}

@@ -1,0 +1,347 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  440,
+  250
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    150
+   ],
+   "dir": 0,
+   "len": 345,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    240
+   ],
+   "dir": 90,
+   "len": 225,
+   "style": "thin"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60,
+     30.0
+    ],
+    [
+     220.0,
+     30.0
+    ],
+    [
+     260.0,
+     170.0
+    ],
+    [
+     404.0,
+     170.0
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    149.99
+   ],
+   "to": [
+    220.0,
+    149.99
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    220.0,
+    150
+   ],
+   "to": [
+    260.0,
+    80.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    260.0,
+    80.0
+   ],
+   "to": [
+    404.0,
+    80.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    140.0,
+    18.0
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    348.0,
+    184.0
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    348.0,
+    68.0
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    140.0,
+    138
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    30.0
+   ],
+   "to": [
+    220.0,
+    30.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    30.0
+   ],
+   "text": "0.60",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    80.0
+   ],
+   "to": [
+    260.0,
+    80.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    80.0
+   ],
+   "text": "0.35",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    170.0
+   ],
+   "to": [
+    260.0,
+    170.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    170.0
+   ],
+   "text": "-0.10",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    220.0,
+    30.0
+   ],
+   "to": [
+    220.0,
+    228
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    220.0,
+    236
+   ],
+   "text": "0.20",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    260.0,
+    30.0
+   ],
+   "to": [
+    260.0,
+    228
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    260.0,
+    236
+   ],
+   "text": "0.25",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    140.0,
+    146
+   ],
+   "to": [
+    140.0,
+    154
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    140.0,
+    164
+   ],
+   "text": "0.1",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    300.0,
+    146
+   ],
+   "to": [
+    300.0,
+    154
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    300.0,
+    164
+   ],
+   "text": "0.3",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    380.0,
+    146
+   ],
+   "to": [
+    380.0,
+    154
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    380.0,
+    164
+   ],
+   "text": "0.4",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    70,
+    164
+   ],
+   "text": "O",
+   "italic": true,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    418,
+    166
+   ],
+   "text": "t [s]",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    68,
+    22
+   ],
+   "text": "v [m/s]",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  }
+ ]
+}

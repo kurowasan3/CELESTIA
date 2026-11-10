@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 250" width="380" height="250" font-family="'Times New Roman', serif">
+<g data-phys="battery:E">
+<line x1="40" y1="220" x2="40" y2="135" stroke="currentColor" stroke-width="1.6"/>
+<line x1="40" y1="125" x2="40" y2="40" stroke="currentColor" stroke-width="1.6"/>
+<line x1="54" y1="125" x2="26" y2="125" stroke="currentColor" stroke-width="1.6"/>
+<line x1="47" y1="135" x2="33" y2="135" stroke="currentColor" stroke-width="3"/>
+<text x="20" y="130" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">E</text>
+</g>
+<polyline points="40,40 180,40 180,60" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="180" cy="60" r="3" fill="currentColor"/>
+<text x="192" y="56" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<g data-phys="resistor:R₀">
+<line x1="180" y1="60" x2="180" y2="107" stroke="currentColor" stroke-width="1.6"/>
+<line x1="180" y1="153" x2="180" y2="200" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="173,107 173,153 187,153 187,107" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="166" y="130" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">R₀</text>
+</g>
+<circle cx="180" cy="200" r="3" fill="currentColor"/>
+<text x="192" y="206" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<polyline points="180,200 180,220 40,220" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g class="f-ink" data-dir="180" data-len="46">
+<line x1="236" y1="140" x2="200" y2="140" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="190,140 200,135.34 200,144.66" fill="currentColor"/>
+</g>
+<text x="210" y="126" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<polyline points="236,140 310,140 310,150" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:負荷">
+<line x1="310" y1="150" x2="310" y2="161" stroke="currentColor" stroke-width="1.6"/>
+<line x1="310" y1="194" x2="310" y2="205" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="303,161 303,194 317,194 317,161" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="296" y="177.5" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">負荷</text>
+</g>
+<polyline points="310,205 310,220 180,220" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="310" cy="220" r="3" fill="currentColor"/>
+</svg>

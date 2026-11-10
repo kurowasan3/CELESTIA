@@ -1,0 +1,145 @@
+{
+ "id": "ELM-ACC-406",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "力率：コイルを含む負荷と，並列コンデンサーによる力率の改善",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "モーターのような負荷を，抵抗値 $R=30\\ \\Omega$ の抵抗と，リアクタンス $X_L=40\\ \\Omega$ のコイルの直列回路で表す．この負荷を，電圧の実効値 $V=100\\ \\mathrm V$，周波数 $50\\ \\mathrm{Hz}$ の交流電源につなぐ．はじめコンデンサー C はつながっていない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "負荷のインピーダンス $Z$ と，電源を流れる電流の実効値 $I$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "力率 $\\cos\\phi$（$\\phi$ は電流と電圧の位相のずれ）と，負荷の消費電力 $P$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "図のように負荷と並列にコンデンサー C をつなぎ，電源を流れる電流が電源電圧と同位相になるようにしたい．C のリアクタンス $X_C$ と，電気容量 $C$ [μF] を有効数字2桁で求めよ（$\\pi=3.14$）．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) のとき，電源を流れる電流の実効値 $I_{\\rm s}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "電源から負荷までの送電線に小さな抵抗があるとき，C をつなぐと，送電線で失われる電力は何倍になるか．"
+     },
+     {
+      "id": "6",
+      "tex": "C をつないでも，負荷の消費電力は変わらない．その理由を述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "交流電源に、抵抗 R とコイル L を直列にした負荷（モーターの模型、四角で囲む）と、コンデンサー C が並列につながる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Z=50\\ \\Omega$，$I=2.0\\ \\mathrm A$",
+    "grading": "Z：50 [Ω] ; I：2.0 [A]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\cos\\phi=0.60$，$P=1.2\\times10^2\\ \\mathrm W$",
+    "grading": "cos(φ)：0.60 ; P：120 [W]"
+   },
+   {
+    "id": "3",
+    "tex": "$X_C=62.5\\ \\Omega$，$C\\fallingdotseq51\\ \\mu\\mathrm F$",
+    "grading": "X_C：62.5 [Ω] ; C：51 [μF]"
+   },
+   {
+    "id": "4",
+    "tex": "$I_{\\rm s}=1.2\\ \\mathrm A$",
+    "grading": "I_s：1.2 [A]"
+   },
+   {
+    "id": "5",
+    "tex": "$0.36$ 倍",
+    "grading": "0.36倍"
+   },
+   {
+    "id": "6",
+    "tex": "負荷にかかる電圧は電源電圧 $100\\ \\mathrm V$ のままで，負荷を流れる電流も変わらないから（コンデンサーは電力を消費しない）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} $Z=\\sqrt{R^2+X_L^2}=\\sqrt{30^2+40^2}=50\\ \\Omega$．$I=\\dfrac VZ=2.0\\ \\mathrm A$．\n\n\\textbf{(2)} 電流は電圧より $\\phi$ 遅れ，$\\cos\\phi=\\dfrac RZ=0.60$．$P=VI\\cos\\phi=100\\times2.0\\times0.60=1.2\\times10^2\\ \\mathrm W$（$=I^2R=2.0^2\\times30$ で確かめられる）．\n$VI=200$ のうち $120\\ \\mathrm W$ しか消費されない．電源は必要以上の電流を流していることになる．\n\n\\textbf{(3)} 負荷の電流 $2.0\\ \\mathrm A$ を，電圧と同位相の成分 $I\\cos\\phi=1.2\\ \\mathrm A$ と，$\\dfrac\\pi2$ 遅れた成分 $I\\sin\\phi=1.6\\ \\mathrm A$ に分ける．コンデンサーの電流は電圧より $\\dfrac\\pi2$ 進むので，これが遅れ成分 $1.6\\ \\mathrm A$ を打ち消せばよい．\n\\[X_C=\\frac{V}{1.6}=62.5\\ \\Omega,\\qquad C=\\frac{1}{2\\pi fX_C}=\\frac{1}{2\\times3.14\\times50\\times62.5}\\fallingdotseq5.1\\times10^{-5}\\ \\mathrm F=51\\ \\mu\\mathrm F\\]\n\n\\textbf{(4)} 残るのは同位相の成分だけ：$I_{\\rm s}=1.2\\ \\mathrm A$．\n\n\\textbf{(5)} 送電線の損失は（電源を流れる電流）$^2\\times$（送電線の抵抗）．$\\left(\\dfrac{1.2}{2.0}\\right)^2=0.36$ 倍．同じ $120\\ \\mathrm W$ を送るのに，電流が少なくてすむ．\n\n\\textbf{(6)} 並列なので負荷の電圧は $100\\ \\mathrm V$ のまま変わらず，負荷の電流も位相も変わらない．コンデンサーの電流は電圧と $\\dfrac\\pi2$ ずれていて，消費電力は $0$．コンデンサーは，コイルが必要とする「行ったり来たりする電流」を，電源の代わりに近くで受け持っている．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電流を電圧と同位相の成分（電力を運ぶ）と $\\frac\\pi2$ ずれた成分（運ばない）に分ける．並列コンデンサーで後者を打ち消すと，同じ電力をより小さな電流で送れる．"
+ },
+ "concepts": [
+  "ac-circuit",
+  "electric-power"
+ ],
+ "laws": [
+  "ac-reactance",
+  "kirchhoff-1st",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流",
+  "力率",
+  "消費電力",
+  "コンデンサー"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

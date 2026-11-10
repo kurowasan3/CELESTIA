@@ -1,0 +1,114 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  160
+ ],
+ "items": [
+  {
+   "t": "dot",
+   "at": [
+    60,
+    120
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    300,
+    120
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    120
+   ],
+   "to": [
+    300,
+    120
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    60,
+    138
+   ],
+   "text": "A",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    138
+   ],
+   "text": "B",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    180,
+    136
+   ],
+   "text": "L",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140,
+    60
+   ],
+   "dir": 30,
+   "len": 70,
+   "style": "velocity",
+   "label": "w"
+  },
+  {
+   "t": "line",
+   "from": [
+    140,
+    60
+   ],
+   "to": [
+    215,
+    60
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    140,
+    60
+   ],
+   "r": 30,
+   "from": 0,
+   "to": 30,
+   "label": "φ",
+   "labelGap": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    120,
+    52
+   ],
+   "text": "風",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  }
+ ]
+}

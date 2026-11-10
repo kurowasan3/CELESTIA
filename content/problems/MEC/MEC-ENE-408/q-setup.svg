@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 210" width="400" height="210" font-family="'Times New Roman', serif">
+<line x1="20" y1="140" x2="150" y2="140" stroke="currentColor" stroke-width="2"/>
+<line x1="150" y1="140" x2="390" y2="140" stroke="currentColor" stroke-width="2"/>
+<polygon points="150,140 390,140 390,150 150,150" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(80,140) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-17" y="-26" width="34" height="26" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-13" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+</g>
+<g class="f-vel" data-phys="velocity:v0" data-dir="0" data-len="36">
+<line x1="97" y1="127" x2="123" y2="127" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="133,127 123,131.66 123,122.34" fill="currentColor"/>
+<text x="155" y="127" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₀</text>
+</g>
+<circle cx="150" cy="140" r="3" fill="currentColor"/>
+<text x="150" y="164" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<g class="f-ink" data-dir="0" data-len="230">
+<line x1="150" y1="184" x2="370" y2="184" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="380,184 370,188.66 370,179.34" fill="currentColor"/>
+</g>
+<text x="388" y="196" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">x</text>
+<text x="85" y="166" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">なめらか</text>
+<text x="270" y="118" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">あらい面（μ = cx）</text>
+</svg>

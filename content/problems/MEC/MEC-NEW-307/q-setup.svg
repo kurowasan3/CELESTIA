@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 260" width="370" height="260" font-family="'Times New Roman', serif">
+<line x1="30" y1="60" x2="350" y2="244.75" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<line x1="30" y1="60" x2="110" y2="60" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M64.64,80 A40,40 0 0 0 70,60" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="80.23" y="73.46" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">α</text>
+<g transform="translate(190,152.38) rotate(30)" data-phys="body:train" data-angle="-30">
+<rect x="-75" y="-80" width="150" height="80" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<line x1="230" y1="83.09" x2="217.99" y2="131.63" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="217.99" cy="131.63" r="7" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4" data-phys="body:bob"/>
+<line x1="230" y1="83.09" x2="230" y2="143.09" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<g class="f-ink" data-dir="-30" data-len="45">
+<line x1="305" y1="140" x2="335.31" y2="157.5" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="343.97,162.5 332.98,161.54 337.64,153.46" fill="currentColor"/>
+<text x="318.49" y="137.64" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">a</text>
+</g>
+</svg>

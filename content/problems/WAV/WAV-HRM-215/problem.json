@@ -1,0 +1,165 @@
+{
+ "id": "WAV-HRM-215",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "弦の一点に軽く触れて鳴らす倍音（ハーモニクス）と，強く押さえた場合との違い",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation",
+  "numeric",
+  "experiment",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，線密度 $\\rho=2.0\\times10^{-3}\\,\\mathrm{kg/m}$ の弦の一端を固定し，2つのこま A，B にかけ，他端に滑車を通して質量 $M=4.0\\,\\mathrm{kg}$ のおもりをつるした．AB 間の長さは $L=0.70\\,\\mathrm m$ で，A，B は弦の固定端とみなせる．弦を伝わる横波の速さは，張力の大きさを $S$ として $v=\\sqrt{\\dfrac S\\rho}$ である．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "弦を伝わる横波の速さ $v$ と，AB 間の弦の基本振動数 $f_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "AB 間の中央付近をはじくと，基本振動のほかに，いくつかの倍振動も同時に生じる．$n$ 倍振動の振動数を $f_1$ と $n$ で表せ．"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "tex": "次に，A から $\\dfrac L3$ の点 P に指先を軽く触れたまま，A と P の間をはじき，すぐに指をはなした．指が触れている点は振動できないが，指は弦を P の両側に分けて押さえつけてはいない．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "3",
+      "tex": "このとき鳴り続ける音のうち，最も低い音の振動数を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "指を軽く触れる点を，A から $0.28\\,\\mathrm m$ の点に変えた．鳴り続ける最も低い音の振動数を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "今度は P で弦をこまに強く押しつけて固定し，P と B の間をはじいた．聞こえる音の基本振動数を求めよ．また，(3) との違いが生じる理由を説明せよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(3) の方法で鳴る最も低い音の振動数を，もとの $f_1$ に等しくしたい．おもりの質量を何 $\\mathrm{kg}$ にすればよいか．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "7",
+      "tex": "A から $\\dfrac pq L$（$p$，$q$ は互いに素な正の整数で $p<q$）の点に軽く触れてはじくとき，鳴り続ける最も低い音の振動数を $f_1$ を用いて表せ．また，触れる点を A から $\\dfrac{L}{\\sqrt2}$ の点にすると，音はどうなると考えられるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左端を固定した弦が2つのこま A、B にかかり、右端は滑車を通して質量 M のおもりにつながる。AB 間の長さは 0.70 m",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=140\\,\\mathrm{m/s}$，$f_1=100\\,\\mathrm{Hz}$",
+    "grading": "v：140 [m/s] ; f_1：100 [Hz]"
+   },
+   {
+    "id": "2",
+    "tex": "$nf_1$",
+    "grading": "n f_1"
+   },
+   {
+    "id": "3",
+    "tex": "$300\\,\\mathrm{Hz}$",
+    "grading": "300 [Hz]"
+   },
+   {
+    "id": "4",
+    "tex": "$500\\,\\mathrm{Hz}$",
+    "grading": "500 [Hz]"
+   },
+   {
+    "id": "5",
+    "tex": "$150\\,\\mathrm{Hz}$．強く押さえると P が固定端になり，PB 間（長さ $\\dfrac{2L}3$）だけが独立に振動する．軽く触れた場合は弦全体（AB 間）が P を節とする振動をするので，AB 間の倍振動のうち P に節があるものだけが残る．",
+    "grading": "150 [Hz]"
+   },
+   {
+    "id": "6",
+    "tex": "$0.44\\,\\mathrm{kg}$",
+    "grading": "0.44 [kg]"
+   },
+   {
+    "id": "7",
+    "tex": "$qf_1$．$\\dfrac1{\\sqrt2}$ は分数で表せないので，その点に節をもつ固有振動がなく，どの振動も指で押さえられて減衰し，澄んだ音はすぐに消える．",
+    "grading": "q f_1"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} $S=Mg=4.0\\times9.8=39.2\\,\\mathrm N$．$v=\\sqrt{\\dfrac{39.2}{2.0\\times10^{-3}}}=\\sqrt{19600}=\\boldsymbol{140\\,\\mathrm{m/s}}$．基本振動では $L=\\dfrac\\lambda2$ なので $f_1=\\dfrac v{2L}=\\dfrac{140}{1.40}=\\boldsymbol{100\\,\\mathrm{Hz}}$．\n\n\\textbf{(2)} $n$ 倍振動は $L=n\\dfrac{\\lambda_n}2$ で，$f_n=\\dfrac{nv}{2L}=\\boldsymbol{nf_1}$．\n\n\\textbf{(3)} 指で軽く触れた点は振動できないので，そこが節になる振動だけが減衰せずに残る．$n$ 倍振動の節は A から $\\dfrac{L}{n}$ の整数倍の位置にあるので，$\\dfrac L3$ が節になるのは $\\dfrac L3=k\\dfrac Ln$，すなわち $n=3k$（$n$ が $3$ の倍数）のとき．最も低いのは $n=3$ で $3f_1=\\boldsymbol{300\\,\\mathrm{Hz}}$．\n（ギターなどの「ハーモニクス奏法」．指の位置に節がない振動は，指に振動を吸収されて消える．）\n\n\\textbf{(4)} $0.28=\\dfrac25\\times0.70$ なので，節の条件は $\\dfrac{2}{5}L=k\\dfrac Ln$，$n=\\dfrac{5k}2$．$n$ が整数になるのは $n$ が $5$ の倍数のとき．最も低いのは $5f_1=\\boldsymbol{500\\,\\mathrm{Hz}}$．\n\n\\textbf{(5)} 強く押さえると P は固定端になり，PB 間の長さ $\\dfrac{2L}3$ の弦が独立に振動する．基本振動数は $\\dfrac{v}{2\\times\\frac{2L}3}=\\dfrac{3v}{4L}=\\dfrac32f_1=\\boldsymbol{150\\,\\mathrm{Hz}}$．\n軽く触れただけのときは，AP 間と PB 間が P を通して1本の弦としてつながっており，弦全体（長さ $L$）の固有振動のうち P に節のあるものが残る．AP 間の長さ $\\dfrac L3$ に合う振動（$300\\,\\mathrm{Hz}$）が，PB 間でも $\\dfrac{2L}{3}$ にちょうど半波長2つ分おさまり，全体として 3 倍振動になっている．\n\n\\textbf{(6)} 鳴る音は $3f_1'$（$f_1'$ は新しい基本振動数）なので，$3f_1'=f_1$ とするには速さを $\\dfrac13$ 倍にする．$v\\propto\\sqrt M$ より $M$ を $\\dfrac19$ 倍にして $\\dfrac{4.0}9=0.444\\cdots\\fallingdotseq\\boldsymbol{0.44\\,\\mathrm{kg}}$．\n\n\\textbf{(7)} 節の条件 $\\dfrac pqL=k\\dfrac Ln$ より $n=\\dfrac{kq}p$．$p$ と $q$ は互いに素なので，$n$ が整数になるのは $n$ が $q$ の倍数のとき．最も低い音は $\\boldsymbol{qf_1}$．\n$\\dfrac1{\\sqrt2}$ は既約分数で表せない（無理数）ので，どの $n$ でも節がちょうどその点に来ることはない．すべての固有振動が指で振動を吸収されて減衰し，はっきりした高さの音は鳴り続けない．（実際には指に幅があるので，$\\dfrac{1}{\\sqrt2}\\fallingdotseq\\dfrac{5}{7}$ などに近い高い倍音が弱く聞こえることはある．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "弦に軽く触れると，その点を節にもつ固有振動だけが残る（ハーモニクス）．強く押さえると弦の長さそのものが変わる．どちらも「両端が節」という条件で数えられる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "superposition"
+ ],
+ "laws": [
+  "string-modes",
+  "wave-speed"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "弦の固有振動",
+  "倍振動",
+  "ハーモニクス",
+  "測定"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    277.5,
+    207.272
+   ],
+   "to": [
+    182.5,
+    42.728
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    125
+   ],
+   "to": [
+    325.263,
+    70.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    125
+   ],
+   "to": [
+    340,
+    125
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    230,
+    125
+   ],
+   "r": 55,
+   "from": 0,
+   "to": 30,
+   "label": "θ"
+  },
+  {
+   "t": "text",
+   "at": [
+    338.253,
+    62.5
+   ],
+   "text": "法線",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    60,
+    230
+   ],
+   "text": "太陽光",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    204.5,
+    48.728
+   ],
+   "text": "帆",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "arrow",
+   "from": [
+    30,
+    60
+   ],
+   "dir": 0,
+   "len": 158.472,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    30,
+    100
+   ],
+   "dir": 0,
+   "len": 181.566,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    30,
+    150
+   ],
+   "dir": 0,
+   "len": 210.434,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    30,
+    190
+   ],
+   "dir": 0,
+   "len": 233.528,
+   "style": "thin"
+  }
+ ]
+}

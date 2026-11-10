@@ -1,0 +1,135 @@
+{
+ "id": "WAV-WDG-221",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "くさび形空気層の干渉縞で髪の毛の太さを測る（液体を入れたときの縞の間隔）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "experiment",
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，2枚の平面ガラス板を重ね，一端 O を接触させ，O から $L=10.0\\,\\mathrm{cm}$ の位置に髪の毛をはさんで，くさび形の空気層をつくった．真上から波長 $\\lambda=600\\,\\mathrm{nm}$ の単色光を当てて上から見ると，等間隔の明暗の縞が見え，隣り合う暗線の間隔は $\\Delta x=1.5\\,\\mathrm{mm}$ であった．髪の毛の直径を $D$ とし，ガラスの屈折率は $1.5$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "接触点 O の位置は明線・暗線のどちらになるか．"
+     },
+     {
+      "id": "2",
+      "tex": "暗線の間隔 $\\Delta x$ を $L$，$\\lambda$，$D$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "髪の毛の直径 $D$ は何 $\\mu\\mathrm m$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "O から髪の毛までの間に見える暗線は，O の暗線も含めて何本か．"
+     },
+     {
+      "id": "5",
+      "tex": "ガラス板の間を屈折率 $\\dfrac43$ の水で満たした．暗線の間隔は何 $\\mathrm{mm}$ になるか．有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平なガラス板の上に、もう1枚のガラス板が左端 O で接し、O から 10.0 cm の位置にはさんだ髪の毛で右側が少し持ち上がっている。真上から単色光を当て、反射光を上から見る",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "暗線"
+   },
+   {
+    "id": "2",
+    "tex": "$\\Delta x=\\dfrac{L\\lambda}{2D}$",
+    "grading": "Δx：Lλ/(2D)"
+   },
+   {
+    "id": "3",
+    "tex": "$20\\,\\mu\\mathrm m$",
+    "grading": "20 [μm]"
+   },
+   {
+    "id": "4",
+    "tex": "$67$ 本",
+    "grading": "67本"
+   },
+   {
+    "id": "5",
+    "tex": "$1.1\\,\\mathrm{mm}$",
+    "grading": "1.1 [mm]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 空気層の上面（ガラス → 空気）での反射では位相は変わらず，下面（空気 → ガラス）での反射では位相が $\\pi$ ずれる．O では空気層の厚さが $0$ で経路差がないので，2つの反射光は位相の差 $\\pi$ だけで打ち消し合う．O は\\textbf{暗線}．\n\n(2) O から $x$ の位置の空気層の厚さは $d=\\dfrac DLx$．2つの反射光の経路差は $2d$ で，反射による位相のずれを考えると，暗線の条件は $2d=m\\lambda$（$m=0,1,2,\\dots$）．\n\\[ 2\\frac DLx_m=m\\lambda\\qquad\\therefore\\ x_m=\\frac{mL\\lambda}{2D},\\qquad \\Delta x=x_{m+1}-x_m=\\boldsymbol{\\frac{L\\lambda}{2D}} \\]\n\n(3) $D=\\dfrac{L\\lambda}{2\\Delta x}=\\dfrac{0.100\\times600\\times10^{-9}}{2\\times1.5\\times10^{-3}}=2.0\\times10^{-5}\\,\\mathrm m=\\boldsymbol{20\\,\\mu\\mathrm m}$．\n（$\\mu\\mathrm m$ 程度の太さを，物差しで測れる $\\mathrm{mm}$ 程度の縞の間隔に「拡大」して測っている．）\n\n(4) $0\\le x\\le L$ では $0\\le 2d\\le2D$ なので，$m\\lambda\\le2D$ より $m\\le\\dfrac{2\\times20\\times10^{-6}}{600\\times10^{-9}}=66.6\\cdots$．$m=0,1,\\dots,66$ の $\\boldsymbol{67}$ 本．（$L\\div\\Delta x=66.7$ からも分かる．）\n\n(5) 水の中では波長が $\\dfrac\\lambda n$ になる．反射の位相は，上面（ガラス $1.5$ → 水 $\\dfrac43$）で変わらず，下面（水 → ガラス）で $\\pi$ ずれるので，空気のときと同じ組合せで，暗線の条件は $2nd=m\\lambda$．間隔は $\\dfrac{L\\lambda}{2nD}=\\dfrac{\\Delta x}n=\\dfrac{1.5}{4/3}=1.125\\fallingdotseq\\boldsymbol{1.1\\,\\mathrm{mm}}$．縞は細かくなる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "くさび形の薄膜では，厚さが $\\dfrac\\lambda2$ 変わるごとに同じ明暗がくり返す．縞の間隔 $\\dfrac{L\\lambda}{2D}$ から，見えないほど小さい厚さ $D$ が測れる．反射の位相のずれ（屈折率の大小）を必ず確認する．"
+ },
+ "concepts": [
+  "light-interference",
+  "interference"
+ ],
+ "laws": [
+  "interference-condition"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "くさび形空気層",
+  "薄膜の干渉",
+  "測定",
+  "反射の位相"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

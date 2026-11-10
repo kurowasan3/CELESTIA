@@ -1,0 +1,148 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  280,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    70,
+    230
+   ],
+   "to": [
+    230,
+    230
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     70,
+     230
+    ],
+    [
+     230,
+     230
+    ],
+    [
+     230,
+     237
+    ],
+    [
+     70,
+     237
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "spring",
+   "from": [
+    150,
+    230
+   ],
+   "to": [
+    150,
+    150
+   ],
+   "coils": 8,
+   "amp": 12
+  },
+  {
+   "t": "line",
+   "from": [
+    128,
+    150
+   ],
+   "to": [
+    172,
+    150
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "ball",
+   "at": [
+    150,
+    52
+   ],
+   "r": 9,
+   "label": "m",
+   "phys": "body:ball"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    63
+   ],
+   "to": [
+    150,
+    148
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    195,
+    52
+   ],
+   "to": [
+    195,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    189,
+    52
+   ],
+   "to": [
+    201,
+    52
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    189,
+    150
+   ],
+   "to": [
+    201,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    208,
+    101
+   ],
+   "text": "h",
+   "italic": true,
+   "size": 15,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    176,
+    196
+   ],
+   "text": "k",
+   "italic": true,
+   "size": 15,
+   "anchor": "start"
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "id": "MSY-CRL-204",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "氷の上のストーンの衝突：すべった距離から反発係数を求める",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な氷の上で，同じ質量の2つのストーン A，B を使って実験をした．B を静止させておき，A を押し出したところ，A は $2.0\\,\\mathrm m$ すべったあと B に正面衝突した．衝突後，A，B は同じ向きにすべり，止まるまでに A は $0.040\\,\\mathrm m$，B は $3.24\\,\\mathrm m$ すべった．ストーンと氷の間の動摩擦係数はどちらも $0.025$，重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，ストーンの回転と大きさ，衝突にかかる時間は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "衝突直後の A と B の速さの比を，最も簡単な整数比で求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "A と B の間の反発係数を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "衝突直前の A の速さは何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "押し出した直後の A の速さは何 $\\mathrm{m/s}$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "衝突で失われた運動エネルギーは，衝突直前の A の運動エネルギーの何 $\\%$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1:9$",
+    "grading": "1:9"
+   },
+   {
+    "id": "2",
+    "tex": "$0.80$",
+    "grading": "0.8"
+   },
+   {
+    "id": "3",
+    "tex": "$1.4\\,\\mathrm{m/s}$",
+    "grading": "1.4 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$1.7\\,\\mathrm{m/s}$",
+    "grading": "1.7 [m/s]"
+   },
+   {
+    "id": "5",
+    "tex": "$18\\,\\%$",
+    "grading": "割合（%）：18"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "動摩擦力による加速度の大きさは $\\mu'g=0.025\\times9.8=0.245\\,\\mathrm{m/s^2}$ で，A，B で共通．速さ $v$ で止まるまでにすべる距離は $s=\\dfrac{v^2}{2\\mu'g}$ で，$v^2$ に比例する．\n\n(1) $v_{\\mathrm A}'^2:v_{\\mathrm B}'^2=0.040:3.24=1:81$ より $v_{\\mathrm A}':v_{\\mathrm B}'=1:9$．\n\n(2) 衝突直前の A の速さを $v$ とする．運動量保存 $mv=mv_{\\mathrm A}'+mv_{\\mathrm B}'$，反発係数 $e=\\dfrac{v_{\\mathrm B}'-v_{\\mathrm A}'}{v}$ より \\[e=\\frac{v_{\\mathrm B}'-v_{\\mathrm A}'}{v_{\\mathrm A}'+v_{\\mathrm B}'}=\\frac{9-1}{9+1}=0.80\\] 距離の比だけで反発係数が決まり，摩擦係数の値はいらない．\n\n(3) $v_{\\mathrm B}'=\\sqrt{2\\times0.245\\times3.24}=\\sqrt{1.5876}=1.26\\,\\mathrm{m/s}$，$v_{\\mathrm A}'=\\dfrac{1.26}{9}=0.14\\,\\mathrm{m/s}$．$v=v_{\\mathrm A}'+v_{\\mathrm B}'=1.4\\,\\mathrm{m/s}$．\n\n(4) 衝突前の $2.0\\,\\mathrm m$ のすべりで $v_0^2-v^2=2\\mu'g\\times2.0$． \\[v_0=\\sqrt{1.96+2\\times0.245\\times2.0}=\\sqrt{2.94}\\approx1.7\\,\\mathrm{m/s}\\]\n\n(5) 衝突後の運動エネルギーの和は直前の $\\dfrac{0.14^2+1.26^2}{1.4^2}=0.82$ 倍（質量が等しく B が静止していたときは $\\dfrac{1+e^2}2$）．失われたのは $18\\,\\%$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "止まるまでの距離は速さの2乗に比例するので，距離の比から速さの比がわかる．運動量保存と反発係数の式に入れる．"
+ },
+ "simulation": {
+  "id": "mech.collision",
+  "preset": {
+   "m1": 1,
+   "m2": 1,
+   "v1": 1.4,
+   "v2": 0,
+   "e": 0.8
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "momentum-conservation",
+  "restitution",
+  "work-energy"
+ ],
+ "laws": [
+  "momentum-conservation",
+  "restitution",
+  "work-energy-theorem",
+  "friction-law"
+ ],
+ "misconceptions": [
+  "MC-KE-ALWAYS-CONSERVED"
+ ],
+ "tags": [
+  "衝突",
+  "反発係数",
+  "動摩擦",
+  "実験",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

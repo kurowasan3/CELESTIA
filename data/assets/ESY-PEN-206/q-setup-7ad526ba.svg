@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 250" width="380" height="250" font-family="'Times New Roman', serif">
+<line x1="70" y1="30" x2="70" y2="230" stroke="currentColor" stroke-width="2.4"/>
+<line x1="340" y1="30" x2="340" y2="230" stroke="currentColor" stroke-width="2.4"/>
+<text x="55" y="40" font-size="18" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">+</text>
+<text x="355" y="40" font-size="18" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">−</text>
+<line x1="160" y1="40" x2="220" y2="40" stroke="currentColor" stroke-width="2"/>
+<line x1="190" y1="40" x2="255" y2="152.58" stroke="currentColor" stroke-width="1.2"/>
+<line x1="190" y1="40" x2="190" y2="150" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M190,74 A34,34 0 0 0 207,69.44" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="201.39" y="82.5" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">α</text>
+<circle cx="255" cy="152.58" r="8" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<text x="212" y="100" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+<text x="273" y="156.58" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m, q</text>
+<g class="f-ink" data-dir="0" data-len="60">
+<line x1="100" y1="210" x2="150" y2="210" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="160,210 150,214.66 150,205.34" fill="currentColor"/>
+<text x="172" y="210" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">E</text>
+</g>
+<line x1="70" y1="240" x2="340" y2="240" stroke="currentColor" stroke-width="1.2"/>
+<text x="205" y="230" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d</text>
+<text x="40" y="140" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">V</text>
+</svg>

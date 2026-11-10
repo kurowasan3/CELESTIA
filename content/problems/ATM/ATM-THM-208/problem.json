@@ -1,0 +1,171 @@
+{
+ "id": "ATM-THM-208",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "トムソンの方法による電子の比電荷の測定（偏向と直交する電場・磁場）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "experiment",
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，真空中で，電子（質量 $m$，電気量 $-e$）を $x$ 軸に沿って速さ $v_0$ で，長さ $l$，間隔 $d$ の平行な極板の間に入射させる．極板の端から距離 $L$ の位置に，$x$ 軸に垂直な蛍光面がある．電子が電場も磁場も受けなければ，蛍光面上の点 O′ に当たる．重力は無視し，極板の外には電場はないものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "text",
+    "tex": "\\textbf{［I］} 下の極板が高電位になるように極板間に電圧 $V$ を加えると，電子は図のように曲がり，蛍光面上で O′ から $Y$ だけ離れた点に当たった．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "極板の間での電子の加速度の大きさ $a$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "電子が極板の間を出るときの，$x$ 軸からのずれ $y_1$ と，速度が $x$ 軸となす角 $\\varphi$ について $\\tan\\varphi$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$Y$ を $e,\\ m,\\ V,\\ d,\\ l,\\ L,\\ v_0$ で表せ．"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "tex": "\\textbf{［II］} 電圧 $V$ はそのままで，極板の間だけに紙面に垂直な一様な磁場（磁束密度の大きさ $B$）を加えて調節すると，電子は曲がらずに直進して O′ に当たった．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "4",
+      "tex": "磁場の向きを答えよ．また，$v_0$ を $V,\\ B,\\ d$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "［I］の $Y$ と［II］の $B$ から，電子の比電荷 $\\dfrac em$ を $Y,\\ V,\\ B,\\ d,\\ l,\\ L$ で表せ．"
+     },
+     {
+      "id": "6",
+      "tex": "$V=200\\ \\mathrm V$，$d=1.0\\ \\mathrm{cm}$，$l=4.0\\ \\mathrm{cm}$，$L=16\\ \\mathrm{cm}$，$B=5.0\\times10^{-4}\\ \\mathrm T$，$Y=1.6\\ \\mathrm{cm}$ であった．$v_0$ は何 m/s か．また，$\\dfrac em$ は何 C/kg か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "7",
+      "tex": "電子銃の加速電圧 $V_{\\rm a}$ が分かっていれば，$\\dfrac12mv_0^2=eV_{\\rm a}$ と［I］の結果だけからも $\\dfrac em$ が求められる．それでも［II］の操作を行うと，どのような利点があるか．［I］で蛍光面上の点がぼやけて広がる場合も考えて答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左から x 軸に沿って速さ v₀ で入射した電子が，長さ l，間隔 d の平行な極板（上が−，下が＋）の間で下向きに放物線を描いて曲がり，極板を出た後は直進して，距離 L 先の蛍光面上で，直進した場合の点 O′ から Y だけ下の点に当たる．",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$a=\\dfrac{eV}{md}$",
+    "grading": "a：e V/(m d)"
+   },
+   {
+    "id": "2",
+    "tex": "$y_1=\\dfrac{eVl^2}{2mdv_0^2}$，$\\tan\\varphi=\\dfrac{eVl}{mdv_0^2}$",
+    "grading": "y_1：e V l^2/(2m d v_0^2) ; tan(φ)：e V l/(m d v_0^2)"
+   },
+   {
+    "id": "3",
+    "tex": "$Y=\\dfrac{eVl}{mdv_0^2}\\left(\\dfrac l2+L\\right)$",
+    "grading": "Y：e V l(l/2+L)/(m d v_0^2)"
+   },
+   {
+    "id": "4",
+    "tex": "紙面の裏から表の向き．$v_0=\\dfrac V{Bd}$",
+    "grading": "v_0：V/(B d)"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac em=\\dfrac{YV}{B^2dl\\left(\\dfrac l2+L\\right)}$",
+    "grading": "e/m：Y V/(B^2 d l(l/2+L))"
+   },
+   {
+    "id": "6",
+    "tex": "$v_0=4.0\\times10^7\\ \\mathrm{m/s}$，$\\dfrac em=1.8\\times10^{11}\\ \\mathrm{C/kg}$",
+    "grading": "v_0：4.0*10^7 [m/s] ; e/m：1.8*10^11"
+   },
+   {
+    "id": "7",
+    "tex": "［II］では，実際に極板の間を通る電子の速さ $v_0$ を，電場と磁場の比 $\\dfrac V{Bd}$ として直接測れる．加速電圧から計算した速さに頼らないので，電子銃の中での電子の初速度のばらつきや電極の接触電位差などの影響を受けない．また，速さ $\\dfrac EB$ の電子だけが直進するので，速さがそろっていない電子線でも，その速さの電子についての $Y$ を使えばよく，結果が $v_0$ の値に左右されない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 極板間の電場の強さは $\\dfrac Vd$ で，向きは下の極板から上へ．電子（負電荷）は電場と逆向きの下向きに力 $\\dfrac{eV}d$ を受ける：$a=\\dfrac{eV}{md}$（下向き）．\n\n\\textbf{(2)} $x$ 方向は等速で，極板を通る時間は $t_1=\\dfrac l{v_0}$．$y_1=\\dfrac12at_1^2=\\dfrac{eVl^2}{2mdv_0^2}$．出るときの速度の $y$ 成分は $at_1=\\dfrac{eVl}{mdv_0}$ なので $\\tan\\varphi=\\dfrac{at_1}{v_0}=\\dfrac{eVl}{mdv_0^2}$．\n\n\\textbf{(3)} 極板を出た後は等速直線運動．$Y=y_1+L\\tan\\varphi=\\dfrac{eVl}{mdv_0^2}\\left(\\dfrac l2+L\\right)$．（極板を出た後の直線を逆に延ばすと，極板の中央 $x=\\dfrac l2$ の点を通る．）\n\n\\textbf{(4)} 電場による力は下向きなので，ローレンツ力が上向きになればよい．電子は負電荷なので，電流の向きは $-x$ 向き．フレミングの左手の法則で，$-x$ 向きの電流が上向きの力を受けるのは，磁場が紙面の裏から表の向きのとき．つり合い $ev_0B=\\dfrac{eV}d$ より $v_0=\\dfrac V{Bd}$．\n\n\\textbf{(5)} (3) に $v_0^2=\\dfrac{V^2}{B^2d^2}$ を代入：$Y=\\dfrac em\\cdot\\dfrac{Vl}d\\left(\\dfrac l2+L\\right)\\cdot\\dfrac{B^2d^2}{V^2}=\\dfrac em\\cdot\\dfrac{B^2dl}{V}\\left(\\dfrac l2+L\\right)$．よって $\\dfrac em=\\dfrac{YV}{B^2dl\\left(\\dfrac l2+L\\right)}$．\n\n\\textbf{(6)} $v_0=\\dfrac{200}{5.0\\times10^{-4}\\times1.0\\times10^{-2}}=4.0\\times10^7\\ \\mathrm{m/s}$．$\\dfrac em=\\dfrac{1.6\\times10^{-2}\\times200}{(5.0\\times10^{-4})^2\\times1.0\\times10^{-2}\\times4.0\\times10^{-2}\\times(2.0\\times10^{-2}+16\\times10^{-2})}=\\dfrac{3.2}{1.8\\times10^{-11}}=1.78\\times10^{11}\\fallingdotseq1.8\\times10^{11}\\ \\mathrm{C/kg}$．\n\n\\textbf{(7)} $Y\\propto\\dfrac1{v_0^2}$ なので，$\\dfrac em$ の値は $v_0$ の誤差に敏感である．加速電圧から計算した $v_0$ は，陰極から出るときの初速度や電極間の接触電位差のために実際とずれることがある．［II］では，極板の間を通る電子の速さを，同じ極板の電場と磁場の比で直接決めるので，このずれの影響を受けない．さらに，速さがそろっていない電子線では［I］の点がぼやけて広がるが，［II］の条件で直進する速さ $\\dfrac V{Bd}$ の電子がどこに当たるか（ぼやけた点の中の位置）を対応させればよい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電場だけの偏向 $Y\\propto\\dfrac{e}{mv_0^2}$ では，未知の $v_0$ が残る．電場と磁場の力をつり合わせて $v_0=\\dfrac EB$ を測り，これを消去して $\\dfrac em$ を求める．"
+ },
+ "concepts": [
+  "coulomb-field",
+  "lorentz-force",
+  "projectile-motion"
+ ],
+ "laws": [
+  "uniform-field-potential",
+  "lorentz-force",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "比電荷",
+  "トムソン",
+  "電子",
+  "偏向",
+  "速度選別器",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

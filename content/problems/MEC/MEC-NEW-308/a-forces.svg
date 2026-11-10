@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 245" width="330" height="245" font-family="'Times New Roman', serif">
+<g transform="translate(170,200) rotate(0)" data-phys="body:B" data-angle="0">
+<rect x="-90" y="-36" width="180" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="250" y="182" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+<g class="f-force" data-phys="force:N2" data-dir="90" data-len="100">
+<line x1="215" y1="200" x2="215" y2="110" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="215,100 219.66,110 210.34,110" fill="currentColor"/>
+<text x="229" y="92" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">N₂</text>
+</g>
+<g class="f-force" data-phys="force:Mg" data-dir="270" data-len="50">
+<line x1="170" y1="182" x2="170" y2="222" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="170,232 165.34,222 174.66,222" fill="currentColor"/>
+<text x="188" y="236" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">Mg</text>
+</g>
+<g class="f-force" data-phys="force:N1" data-dir="270" data-len="50">
+<line x1="125" y1="114" x2="125" y2="154" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="125,164 120.34,154 129.66,154" fill="currentColor"/>
+<text x="89" y="139" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">N₁</text>
+</g>
+<g class="f-force" data-phys="force:f1" data-dir="0" data-len="30">
+<line x1="140" y1="164" x2="160" y2="164" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="170,164 160,168.66 160,159.34" fill="currentColor"/>
+<text x="155" y="150" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">μ₁mg</text>
+</g>
+<g class="f-force" data-phys="force:f2" data-dir="180" data-len="20">
+<line x1="110" y1="200" x2="97" y2="200" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="90,200 97,196.74 97,203.26" fill="currentColor"/>
+<text x="72" y="210" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">f₂</text>
+</g>
+</svg>

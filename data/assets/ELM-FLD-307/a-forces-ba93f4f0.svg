@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" width="340" height="260" font-family="'Times New Roman', serif">
+<line x1="90" y1="40" x2="210" y2="40" stroke="currentColor" stroke-width="2"/>
+<line x1="150" y1="40" x2="236.02" y2="162.88" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="150" y1="40" x2="150" y2="200" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="236.02" cy="162.88" r="8" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-force" data-phys="force:mg" data-dir="270" data-len="70">
+<line x1="236.02" y1="162.88" x2="236.02" y2="222.88" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="236.02,232.88 231.36,222.88 240.68,222.88" fill="currentColor"/>
+<text x="236.02" y="244.88" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">mg</text>
+</g>
+<g class="f-force" data-phys="force:qE" data-dir="0" data-len="49">
+<line x1="236.02" y1="162.88" x2="275.02" y2="162.88" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="285.02,162.88 275.02,167.54 275.02,158.22" fill="currentColor"/>
+<text x="297.02" y="162.88" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">qE</text>
+</g>
+<g class="f-force" data-phys="force:S" data-dir="124.99" data-len="85.45">
+<line x1="236.02" y1="162.88" x2="192.75" y2="101.07" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="187.02,92.88 196.57,98.4 188.93,103.75" fill="currentColor"/>
+<text x="162.14" y="85.05" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">S₀</text>
+</g>
+<text x="142" y="30" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+</svg>

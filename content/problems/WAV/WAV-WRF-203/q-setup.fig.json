@@ -1,0 +1,122 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  210
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     105
+    ],
+    [
+     360,
+     105
+    ],
+    [
+     360,
+     205
+    ],
+    [
+     20,
+     205
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    105
+   ],
+   "to": [
+    360,
+    105
+   ],
+   "style": "ground",
+   "phys": "boundary"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    20
+   ],
+   "to": [
+    190,
+    195
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    94.74,
+    50.0
+   ],
+   "dir": 330,
+   "len": 110,
+   "style": "current",
+   "phys": "ray:in"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    190,
+    105
+   ],
+   "dir": 300,
+   "len": 90,
+   "style": "current",
+   "phys": "ray:out"
+  },
+  {
+   "t": "arc",
+   "at": [
+    190,
+    105
+   ],
+   "r": 32,
+   "from": 90,
+   "to": 150,
+   "label": "60°",
+   "labelGap": 16
+  },
+  {
+   "t": "arc",
+   "at": [
+    190,
+    105
+   ],
+   "r": 36,
+   "from": 270,
+   "to": 300,
+   "label": "30°",
+   "labelGap": 24
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    50
+   ],
+   "text": "領域 A（深い）",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    160
+   ],
+   "text": "領域 B（浅い）",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

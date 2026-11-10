@@ -1,0 +1,201 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    225
+   ],
+   "to": [
+    380,
+    225
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    32.5
+   ],
+   "to": [
+    200,
+    225
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    54.5
+   ],
+   "to": [
+    200,
+    142.5
+   ],
+   "style": "thick",
+   "phys": "mirror"
+  },
+  {
+   "t": "line",
+   "from": [
+    80,
+    49.0
+   ],
+   "to": [
+    80,
+    225
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "dot",
+   "at": [
+    80,
+    60.0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    64,
+    60.0
+   ],
+   "text": "目",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "line",
+   "from": [
+    320,
+    49.0
+   ],
+   "to": [
+    320,
+    225
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    336,
+    137.0
+   ],
+   "text": "像",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "line",
+   "from": [
+    80,
+    49.0
+   ],
+   "to": [
+    200,
+    54.5
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    54.5
+   ],
+   "to": [
+    80,
+    60.0
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    80,
+    225
+   ],
+   "to": [
+    200,
+    142.5
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    142.5
+   ],
+   "to": [
+    80,
+    60.0
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    142.5
+   ],
+   "to": [
+    320,
+    225
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    54.5
+   ],
+   "to": [
+    320,
+    49.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    208,
+    130.5
+   ],
+   "text": "0.75 m",
+   "italic": false,
+   "size": 11,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    208,
+    68.5
+   ],
+   "text": "1.55 m",
+   "italic": false,
+   "size": 11,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    239
+   ],
+   "text": "鏡（壁）",
+   "italic": false,
+   "size": 11
+  }
+ ]
+}

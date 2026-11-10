@@ -1,0 +1,210 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  225
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    110,
+    40
+   ],
+   "to": [
+    250,
+    40
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     110,
+     32
+    ],
+    [
+     250,
+     32
+    ],
+    [
+     250,
+     40
+    ],
+    [
+     110,
+     40
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "dot",
+   "at": [
+    180,
+    40
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    194,
+    50
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    180,
+    40
+   ],
+   "to": [
+    340,
+    40
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "circle",
+   "at": [
+    340,
+    40
+   ],
+   "r": 7,
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    180,
+    40
+   ],
+   "r": 160,
+   "from": -90,
+   "to": -3
+  },
+  {
+   "t": "line",
+   "from": [
+    180,
+    40
+   ],
+   "to": [
+    180,
+    193
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "ball",
+   "at": [
+    180,
+    200
+   ],
+   "r": 7,
+   "label": "",
+   "phys": "body:ball"
+  },
+  {
+   "t": "text",
+   "at": [
+    164,
+    214
+   ],
+   "text": "m",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "dot",
+   "at": [
+    180,
+    136
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    194,
+    136
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "circle",
+   "at": [
+    180,
+    136
+   ],
+   "r": 64,
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    40
+   ],
+   "to": [
+    150,
+    136
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    144,
+    40
+   ],
+   "to": [
+    156,
+    40
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    144,
+    136
+   ],
+   "to": [
+    156,
+    136
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    142,
+    56
+   ],
+   "text": "d",
+   "italic": true,
+   "size": 15,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    30
+   ],
+   "text": "l",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  }
+ ]
+}

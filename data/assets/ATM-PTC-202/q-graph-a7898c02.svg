@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="380" height="230" font-family="'Times New Roman', serif">
+<g class="f-ink" data-phys="axis:V" data-dir="0" data-len="310">
+<line x1="50" y1="180" x2="350" y2="180" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="360,180 350,184.66 350,175.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-phys="axis:I" data-dir="90" data-len="195">
+<line x1="200" y1="210" x2="200" y2="25" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="200,15 204.66,25 195.34,25" fill="currentColor"/>
+</g>
+<text x="368" y="200" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">V [V]</text>
+<text x="208" y="14" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">I [μA]</text>
+<text x="192" y="194" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<polyline points="60,180 140,180 200,68 340,68" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="140" cy="180" r="3" fill="currentColor"/>
+<text x="140" y="196" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">−1.5</text>
+<text x="192" y="58" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">3.2</text>
+<text x="300" y="54" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">飽和電流</text>
+</svg>

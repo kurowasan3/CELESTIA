@@ -1,0 +1,223 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  290
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     70,
+     250
+    ],
+    [
+     270,
+     250
+    ],
+    [
+     270,
+     200
+    ],
+    [
+     120,
+     200
+    ],
+    [
+     120,
+     50
+    ],
+    [
+     70,
+     50
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    70,
+    250
+   ],
+   "dir": 0,
+   "len": 240,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    70,
+    250
+   ],
+   "dir": 90,
+   "len": 230,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    314,
+    264
+   ],
+   "text": "x",
+   "italic": true,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    58,
+    22
+   ],
+   "text": "y",
+   "italic": true,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    58,
+    262
+   ],
+   "text": "O",
+   "italic": true,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    264
+   ],
+   "text": "40",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    120,
+    264
+   ],
+   "text": "10",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    120,
+    250
+   ],
+   "to": [
+    120,
+    254
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    62,
+    200
+   ],
+   "text": "10",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    62,
+    50
+   ],
+   "text": "40",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    70,
+    200
+   ],
+   "to": [
+    66,
+    200
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    195,
+    225
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    95,
+    125
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    40
+   ],
+   "text": "（単位 cm）",
+   "italic": false,
+   "size": 11,
+   "anchor": "end"
+  },
+  {
+   "t": "dot",
+   "at": [
+    137.86,
+    182.14
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    146.86,
+    191.14
+   ],
+   "text": "G",
+   "italic": true,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    70,
+    250
+   ],
+   "to": [
+    195,
+    125
+   ],
+   "style": "dash"
+  }
+ ]
+}

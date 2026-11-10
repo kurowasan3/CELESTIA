@@ -1,0 +1,215 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  200
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    90.0,
+    101.0
+   ],
+   "to": [
+    130.0,
+    101.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    90.0,
+    119.0
+   ],
+   "to": [
+    130.0,
+    119.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    270.0,
+    101.0
+   ],
+   "to": [
+    310.0,
+    101.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    270.0,
+    119.0
+   ],
+   "to": [
+    310.0,
+    119.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    96
+   ],
+   "text": "+",
+   "italic": false,
+   "size": 16,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    126
+   ],
+   "text": "−",
+   "italic": false,
+   "size": 16,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    96
+   ],
+   "text": "−",
+   "italic": false,
+   "size": 16,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    126
+   ],
+   "text": "+",
+   "italic": false,
+   "size": 16,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    70,
+    110
+   ],
+   "text": "C₁",
+   "italic": false,
+   "size": 14,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    110
+   ],
+   "text": "C₂",
+   "italic": false,
+   "size": 14,
+   "anchor": "end"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     110,
+     101
+    ],
+    [
+     110,
+     50
+    ],
+    [
+     180,
+     50
+    ]
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     220,
+     50
+    ],
+    [
+     290,
+     50
+    ],
+    [
+     290,
+     101
+    ]
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    180,
+    50
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    220,
+    50
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    180,
+    50
+   ],
+   "to": [
+    216,
+    34
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    200.0,
+    26
+   ],
+   "text": "S",
+   "italic": false,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     110,
+     119
+    ],
+    [
+     110,
+     170
+    ],
+    [
+     290,
+     170
+    ],
+    [
+     290,
+     119
+    ]
+   ]
+  }
+ ]
+}

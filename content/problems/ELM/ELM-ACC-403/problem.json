@@ -1,0 +1,143 @@
+{
+ "id": "ELM-ACC-403",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "電圧と電流のグラフから素子の種類と値を見分ける",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "抵抗・コイル・コンデンサーのうちどれか1つの素子 X を交流電源につないだ．図は，X の両端の電圧 $v$（実線，最大値 $10\\ \\mathrm V$）と，X を流れる電流 $i$（破線，最大値 $0.50\\ \\mathrm A$）の時間変化である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "X はどの素子か．グラフのどこからわかるかも述べよ．"
+     },
+     {
+      "id": "2",
+      "tex": "交流の角周波数 $\\omega$ を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "3",
+      "tex": "X のリアクタンス（電圧と電流の最大値の比）を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "X の値（抵抗値・自己インダクタンス・電気容量のうち該当するもの）を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "5",
+      "tex": "X で消費される電力の時間平均を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "電圧の最大値を $10\\ \\mathrm V$ に保ったまま周波数を $2$ 倍にすると，電流の最大値はいくらになるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "電圧 v（実線、最大値 10 V）と電流 i（破線、最大値 0.50 A）の時間変化。周期はともに 20 ms。v は t=0 で 0 から増え始め、i は t=0 で負の最大値をとり、v より 5 ms 遅れて同じ変化をする",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "コイル．電流が電圧より $\\dfrac14$ 周期（$5\\ \\mathrm{ms}$）遅れているから．"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega=100\\pi\\ \\mathrm{rad/s}$",
+    "grading": "ω：100π [rad/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$20\\ \\Omega$",
+    "grading": "20 [Ω]"
+   },
+   {
+    "id": "4",
+    "tex": "$L=\\dfrac{1}{5\\pi}\\ \\mathrm H\\ (\\fallingdotseq6.4\\times10^{-2}\\ \\mathrm H)$",
+    "grading": "L：1/(5π) [H]"
+   },
+   {
+    "id": "5",
+    "tex": "$0$",
+    "grading": "0 [W]"
+   },
+   {
+    "id": "6",
+    "tex": "$0.25\\ \\mathrm A$",
+    "grading": "0.25 [A]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 電圧が $t=0$ で $0$ から増え始め，電流は $t=5\\ \\mathrm{ms}$ で $0$ から増え始める．電流は電圧より $5\\ \\mathrm{ms}$，つまり $\\dfrac14$ 周期（位相 $\\dfrac\\pi2$）\\textbf{遅れて}いる．抵抗なら同位相，コンデンサーなら電流が進む．遅れるのは\\textbf{コイル}．\n\n\\textbf{(2)} 周期 $T=20\\ \\mathrm{ms}$．$\\omega=\\dfrac{2\\pi}{T}=\\dfrac{2\\pi}{0.020}=100\\pi\\ \\mathrm{rad/s}$．\n\n\\textbf{(3)} $\\dfrac{V_0}{I_0}=\\dfrac{10}{0.50}=20\\ \\Omega$．\n\n\\textbf{(4)} コイルのリアクタンスは $\\omega L$．$L=\\dfrac{20}{100\\pi}=\\dfrac1{5\\pi}\\ \\mathrm H\\fallingdotseq6.4\\times10^{-2}\\ \\mathrm H$．\n\n\\textbf{(5)} 位相が $\\dfrac\\pi2$ ずれているので，電力の平均は $0$．（コイルは磁場のエネルギーとして受け取って，返す．）\n\n\\textbf{(6)} $\\omega L$ が $2$ 倍の $40\\ \\Omega$ になるので，$I_0=\\dfrac{10}{40}=0.25\\ \\mathrm A$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "位相のずれで素子を見分ける：同位相＝抵抗，電流が遅れる＝コイル，電流が進む＝コンデンサー．"
+ },
+ "concepts": [
+  "ac-circuit"
+ ],
+ "laws": [
+  "ac-reactance"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流",
+  "コイル",
+  "リアクタンス",
+  "位相",
+  "グラフ"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

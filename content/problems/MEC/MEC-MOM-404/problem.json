@@ -1,0 +1,138 @@
+{
+ "id": "MEC-MOM-404",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "弾道振り子で弾丸の速さを測る（撃ち込みで失われる運動エネルギーと，エネルギー保存だけで求める誤り）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "experiment",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "弾丸の速さを測るため，質量 $1.99\\,\\mathrm{kg}$ の木片を，2本の平行な軽い糸で水平につるした（弾道振り子）．質量 $10\\,\\mathrm g$ の弾丸を水平に撃ち込むと，弾丸は木片の中で止まり，木片は弾丸と一体となって，水平を保ったまま振れ上がった．このとき，木片の最高点の位置は，はじめの位置より $0.10\\,\\mathrm m$ 高かった．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，撃ち込みは瞬間的に終わるものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "撃ち込んだ直後の，木片（弾丸を含む）の速さ $V$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "弾丸の速さ $v$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "撃ち込みによって失われた運動エネルギーは，弾丸がもっていた運動エネルギーの何 $\\%$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "ある生徒は「弾丸の運動エネルギーがすべて，木片と弾丸を持ち上げる位置エネルギーになる」と考えて弾丸の速さを計算した．この方法で求めた速さ $v_E$ を有効数字2桁で求めよ．また，この考えの誤りを説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "2本の平行な糸でつるした質量 1.99 kg の木片に、左から質量 10 g の弾丸が水平に速さ v で飛んでくる",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "velocity:v",
+      "dir_deg": 0
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V=1.4\\,\\mathrm{m/s}$",
+    "grading": "V：1.4 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$v=2.8\\times10^2\\,\\mathrm{m/s}$",
+    "grading": "v：280 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$99.5\\,\\%$",
+    "grading": "99.5"
+   },
+   {
+    "id": "4",
+    "tex": "$v_E=20\\,\\mathrm{m/s}$．撃ち込み（完全非弾性衝突）では運動エネルギーの大部分が熱や変形に変わるので，衝突の前後でエネルギー保存は使えない．衝突の前後では運動量保存を使う．",
+    "grading": "v_E：20 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 撃ち込んだ後は糸の張力（仕事をしない）と重力だけがはたらくので，力学的エネルギーが保存する：\\[\\frac12V^2=gh=9.8\\times0.10\\quad\\Longrightarrow\\quad V=\\sqrt{1.96}=1.4\\,\\mathrm{m/s}\\]\n\n(2) 撃ち込みは瞬間的で，その間に水平方向の外力の力積はない（糸は鉛直）ので，水平方向の運動量が保存する：\\[0.010\\,v=(0.010+1.99)V=2.00\\times1.4\\quad\\Longrightarrow\\quad v=280\\,\\mathrm{m/s}\\]\n\n(3) 弾丸の運動エネルギー $\\dfrac12\\times0.010\\times280^2=392\\,\\mathrm J$，撃ち込み直後の運動エネルギー $\\dfrac12\\times2.00\\times1.4^2=1.96\\,\\mathrm J$．失われた割合は\\[\\frac{392-1.96}{392}=1-\\frac{0.010}{2.00}=0.995\\] すなわち $99.5\\,\\%$．一般に，静止物体に付着する衝突で残る割合は $\\dfrac{m}{m+M}$ である．\n\n(4) $\\dfrac12\\times0.010\\times v_E^2=2.00\\times9.8\\times0.10$ より $v_E=\\sqrt{392}\\fallingdotseq20\\,\\mathrm{m/s}$．実際の値の約 $\\dfrac{1}{14}$ にしかならない．弾丸が木片にめりこむとき，弾丸と木片の間の摩擦などの力が負の仕事をして，運動エネルギーの $99.5\\,\\%$ が熱や変形のエネルギーになる．このため，衝突の前後でエネルギー保存は成り立たない．衝突の前後では運動量保存，衝突の後（振れ上がる間）は力学的エネルギー保存，と段階を分けて使う．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "衝突の瞬間は運動量保存，その後の振れ上がりは力学的エネルギー保存．付着する衝突では運動エネルギーの多くが失われるので，前後をエネルギーでつないではいけない．"
+ },
+ "concepts": [
+  "momentum-conservation",
+  "restitution",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "momentum-conservation",
+  "energy-conservation"
+ ],
+ "misconceptions": [
+  "MC-KE-ALWAYS-CONSERVED"
+ ],
+ "tags": [
+  "運動量保存",
+  "完全非弾性衝突",
+  "弾道振り子",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

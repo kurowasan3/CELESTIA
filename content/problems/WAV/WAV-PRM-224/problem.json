@@ -1,0 +1,146 @@
+{
+ "id": "WAV-PRM-224",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "プリズムの最小偏角による屈折率の測定（光が出られる入射角の範囲と最小偏角が対称な通過で起こる理由）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation",
+  "numeric",
+  "experiment",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，頂角 $A$ のガラスのプリズム（屈折率 $n$）に，空気中から単色光を入射させる．光はプリズムの断面内を進み，第1面での入射角を $i_1$，屈折角を $r_1$，第2面での（プリズム内からの）入射角を $r_2$，空気中への屈折角を $i_2$ とする．入射光の向きと出射光の向きのなす角 $\\delta$ を偏角という．空気の屈折率を $1$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-prism"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$r_1+r_2$ を $A$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "偏角 $\\delta$ を $i_1$，$i_2$，$A$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$i_1$ を変えると $\\delta$ はある値 $\\delta_0$ で最小になり，このとき光はプリズムの中を対称に（$r_1=r_2$ となるように）通る．$n$ を $A$ と $\\delta_0$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$A=60^\\circ$ のプリズムで測定すると $\\delta_0=30^\\circ$ であった．$n$ を求めよ．また，最小偏角となる入射角 $i_1$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) のプリズムで，$i_1$ を小さくしていくと，ある角より小さいところで光は第2面から空気中へ出られなくなる．光が第2面から出るための $\\sin i_1$ の条件の境目の値を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "偏角が最小になるのは光が対称に通るときであることを，光の進路の逆行性（光は同じ道筋を逆向きにも進める）を用いて説明せよ．ただし，$\\delta$ が最小になる $i_1$ はただ1つであることは認めてよい．また，屈折率の測定に最小偏角を使うと都合がよい理由を述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-prism",
+   "role": "question",
+   "kind": "ray",
+   "format": "svg",
+   "src": "q-prism.svg",
+   "alt": "頂角 A の三角形のプリズム。左の面に入射角 i1 で入った光がプリズムの中を底辺に平行に進み、右の面から角 i2 で出る。入射光の延長と出射光のなす角が偏角 δ",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$r_1+r_2=A$",
+    "grading": "A"
+   },
+   {
+    "id": "2",
+    "tex": "$\\delta=i_1+i_2-A$",
+    "grading": "δ：i_1+i_2-A"
+   },
+   {
+    "id": "3",
+    "tex": "$n=\\dfrac{\\sin\\frac{A+\\delta_0}2}{\\sin\\frac A2}$",
+    "grading": "n：sin((A+δ_0)/2)/sin(A/2)"
+   },
+   {
+    "id": "4",
+    "tex": "$n=\\sqrt2$，$i_1=45^\\circ$",
+    "grading": "n：sqrt(2) ; i_1：45°"
+   },
+   {
+    "id": "5",
+    "tex": "$\\sin i_1=\\dfrac{\\sqrt3-1}2$（$i_1\\fallingdotseq21.5^\\circ$ より大きければ出る）",
+    "grading": "(sqrt(3)-1)/2"
+   },
+   {
+    "id": "6",
+    "tex": "ある非対称な通り方で $\\delta$ が最小になるとすると，その光を逆向きに進ませた通り方（入射角と出射角が入れかわる）でも同じ $\\delta$ になるので，最小を与える入射角が2つになり矛盾する．よって最小は $i_1=i_2$（$r_1=r_2$）の対称な通り方で起こる．最小値の付近では $i_1$ を少し変えても $\\delta$ がほとんど変わらないので，入射角を精密に測らなくても，プリズムを回して像が逆向きに動き始める位置を探すだけで $\\delta_0$ が正確に測れる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 2つの面の法線のなす角は頂角 $A$ に等しい（法線と2つの面でつくる四角形の内角の和から）．プリズム内の光線と2本の法線がつくる三角形で，$r_1+r_2=\\boldsymbol A$．\n\n\\textbf{(2)} 第1面で光は $i_1-r_1$，第2面で $i_2-r_2$ だけ向きを変える（どちらも底の向きへ）．合計して\n\\[ \\delta=(i_1-r_1)+(i_2-r_2)=\\boldsymbol{i_1+i_2-A} \\]\n\n\\textbf{(3)} 対称なときは $r_1=r_2=\\dfrac A2$，$i_1=i_2$ で，$\\delta_0=2i_1-A$ より $i_1=\\dfrac{A+\\delta_0}2$．第1面の屈折の法則 $\\sin i_1=n\\sin r_1$ より\n\\[ n=\\boldsymbol{\\frac{\\sin\\dfrac{A+\\delta_0}2}{\\sin\\dfrac A2}} \\]\n\n\\textbf{(4)} $n=\\dfrac{\\sin45^\\circ}{\\sin30^\\circ}=\\dfrac{\\sqrt2/2}{1/2}=\\boldsymbol{\\sqrt2}$．$i_1=\\dfrac{60^\\circ+30^\\circ}2=\\boldsymbol{45^\\circ}$．\n\n\\textbf{(5)} 第2面で全反射しない条件は，$r_2$ が臨界角 $\\theta_{\\mathrm c}$（$\\sin\\theta_{\\mathrm c}=\\dfrac1{\\sqrt2}$，$\\theta_{\\mathrm c}=45^\\circ$）より小さいこと：$r_2=60^\\circ-r_1<45^\\circ$，すなわち $r_1>15^\\circ$．\n\\[ \\sin i_1=\\sqrt2\\sin r_1>\\sqrt2\\sin15^\\circ=\\sqrt2\\cdot\\frac{\\sqrt6-\\sqrt2}4=\\frac{\\sqrt3-1}2\\fallingdotseq0.366 \\]\n境目の値は $\\boldsymbol{\\dfrac{\\sqrt3-1}2}$（$i_1\\fallingdotseq21.5^\\circ$）．入射角が小さすぎると，第2面に大きな角で当たって全反射する．\n\n\\textbf{(6)} 入射角 $i_1=\\alpha$ で出射角が $i_2=\\beta$ になる通り方では，光の逆行性により，第2面から入射角 $\\beta$ で入れた光は同じ道筋を逆にたどって第1面から角 $\\alpha$ で出る．偏角の式 $\\delta=i_1+i_2-A$ は $i_1$ と $i_2$ について対称なので，2つの通り方の偏角は等しい．\nもし $\\alpha\\ne\\beta$ の通り方で $\\delta$ が最小になるとすると，入射角 $\\beta$ でも同じ最小値になり，最小を与える入射角が2つになって「ただ1つ」に反する．したがって最小偏角は $\\alpha=\\beta$，すなわち対称な通り方で起こる．\n測定の面では，$\\delta$ は最小値の付近で $i_1$ に対してほとんど変化しない（グラフの谷の底は平ら）．そのため，入射角を正確に測らなくても，プリズムを回しながら望遠鏡でスペクトル線を追い，線の動きが止まって逆向きに動き始める位置で $\\delta_0$ を読めばよい．頂角 $A$ と $\\delta_0$ という測りやすい2つの角だけで，$n$ が精度よく決まる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "プリズムの偏角は $\\delta=i_1+i_2-A$．最小偏角では光が対称に通り，$n=\\dfrac{\\sin\\frac{A+\\delta_0}2}{\\sin\\frac A2}$．最小値の付近では入射角のずれに鈍感なので，屈折率の精密な測定に向く．"
+ },
+ "concepts": [
+  "refraction-light"
+ ],
+ "laws": [
+  "refraction-law",
+  "critical-angle"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "プリズム",
+  "最小偏角",
+  "屈折率の測定",
+  "全反射",
+  "光の逆行性"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

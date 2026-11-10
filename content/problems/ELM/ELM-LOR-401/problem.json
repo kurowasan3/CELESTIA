@@ -1,0 +1,174 @@
+{
+ "id": "ELM-LOR-401",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "速度選択器：直交する電場と磁場の中を直進する粒子",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "derivation",
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，間隔 $d$ の2枚の平行な極板を水平に置き，上の極板が高電位になるように電圧 $V$ を加えた．極板間には一様な電場のほかに，紙面の表から裏の向きに磁束密度 $B$ の一様な磁場がかかっている．質量 $m$，電気量 $q\\ (>0)$ の粒子を，極板に平行に左から速さ $v$ で入射させる．重力は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "極板間の電場の強さ $E$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "粒子が電場から受ける力と，磁場から受ける力の向きを，それぞれ「上向き」「下向き」で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "粒子が極板間を直進するための速さ $v_0$ を，$V$，$B$，$d$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$v>v_0$ の粒子は，上下どちらの極板の側へ曲がるか．"
+     },
+     {
+      "id": "5",
+      "tex": "電気量が $-q$ の粒子を速さ $v_0$ で入射させると，粒子はどう運動するか．"
+     },
+     {
+      "id": "6",
+      "tex": "$V=200\\ \\mathrm{V}$，$d=5.0\\ \\mathrm{mm}$，$B=0.20\\ \\mathrm{T}$ のとき，$v_0$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平な2枚の極板（上が＋、下が－、間隔 d）の間に、紙面の表から裏の向きの磁場 B がかかっている。左から粒子が極板に平行に速さ v で入射する",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "速さ v₀ で右へ進む正の粒子にはたらく力：電場からの力 qE は下向き、磁場からの力 qv₀B は上向きで、大きさが等しくつり合う",
+   "caption": "直進する粒子にはたらく2力",
+   "physics": {
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "qE",
+      "dir_deg": 270
+     },
+     {
+      "name": "qvB",
+      "dir_deg": 90
+     }
+    ],
+    "equalLength": [
+     [
+      "force:qE",
+      "force:qvB"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$E=\\dfrac{V}{d}$",
+    "grading": "E：V/d"
+   },
+   {
+    "id": "2",
+    "tex": "電場から：下向き，磁場から：上向き"
+   },
+   {
+    "id": "3",
+    "tex": "$v_0=\\dfrac{V}{Bd}$",
+    "grading": "v_0：V/(B d)"
+   },
+   {
+    "id": "4",
+    "tex": "上の極板（高電位の極板）の側"
+   },
+   {
+    "id": "5",
+    "tex": "直進する（2つの力の向きがともに逆になり，やはりつり合う）"
+   },
+   {
+    "id": "6",
+    "tex": "$v_0=2.0\\times10^{5}\\ \\mathrm{m/s}$",
+    "grading": "v_0：2.0×10^5 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 一様な電場では $E=\\dfrac Vd$．\n\n\\textbf{(2)} 電場は高電位から低電位へ，つまり下向き．正電荷が受ける力 $qE$ は\\textbf{下向き}．磁場から受けるローレンツ力 $qvB$ は，フレミングの左手の法則（正電荷の速度を電流の向きとみる）で，右向きの速度・紙面の表から裏の磁場に対して\\textbf{上向き}．\n\n\\textbf{(3)} 直進する条件は2力のつり合い：$qv_0B=qE$．$v_0=\\dfrac EB=\\dfrac{V}{Bd}$．$q$ にも $m$ にもよらない．\n\n\\textbf{(4)} $v>v_0$ では上向きの $qvB$ が下向きの $qE$ より大きく，合力は上向き．粒子は\\textbf{上の極板}の側へ曲がる．（$v<v_0$ なら下へ．）だから，出口にスリットを置くと速さ $v_0$ の粒子だけが通り抜ける（速度選択器）．\n\n\\textbf{(5)} 電荷の符号が変わると，電場からの力も磁場からの力もともに逆向きになり，大きさはどちらも変わらない．やはりつり合って直進する．\n\n\\textbf{(6)} $v_0=\\dfrac{V}{Bd}=\\dfrac{200}{0.20\\times5.0\\times10^{-3}}=2.0\\times10^{5}\\ \\mathrm{m/s}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "直進 ⇔ 電場からの力 $qE$ とローレンツ力 $qvB$ のつり合い．$v_0=E/B$ は電荷にも質量にもよらない．"
+ },
+ "concepts": [
+  "lorentz-force",
+  "coulomb-field"
+ ],
+ "laws": [
+  "lorentz-force",
+  "uniform-field-potential"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ローレンツ力",
+  "速度選択器",
+  "電場と磁場"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

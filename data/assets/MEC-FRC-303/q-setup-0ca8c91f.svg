@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300" font-family="'Times New Roman', serif">
+<text x="20" y="22" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">(a)</text>
+<polygon points="70,48 310,48 310,64 70,64" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="70" y1="48" x2="310" y2="48" stroke="currentColor" stroke-width="2"/>
+<circle cx="62" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="62" cy="50" r="3" fill="currentColor"/>
+<circle cx="318" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="318" cy="50" r="3" fill="currentColor"/>
+<polyline points="62,40 140,40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="140,40 152,40 154.71,46 160.14,34 165.57,46 171,34 176.43,46 181.86,34 187.29,46 192.71,34 198.14,46 203.57,34 209,46 214.43,34 219.86,46 225.29,34 228,40 240,40" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<polyline points="240,40 318,40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="52,50 52,110" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="328,50 328,110" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(52,134) rotate(0)" data-phys="body:w1" data-angle="0">
+<rect x="-13" y="-24" width="26" height="24" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<g transform="translate(328,134) rotate(0)" data-phys="body:w2" data-angle="0">
+<rect x="-13" y="-24" width="26" height="24" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="190" y="22" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">ばねばかり</text>
+<text x="82" y="124" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">0.50 kg</text>
+<text x="298" y="124" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.50 kg</text>
+<text x="20" y="172" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">(b)</text>
+<polygon points="30,180 50,180 50,250 30,250" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="50" y1="180" x2="50" y2="250" stroke="currentColor" stroke-width="2"/>
+<polygon points="50,208 310,208 310,222 50,222" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="50" y1="208" x2="310" y2="208" stroke="currentColor" stroke-width="2"/>
+<circle cx="318" cy="210" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="318" cy="210" r="3" fill="currentColor"/>
+<polyline points="50,200 140,200" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="140,200 152,200 154.71,206 160.14,194 165.57,206 171,194 176.43,206 181.86,194 187.29,206 192.71,194 198.14,206 203.57,194 209,206 214.43,194 219.86,206 225.29,194 228,200 240,200" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<polyline points="240,200 318,200" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="328,210 328,260" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(328,284) rotate(0)" data-phys="body:w3" data-angle="0">
+<rect x="-13" y="-24" width="26" height="24" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="298" y="274" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.50 kg</text>
+</svg>

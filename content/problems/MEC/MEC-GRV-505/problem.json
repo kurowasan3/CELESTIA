@@ -1,0 +1,125 @@
+{
+ "id": "MEC-GRV-505",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "自転する地球の極と赤道でのばねばかりの読み",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "numeric",
+  "experiment",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "地球を質量 $M$，半径 $R$ の一様な球とし，自転周期を $T$，万有引力定数を $G$ とする．質量 $m$ の物体をばねばかりにつるし，北極点と赤道上の地点で，地面に対して静止させて読みを比べる実験を考える．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "北極点でのばねばかりの読み（物体を支える力の大きさ）$W_{\\mathrm P}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "赤道上でのばねばかりの読み $W_{\\mathrm E}$ を，$m$，$G$，$M$，$R$，$T$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$R=6.4\\times10^{6}\\,\\mathrm m$，$T=8.6\\times10^{4}\\,\\mathrm s$，$\\dfrac{GM}{R^2}=9.8\\,\\mathrm{m/s^2}$ とする．赤道での読みは北極点での読みより何 $\\%$ 小さいか．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "地球の自転が速くなっていくと，やがて赤道上の物体の読みが $0$ になる．そのときの自転周期 $T_0$ は何 $\\mathrm s$ か．(3) の数値を用い，有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の $T_0$ は，地表すれすれを回る人工衛星の周期と一致する．その理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$W_{\\mathrm P}=\\dfrac{GMm}{R^2}$",
+    "grading": "W_P：G M m/R^2"
+   },
+   {
+    "id": "2",
+    "tex": "$W_{\\mathrm E}=m\\left(\\dfrac{GM}{R^2}-\\dfrac{4\\pi^2R}{T^2}\\right)$",
+    "grading": "W_E：m(G M/R^2-4π^2 R/T^2)"
+   },
+   {
+    "id": "3",
+    "tex": "約 $0.35\\,\\%$",
+    "grading": "割合（%）：0.35"
+   },
+   {
+    "id": "4",
+    "tex": "$T_0\\approx5.1\\times10^{3}\\,\\mathrm s$（約1.4時間）",
+    "grading": "T_0：5.1*10^3 [s]"
+   },
+   {
+    "id": "5",
+    "tex": "読みが $0$ のとき，赤道上の物体は万有引力だけを向心力として半径 $R$ の等速円運動をしている．これは地表すれすれの人工衛星と同じ運動方程式なので，周期も等しい．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "ばねばかりの読みは，ばねが物体を引く力 $W$ の大きさである．\n\n(1) 北極点の物体は地軸上にあり，自転しても円運動しない．力のつり合い $W_{\\mathrm P}=\\dfrac{GMm}{R^2}$．\n\n(2) 赤道上の物体は，地球の中心を中心とする半径 $R$，角速度 $\\omega=\\dfrac{2\\pi}T$ の等速円運動をしている．中心向きを正として，運動方程式は \\[mR\\omega^2=\\frac{GMm}{R^2}-W_{\\mathrm E}\\] よって \\[W_{\\mathrm E}=m\\left(\\frac{GM}{R^2}-\\frac{4\\pi^2R}{T^2}\\right)\\] 万有引力の一部が円運動の向心力に使われる分だけ，ばねが支える力が小さくなる．\n\n(3) \\[\\frac{W_{\\mathrm P}-W_{\\mathrm E}}{W_{\\mathrm P}}=\\frac{4\\pi^2R/T^2}{GM/R^2}=\\frac{4\\times3.14^2\\times6.4\\times10^{6}}{(8.6\\times10^{4})^2\\times9.8}\\approx3.5\\times10^{-3}\\] よって約 $0.35\\,\\%$．地上の重さの違いのうち，自転による分はこの程度である（実際の地球は赤道方向にふくらんでいるので，差はもう少し大きい）．\n\n(4) $W_{\\mathrm E}=0$ より $\\dfrac{4\\pi^2R}{T_0^2}=\\dfrac{GM}{R^2}=9.8$． \\[T_0=2\\pi\\sqrt{\\frac{R}{9.8}}=2\\times3.14\\times\\sqrt{\\frac{6.4\\times10^{6}}{9.8}}\\approx5.1\\times10^{3}\\,\\mathrm s\\]\n\n(5) $W_{\\mathrm E}=0$ のとき物体には万有引力しかはたらかず，$mR\\omega^2=\\dfrac{GMm}{R^2}$ を満たす．これは半径 $R$ の円軌道を回る人工衛星の運動方程式そのものである．物体は「地表に置かれた人工衛星」になっていて，それより速く自転すると，赤道上の物体は地表にとどまれない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "地表とともに回る物体では，万有引力から向心力 $mR\\omega^2$ を差し引いた分だけを支えればよい．"
+ },
+ "concepts": [
+  "universal-gravitation",
+  "circular-motion",
+  "equation-of-motion"
+ ],
+ "laws": [
+  "universal-gravitation",
+  "centripetal-acceleration",
+  "newton-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "万有引力",
+  "自転",
+  "見かけの重さ",
+  "ばねばかり"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

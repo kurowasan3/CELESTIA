@@ -1,0 +1,146 @@
+{
+ "id": "ELM-ACC-405",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "RLC 並列回路：各枝の電流の位相と全体の電流",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "numeric",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，抵抗値 $R=50\\ \\Omega$ の抵抗，自己インダクタンス $L=0.10\\ \\mathrm H$ のコイル，電気容量 $C=20\\ \\mu\\mathrm F$ のコンデンサーを並列にして，電圧の実効値 $V=100\\ \\mathrm V$，角周波数 $\\omega=1.0\\times10^3\\ \\mathrm{rad/s}$ の交流電源につないだ．コイルの抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "抵抗，コイル，コンデンサーを流れる電流の実効値 $I_R$，$I_L$，$I_C$ をそれぞれ求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "電源を流れる電流の実効値 $I$ を求めよ（根号を残してよい）．"
+     },
+     {
+      "id": "3",
+      "tex": "電源を流れる電流の位相は，電源電圧に比べて進んでいるか，遅れているか．また，位相のずれを $\\phi$ とするとき，$\\tan\\phi$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "回路全体の消費電力の時間平均 $P$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "電圧の実効値を変えずに角周波数だけを変えると，電源を流れる電流の実効値がもっとも小さくなる角周波数 $\\omega_0$ があった．$\\omega_0$ と，そのときの電流の実効値を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "$\\omega=\\omega_0$ のとき，コイルを流れる電流の実効値を求めよ．また，このときコイルとコンデンサーの電流はどうなっているか説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "交流電源に、抵抗 R、コイル L、コンデンサー C の3つの枝が並列につながっている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I_R=2.0\\ \\mathrm A$，$I_L=1.0\\ \\mathrm A$，$I_C=2.0\\ \\mathrm A$",
+    "grading": "I_R：2.0 [A] ; I_L：1.0 [A] ; I_C：2.0 [A]"
+   },
+   {
+    "id": "2",
+    "tex": "$I=\\sqrt5\\ \\mathrm A\\ (\\fallingdotseq2.2\\ \\mathrm A)$",
+    "grading": "I：sqrt(5) [A]"
+   },
+   {
+    "id": "3",
+    "tex": "進んでいる．$\\tan\\phi=\\dfrac12$",
+    "grading": "tan(φ)：1/2"
+   },
+   {
+    "id": "4",
+    "tex": "$P=2.0\\times10^2\\ \\mathrm W$",
+    "grading": "P：200 [W]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\omega_0=500\\sqrt2\\ \\mathrm{rad/s}\\ (\\fallingdotseq7.1\\times10^2\\ \\mathrm{rad/s})$，$2.0\\ \\mathrm A$",
+    "grading": "ω_0：500sqrt(2) [rad/s] ; I：2.0 [A]"
+   },
+   {
+    "id": "6",
+    "tex": "$\\sqrt2\\ \\mathrm A\\ (\\fallingdotseq1.4\\ \\mathrm A)$．コンデンサーにも同じ大きさで逆位相の電流が流れ，電源側から見ると打ち消し合っている（電流はコイルとコンデンサーの間を往復している）．",
+    "grading": "sqrt(2) [A]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "並列なので，3つの素子には同じ電圧 $V$ がかかる．電流は素子ごとに求め，位相を考えて合成する．\n\n\\textbf{(1)} $X_L=\\omega L=100\\ \\Omega$，$X_C=\\dfrac1{\\omega C}=\\dfrac{1}{1.0\\times10^3\\times20\\times10^{-6}}=50\\ \\Omega$．\n$I_R=\\dfrac{100}{50}=2.0\\ \\mathrm A$（電圧と同位相），$I_L=\\dfrac{100}{100}=1.0\\ \\mathrm A$（$\\dfrac\\pi2$ 遅れ），$I_C=\\dfrac{100}{50}=2.0\\ \\mathrm A$（$\\dfrac\\pi2$ 進み）．\n\n\\textbf{(2)} コイルとコンデンサーの電流は逆位相なので，差 $I_C-I_L=1.0\\ \\mathrm A$（進み）が残る．これと $I_R$ は位相が $\\dfrac\\pi2$ ずれているので，\n\\[I=\\sqrt{I_R^2+(I_C-I_L)^2}=\\sqrt{2.0^2+1.0^2}=\\sqrt5\\ \\mathrm A\\fallingdotseq2.2\\ \\mathrm A\\]\n単純な和 $I_R+I_L+I_C=5.0\\ \\mathrm A$ ではない．\n\n\\textbf{(3)} 進み成分が残るので，電流は電圧より\\textbf{進む}．$\\tan\\phi=\\dfrac{I_C-I_L}{I_R}=\\dfrac12$．\n\n\\textbf{(4)} 電力を消費するのは抵抗だけ：$P=VI_R=100\\times2.0=2.0\\times10^2\\ \\mathrm W$．（$VI\\cos\\phi=100\\times\\sqrt5\\times\\dfrac{2}{\\sqrt5}$ と同じ．）\n\n\\textbf{(5)} $I=\\sqrt{I_R^2+(I_C-I_L)^2}$ で $I_R$ は $\\omega$ によらないので，$I_C=I_L$ のとき最小．$\\omega_0C=\\dfrac1{\\omega_0L}$ より\n\\[\\omega_0=\\frac1{\\sqrt{LC}}=\\frac{1}{\\sqrt{0.10\\times20\\times10^{-6}}}=500\\sqrt2\\ \\mathrm{rad/s}\\fallingdotseq7.1\\times10^2\\ \\mathrm{rad/s}\\]\nこのとき $I=I_R=2.0\\ \\mathrm A$．\n\n\\textbf{(6)} $I_L=\\dfrac{V}{\\omega_0L}=\\dfrac{100}{50\\sqrt2}=\\sqrt2\\ \\mathrm A$．$I_C$ も同じ大きさで，位相が逆．電源側の導線では打ち消し合い，電流はコイルとコンデンサーの間だけを往復している（並列共振）．各枝の電流は，電源の電流とは別に流れていることになる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "並列回路では電圧が共通．枝の電流を位相つきで合成し，逆位相の $I_L$，$I_C$ は差をとってから $I_R$ と直角に合成する．"
+ },
+ "concepts": [
+  "ac-circuit",
+  "series-parallel"
+ ],
+ "laws": [
+  "ac-reactance",
+  "kirchhoff-1st",
+  "resonance-frequency"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流",
+  "並列回路",
+  "位相",
+  "並列共振"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

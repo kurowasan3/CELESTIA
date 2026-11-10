@@ -1,0 +1,166 @@
+{
+ "id": "MEC-FRC-307",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-02",
+ "topic": "2つの滑車にかけた糸の結び目につるしたおもり（力の三角形とつり合いが存在する条件）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "天井に，なめらかに回る小さな軽い滑車 P$_1$，P$_2$ を，同じ高さで距離 $d$ 離して取り付ける．2本の軽い糸の一端どうしを点 K で結び，K に質量 $m_3$ のおもりをつるす．一方の糸を P$_1$ にかけて他端に質量 $m_1$ のおもりを，もう一方の糸を P$_2$ にかけて他端に質量 $m_2$ のおもりをつるしたところ，K は P$_1$ と P$_2$ の間の下方で静止した．K から P$_1$，P$_2$ へ向かう糸が鉛直上向きとなす角をそれぞれ $\\alpha$，$\\beta$ とする．滑車の大きさは無視し，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "K にはたらく力のつり合いの式を，水平方向と鉛直方向について書け．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\cos\\alpha$ と $\\cos\\beta$ を $m_1$，$m_2$，$m_3$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$m_1=3m$，$m_2=4m$，$m_3=5m$ のとき，2本の糸のなす角 $\\alpha+\\beta$ を求めよ．また，K が P$_1$，P$_2$ を結ぶ線から下がっている距離を $d$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の結果は，K の位置について，$d$ によらない「形」と，$d$ に比例する「大きさ」に分けて考えられる．角 $\\alpha$，$\\beta$ が $d$ によらない理由を述べよ．"
+     },
+     {
+      "id": "5",
+      "tex": "このようなつり合いの位置が存在するための，$m_1$，$m_2$，$m_3$ の条件を求めよ．また，$m_3\\ge m_1+m_2$ のとき，手をはなすと K はどのように動くか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "天井の滑車 P₁、P₂（間隔 d）。2本の糸の結び目 K に m₃ をつるし、糸を P₁、P₂ にかけて他端に m₁、m₂ をつるす。K は滑車の間の下方にあり、糸が鉛直となす角は α、β",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "結び目 K にはたらく3力：P₁ の向きに m₁g、P₂ の向きに m₂g、鉛直下向きに m₃g。3:4:5 の場合で、2本の糸は直交する",
+   "caption": "K にはたらく3力（$m_1:m_2:m_3=3:4:5$ の場合）．3力を順につなぐと閉じた三角形になる",
+   "physics": {
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "T1",
+      "dir_deg": 143.13
+     },
+     {
+      "name": "T2",
+      "dir_deg": 53.13
+     },
+     {
+      "name": "W",
+      "dir_deg": 270
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "水平：$m_1g\\sin\\alpha=m_2g\\sin\\beta$，鉛直：$m_1g\\cos\\alpha+m_2g\\cos\\beta=m_3g$"
+   },
+   {
+    "id": "2",
+    "tex": "$\\cos\\alpha=\\dfrac{m_3^2+m_1^2-m_2^2}{2m_1m_3}$，$\\cos\\beta=\\dfrac{m_3^2+m_2^2-m_1^2}{2m_2m_3}$",
+    "grading": "cos(α)：(m_3^2+m_1^2-m_2^2)/(2m_1 m_3) ; cos(β)：(m_3^2+m_2^2-m_1^2)/(2m_2 m_3)"
+   },
+   {
+    "id": "3",
+    "tex": "$\\alpha+\\beta=90^\\circ$，下がっている距離 $\\dfrac{12}{25}d$",
+    "grading": "α+β：90° ; 12d/25"
+   },
+   {
+    "id": "4",
+    "tex": "角はつり合いの式（力の大きさ $m_1g$，$m_2g$，$m_3g$）だけで決まり，長さ $d$ を含まないから．$d$ を変えても，同じ角のまま図形全体が相似に拡大・縮小されるだけである．"
+   },
+   {
+    "id": "5",
+    "tex": "$\\sqrt{|m_1^2-m_2^2|}<m_3<m_1+m_2$．$m_3\\ge m_1+m_2$ では K は下がり続け，$m_3$ は加速しながら下がり（$m_1$，$m_2$ は引き上げられ），止まらない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "軽い糸の張力は，なめらかな滑車を通しても変わらない．おもり $m_1$，$m_2$ は静止しているので，K から P$_1$，P$_2$ へ向かう糸の張力は $m_1g$，$m_2g$．K につるした糸の張力は $m_3g$．\n\n\\textbf{(1)} 水平方向：$m_1g\\sin\\alpha=m_2g\\sin\\beta$，鉛直方向：$m_1g\\cos\\alpha+m_2g\\cos\\beta=m_3g$．\n\n\\textbf{(2)} 3力はつり合うので，順につなぐと辺の長さ $m_1g$，$m_2g$，$m_3g$ の閉じた三角形をつくる．$\\alpha$ は辺 $m_1g$ と辺 $m_3g$ の間の角だから，余弦定理より\n\\[ (m_2g)^2=(m_1g)^2+(m_3g)^2-2(m_1g)(m_3g)\\cos\\alpha,\\qquad \\cos\\alpha=\\boldsymbol{\\frac{m_3^2+m_1^2-m_2^2}{2m_1m_3}}. \\]\n同様に $\\cos\\beta=\\boldsymbol{\\dfrac{m_3^2+m_2^2-m_1^2}{2m_2m_3}}$．\n（(1) の2式から $\\beta$ を消去しても同じ：$m_2^2=m_1^2\\sin^2\\alpha+(m_3-m_1\\cos\\alpha)^2$．）\n\n\\textbf{(3)} $\\cos\\alpha=\\dfrac{25+9-16}{30}=\\dfrac35$，$\\cos\\beta=\\dfrac{25+16-9}{40}=\\dfrac45$．$\\sin\\alpha=\\dfrac45=\\cos\\beta$ なので $\\alpha+\\beta=\\boldsymbol{90^\\circ}$．（$3^2+4^2=5^2$ で，力の三角形が直角三角形．）"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "K が P$_1$P$_2$ から下がっている距離を $y$ とすると，K から P$_1$，P$_2$ までの水平距離は $y\\tan\\alpha=\\dfrac43y$，$y\\tan\\beta=\\dfrac34y$．和が $d$ なので\n\\[ \\frac{25}{12}y=d,\\qquad y=\\boldsymbol{\\frac{12}{25}d}. \\]\n\n\\textbf{(4)} (2) の $\\cos\\alpha$，$\\cos\\beta$ は質量だけで決まる．力のつり合いは「向き」だけを決め，滑車の間隔はどこにも入らない．$d$ は，その角をもつ2本の直線が P$_1$，P$_2$ を通るように K の位置を決めるときにだけ現れ，K の位置は $d$ に比例する（相似な図形）．\n\n\\textbf{(5)} 力の三角形ができるためには三角形の成立条件 $|m_1-m_2|<m_3<m_1+m_2$ が必要．さらに K が滑車より下で2つの滑車の間にあるには $0<\\alpha<90^\\circ$，$0<\\beta<90^\\circ$，つまり $\\cos\\alpha>0$，$\\cos\\beta>0$ が必要で，$m_3^2>m_2^2-m_1^2$ かつ $m_3^2>m_1^2-m_2^2$，すなわち $m_3^2>|m_1^2-m_2^2|$．（これは $m_3>|m_1-m_2|$ より強い条件．）まとめて\n\\[ \\boldsymbol{\\sqrt{|m_1^2-m_2^2|}<m_3<m_1+m_2}. \\]\n$m_3\\ge m_1+m_2$ のときは，K が下がって2本の糸が鉛直に近づいても，上向きの力は $m_1g\\cos\\alpha+m_2g\\cos\\beta<(m_1+m_2)g\\le m_3g$ にしかならず，K は下がり続ける．$m_3$ が加速しながら落ち，$m_1$，$m_2$ は引き上げられて，つり合いの位置はない．（逆に $m_3^2\\le|m_1^2-m_2^2|$ では，たとえば $m_1>m_2$ なら K は P$_1$ の方へ引き寄せられ，やはり2つの滑車の間でつり合うことはできない．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "結び目の3力を順につなぐと閉じた三角形．角は質量の比だけで決まり（余弦定理），長さ $d$ は位置の「大きさ」だけを決める．"
+ },
+ "concepts": [
+  "equilibrium",
+  "force-decomposition"
+ ],
+ "laws": [
+  "newton-1st"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力のつり合い",
+  "力の三角形",
+  "滑車",
+  "条件の吟味"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

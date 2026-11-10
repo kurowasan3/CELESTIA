@@ -1,0 +1,171 @@
+{
+ "id": "MEC-NEW-307",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "坂を下る電車の天井からつるしたおもりの傾き（加速度計として使う・糸が床に垂直になる意味）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "numeric",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平と角 $\\alpha$ をなす，まっすぐな下り坂の線路を電車が走っている．電車の天井から軽い糸で質量 $m$ の小さなおもりをつるすと，おもりは電車に対して静止した．電車の加速度を，坂に沿って下る向きを正として $a$ とする（$a$ は負でもよい）．電車の床は線路に平行である．糸が床に垂直な直線となす角を $\\psi$ とし，おもりが垂直な直線より坂の下側（前方）にあるときを正とする．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電車が一定の速さで坂を下っているとき，糸はどの向きになるか．また，糸の張力の大きさ $T$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "一般の $a$ について，$\\tan\\psi$ と張力の大きさ $T$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\sin\\alpha=0.10$ の坂で，$\\tan\\psi=0.050$ であった．電車の加速度を有効数字2桁で求めよ（$g=9.8\\,\\mathrm{m/s^2}$，$\\cos\\alpha=0.995$ とする）．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) と同じ坂を下っている電車が，ブレーキをかけて大きさ $0.98\\,\\mathrm{m/s^2}$ の加速度で減速しているとき，$\\tan\\psi$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "糸が床にちょうど垂直になるのは，$a$ がいくらのときか．このときの張力を求めよ．ある乗客は「糸が床に垂直なので，この電車は加速していない」と考えた．この考えの誤りを指摘し，糸が床に垂直になることの物理的な意味を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "傾きの角 α の下り坂を走る電車。天井から糸でおもりをつるしている。電車の加速度 a は坂に沿って下る向き",
+   "caption": "",
+   "physics": {
+    "angle_deg": 30
+   }
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "おもりにはたらく2力：糸の張力 T と重力 mg。合力 ma は坂に沿って下向き（α=30°、a=g sinα/2 の場合）",
+   "caption": "$\\alpha=30^\\circ$，$a=\\frac12g\\sin\\alpha$ の場合．$\\vec T+m\\vec g=m\\vec a$",
+   "physics": {
+    "forces": [
+     {
+      "name": "T",
+      "dir_deg": 76.1
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     }
+    ],
+    "netForce": {
+     "dir_deg": 330
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "鉛直（$\\psi=\\alpha$）．$T=mg$",
+    "grading": "T：m g"
+   },
+   {
+    "id": "2",
+    "tex": "$\\tan\\psi=\\dfrac{g\\sin\\alpha-a}{g\\cos\\alpha}$，$T=m\\sqrt{(g\\sin\\alpha-a)^2+g^2\\cos^2\\alpha}$",
+    "grading": "tan(ψ)：(g sin(α)-a)/(g cos(α)) ; T：m sqrt((g sin(α)-a)^2+g^2 cos(α)^2)"
+   },
+   {
+    "id": "3",
+    "tex": "坂を下る向きに $0.49\\,\\mathrm{m/s^2}$",
+    "grading": "0.49 [m/s^2]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\tan\\psi=0.20$",
+    "grading": "0.2"
+   },
+   {
+    "id": "5",
+    "tex": "$a=g\\sin\\alpha$，張力 $mg\\cos\\alpha$．電車は坂に沿って $g\\sin\\alpha$ で加速しており，なめらかな斜面を滑り下りる物体と同じ加速度である．糸が床に垂直なのは，重力の坂に沿った成分がちょうど加速に使われ，糸は床に垂直な成分 $mg\\cos\\alpha$ だけを支えていることを意味する．",
+    "grading": "T：m g cos(α)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "坂に沿って下向きを $x$，床に垂直に（床から天井へ）を $y$ とする．おもりは電車と同じ加速度（$x$ 方向に $a$）をもつ．おもりにはたらく力は重力 $mg$ と張力 $T$ だけ．重力の成分は $x$：$mg\\sin\\alpha$，$y$：$-mg\\cos\\alpha$．張力は，おもりからつり下げ点へ向かう向きで，$\\psi$ の定義より $x$ 成分 $-T\\sin\\psi$，$y$ 成分 $T\\cos\\psi$．\n\\[ x：ma=mg\\sin\\alpha-T\\sin\\psi,\\qquad y：0=T\\cos\\psi-mg\\cos\\alpha. \\]\n\n\\textbf{(1)} $a=0$ なら $T\\sin\\psi=mg\\sin\\alpha$，$T\\cos\\psi=mg\\cos\\alpha$ より $\\psi=\\alpha$，$T=mg$．糸は\\textbf{鉛直}（床に垂直な線から坂の下側へ $\\alpha$ 傾く）．\n\n\\textbf{(2)} 2式から\n\\[ \\tan\\psi=\\boldsymbol{\\frac{g\\sin\\alpha-a}{g\\cos\\alpha}},\\qquad T=\\boldsymbol{m\\sqrt{(g\\sin\\alpha-a)^2+g^2\\cos^2\\alpha}}. \\]\n電車の中から見ると，おもりは「見かけの重力」$m(\\vec g-\\vec a)$ の向きに垂れ下がる，と言い換えられる．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(3)} $a=g\\sin\\alpha-g\\cos\\alpha\\tan\\psi=9.8\\times(0.10-0.995\\times0.050)\\approx9.8\\times0.0503\\approx\\boldsymbol{0.49\\,\\mathrm{m/s^2}}$（坂を下る向き）．糸の傾きから加速度がわかるので，おもりは加速度計として使える．\n\n\\textbf{(4)} 下りながら減速しているので $a=-0.98\\,\\mathrm{m/s^2}$．\n\\[ \\tan\\psi=\\frac{9.8\\times0.10+0.98}{9.8\\times0.995}=\\frac{1.96}{9.75}\\approx\\boldsymbol{0.20}. \\]\n$\\psi>\\alpha$（$\\tan\\alpha\\approx0.10$）で，おもりは鉛直線よりさらに前方へ振れる．\n\n\\textbf{(5)} $\\psi=0$ になるのは $g\\sin\\alpha-a=0$，つまり $\\boldsymbol{a=g\\sin\\alpha}$．このとき $T=\\boldsymbol{mg\\cos\\alpha}$．\n乗客の考えは誤り．糸が「鉛直」なら加速していない（(1)）が，「床に垂直」なのは，電車が坂に沿って $g\\sin\\alpha$ で加速しているときである．これは，なめらかな斜面を自由に滑り下りる物体の加速度と同じで，ブレーキも動力も使わず摩擦や空気抵抗もない状態で坂を下る電車に相当する．このとき重力の坂に沿った成分 $mg\\sin\\alpha$ がちょうどおもりの加速に使われ，糸は坂に垂直な成分 $mg\\cos\\alpha$ だけを支える．電車の中から見ると，見かけの重力が床に垂直な向きで大きさ $mg\\cos\\alpha$ になり，車内は「傾いていない，少し重力の弱い世界」に見える．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "おもりは電車と同じ加速度をもつ．坂に沿った方向と床に垂直な方向に分けて運動方程式を立てる．電車の中では見かけの重力 $m(\\vec g-\\vec a)$ の向きに垂れる．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "force-decomposition"
+ ],
+ "laws": [
+  "newton-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動方程式",
+  "斜面",
+  "加速度計",
+  "見かけの重力"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

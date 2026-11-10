@@ -1,0 +1,167 @@
+{
+ "id": "THM-FST-208",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "フラスコの首で振動する小球による比熱比の測定（断熱変化の気体ばねと，等温とみなした場合との違い）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "experiment",
+  "derivation",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，容積 $V_0$ のフラスコに，断面積 $S$ の鉛直なガラス管を取りつける．管の中には質量 $m$ の小球が，管にぴったり接して摩擦なく動けるように入っていて，すき間から空気はもれない．大気圧を $P_0$，重力加速度の大きさを $g$ とする．管の中の小球より下の部分の容積は $V_0$ に比べて無視できる．フラスコの中の空気は理想気体とし，その比熱比を $\\gamma$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小球が静止しているときのフラスコ内の空気の圧力 $P_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "小球をつり合いの位置から上向きに $x$（$Sx\\ll V_0$）だけずらした．空気の変化は断熱変化とみなせ，$PV^{\\gamma}=$一定 が成り立つ．小球にはたらく合力 $F$（上向きを正）を，$|a|\\ll1$ のとき $(1+a)^{-\\gamma}\\approx1-\\gamma a$ となることを用いて $x$ の1次式で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "小球の振動の周期 $T_{\\text{断}}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$V_0=1.00\\times10^{-2}\\,\\mathrm{m^3}$，$S=2.00\\times10^{-4}\\,\\mathrm{m^2}$，$m=2.00\\times10^{-2}\\,\\mathrm{kg}$，$P_0=1.00\\times10^5\\,\\mathrm{Pa}$，$g=9.8\\,\\mathrm{m/s^2}$ で実験すると，小球が $50$ 回振動するのに $59.1\\,\\mathrm s$ かかった．$\\gamma$ を有効数字3桁で求めよ．また，この結果から，空気の分子についてどのようなことがいえるか．"
+     },
+     {
+      "id": "5",
+      "tex": "もし空気の変化が等温変化であったとすると，(4) の装置での振動の周期は何 $\\mathrm s$ になるか．(4) で求めた $\\gamma$ を用いて有効数字2桁で答えよ．"
+     },
+     {
+      "id": "6",
+      "tex": "この実験で空気の変化を断熱変化とみなしてよいのはなぜか．また，フラスコを非常に大きくしたり小球を非常に重くしたりして，振動を極端にゆっくりにすると，測定から求めた $\\gamma$ の値はどうなると考えられるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "容積 V₀ のフラスコに断面積 S の鉛直なガラス管がつき，管の中に質量 m の小球が入っている。小球は上下に x だけ振動する。右側に小球にはたらく力：上から大気の力 P₀S（下向き），重力 mg（下向き），フラスコ内の空気の力 P₁S（上向き）がつり合っている",
+   "caption": "",
+   "physics": {
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "P0S",
+      "dir_deg": 270
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "PS",
+      "dir_deg": 90
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$P_1=P_0+\\dfrac{mg}{S}$",
+    "grading": "P_1：P_0+m g/S"
+   },
+   {
+    "id": "2",
+    "tex": "$F=-\\dfrac{\\gamma P_1S^2}{V_0}x$",
+    "grading": "F：-γ P_1 S^2 x/V_0"
+   },
+   {
+    "id": "3",
+    "tex": "$T_{\\text{断}}=2\\pi\\sqrt{\\dfrac{mV_0}{\\gamma P_1S^2}}$",
+    "grading": "T：2π sqrt(m V_0/(γ P_1 S^2))"
+   },
+   {
+    "id": "4",
+    "tex": "$\\gamma=1.40$．単原子分子の $\\dfrac53$ より小さく，$C_V=\\dfrac52R$ にあたる値なので，空気の分子（窒素・酸素）は2原子分子で，回転の運動にもエネルギーが分配されている．",
+    "grading": "γ：1.40"
+   },
+   {
+    "id": "5",
+    "tex": "$1.4\\,\\mathrm s$",
+    "grading": "1.4 [s]"
+   },
+   {
+    "id": "6",
+    "tex": "振動の周期（約 $1\\,\\mathrm s$）が，フラスコの壁との間で熱が伝わるのにかかる時間よりずっと短く，1回の振動の間に熱がほとんど出入りしないから．振動を極端にゆっくりにすると，振動の間に壁との熱のやりとりが進んで等温変化に近づき，気体ばねがやわらかくなるので周期が長くなり，求めた $\\gamma$ は小さく（$1$ に近く）なる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　小球のつり合い：$P_1S=P_0S+mg$ より $P_1=P_0+\\dfrac{mg}{S}$．\n\n\\textbf{(2)}　体積は $V_0+Sx$ になる．$P(V_0+Sx)^{\\gamma}=P_1V_0^{\\gamma}$ より \\[P=P_1\\left(1+\\frac{Sx}{V_0}\\right)^{-\\gamma}\\approx P_1\\left(1-\\frac{\\gamma Sx}{V_0}\\right)\\] 小球にはたらく力は $PS-P_0S-mg=(P-P_1)S=-\\dfrac{\\gamma P_1S^2}{V_0}x$．\n\n\\textbf{(3)}　$F=-Kx$，$K=\\dfrac{\\gamma P_1S^2}{V_0}$ の単振動なので $T_{\\text{断}}=2\\pi\\sqrt{\\dfrac mK}=2\\pi\\sqrt{\\dfrac{mV_0}{\\gamma P_1S^2}}$．\n\n\\textbf{(4)}　$P_1=1.00\\times10^5+\\dfrac{2.00\\times10^{-2}\\times9.8}{2.00\\times10^{-4}}=1.0098\\times10^5\\,\\mathrm{Pa}$，$T_{\\text{断}}=\\dfrac{59.1}{50}=1.182\\,\\mathrm s$．\\[\\gamma=\\frac{4\\pi^2mV_0}{T_{\\text{断}}^2P_1S^2}=\\frac{4\\pi^2\\times2.00\\times10^{-2}\\times1.00\\times10^{-2}}{1.182^2\\times1.0098\\times10^5\\times(2.00\\times10^{-4})^2}=1.399\\cdots\\approx1.40\\]$\\gamma=\\dfrac{C_V+R}{C_V}$ より $C_V=\\dfrac{R}{\\gamma-1}=2.5R$．単原子分子なら $\\gamma=\\dfrac53\\approx1.67$ になるはずで，空気の分子は並進以外に回転にもエネルギーをもつ2原子分子であることがわかる．\n\n\\textbf{(5)}　等温なら $PV=$一定 で，(2) の $\\gamma$ が $1$ に置きかわる：$K_{\\text{等}}=\\dfrac{P_1S^2}{V_0}$．周期は $\\sqrt\\gamma$ 倍になり，$1.182\\times\\sqrt{1.40}=1.398\\cdots\\approx1.4\\,\\mathrm s$．\n\n\\textbf{(6)}　気体が熱を受け渡すには，熱がフラスコの中を壁まで伝わる時間が必要である．振動の周期がそれより十分短ければ，圧縮・膨張の間に熱の出入りはほとんどなく，断熱変化とみなせる．ゆっくり振動させると，圧縮されて温まった気体が壁に熱を逃がし，膨張して冷えた気体が壁から熱を受け取るようになる（等温変化に近づく）．同じ $x$ に対する圧力の変化が小さくなり（気体ばねがやわらかくなり），周期が長くなる．断熱を仮定した (3) の式で $\\gamma$ を求めると，真の値より小さく，極端な場合 $1$ に近い値が得られてしまう．（また，熱のやりとりは力学的エネルギーの損失にもなり，振動の減衰が大きくなる．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "閉じこめた気体は「ばね」としてはたらき，そのばね定数は断熱なら $\\dfrac{\\gamma PS^2}{V}$，等温なら $\\dfrac{PS^2}{V}$．周期の測定から $\\gamma$ がわかる．"
+ },
+ "concepts": [
+  "first-law",
+  "ideal-gas",
+  "simple-harmonic-motion"
+ ],
+ "laws": [
+  "adiabatic",
+  "shm-period",
+  "newton-2nd",
+  "molar-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "比熱比の測定",
+  "断熱変化",
+  "単振動",
+  "気体ばね",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "id": "ELM-MAG-402",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "磁場中の導線が受ける力：導線の向きと力の大きさ・向き",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，紙面内で右向きに，磁束密度 $B=0.40\\ \\mathrm{T}$ の一様な磁場がある．この磁場の中の紙面内に，長さ $0.25\\ \\mathrm{m}$ のまっすぐな導線 P，Q，R を置き，それぞれに図の向きに $I=2.0\\ \\mathrm{A}$ の電流を流す．P は磁場に垂直，Q は磁場と $30^\\circ$ をなし，R は磁場に平行である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "P が磁場から受ける力の大きさ $F_{\\rm P}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "P が受ける力の向きを答えよ（「紙面の表から裏」などで答えよ）．"
+     },
+     {
+      "id": "3",
+      "tex": "Q が磁場から受ける力の大きさ $F_{\\rm Q}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "R が磁場から受ける力の大きさ $F_{\\rm R}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "P の電流の向きだけを逆にすると，P が受ける力の向きはどうなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "紙面内で右向きの一様な磁場 B の中に、長さの等しい3本の導線がある。P は上向きの電流で磁場に垂直、Q は右上向きの電流で磁場と 30° をなす、R は右向きの電流で磁場に平行",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F_{\\rm P}=0.20\\ \\mathrm{N}$",
+    "grading": "F_P：0.20 [N]"
+   },
+   {
+    "id": "2",
+    "tex": "紙面の表から裏の向き"
+   },
+   {
+    "id": "3",
+    "tex": "$F_{\\rm Q}=0.10\\ \\mathrm{N}$",
+    "grading": "F_Q：0.10 [N]"
+   },
+   {
+    "id": "4",
+    "tex": "$F_{\\rm R}=0$",
+    "grading": "F_R：0 [N]"
+   },
+   {
+    "id": "5",
+    "tex": "逆向き（紙面の裏から表の向き）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "電流 $I$ が流れる長さ $l$ の導線が，磁場と角 $\\theta$ をなすとき，磁場から受ける力の大きさは $F=IBl\\sin\\theta$．$l\\sin\\theta$ は導線の「磁場に垂直な成分の長さ」である．\n\n\\textbf{(1)} $\\theta=90^\\circ$：$F_{\\rm P}=IBl=2.0\\times0.40\\times0.25=0.20\\ \\mathrm{N}$．\n\n\\textbf{(2)} フレミングの左手の法則：中指を電流（上向き），人差し指を磁場（右向き）に合わせると，親指は紙面の表から裏を向く．\n\n\\textbf{(3)} $F_{\\rm Q}=IBl\\sin30^\\circ=0.20\\times\\dfrac12=0.10\\ \\mathrm{N}$（向きは P と同じく紙面の表から裏）．\n\n\\textbf{(4)} 磁場に平行な電流は力を受けない：$F_{\\rm R}=IBl\\sin0^\\circ=0$．\n\n\\textbf{(5)} 電流を逆にすると力も逆向き（紙面の裏から表）．力の大きさは変わらない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "力の大きさは $IBl\\sin\\theta$．導線の長さのうち磁場に垂直な成分だけが効き，向きはフレミングの左手の法則で決める．"
+ },
+ "concepts": [
+  "lorentz-force"
+ ],
+ "laws": [
+  "current-force"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電流が磁場から受ける力",
+  "フレミングの左手の法則",
+  "数値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

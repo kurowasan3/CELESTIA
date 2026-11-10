@@ -1,0 +1,122 @@
+{
+ "id": "ELM-DCC-305",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "同じ電池 n 個の直列・並列接続と，負荷に最大の電流を流す組み方",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "起電力 $E$，内部抵抗 $r$ の同じ電池が $n$ 個 $(n\\geqq2)$ ある．これらをつないで，抵抗値 $R$ の抵抗（負荷）に電流を流す．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$n$ 個を直列につないだとき，負荷を流れる電流 $I_{\\mathrm s}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$n$ 個を並列につないだとき，負荷を流れる電流 $I_{\\mathrm p}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$I_{\\mathrm s}>I_{\\mathrm p}$ となるための，$R$ と $r$ の関係を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$n$ を限りなく大きくしたときの $I_{\\mathrm s}$，$I_{\\mathrm p}$ の極限をそれぞれ求め，それぞれ何によって電流が制限されるのかを説明せよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$E=1.5\\,\\mathrm V$，$r=0.30\\,\\Omega$ の電池6個を，「$m$ 個を直列にした列」を $\\dfrac6m$ 列並列につなぐ（$m=1,2,3,6$）．$R=0.45\\,\\Omega$ の負荷に流れる電流を最大にする $m$ と，そのときの電流を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I_{\\mathrm s}=\\dfrac{nE}{R+nr}$",
+    "grading": "I_s：n E/(R+n r)"
+   },
+   {
+    "id": "2",
+    "tex": "$I_{\\mathrm p}=\\dfrac{nE}{nR+r}$",
+    "grading": "I_p：n E/(n R+r)"
+   },
+   {
+    "id": "3",
+    "tex": "$R>r$"
+   },
+   {
+    "id": "4",
+    "tex": "$I_{\\mathrm s}\\to\\dfrac Er$，$I_{\\mathrm p}\\to\\dfrac ER$．直列では電池の内部抵抗の和が，並列では負荷の抵抗が電流を制限する．",
+    "grading": "直列：E/r ; 並列：E/R"
+   },
+   {
+    "id": "5",
+    "tex": "$m=3$，電流 $5.0\\,\\mathrm A$",
+    "grading": "m：3 ; I：5 [A]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 直列では起電力も内部抵抗も足し算：起電力 $nE$，内部抵抗 $nr$．$I_{\\mathrm s}=\\dfrac{nE}{R+nr}$．\n\n(2) 並列では，同じ電池なので各電池に $\\dfrac{I_{\\mathrm p}}n$ ずつ流れ，端子電圧は $E-r\\dfrac{I_{\\mathrm p}}n$．これが $RI_{\\mathrm p}$ に等しいので $I_{\\mathrm p}=\\dfrac{E}{R+r/n}=\\dfrac{nE}{nR+r}$．（起電力 $E$，内部抵抗 $\\dfrac rn$ の1個の電池と同じ．）\n\n(3) $\\dfrac{I_{\\mathrm s}}{I_{\\mathrm p}}=\\dfrac{nR+r}{R+nr}$．$I_{\\mathrm s}>I_{\\mathrm p}\\iff nR+r>R+nr\\iff(n-1)(R-r)>0\\iff R>r$．負荷の抵抗が内部抵抗より大きければ直列，小さければ並列が有利．\n\n(4) $I_{\\mathrm s}=\\dfrac{E}{R/n+r}\\to\\dfrac Er$：起電力を増やしても内部抵抗も同じ割合で増えるので，1個の電池を短絡したときの電流でたたき止まる．$I_{\\mathrm p}=\\dfrac{E}{R+r/n}\\to\\dfrac ER$：内部抵抗は $0$ に近づくが，起電力は $E$ のままなので，内部抵抗のない電池を負荷につないだ電流が上限になる．\n\n(5) $m$ 個直列の列を $\\dfrac6m$ 列並列にすると，起電力 $mE$，内部抵抗 $\\dfrac{mr}{6/m}=\\dfrac{m^2r}6$．\n\\[I=\\frac{mE}{R+m^2r/6}：\\ m=1\\to3.0\\,\\mathrm A,\\ m=2\\to4.6\\,\\mathrm A,\\ m=3\\to5.0\\,\\mathrm A,\\ m=6\\to4.0\\,\\mathrm A．\\]\n最大は $m=3$ で $5.0\\,\\mathrm A$．このとき全体の内部抵抗 $\\dfrac{9\\times0.30}{6}=0.45\\,\\Omega$ が負荷の抵抗に等しい．（$I=\\dfrac{E}{R/m+mr/6}$ の分母は，相加・相乗平均より $\\dfrac Rm=\\dfrac{mr}6$ のとき最小．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "直列：起電力 $nE$・内部抵抗 $nr$，並列：起電力 $E$・内部抵抗 $\\dfrac rn$．どちらが有利かは $R$ と $r$ の大小で決まる．"
+ },
+ "concepts": [
+  "ohm-law-use",
+  "series-parallel"
+ ],
+ "laws": [
+  "ohm-law",
+  "kirchhoff-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "内部抵抗",
+  "電池の接続",
+  "極限",
+  "最大電流"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

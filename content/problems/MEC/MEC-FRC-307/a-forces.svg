@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" width="300" height="250" font-family="'Times New Roman', serif">
+<g class="f-force" data-phys="force:T1" data-dir="143.13" data-len="75">
+<line x1="150" y1="115" x2="98" y2="76" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="90,70 100.8,72.27 95.2,79.73" fill="currentColor"/>
+<text x="70.4" y="58.8" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m₁g</text>
+</g>
+<g class="f-force" data-phys="force:T2" data-dir="53.13" data-len="100">
+<line x1="150" y1="115" x2="204" y2="43" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="210,35 207.73,45.8 200.27,40.2" fill="currentColor"/>
+<text x="229.2" y="21.4" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m₂g</text>
+</g>
+<g class="f-force" data-phys="force:W" data-dir="270" data-len="125">
+<line x1="150" y1="115" x2="150" y2="230" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="150,240 145.34,230 154.66,230" fill="currentColor"/>
+<text x="170" y="244" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m₃g</text>
+</g>
+<circle cx="150" cy="115" r="3" fill="currentColor"/>
+<text x="140" y="124" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">K</text>
+</svg>

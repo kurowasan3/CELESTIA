@@ -1,0 +1,121 @@
+{
+ "id": "ELM-DCC-301",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "抵抗率と導線の形（長さ・断面積・引きのばし・切って並列）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "抵抗率 $1.1\\times10^{-6}\\,\\Omega\\cdot\\mathrm m$ のニクロム線がある．長さは $2.0\\,\\mathrm m$，断面積は $5.0\\times10^{-7}\\,\\mathrm{m^2}$ である．温度は一定とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "このニクロム線の抵抗値 $R$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "このニクロム線の両端に $2.2\\,\\mathrm V$ の電圧を加えたとき，流れる電流 $I$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "このニクロム線を，体積を変えずに一様に引きのばして長さを $4.0\\,\\mathrm m$ にした．抵抗値はもとの何倍になるか．"
+     },
+     {
+      "id": "4",
+      "tex": "もとのニクロム線を長さの等しい2本に切り，それらを並列につないだ．合成抵抗を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "同じ長さ・断面積の銅線（抵抗率 $1.7\\times10^{-8}\\,\\Omega\\cdot\\mathrm m$）の抵抗値を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$R=4.4\\,\\Omega$",
+    "grading": "R：4.4 [Ω]"
+   },
+   {
+    "id": "2",
+    "tex": "$I=0.50\\,\\mathrm A$",
+    "grading": "I：0.5 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "$4$ 倍",
+    "grading": "4倍"
+   },
+   {
+    "id": "4",
+    "tex": "$1.1\\,\\Omega$",
+    "grading": "1.1 [Ω]"
+   },
+   {
+    "id": "5",
+    "tex": "$6.8\\times10^{-2}\\,\\Omega$",
+    "grading": "0.068 [Ω]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "抵抗値は長さ $l$ に比例し，断面積 $S$ に反比例する：$R=\\rho\\dfrac lS$（$\\rho$ は抵抗率）．\n\n(1) $R=1.1\\times10^{-6}\\times\\dfrac{2.0}{5.0\\times10^{-7}}=4.4\\,\\Omega$．\n\n(2) オームの法則：$I=\\dfrac VR=\\dfrac{2.2}{4.4}=0.50\\,\\mathrm A$．\n\n(3) 体積 $lS$ が一定なので，長さが2倍になると断面積は $\\dfrac12$ 倍．$R=\\rho\\dfrac lS$ は $2\\div\\dfrac12=4$ 倍になる．（$17.6\\,\\Omega$．長さだけ2倍と考えて「2倍」としないこと．）\n\n(4) 1本の長さが半分なので，それぞれ $\\dfrac R2=2.2\\,\\Omega$．同じ抵抗2本の並列は半分：$1.1\\,\\Omega$（もとの $\\dfrac14$）．並列にすると，電流の通り道の断面積が2倍になったのと同じ．\n\n(5) $1.7\\times10^{-8}\\times\\dfrac{2.0}{5.0\\times10^{-7}}=6.8\\times10^{-2}\\,\\Omega$．ニクロムの抵抗率は銅の約 $65$ 倍で，電熱線に使われる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$R=\\rho\\dfrac lS$．引きのばすと長さが増えて断面積が減るので，抵抗は長さの2乗に比例して増える．"
+ },
+ "concepts": [
+  "ohm-law-use",
+  "series-parallel"
+ ],
+ "laws": [
+  "ohm-law",
+  "resistor-combination"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "抵抗率",
+  "オームの法則",
+  "合成抵抗"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  270
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     60,
+     200
+    ],
+    [
+     304.32,
+     111.07
+    ],
+    [
+     304.32,
+     200
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    200
+   ],
+   "to": [
+    304.3200814043362,
+    111.07476273532613
+   ],
+   "style": "ground",
+   "phys": "surface"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    200
+   ],
+   "to": [
+    330,
+    200
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "arc",
+   "at": [
+    60,
+    200
+   ],
+   "r": 44,
+   "from": 0,
+   "to": 20,
+   "label": "θ"
+  },
+  {
+   "t": "block",
+   "at": [
+    191.56,
+    152.12
+   ],
+   "w": 50,
+   "h": 26,
+   "label": "",
+   "phys": "body:car",
+   "angle": 20
+  },
+  {
+   "t": "arrow",
+   "from": [
+    187.11,
+    139.9
+   ],
+   "dir": 270,
+   "len": 70,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg",
+   "labelPos": "end",
+   "labelOffset": [
+    0,
+    4
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    187.11,
+    139.9
+   ],
+   "dir": 110,
+   "len": 74.49,
+   "style": "force",
+   "phys": "force:N",
+   "label": "N",
+   "labelPos": "end",
+   "labelOffset": [
+    -6,
+    -2
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    187.11,
+    252
+   ],
+   "dir": 180,
+   "len": 25.48,
+   "style": "component",
+   "label": "合力（向心力）",
+   "labelPos": "end",
+   "labelOffset": [
+    -46,
+    0
+   ],
+   "italic": false
+  }
+ ]
+}

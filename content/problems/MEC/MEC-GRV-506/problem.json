@@ -1,0 +1,141 @@
+{
+ "id": "MEC-GRV-506",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "地球の内部と外部での重力加速度の変わり方",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "construct",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "地球を半径 $R$，密度が一様な球とし，地表での重力加速度の大きさを $g$ とする．地球の自転は考えない．地球の中心 O からの距離 $r$ の点での重力加速度の大きさ $g(r)$ を考える．"
+   },
+   {
+    "type": "text",
+    "tex": "ただし，一様な球の内部の点では，その点より外側の球殻の部分から受ける万有引力の合力は $0$ であり，その点より内側の球の部分は，その質量がすべて中心に集まった場合と同じ万有引力を及ぼすことを用いてよい．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$0\\le r\\le R$ での $g(r)$ を，$g$，$r$，$R$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$r\\ge R$ での $g(r)$ を，$g$，$r$，$R$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$g(r)=\\dfrac g2$ となる点が，地球の内部と外部に1つずつある．それぞれの $r$ の値 $r_1$（内部），$r_2$（外部）を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$0\\le r\\le3R$ の範囲で，$g(r)$ のグラフの概形を描け．"
+     },
+     {
+      "id": "5",
+      "tex": "地表から深い穴を掘り下げていくとき，このモデルでは重力加速度はどう変わるか．また，地表の点から鉛直上向きに同じ距離だけ離れていくときと比べて，どちらが速く小さくなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "a-graph",
+   "role": "answer",
+   "kind": "graph",
+   "format": "svg",
+   "src": "a-graph.svg",
+   "alt": "横軸 r、縦軸 g(r) のグラフ。原点から r=R まで直線的に増えて g に達し、r>R では g R²/r² の曲線で減少する。g/2 になるのは r=R/2 と r=√2R",
+   "caption": "内部では $r$ に比例し，外部では $r^2$ に反比例する"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$g(r)=\\dfrac{gr}{R}$",
+    "grading": "g(r)：g r/R"
+   },
+   {
+    "id": "2",
+    "tex": "$g(r)=\\dfrac{gR^2}{r^2}$",
+    "grading": "g(r)：g R^2/r^2"
+   },
+   {
+    "id": "3",
+    "tex": "$r_1=\\dfrac R2$，$r_2=\\sqrt2\\,R$",
+    "grading": "r_1：R/2 ; r_2：sqrt(2)R"
+   },
+   {
+    "id": "4",
+    "tex": "原点から $r=R$ まで直線的に増えて $g$ になり，$r>R$ では $r^2$ に反比例して減る曲線（解説の図）．"
+   },
+   {
+    "id": "5",
+    "tex": "深さに比例して直線的に小さくなる（中心で $0$）．地表付近では，掘り下げたときは $g$ の減り方が $\\dfrac{g}{R}$（距離あたり），上空へ離れるときは $\\dfrac{2g}{R}$ なので，上空へ離れるほうが速く小さくなる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "地球の質量を $M$，万有引力定数を $G$ とすると $g=\\dfrac{GM}{R^2}$．\n\n(1) 半径 $r$ の内側の球の質量は，体積に比例して $M\\dfrac{r^3}{R^3}$．これが中心に集まったとみなして \\[g(r)=\\frac{G}{r^2}\\cdot M\\frac{r^3}{R^3}=\\frac{GM}{R^3}r=\\frac{gr}{R}\\]\n\n(2) 地球全体が中心に集まったとみなせるので $g(r)=\\dfrac{GM}{r^2}=\\dfrac{gR^2}{r^2}$．\n\n(3) 内部：$\\dfrac{gr_1}{R}=\\dfrac g2$ より $r_1=\\dfrac R2$．外部：$\\dfrac{gR^2}{r_2^2}=\\dfrac g2$ より $r_2=\\sqrt2\\,R$．\n\n(4) 下の図のようになる．$r=R$ で最大値 $g$ をとり，グラフはそこで折れ曲がる．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-graph"
+    },
+    {
+     "type": "text",
+     "tex": "(5) 深さ $x$ の点では $r=R-x$ なので $g(r)=g\\left(1-\\dfrac xR\\right)$ で，深さに比例して減り，中心で $0$ になる．上空の高さ $x$ では $g\\left(\\dfrac{R}{R+x}\\right)^2\\approx g\\left(1-\\dfrac{2x}{R}\\right)$（$x\\ll R$）なので，地表付近では上空へ離れるほうが2倍速く小さくなる．\n\nなお，実際の地球は中心部ほど密度が大きいので，地表からある深さまでは重力加速度はむしろわずかに大きくなる．このモデルの結果は「密度一様」という仮定によるものである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "球対称な物体の重力は，考える点より内側の質量だけで決まる．内部では内側の質量が $r^3$ に比例するので，$g\\propto r$ になる．"
+ },
+ "concepts": [
+  "universal-gravitation"
+ ],
+ "laws": [
+  "universal-gravitation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "万有引力",
+  "地球の内部",
+  "重力加速度",
+  "グラフ"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

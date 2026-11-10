@@ -1,0 +1,124 @@
+{
+ "id": "ATM-DOS-203",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "吸収線量（Gy）・等価線量（Sv）と，放射線の害が熱ではないこと",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "calc",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "放射線の量を表す単位には，放射性物質が 1 秒あたりに崩壊する数を表すベクレル（Bq），物質 1 kg あたりが吸収したエネルギーを表すグレイ（$\\mathrm{Gy}=\\mathrm{J/kg}$），人体への影響の大きさを考えたシーベルト（Sv）がある．シーベルトで表した等価線量は，吸収線量（Gy）に放射線の種類による係数（γ 線・β 線は 1，α 線は 20）を掛けたものである．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "質量 $60\\ \\mathrm{kg}$ の人が，全身に一様に γ 線を受けて，合計 $0.030\\ \\mathrm J$ のエネルギーを吸収した．吸収線量は何 Gy か．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) の等価線量は何 Sv か．また，同じ吸収線量を α 線で受けたとすると，等価線量は何 Sv か．"
+     },
+     {
+      "id": "3",
+      "tex": "(1) の γ 線の光子1個のエネルギーを $0.66\\ \\mathrm{MeV}$ とすると，吸収された光子の数は何個か．有効数字2桁で答えよ．$1\\ \\mathrm{eV}=1.6\\times10^{-19}\\ \\mathrm J$ とする．"
+     },
+     {
+      "id": "4",
+      "tex": "(1) で吸収したエネルギーがすべて熱になったとすると，体温は何 K 上がるか．人体の比熱を $4.2\\times10^3\\ \\mathrm{J/(kg\\cdot K)}$ として，有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の結果から，放射線が人体に害を与えるしくみについて何がいえるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$5.0\\times10^{-4}\\ \\mathrm{Gy}$",
+    "grading": "5.0*10^(-4)"
+   },
+   {
+    "id": "2",
+    "tex": "γ 線：$5.0\\times10^{-4}\\ \\mathrm{Sv}$（$0.50\\ \\mathrm{mSv}$），α 線：$1.0\\times10^{-2}\\ \\mathrm{Sv}$",
+    "grading": "γ線：5.0*10^(-4) ; α線：1.0*10^(-2)"
+   },
+   {
+    "id": "3",
+    "tex": "$2.8\\times10^{11}$ 個",
+    "grading": "2.8*10^11"
+   },
+   {
+    "id": "4",
+    "tex": "$1.2\\times10^{-7}\\ \\mathrm K$",
+    "grading": "1.2*10^(-7) [K]"
+   },
+   {
+    "id": "5",
+    "tex": "温度上昇はごくわずかで，熱としての影響は無視できる．放射線の害は，少ないエネルギーでも1個1個の粒子・光子が細胞の分子（DNA など）を電離して壊すことによる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\dfrac{0.030\\ \\mathrm J}{60\\ \\mathrm{kg}}=5.0\\times10^{-4}\\ \\mathrm{Gy}$．\n\n(2) γ 線の係数は 1 なので $5.0\\times10^{-4}\\ \\mathrm{Sv}=0.50\\ \\mathrm{mSv}$．α 線なら $20$ 倍の $1.0\\times10^{-2}\\ \\mathrm{Sv}=10\\ \\mathrm{mSv}$．α 線は電離作用が強く，同じエネルギーでも短い距離に集中して細胞を傷つけるので，影響が大きいとみなされる．\n\n(3) 光子1個のエネルギーは $0.66\\times10^6\\times1.6\\times10^{-19}=1.056\\times10^{-13}\\ \\mathrm J$．$\\dfrac{0.030}{1.056\\times10^{-13}}=2.84\\times10^{11}\\fallingdotseq2.8\\times10^{11}$ 個．\n\n(4) $\\Delta T=\\dfrac{Q}{mc}=\\dfrac{0.030}{60\\times4.2\\times10^3}=1.19\\times10^{-7}\\fallingdotseq1.2\\times10^{-7}\\ \\mathrm K$．\n\n(5) $1$ 千万分の $1$ K 程度で，熱による影響はまったく問題にならない．それでも放射線に害があるのは，1個の光子のエネルギー（約 $7\\times10^5\\ \\mathrm{eV}$）が，分子の結合を切るエネルギー（数 eV）よりはるかに大きく，1個の光子（とそれがはじき出す電子）が多数の分子を電離・切断して，DNA などを直接傷つけるからである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "Gy は 1 kg あたりの吸収エネルギー（J/kg），Sv はそれに放射線の種類による係数を掛けた量．害の原因は全体のエネルギー（熱）ではなく，1個1個の電離．"
+ },
+ "concepts": [
+  "nuclear-decay",
+  "photon",
+  "heat-temperature"
+ ],
+ "laws": [
+  "photon-energy",
+  "heat-capacity"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "放射線",
+  "グレイ",
+  "シーベルト",
+  "ベクレル",
+  "被曝"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  240
+ ],
+ "items": [
+  {
+   "t": "block",
+   "at": [
+    60,
+    190
+   ],
+   "w": 50,
+   "h": 26,
+   "label": ""
+  },
+  {
+   "t": "block",
+   "at": [
+    320,
+    190
+   ],
+   "w": 50,
+   "h": 26,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    60,
+    177
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    177
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    190
+   ],
+   "to": [
+    360,
+    190
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    190,
+    164
+   ],
+   "w": 280,
+   "h": 10,
+   "label": ""
+  },
+  {
+   "t": "block",
+   "at": [
+    150,
+    154
+   ],
+   "w": 20,
+   "h": 50,
+   "label": ""
+  },
+  {
+   "t": "circle",
+   "at": [
+    150,
+    94
+   ],
+   "r": 10,
+   "style": "solid"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    120
+   ],
+   "to": [
+    150,
+    120
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    114
+   ],
+   "to": [
+    60,
+    126
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    114
+   ],
+   "to": [
+    150,
+    126
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    105,
+    110
+   ],
+   "text": "x",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    210
+   ],
+   "to": [
+    60,
+    220
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    320,
+    210
+   ],
+   "to": [
+    320,
+    220
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    215
+   ],
+   "to": [
+    320,
+    215
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    190,
+    228
+   ],
+   "text": "3.0 m",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

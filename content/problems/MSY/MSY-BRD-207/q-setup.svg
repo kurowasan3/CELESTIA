@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 135" width="370" height="135" font-family="'Times New Roman', serif">
+<line x1="20" y1="120" x2="330" y2="120" stroke="currentColor" stroke-width="2"/>
+<line x1="330" y1="120" x2="330" y2="40" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="330,40 345,40 345,120 330,120" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(170,120) rotate(0)" data-angle="0">
+<rect x="-110" y="-16" width="220" height="16" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="230" y="112" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+<g transform="translate(76,104) rotate(0)" data-angle="0">
+<rect x="-14" y="-22" width="28" height="22" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-11" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+</g>
+<g class="f-vel" data-dir="0" data-len="50">
+<line x1="90" y1="70" x2="130" y2="70" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="140,70 130,74.66 130,65.34" fill="currentColor"/>
+<text x="156" y="70" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₀</text>
+</g>
+<text x="338" y="32" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">壁</text>
+</svg>

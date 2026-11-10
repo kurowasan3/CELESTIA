@@ -1,0 +1,173 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  420,
+  215
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    40,
+    150
+   ],
+   "to": [
+    340,
+    150
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     40,
+     150
+    ],
+    [
+     340,
+     150
+    ],
+    [
+     340,
+     170
+    ],
+    [
+     40,
+     170
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     40,
+     150
+    ],
+    [
+     340,
+     122
+    ],
+    [
+     340,
+     104
+    ],
+    [
+     40,
+     132
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "circle",
+   "at": [
+    320,
+    137
+   ],
+   "r": 13,
+   "style": "fill"
+  },
+  {
+   "t": "text",
+   "at": [
+    356,
+    135
+   ],
+   "text": "髪の毛",
+   "italic": false,
+   "size": 11,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    190
+   ],
+   "to": [
+    320,
+    190
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    183
+   ],
+   "to": [
+    40,
+    197
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    320,
+    183
+   ],
+   "to": [
+    320,
+    197
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    180,
+    205
+   ],
+   "text": "L = 10.0 cm",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "arrow",
+   "from": [
+    120,
+    30
+   ],
+   "dir": 270,
+   "len": 60,
+   "style": "current"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140,
+    90
+   ],
+   "dir": 90,
+   "len": 60,
+   "style": "current"
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    50
+   ],
+   "text": "単色光（λ = 600 nm）",
+   "italic": false,
+   "size": 11,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    30,
+    150
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  }
+ ]
+}

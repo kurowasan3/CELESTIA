@@ -1,0 +1,143 @@
+{
+ "id": "ELM-CAP-303",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "誘電体の入れ方による電気容量の違い（面積の半分に入れるか，厚さの半分に入れるか）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "面積 $S$ の2枚の極板を間隔 $d$ で向かい合わせた平行板コンデンサーの，極板間が真空のときの電気容量を $C_0$ とする．比誘電率 $\\varepsilon_r\\ (\\varepsilon_r>1)$ の誘電体を，次の2通りに入れる．"
+   },
+   {
+    "type": "text",
+    "tex": "図1：面積 $\\dfrac S2$，厚さ $d$ の誘電体で，極板間の左半分をすき間なく満たす．"
+   },
+   {
+    "type": "text",
+    "tex": "図2：面積 $S$，厚さ $\\dfrac d2$ の誘電体を，下の極板に密着させて入れる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "図1 の電気容量 $C_1$ を $C_0$，$\\varepsilon_r$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "図2 の電気容量 $C_2$ を $C_0$，$\\varepsilon_r$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$C_1-C_2$ を求め，$C_1$ と $C_2$ の大小を比べよ．"
+     },
+     {
+      "id": "4",
+      "tex": "図2 のコンデンサーに電圧 $V$ をかけた．誘電体の中の電場の強さ $E_1$ と，真空の部分の電場の強さ $E_2$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "図2 で誘電体のかわりに，同じ形の金属板を入れたときの電気容量 $C_3$ を求めよ．また，それは (2) の $C_2$ でどのような極限をとったものになっているか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "図1：平行板コンデンサー（間隔 d）の左半分を、厚さ d の誘電体（比誘電率 εr）が満たす。図2：同じコンデンサーの下半分の厚さ d/2 を、全面にわたって誘電体が満たす",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$C_1=\\dfrac{1+\\varepsilon_r}{2}C_0$",
+    "grading": "C_1：(1+ε_r)C_0/2"
+   },
+   {
+    "id": "2",
+    "tex": "$C_2=\\dfrac{2\\varepsilon_r}{1+\\varepsilon_r}C_0$",
+    "grading": "C_2：2ε_r C_0/(1+ε_r)"
+   },
+   {
+    "id": "3",
+    "tex": "$C_1-C_2=\\dfrac{(\\varepsilon_r-1)^2}{2(\\varepsilon_r+1)}C_0>0$ なので $C_1>C_2$",
+    "grading": "C_1-C_2：(ε_r-1)^2 C_0/(2(ε_r+1))"
+   },
+   {
+    "id": "4",
+    "tex": "$E_1=\\dfrac{2V}{(1+\\varepsilon_r)d}$，$E_2=\\dfrac{2\\varepsilon_rV}{(1+\\varepsilon_r)d}$",
+    "grading": "E_1：2V/((1+ε_r)d) ; E_2：2ε_r V/((1+ε_r)d)"
+   },
+   {
+    "id": "5",
+    "tex": "$C_3=2C_0$．(2) で $\\varepsilon_r\\to\\infty$ とした値に一致する．",
+    "grading": "C_3：2C_0"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "$C_0=\\varepsilon_0\\dfrac Sd$．比誘電率 $\\varepsilon_r$ の物質で満たすと電気容量は $\\varepsilon_r$ 倍．\n\n(1) 左半分（誘電体）と右半分（真空）は，両極板を共有して同じ電圧がかかるので並列．それぞれ $\\varepsilon_r\\varepsilon_0\\dfrac{S/2}{d}=\\dfrac{\\varepsilon_r}2C_0$，$\\varepsilon_0\\dfrac{S/2}d=\\dfrac12C_0$．\n\\[C_1=\\frac{\\varepsilon_r}2C_0+\\frac12C_0=\\frac{1+\\varepsilon_r}2C_0．\\]\n\n(2) 誘電体の層と真空の層は，同じ電気量をたくわえる直列（境界に薄い極板があると考えてよい）．それぞれ $\\varepsilon_r\\varepsilon_0\\dfrac S{d/2}=2\\varepsilon_rC_0$，$\\varepsilon_0\\dfrac S{d/2}=2C_0$．\n\\[\\frac1{C_2}=\\frac1{2\\varepsilon_rC_0}+\\frac1{2C_0}\\quad\\Longrightarrow\\quad C_2=\\frac{2\\varepsilon_r}{1+\\varepsilon_r}C_0．\\]\n\n(3) \\[C_1-C_2=\\frac{(1+\\varepsilon_r)^2-4\\varepsilon_r}{2(1+\\varepsilon_r)}C_0=\\frac{(\\varepsilon_r-1)^2}{2(\\varepsilon_r+1)}C_0>0．\\]\n同じ量の誘電体でも，面積の半分を全体の厚さで満たす（並列）方が電気容量は大きい（$\\varepsilon_r=1$ なら等しい）．\n\n(4) 直列の2層には同じ電気量 $Q=C_2V$ がたまる．真空の層の電圧は $\\dfrac{Q}{2C_0}=\\dfrac{\\varepsilon_r}{1+\\varepsilon_r}V$，誘電体の層は $\\dfrac{Q}{2\\varepsilon_rC_0}=\\dfrac{1}{1+\\varepsilon_r}V$．それぞれ厚さ $\\dfrac d2$ で割って\n\\[E_1=\\frac{2V}{(1+\\varepsilon_r)d},\\qquad E_2=\\frac{2\\varepsilon_rV}{(1+\\varepsilon_r)d}．\\]\n誘電体の中では分極による電荷のため電場が $\\dfrac1{\\varepsilon_r}$ 倍に弱まる（$E_2=\\varepsilon_rE_1$）．\n\n(5) 金属板の内部は電場 $0$ で等電位なので，金属板の部分は導線と同じ．実質的に間隔が $\\dfrac d2$ の真空のコンデンサーになり，$C_3=2C_0$．(2) で $\\varepsilon_r\\to\\infty$ とすると $C_2\\to2C_0$ となり一致する．金属は「比誘電率が無限大の誘電体」とみなせる（内部の電場が $0$ になる）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "極板を共有して横に並ぶ部分は並列，電場の方向に積み重なる層は直列．金属は $\\varepsilon_r\\to\\infty$ の極限．"
+ },
+ "concepts": [
+  "capacitor"
+ ],
+ "laws": [
+  "capacitance"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "誘電体",
+  "電気容量",
+  "直列",
+  "並列",
+  "極限"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

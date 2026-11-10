@@ -1,0 +1,131 @@
+{
+ "id": "ATM-EDS-206",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "電子線の二重スリット干渉（縞の間隔と1個ずつの電子）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止していた電子（質量 $m$，電気量 $-e$）を電圧 $V$ で加速し，間隔 $d$ の2本の細いスリットに垂直に当てた．スリットから距離 $L$ だけ離れたスクリーン上に，干渉縞が現れた．$L$ は $d$ や縞の間隔に比べて十分大きい．プランク定数を $h$ とし，相対論的な効果は考えない．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電子の物質波の波長 $\\lambda$ を，$h,\\ m,\\ e,\\ V$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "スクリーン上の明線の間隔 $\\Delta x$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$V=100\\ \\mathrm V$，$d=1.0\\ \\mu\\mathrm m$，$L=1.0\\ \\mathrm m$ のとき，$\\lambda$ と $\\Delta x$ はそれぞれ何 m か．$m=9.1\\times10^{-31}\\ \\mathrm{kg}$，$e=1.6\\times10^{-19}\\ \\mathrm C$，$h=6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$ とし，有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "加速電圧を 4 倍にすると，$\\Delta x$ は何倍になるか．"
+     },
+     {
+      "id": "5",
+      "tex": "電子を1個ずつ間をあけてスリットに向けて送り，スクリーンに当たった位置を記録していく．電子が少数のときと，非常に多数たまったときとで，記録はどのように見えるか．また，そこから電子についてどのようなことが分かるか．"
+     },
+     {
+      "id": "6",
+      "tex": "電子のかわりに，陽子（質量は電子の 1840 倍，電気量 $+e$）を同じ電圧 $V$ で加速して同じ実験をすると，$\\Delta x$ は電子の場合の何倍になるか．有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\lambda=\\dfrac h{\\sqrt{2meV}}$",
+    "grading": "λ：h/sqrt(2m e V)"
+   },
+   {
+    "id": "2",
+    "tex": "$\\Delta x=\\dfrac{Lh}{d\\sqrt{2meV}}$",
+    "grading": "Δx：L h/(d sqrt(2m e V))"
+   },
+   {
+    "id": "3",
+    "tex": "$\\lambda=1.2\\times10^{-10}\\ \\mathrm m$，$\\Delta x=1.2\\times10^{-4}\\ \\mathrm m$",
+    "grading": "λ：1.2*10^(-10) [m] ; Δx：1.2*10^(-4) [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac12$ 倍",
+    "grading": "(1/2)倍"
+   },
+   {
+    "id": "5",
+    "tex": "少数のときは，でたらめに見える点（1個の電子は1点に当たる：粒子としてのふるまい）．多数たまると，点の密度が明線・暗線の縞模様になる（波としての干渉）．電子は粒子として検出されるが，どこに当たるかの確率の分布が物質波の干渉で決まる．"
+   },
+   {
+    "id": "6",
+    "tex": "$2.3\\times10^{-2}$ 倍",
+    "grading": "2.3*10^(-2)倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 加速後の運動エネルギー $\\dfrac{p^2}{2m}=eV$ より $p=\\sqrt{2meV}$．ド・ブロイ波長 $\\lambda=\\dfrac hp=\\dfrac h{\\sqrt{2meV}}$．\n\n\\textbf{(2)} 光のヤングの実験と同じで，明線の条件は経路差 $\\dfrac{dx}L=n\\lambda$．間隔 $\\Delta x=\\dfrac{L\\lambda}d=\\dfrac{Lh}{d\\sqrt{2meV}}$．\n\n\\textbf{(3)} $\\sqrt{2meV}=\\sqrt{2\\times9.1\\times10^{-31}\\times1.6\\times10^{-19}\\times100}=\\sqrt{2.91\\times10^{-47}}=5.40\\times10^{-24}\\ \\mathrm{kg\\cdot m/s}$．$\\lambda=\\dfrac{6.6\\times10^{-34}}{5.40\\times10^{-24}}=1.22\\times10^{-10}\\fallingdotseq1.2\\times10^{-10}\\ \\mathrm m$．$\\Delta x=\\dfrac{1.0\\times1.22\\times10^{-10}}{1.0\\times10^{-6}}\\fallingdotseq1.2\\times10^{-4}\\ \\mathrm m$（約 $0.12\\ \\mathrm{mm}$）．原子の大きさ程度の波長なので，縞はとても細かい．\n\n\\textbf{(4)} $\\Delta x\\propto\\dfrac1{\\sqrt V}$ なので $\\dfrac1{\\sqrt4}=\\dfrac12$ 倍．\n\n\\textbf{(5)} 電子1個は，スクリーン上の1点に，粒子として当たる．少数ではどこに当たるか予測できず，点はでたらめに散らばって見える．多数たまると，点が多く集まる所と，ほとんど来ない所が交互に並び，(2) の間隔の干渉縞が現れる．電子が1個ずつでも縞ができるので，1個の電子の物質波が両方のスリットを通って干渉しており，その強さが電子の当たる確率を表すと考えられる．\n\n\\textbf{(6)} $\\Delta x\\propto\\lambda\\propto\\dfrac1{\\sqrt m}$（電気量の大きさは同じ $e$）．$\\dfrac1{\\sqrt{1840}}=2.33\\times10^{-2}\\fallingdotseq2.3\\times10^{-2}$ 倍．縞が細かすぎて，同じ装置では見分けにくい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "物質波の波長 $\\lambda=\\dfrac h{\\sqrt{2meV}}$ を，光のヤングの実験の縞の間隔 $\\dfrac{L\\lambda}d$ に入れる．1個ずつの電子でも縞ができることが，粒子と波の二重性を示す．"
+ },
+ "concepts": [
+  "matter-wave",
+  "light-interference"
+ ],
+ "laws": [
+  "de-broglie",
+  "young-fringe"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "物質波",
+  "ド・ブロイ波長",
+  "二重スリット",
+  "粒子と波動の二重性"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

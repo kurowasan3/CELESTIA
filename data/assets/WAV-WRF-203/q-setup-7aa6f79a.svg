@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 210" width="380" height="210" font-family="'Times New Roman', serif">
+<polygon points="20,105 360,105 360,205 20,205" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="20" y1="105" x2="360" y2="105" stroke="currentColor" stroke-width="2" data-phys="boundary"/>
+<line x1="190" y1="20" x2="190" y2="195" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<g class="f-cur" data-phys="ray:in" data-dir="330" data-len="110">
+<line x1="94.74" y1="50" x2="181.34" y2="100" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="190,105 179.01,104.04 183.67,95.96" fill="currentColor"/>
+</g>
+<g class="f-cur" data-phys="ray:out" data-dir="300" data-len="90">
+<line x1="190" y1="105" x2="230" y2="174.28" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="235,182.94 225.96,176.61 234.04,171.95" fill="currentColor"/>
+</g>
+<path d="M190,73 A32,32 0 0 0 162.29,89" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="166" y="63.43" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">60°</text>
+<path d="M190,141 A36,36 0 0 0 208,136.18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="205.53" y="162.96" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">30°</text>
+<text x="300" y="50" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">領域 A（深い）</text>
+<text x="300" y="160" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">領域 B（浅い）</text>
+</svg>

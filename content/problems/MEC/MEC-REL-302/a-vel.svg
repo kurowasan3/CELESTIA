@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" font-family="'Times New Roman', serif">
+<g class="f-vel" data-phys="vel:c" data-dir="330" data-len="140">
+<line x1="60" y1="110" x2="172.58" y2="175" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="181.24,180 170.25,179.04 174.91,170.96" fill="currentColor"/>
+<text x="100.62" y="161.39" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">c</text>
+</g>
+<g class="f-vel" data-phys="vel:w" data-dir="90" data-len="70">
+<line x1="181.24" y1="180" x2="181.24" y2="120" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="181.24,110 185.9,120 176.58,120" fill="currentColor"/>
+<text x="203.24" y="145" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">w</text>
+</g>
+<g class="f-vel" data-phys="vel:V" data-dir="0" data-len="121.24">
+<line x1="60" y1="110" x2="171.24" y2="110" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="181.24,110 171.24,114.66 171.24,105.34" fill="currentColor"/>
+<text x="120.62" y="96" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">V</text>
+</g>
+<text x="52" y="110" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</svg>

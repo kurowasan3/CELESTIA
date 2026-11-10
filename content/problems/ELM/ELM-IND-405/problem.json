@@ -1,0 +1,174 @@
+{
+ "id": "ELM-IND-405",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "鉛直なレールを落下する導体棒とコンデンサー（一定の加速度と電磁的な「質量」）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，間隔 $l$ の2本の導体レールを鉛直に立て，上端を電気容量 $C$ のコンデンサーでつないだ．レールの面に垂直に，紙面の表から裏の向きに磁束密度 $B$ の一様な磁場がかかっている．質量 $m$ の導体棒を，水平を保ってレールに接触させたまま，時刻 $t=0$ に静かに放した．棒はレールに沿ってなめらかに落下する．はじめコンデンサーは帯電しておらず，電気抵抗，回路の自己インダクタンス，空気抵抗は無視する．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒の速さが $v$ のとき，コンデンサーに蓄えられている電気量 $Q$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "棒の加速度の大きさを $a$ とするとき，棒を流れる電流の大きさ $I$ を $a$ を用いて表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$a$ を求めよ．棒はどのような運動をするか．"
+     },
+     {
+      "id": "4",
+      "tex": "棒が高さ $h$ だけ落下したとき，コンデンサーに蓄えられている静電エネルギー $U$ を求めよ．また，$U$ と棒の運動エネルギー $K$ の和が $mgh$ に等しいことを確かめよ．"
+     },
+     {
+      "id": "5",
+      "tex": "コンデンサーの代わりに抵抗値 $R$ の抵抗をつないで同じ実験をすると，棒の速さは一定値 $v_{\\rm f}$ に近づく．$v_{\\rm f}$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(3) の運動は，重力 $mg$ が質量 $M$ の物体を加速する運動とみなせる．$M$ を求め，$M-m$ の部分がエネルギーの観点から何を表しているかを説明せよ．また，コンデンサーの場合には (5) のような終端速度が現れない理由を述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "鉛直な2本のレール（間隔 l）の上端がコンデンサー C でつながれ、紙面の表から裏の向きの磁場 B の中で、水平な導体棒（質量 m）がレールに沿って落下する",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "落下中の棒にはたらく力：重力 mg（下向き）と、磁場からの力 IBl（上向き、mg より小さい）。合力は下向き",
+   "caption": "落下中の棒にはたらく力",
+   "physics": {
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "F",
+      "dir_deg": 90
+     }
+    ],
+    "netForce": {
+     "dir_deg": 270
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Q=CBlv$",
+    "grading": "Q：C B l v"
+   },
+   {
+    "id": "2",
+    "tex": "$I=CBla$",
+    "grading": "I：C B l a"
+   },
+   {
+    "id": "3",
+    "tex": "$a=\\dfrac{mg}{m+CB^2l^2}$．等加速度運動（加速度は $g$ より小さい一定値）",
+    "grading": "a：m g/(m+C B^2 l^2)"
+   },
+   {
+    "id": "4",
+    "tex": "$U=\\dfrac{CB^2l^2}{m+CB^2l^2}\\,mgh$",
+    "grading": "U：C B^2 l^2 m g h/(m+C B^2 l^2)"
+   },
+   {
+    "id": "5",
+    "tex": "$v_{\\rm f}=\\dfrac{mgR}{B^2l^2}$",
+    "grading": "v_f：m g R/(B^2 l^2)"
+   },
+   {
+    "id": "6",
+    "tex": "$M=m+CB^2l^2$．$\\dfrac12(CB^2l^2)v^2$ がコンデンサーの静電エネルギーなので，$M-m$ は速さに応じて蓄えられる電気的なエネルギーが運動エネルギーと同じ形をもつことを表す（電磁的な慣性）．エネルギーが熱として失われず，速さが増えても電流（$\\propto a$）が増えないので，ブレーキの力が速さとともに大きくならないから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 棒の誘導起電力は $Blv$．抵抗がないので，コンデンサーの電圧はつねにこれに等しい：$Q=CBlv$．\n\n\\textbf{(2)} $I=\\dfrac{\\Delta Q}{\\Delta t}=CBl\\dfrac{\\Delta v}{\\Delta t}=CBla$．電流は速さではなく\\textbf{加速度}で決まる．\n\n\\textbf{(3)} 棒が落下すると，誘導電流は棒の中を左から右へ流れ，磁場から上向きの力 $IBl$ を受ける（落下を妨げる向き）．運動方程式\n\\[ma=mg-IBl=mg-CB^2l^2a\\qquad\\therefore\\ a=\\frac{mg}{m+CB^2l^2}\\]\n$a$ は一定なので，棒は\\textbf{等加速度運動}をする．\n\n\\textbf{(4)} $v^2=2ah$ より $v^2=\\dfrac{2mgh}{m+CB^2l^2}$．\n\\[U=\\frac12C(Blv)^2=\\frac12CB^2l^2v^2=\\frac{CB^2l^2}{m+CB^2l^2}mgh,\\qquad K=\\frac12mv^2=\\frac{m}{m+CB^2l^2}mgh\\]\n和は $mgh$．抵抗がないので熱は出ず，失われた位置エネルギーは運動エネルギーと静電エネルギーに分配される．\n\n\\textbf{(5)} 抵抗のとき電流は $I=\\dfrac{Blv}R$ で速さに比例し，力 $\\dfrac{B^2l^2v}{R}$ も速さとともに増える．$mg=\\dfrac{B^2l^2v_{\\rm f}}R$ となったところで加速度が $0$：$v_{\\rm f}=\\dfrac{mgR}{B^2l^2}$．\n\n\\textbf{(6)} (3) の式は $(m+CB^2l^2)a=mg$ と書けるので $M=m+CB^2l^2$．\n$U=\\dfrac12(CB^2l^2)v^2$ は，「質量 $CB^2l^2$ の物体が速さ $v$ で動くときの運動エネルギー」と同じ形をしている．棒を速くするには，棒自身の運動エネルギーだけでなく，速さの2乗に比例する静電エネルギーも同時に与えなければならないので，棒は重くなったようにふるまう．\n抵抗のときは，電流が速さに比例し，ブレーキの力が速さとともに大きくなって重力とつり合う（エネルギーはジュール熱として出ていく）．コンデンサーのときは電流が加速度で決まり，速さが増えてもブレーキの力は一定のままなので，つり合う速さが存在しない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "コンデンサーの電圧 $=Blv$ より電流 $I=CBla$ は加速度に比例する．すると運動方程式は $(m+CB^2l^2)a=mg$ となり，$CB^2l^2$ が質量のようにふるまう．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "capacitor",
+  "lorentz-force"
+ ],
+ "laws": [
+  "motional-emf",
+  "current-force",
+  "newton-2nd",
+  "capacitor-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電磁誘導",
+  "導体棒",
+  "コンデンサー",
+  "エネルギー保存"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

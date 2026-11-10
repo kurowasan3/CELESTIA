@@ -1,0 +1,123 @@
+{
+ "id": "ATM-LAS-203",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "レーザー光の光子の数と，鏡・吸収板が受ける光の力",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "calc",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "仕事率（出力）$P=1.0\\ \\mathrm{mW}$，波長 $\\lambda=660\\ \\mathrm{nm}$ のレーザー光を，光線に垂直に置いた板に当てる．プランク定数を $h=6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$，真空中の光速を $c=3.0\\times10^8\\ \\mathrm{m/s}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "光子1個のエネルギーは何 J か．"
+     },
+     {
+      "id": "2",
+      "tex": "1 秒あたりに板に当たる光子の数 $N$ を，有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "光子1個の運動量の大きさは何 $\\mathrm{kg\\cdot m/s}$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "光をすべて吸収する板が光から受ける力の大きさと，光をすべて垂直にはね返す鏡が受ける力の大きさを，それぞれ有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "同じ出力 $1.0\\ \\mathrm{mW}$ で，波長 $330\\ \\mathrm{nm}$ のレーザー光に替えた．1 秒あたりの光子の数と，吸収する板が受ける力は，それぞれ何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$3.0\\times10^{-19}\\ \\mathrm J$",
+    "grading": "3.0*10^(-19) [J]"
+   },
+   {
+    "id": "2",
+    "tex": "$N=3.3\\times10^{15}$",
+    "grading": "3.3*10^15"
+   },
+   {
+    "id": "3",
+    "tex": "$1.0\\times10^{-27}\\ \\mathrm{kg\\cdot m/s}$",
+    "grading": "1.0*10^(-27) [kg·m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "吸収する板 $3.3\\times10^{-12}\\ \\mathrm N$，鏡 $6.7\\times10^{-12}\\ \\mathrm N$",
+    "grading": "吸収：3.3*10^(-12) [N] ; 反射：6.7*10^(-12) [N]"
+   },
+   {
+    "id": "5",
+    "tex": "光子の数は $\\dfrac12$ 倍，力は $1$ 倍（変わらない）",
+    "grading": "光子の数：(1/2)倍 ; 力：1倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $E=\\dfrac{hc}\\lambda=\\dfrac{6.6\\times10^{-34}\\times3.0\\times10^8}{6.6\\times10^{-7}}=3.0\\times10^{-19}\\ \\mathrm J$．\n\n(2) 1 秒間に届くエネルギー $P$ を光子1個のエネルギーで割る：$N=\\dfrac{1.0\\times10^{-3}}{3.0\\times10^{-19}}=3.33\\times10^{15}\\fallingdotseq3.3\\times10^{15}$．\n\n(3) $p=\\dfrac h\\lambda=\\dfrac{6.6\\times10^{-34}}{6.6\\times10^{-7}}=1.0\\times10^{-27}\\ \\mathrm{kg\\cdot m/s}$．\n\n(4) 吸収される光子は運動量 $p$ を失い，その分を板が受け取る．1 秒あたり $N$ 個なので，板が受ける力（1 秒あたりに受け取る運動量）は $F=Np=\\dfrac{P}{c}=\\dfrac{1.0\\times10^{-3}}{3.0\\times10^8}=3.33\\times10^{-12}\\fallingdotseq3.3\\times10^{-12}\\ \\mathrm N$．鏡で垂直にはね返る光子は運動量が $p$ から $-p$ に変わり，変化の大きさは $2p$ なので，$F=2Np=\\dfrac{2P}c\\fallingdotseq6.7\\times10^{-12}\\ \\mathrm N$．\n\n(5) 光子1個のエネルギーが 2 倍になるので，同じ出力では光子の数は $\\dfrac12$ 倍．光子1個の運動量は 2 倍なので，力 $Np$ は変わらない．（$F=\\dfrac Pc$ は光の波長によらない．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "出力 $P$ の光の光子数は $\\dfrac P{h\\nu}$，運動量は1個あたり $\\dfrac h\\lambda$．吸収なら $F=\\dfrac Pc$，垂直反射なら $\\dfrac{2P}c$．"
+ },
+ "concepts": [
+  "photon",
+  "momentum-conservation"
+ ],
+ "laws": [
+  "photon-energy",
+  "impulse-momentum"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "光子",
+  "運動量",
+  "光の圧力",
+  "レーザー"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

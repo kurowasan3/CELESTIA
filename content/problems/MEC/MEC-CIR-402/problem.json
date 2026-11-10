@@ -1,0 +1,138 @@
+{
+ "id": "MEC-CIR-402",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "鉛直面内の円形ループを回る小球（最下点・最高点の垂直抗力と，一周するための最低の高さ）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，なめらかな斜面と半径 $0.50\\,\\mathrm m$ の円形のループが，ループの最下点 B でなめらかにつながっている．B の高さ（床）から高さ $2.5\\,\\mathrm m$ の斜面上の点 A で，質量 $0.20\\,\\mathrm{kg}$ の小球を静かにはなした．小球はループの内側に沿って運動し，ループの最高点 C を通過した．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，小球の大きさは無視する（図は正確な縮尺ではない）．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "B での小球の速さ $v_{\\rm B}$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "B で小球がループから受ける垂直抗力の大きさ $N_{\\rm B}$ は何 $\\mathrm N$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "C での小球の速さ $v_{\\rm C}$（有効数字2桁）と，C で小球がループから受ける垂直抗力の大きさ $N_{\\rm C}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "小球が C をループから離れずに通過するためには，A の高さは少なくとも何 $\\mathrm m$ 必要か．"
+     },
+     {
+      "id": "5",
+      "tex": "ある生徒は「C で小球が落ちてこないのは，上向きの遠心力と重力がつり合っているからだ」と説明した．床に静止した人の立場で，C での小球の運動を正しく説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "高さ 2.5 m の点 A から斜面を下りた小球が、最下点 B で半径 0.50 m の円形ループに入り、最高点 C を通過する",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_{\\rm B}=7.0\\,\\mathrm{m/s}$",
+    "grading": "v_B：7 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$N_{\\rm B}=22\\,\\mathrm N$",
+    "grading": "N_B：22 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "$v_{\\rm C}=5.4\\,\\mathrm{m/s}$，$N_{\\rm C}=9.8\\,\\mathrm N$",
+    "grading": "v_C：5.4 [m/s] ; N_C：9.8 [N]"
+   },
+   {
+    "id": "4",
+    "tex": "$1.25\\,\\mathrm m$",
+    "grading": "1.25 [m]"
+   },
+   {
+    "id": "5",
+    "tex": "C で小球にはたらく力は重力と垂直抗力で，どちらも下向き（円の中心向き）．つり合ってはおらず，その合力 $mg+N_{\\rm C}$ が向心力 $m\\dfrac{v_{\\rm C}^2}{r}$ になって，小球の進む向きを曲げている．小球は落ち続けているが，速さが十分大きいので円周から離れない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) なめらかなので力学的エネルギー保存：$\\dfrac12v_{\\rm B}^2=gh=9.8\\times2.5=24.5$ より $v_{\\rm B}^2=49$，$v_{\\rm B}=7.0\\,\\mathrm{m/s}$．\n\n(2) B では垂直抗力（上向き）と重力（下向き）の合力が，中心向き（上向き）の向心力：\\[N_{\\rm B}-mg=m\\frac{v_{\\rm B}^2}{r}\\quad\\Longrightarrow\\quad N_{\\rm B}=0.20\\times9.8+0.20\\times\\frac{49}{0.50}=1.96+19.6\\fallingdotseq22\\,\\mathrm N\\] 静止しているときの約 $11$ 倍の力で押される．\n\n(3) C の高さは $2r=1.0\\,\\mathrm m$：$\\dfrac12v_{\\rm C}^2=g(2.5-1.0)=14.7$ より $v_{\\rm C}^2=29.4$，$v_{\\rm C}\\fallingdotseq5.4\\,\\mathrm{m/s}$．C では垂直抗力も重力も下向き（中心向き）：\\[N_{\\rm C}+mg=m\\frac{v_{\\rm C}^2}{r}\\quad\\Longrightarrow\\quad N_{\\rm C}=0.20\\times\\frac{29.4}{0.50}-1.96=11.76-1.96=9.8\\,\\mathrm N\\]\n\n(4) C を通過する条件は $N_{\\rm C}\\ge0$，すなわち $v_{\\rm C}^2\\ge gr$．はなす高さを $h$ とすると $v_{\\rm C}^2=2g(h-2r)$ なので\\[2g(h-2r)\\ge gr\\quad\\Longrightarrow\\quad h\\ge\\frac52r=1.25\\,\\mathrm m\\]\n\n(5) 遠心力は，小球とともに回る観測者が考える見かけの力で，床に静止した人から見ると存在しない．静止した人から見ると，C で小球にはたらく力はどちらも下向きで，つり合っていない（つり合っていれば等速直線運動をするはず）．下向きの合力が向心力になって，速度の向きを円の中心へ曲げ続けている．速さが小さく，重力だけで必要な向心力 $m\\dfrac{v^2}{r}$ を超えてしまうと，小球は円より内側に落ちる（ループから離れる）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "円運動では「中心向きの合力＝$m\\dfrac{v^2}{r}$」と力学的エネルギー保存を組み合わせる．ループの最高点で離れない条件は $N\\ge0$．"
+ },
+ "concepts": [
+  "circular-motion",
+  "mechanical-energy",
+  "normal-force"
+ ],
+ "laws": [
+  "centripetal-acceleration",
+  "energy-conservation",
+  "newton-2nd"
+ ],
+ "misconceptions": [
+  "MC-NORMAL-EQ-MG"
+ ],
+ "tags": [
+  "円運動",
+  "鉛直面内の円運動",
+  "垂直抗力",
+  "力学的エネルギー保存"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

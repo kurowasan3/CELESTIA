@@ -1,0 +1,135 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  240
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    277.5,
+    42.73
+   ],
+   "to": [
+    182.5,
+    207.27
+   ],
+   "style": "ground",
+   "phys": "surface"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    110,
+    125
+   ],
+   "dir": 0,
+   "len": 120,
+   "style": "velocity",
+   "phys": "v-in"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    110,
+    95
+   ],
+   "dir": 0,
+   "len": 133.3205080756888,
+   "style": "velocity"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    110,
+    155
+   ],
+   "dir": 0,
+   "len": 98.67949192431121,
+   "style": "velocity"
+  },
+  {
+   "t": "text",
+   "at": [
+    88,
+    125
+   ],
+   "text": "v",
+   "size": 15,
+   "italic": true,
+   "anchor": "middle"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    230,
+    125
+   ],
+   "dir": 120,
+   "len": 75,
+   "style": "velocity",
+   "phys": "v-out",
+   "label": "v",
+   "italic": true
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    125
+   ],
+   "to": [
+    152.06,
+    80.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    139.93,
+    73.0
+   ],
+   "text": "法線",
+   "size": 12,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "arc",
+   "at": [
+    230,
+    125
+   ],
+   "r": 34,
+   "from": 150,
+   "to": 180,
+   "label": "θ"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    230,
+    125
+   ],
+   "dir": 330,
+   "len": 60,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F",
+   "italic": true
+  },
+  {
+   "t": "text",
+   "at": [
+    292,
+    40
+   ],
+   "text": "板（面積 S）",
+   "size": 13,
+   "italic": false,
+   "anchor": "start"
+  }
+ ]
+}

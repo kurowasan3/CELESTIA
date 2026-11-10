@@ -1,0 +1,170 @@
+{
+ "id": "MEC-CIR-403",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "傾けたカーブを曲がる自動車（摩擦なしで曲がれる速さと，静止摩擦を使った最大の速さ）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "自動車が，水平面内の半径 $r$ のカーブを一定の速さで曲がる．路面は，カーブの中心に向かって低くなるように，水平と角 $\\theta$ をなして傾いている（図は，自動車の進む向きに垂直な断面）．自動車を質点とみなし，その質量を $m$，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "路面からの摩擦力がはたらかずに曲がれる速さ $v_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) のとき，自動車が路面から受ける垂直抗力の大きさ $N$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "速さが $v_0$ より小さいとき，自動車が一定の半径で曲がり続けるには，路面からの静止摩擦力が必要になる．その向きは，路面に沿って上向き（カーブの外側）か，下向き（内側）か．理由とともに答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "路面と自動車の間の静止摩擦係数を $\\mu$（$\\mu\\tan\\theta<1$）とする．すべらずに曲がれる最大の速さ $v_1$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) で $\\theta\\to0$ とした結果を，水平なカーブの場合と比べて確かめよ．また，$\\mu\\tan\\theta\\ge1$ のとき，(4) の結果はどう解釈できるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "進む向きに垂直な断面。路面は水平と角 θ をなし、カーブの中心（左）に向かって低くなっている。路面上に自動車がある",
+   "caption": "",
+   "physics": {
+    "angle_deg": 20
+   }
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "摩擦がないとき自動車にはたらく力：鉛直下向きの重力 mg と、路面に垂直な垂直抗力 N。合力は水平でカーブの中心を向く",
+   "caption": "重力と垂直抗力の合力が水平な向心力になる",
+   "physics": {
+    "angle_deg": 20,
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 110
+     }
+    ],
+    "netForce": {
+     "dir_deg": 180
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_0=\\sqrt{gr\\tan\\theta}$",
+    "grading": "v_0：sqrt(g r tan(θ))"
+   },
+   {
+    "id": "2",
+    "tex": "$N=\\dfrac{mg}{\\cos\\theta}$",
+    "grading": "N：m g/cos(θ)"
+   },
+   {
+    "id": "3",
+    "tex": "路面に沿って上向き（外側）．$v<v_0$ では，必要な向心力 $m\\dfrac{v^2}{r}$ が重力と垂直抗力だけでつくる水平な力より小さく，そのままでは自動車は路面をすべり下りて内側へずれる．それを止める向きに静止摩擦力がはたらく．"
+   },
+   {
+    "id": "4",
+    "tex": "$v_1=\\sqrt{gr\\,\\dfrac{\\sin\\theta+\\mu\\cos\\theta}{\\cos\\theta-\\mu\\sin\\theta}}$",
+    "grading": "v_1：sqrt(g r (sin(θ)+μ cos(θ))/(cos(θ)-μ sin(θ)))"
+   },
+   {
+    "id": "5",
+    "tex": "$\\theta\\to0$ で $v_1\\to\\sqrt{\\mu gr}$ となり，水平なカーブで静止摩擦力だけが向心力になる場合と一致する．$\\mu\\tan\\theta\\ge1$ では，どんなに速くてもすべらない（速さの上限がない）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "自動車は水平面内で等速円運動をするので，合力は水平でカーブの中心向き，大きさ $m\\dfrac{v^2}{r}$．鉛直方向の力はつり合う．\n\n(1)(2) 摩擦がないとき，力は重力と垂直抗力だけ．\\[\\text{鉛直：}\\ N\\cos\\theta=mg,\\qquad\\text{水平：}\\ N\\sin\\theta=m\\frac{v_0^2}{r}\\] よって $N=\\dfrac{mg}{\\cos\\theta}$，$v_0^2=gr\\tan\\theta$ より $v_0=\\sqrt{gr\\tan\\theta}$．\n\n(3) 摩擦がなければ，重力と垂直抗力の合力（中心向き $mg\\tan\\theta$）は速さによらない．$v<v_0$ ではこれが必要な向心力より大きすぎるので，摩擦力がそれを弱める向き，つまり水平成分が外向きになる「路面に沿って上向き」にはたらく．（逆に $v>v_0$ では下向き．）\n\n(4) 最大の速さのとき，静止摩擦力は路面に沿って下向きで最大摩擦力 $\\mu N$．\\[\\text{鉛直：}\\ N\\cos\\theta-\\mu N\\sin\\theta=mg,\\qquad\\text{水平：}\\ N\\sin\\theta+\\mu N\\cos\\theta=m\\frac{v_1^2}{r}\\] 辺々割って\\[\\frac{v_1^2}{gr}=\\frac{\\sin\\theta+\\mu\\cos\\theta}{\\cos\\theta-\\mu\\sin\\theta}\\quad\\Longrightarrow\\quad v_1=\\sqrt{gr\\,\\frac{\\sin\\theta+\\mu\\cos\\theta}{\\cos\\theta-\\mu\\sin\\theta}}\\] 鉛直の式から $N=\\dfrac{mg}{\\cos\\theta-\\mu\\sin\\theta}$ で，これが正であるために $\\mu\\tan\\theta<1$ が必要．\n\n(5) $\\theta\\to0$ で $v_1\\to\\sqrt{\\mu gr}$．水平なカーブでは $\\mu mg=m\\dfrac{v^2}{r}$ から同じ結果が得られる．$\\mu\\tan\\theta\\ge1$ のときは，速さを大きくして必要な向心力が増えると，垂直抗力も（摩擦の鉛直成分を補うように）いくらでも大きくなれるので，最大摩擦力が足りなくなることがない．すべり出す速さの上限はない（現実には，タイヤや路面の強さなど別の制限がある）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "傾いた路面では，垂直抗力の水平成分も向心力になる．摩擦力の向きは「必要な向心力に対して過不足を補う向き」で，最大の速さでは路面に沿って下向き．"
+ },
+ "concepts": [
+  "circular-motion",
+  "normal-force",
+  "static-friction"
+ ],
+ "laws": [
+  "centripetal-acceleration",
+  "newton-2nd",
+  "friction-law"
+ ],
+ "misconceptions": [
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "円運動",
+  "向心力",
+  "静止摩擦力",
+  "バンク"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

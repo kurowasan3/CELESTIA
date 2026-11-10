@@ -1,0 +1,157 @@
+{
+ "id": "ELM-FLD-308",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-01",
+ "topic": "細い導線で結んだ大小2つの導体球（電荷の分配・エネルギーの損失・とがった先端の電場）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中に，半径 $a$ の導体球 A と半径 $b$ の導体球 B が，互いに十分離れて置かれている．A，B はスイッチ S のついた細く長い導線でつながれていて，はじめ S は開いている．はじめ A は電気量 $Q\\ (Q>0)$ をもち，B は帯電していない．クーロンの法則の比例定数を $k$ とし，電位の基準は無限遠とする．A，B は十分離れているので，それぞれの球の電位や表面の電場は，その球自身の電荷だけで決まるとし，導線の電荷は無視する．表面に電気量 $q$ が一様に分布した半径 $r$ の導体球の電位は $\\dfrac{kq}{r}$ である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "はじめの A の静電エネルギー $U_0$ を求めよ．ただし，電位 $V$ の導体に電気量 $q$ があるときの静電エネルギーは $\\dfrac12qV$ である．"
+     },
+     {
+      "id": "2",
+      "tex": "S を閉じて十分時間がたった後の A，B の電気量 $Q_{\\mathrm A}$，$Q_{\\mathrm B}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "このときの A，B の電位 $V$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "S を閉じる前後での静電エネルギーの減少量 $\\Delta U$ を求めよ．また，失われたエネルギーはどうなったか．"
+     },
+     {
+      "id": "5",
+      "tex": "このときの A，B の表面のすぐ外側の電場の強さをそれぞれ $E_{\\mathrm A}$，$E_{\\mathrm B}$ とする．比 $\\dfrac{E_{\\mathrm A}}{E_{\\mathrm B}}$ を $a$，$b$ で表せ．"
+     },
+     {
+      "id": "6",
+      "tex": "空気中では，電場の強さが $3.0\\times10^{6}\\,\\mathrm{V/m}$ をこえると放電が起こる．空気中に孤立した半径 $1.0\\,\\mathrm{cm}$ の導体球は，最大で何 V の電位まで帯電させられるか．"
+     },
+     {
+      "id": "7",
+      "tex": "(5)，(6) の結果をもとに，帯電した導体のとがった先端で放電が起こりやすい理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "半径 a の導体球 A（大）と半径 b の導体球 B（小）が十分離れて置かれ、スイッチ S のついた細い導線で結ばれている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$U_0=\\dfrac{kQ^2}{2a}$",
+    "grading": "U_0：k Q^2/(2a)"
+   },
+   {
+    "id": "2",
+    "tex": "$Q_{\\mathrm A}=\\dfrac{aQ}{a+b}$，$Q_{\\mathrm B}=\\dfrac{bQ}{a+b}$",
+    "grading": "Q_A：a Q/(a+b) ; Q_B：b Q/(a+b)"
+   },
+   {
+    "id": "3",
+    "tex": "$V=\\dfrac{kQ}{a+b}$",
+    "grading": "V：k Q/(a+b)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta U=\\dfrac{kQ^2b}{2a(a+b)}$．電荷が導線を移動するときに，導線でジュール熱となる（一部は電磁波として放射される）．",
+    "grading": "ΔU：k Q^2 b/(2a(a+b))"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac{E_{\\mathrm A}}{E_{\\mathrm B}}=\\dfrac ba$",
+    "grading": "E_A/E_B：b/a"
+   },
+   {
+    "id": "6",
+    "tex": "$3.0\\times10^{4}\\,\\mathrm V$",
+    "grading": "3*10^4 [V]"
+   },
+   {
+    "id": "7",
+    "tex": "導線でつながった（同じ電位の）導体では，表面の電場の強さは曲率半径に反比例する．とがった先端は曲率半径が非常に小さいので，全体の電位がそれほど高くなくても先端の電場が放電の限界をこえやすい．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $V_0=\\dfrac{kQ}{a}$ なので $U_0=\\dfrac12QV_0=\\dfrac{kQ^2}{2a}$．\n\n(2) 導線でつながると A，B は1つの導体になり，電位が等しくなるまで電荷が移動する．電気量の保存 $Q_{\\mathrm A}+Q_{\\mathrm B}=Q$ と，等電位の条件 $\\dfrac{kQ_{\\mathrm A}}{a}=\\dfrac{kQ_{\\mathrm B}}{b}$ より\n\\[Q_{\\mathrm A}=\\frac{aQ}{a+b},\\qquad Q_{\\mathrm B}=\\frac{bQ}{a+b}．\\]\n電気量は半径に比例して分配される．\n\n(3) $V=\\dfrac{kQ_{\\mathrm A}}a=\\dfrac{kQ}{a+b}$．\n\n(4) 後の静電エネルギーは $\\dfrac12QV=\\dfrac{kQ^2}{2(a+b)}$．\n\\[\\Delta U=\\frac{kQ^2}{2a}-\\frac{kQ^2}{2(a+b)}=\\frac{kQ^2b}{2a(a+b)}>0．\\]\nこのエネルギーは，電荷が導線を流れる間に導線の抵抗で熱になる（電流が急に変化すると，一部は電磁波として放射される）．導線の抵抗の値によらず，失われる量は同じ．\n\n(5) 表面のすぐ外の電場は，中心にすべての電荷を集めた点電荷の電場と同じ：$E_{\\mathrm A}=\\dfrac{kQ_{\\mathrm A}}{a^2}$，$E_{\\mathrm B}=\\dfrac{kQ_{\\mathrm B}}{b^2}$．(2) を使うと $E_{\\mathrm A}=\\dfrac Va$，$E_{\\mathrm B}=\\dfrac Vb$ なので\n\\[\\frac{E_{\\mathrm A}}{E_{\\mathrm B}}=\\frac ba．\\]\n同じ電位なら，小さい球の表面ほど電場が強い．（面密度で見ても $\\sigma\\propto\\dfrac{Q}{r^2}\\propto\\dfrac1r$ で，小さい球ほど電荷が密集している．）\n\n(6) 半径 $r$ の球の電位 $V$ と表面の電場 $E$ の関係は $E=\\dfrac Vr$．$E\\leqq3.0\\times10^6\\,\\mathrm{V/m}$ より $V\\leqq3.0\\times10^6\\times1.0\\times10^{-2}=3.0\\times10^{4}\\,\\mathrm V$．\n\n(7) 1つの導体のとがった部分と丸い部分は，(2)〜(5) の A，B と同じく「等電位でつながった，曲率半径の異なる面」とみなせる．表面の電場はおよそ曲率半径に反比例するので，とがった先端（半径が非常に小さい）では電場が極端に強くなり，(6) のような放電の限界を先にこえる．避雷針がとがっているのはこのため．逆に高電圧の装置の電極は，放電を防ぐために大きな丸い球にする．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "導線でつなぐ＝等電位．球の電位 $\\dfrac{kq}{r}$ が等しいので電気量は半径に比例し，表面の電場 $\\dfrac Vr$ は半径に反比例する．"
+ },
+ "concepts": [
+  "coulomb-field",
+  "capacitor"
+ ],
+ "laws": [
+  "point-charge-potential",
+  "point-charge-field",
+  "capacitor-energy",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "導体球",
+  "電荷の分配",
+  "静電エネルギー",
+  "放電",
+  "避雷針"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

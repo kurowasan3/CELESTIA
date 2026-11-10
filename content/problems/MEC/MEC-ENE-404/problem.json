@@ -1,0 +1,174 @@
+{
+ "id": "MEC-ENE-404",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "あらい斜面で物体を引き上げるときの各力の仕事と運動エネルギーの変化（その後すべり下りるか）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "calc",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平と角 $\\theta$（$\\sin\\theta=0.60$，$\\cos\\theta=0.80$）をなすあらい斜面上に，質量 $1.0\\,\\mathrm{kg}$ の物体を置いた．図のように，斜面に沿って上向きに大きさ $13\\,\\mathrm N$ の一定の力 $F$ を加えて，静止の状態から斜面に沿って $2.5\\,\\mathrm m$ 引き上げた．物体と斜面の間の動摩擦係数を $0.50$，静止摩擦係数を $0.70$，重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$2.5\\,\\mathrm m$ 引き上げる間に，力 $F$，重力，動摩擦力，垂直抗力が物体にした仕事 $W_F$，$W_g$，$W_f$，$W_N$ はそれぞれ何 $\\mathrm J$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "$2.5\\,\\mathrm m$ 引き上げた直後の物体の速さ $v$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "その位置で力 $F$ を取り去った．物体はそこから斜面に沿ってさらに何 $\\mathrm m$ 上るか．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "最高点に達した後，物体は斜面上で静止したままか，すべり下りるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平と角 θ をなすあらい斜面上の物体に、斜面に沿って上向きの力 F を加える",
+   "caption": "",
+   "physics": {
+    "angle_deg": 36.87,
+    "forces": [
+     {
+      "name": "F",
+      "dir_deg": 36.87
+     }
+    ]
+   }
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "物体にはたらく力：斜面に沿って上向きの F（13 N）、鉛直下向きの重力 mg（9.8 N）、斜面に垂直な垂直抗力 N（7.84 N）、斜面に沿って下向きの動摩擦力 f（3.92 N）。合力は斜面に沿って上向き",
+   "caption": "4つの力（長さは力の大きさに比例）．斜面に垂直な方向はつり合い，斜面に沿った合力は上向き $3.2\\,\\mathrm N$",
+   "physics": {
+    "angle_deg": 36.87,
+    "forces": [
+     {
+      "name": "F",
+      "dir_deg": 36.87
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 126.87
+     },
+     {
+      "name": "f",
+      "dir_deg": 216.87
+     }
+    ],
+    "netForce": {
+     "dir_deg": 36.87
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$W_F=32.5\\,\\mathrm J$，$W_g=-14.7\\,\\mathrm J$，$W_f=-9.8\\,\\mathrm J$，$W_N=0$",
+    "grading": "W_F：32.5 [J] ; W_g：-14.7 [J] ; W_f：-9.8 [J] ; W_N：0 [J]"
+   },
+   {
+    "id": "2",
+    "tex": "$v=4.0\\,\\mathrm{m/s}$",
+    "grading": "v：4 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$0.82\\,\\mathrm m$",
+    "grading": "0.82 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "すべり下りる．重力の斜面方向の成分 $5.88\\,\\mathrm N$ が最大摩擦力 $0.70\\times7.84\\fallingdotseq5.49\\,\\mathrm N$ より大きいから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "垂直抗力は $N=mg\\cos\\theta=1.0\\times9.8\\times0.80=7.84\\,\\mathrm N$，動摩擦力は $f=0.50\\times7.84=3.92\\,\\mathrm N$（斜面に沿って下向き）．重力の斜面方向の成分は $mg\\sin\\theta=5.88\\,\\mathrm N$．\n\n(1) 力の向きと移動の向き（斜面に沿って上向き）のなす角で考える．\\[W_F=13\\times2.5=32.5\\,\\mathrm J\\] 重力は，高さが $2.5\\sin\\theta=1.5\\,\\mathrm m$ 上がる分だけ負の仕事：$W_g=-mg\\times1.5=-14.7\\,\\mathrm J$（$=-5.88\\times2.5$）．\\[W_f=-3.92\\times2.5=-9.8\\,\\mathrm J\\] 垂直抗力は移動の向きと垂直なので $W_N=0$．\n\n(2) 仕事と運動エネルギーの関係：\\[\\frac12\\times1.0\\times v^2=32.5-14.7-9.8+0=8.0\\quad\\Longrightarrow\\quad v=4.0\\,\\mathrm{m/s}\\]\n\n(3) $F$ を取り去った後，上る距離を $s$ とすると，重力（斜面成分）と動摩擦力がともに負の仕事をする：\\[0-\\frac12\\times1.0\\times4.0^2=-(5.88+3.92)s\\quad\\Longrightarrow\\quad s=\\frac{8.0}{9.8}\\fallingdotseq0.82\\,\\mathrm m\\]\n\n(4) 最高点で静止しているためには，静止摩擦力が重力の斜面成分 $5.88\\,\\mathrm N$ とつり合う必要がある．最大摩擦力は $0.70\\times7.84\\fallingdotseq5.49\\,\\mathrm N<5.88\\,\\mathrm N$ なので静止できず，すべり下りる（$\\tan\\theta=0.75>0.70$ と同じ）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "各力の仕事は「力の移動方向の成分×距離」．その和（合力の仕事）が運動エネルギーの変化．垂直抗力は移動と垂直なので仕事をしない．"
+ },
+ "concepts": [
+  "work-energy",
+  "static-friction"
+ ],
+ "laws": [
+  "work-energy-theorem",
+  "friction-law"
+ ],
+ "misconceptions": [
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "仕事",
+  "仕事と運動エネルギー",
+  "摩擦",
+  "斜面"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

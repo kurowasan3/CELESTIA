@@ -1,0 +1,196 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  280,
+  285
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     100,
+     10
+    ],
+    [
+     200,
+     10
+    ],
+    [
+     200,
+     20
+    ],
+    [
+     100,
+     20
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    20
+   ],
+   "to": [
+    200,
+    20
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    20
+   ],
+   "to": [
+    150,
+    50
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "circle",
+   "at": [
+    150,
+    50
+   ],
+   "r": 20,
+   "style": "solid"
+  },
+  {
+   "t": "dot",
+   "at": [
+    150,
+    50
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     130,
+     50
+    ],
+    [
+     130,
+     160
+    ]
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     170,
+     50
+    ],
+    [
+     170,
+     120
+    ]
+   ]
+  },
+  {
+   "t": "block",
+   "at": [
+    130,
+    190
+   ],
+   "w": 32,
+   "h": 30,
+   "label": "A",
+   "phys": "body:A"
+  },
+  {
+   "t": "block",
+   "at": [
+    170,
+    150
+   ],
+   "w": 30,
+   "h": 30,
+   "label": "B",
+   "phys": "body:B"
+  },
+  {
+   "t": "text",
+   "at": [
+    108,
+    176
+   ],
+   "text": "0.55 kg",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    192,
+    136
+   ],
+   "text": "0.45 kg",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    270
+   ],
+   "to": [
+    260,
+    270
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    84,
+    230
+   ],
+   "dir": 90,
+   "len": 40,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    84,
+    230
+   ],
+   "dir": 270,
+   "len": 40,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    76,
+    230
+   ],
+   "text": "h",
+   "italic": true,
+   "size": 14,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    84,
+    190
+   ],
+   "to": [
+    114,
+    190
+   ],
+   "style": "dash"
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "id": "WAV-TMP-210",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "気温による音速の変化と開管の音の高さ",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "気温 $t\\,[{}^\\circ\\mathrm C]$ のときの空気中の音の速さは $V=331.5+0.6t\\ [\\mathrm{m/s}]$ で表される．長さ $0.50\\,\\mathrm m$ の両端が開いた管（開管）を吹いて，基本振動の音を出す．開口端補正は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "気温 $15\\,{}^\\circ\\mathrm C$ のときの音の速さを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "気温 $15\\,{}^\\circ\\mathrm C$ のとき，この管の基本振動の振動数を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "気温が $35\\,{}^\\circ\\mathrm C$ に上がった．基本振動の振動数は何 $\\mathrm{Hz}$ 増えるか．"
+     },
+     {
+      "id": "4",
+      "tex": "気温 $35\\,{}^\\circ\\mathrm C$ のとき，基本振動の音の波長を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "気温 $35\\,{}^\\circ\\mathrm C$ のときに，$15\\,{}^\\circ\\mathrm C$ のときと同じ高さの基本振動の音を出すには，管の長さを何 $\\mathrm m$ にすればよいか．有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$340.5\\,\\mathrm{m/s}$",
+    "grading": "340.5 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$340.5\\,\\mathrm{Hz}$",
+    "grading": "340.5 [Hz]"
+   },
+   {
+    "id": "3",
+    "tex": "$12\\,\\mathrm{Hz}$",
+    "grading": "12 [Hz]"
+   },
+   {
+    "id": "4",
+    "tex": "$1.0\\,\\mathrm m$",
+    "grading": "1 [m]"
+   },
+   {
+    "id": "5",
+    "tex": "$0.52\\,\\mathrm m$",
+    "grading": "0.52 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $V=331.5+0.6\\times15=\\boldsymbol{340.5\\,\\mathrm{m/s}}$．\n\n(2) 開管の基本振動は両端が腹で，管の長さが半波長：$\\lambda=2\\times0.50=1.0\\,\\mathrm m$．$f=\\dfrac V\\lambda=\\boldsymbol{340.5\\,\\mathrm{Hz}}$．\n\n(3) $35\\,{}^\\circ\\mathrm C$ では $V'=331.5+0.6\\times35=352.5\\,\\mathrm{m/s}$，$f'=\\dfrac{352.5}{1.0}=352.5\\,\\mathrm{Hz}$．増加は $352.5-340.5=\\boldsymbol{12\\,\\mathrm{Hz}}$．\n\n(4) 波長は管の長さで決まり，気温によらず $\\lambda=2\\times0.50=\\boldsymbol{1.0\\,\\mathrm m}$．気温で変わるのは音速で，そのぶん振動数が変わる．管楽器は暖かいと音が高くなる．\n\n(5) $f=\\dfrac{V'}{2L'}=340.5$ より $L'=\\dfrac{352.5}{2\\times340.5}=0.5176\\cdots\\fallingdotseq\\boldsymbol{0.52\\,\\mathrm m}$．管を少し長くすればよい（管楽器のチューニング管を引き出す）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "気柱の固有振動の波長は管の長さで決まる．音速が変われば，同じ波長のまま振動数が変わる．"
+ },
+ "concepts": [
+  "string-resonance",
+  "wave-basics"
+ ],
+ "laws": [
+  "pipe-modes",
+  "wave-speed"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "音速",
+  "気温",
+  "開管",
+  "気柱"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

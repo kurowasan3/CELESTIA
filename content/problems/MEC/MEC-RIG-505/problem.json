@@ -1,0 +1,197 @@
+{
+ "id": "MEC-RIG-505",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "斜面上の円柱を最上点につけた水平な糸で支える（摩擦力の向きと必要な摩擦係数）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "derivation",
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "傾きの角 $\\theta$ のあらい斜面の上に，質量 $m$，半径 $r$ の一様な円柱を，軸を水平にして置いた．円柱の断面の最上点に軽い糸をつけ，糸を斜面の上側に向けて水平に張り，斜面に立てた柱に結んだところ，円柱は静止した．円柱と斜面の接点を P，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "P のまわりの力のモーメントのつり合いから，糸の張力の大きさ $T$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "円柱が斜面から受ける摩擦力の向きを答え，その大きさ $f$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "円柱が斜面から受ける垂直抗力の大きさ $N$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "円柱と斜面の間の静止摩擦係数を $\\mu$ とする．円柱がこのように静止できるための $\\mu$ の条件を，$\\theta$ を用いた簡単な形で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$m=2.0\\,\\mathrm{kg}$，$\\theta=30^\\circ$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，$T$ は何 $\\mathrm N$ か．$\\tan15^\\circ=0.268$ として，有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "傾きの角 θ の斜面上の円柱。断面の最上点から斜面の上側へ水平に糸が張られ、斜面に立てた柱に結ばれている。接点は P",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "円柱にはたらく力：中心の重力 mg、接点 P の垂直抗力 N と斜面に沿って上向きの静止摩擦力 f、最上点の水平な張力 T",
+   "caption": "張力と摩擦力は大きさが等しく，垂直抗力は $mg$ に等しい",
+   "physics": {
+    "angle_deg": 30,
+    "equilibrium": true,
+    "torque": {
+     "about": [
+      200,
+      160
+     ]
+    },
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 60
+     },
+     {
+      "name": "T",
+      "dir_deg": 180
+     },
+     {
+      "name": "f",
+      "dir_deg": 150
+     }
+    ],
+    "equalLength": [
+     [
+      "force:T",
+      "force:f"
+     ],
+     [
+      "force:N",
+      "force:mg"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T=\\dfrac{mg\\sin\\theta}{1+\\cos\\theta}\\ \\left(=mg\\tan\\dfrac\\theta2\\right)$",
+    "grading": "T：m g sin(θ)/(1+cos(θ))"
+   },
+   {
+    "id": "2",
+    "tex": "斜面に沿って上向き，$f=\\dfrac{mg\\sin\\theta}{1+\\cos\\theta}$（$=T$）",
+    "grading": "f：m g sin(θ)/(1+cos(θ))"
+   },
+   {
+    "id": "3",
+    "tex": "$N=mg$",
+    "grading": "N：m g"
+   },
+   {
+    "id": "4",
+    "tex": "$\\mu\\ge\\tan\\dfrac\\theta2$"
+   },
+   {
+    "id": "5",
+    "tex": "$5.3\\,\\mathrm N$",
+    "grading": "5.3 [N]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "円柱にはたらく力は，重力 $mg$（中心），張力 $T$（最上点，水平で斜面の上側向き），垂直抗力 $N$ と摩擦力 $f$（ともに P）．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(1) P のまわりでは $N$ と $f$ のモーメントは $0$．中心は P から斜面に垂直に $r$ の位置にあるので，重力の作用線と P の水平距離は $r\\sin\\theta$．最上点は P より $r(1+\\cos\\theta)$ だけ高く，水平な張力のうでの長さはこの高さである． \\[T\\cdot r(1+\\cos\\theta)=mg\\cdot r\\sin\\theta\\quad\\Longrightarrow\\quad T=\\frac{mg\\sin\\theta}{1+\\cos\\theta}=mg\\tan\\frac\\theta2\\]\n\n(2) 中心のまわりのモーメントを考える．重力と垂直抗力は中心を通る．張力は最上点で斜面の上側へ引くので，円柱を斜面の上側へ転がす向きに回そうとする．これを打ち消すには，P での摩擦力が斜面に沿って上向きでなければならない．大きさは $Tr=fr$ より $f=T=\\dfrac{mg\\sin\\theta}{1+\\cos\\theta}$．\n\n（確かめ：斜面に沿った力のつり合い $mg\\sin\\theta=T\\cos\\theta+f=T(1+\\cos\\theta)$ が成り立つ．）\n\n(3) 斜面に垂直な方向のつり合い．水平な張力は斜面に押しつける向きの成分 $T\\sin\\theta$ をもつ． \\[N=mg\\cos\\theta+T\\sin\\theta=mg\\cdot\\frac{\\cos\\theta(1+\\cos\\theta)+\\sin^2\\theta}{1+\\cos\\theta}=mg\\] 斜面上なのに $N=mg\\cos\\theta$ ではなく，ちょうど $mg$ になる（鉛直方向のつり合い $N\\cos\\theta+f\\sin\\theta=mg$ と水平方向のつり合い $N\\sin\\theta=T+f\\cos\\theta$ からも確かめられる）．\n\n(4) $f\\le\\mu N$ より \\[\\mu\\ge\\frac fN=\\frac{\\sin\\theta}{1+\\cos\\theta}=\\tan\\frac\\theta2\\] 糸がない場合（すべらずに静止するには $\\mu\\ge\\tan\\theta$ が必要だが，円柱は転がり落ちてしまう）と比べると，必要な摩擦係数は小さい．\n\n(5) $T=2.0\\times9.8\\times0.268\\approx5.3\\,\\mathrm N$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "接点のまわりのモーメントで張力，中心のまわりのモーメントで摩擦力の向きと大きさが決まる．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium",
+  "static-friction",
+  "normal-force"
+ ],
+ "laws": [
+  "torque-equilibrium",
+  "friction-law"
+ ],
+ "misconceptions": [
+  "MC-NORMAL-EQ-MG",
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "剛体",
+  "円柱",
+  "斜面",
+  "静止摩擦",
+  "力のモーメント"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "id": "ELM-LOR-403",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "円形の磁場領域による荷電粒子の偏向と集束（磁場のレンズ）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，$xy$ 平面（紙面）内で原点 O を中心とする半径 $a$ の円の内部にだけ，紙面の裏から表の向きに磁束密度 $B$ の一様な磁場がある．質量 $m$，電気量 $q\\ (>0)$ の粒子を，$x$ 軸の正の向きに速さ $v$ で，円の左側から磁場の領域に入射させる．重力は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "磁場の領域内での粒子の円運動の半径 $r$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$x$ 軸上を進んできた粒子（O に向かって入射した粒子）は，領域を出るときに入射の向きから角 $\\phi$ だけ向きを変えていた．$\\tan\\dfrac{\\phi}{2}$ を $m$，$q$，$B$，$a$，$v$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "以下では，$r=a$ となるように磁束密度を $B_0$ に調整する．$B_0$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$B=B_0$ のとき，(2) の粒子が磁場の領域内にいる時間 $t$ を $a$，$v$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$B=B_0$ のとき，直線 $y=b\\ (-a<b<a)$ 上を進んできた粒子が領域を出る点の座標を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(5) の結果は，この磁場の領域が粒子に対してどのようなはたらきをすることを意味するか．また，$B=B_0$ のままで，(5) の点から領域の内部に向けて，紙面内のいろいろな向きに速さ $v$ で同じ粒子を打ち出すと，領域を出た後の粒子はどのように進むか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "原点 O を中心とする半径 a の円の内部に、紙面の裏から表の向きの一様な磁場がある。円の左側から、x 軸の正の向きに速さ v の粒子が x 軸上やその上下を平行に入射する",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$r=\\dfrac{mv}{qB}$",
+    "grading": "r：m v/(q B)"
+   },
+   {
+    "id": "2",
+    "tex": "$\\tan\\dfrac\\phi2=\\dfrac{qBa}{mv}$",
+    "grading": "q B a/(m v)"
+   },
+   {
+    "id": "3",
+    "tex": "$B_0=\\dfrac{mv}{qa}$",
+    "grading": "B_0：m v/(q a)"
+   },
+   {
+    "id": "4",
+    "tex": "$t=\\dfrac{\\pi a}{2v}$",
+    "grading": "t：π a/(2v)"
+   },
+   {
+    "id": "5",
+    "tex": "$(0,\\ -a)$（$b$ によらない）",
+    "grading": "(0, -a)"
+   },
+   {
+    "id": "6",
+    "tex": "平行に入射した粒子をすべて1点 $(0,-a)$ に集める（凸レンズのような集束のはたらき）．逆に $(0,-a)$ からいろいろな向きに打ち出した粒子は，領域を出た後すべて $x$ 軸の正の向きに進む平行なビームになる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "正の粒子が $x$ 軸の正の向きに進むと，紙面の裏から表の磁場からのローレンツ力は $-y$ の向き．粒子は時計回りに円運動する．\n\n\\textbf{(1)} $m\\dfrac{v^2}{r}=qvB$ より $r=\\dfrac{mv}{qB}$．\n\n\\textbf{(2)} 入射点を P$(-a,0)$，出る点を Q，軌道の円の中心を C とする．O に向かって入射すると，速度は半径 OP の向きで，CP はこれに垂直．OP $\\perp$ CP，OQ $\\perp$ CQ で，CP $=$ CQ $=r$ なので，四角形 OPCQ は直角2つをもつ「たこ形」で，軌道は領域の境界に垂直に出る（O から遠ざかる向き）．\n速度の向きの変化 $\\phi$ は中心角 $\\angle$PCQ に等しく，直角三角形 OPC で $\\tan\\dfrac\\phi2=\\dfrac{\\mathrm{OP}}{\\mathrm{CP}}=\\dfrac ar=\\dfrac{qBa}{mv}$．\n\n\\textbf{(3)} $r=\\dfrac{mv}{qB_0}=a$ より $B_0=\\dfrac{mv}{qa}$．\n\n\\textbf{(4)} $\\tan\\dfrac\\phi2=1$ より $\\phi=\\dfrac\\pi2$．領域内で円周の $\\dfrac14$ を回るので，\n\\[t=\\frac{\\pi r/2}{v}=\\frac{\\pi a}{2v}\\]\n（周期 $\\dfrac{2\\pi m}{qB_0}$ の $\\dfrac14$ と同じ．）\n\n\\textbf{(5)} 入射点 P は円 $x^2+y^2=a^2$ 上で $y=b$ の点：P$(-\\sqrt{a^2-b^2},\\ b)$．時計回りの円運動の中心は速度の右側（$-y$ 側）に距離 $a$：C$(-\\sqrt{a^2-b^2},\\ b-a)$．\n出る点 Q は，Q が両方の円の上にあり Q $\\neq$ P となる点．OP $=$ PC $=$ CQ $=$ QO $=a$ なので，四角形 OPCQ はひし形で，$\\overrightarrow{\\mathrm{OQ}}=\\overrightarrow{\\mathrm{PC}}=(0,\\ -a)$．\nよって Q $=(0,\\ -a)$ で，$b$ によらない．（$b=0$ のときは (4) の $\\dfrac14$ 円で，確かに $(0,-a)$ に出る．）\n\n\\textbf{(6)} $r=a$ のとき，平行に入射した粒子はすべて境界上の1点 $(0,-a)$ に集まる．円形の磁場の領域は，平行な粒子線を1点に集める凸レンズのようなはたらきをする．\n逆に Q$(0,-a)$ から領域内に向けて打ち出した場合も，同じひし形の性質が使える．軌道の円の中心を C$'$，領域を出る点を P$'$ とすると，QO $=$ QC$'$ $=$ C$'$P$'$ $=$ P$'$O $=a$ なのでひし形で，$\\overrightarrow{\\mathrm{C'P'}}=\\overrightarrow{\\mathrm{QO}}=(0,\\ a)$．P$'$ は軌道の円の真上の点で，時計回りの運動はそこで $x$ 軸の正の向きを向く．よって打ち出しの向きによらず，出た後の粒子はすべて $x$ 軸の正の向きに進む平行なビームになる．\n（$r\\neq a$ ではひし形にならず，集束も平行化も起こらない．速さのそろった粒子に対して，$B_0=\\dfrac{mv}{qa}$ のときにだけ働くレンズである．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "円形の領域では「O に向かって入れば O から遠ざかる向きに出る」．$r=a$ のとき，O・入射点・軌道の中心・出る点がひし形をつくる．"
+ },
+ "concepts": [
+  "lorentz-force"
+ ],
+ "laws": [
+  "lorentz-force",
+  "cyclotron-motion"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ローレンツ力",
+  "荷電粒子",
+  "円運動",
+  "集束"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

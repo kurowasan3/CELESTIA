@@ -1,0 +1,173 @@
+{
+ "id": "MEC-REL-302",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-01",
+ "topic": "風の中を往復する飛行機の所要時間（風の向きによる違いと，どんな風でも往復は遅くなる理由）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "距離 $L$ 離れた2地点 A，B の間を，飛行機が往復する．飛行機の空気に対する速さは常に $c$ で，飛行機は A から B へ，B から A へ，それぞれ地面に対して直線 AB に沿って飛ぶように機首の向きを調整する．風は一様で，地面に対する風の速さは $w$（$0<w<c$）である．折り返しにかかる時間は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "無風のとき，往復にかかる時間 $T_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "風が A から B の向きに吹いているとき，往復にかかる時間 $T_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "風が直線 AB に垂直に吹いているとき，往復にかかる時間 $T_2$ を求めよ．また，このときの機首の向きと直線 AB のなす角を $\\alpha$ として，$\\sin\\alpha$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "風が，A から B の向きと角 $\\varphi$ をなす向きに吹いているとき（図），往復にかかる時間 $T(\\varphi)$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の結果が $\\varphi=0$ および $\\varphi=90^\\circ$ で (2)，(3) と一致することを確かめよ．さらに，$T_0$，$T_1$，$T_2$ の大小を調べ，「行きに追い風で得をした分，帰りの向かい風で損をするので，往復では風の影響は打ち消し合う」という考えの誤りを説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "距離 L 離れた地点 A、B。風は速さ w で、A から B の向きと角 φ をなす向きに吹いている",
+   "caption": ""
+  },
+  {
+   "id": "a-vel",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-vel.svg",
+   "alt": "風が AB に垂直なときの速度の三角形。空気に対する速度 c（大きさ c、機首の向き）と風の速度 w の和が、AB に沿った地面に対する速度 V になる",
+   "caption": "風に流される分を打ち消すように機首を風上へ傾ける：$\\vec V=\\vec c+\\vec w$",
+   "physics": {
+    "vectors": [
+     {
+      "name": "vel:c",
+      "dir_deg": 330
+     },
+     {
+      "name": "vel:w",
+      "dir_deg": 90
+     },
+     {
+      "name": "vel:V",
+      "dir_deg": 0
+     }
+    ],
+    "decompositions": [
+     {
+      "of": "vel:V",
+      "into": [
+       "vel:c",
+       "vel:w"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_0=\\dfrac{2L}{c}$",
+    "grading": "T_0：2L/c"
+   },
+   {
+    "id": "2",
+    "tex": "$T_1=\\dfrac{2Lc}{c^2-w^2}$",
+    "grading": "T_1：2L c/(c^2-w^2)"
+   },
+   {
+    "id": "3",
+    "tex": "$T_2=\\dfrac{2L}{\\sqrt{c^2-w^2}}$，$\\sin\\alpha=\\dfrac wc$",
+    "grading": "T_2：2L/sqrt(c^2-w^2) ; sin(α)：w/c"
+   },
+   {
+    "id": "4",
+    "tex": "$T(\\varphi)=\\dfrac{2L\\sqrt{c^2-w^2\\sin^2\\varphi}}{c^2-w^2}$",
+    "grading": "T：2L sqrt(c^2-w^2 sin(φ)^2)/(c^2-w^2)"
+   },
+   {
+    "id": "5",
+    "tex": "$T_1>T_2>T_0$．向かい風の区間の方が長い時間を過ごすので，往復では必ず遅くなる（$w>0$ ならどの向きの風でも $T>T_0$）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "地面に対する飛行機の速度 $\\vec V$ は，空気に対する速度 $\\vec c$（大きさ $c$，向きは機首の向き）と風の速度 $\\vec w$ の和：$\\vec V=\\vec c+\\vec w$．$\\vec V$ が直線 AB に沿うように $\\vec c$ の向きを選ぶ．\n\n\\textbf{(1)} $T_0=\\dfrac Lc+\\dfrac Lc=\\boldsymbol{\\dfrac{2L}{c}}$．\n\n\\textbf{(2)} 行きは追い風で $c+w$，帰りは向かい風で $c-w$：\n\\[ T_1=\\frac{L}{c+w}+\\frac{L}{c-w}=\\boldsymbol{\\frac{2Lc}{c^2-w^2}}. \\]\n\n\\textbf{(3)} 風に流されないよう，機首を風上側へ角 $\\alpha$ だけ傾ける．AB に垂直な成分が打ち消し合う条件 $c\\sin\\alpha=w$ より $\\sin\\alpha=\\boldsymbol{\\dfrac wc}$，AB 方向の速さは $c\\cos\\alpha=\\sqrt{c^2-w^2}$（行きも帰りも同じ）．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-vel"
+    },
+    {
+     "type": "text",
+     "tex": "\\[ T_2=\\boldsymbol{\\frac{2L}{\\sqrt{c^2-w^2}}}. \\]\n\n\\textbf{(4)} 風を AB 方向の成分 $w\\cos\\varphi$ と垂直な成分 $w\\sin\\varphi$ に分ける．垂直な成分を打ち消すように機首を傾けると，$\\vec c$ の AB 方向の成分は $\\sqrt{c^2-w^2\\sin^2\\varphi}$（$=s$ とおく）．地面に対する速さは，行き $s+w\\cos\\varphi$，帰り $s-w\\cos\\varphi$ なので\n\\[ T(\\varphi)=\\frac{L}{s+w\\cos\\varphi}+\\frac{L}{s-w\\cos\\varphi}=\\frac{2Ls}{s^2-w^2\\cos^2\\varphi}=\\boldsymbol{\\frac{2L\\sqrt{c^2-w^2\\sin^2\\varphi}}{c^2-w^2}}. \\]\n（分母は $s^2-w^2\\cos^2\\varphi=c^2-w^2\\sin^2\\varphi-w^2\\cos^2\\varphi=c^2-w^2$．）\n\n\\textbf{(5)} $\\varphi=0$ で $\\sqrt{c^2}=c$ となり $T_1$ に，$\\varphi=90^\\circ$ で $\\dfrac{2L\\sqrt{c^2-w^2}}{c^2-w^2}=\\dfrac{2L}{\\sqrt{c^2-w^2}}$ となり $T_2$ に一致する．\n大小は\n\\[ \\frac{T_1}{T_0}=\\frac{1}{1-w^2/c^2},\\qquad \\frac{T_2}{T_0}=\\frac{1}{\\sqrt{1-w^2/c^2}} \\]\nで，$0<1-\\dfrac{w^2}{c^2}<1$ より $\\boldsymbol{T_1>T_2>T_0}$．一般の $\\varphi$ でも $\\sqrt{c^2-w^2\\sin^2\\varphi}\\ge\\sqrt{c^2-w^2}$ と $c^2-w^2<c^2$ から $T(\\varphi)\\ge T_2>T_0$ で，風が吹けば往復は必ず遅くなる．\n「打ち消し合う」という考えの誤りは，速さの増減が同じでも，向かい風で遅い区間には長い時間がかかり，追い風で速い区間は短い時間で終わることを見落としている点にある．時間で平均した速さは $\\dfrac{2L}{T_1}=\\dfrac{c^2-w^2}{c}<c$ となる．垂直な風の場合も，風に流されないよう機首を傾ける分だけ，進みたい向きの速さが $c$ より小さくなる．\n（この結果は，光の速さの「エーテルの風」による違いを調べたマイケルソン・モーリーの実験の考え方と同じ形をしている．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "地面に対する速度＝空気に対する速度＋風の速度．行きと帰りの時間を別々に求めて足す．速さの算術平均ではなく，時間がかかる区間の重みが大きい．"
+ },
+ "concepts": [
+  "kinematics-components"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "相対速度",
+  "速度の合成",
+  "往復",
+  "極限・場合の確認"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

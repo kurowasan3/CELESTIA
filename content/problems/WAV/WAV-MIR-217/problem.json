@@ -1,0 +1,126 @@
+{
+ "id": "WAV-MIR-217",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "平面鏡で全身を見るのに必要な鏡の長さと位置（反射の法則）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "身長 $1.60\\,\\mathrm m$ の人が，鉛直な壁にはった平面鏡の前に，壁から $2.0\\,\\mathrm m$ 離れてまっすぐに立っている．目の高さは床から $1.50\\,\\mathrm m$ である．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "この人と，鏡に映ったこの人の像との距離を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "頭の先から足の先まで，全身を鏡で見るために必要な鏡の（縦の）長さの最小値を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の長さの鏡を使うとき，鏡の下端を床から何 $\\mathrm m$ の高さにすればよいか．"
+     },
+     {
+      "id": "4",
+      "tex": "この人が鏡から $4.0\\,\\mathrm m$ の位置まで下がると，全身を見るのに必要な鏡の長さはどうなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "a-rays",
+   "role": "answer",
+   "kind": "ray",
+   "format": "svg",
+   "src": "a-rays.svg",
+   "alt": "鏡を横から見た図。人の頭の先と足の先から出た光が鏡で反射して目に入る。反射する点は床から 1.55 m と 0.75 m で、鏡の後方には同じ大きさの像ができる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$4.0\\,\\mathrm m$",
+    "grading": "4 [m]"
+   },
+   {
+    "id": "2",
+    "tex": "$0.80\\,\\mathrm m$",
+    "grading": "0.8 [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$0.75\\,\\mathrm m$",
+    "grading": "0.75 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "変わらない（$0.80\\,\\mathrm m$）",
+    "grading": "0.8 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 平面鏡の像は，鏡に対して物体と対称な位置（鏡の後方 $2.0\\,\\mathrm m$）にできる．人と像の距離は $2.0+2.0=\\boldsymbol{4.0\\,\\mathrm m}$．\n\n(2)(3) 足の先から出た光が鏡で反射して目に入るとき，反射の法則（入射角 $=$ 反射角）から，反射する点は足の先と目の高さのちょうど中間，$\\dfrac{0+1.50}2=0.75\\,\\mathrm m$ にある．同様に，頭の先からの光は $\\dfrac{1.60+1.50}2=1.55\\,\\mathrm m$ で反射する．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-rays"
+    },
+    {
+     "type": "text",
+     "tex": "鏡はこの2点の間にあればよいので，長さは $1.55-0.75=\\boldsymbol{0.80\\,\\mathrm m}$（身長のちょうど半分），下端の高さは $\\boldsymbol{0.75\\,\\mathrm m}$．\n像を使って考えると，目と像の頭・足を結ぶ直線が鏡の面を横切る点で，鏡は人と像のちょうど中間にあるので，像の大きさの半分の範囲が必要になる．\n\n(4) 反射点の高さは「足（頭）と目の中間」で，鏡までの距離を含まない．必要な長さは\\textbf{変わらず} $\\boldsymbol{0.80\\,\\mathrm m}$．離れても鏡に映る範囲は広がらない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "平面鏡の像は鏡について対称な位置にできる．目に届く光の反射点は，反射の法則から「物体の点と目の高さの中間」になる．"
+ },
+ "concepts": [
+  "refraction-light"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "平面鏡",
+  "反射の法則",
+  "像"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

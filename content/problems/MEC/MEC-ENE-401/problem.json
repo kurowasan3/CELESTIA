@@ -1,0 +1,120 @@
+{
+ "id": "MEC-ENE-401",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "一定の速さで荷物を引き上げるモーターの仕事と仕事率（仕事率＝力×速さ，効率）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "calc",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "モーターで糸を巻き取り，質量 $50\\,\\mathrm{kg}$ の荷物を鉛直上向きに一定の速さ $0.40\\,\\mathrm{m/s}$ で $10\\,\\mathrm m$ 引き上げた．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，糸の質量と空気の抵抗は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "糸が荷物を引く力の大きさ $T$ は何 $\\mathrm N$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "引き上げる間に，糸の張力が荷物にした仕事 $W$ は何 $\\mathrm J$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "引き上げにかかった時間 $t$ は何 $\\mathrm s$ か．また，張力の仕事率 $P$ は何 $\\mathrm W$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "このモーターは，消費した電力のうち $80\\,\\%$ を張力の仕事率に変えている．モーターの消費電力は何 $\\mathrm W$ か．"
+     },
+     {
+      "id": "5",
+      "tex": "同じ荷物を，一定の速さ $0.80\\,\\mathrm{m/s}$ で同じ高さだけ引き上げた．張力がした仕事と，張力の仕事率は，それぞれ (2)，(3) の何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T=4.9\\times10^2\\,\\mathrm N$",
+    "grading": "T：490 [N]"
+   },
+   {
+    "id": "2",
+    "tex": "$W=4.9\\times10^3\\,\\mathrm J$",
+    "grading": "W：4900 [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$t=25\\,\\mathrm s$，$P=196\\,\\mathrm W$（約 $2.0\\times10^2\\,\\mathrm W$）",
+    "grading": "t：25 [s] ; P：196 [W]"
+   },
+   {
+    "id": "4",
+    "tex": "$245\\,\\mathrm W$",
+    "grading": "245 [W]"
+   },
+   {
+    "id": "5",
+    "tex": "仕事は $1$ 倍（変わらない），仕事率は $2$ 倍",
+    "grading": "仕事：1倍 ; 仕事率：2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 荷物は一定の速さで動くので，加速度は $0$．張力と重力がつり合う：\\[T=mg=50\\times9.8=4.9\\times10^2\\,\\mathrm N\\]\n\n(2) 張力の向きと移動の向きは同じなので\\[W=Th=490\\times10=4.9\\times10^3\\,\\mathrm J\\]\n\n(3) $t=\\dfrac{10}{0.40}=25\\,\\mathrm s$．仕事率は\\[P=\\frac{W}{t}=\\frac{4900}{25}=196\\,\\mathrm W\\] これは $P=Tv=490\\times0.40=196\\,\\mathrm W$ としても求まる（一定の力 $F$ が速さ $v$ で動く物体にする仕事率は $Fv$）．\n\n(4) 消費電力を $P_0$ とすると $0.80P_0=196$ より $P_0=245\\,\\mathrm W$．\n\n(5) 一定の速さなら張力は $mg$ のままで，移動距離も同じなので，仕事 $W=mgh$ は変わらない（$1$ 倍）．かかる時間は半分になるので，仕事率 $P=Tv$ は $2$ 倍．同じ仕事でも，速く済ませるほど大きな仕事率が必要になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "一定の速さ → 力はつり合い（張力＝重力）．仕事は「力×移動距離」で速さによらず，仕事率は「仕事÷時間＝力×速さ」．"
+ },
+ "concepts": [
+  "work-energy",
+  "equilibrium"
+ ],
+ "laws": [
+  "work-energy-theorem"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "仕事",
+  "仕事率",
+  "効率"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

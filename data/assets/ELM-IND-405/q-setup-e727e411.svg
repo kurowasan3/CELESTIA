@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 335" width="520" height="335" font-family="'Times New Roman', serif">
+<polyline points="150,40 234,40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="234" y1="24" x2="234" y2="56" stroke="currentColor" stroke-width="2.4"/>
+<line x1="246" y1="24" x2="246" y2="56" stroke="currentColor" stroke-width="2.4"/>
+<polyline points="246,40 330,40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="240" y="14" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">C</text>
+<polyline points="150,40 150,290" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="330,40 330,290" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="185" y="80" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="185" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="185" y="240" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="225" y="80" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="225" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="225" y="240" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="265" y="80" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="265" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="265" y="240" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="305" y="80" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="305" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="305" y="240" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<line x1="138" y1="180" x2="342" y2="180" stroke="currentColor" stroke-width="2.4"/>
+<text x="240" y="196" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">導体棒（質量 m）</text>
+<line x1="150" y1="305" x2="330" y2="305" stroke="currentColor" stroke-width="1.2"/>
+<line x1="150" y1="298" x2="150" y2="312" stroke="currentColor" stroke-width="1.2"/>
+<line x1="330" y1="298" x2="330" y2="312" stroke="currentColor" stroke-width="1.2"/>
+<text x="240" y="320" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">l</text>
+<g class="f-ink" data-dir="270" data-len="50">
+<line x1="390" y1="120" x2="390" y2="160" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="390,170 385.34,160 394.66,160" fill="currentColor"/>
+<text x="402" y="172" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">g</text>
+</g>
+<text x="360" y="250" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">磁場 B（紙面の表から裏）</text>
+</svg>

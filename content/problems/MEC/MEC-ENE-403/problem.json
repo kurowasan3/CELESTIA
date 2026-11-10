@@ -1,0 +1,138 @@
+{
+ "id": "MEC-ENE-403",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "ばねの伸びと力の測定グラフから求める弾性力の仕事（面積で考える仕事と打ち出しの速さ）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 9,
+ "format": [
+  "experiment",
+  "graph-read",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ばねの一端を固定し，他端をばねばかりで引いて，ばねの伸び $x$ と引く力の大きさ $F$ の関係を測定した．図の点は測定値で，直線は原点を通り測定値に最もよく合うように引いたものである．以下では，ばねは測定の範囲を超えてもフックの法則にしたがうものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "このばねのばね定数 $k$ は何 $\\mathrm{N/m}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "ばねを自然長から $0.10\\,\\mathrm m$ だけゆっくり伸ばすのに必要な仕事 $W_1$ は何 $\\mathrm J$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "さらに，伸び $0.10\\,\\mathrm m$ から $0.20\\,\\mathrm m$ までゆっくり伸ばすのに必要な仕事 $W_2$ は何 $\\mathrm J$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "このばねをなめらかな水平面上に置いて一端を壁に固定し，他端に質量 $0.10\\,\\mathrm{kg}$ の物体を押し当てて，ばねを自然長から $0.10\\,\\mathrm m$ 縮めた．静かに手をはなすと，物体はばねが自然長になったところでばねから離れた．離れるときの物体の速さ $v$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) で，ばねを $0.20\\,\\mathrm m$ 縮めてから手をはなすと，ばねから離れるときの速さは (4) の何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "ばねの伸び x と引く力 F の測定値のグラフ。点は x=0.02 m で 0.78 N、0.04 m で 1.62 N、0.06 m で 2.38 N、0.08 m で 3.22 N、0.10 m で 4.00 N。原点を通る直線が引かれ、x=0.10 m で F=4.0 N を通る",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$k=40\\,\\mathrm{N/m}$",
+    "grading": "k：40 [N/m]"
+   },
+   {
+    "id": "2",
+    "tex": "$W_1=0.20\\,\\mathrm J$",
+    "grading": "W_1：0.2 [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$W_2=0.60\\,\\mathrm J$",
+    "grading": "W_2：0.6 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$v=2.0\\,\\mathrm{m/s}$",
+    "grading": "v：2 [m/s]"
+   },
+   {
+    "id": "5",
+    "tex": "$2$ 倍",
+    "grading": "2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 直線は $x=0.10\\,\\mathrm m$ で $F=4.0\\,\\mathrm N$ を通るので，傾きは\\[k=\\frac{4.0}{0.10}=40\\,\\mathrm{N/m}\\] 1つの測定値だけで割るより，直線の傾きを使うほうが測定のばらつきの影響を受けにくい．\n\n(2) ゆっくり伸ばすとき，手の力は弾性力とつり合い $F=kx$．$F$ が変化するので，仕事は $F$–$x$ グラフと $x$ 軸で囲まれた面積で求める：\\[W_1=\\frac12\\times0.10\\times4.0=0.20\\,\\mathrm J\\quad\\left(=\\frac12kx^2\\right)\\]\n\n(3) $x=0.10$ から $0.20\\,\\mathrm m$ の部分は台形（$F$ は $4.0\\,\\mathrm N$ から $8.0\\,\\mathrm N$）：\\[W_2=\\frac12\\times(4.0+8.0)\\times0.10=0.60\\,\\mathrm J\\] $\\dfrac12k(0.20^2-0.10^2)$ と同じ．同じ $0.10\\,\\mathrm m$ でも，伸びが大きいところほど力が大きいので，必要な仕事は $3$ 倍になる．\n\n(4) ばねに蓄えた弾性エネルギー $\\dfrac12kx^2=0.20\\,\\mathrm J$ がすべて物体の運動エネルギーになる：\\[\\frac12\\times0.10\\times v^2=0.20\\quad\\Longrightarrow\\quad v=2.0\\,\\mathrm{m/s}\\]\n\n(5) 縮みを $2$ 倍にすると弾性エネルギーは $2^2=4$ 倍（$0.20+0.60=0.80\\,\\mathrm J$）．$v\\propto\\sqrt{\\text{エネルギー}}$ なので，速さは $\\sqrt4=2$ 倍．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "変化する力の仕事は $F$–$x$ グラフの面積．ばねでは三角形の面積 $\\dfrac12kx^2$ が弾性エネルギーで，縮みに比例するのは速さ（エネルギーは2乗に比例）．"
+ },
+ "concepts": [
+  "work-energy",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "hooke-law",
+  "work-energy-theorem",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "弾性エネルギー",
+  "グラフ読解",
+  "実験",
+  "フックの法則"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

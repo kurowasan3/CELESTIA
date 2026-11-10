@@ -1,0 +1,201 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  430,
+  175
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    30,
+    50
+   ],
+   "to": [
+    170,
+    50
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    130
+   ],
+   "to": [
+    170,
+    130
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     30,
+     52
+    ],
+    [
+     100,
+     52
+    ],
+    [
+     100,
+     128
+    ],
+    [
+     30,
+     128
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "text",
+   "at": [
+    65,
+    90
+   ],
+   "text": "εᵣ",
+   "italic": false,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    100,
+    160
+   ],
+   "text": "図1",
+   "italic": false,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    100,
+    30
+   ],
+   "text": "面積の半分に厚さ d",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    180,
+    50
+   ],
+   "to": [
+    180,
+    130
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    188,
+    90
+   ],
+   "text": "d",
+   "italic": true,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    240,
+    50
+   ],
+   "to": [
+    380,
+    50
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    240,
+    130
+   ],
+   "to": [
+    380,
+    130
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     240,
+     90
+    ],
+    [
+     380,
+     90
+    ],
+    [
+     380,
+     128
+    ],
+    [
+     240,
+     128
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "text",
+   "at": [
+    310,
+    109
+   ],
+   "text": "εᵣ",
+   "italic": false,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    310,
+    160
+   ],
+   "text": "図2",
+   "italic": false,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    310,
+    30
+   ],
+   "text": "全面に厚さ d/2",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    390,
+    109
+   ],
+   "text": "d/2",
+   "italic": true,
+   "size": 14,
+   "anchor": "start"
+  }
+ ]
+}

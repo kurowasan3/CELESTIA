@@ -1,0 +1,129 @@
+{
+ "id": "ATM-FIS-204",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "ウラン 235 の核分裂で得られるエネルギーと発電所の燃料",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "calc",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ウラン 235 の原子核 $^{235}_{\\ 92}\\mathrm U$ に遅い中性子を当てると，例えば \\[ ^{235}_{\\ 92}\\mathrm U+{}^1_0\\mathrm n\\ \\longrightarrow\\ {}^{141}_{\\ 56}\\mathrm{Ba}+{}^{92}_{36}\\mathrm{Kr}+x\\,{}^1_0\\mathrm n \\] のように核分裂し，1回あたり約 $200\\ \\mathrm{MeV}$ のエネルギーが放出される．$1\\ \\mathrm{eV}=1.6\\times10^{-19}\\ \\mathrm J$，真空中の光速を $c=3.0\\times10^8\\ \\mathrm{m/s}$，アボガドロ定数を $6.0\\times10^{23}\\ /\\mathrm{mol}$ とし，$^{235}\\mathrm U$ のモル質量を $235\\ \\mathrm{g/mol}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "反応式の $x$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "核分裂1回で失われる質量（質量欠損の増加分）は何 kg か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$1.0\\ \\mathrm g$ の $^{235}\\mathrm U$ がすべて核分裂すると，何 J のエネルギーが得られるか．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) のエネルギーを石炭の燃焼（$1\\ \\mathrm{kg}$ あたり $3.0\\times10^7\\ \\mathrm J$）で得るには，何 kg の石炭が必要か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "電気出力 $1.0\\times10^9\\ \\mathrm W$ の原子力発電所が，核分裂のエネルギーの $\\dfrac13$ を電気に変えるとする．1 日（$8.64\\times10^4\\ \\mathrm s$）に核分裂する $^{235}\\mathrm U$ は何 kg か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "6",
+      "tex": "核分裂で中性子が $x$ 個出ることは，原子炉を運転するうえでどのような意味をもつか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$x=3$",
+    "grading": "3"
+   },
+   {
+    "id": "2",
+    "tex": "$3.6\\times10^{-28}\\ \\mathrm{kg}$",
+    "grading": "3.6*10^(-28) [kg]"
+   },
+   {
+    "id": "3",
+    "tex": "$8.2\\times10^{10}\\ \\mathrm J$",
+    "grading": "8.2*10^10 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$2.7\\times10^3\\ \\mathrm{kg}$",
+    "grading": "2.7*10^3 [kg]"
+   },
+   {
+    "id": "5",
+    "tex": "$3.2\\ \\mathrm{kg}$",
+    "grading": "3.2 [kg]"
+   },
+   {
+    "id": "6",
+    "tex": "出た中性子が次の $^{235}\\mathrm U$ を分裂させるので，反応が次々に続く（連鎖反応）．原子炉では，平均してちょうど1個の中性子が次の分裂を起こすように，制御棒などで中性子の数を調節する（臨界）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 質量数：$235+1=141+92+x$ より $x=3$．（原子番号：$92=56+36$ で保存している．）\n\n(2) $\\Delta m=\\dfrac E{c^2}=\\dfrac{200\\times10^6\\times1.6\\times10^{-19}}{(3.0\\times10^8)^2}=\\dfrac{3.2\\times10^{-11}}{9.0\\times10^{16}}=3.56\\times10^{-28}\\fallingdotseq3.6\\times10^{-28}\\ \\mathrm{kg}$（陽子の質量の約 $\\dfrac15$）．\n\n(3) 原子核の数は $\\dfrac{1.0}{235}\\times6.0\\times10^{23}=2.55\\times10^{21}$ 個．$2.55\\times10^{21}\\times3.2\\times10^{-11}=8.17\\times10^{10}\\fallingdotseq8.2\\times10^{10}\\ \\mathrm J$．\n\n(4) $\\dfrac{8.17\\times10^{10}}{3.0\\times10^7}=2.7\\times10^3\\ \\mathrm{kg}$．わずか $1\\ \\mathrm g$ のウランが約 $3$ トンの石炭に相当する．化学反応（燃焼）は原子の外側の電子のエネルギーの変化で 1 回あたり数 eV，核反応は 1 回あたり数百万 eV 以上なので，桁違いになる．\n\n(5) 核分裂で必要な熱出力は $3.0\\times10^9\\ \\mathrm W$．1 日では $3.0\\times10^9\\times8.64\\times10^4=2.59\\times10^{14}\\ \\mathrm J$．$\\dfrac{2.59\\times10^{14}}{8.17\\times10^{10}}=3.2\\times10^3\\ \\mathrm g=3.2\\ \\mathrm{kg}$．\n\n(6) 1回の核分裂で中性子が平均 2〜3 個出るので，それが次の核分裂を起こせば，反応が連鎖的に続く（連鎖反応）．増えすぎると反応が急激に進むので，原子炉では中性子を吸収する制御棒などで，1回の分裂あたり平均ちょうど1個の中性子が次の分裂を起こす状態（臨界）に保つ．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "核反応の前後で質量数と原子番号は保存．放出エネルギーは質量欠損 $\\Delta mc^2$．1 g あたりのエネルギーは「原子核の数 × 1回あたりのエネルギー」．"
+ },
+ "concepts": [
+  "mass-energy",
+  "nuclear-decay"
+ ],
+ "laws": [
+  "mass-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "核分裂",
+  "質量欠損",
+  "連鎖反応",
+  "原子力発電"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

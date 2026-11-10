@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200" font-family="'Times New Roman', serif">
+<line x1="20" y1="180" x2="380" y2="180" stroke="currentColor" stroke-width="2"/>
+<polygon points="20,180 380,180 380,187 20,187" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(120,172) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-40" y="-36" width="80" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<circle cx="92" cy="175" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="148" cy="175" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<g transform="translate(260,172) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-40" y="-36" width="80" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<circle cx="232" cy="175" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="288" cy="175" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<polyline points="160,154 167.2,154 169.1,161 172.9,147 176.7,161 180.5,147 184.3,161 188.1,147 191.9,161 195.7,147 199.5,161 203.3,147 207.1,161 210.9,147 212.8,154 220,154" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<line x1="150" y1="130" x2="230" y2="130" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="190" y="118" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">糸</text>
+</svg>

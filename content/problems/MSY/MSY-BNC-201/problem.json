@@ -1,0 +1,126 @@
+{
+ "id": "MSY-BNC-201",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "床ではね返るボール：自由落下と反発係数",
+ "course": "物理",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "高さ $2.5\\,\\mathrm m$ の位置から小さなボールを静かに放したところ，ボールは水平な床ではね返った．ボールと床の間の反発係数を $0.60$，重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，空気抵抗は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "床に当たる直前のボールの速さは何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "はね返った直後のボールの速さは何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "はね返ったボールが達する最高点の床からの高さは何 $\\mathrm m$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "1回目の衝突で失われた力学的エネルギーは，衝突直前の運動エネルギーの何 $\\%$ か．また，このエネルギーはどうなったと考えられるか．"
+     },
+     {
+      "id": "5",
+      "tex": "2回目にはね返った後の最高点の高さは何 $\\mathrm m$ か．有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$7.0\\,\\mathrm{m/s}$",
+    "grading": "7 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$4.2\\,\\mathrm{m/s}$",
+    "grading": "4.2 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$0.90\\,\\mathrm m$",
+    "grading": "0.9 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$64\\,\\%$．ボールや床の変形にともなう熱や音などになった．",
+    "grading": "割合（%）：64"
+   },
+   {
+    "id": "5",
+    "tex": "$0.32\\,\\mathrm m$",
+    "grading": "0.32 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 自由落下：$v^2=2gh$ より $v=\\sqrt{2\\times9.8\\times2.5}=\\sqrt{49}=7.0\\,\\mathrm{m/s}$．\n\n(2) 床は動かないので，はね返った直後の速さは $ev=0.60\\times7.0=4.2\\,\\mathrm{m/s}$．\n\n(3) $h_1=\\dfrac{(ev)^2}{2g}=\\dfrac{4.2^2}{2\\times9.8}=0.90\\,\\mathrm m$．$h_1=e^2h$ の関係がある．\n\n(4) 運動エネルギーは速さの2乗に比例するので，衝突直後は直前の $e^2=0.36$ 倍．失われたのは $1-e^2=0.64$，つまり $64\\,\\%$．衝突の前後で運動エネルギーが保存するのは $e=1$（弾性衝突）のときだけで，ふつうは一部が熱や音などに変わる．\n\n(5) 1回はね返るごとに最高点の高さは $e^2$ 倍になる．$h_2=e^4h=0.60^4\\times2.5\\approx0.32\\,\\mathrm m$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "床との衝突では，はね返る速さが $e$ 倍，最高点の高さが $e^2$ 倍になる．"
+ },
+ "concepts": [
+  "restitution",
+  "uniform-acceleration",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "restitution",
+  "uniform-acceleration-eq",
+  "energy-conservation"
+ ],
+ "misconceptions": [
+  "MC-KE-ALWAYS-CONSERVED"
+ ],
+ "tags": [
+  "反発係数",
+  "自由落下",
+  "力学的エネルギー",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

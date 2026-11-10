@@ -1,0 +1,137 @@
+{
+ "id": "THM-HET-202",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-01",
+ "topic": "氷を一定の電力で加熱したときの温度変化のグラフ（融解中に温度が上がらない理由）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "graph-read",
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$-20^\\circ\\mathrm C$ の氷 $200\\,\\mathrm g$ を容器に入れ，一定の電力のヒーターで加熱したところ，温度が図のように変化した（A→B→C→D→E）．ヒーターで発生した熱はすべて容器の中の物質に与えられ，容器の熱容量は無視できる．水の比熱を $4.2\\,\\mathrm{J/(g\\cdot K)}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "区間 AB，BC，CD，DE のそれぞれで，容器の中の物質はどのような状態か．"
+     },
+     {
+      "id": "2",
+      "tex": "区間 BC では加熱し続けているのに温度が上がらない．このとき加えた熱は何に使われているか．"
+     },
+     {
+      "id": "3",
+      "tex": "区間 CD のグラフから，ヒーターの電力 $P$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "氷 $1\\,\\mathrm g$ をとかすのに必要な熱量（融解熱）は何 $\\mathrm J$ か．"
+     },
+     {
+      "id": "5",
+      "tex": "氷の比熱は何 $\\mathrm{J/(g\\cdot K)}$ か．また，区間 AB の傾きが区間 CD の傾きより大きい理由を答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "温度–時間のグラフ。A（0 s，−20℃）から B（20 s，0℃）へ直線で上がり，B から C（180 s，0℃）まで一定，C から D（380 s，100℃）へ直線で上がり，D から E（440 s，100℃）まで一定",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "AB：氷（固体）だけ．BC：氷と水が混じっている（融解中）．CD：水（液体）だけ．DE：水と水蒸気（沸騰中）．"
+   },
+   {
+    "id": "2",
+    "tex": "氷をとかす（固体から液体に変える）ために使われている（融解熱）．粒子の結びつきを断ち切るのに使われ，熱運動を激しくする（温度を上げる）のには使われない．"
+   },
+   {
+    "id": "3",
+    "tex": "$P=420\\,\\mathrm W$",
+    "grading": "P：420 [W]"
+   },
+   {
+    "id": "4",
+    "tex": "$336\\,\\mathrm J$（$3.4\\times10^2\\,\\mathrm{J/g}$）",
+    "grading": "336"
+   },
+   {
+    "id": "5",
+    "tex": "$2.1\\,\\mathrm{J/(g\\cdot K)}$．同じ電力で加熱しても，氷の比熱が水より小さく，$1\\,\\mathrm K$ 上げるのに必要な熱量が少ないから．",
+    "grading": "2.1"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) AB は $0^\\circ\\mathrm C$ に向かって温度が上がる区間で，氷だけ．BC は $0^\\circ\\mathrm C$ で温度が一定なので氷がとけている（氷と水が共存）．CD は水が温まる区間，DE は $100^\\circ\\mathrm C$ で一定なので沸騰している（水と水蒸気が共存）．\n\n(2) 融解中に加えた熱は，氷の結晶の中で粒子を結びつけている状態をくずすのに使われる．「熱を加えれば温度は必ず上がる」わけではない．\n\n(3) CD は $180\\,\\mathrm s$ から $380\\,\\mathrm s$ の $200\\,\\mathrm s$ で，水 $200\\,\\mathrm g$ が $100\\,\\mathrm K$ 上がった．必要な熱量は $200\\times4.2\\times100=8.4\\times10^4\\,\\mathrm J$ なので \\[P=\\frac{8.4\\times10^4}{200}=420\\,\\mathrm W\\]\n\n(4) BC は $160\\,\\mathrm s$ 続いたので，氷 $200\\,\\mathrm g$ をとかした熱量は $420\\times160=6.72\\times10^4\\,\\mathrm J$．$1\\,\\mathrm g$ あたり $\\dfrac{6.72\\times10^4}{200}=336\\,\\mathrm J$．\n\n(5) AB は $20\\,\\mathrm s$ で $20\\,\\mathrm K$ 上がった．与えた熱量は $420\\times20=8400\\,\\mathrm J$ なので，比熱は $\\dfrac{8400}{200\\times20}=2.1\\,\\mathrm{J/(g\\cdot K)}$．同じ電力（単位時間に同じ熱量）では，温度の上がる速さは比熱に反比例する．氷の比熱は水の約半分なので，AB の傾きは CD の約 $2$ 倍になる（AB：$1.0\\,\\mathrm{K/s}$，CD：$0.50\\,\\mathrm{K/s}$）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "一定の電力では「時間 ∝ 与えた熱量」．温度が一定の区間は状態変化に熱が使われている．傾きは比熱に反比例する．"
+ },
+ "concepts": [
+  "heat-temperature"
+ ],
+ "laws": [
+  "heat-capacity",
+  "joule-heat"
+ ],
+ "misconceptions": [
+  "MC-HEAT-TEMP"
+ ],
+ "tags": [
+  "加熱曲線",
+  "融解熱",
+  "比熱",
+  "グラフ",
+  "状態変化"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

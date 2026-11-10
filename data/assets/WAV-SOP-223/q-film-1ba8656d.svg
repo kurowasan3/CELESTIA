@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" width="360" height="260" font-family="'Times New Roman', serif">
+<line x1="100" y1="30" x2="100" y2="220" stroke="currentColor" stroke-width="2.4"/>
+<line x1="100" y1="30" x2="260" y2="30" stroke="currentColor" stroke-width="2.4"/>
+<line x1="260" y1="30" x2="260" y2="220" stroke="currentColor" stroke-width="2.4"/>
+<line x1="100" y1="220" x2="260" y2="220" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="100,30 260,30 260,220 100,220" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="180" y1="10" x2="180" y2="30" stroke="currentColor" stroke-width="1.2"/>
+<text x="86" y="30" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">上端</text>
+<g class="f-ink" data-dir="270" data-len="150">
+<line x1="290" y1="40" x2="290" y2="180" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="290,190 285.34,180 294.66,180" fill="currentColor"/>
+</g>
+<text x="304" y="190" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">y</text>
+<text x="296" y="30" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">0</text>
+<text x="180" y="245" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">針金の枠に張ったせっけん膜（正面から見た図）</text>
+<line x1="100" y1="30" x2="260" y2="30" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100" y1="60" x2="260" y2="60" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100" y1="90" x2="260" y2="90" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100" y1="120" x2="260" y2="120" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100" y1="150" x2="260" y2="150" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100" y1="180" x2="260" y2="180" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100" y1="210" x2="260" y2="210" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+</svg>

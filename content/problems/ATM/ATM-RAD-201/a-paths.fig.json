@@ -1,0 +1,233 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  245
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     160,
+     205
+    ],
+    [
+     192,
+     205
+    ],
+    [
+     192,
+     170
+    ],
+    [
+     208,
+     170
+    ],
+    [
+     208,
+     205
+    ],
+    [
+     240,
+     205
+    ],
+    [
+     240,
+     235
+    ],
+    [
+     160,
+     235
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "dot",
+   "at": [
+    200,
+    196
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    222
+   ],
+   "text": "鉛の容器と線源",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    70,
+    50
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    70,
+    110
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    50
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    110
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    50
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    110
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    50
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    110
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    70,
+    165
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    165
+   ],
+   "text": "⊗",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    16
+   ],
+   "text": "磁場（紙面の表から裏）",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    170
+   ],
+   "to": [
+    200,
+    35
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "arc",
+   "at": [
+    -120,
+    170
+   ],
+   "r": 320,
+   "from": 0,
+   "to": 24
+  },
+  {
+   "t": "arc",
+   "at": [
+    285,
+    170
+   ],
+   "r": 85,
+   "from": 180,
+   "to": 95
+  },
+  {
+   "t": "text",
+   "at": [
+    166.335,
+    31.844
+   ],
+   "text": "α"
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    32
+   ],
+   "text": "γ",
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    287.592,
+    79.323
+   ],
+   "text": "β",
+   "anchor": "start"
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 310" width="380" height="310" font-family="'Times New Roman', serif">
+<circle cx="160" cy="160" r="95" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="160" cy="160" r="3" fill="currentColor"/>
+<text x="150" y="174" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<line x1="160" y1="160" x2="213.62" y2="115" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="213.62" cy="115" r="3" fill="currentColor"/>
+<text x="227.62" y="119" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">棒</text>
+<path d="M190,160 A30,30 0 0 0 182.98,140.72" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="178" y="124" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.10 m</text>
+<line x1="40" y1="30" x2="280" y2="30" stroke="currentColor" stroke-width="2.4"/>
+<text x="292" y="30" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">スクリーン</text>
+<line x1="213.62" y1="111" x2="213.62" y2="34" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="213.62" cy="30" r="4" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<text x="221.62" y="18" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">影</text>
+<line x1="90" y1="22" x2="90" y2="38" stroke="currentColor" stroke-width="1.2"/>
+<line x1="230" y1="22" x2="230" y2="38" stroke="currentColor" stroke-width="1.2"/>
+<path d="M215,64.74 A110,110 0 0 0 140.9,51.67" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<g class="f-ink" data-dir="190" data-len="14">
+<line x1="141.2" y1="51.67" x2="132.24" y2="53.25" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="127.41,54.1 131.84,51 132.64,55.5" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="32">
+<line x1="80" y1="300" x2="80" y2="278" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="80,268 84.66,278 75.34,278" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="32">
+<line x1="120" y1="300" x2="120" y2="278" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="120,268 124.66,278 115.34,278" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="32">
+<line x1="200" y1="300" x2="200" y2="278" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="200,268 204.66,278 195.34,278" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="32">
+<line x1="240" y1="300" x2="240" y2="278" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="240,268 244.66,278 235.34,278" fill="currentColor"/>
+</g>
+<text x="300" y="290" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">平行光線</text>
+</svg>

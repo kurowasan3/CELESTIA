@@ -1,0 +1,187 @@
+{
+ "id": "ELM-CAP-308",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "コンデンサーの放電の片対数グラフから電気容量を測る（電圧計の内部抵抗による補正）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "experiment",
+  "graph-read",
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電気容量のわからないコンデンサー C を，図1の回路で調べる．スイッチ S を a 側にして C を起電力 $6.0\\,\\mathrm V$ の電池で十分に充電したのち，時刻 $t=0$ に S を b 側に切りかえ，C を抵抗値 $R=1.0\\times10^{5}\\,\\Omega$ の抵抗で放電させた．その間の C の両端の電圧 $V$ を電圧計で測り，$\\ln V$（$V$ の自然対数）を $t$ に対してかくと，図2の直線になった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "text",
+    "tex": "はじめは，電圧計は理想的（電流が流れない）とみなして考える．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電圧が $V$ のとき，抵抗を流れる電流は $\\dfrac VR$ である．短い時間 $\\Delta t$ の間の電圧の変化を $\\Delta V$ として，$\\dfrac{\\Delta V}{\\Delta t}$ を $V$，$R$，$C$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) の関係から，$\\ln V$ は傾き $-\\dfrac{1}{RC}$ の直線になる．図2から時定数 $RC$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "C の電気容量を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$t=0$ から放電が終わるまでに抵抗で発生するジュール熱を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "実は，電圧計の内部抵抗は $r_V=1.0\\times10^{6}\\,\\Omega$ であった．放電中，電圧計は C と並列につながっている．このことを考えて，C の電気容量を求め直せ．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "6",
+      "tex": "電圧計の内部抵抗を考えたとき，抵抗 R で発生するジュール熱を求めよ．この値が (4) と一致する理由を述べよ．"
+     },
+     {
+      "id": "7",
+      "tex": "抵抗 R を外し，電圧計だけで C を放電させても C の電気容量を求めることができる．このときの時定数を求めよ．また，(2)〜(5) の測定で電圧計の影響を無視してよいのは，$R$ と $r_V$ がどんな関係にあるときか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "図1：スイッチ S を a 側にすると起電力 6.0 V の電池がコンデンサー C を充電し、b 側にすると C が抵抗 R を通して放電する。C の両端に電圧計 V がつながっている",
+   "caption": ""
+  },
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "図2：ln V と時刻 t [s] のグラフ。t=0 で 1.79、t=20 s で 0.79 を通る右下がりの直線（t=30 s まで）",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{\\Delta V}{\\Delta t}=-\\dfrac{V}{RC}$",
+    "grading": "ΔV/Δt：-V/(R C)"
+   },
+   {
+    "id": "2",
+    "tex": "$RC=20\\,\\mathrm s$",
+    "grading": "RC：20 [s]"
+   },
+   {
+    "id": "3",
+    "tex": "$C=2.0\\times10^{-4}\\,\\mathrm F$",
+    "grading": "C：2*10^(-4) [F]"
+   },
+   {
+    "id": "4",
+    "tex": "$3.6\\times10^{-3}\\,\\mathrm J$",
+    "grading": "3.6*10^(-3) [J]"
+   },
+   {
+    "id": "5",
+    "tex": "$C=2.2\\times10^{-4}\\,\\mathrm F$",
+    "grading": "C：2.2*10^(-4) [F]"
+   },
+   {
+    "id": "6",
+    "tex": "$3.6\\times10^{-3}\\,\\mathrm J$．R の発熱 $\\displaystyle\\sum\\frac{V^2}{R}\\Delta t$ は，測った電圧 $V(t)$ と $R$ だけで決まり，C の値や電圧計の有無によらないから．",
+    "grading": "3.6*10^(-3) [J]"
+   },
+   {
+    "id": "7",
+    "tex": "$2.2\\times10^{2}\\,\\mathrm s$．$r_V\\gg R$ のとき．",
+    "grading": "220 [s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) C の電気量 $q=CV$ が，抵抗を流れる電流 $\\dfrac VR$ の分だけ減る：$C\\Delta V=-\\dfrac VR\\Delta t$．よって $\\dfrac{\\Delta V}{\\Delta t}=-\\dfrac{V}{RC}$．\n\n(2) $\\dfrac{\\Delta V}{V}=-\\dfrac{\\Delta t}{RC}$ は「一定時間ごとに電圧が一定の割合で減る」ことを表し，$V=6.0\\,e^{-t/RC}$，すなわち $\\ln V=\\ln6.0-\\dfrac{t}{RC}$．図2の傾きは $\\dfrac{0.79-1.79}{20}=-0.050\\,\\mathrm{s^{-1}}$ なので $RC=20\\,\\mathrm s$．（$t=0$ の値 $1.79$ は $\\ln6.0$ に一致し，$t=RC$ で $V$ は $\\dfrac1e$ 倍の約 $2.2\\,\\mathrm V$．）\n\n(3) $C=\\dfrac{20}{1.0\\times10^5}=2.0\\times10^{-4}\\,\\mathrm F$．\n\n(4) C の静電エネルギーがすべて抵抗で熱になる：$\\dfrac12CV_0^2=\\dfrac12\\times2.0\\times10^{-4}\\times6.0^2=3.6\\times10^{-3}\\,\\mathrm J$．\n\n(5) 放電中は R と電圧計（抵抗 $r_V$）が並列に C につながっている．合成抵抗 $R'=\\dfrac{Rr_V}{R+r_V}=\\dfrac{1.0\\times10^{5}\\times1.0\\times10^{6}}{1.1\\times10^{6}}=9.09\\times10^{4}\\,\\Omega$．測った時定数 $20\\,\\mathrm s$ は $R'C$ なので\n\\[C=\\frac{20}{9.09\\times10^{4}}=2.2\\times10^{-4}\\,\\mathrm F．\\]\n(3) は約 $10\\,\\%$ 小さく見積もっていた．\n\n(6) C のエネルギー $\\dfrac12CV_0^2=\\dfrac12\\times2.2\\times10^{-4}\\times36=3.96\\times10^{-3}\\,\\mathrm J$ が，並列の R と電圧計で電流（電力 $\\dfrac{V^2}{R}$，$\\dfrac{V^2}{r_V}$）に比例して，$r_V:R=10:1$ に分かれる．R の発熱は $\\dfrac{10}{11}\\times3.96\\times10^{-3}=3.6\\times10^{-3}\\,\\mathrm J$．\n(4) と一致するのは，R の発熱が各瞬間の $\\dfrac{V^2}{R}$ の和で，$V(t)$ は実測のグラフそのもの（どちらの考え方でも同じ曲線）だからである．式で書くと $\\dfrac{V_0^2}{R}\\cdot\\dfrac{\\tau}{2}$（$\\tau$ は測った時定数）となり，C を使わずに表せる．\n\n(7) 電圧計だけなら時定数は $Cr_V=2.2\\times10^{-4}\\times1.0\\times10^{6}=2.2\\times10^{2}\\,\\mathrm s$．\n電圧計の影響は $R'=\\dfrac{R}{1+R/r_V}$ を通して現れるので，$\\dfrac R{r_V}$ が十分小さい，すなわち $r_V\\gg R$ のとき無視できる．（今回は $\\dfrac R{r_V}=0.1$ で，$10\\,\\%$ のずれになった．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "放電は「一定時間ごとに一定の割合で減る」ので $\\ln V$ が直線になり，傾きから時定数が出る．電圧計は C に並列の抵抗として時定数を変える．"
+ },
+ "simulation": {
+  "id": "elm.rc",
+  "preset": {
+   "E": 6,
+   "R": 100,
+   "C": 200,
+   "mode": 0
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "capacitor",
+  "ohm-law-use"
+ ],
+ "laws": [
+  "ohm-law",
+  "capacitor-energy",
+  "joule-heat",
+  "resistor-combination"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "RC 回路",
+  "放電",
+  "時定数",
+  "片対数グラフ",
+  "実験",
+  "電圧計の内部抵抗"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

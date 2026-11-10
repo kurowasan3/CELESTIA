@@ -1,0 +1,127 @@
+{
+ "id": "THM-FST-204",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "コックでつないだ2つの容器の気体（混ぜた後の圧力・正味の移動量・一方だけ温めたときの圧力）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，容積 $2.0\\,\\mathrm L$ の容器 A と容積 $3.0\\,\\mathrm L$ の容器 B が，コックのついた細い管でつながれている．はじめコックは閉じていて，A には $3.0\\times10^5\\,\\mathrm{Pa}$，B には $1.0\\times10^5\\,\\mathrm{Pa}$ の同じ種類の理想気体が入っており，温度はどちらも $300\\,\\mathrm K$ である．管の容積は無視できる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "温度を $300\\,\\mathrm K$ に保ったままコックを開いた．十分時間がたった後の圧力を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) で，コックを通って A から B へ正味で移動した気体の物質量は，はじめ A にあった物質量の何倍か．"
+     },
+     {
+      "id": "3",
+      "tex": "容器と管がすべて断熱材でできていて，温度を保つ操作をしなかったとしても，コックを開いて十分時間がたった後の温度は $300\\,\\mathrm K$ である．その理由を熱力学第1法則を使って説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(1) の状態からコックを開いたまま，A を $300\\,\\mathrm K$ に保ち，B だけを $400\\,\\mathrm K$ に温めた．十分時間がたった後の圧力を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "容積 2.0 L，圧力 3.0×10⁵ Pa の容器 A と，容積 3.0 L，圧力 1.0×10⁵ Pa の容器 B が，コックのついた細い管でつながれている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1.8\\times10^5\\,\\mathrm{Pa}$",
+    "grading": "1.8*10^5 [Pa]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac25$ 倍",
+    "grading": "2/5倍"
+   },
+   {
+    "id": "3",
+    "tex": "気体全体として，断熱なので $Q=0$，容器の体積が変わらないので外への仕事 $W=0$．よって $\\Delta U=0$ で，理想気体の内部エネルギーは温度だけで決まるから，はじめと同じ温度になる．"
+   },
+   {
+    "id": "4",
+    "tex": "$2.1\\times10^5\\,\\mathrm{Pa}$",
+    "grading": "2.1*10^5 [Pa]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 気体の物質量の和は変わらない．$n=\\dfrac{PV}{RT}$ で $T$ が共通なので $PV$ の和が保存される：$3.0\\times10^5\\times2.0+1.0\\times10^5\\times3.0=P\\times5.0$ より $P=1.8\\times10^5\\,\\mathrm{Pa}$．\n\n(2) A の物質量は $PV$ に比例して $3.0\\times2.0=6.0$ から $1.8\\times2.0=3.6$（単位 $10^5\\,\\mathrm{Pa\\cdot L}$）に減った．正味の移動は $2.4$ で，はじめの $\\dfrac{2.4}{6.0}=\\dfrac25$ 倍．\n\n(3) 気体全体を1つの系とみると，外との熱のやりとりはなく（$Q=0$），容器は動かないので外に仕事をしない（$W=0$）．第1法則より $\\Delta U=0$．はじめ A，B とも $300\\,\\mathrm K$ なので，内部エネルギーの和が同じなら最後も $300\\,\\mathrm K$ である（途中で一時的に温度の偏りが生じても，最後は一様に $300\\,\\mathrm K$ に戻る）．\n\n(4) 物質量の和は (1) と同じ．最後の圧力を $P'$ とすると（$R$ は両辺で消える） \\[\\frac{P'\\times2.0}{300}+\\frac{P'\\times3.0}{400}=\\frac{1.8\\times10^5\\times5.0}{300}\\] $P'\\left(\\dfrac{1}{150}+\\dfrac{3}{400}\\right)=3000$ より $P'=\\dfrac{3000\\times1200}{17}=2.11\\cdots\\times10^5\\approx2.1\\times10^5\\,\\mathrm{Pa}$．B の気体の一部が A へ移るが，圧力は共通の値に上がる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "つながった容器では圧力が共通になり，物質量の和 $\\sum\\dfrac{PV}{RT}$ が保存される．"
+ },
+ "concepts": [
+  "ideal-gas",
+  "first-law"
+ ],
+ "laws": [
+  "ideal-gas-law",
+  "first-law",
+  "internal-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "状態方程式",
+  "物質量の保存",
+  "コック",
+  "連結容器"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" width="420" height="200" font-family="'Times New Roman', serif">
+<circle cx="90" cy="110" r="46" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="330" cy="110" r="22" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<text x="90" y="110" font-size="16" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<text x="330" y="110" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<polyline points="90,64 90,34 190,34" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="230,34 330,34 330,88" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="190" cy="34" r="3" fill="currentColor"/>
+<circle cx="230" cy="34" r="3" fill="currentColor"/>
+<line x1="190" y1="34" x2="226" y2="18" stroke="currentColor" stroke-width="1.2"/>
+<text x="210" y="10" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">S</text>
+<text x="90" y="176" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">半径 a</text>
+<text x="330" y="152" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">半径 b</text>
+</svg>

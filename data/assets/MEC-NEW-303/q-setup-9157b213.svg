@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 285" width="280" height="285" font-family="'Times New Roman', serif">
+<polygon points="100,10 200,10 200,20 100,20" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="100" y1="20" x2="200" y2="20" stroke="currentColor" stroke-width="2"/>
+<line x1="150" y1="20" x2="150" y2="50" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="150" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="150" cy="50" r="3" fill="currentColor"/>
+<polyline points="130,50 130,160" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="170,50 170,120" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(130,190) rotate(0)" data-phys="body:A" data-angle="0">
+<rect x="-16" y="-30" width="32" height="30" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-15" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<g transform="translate(170,150) rotate(0)" data-phys="body:B" data-angle="0">
+<rect x="-15" y="-30" width="30" height="30" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-15" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<text x="108" y="176" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.55 kg</text>
+<text x="192" y="136" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">0.45 kg</text>
+<line x1="40" y1="270" x2="260" y2="270" stroke="currentColor" stroke-width="2"/>
+<g class="f-ink" data-dir="90" data-len="40">
+<line x1="84" y1="230" x2="84" y2="200" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="84,190 88.66,200 79.34,200" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="270" data-len="40">
+<line x1="84" y1="230" x2="84" y2="260" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="84,270 79.34,260 88.66,260" fill="currentColor"/>
+</g>
+<text x="76" y="230" font-size="14" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">h</text>
+<line x1="84" y1="190" x2="114" y2="190" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+</svg>

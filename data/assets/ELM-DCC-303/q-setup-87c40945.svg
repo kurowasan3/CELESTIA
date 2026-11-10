@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" width="520" height="150" font-family="'Times New Roman', serif">
+<text x="130" y="20" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">（ア）</text>
+<polyline points="30,70 107,70" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="120" cy="70" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<text x="120" y="70" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">G</text>
+<polyline points="133,70 220,70" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="70" cy="70" r="3" fill="currentColor"/>
+<circle cx="180" cy="70" r="3" fill="currentColor"/>
+<polyline points="70,70 70,120 90,120" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:Rₛ">
+<line x1="90" y1="120" x2="104" y2="120" stroke="currentColor" stroke-width="1.6"/>
+<line x1="146" y1="120" x2="160" y2="120" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="104,127 146,127 146,113 104,113" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="125" y="138" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">Rₛ</text>
+</g>
+<polyline points="160,120 180,120 180,70" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="30" cy="70" r="3" fill="currentColor"/>
+<circle cx="220" cy="70" r="3" fill="currentColor"/>
+<text x="390" y="20" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">（イ）</text>
+<polyline points="290,70 327,70" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="340" cy="70" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<text x="340" y="70" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">G</text>
+<polyline points="353,70 380,70" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:Rₘ">
+<line x1="380" y1="70" x2="394" y2="70" stroke="currentColor" stroke-width="1.6"/>
+<line x1="436" y1="70" x2="450" y2="70" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="394,77 436,77 436,63 394,63" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="415" y="52" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">Rₘ</text>
+</g>
+<polyline points="450,70 490,70" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="290" cy="70" r="3" fill="currentColor"/>
+<circle cx="490" cy="70" r="3" fill="currentColor"/>
+</svg>

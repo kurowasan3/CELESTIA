@@ -1,0 +1,137 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  225
+ ],
+ "items": [
+  {
+   "t": "block",
+   "at": [
+    200,
+    170
+   ],
+   "w": 240,
+   "h": 12,
+   "label": "",
+   "phys": "body:table"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    170
+   ],
+   "to": [
+    200,
+    215
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    158
+   ],
+   "to": [
+    200,
+    60
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    200,
+    70
+   ],
+   "r": 26,
+   "from": 200,
+   "to": 340
+  },
+  {
+   "t": "arrow",
+   "from": [
+    224.43,
+    78.89
+   ],
+   "dir": 70,
+   "len": 10,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    238,
+    92
+   ],
+   "text": "ω",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "block",
+   "at": [
+    280,
+    158
+   ],
+   "w": 26,
+   "h": 8,
+   "label": "",
+   "phys": "body:coin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    286,
+    150
+   ],
+   "dir": 90,
+   "len": 56,
+   "style": "force",
+   "phys": "force:N",
+   "label": "N",
+   "labelPos": "end",
+   "labelOffset": [
+    8,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    274,
+    154
+   ],
+   "dir": 270,
+   "len": 56,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg",
+   "labelPos": "end",
+   "labelOffset": [
+    -14,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    267,
+    157
+   ],
+   "dir": 180,
+   "len": 22,
+   "style": "force",
+   "phys": "force:f",
+   "label": "f",
+   "labelPos": "end",
+   "labelOffset": [
+    -2,
+    -10
+   ]
+  }
+ ]
+}

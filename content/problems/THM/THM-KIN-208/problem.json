@@ -1,0 +1,136 @@
+{
+ "id": "THM-KIN-208",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "気体中の音速と分子の速さ（気柱共鳴で測った音速から比熱比と分子の構造を推定する）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "experiment",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "理想気体の中を伝わる音の速さは，気体の圧力を $P$，密度を $\\rho$，比熱比（定圧モル比熱と定積モル比熱の比）を $\\gamma$ として \\[V=\\sqrt{\\frac{\\gamma P}{\\rho}}\\] で与えられる．気体定数を $R=8.31\\,\\mathrm{J/(mol\\cdot K)}$，気体のモル質量を $M$，絶対温度を $T$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "分子運動論の結果 $P=\\dfrac13\\rho\\overline{v^2}$ を使って，音速 $V$ と分子の二乗平均速度 $v_{\\text{rms}}=\\sqrt{\\overline{v^2}}$ の比 $\\dfrac{V}{v_{\\text{rms}}}$ を $\\gamma$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$V$ を $\\gamma$，$R$，$T$，$M$ で表せ．また，温度を一定に保って気体の圧力を $2$ 倍にすると，音速は何倍になるか．"
+     },
+     {
+      "id": "3",
+      "tex": "単原子分子理想気体の比熱比 $\\gamma$ を求め，そのときの $\\dfrac{V}{v_{\\text{rms}}}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "一端を閉じたガラス管を窒素（モル質量 $28\\,\\mathrm{g/mol}$，温度 $300\\,\\mathrm K$）で満たし，振動数 $500\\,\\mathrm{Hz}$ のおんさを開口端で鳴らしながら管の長さを変えたところ，共鳴の起こる管の長さの間隔は $35.3\\,\\mathrm{cm}$ であった．窒素中の音速 $V$ と，窒素の比熱比 $\\gamma$ を求めよ．$\\gamma$ は有効数字3桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の $\\gamma$ から，窒素の定積モル比熱 $C_V$ を $R$ で表せ（$\\gamma$ の値は (4) で求めた3桁の値を用いよ）．また，その値が単原子分子の $\\dfrac32R$ より大きい理由を述べよ．ただし，定圧モル比熱は $C_V+R$ である．"
+     },
+     {
+      "id": "6",
+      "tex": "理想気体では，音速は必ず分子の二乗平均速度より小さい．このことを (1) の結果と $\\gamma$ の値の範囲から示し，その物理的な意味を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{V}{v_{\\text{rms}}}=\\sqrt{\\dfrac{\\gamma}{3}}$",
+    "grading": "sqrt(γ/3)"
+   },
+   {
+    "id": "2",
+    "tex": "$V=\\sqrt{\\dfrac{\\gamma RT}{M}}$．圧力を変えても音速は変わらない（$1$ 倍）．",
+    "grading": "V：sqrt(γ R T/M) ; 1倍"
+   },
+   {
+    "id": "3",
+    "tex": "$\\gamma=\\dfrac53$，$\\dfrac{V}{v_{\\text{rms}}}=\\dfrac{\\sqrt5}{3}\\approx0.75$",
+    "grading": "γ：5/3 ; sqrt(5)/3"
+   },
+   {
+    "id": "4",
+    "tex": "$V=353\\,\\mathrm{m/s}$，$\\gamma=1.40$",
+    "grading": "V：353 [m/s] ; γ：1.40"
+   },
+   {
+    "id": "5",
+    "tex": "$C_V=\\dfrac52R$．窒素は2原子分子で，並進運動のほかに回転運動にもエネルギーが分配されるため，温度を $1\\,\\mathrm K$ 上げるのにより多くのエネルギーが必要だから．",
+    "grading": "C_V：5R/2"
+   },
+   {
+    "id": "6",
+    "tex": "$C_V\\geqq\\dfrac32R$ より $\\gamma=1+\\dfrac{R}{C_V}\\leqq\\dfrac53<3$ なので $\\dfrac{V}{v_{\\text{rms}}}=\\sqrt{\\dfrac{\\gamma}{3}}<1$．音（圧力・密度の変化）は分子の運動と衝突によって運ばれるので，分子の速さを超えて伝わることはできない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　$P=\\dfrac13\\rho\\overline{v^2}$ より $\\dfrac P\\rho=\\dfrac{v_{\\text{rms}}^2}{3}$．$V=\\sqrt{\\gamma\\dfrac P\\rho}=v_{\\text{rms}}\\sqrt{\\dfrac\\gamma3}$．\n\n\\textbf{(2)}　$v_{\\text{rms}}^2=\\dfrac{3RT}{M}$ なので $V=\\sqrt{\\dfrac\\gamma3\\cdot\\dfrac{3RT}{M}}=\\sqrt{\\dfrac{\\gamma RT}{M}}$．（$\\rho=\\dfrac{PM}{RT}$ を直接入れても同じ．）$T$ が一定なら $V$ は圧力によらない．圧力を上げると密度も同じ割合で増えるからである．\n\n\\textbf{(3)}　$C_V=\\dfrac32R$，$C_P=C_V+R=\\dfrac52R$ より $\\gamma=\\dfrac53$．$\\dfrac{V}{v_{\\text{rms}}}=\\sqrt{\\dfrac59}=\\dfrac{\\sqrt5}{3}\\approx0.75$．\n\n\\textbf{(4)}　共鳴の起こる管の長さの間隔は半波長なので $\\lambda=2\\times0.353=0.706\\,\\mathrm m$，$V=f\\lambda=500\\times0.706=353\\,\\mathrm{m/s}$．\\[\\gamma=\\frac{V^2M}{RT}=\\frac{353^2\\times0.028}{8.31\\times300}=1.399\\cdots\\approx1.40\\]\n\n\\textbf{(5)}　$\\gamma=\\dfrac{C_V+R}{C_V}$ より $C_V=\\dfrac{R}{\\gamma-1}=\\dfrac{R}{0.40}=\\dfrac52R$．単原子分子では内部エネルギーは並進運動（3方向）の運動エネルギーだけで $\\dfrac32RT$ だが，2原子分子は分子の軸に垂直な2つの軸のまわりに回転でき，その運動にも1方向あたり並進と同じ $\\dfrac12RT$（$1\\,\\mathrm{mol}$ あたり）のエネルギーが分配される．合わせて $\\dfrac52RT$ となり，$C_V=\\dfrac52R$ になる．\n\n\\textbf{(6)}　どんな理想気体でも内部エネルギーには少なくとも並進運動の分 $\\dfrac32RT$ が含まれるので $C_V\\geqq\\dfrac32R$，したがって $\\gamma=1+\\dfrac{R}{C_V}\\leqq\\dfrac53$．よって $\\dfrac{V}{v_{\\text{rms}}}=\\sqrt{\\dfrac\\gamma3}\\leqq\\dfrac{\\sqrt5}{3}<1$．音波は，ある場所の圧力・密度の変化が，分子の運動と衝突によって隣へ伝えられていく現象である．変化を運ぶ担い手は分子そのものなので，その伝わる速さは分子の速さ程度にとどまり，分子の速さを大きく超えることはない．（分子の内部に回転などの自由度が増えるほど $\\gamma$ は $1$ に近づき，音速は分子の速さに比べてさらに遅くなる．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$\\dfrac P\\rho=\\dfrac{\\overline{v^2}}3$ を使うと，音速と分子の速さが $\\sqrt{\\gamma/3}$ で結ばれる．比熱比 $\\gamma$ から $C_V$ がわかり，分子の構造（自由度）が推定できる．"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "first-law",
+  "string-resonance"
+ ],
+ "laws": [
+  "kinetic-pressure",
+  "kinetic-temperature",
+  "molar-heat",
+  "pipe-modes"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "音速",
+  "比熱比",
+  "二乗平均速度",
+  "気柱共鳴",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

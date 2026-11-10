@@ -1,0 +1,155 @@
+{
+ "id": "MEC-FRC-305",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-02",
+ "topic": "板を傾けて滑り出す角度と滑り下りる時間から静止摩擦係数・動摩擦係数を測る",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "experiment",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長い板の上に木片を置き，板の一端を少しずつ持ち上げて傾きを大きくしていった．図のように，水平距離 $80\\,\\mathrm{cm}$ に対して高さが $40\\,\\mathrm{cm}$ になったとき，木片が滑り始めた．このときの傾きの角を $\\theta_0$ とする．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "木片と板の間の静止摩擦係数 $\\mu$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "傾きの角が $\\theta_0$ より小さい $\\theta$ のとき，木片にはたらく静止摩擦力の大きさを，木片の質量 $m$ と $\\theta$ を用いて表せ．ある生徒は「静止摩擦力の大きさは $\\mu mg\\cos\\theta$ である」と考えた．これが正しいのはどのようなときか．"
+     },
+     {
+      "id": "3",
+      "tex": "傾きを $\\theta_0$ に保ったまま，木片を板の上で静かに放すと，木片は静止状態から滑り始め，$1.0\\,\\mathrm s$ 間に斜面に沿って $0.60\\,\\mathrm m$ 滑った．木片と板の間の動摩擦係数 $\\mu'$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "板を水平に戻し，質量 $0.20\\,\\mathrm{kg}$ の木片をばねばかりで水平に引いた．木片が動き出す直前のばねばかりの読みと，木片が一定の速さで動いているときの読みを，それぞれ有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(1) の方法で求めた $\\mu$ が，木片の質量によらないことを説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "板を傾け、水平距離 80 cm に対して高さ 40 cm になったところ。傾きの角は θ₀ で、板の上に木片がある",
+   "caption": "",
+   "physics": {
+    "angle_deg": 26.57
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\mu=0.50$",
+    "grading": "0.5"
+   },
+   {
+    "id": "2",
+    "tex": "$mg\\sin\\theta$．$\\mu mg\\cos\\theta$ になるのは滑り出す直前（$\\theta=\\theta_0$）だけ．",
+    "grading": "m g sin(θ)"
+   },
+   {
+    "id": "3",
+    "tex": "$\\mu'=0.36$",
+    "grading": "0.36"
+   },
+   {
+    "id": "4",
+    "tex": "動き出す直前 $0.98\\,\\mathrm N$，一定の速さのとき $0.71\\,\\mathrm N$",
+    "grading": "直前：0.98 [N] ; 一定の速さ：0.71 [N]"
+   },
+   {
+    "id": "5",
+    "tex": "滑り出す条件 $mg\\sin\\theta_0=\\mu mg\\cos\\theta_0$ の両辺に $m$ があり，約分すると $\\tan\\theta_0=\\mu$ となって $m$ が消えるから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "木片にはたらく力は，重力 $mg$，垂直抗力 $N=mg\\cos\\theta$，摩擦力（斜面に沿って上向き）．\n\n(1) 滑り出す直前，摩擦力は最大摩擦力 $\\mu N$ に達している：$mg\\sin\\theta_0=\\mu mg\\cos\\theta_0$ より\n\\[ \\mu=\\tan\\theta_0=\\frac{40}{80}=0.50. \\]\n\n(2) 静止しているので，斜面方向のつり合いから摩擦力の大きさは $mg\\sin\\theta$．傾きとともに大きくなり，$\\theta=\\theta_0$ で最大摩擦力 $\\mu mg\\cos\\theta_0$ に達する．$\\mu N$ は「静止摩擦力がとりうる最大値」で，滑り出す直前でなければ実際の摩擦力はそれより小さい．\n\n(3) $\\sin\\theta_0=\\dfrac1{\\sqrt5}$，$\\cos\\theta_0=\\dfrac2{\\sqrt5}$．静止から $1.0\\,\\mathrm s$ で $0.60\\,\\mathrm m$ なので $0.60=\\dfrac12a(1.0)^2$，$a=1.2\\,\\mathrm{m/s^2}$．運動方程式 $ma=mg\\sin\\theta_0-\\mu'mg\\cos\\theta_0$ より\n\\[ \\mu'=\\tan\\theta_0-\\frac{a}{g\\cos\\theta_0}=0.50-\\frac{1.2}{9.8\\times0.894}\\approx0.50-0.137=0.36. \\]\n（$\\mu'<\\mu$ なので，滑り出す角度のままでも木片は加速しながら滑る．）\n\n(4) 水平面では $N=mg=0.20\\times9.8=1.96\\,\\mathrm N$．動き出す直前は最大摩擦力 $\\mu N=0.50\\times1.96=0.98\\,\\mathrm N$．一定の速さのときはばねばかりの力と動摩擦力がつり合うので $\\mu'N\\approx0.363\\times1.96\\approx0.71\\,\\mathrm N$．\n\n(5) (1) の式で $m$ は両辺から消える．重い木片ほど斜面に沿って滑らせようとする力も，押しつけて最大摩擦力を大きくする力も，同じ割合で大きくなるからである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "滑り出す角 $\\theta_0$ では $\\tan\\theta_0=\\mu$．静止摩擦力は必要なだけはたらき，$\\mu N$ はその上限．"
+ },
+ "simulation": {
+  "id": "mech.incline",
+  "preset": {
+   "theta": 27,
+   "mu": 0.5,
+   "muk": 0.36,
+   "m": 0.2
+  },
+  "locked": [
+   "g"
+  ],
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "static-friction",
+  "normal-force",
+  "force-decomposition"
+ ],
+ "laws": [
+  "friction-law",
+  "newton-2nd"
+ ],
+ "misconceptions": [
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "摩擦係数",
+  "摩擦角",
+  "実験",
+  "斜面"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

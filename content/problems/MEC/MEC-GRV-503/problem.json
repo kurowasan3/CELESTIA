@@ -1,0 +1,113 @@
+{
+ "id": "MEC-GRV-503",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "月の向心加速度と地表の重力（ニュートンの検証）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "concept",
+  "experiment"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "月は地球の中心から距離 $r=3.84\\times10^{8}\\,\\mathrm m$ の円軌道を，周期 $T=2.36\\times10^{6}\\,\\mathrm s$（約 $27.3$ 日）で回っているとする．地球の半径を $R=6.4\\times10^{6}\\,\\mathrm m$，地表での重力加速度の大きさを $g=9.8\\,\\mathrm{m/s^2}$ とし，$r$ は $R$ のちょうど $60$ 倍とみなす．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "月の円運動の加速度の大きさ $a$ を，観測値 $r$，$T$ から求めよ．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "月にはたらく力が，地表で物体を落下させる重力と同じ万有引力で，その大きさが地球の中心からの距離の2乗に反比例するとすれば，月の位置での重力加速度は $g$ の何倍になるはずか．"
+     },
+     {
+      "id": "3",
+      "tex": "月は，もし地球の引力がなければ進んだはずのまっすぐな道すじから，地球に向かってずれていく．1秒間に地球の中心に向かってずれる距離は何 $\\mathrm m$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "「月は地球に向かって落ち続けている」のに，地球に近づいてこない．その理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$a\\approx2.7\\times10^{-3}\\,\\mathrm{m/s^2}$",
+    "grading": "2.7*10^(-3) [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac1{3600}$ 倍（$\\approx2.7\\times10^{-3}\\,\\mathrm{m/s^2}$ で，(1) と一致する）",
+    "grading": "(1/3600)倍"
+   },
+   {
+    "id": "3",
+    "tex": "$1.4\\times10^{-3}\\,\\mathrm m$",
+    "grading": "1.4*10^(-3) [m]"
+   },
+   {
+    "id": "4",
+    "tex": "月は地球に向かって加速度をもつが，同時に軌道に沿って大きな速さで進んでいる．落ちる分だけ進む向きが曲げられ，地面（地球）も丸く曲がっているので，地球の中心からの距離は変わらない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 等速円運動の加速度は $a=r\\omega^2=\\dfrac{4\\pi^2r}{T^2}$． \\[a=\\frac{4\\times3.14^2\\times3.84\\times10^{8}}{(2.36\\times10^{6})^2}\\approx2.7\\times10^{-3}\\,\\mathrm{m/s^2}\\]\n\n(2) 距離が $60$ 倍なので，重力加速度は $\\dfrac1{60^2}=\\dfrac1{3600}$ 倍．$\\dfrac{9.8}{3600}\\approx2.7\\times10^{-3}\\,\\mathrm{m/s^2}$ となり，(1) の観測値と一致する．リンゴを落とす力と月を回す力が同じ万有引力で，距離の2乗に反比例すると考えてよいことが確かめられる（ニュートンが行った検証）．\n\n(3) 1秒の間は加速度 $a$ がほぼ一定の向きとみなせるので，ずれる距離は \\[\\frac12at^2=\\frac12\\times2.72\\times10^{-3}\\times1^2\\approx1.4\\times10^{-3}\\,\\mathrm m\\] およそ $1.4\\,\\mathrm{mm}$．地表では同じ1秒で $4.9\\,\\mathrm m$ 落ちるのと比べると $\\dfrac1{3600}$ である．\n\n(4) 月は約 $1\\,\\mathrm{km/s}$ の速さで軌道に沿って進みながら，その道すじから毎秒 $1.4\\,\\mathrm{mm}$ ずつ地球に向かって「落ちる」．その結果，進む向きがつねに少しずつ曲げられて円軌道になる．落ちる量と，まっすぐ進んだときに地球の中心から遠ざかる量がちょうどつり合っているので，距離は一定のままである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "円運動の加速度 $\\dfrac{4\\pi^2r}{T^2}$ と，逆2乗則で地表から薄めた重力加速度 $\\dfrac{g}{60^2}$ を比べる．"
+ },
+ "concepts": [
+  "universal-gravitation",
+  "circular-motion"
+ ],
+ "laws": [
+  "universal-gravitation",
+  "centripetal-acceleration"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "万有引力",
+  "月",
+  "逆2乗則",
+  "向心加速度"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

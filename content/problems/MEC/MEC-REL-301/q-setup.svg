@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 200" width="380" height="200" font-family="'Times New Roman', serif">
+<line x1="10" y1="95" x2="370" y2="95" stroke="currentColor" stroke-width="2"/>
+<line x1="10" y1="175" x2="370" y2="175" stroke="currentColor" stroke-width="2"/>
+<line x1="10" y1="135" x2="370" y2="135" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<g transform="translate(70,95) rotate(0)" data-phys="body:A" data-angle="0">
+<rect x="-20" y="-22" width="40" height="22" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-11" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<g class="f-vel" data-dir="0" data-len="42">
+<line x1="92" y1="84" x2="124" y2="84" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="134,84 124,88.66 124,79.34" fill="currentColor"/>
+<text x="113" y="72" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">20 m/s</text>
+</g>
+<g transform="translate(240,95) rotate(0)" data-phys="body:B" data-angle="0">
+<rect x="-28" y="-28" width="56" height="28" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-14" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<g class="f-vel" data-dir="0" data-len="34">
+<line x1="270" y1="81" x2="294" y2="81" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="304,81 294,85.66 294,76.34" fill="currentColor"/>
+<text x="287" y="69" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">15 m/s</text>
+</g>
+<g transform="translate(300,175) rotate(0)" data-phys="body:C" data-angle="0">
+<rect x="-20" y="-22" width="40" height="22" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-11" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">C</text>
+</g>
+<g class="f-vel" data-dir="180" data-len="48">
+<line x1="278" y1="164" x2="240" y2="164" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="230,164 240,159.34 240,168.66" fill="currentColor"/>
+<text x="254" y="152" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">25 m/s</text>
+</g>
+<g class="f-ink" data-dir="0" data-len="50">
+<line x1="300" y1="22" x2="340" y2="22" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="350,22 340,26.66 340,17.34" fill="currentColor"/>
+</g>
+<text x="296" y="22" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">東</text>
+</svg>

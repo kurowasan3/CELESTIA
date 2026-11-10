@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 215" width="400" height="215" font-family="'Times New Roman', serif">
+<polygon points="200,40 110,196 290,196" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g class="f-cur" data-dir="15" data-len="110">
+<line x1="41.83" y1="158.47" x2="138.42" y2="132.59" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="148.08,130 139.63,137.09 137.22,128.08" fill="currentColor"/>
+</g>
+<g class="f-cur" data-dir="0" data-len="103.84">
+<line x1="148.08" y1="130" x2="241.92" y2="130" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="251.92,130 241.92,134.66 241.92,125.34" fill="currentColor"/>
+</g>
+<g class="f-cur" data-dir="345" data-len="110">
+<line x1="251.92" y1="130" x2="348.51" y2="155.88" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="358.17,158.47 347.31,160.39 349.72,151.38" fill="currentColor"/>
+</g>
+<line x1="148.08" y1="130" x2="355.75" y2="74.35" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="116.9" y1="112" x2="174.06" y2="145" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="283.1" y1="112" x2="225.94" y2="145" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M123.83,116 A28,28 0 0 0 121.03,137.25" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="108.42" y="124.78" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">i₁</text>
+<path d="M278.97,137.25 A28,28 0 0 0 276.17,116" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="291.58" y="124.78" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">i₂</text>
+<path d="M189,59.05 A22,22 0 0 0 211,59.05" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="200" y="74" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+<path d="M344.89,154.91 A150,150 0 0 0 344.89,77.27" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="360" y="116.09" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">δ</text>
+</svg>

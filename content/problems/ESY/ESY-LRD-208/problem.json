@@ -1,0 +1,150 @@
+{
+ "id": "ESY-LRD-208",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "コイルにつないだレール上の導体棒の単振動（磁束の保存とエネルギーの往復）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "synthesis",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，鉛直上向きで磁束密度 $B$ の一様な磁場の中に，間隔 $l$ の2本の滑らかな導体レールを水平に置き，一端を自己インダクタンス $L$ のコイルでつないだ．レールの上に質量 $m$ の導体棒をレールに垂直に置く．時刻 $t=0$ に，電流が流れていない状態で，棒に右向きの初速度 $v_0$ を与えた．棒の位置を，はじめの位置を原点 O として右向きを正とする座標 $x$ で表す．回路の電気抵抗，コイル以外の自己インダクタンスは無視し，棒はレールに垂直なまま動くものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒の位置が $x$ のとき，回路を流れる電流の大きさ $I$ を $x$ を用いて表せ．（ヒント：棒の起電力とコイルの自己誘導の起電力の和は，抵抗がないので 0 である．）"
+     },
+     {
+      "id": "2",
+      "tex": "棒の運動は単振動になる．その角振動数 $\\omega$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "棒が最も右に達するときの位置 $x_{\\max}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "電流の大きさの最大値 $I_{\\max}$ を求めよ．また，そのときコイルに蓄えられているエネルギーが，棒のはじめの運動エネルギーに等しいことを確かめよ．"
+     },
+     {
+      "id": "5",
+      "tex": "棒が初めて最も右に達する時刻 $t_1$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "コイルのかわりに抵抗をつないだ場合，棒の運動はどうなるか．この問題の場合と比べ，エネルギーの行方の違いに注目して説明せよ．また，(1) の結果は，回路を貫く磁束について何を意味するか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平な2本の平行レール（間隔 l）の左端をコイル L でつなぎ，レールの上に質量 m の導体棒を置いて右向きに初速度 v₀ を与える．棒のはじめの位置が原点 O で，右向きが x の正の向き．磁場 B は鉛直上向き（紙面の裏から表）．",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I=\\dfrac{Blx}L$",
+    "grading": "I：B l x/L"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega=\\dfrac{Bl}{\\sqrt{mL}}$",
+    "grading": "ω：B l/sqrt(m L)"
+   },
+   {
+    "id": "3",
+    "tex": "$x_{\\max}=\\dfrac{v_0\\sqrt{mL}}{Bl}$",
+    "grading": "x_max：v_0 sqrt(m L)/(B l)"
+   },
+   {
+    "id": "4",
+    "tex": "$I_{\\max}=v_0\\sqrt{\\dfrac mL}$，$\\dfrac12LI_{\\max}^2=\\dfrac12mv_0^2$",
+    "grading": "I_max：v_0 sqrt(m/L)"
+   },
+   {
+    "id": "5",
+    "tex": "$t_1=\\dfrac{\\pi\\sqrt{mL}}{2Bl}$",
+    "grading": "t_1：π sqrt(m L)/(2B l)"
+   },
+   {
+    "id": "6",
+    "tex": "抵抗では，運動エネルギーがジュール熱として失われ，棒は向きを変えずに減速して止まる．コイルでは，エネルギーは磁場のエネルギー $\\dfrac12LI^2$ として蓄えられて棒に戻るので，棒は O のまわりを振動し続ける．(1) の $LI=Blx$ は，棒の移動による磁束の増加 $Blx$ をコイルの電流がつくる磁束 $LI$ が打ち消し，回路を貫く磁束が変わらないことを意味する．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 棒の速度が $v$ のとき，棒には大きさ $Blv$ の誘導起電力が生じる．電流 $I$ の向きを棒の起電力の向きにとると，回路に抵抗がないので，キルヒホッフの第2法則は $Blv-L\\dfrac{\\Delta I}{\\Delta t}=0$．$v=\\dfrac{\\Delta x}{\\Delta t}$ なので $\\Delta(LI-Blx)=0$，つまり $LI-Blx$ は一定．$t=0$ で $I=0$，$x=0$ だから $LI=Blx$，$I=\\dfrac{Blx}L$．\n\n\\textbf{(2)} 棒を流れる電流が磁場から受ける力は，レンツの法則により棒の変位を戻す向きで，大きさ $IBl$：$F=-\\dfrac{B^2l^2}Lx$．変位に比例する復元力なので単振動，$m\\omega^2=\\dfrac{B^2l^2}L$ より $\\omega=\\dfrac{Bl}{\\sqrt{mL}}$．\n\n\\textbf{(3)} $x=0$ で速さ $v_0$ の単振動なので，振幅 $x_{\\max}=\\dfrac{v_0}\\omega=\\dfrac{v_0\\sqrt{mL}}{Bl}$．\n\n\\textbf{(4)} $I\\propto x$ なので最大は $x=x_{\\max}$ のとき：$I_{\\max}=\\dfrac{Bl}L\\cdot\\dfrac{v_0\\sqrt{mL}}{Bl}=v_0\\sqrt{\\dfrac mL}$．このとき棒は止まっていて，$\\dfrac12LI_{\\max}^2=\\dfrac12L\\cdot\\dfrac{mv_0^2}L=\\dfrac12mv_0^2$．棒の運動エネルギーがすべてコイルの磁場のエネルギーに変わった．\n\n\\textbf{(5)} $x=x_{\\max}\\sin\\omega t$ なので，初めて最も右に達するのは $\\omega t_1=\\dfrac\\pi2$：$t_1=\\dfrac\\pi{2\\omega}=\\dfrac{\\pi\\sqrt{mL}}{2Bl}$．\n\n\\textbf{(6)} 抵抗 $R$ の場合は $I=\\dfrac{Blv}R$ で，力 $-\\dfrac{B^2l^2}Rv$ は速度に比例する抵抗力になる．棒は向きを変えずに減速して止まり（$x$ は有限の値 $\\dfrac{mRv_0}{B^2l^2}$ に近づく），はじめの運動エネルギーはすべてジュール熱になる．コイルの場合は熱が発生せず，運動エネルギーと磁場のエネルギー $\\dfrac12LI^2$ の間をエネルギーが往復し，棒は O のまわりで振動し続ける．\n\nまた，回路を貫く磁束は「外部磁場による $Blx$（棒が右へ動くと回路の面積が増える分）」と「自分の電流による $LI$（向きは反対）」の差 $Blx-LI$ である．(1) はこれが 0 のまま一定であることを示している．抵抗のない回路では，回路を貫く磁束は変化できない（変化すれば，それを打ち消す起電力が回路を一周して残ってしまう）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "抵抗のない回路では起電力の和が 0：$Blv=L\\dfrac{\\Delta I}{\\Delta t}$ から $LI=Blx$．電流が変位に比例するので，磁場からの力は変位に比例する復元力になり，棒は単振動する．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "simple-harmonic-motion",
+  "lorentz-force"
+ ],
+ "laws": [
+  "motional-emf",
+  "faraday-law",
+  "current-force",
+  "shm-period",
+  "kirchhoff-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電磁誘導",
+  "自己誘導",
+  "単振動",
+  "磁束の保存",
+  "エネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

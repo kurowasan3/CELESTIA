@@ -1,0 +1,128 @@
+{
+ "id": "MEC-MOM-401",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "ばねで押し離される2台の台車（運動量の和は0のまま，運動エネルギーはばねから）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "calc",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上で，質量 $2.0\\,\\mathrm{kg}$ の台車 A と質量 $3.0\\,\\mathrm{kg}$ の台車 B が，間に縮めた軽いばねをはさんで糸で結ばれ，静止している（ばねは A に取り付けてある）．糸を焼き切ると，ばねが伸びて2台は押し離され，ばねが自然長になって B から離れた後，A は左向きに速さ $1.5\\,\\mathrm{m/s}$ で動いた．右向きを正とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "押し離された後の B の速度 $v_{\\rm B}$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "押し離された後の A と B の運動量の和は何 $\\mathrm{kg\\cdot m/s}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "押し離された後の A，B の運動エネルギー $K_{\\rm A}$，$K_{\\rm B}$ と，はじめにばねが蓄えていた弾性エネルギー $U$ はそれぞれ何 $\\mathrm J$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "ある生徒は「運動量が保存されるのだから，運動エネルギーの和も保存されるはずだ」と考えた．この例に即して，この考えの誤りを説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな水平面上で、台車 A と台車 B が間に縮めたばねをはさみ、糸で結ばれて静止している",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_{\\rm B}=1.0\\,\\mathrm{m/s}$（右向き）",
+    "grading": "v_B：1 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$0$",
+    "grading": "0 [kg·m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$K_{\\rm A}=2.25\\,\\mathrm J$，$K_{\\rm B}=1.5\\,\\mathrm J$，$U=3.75\\,\\mathrm J$",
+    "grading": "K_A：2.25 [J] ; K_B：1.5 [J] ; U：3.75 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "運動量保存は「外力の力積が $0$」なら成り立つが，運動エネルギーは内力（ばねの弾性力）の仕事で変わる．この例では運動量の和は $0$ のままだが，運動エネルギーの和は $0$ から $3.75\\,\\mathrm J$ に増えた（ばねの弾性エネルギーが変わった）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 水平方向には外力がはたらかないので，A，B の運動量の和は保存し，はじめの $0$ のまま：\\[2.0\\times(-1.5)+3.0\\,v_{\\rm B}=0\\quad\\Longrightarrow\\quad v_{\\rm B}=1.0\\,\\mathrm{m/s}\\]\n\n(2) 保存するので $0$．A と B は逆向きに，大きさの等しい運動量 $3.0\\,\\mathrm{kg\\cdot m/s}$ をもつ（ばねが A と B におよぼす力は作用・反作用で，力積も逆向きで同じ大きさ）．\n\n(3) \\[K_{\\rm A}=\\frac12\\times2.0\\times1.5^2=2.25\\,\\mathrm J,\\qquad K_{\\rm B}=\\frac12\\times3.0\\times1.0^2=1.5\\,\\mathrm J\\] 弾性力のほかに仕事をする力はないので，ばねの弾性エネルギーがすべて運動エネルギーになった：$U=2.25+1.5=3.75\\,\\mathrm J$．運動量の大きさが同じなので，運動エネルギー $\\dfrac{p^2}{2m}$ は質量に反比例して，軽い A の方が大きい．\n\n(4) 運動量の変化は力積で決まり，内力の力積は作用・反作用で必ず打ち消し合う．一方，運動エネルギーの変化は仕事で決まり，内力の仕事は打ち消し合うとは限らない（A と B は逆向きに動くので，ばねは両方に正の仕事をする）．運動量が保存しても運動エネルギーは保存するとは限らない．この例では増えたが，物体どうしが付着する衝突のように減る場合もある．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "内力の力積は打ち消し合う（運動量保存）が，内力の仕事は打ち消し合うとは限らない（運動エネルギーは変わりうる）．"
+ },
+ "concepts": [
+  "momentum-conservation"
+ ],
+ "laws": [
+  "momentum-conservation",
+  "energy-conservation",
+  "newton-3rd"
+ ],
+ "misconceptions": [
+  "MC-KE-ALWAYS-CONSERVED"
+ ],
+ "tags": [
+  "運動量保存",
+  "分裂",
+  "運動エネルギー",
+  "誤概念"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

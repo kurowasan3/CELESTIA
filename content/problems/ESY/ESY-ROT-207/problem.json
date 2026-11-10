@@ -1,0 +1,151 @@
+{
+ "id": "ESY-ROT-207",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "回転する導体棒の電磁ブレーキでおもりを一定の速さで下ろす",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "鉛直上向きで磁束密度 $B$ の一様な磁場の中に，半径 $a$ の円形の導体レールを水平に置いた．レールの中心 O を通る鉛直な導体の軸に，長さ $a$ の導体棒 OP を水平に取り付ける（図は上から見た図）．棒は軸とともに水平面内で回転でき，端 P はレールに接しながら滑らかに動く．軸とレールの間を，抵抗値 $R$ の抵抗でつなぐ．さらに，軸に取り付けた半径 $b$ の絶縁体の滑車に糸を巻き付け，糸を水平に引き出し，固定した滑らかな滑車を通して，糸の先に質量 $M$ のおもりをつるす．おもりを静かに放すと，棒が回転を始めた．抵抗以外の電気抵抗，摩擦，棒・軸・滑車の質量，回路の電流がつくる磁場は無視し，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒の角速度が $\\omega$ のとき，棒 OP に生じる誘導起電力の大きさ $V$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "このとき抵抗を流れる電流の大きさ $I$ と，棒が磁場から受ける力による，軸のまわりの力のモーメントの大きさ $N$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "おもりの速さが $v$ のとき，おもりの加速度の大きさ $\\beta$ を求めよ．ただし，棒・軸・滑車の質量が無視できるので，それらにはたらく力のモーメントはつねにつり合っているとしてよい．"
+     },
+     {
+      "id": "4",
+      "tex": "十分に時間がたつと，おもりは一定の速さ $v_{\\rm f}$ で落下する．$v_{\\rm f}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "おもりが速さ $v_{\\rm f}$ で落下しているとき，抵抗で単位時間に発生するジュール熱 $P$ を求めよ．また，$P$ が，おもりの重力による位置エネルギーの単位時間あたりの減少に等しいことを確かめよ．"
+     },
+     {
+      "id": "6",
+      "tex": "おもりが速さ $v_{\\rm f}$ で落下しているときの電流の大きさ $I_{\\rm f}$ を求めよ．また，抵抗値 $R$ を小さくしていくと，$v_{\\rm f}$ と $P$ はそれぞれどうなるか．$I_{\\rm f}$ が $R$ によらないことに注目して，その理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "上から見た図．中心 O，半径 a の円形レールと，O から P まで延びる導体棒 OP．棒は角速度 ω で反時計回りに回る．磁場 B は紙面の裏から表の向き．抵抗・滑車・おもりは図では省略している．",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V=\\dfrac12B\\omega a^2$",
+    "grading": "V：B ω a^2/2"
+   },
+   {
+    "id": "2",
+    "tex": "$I=\\dfrac{B\\omega a^2}{2R}$，$N=\\dfrac{B^2\\omega a^4}{4R}$",
+    "grading": "I：B ω a^2/(2R) ; N：B^2 ω a^4/(4R)"
+   },
+   {
+    "id": "3",
+    "tex": "$\\beta=g-\\dfrac{B^2a^4v}{4MRb^2}$",
+    "grading": "β：g-B^2 a^4 v/(4M R b^2)"
+   },
+   {
+    "id": "4",
+    "tex": "$v_{\\rm f}=\\dfrac{4MgRb^2}{B^2a^4}$",
+    "grading": "v_f：4M g R b^2/(B^2 a^4)"
+   },
+   {
+    "id": "5",
+    "tex": "$P=\\dfrac{4M^2g^2Rb^2}{B^2a^4}$（$=Mgv_{\\rm f}$）",
+    "grading": "P：4M^2 g^2 R b^2/(B^2 a^4)"
+   },
+   {
+    "id": "6",
+    "tex": "$I_{\\rm f}=\\dfrac{2Mgb}{Ba^2}$．$R\\to0$ で $v_{\\rm f}$ も $P$ も $R$ に比例して 0 に近づく（おもりはほとんど落ちなくなる）．",
+    "grading": "I_f：2M g b/(B a^2)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 棒は単位時間に中心角 $\\omega$ の扇形 $\\dfrac12a^2\\omega$ を掃くので，$V=B\\cdot\\dfrac12a^2\\omega=\\dfrac12B\\omega a^2$．（棒の各点の速さは中心からの距離に比例するので，平均の速さ $\\dfrac{a\\omega}2$ を使って $V=B\\cdot\\dfrac{a\\omega}2\\cdot a$ としてもよい．）\n\n\\textbf{(2)} $I=\\dfrac VR=\\dfrac{B\\omega a^2}{2R}$．棒が受ける力は棒の各部分に一様に分布し，合力 $IBa$ が棒の中点（軸から $\\dfrac a2$）にはたらくとみなせる．力は棒に垂直で回転を妨げる向き（レンツの法則）．$N=IBa\\cdot\\dfrac a2=\\dfrac{B^2\\omega a^4}{4R}$．\n\n\\textbf{(3)} 糸の張力を $S$ とする．棒・軸・滑車の質量が無視できるので，軸のまわりの力のモーメントのつり合い $Sb=N$．おもりの速さは $v=b\\omega$ なので $S=\\dfrac{B^2a^4v}{4Rb^2}$．おもりの運動方程式 $M\\beta=Mg-S$ より $\\beta=g-\\dfrac{B^2a^4v}{4MRb^2}$．\n\n\\textbf{(4)} 速さが増すと $\\beta$ が減り，$\\beta=0$ で一定の速さになる：$v_{\\rm f}=\\dfrac{4MgRb^2}{B^2a^4}$．\n\n\\textbf{(5)} $\\omega_{\\rm f}=\\dfrac{v_{\\rm f}}b$ のとき $I=\\dfrac{B\\omega_{\\rm f}a^2}{2R}=\\dfrac{2Mgb}{Ba^2}$．$P=RI^2=\\dfrac{4M^2g^2Rb^2}{B^2a^4}$．一方，位置エネルギーの単位時間あたりの減少は $Mgv_{\\rm f}=\\dfrac{4M^2g^2Rb^2}{B^2a^4}$ で，$P$ に等しい．おもりの運動エネルギーは変わらないので，重力がした仕事がすべてジュール熱になる．\n\n\\textbf{(6)} $I_{\\rm f}=\\dfrac{2Mgb}{Ba^2}$．これは，等速のとき磁場による力のモーメントがおもりの重力のモーメント $Mgb$ とつり合う条件 $I\\cdot Ba\\cdot\\dfrac a2=Mgb$ だけで決まるので，$R$ によらない．一方，この電流を流すのに必要な起電力は $RI_{\\rm f}$ で，$R$ が小さいほど小さな起電力，つまり小さな角速度で足りる．よって $v_{\\rm f}\\propto R$ で $0$ に近づき，$P=RI_{\\rm f}^2$ も $R$ に比例して 0 に近づく．抵抗が小さいほど，ゆっくり回るだけで大きな電流が流れ，強いブレーキがかかる．（逆に，回路を切って $R\\to\\infty$ とすると電流が流れず，おもりは自由落下する．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回転する棒の起電力は掃く面積の割合から $\\dfrac12B\\omega a^2$．等速のときは「磁場による力のモーメント ＝ おもりのモーメント」で電流が決まり，その電流を流す起電力から回転の速さが決まる．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "lorentz-force",
+  "torque",
+  "electric-power"
+ ],
+ "laws": [
+  "faraday-law",
+  "current-force",
+  "torque-equilibrium",
+  "joule-heat",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電磁誘導",
+  "回転する導体棒",
+  "電磁ブレーキ",
+  "終端速度",
+  "エネルギー保存"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

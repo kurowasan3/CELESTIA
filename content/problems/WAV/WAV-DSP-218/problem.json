@@ -1,0 +1,126 @@
+{
+ "id": "WAV-DSP-218",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "プリズムによる光の分散と，ガラス中での光の速さ・波長・振動数",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "白色光をガラスのプリズムに入射させると，出てきた光は赤から紫までの色に分かれた．このガラスの屈折率は，赤い光（空気中の波長 $700\\,\\mathrm{nm}$）に対して $1.51$，紫の光（空気中の波長 $400\\,\\mathrm{nm}$）に対して $1.53$ である．空気中の光の速さを $3.00\\times10^8\\,\\mathrm{m/s}$ とし，空気の屈折率は $1$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "同じ入射角でガラスに入ったとき，屈折角が小さい（大きく曲がる）のは赤と紫のどちらか．"
+     },
+     {
+      "id": "2",
+      "tex": "ガラス中の赤い光の速さを有効数字3桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ガラス中の赤い光の波長を有効数字3桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "ガラス中の赤い光の振動数を有効数字3桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "ガラス中の赤い光の波長は，空気中の青い光の波長（約 $460\\,\\mathrm{nm}$）に近い．ガラスの中で赤い光は青い光に変わっているといえるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "紫"
+   },
+   {
+    "id": "2",
+    "tex": "$1.99\\times10^8\\,\\mathrm{m/s}$",
+    "grading": "1.99*10^8 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$464\\,\\mathrm{nm}$",
+    "grading": "464 [nm]"
+   },
+   {
+    "id": "4",
+    "tex": "$4.29\\times10^{14}\\,\\mathrm{Hz}$",
+    "grading": "4.29*10^14 [Hz]",
+    "wrong": [
+     {
+      "value": "6.47*10^14",
+      "misconception": "MC-REFRACTION-FREQ"
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "tex": "いえない．光の色を決めるのは振動数で，屈折しても振動数は変わらない．ガラス中で波長が短くなるのは速さが遅くなるためで，赤い光は赤い光のままである．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 屈折率が大きいほど大きく曲がる（屈折角が小さい）．屈折率の大きい\\textbf{紫}．プリズムで色が分かれる（分散）のは，色によって屈折率が違うためである．\n\n(2) $v=\\dfrac cn=\\dfrac{3.00\\times10^8}{1.51}=1.986\\cdots\\times10^8\\fallingdotseq\\boldsymbol{1.99\\times10^8\\,\\mathrm{m/s}}$．\n\n(3) 振動数が変わらず速さが $\\dfrac1n$ 倍になるので，波長も $\\dfrac1n$ 倍：$\\lambda'=\\dfrac{700}{1.51}=463.5\\cdots\\fallingdotseq\\boldsymbol{464\\,\\mathrm{nm}}$．\n\n(4) 振動数は空気中と同じで $f=\\dfrac c\\lambda=\\dfrac{3.00\\times10^8}{700\\times10^{-9}}=4.285\\cdots\\times10^{14}\\fallingdotseq\\boldsymbol{4.29\\times10^{14}\\,\\mathrm{Hz}}$．（ガラス中で $\\dfrac{v}{\\lambda'}$ を計算しても同じ値になる．$c$ をガラス中の波長で割った $6.47\\times10^{14}\\,\\mathrm{Hz}$ は誤り．）\n\n(5) \\textbf{いえない}．境界の両側で光の振動は同じリズムで続くので，振動数は変わらない．色（目が感じる色）は振動数で決まるので，ガラスの中でも赤い光は赤い光である．「波長で色が決まる」というのは，空気中（真空中）の波長でいうときの話である．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "屈折しても振動数（色）は変わらない．媒質中では速さと波長がともに $\\dfrac1n$ 倍になる．屈折率が色によって違うことが分散の原因．"
+ },
+ "concepts": [
+  "refraction-light"
+ ],
+ "laws": [
+  "refraction-law"
+ ],
+ "misconceptions": [
+  "MC-REFRACTION-FREQ"
+ ],
+ "tags": [
+  "分散",
+  "プリズム",
+  "屈折率",
+  "光の速さ"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

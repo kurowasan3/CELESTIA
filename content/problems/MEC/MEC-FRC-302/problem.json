@@ -1,0 +1,125 @@
+{
+ "id": "MEC-FRC-302",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-02",
+ "topic": "ばねばかりで空気中と水中の読みを測り，浮力・体積・密度を求める",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "numeric",
+  "experiment"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "金属のおもりを糸でばねばかりにつるすと，ばねばかりの読みは $4.9\\,\\mathrm N$ であった．次に，図のように，おもり全体を水の中に沈めて静止させると，読みは $3.9\\,\\mathrm N$ になった．おもりは容器の底や壁に触れていない．水の密度を $1.0\\times10^3\\,\\mathrm{kg/m^3}$，重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "おもりが水から受ける浮力の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "おもりの体積を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "おもりの密度を有効数字2桁で求めよ（単位は $\\mathrm{kg/m^3}$）．"
+     },
+     {
+      "id": "4",
+      "tex": "おもりを水中でさらに深い位置まで沈めた（底には触れない）．ばねばかりの読みはどうなるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "ばねばかりに糸でつるした金属のおもりが、容器の水の中に全体が沈んだ状態で静止している。おもりは底に触れていない",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1.0\\,\\mathrm N$",
+    "grading": "1 [N]"
+   },
+   {
+    "id": "2",
+    "tex": "$1.0\\times10^{-4}\\,\\mathrm{m^3}$",
+    "grading": "1.0*10^-4 [m^3]"
+   },
+   {
+    "id": "3",
+    "tex": "$4.9\\times10^3\\,\\mathrm{kg/m^3}$",
+    "grading": "4.9*10^3"
+   },
+   {
+    "id": "4",
+    "tex": "変わらない．浮力は物体の上下の面にはたらく水圧の差で，その大きさは物体が押しのけた水の重さ $\\rho Vg$ に等しく，全体が沈んでいれば深さによらないから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "おもりには重力 $W$（下向き），糸の張力 $T$（上向き，ばねばかりの読み），浮力 $F$（上向き）がはたらき，つり合っている．\n\n(1) 空気中では $T=W=4.9\\,\\mathrm N$．水中では $T+F=W$ より $F=4.9-3.9=1.0\\,\\mathrm N$．\n\n(2) アルキメデスの原理より $F=\\rho_{\\text{水}}Vg$．\n\\[ V=\\frac{F}{\\rho_{\\text{水}}g}=\\frac{1.0}{1.0\\times10^3\\times9.8}\\approx1.0\\times10^{-4}\\,\\mathrm{m^3}. \\]\n\n(3) 質量は $\\dfrac{W}{g}=\\dfrac{4.9}{9.8}=0.50\\,\\mathrm{kg}$．密度 $=\\dfrac{0.50}{1.02\\times10^{-4}}\\approx4.9\\times10^3\\,\\mathrm{kg/m^3}$．\n（$\\rho=\\rho_{\\text{水}}\\dfrac{W}{F}=1.0\\times10^3\\times\\dfrac{4.9}{1.0}$ と，体積を経由せずに求めることもできる．$g$ が約分されるので，読みの比だけで密度がわかる．）\n\n(4) 水圧は深さとともに大きくなるが，上の面と下の面の圧力の差は，おもりの高さだけで決まり深さによらない．浮力は $\\rho_{\\text{水}}Vg$ のままなので，読みは $3.9\\,\\mathrm N$ のまま変わらない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "浮力＝押しのけた液体の重さ $\\rho Vg$．空気中と水中の読みの差が浮力．"
+ },
+ "concepts": [
+  "force-concept",
+  "equilibrium"
+ ],
+ "laws": [
+  "newton-1st"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "浮力",
+  "アルキメデスの原理",
+  "つり合い",
+  "測定"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,139 @@
+{
+ "id": "MSY-CNP-205",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "円錐振り子の糸が切れたあとの落下点",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "derivation",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $l$ の軽い糸の一端を天井の点に固定し，他端に質量 $m$ の小球をつけて，糸が鉛直と角 $\\theta$ をなすように水平面内で等速円運動させた（円錐振り子）．円運動の面は水平な床から高さ $H$ にあり，円の中心の真下の床の点を O$'$ とする．重力加速度の大きさを $g$ とし，空気抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小球の速さ $v$ を，$g$，$l$，$\\theta$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "ある瞬間に糸が切れた．小球の落下点と O$'$ の距離 $D$ を，$l$，$\\theta$，$H$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$l=0.50\\,\\mathrm m$，$\\theta=60^\\circ$，$H=1.0\\,\\mathrm m$ のとき，$D$ は何 $\\mathrm m$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "糸が切れた直後の小球の速度の向きを答えよ．「遠心力がはたらいていたので，糸が切れると円の外向き（中心から遠ざかる向き）に飛び出す」という考えの誤りも指摘せよ．"
+     },
+     {
+      "id": "5",
+      "tex": "糸が切れる位置（円周上の点）をいろいろ変えると，落下点はどのような図形の上に並ぶか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "天井の点から長さ l の糸でつるした小球が、鉛直と角 θ をなして水平面内で円運動している。円運動の面は床から高さ H、円の中心の真下の床の点が O′",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=\\sqrt{gl\\sin\\theta\\tan\\theta}$",
+    "grading": "v：sqrt(g l sin(θ) tan(θ))"
+   },
+   {
+    "id": "2",
+    "tex": "$D=l\\sin\\theta\\sqrt{1+\\dfrac{2H}{l\\cos\\theta}}$",
+    "grading": "D：l sin(θ) sqrt(1+2H/(l cos(θ)))"
+   },
+   {
+    "id": "3",
+    "tex": "$1.3\\,\\mathrm m$",
+    "grading": "1.3 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "切れた点での円の接線の向き（水平）．糸が切れた後の小球には重力しかはたらかず，切れた瞬間の速度（接線方向）で放物運動を始める．遠心力は円運動とともに回る立場で考える見かけの力で，外向きに飛び出すわけではない．"
+   },
+   {
+    "id": "5",
+    "tex": "O$'$ を中心とする半径 $D$ の円の上．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "円の半径は $r=l\\sin\\theta$．\n\n(1) 糸の張力を $S$ とすると，鉛直方向のつり合い $S\\cos\\theta=mg$，水平方向の運動方程式 $m\\dfrac{v^2}{r}=S\\sin\\theta$．$S$ を消去して $v^2=gr\\tan\\theta=gl\\sin\\theta\\tan\\theta$． \\[v=\\sqrt{gl\\sin\\theta\\tan\\theta}\\]\n\n(2) 糸が切れた点を P とし，その真下の床の点を P$'$ とする．小球は P から円の接線方向に水平に速さ $v$ で飛び出し，水平投射をする．落下時間 $t=\\sqrt{\\dfrac{2H}{g}}$ の間に水平に $vt$ 進む．床の上で見ると，落下点は P$'$ から，O$'$P$'$（長さ $r$）に垂直な向きに $vt$ の位置にあるので，三平方の定理より \\[D^2=r^2+(vt)^2=l^2\\sin^2\\theta+gl\\sin\\theta\\tan\\theta\\cdot\\frac{2H}{g}=l^2\\sin^2\\theta\\left(1+\\frac{2H}{l\\cos\\theta}\\right)\\] \\[D=l\\sin\\theta\\sqrt{1+\\frac{2H}{l\\cos\\theta}}\\]\n\n(3) $\\dfrac{2H}{l\\cos\\theta}=\\dfrac{2\\times1.0}{0.50\\times0.5}=8$ より $D=0.50\\times\\dfrac{\\sqrt3}2\\times3\\approx1.3\\,\\mathrm m$．\n\n(4) 糸が切れる直前の速度は円の接線方向（水平）．切れた瞬間に速度は変わらないので，小球はこの向きに飛び出す．床から見ると，P$'$ から接線方向にまっすぐ進んだ点に落ちる．外向き（O$'$ から遠ざかる向き）の「遠心力」は小球とともに回る立場でだけ考える見かけの力で，静止した立場ではもともと存在しない．糸が切れて向心力がなくなると，小球は円の内側に曲がらなくなるだけである．\n\n(5) $D$ は糸が切れる位置によらないので，落下点は O$'$ を中心とする半径 $D$ の円の上に並ぶ．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "張力の鉛直成分が重力とつり合い，水平成分が向心力．糸が切れると接線方向に水平投射．落下点は真下の点から接線方向にずれる．"
+ },
+ "concepts": [
+  "circular-motion",
+  "projectile-motion",
+  "force-decomposition"
+ ],
+ "laws": [
+  "centripetal-acceleration",
+  "newton-2nd",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [
+  "MC-FLY-OUTWARD"
+ ],
+ "tags": [
+  "円錐振り子",
+  "水平投射",
+  "等速円運動",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

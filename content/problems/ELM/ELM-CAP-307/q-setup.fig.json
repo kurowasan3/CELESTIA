@@ -1,0 +1,136 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  250
+ ],
+ "items": [
+  {
+   "t": "circle",
+   "at": [
+    150,
+    130
+   ],
+   "r": 100,
+   "style": "solid",
+   "width": 2.4
+  },
+  {
+   "t": "circle",
+   "at": [
+    150,
+    130
+   ],
+   "r": 40,
+   "style": "fill"
+  },
+  {
+   "t": "dot",
+   "at": [
+    150,
+    130
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    146
+   ],
+   "text": "O",
+   "italic": true,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    130
+   ],
+   "to": [
+    121.72,
+    158.28
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    128,
+    140
+   ],
+   "text": "a",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    130
+   ],
+   "to": [
+    229.6,
+    69.5
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    214,
+    104
+   ],
+   "text": "b",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    80
+   ],
+   "text": "+Q",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    18
+   ],
+   "text": "−Q",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    130
+   ],
+   "text": "外球殻",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    150
+   ],
+   "text": "（半径 b）",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "id": "THM-KIN-203",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "気体の分子の数密度と分子間の平均距離（液体との比較で理想気体の近似を考える）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ボルツマン定数を $k=1.38\\times10^{-23}\\,\\mathrm{J/K}$，アボガドロ定数を $6.0\\times10^{23}\\,\\mathrm{/mol}$ とする．理想気体の状態方程式は，分子の数 $N$ を使うと $PV=NkT$ と書ける．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "圧力 $1.0\\times10^5\\,\\mathrm{Pa}$，温度 $290\\,\\mathrm K$ の空気 $1\\,\\mathrm{m^3}$ の中にある分子の数 $n$（数密度）を，有効数字2桁で求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "分子が一辺 $d$ の立方体の格子点に1個ずつ並んでいるとみなすと，$d^3$ の中に分子が1個あることになる．(1) の空気の $d$（分子間の平均距離）を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "空気の分子の直径を $3.0\\times10^{-10}\\,\\mathrm m$ とする．(2) の $d$ は分子の直径の約何倍か．整数で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "液体の水（密度 $1.0\\times10^3\\,\\mathrm{kg/m^3}$，モル質量 $18\\,\\mathrm{g/mol}$）について，同じ考え方で分子間の平均距離を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(3)(4) の結果をもとに，気体では分子の大きさや分子間力を無視する（理想気体とみなす）近似がよく成り立つ理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$n=2.5\\times10^{25}\\,\\mathrm{/m^3}$",
+    "grading": "n：2.5*10^25"
+   },
+   {
+    "id": "2",
+    "tex": "$d=3.4\\times10^{-9}\\,\\mathrm m$",
+    "grading": "d：3.4*10^(-9) [m]"
+   },
+   {
+    "id": "3",
+    "tex": "約 $11$ 倍",
+    "grading": "11倍"
+   },
+   {
+    "id": "4",
+    "tex": "$3.1\\times10^{-10}\\,\\mathrm m$",
+    "grading": "3.1*10^(-10) [m]"
+   },
+   {
+    "id": "5",
+    "tex": "気体では分子どうしが直径の約 $10$ 倍も離れていて，分子自身の体積は全体の $1/1000$ 程度にすぎず，分子間力もほとんどはたらかない．液体では分子どうしがほぼ接しているので，この近似は成り立たない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $n=\\dfrac NV=\\dfrac{P}{kT}=\\dfrac{1.0\\times10^5}{1.38\\times10^{-23}\\times290}=2.49\\cdots\\times10^{25}\\approx2.5\\times10^{25}\\,\\mathrm{/m^3}$．\n\n(2) $d^3=\\dfrac1n=4.0\\times10^{-26}\\,\\mathrm{m^3}=40\\times10^{-27}\\,\\mathrm{m^3}$ なので $d=\\sqrt[3]{40}\\times10^{-9}\\approx3.4\\times10^{-9}\\,\\mathrm m$．\n\n(3) $\\dfrac{3.4\\times10^{-9}}{3.0\\times10^{-10}}=11.3\\cdots$ で約 $11$ 倍．\n\n(4) $1\\,\\mathrm{m^3}$ の水は $1.0\\times10^3\\,\\mathrm{kg}$，物質量は $\\dfrac{1.0\\times10^6\\,\\mathrm g}{18\\,\\mathrm{g/mol}}$ なので $n=\\dfrac{1.0\\times10^6}{18}\\times6.0\\times10^{23}=3.3\\times10^{28}\\,\\mathrm{/m^3}$．$d^3=\\dfrac1n=3.0\\times10^{-29}\\,\\mathrm{m^3}$ より $d=\\sqrt[3]{30}\\times10^{-10}\\approx3.1\\times10^{-10}\\,\\mathrm m$．分子の直径とほぼ同じである．\n\n(5) 気体の分子間距離は直径の約 $11$ 倍なので，分子自身が占める体積の割合は $\\left(\\dfrac{1}{11}\\right)^3\\approx10^{-3}$ 程度で，分子どうしが近づいて分子間力を及ぼし合う時間もごく短い．したがって「大きさのない粒子が衝突のとき以外は力を及ぼさない」という理想気体のモデルがよく当てはまる．一方，液体（や強く圧縮した気体）では分子どうしがほぼ接しており，このモデルは使えない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$PV=NkT$ から数密度 $n=\\dfrac{P}{kT}$．$\\dfrac1n$ が分子1個あたりの体積で，その3乗根が分子間の平均距離．"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "ideal-gas"
+ ],
+ "laws": [
+  "ideal-gas-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "数密度",
+  "ボルツマン定数",
+  "分子間距離",
+  "理想気体のモデル"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

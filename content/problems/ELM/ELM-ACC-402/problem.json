@@ -1,0 +1,152 @@
+{
+ "id": "ELM-ACC-402",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "コンデンサーを「流れる」交流の電流：容量リアクタンスと位相",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電気容量 $C=10\\ \\mu\\mathrm F$ のコンデンサーを，電圧の実効値 $100\\ \\mathrm V$，周波数 $50\\ \\mathrm{Hz}$ の交流電源につないだ．導線の抵抗は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "コンデンサーの容量リアクタンス $X_C$ を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "2",
+      "tex": "回路を流れる電流の実効値 $I_{\\rm e}$ を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の電流が流れているとき，電荷はコンデンサーの極板の間を通り抜けているか．電荷の動きを説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "電流の位相は電圧に比べてどうなっているか．"
+     },
+     {
+      "id": "5",
+      "tex": "コンデンサーで消費される電力の時間平均を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "電源の電圧の実効値を変えずに周波数を $2$ 倍にすると，電流の実効値は何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$X_C=\\dfrac{1000}{\\pi}\\ \\Omega\\ (\\fallingdotseq3.2\\times10^2\\ \\Omega)$",
+    "grading": "X_C：1000/π [Ω]"
+   },
+   {
+    "id": "2",
+    "tex": "$I_{\\rm e}=\\dfrac{\\pi}{10}\\ \\mathrm A\\ (\\fallingdotseq0.31\\ \\mathrm A)$",
+    "grading": "I_e：π/10 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "通り抜けていない．電荷は導線の中を往復し，極板に交互にたまったり（充電），極板から出ていったり（放電）している．"
+   },
+   {
+    "id": "4",
+    "tex": "電流の位相が電圧より $\\dfrac\\pi2$ 進んでいる"
+   },
+   {
+    "id": "5",
+    "tex": "$0$",
+    "grading": "0 [W]"
+   },
+   {
+    "id": "6",
+    "tex": "$2$ 倍",
+    "grading": "2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} $X_C=\\dfrac{1}{\\omega C}=\\dfrac1{2\\pi fC}=\\dfrac{1}{2\\pi\\times50\\times10\\times10^{-6}}=\\dfrac{1000}{\\pi}\\ \\Omega\\fallingdotseq3.2\\times10^2\\ \\Omega$．\n\n\\textbf{(2)} $I_{\\rm e}=\\dfrac{100}{X_C}=\\dfrac{100\\pi}{1000}=\\dfrac\\pi{10}\\ \\mathrm A\\fallingdotseq0.31\\ \\mathrm A$．\n\n\\textbf{(3)} 極板の間は絶縁されていて，電荷は通り抜けない．電圧が増えると極板に電荷がたまり（電荷が導線を流れ込む），減ると出ていく．これがくり返されるので，導線にはいつも往復する電流が流れ，電流計はそれを示す．直流では一度充電が終わると電流は止まる．\n\n\\textbf{(4)} 極板の電荷は $q=Cv$．電流 $i=\\dfrac{\\Delta q}{\\Delta t}=C\\dfrac{\\Delta v}{\\Delta t}$ は電圧の\\textbf{変化の割合}に比例し，電圧が $0$ を増加しながら通るとき最大になる．電流は電圧より $\\dfrac14$ 周期（位相 $\\dfrac\\pi2$）進む．\n\n\\textbf{(5)} 電流と電圧の位相が $\\dfrac\\pi2$ ずれているので，電力 $vi$ は正と負を交互にとり，平均は $0$．充電のときに受け取ったエネルギーを，放電のときに電源に返している．\n\n\\textbf{(6)} $X_C=\\dfrac1{2\\pi fC}$ が $\\dfrac12$ 倍になるので，電流は $2$ 倍．（電圧の変化が速いほど，充電・放電の電流が大きい．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "コンデンサーの電流は電圧の変化の割合 $C\\dfrac{\\Delta v}{\\Delta t}$．極板の間を電荷が通るのではなく，充電・放電がくり返される．"
+ },
+ "predict": {
+  "prompt": "コンデンサーを交流電源につなぐと電流計が振れ続ける．このとき，電荷は極板の間を通り抜けていると思う？",
+  "choices": [
+   {
+    "id": "a",
+    "tex": "交流なら極板の間を電荷が通り抜けて，電流が流れる",
+    "misconception": "MC-CAP-CURRENT"
+   },
+   {
+    "id": "b",
+    "tex": "通り抜けない．充電と放電がくり返されて，導線を電荷が往復する"
+   }
+  ],
+  "answer": "b",
+  "explain": {
+   "laws": [
+    "ac-reactance"
+   ],
+   "tex": "極板の間は絶縁体（真空）なので電荷は通れない．電圧が変化するたびに極板の電荷 $q=Cv$ が増減し，そのぶん導線を電荷が出入りする．"
+  }
+ },
+ "concepts": [
+  "ac-circuit",
+  "capacitor"
+ ],
+ "laws": [
+  "ac-reactance",
+  "rms-value"
+ ],
+ "misconceptions": [
+  "MC-CAP-CURRENT"
+ ],
+ "tags": [
+  "交流",
+  "コンデンサー",
+  "リアクタンス",
+  "位相"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

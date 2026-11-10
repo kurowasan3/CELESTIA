@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 185" width="470" height="185" font-family="'Times New Roman', serif">
+<polygon points="120,70 350,70 350,150 120,150" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="40" y1="90" x2="430" y2="90" stroke="currentColor" stroke-width="2"/>
+<line x1="40" y1="130" x2="430" y2="130" stroke="currentColor" stroke-width="2"/>
+<polyline points="160,110 172,110 175.5,119 182.5,101 189.5,119 196.5,101 203.5,119 210.5,101 217.5,119 224.5,101 231.5,119 238.5,101 245.5,119 252.5,101 259.5,119 266.5,101 273.5,119 280.5,101 287.5,119 294.5,101 298,110 310,110" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<line x1="160" y1="110" x2="160" y2="40" stroke="currentColor" stroke-width="1.2"/>
+<line x1="310" y1="110" x2="310" y2="40" stroke="currentColor" stroke-width="1.2"/>
+<text x="235" y="30" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">ヒーター（電力 P）</text>
+<g class="f-vel" data-phys="flow:in" data-dir="0" data-len="50">
+<line x1="50" y1="110" x2="90" y2="110" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="100,110 90,114.66 90,105.34" fill="currentColor"/>
+</g>
+<g class="f-vel" data-phys="flow:out" data-dir="0" data-len="50">
+<line x1="380" y1="110" x2="420" y2="110" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="430,110 420,114.66 420,105.34" fill="currentColor"/>
+</g>
+<polygon points="72,60 80,60 80,104 72,104" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="392,60 400,60 400,104 392,104" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="76" y="48" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">T₁</text>
+<text x="396" y="48" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">T₂</text>
+<text x="235" y="168" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">断熱材でおおった管（水が流れる）</text>
+</svg>

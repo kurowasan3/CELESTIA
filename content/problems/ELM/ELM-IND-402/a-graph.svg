@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 275" width="480" height="275" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="410">
+<line x1="50" y1="150" x2="450" y2="150" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="460,150 450,154.66 450,145.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="225">
+<line x1="60" y1="255" x2="60" y2="40" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,30 64.66,40 55.34,40" fill="currentColor"/>
+</g>
+<text x="462" y="166" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">t [ms]</text>
+<text x="68" y="28" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">V₂ [V]</text>
+<text x="54" y="162" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<line x1="115" y1="146" x2="115" y2="154" stroke="currentColor" stroke-width="1.2"/>
+<text x="115" y="166" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">10</text>
+<line x1="170" y1="146" x2="170" y2="154" stroke="currentColor" stroke-width="1.2"/>
+<text x="170" y="166" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">20</text>
+<line x1="225" y1="146" x2="225" y2="154" stroke="currentColor" stroke-width="1.2"/>
+<text x="225" y="166" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">30</text>
+<line x1="280" y1="146" x2="280" y2="154" stroke="currentColor" stroke-width="1.2"/>
+<text x="280" y="166" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">40</text>
+<line x1="390" y1="146" x2="390" y2="154" stroke="currentColor" stroke-width="1.2"/>
+<text x="390" y="166" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">60</text>
+<line x1="56" y1="110" x2="64" y2="110" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="110" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">5.0</text>
+<line x1="56" y1="230" x2="64" y2="230" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="230" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">−10</text>
+<polyline points="60,110 170,110 170,150 280,150 280,230 335,230 335,150 390,150" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</svg>

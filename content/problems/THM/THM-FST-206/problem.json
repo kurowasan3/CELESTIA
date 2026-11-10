@@ -1,0 +1,147 @@
+{
+ "id": "THM-FST-206",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "V–T グラフで表されたサイクルを P–V 図に描き直す（各過程の熱量と正味の仕事の符号）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "graph-read",
+  "construct",
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$1\\,\\mathrm{mol}$ の単原子分子理想気体の状態を，図の体積 $V$–絶対温度 $T$ グラフのように A→B→C→A とゆっくり変化させた．A→B の直線を延長すると原点 O を通る．気体定数を $R$ とし，$P_0=\\dfrac{RT_0}{V_0}$ とおく．温度 $T$ の等温変化で体積が $V_{\\rm a}$ から $V_{\\rm b}$ になるとき，気体がする仕事は $RT\\log\\dfrac{V_{\\rm b}}{V_{\\rm a}}$（$\\log$ は自然対数）である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A→B，B→C，C→A はそれぞれ何という変化か．また，状態 B，C の圧力 $P_{\\rm B}$，$P_{\\rm C}$ を $P_0$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "このサイクルを，横軸 $V$，縦軸 $P$ のグラフ（$P$-$V$ 図）に描け．"
+     },
+     {
+      "id": "3",
+      "tex": "各過程で気体が吸収する熱量 $Q_{\\rm AB}$，$Q_{\\rm BC}$，$Q_{\\rm CA}$ を $R$，$T_0$ で表せ（放出するときは負とする）．"
+     },
+     {
+      "id": "4",
+      "tex": "1サイクルの間に気体が外にする正味の仕事 $W$ を $R$，$T_0$ で表せ．また，$W$ の符号と (2) の図で回る向きとの関係を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "横軸 T，縦軸 V のグラフ。A（T₀，V₀）から原点を通る直線上を B（2T₀，2V₀）へ，B から T=2T₀ のまま C（2T₀，V₀）へ，C から V=V₀ のまま A へ戻る",
+   "caption": ""
+  },
+  {
+   "id": "a-pv",
+   "role": "answer",
+   "kind": "graph",
+   "format": "svg",
+   "src": "a-pv.svg",
+   "alt": "P-V 図。A（V₀，P₀）から水平に B（2V₀，P₀），B から等温線に沿って C（V₀，2P₀），C から鉛直に A へ戻る反時計回りのサイクル",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "A→B：定圧変化，B→C：等温変化（等温圧縮），C→A：定積変化．$P_{\\rm B}=P_0$，$P_{\\rm C}=2P_0$",
+    "grading": "P_B：P_0 ; P_C：2P_0"
+   },
+   {
+    "id": "2",
+    "tex": "解答の図．A$(V_0,P_0)$→B$(2V_0,P_0)$ は水平な線分，B→C$(V_0,2P_0)$ は等温線（双曲線），C→A は鉛直な線分．"
+   },
+   {
+    "id": "3",
+    "tex": "$Q_{\\rm AB}=\\dfrac52RT_0$，$Q_{\\rm BC}=-2RT_0\\log2$，$Q_{\\rm CA}=-\\dfrac32RT_0$",
+    "grading": "Q_{AB}：5R T_0/2 ; Q_{BC}：-2R T_0 log(2) ; Q_{CA}：-3R T_0/2"
+   },
+   {
+    "id": "4",
+    "tex": "$W=RT_0(1-2\\log2)\\ (\\approx-0.39RT_0)$．負になる．$P$-$V$ 図でサイクルが反時計回りに回るので，膨張（A→B）より高い圧力で圧縮（B→C）しており，外からされる仕事のほうが大きい．",
+    "grading": "W：R T_0(1-2log(2))"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　$PV=RT$ より $V=\\dfrac RP T$．A→B は原点を通る直線なので $\\dfrac VT$ が一定，すなわち圧力一定（定圧変化）で $P_{\\rm B}=P_{\\rm A}=\\dfrac{RT_0}{V_0}=P_0$．B→C は $T=2T_0$ のまま体積が減るので等温圧縮，$P_{\\rm C}=\\dfrac{R\\cdot2T_0}{V_0}=2P_0$．C→A は体積 $V_0$ のまま温度が下がるので定積変化．\n\n\\textbf{(2)}　A$(V_0,P_0)$，B$(2V_0,P_0)$，C$(V_0,2P_0)$ を，A→B は水平線，B→C は $PV=2P_0V_0$ の双曲線，C→A は鉛直線で結ぶ（解答の図）．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-pv"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(3)}　A→B（定圧）：$Q_{\\rm AB}=\\dfrac52R(2T_0-T_0)=\\dfrac52RT_0$．\nB→C（等温）：$\\Delta U=0$，気体がする仕事 $RT\\log\\dfrac{V_{\\rm C}}{V_{\\rm B}}=2RT_0\\log\\dfrac12=-2RT_0\\log2$ なので $Q_{\\rm BC}=-2RT_0\\log2$（放熱）．\nC→A（定積）：$Q_{\\rm CA}=\\dfrac32R(T_0-2T_0)=-\\dfrac32RT_0$（放熱）．\n\n\\textbf{(4)}　1サイクルで $\\Delta U=0$ なので $W=Q_{\\rm AB}+Q_{\\rm BC}+Q_{\\rm CA}=RT_0-2RT_0\\log2=RT_0(1-2\\log2)$．（各過程の仕事から：A→B で $P_0V_0=RT_0$，B→C で $-2RT_0\\log2$，C→A で $0$．）$\\log2\\approx0.69$ より $W\\approx-0.39RT_0<0$．$P$-$V$ 図で，サイクルが時計回りなら $W>0$（熱機関），反時計回りなら $W<0$ である．このサイクルは A→B（下側）で右へ，B→C（上側）で左へ進む反時計回りなので，正味では外から仕事をされる（冷凍機・ヒートポンプの向き）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$V$–$T$ グラフで原点を通る直線は定圧，横軸に垂直な線は等温，横軸に平行な線は定積．$P=\\dfrac{RT}{V}$ で各点の圧力を出して $P$-$V$ 図に移すと，仕事が面積で読める．"
+ },
+ "concepts": [
+  "first-law",
+  "ideal-gas"
+ ],
+ "laws": [
+  "first-law",
+  "ideal-gas-law",
+  "molar-heat",
+  "internal-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "V-Tグラフ",
+  "P-V図",
+  "サイクル",
+  "等温変化",
+  "熱力学第1法則"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

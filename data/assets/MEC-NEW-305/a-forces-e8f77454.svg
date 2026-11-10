@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 215" width="340" height="215" font-family="'Times New Roman', serif">
+<line x1="20" y1="200" x2="330" y2="200" stroke="currentColor" stroke-width="2"/>
+<polygon points="40,200 260,200 260,72.98" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6" data-phys="incline"/>
+<line x1="40" y1="200" x2="260" y2="72.98" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<g transform="translate(150,136.49) rotate(-30)" data-phys="body:A" data-angle="30">
+<rect x="-22" y="-30" width="44" height="30" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<g class="f-force" data-phys="force:T" data-dir="30" data-len="59.04">
+<line x1="142.5" y1="123.5" x2="184.97" y2="98.98" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="193.63,93.98 187.3,103.02 182.64,94.94" fill="currentColor"/>
+<text x="204.02" y="87.98" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">T</text>
+</g>
+<g class="f-force" data-phys="force:Mg" data-dir="270" data-len="58.8">
+<line x1="142.5" y1="123.5" x2="142.5" y2="172.3" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="142.5,182.3 137.84,172.3 147.16,172.3" fill="currentColor"/>
+<text x="158.5" y="192.3" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">Mg</text>
+</g>
+<g class="f-force" data-phys="force:N" data-dir="120" data-len="50.92">
+<line x1="142.5" y1="123.5" x2="122.04" y2="88.06" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="117.04,79.4 126.08,85.73 118,90.39" fill="currentColor"/>
+<text x="111.04" y="69.01" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">N</text>
+</g>
+<g class="f-force" data-phys="force:f" data-dir="210" data-len="10.18">
+<line x1="142.5" y1="123.5" x2="136.77" y2="126.81" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="133.68,128.59 135.94,125.37 137.6,128.25" fill="currentColor"/>
+<text x="107.29" y="148.59" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">μN</text>
+</g>
+</svg>

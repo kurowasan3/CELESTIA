@@ -1,0 +1,146 @@
+{
+ "id": "ELM-IND-404",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "磁場中で回転する導体棒の誘導起電力と回し続ける仕事率",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図は真上から見た図である．鉛直上向き（紙面の裏から表の向き）に磁束密度 $B$ の一様な磁場があり，その中で長さ $l$ の導体棒 OP が，端 O を通る鉛直な軸のまわりに，水平面内で一定の角速度 $\\omega$ で反時計回りに回転している．端 P は半径 $l$ の円形の導体レールに接しながら動く．O の軸とレールの間に抵抗値 $R$ の抵抗をつないだ．抵抗以外の電気抵抗と摩擦は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒 OP に生じる誘導起電力の大きさ $V$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "O と P のどちらが高電位か．"
+     },
+     {
+      "id": "3",
+      "tex": "抵抗を流れる電流の大きさ $I$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "棒が磁場から受ける力の，O のまわりのモーメントの大きさ $\\tau$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "棒を一定の角速度で回し続けるために外部から加える仕事率 $P$ を求めよ．これが抵抗の消費電力に等しいことを確かめよ．"
+     },
+     {
+      "id": "6",
+      "tex": "$B=0.50\\ \\mathrm T$，$l=0.20\\ \\mathrm m$，$\\omega=100\\ \\mathrm{rad/s}$，$R=0.50\\ \\Omega$ のとき，$V$ と $P$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "真上から見た図。紙面の裏から表の向きの磁場の中で、中心 O から円形レール上の点 P まで導体棒が伸び、O のまわりに反時計回りに角速度 ω で回る。O とレールの間に抵抗 R がつながれている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V=\\dfrac12B\\omega l^2$",
+    "grading": "V：B ω l^2/2"
+   },
+   {
+    "id": "2",
+    "tex": "P"
+   },
+   {
+    "id": "3",
+    "tex": "$I=\\dfrac{B\\omega l^2}{2R}$",
+    "grading": "I：B ω l^2/(2R)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\tau=\\dfrac{B^2\\omega l^4}{4R}$",
+    "grading": "τ：B^2 ω l^4/(4R)"
+   },
+   {
+    "id": "5",
+    "tex": "$P=\\dfrac{B^2\\omega^2l^4}{4R}$（$=\\dfrac{V^2}{R}$）",
+    "grading": "P：B^2 ω^2 l^4/(4R)"
+   },
+   {
+    "id": "6",
+    "tex": "$V=1.0\\ \\mathrm V$，$P=2.0\\ \\mathrm W$",
+    "grading": "V：1.0 [V] ; P：2.0 [W]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 時間 $\\Delta t$ の間に棒は角 $\\omega\\Delta t$ だけ回り，半径 $l$・中心角 $\\omega\\Delta t$ の扇形を掃く．その面積は $\\Delta S=\\dfrac12l^2\\omega\\Delta t$．棒が横切る磁束は $B\\Delta S$ なので\n\\[V=\\frac{B\\Delta S}{\\Delta t}=\\frac12B\\omega l^2\\]\n（O から距離 $r$ の部分の速さは $r\\omega$ で，起電力 $vBl$ の「平均の速さ」$\\dfrac{l\\omega}2$ を使っても同じ．）\n\n\\textbf{(2)} 棒の中の正電荷は速度（反時計回りの接線方向）と磁場（上向き）に対して，ローレンツ力 $q\\vec v\\times\\vec B$ を外向き（O から P へ）に受ける．正電荷が P 側に集まるので \\textbf{P} が高電位．\n\n\\textbf{(3)} $I=\\dfrac VR=\\dfrac{B\\omega l^2}{2R}$．\n\n\\textbf{(4)} 棒の各部分は単位長さあたり $IB$ の力を，回転を妨げる向きに受ける．力は棒に沿って一様なので，合力 $IBl$ が棒の中点（O から $\\dfrac l2$）にはたらくとみなせる．\n\\[\\tau=IBl\\cdot\\frac l2=\\frac{IBl^2}{2}=\\frac{B^2\\omega l^4}{4R}\\]\n\n\\textbf{(5)} 一定の角速度を保つには，外部から大きさ $\\tau$ の力のモーメントを回転の向きに加え続ける．仕事率は $P=\\tau\\omega=\\dfrac{B^2\\omega^2l^4}{4R}$．抵抗の消費電力は $\\dfrac{V^2}{R}=\\dfrac{B^2\\omega^2l^4}{4R}$ で等しい．外部からの仕事がすべてジュール熱になる．\n\n\\textbf{(6)} $V=\\dfrac12\\times0.50\\times100\\times0.20^2=1.0\\ \\mathrm V$．$P=\\dfrac{V^2}R=\\dfrac{1.0^2}{0.50}=2.0\\ \\mathrm W$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "回転する棒の起電力は「1秒あたりに掃く面積 $\\times B$」．力は棒全体に一様にかかり，中点に合力がはたらくとみなせる．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "lorentz-force",
+  "electric-power"
+ ],
+ "laws": [
+  "motional-emf",
+  "current-force",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電磁誘導",
+  "回転",
+  "エネルギー",
+  "数値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

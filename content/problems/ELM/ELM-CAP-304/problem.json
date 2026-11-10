@@ -1,0 +1,134 @@
+{
+ "id": "ELM-CAP-304",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "充電した2つのコンデンサーの異符号の極板どうしをつなぐ（電気量の保存とエネルギーの損失）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "calc",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電気容量 $C_1=2.0\\,\\mu\\mathrm F$ のコンデンサー $\\mathrm C_1$ を $10\\,\\mathrm V$ に，電気容量 $C_2=3.0\\,\\mu\\mathrm F$ のコンデンサー $\\mathrm C_2$ を $5.0\\,\\mathrm V$ に充電し，それぞれ電池から外した．次に，図のように，$\\mathrm C_1$ の正の極板と $\\mathrm C_2$ の負の極板をスイッチ S を通して，$\\mathrm C_1$ の負の極板と $\\mathrm C_2$ の正の極板を導線でつなぎ，S を閉じた．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "S を閉じる前の $\\mathrm C_1$，$\\mathrm C_2$ の電気量 $Q_1$，$Q_2$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "S を閉じて十分時間がたった後の，$\\mathrm C_1$ の電圧 $V$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "このときの $\\mathrm C_1$，$\\mathrm C_2$ の電気量 $q_1$，$q_2$ を求めよ．ただし，図の上側の極板の電気量を答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "S を閉じる前後での静電エネルギーの減少量 $\\Delta U$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "もし同じ符号の極板どうし（正と正，負と負）をつないでいたら，十分時間後の電圧はいくらになったか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "左に C₁（上の極板が＋、下が−）、右に C₂（上の極板が−、下が＋）。上の極板どうしをスイッチ S を通して、下の極板どうしを導線でつないだ回路",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$Q_1=2.0\\times10^{-5}\\,\\mathrm C$，$Q_2=1.5\\times10^{-5}\\,\\mathrm C$",
+    "grading": "Q_1：2*10^(-5) [C] ; Q_2：1.5*10^(-5) [C]"
+   },
+   {
+    "id": "2",
+    "tex": "$V=1.0\\,\\mathrm V$",
+    "grading": "V：1 [V]"
+   },
+   {
+    "id": "3",
+    "tex": "$q_1=2.0\\times10^{-6}\\,\\mathrm C$，$q_2=3.0\\times10^{-6}\\,\\mathrm C$",
+    "grading": "q_1：2*10^(-6) [C] ; q_2：3*10^(-6) [C]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta U=1.35\\times10^{-4}\\,\\mathrm J$",
+    "grading": "ΔU：1.35*10^(-4) [J]"
+   },
+   {
+    "id": "5",
+    "tex": "$7.0\\,\\mathrm V$",
+    "grading": "7 [V]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $Q_1=C_1V_1=2.0\\times10^{-6}\\times10=2.0\\times10^{-5}\\,\\mathrm C$，$Q_2=3.0\\times10^{-6}\\times5.0=1.5\\times10^{-5}\\,\\mathrm C$．\n\n(2) S を閉じると，上側の2枚の極板（$\\mathrm C_1$ の正の極板と $\\mathrm C_2$ の負の極板）は導線で結ばれた孤立部分になり，その電気量の和は保存される：\n\\[(+2.0\\times10^{-5})+(-1.5\\times10^{-5})=+5.0\\times10^{-6}\\,\\mathrm C．\\]\n十分時間後は2つのコンデンサーの電圧が等しく（$V$，上側が高電位），上側の極板の電気量はそれぞれ $C_1V$，$C_2V$．よって $(C_1+C_2)V=5.0\\times10^{-6}$ より $V=\\dfrac{5.0\\times10^{-6}}{5.0\\times10^{-6}}=1.0\\,\\mathrm V$．\n\n(3) $q_1=C_1V=2.0\\times10^{-6}\\,\\mathrm C$，$q_2=C_2V=3.0\\times10^{-6}\\,\\mathrm C$（どちらも上側の極板が正）．$\\mathrm C_2$ は充電の向きが逆になった．\n\n(4) 前：$\\dfrac12C_1V_1^2+\\dfrac12C_2V_2^2=1.0\\times10^{-4}+3.75\\times10^{-5}=1.375\\times10^{-4}\\,\\mathrm J$．後：$\\dfrac12(C_1+C_2)V^2=2.5\\times10^{-6}\\,\\mathrm J$．\n\\[\\Delta U=1.375\\times10^{-4}-2.5\\times10^{-6}=1.35\\times10^{-4}\\,\\mathrm J．\\]\n失われたエネルギーは，電荷が移動するときに導線で熱（と電磁波）になる．一般に $\\Delta U=\\dfrac{C_1C_2}{2(C_1+C_2)}(V_1+V_2)^2$（異符号どうし）となる．\n\n(5) 同符号どうしなら孤立部分の電気量は $2.0\\times10^{-5}+1.5\\times10^{-5}=3.5\\times10^{-5}\\,\\mathrm C$ で，$V=\\dfrac{3.5\\times10^{-5}}{5.0\\times10^{-6}}=7.0\\,\\mathrm V$．このときの損失は $\\dfrac{C_1C_2}{2(C_1+C_2)}(V_1-V_2)^2=1.5\\times10^{-5}\\,\\mathrm J$ で，異符号どうしの場合よりずっと小さい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "導線でつながれ，外とつながっていない極板の組（孤立部分）の電気量の和は保存される．つなぐ極板の符号に注意して和をとる．"
+ },
+ "concepts": [
+  "capacitor"
+ ],
+ "laws": [
+  "capacitor-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "コンデンサーのつなぎかえ",
+  "電気量保存",
+  "孤立部分",
+  "エネルギーの損失"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

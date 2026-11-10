@@ -1,0 +1,121 @@
+{
+ "id": "THM-HET-206",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-01",
+ "topic": "火力発電所の熱効率と排熱（冷却に必要な海水の量・効率を上げたときの排熱の変化）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "written"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電気出力 $1.0\\times10^9\\,\\mathrm W$ の火力発電所がある．燃料を燃やして得た熱から電気エネルギーを取り出す熱効率は $40\\,\\%$ であり，残りの熱はすべて冷却用の海水に捨てられる．海水の比熱を $4.0\\times10^3\\,\\mathrm{J/(kg\\cdot K)}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "燃料から単位時間あたりに得ている熱量（$\\mathrm W$）を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "単位時間あたりに海水に捨てている熱量を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "冷却に使う海水の温度上昇を $7.5\\,\\mathrm K$ にとどめるには，毎秒何 $\\mathrm{kg}$ の海水を流す必要があるか．"
+     },
+     {
+      "id": "4",
+      "tex": "同じ電気出力のまま熱効率を $50\\,\\%$ に上げると，海水に捨てる熱量は (2) の何倍になるか．"
+     },
+     {
+      "id": "5",
+      "tex": "どれほど技術を改良しても，熱機関の熱効率を $100\\,\\%$ にすることはできない．このことを表す法則の名前を答え，その内容を簡単に述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2.5\\times10^9\\,\\mathrm W$",
+    "grading": "2.5*10^9 [W]"
+   },
+   {
+    "id": "2",
+    "tex": "$1.5\\times10^9\\,\\mathrm W$",
+    "grading": "1.5*10^9 [W]"
+   },
+   {
+    "id": "3",
+    "tex": "$5.0\\times10^4\\,\\mathrm{kg}$（毎秒）",
+    "grading": "5.0*10^4"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac23$ 倍",
+    "grading": "2/3倍"
+   },
+   {
+    "id": "5",
+    "tex": "熱力学第2法則．熱機関は高温の熱源から受け取った熱の一部を必ず低温の物体に捨てなければならず，受け取った熱をすべて仕事に変えることはできない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 熱効率 $e=\\dfrac{W}{Q_{\\text{in}}}$ より，$Q_{\\text{in}}=\\dfrac{1.0\\times10^9}{0.40}=2.5\\times10^9\\,\\mathrm W$（毎秒 $2.5\\times10^9\\,\\mathrm J$）．\n\n(2) エネルギー保存より $Q_{\\text{out}}=Q_{\\text{in}}-W=2.5\\times10^9-1.0\\times10^9=1.5\\times10^9\\,\\mathrm W$．電気出力より多くの熱を捨てている．\n\n(3) 毎秒 $\\mu\\,[\\mathrm{kg}]$ の海水が $7.5\\,\\mathrm K$ 上がって $1.5\\times10^9\\,\\mathrm J$ を受け取る：$\\mu\\times4.0\\times10^3\\times7.5=1.5\\times10^9$ より $\\mu=5.0\\times10^4\\,\\mathrm{kg}$（毎秒約 $50\\,$トン）．\n\n(4) $Q_{\\text{in}}=\\dfrac{1.0\\times10^9}{0.50}=2.0\\times10^9\\,\\mathrm W$，$Q_{\\text{out}}=1.0\\times10^9\\,\\mathrm W$．(2) の $\\dfrac{1.0}{1.5}=\\dfrac23$ 倍．効率をわずかに上げるだけで，燃料も排熱も大きく減る．\n\n(5) 熱力学第2法則（熱をすべて仕事に変える熱機関はつくれない）．熱機関は，高温部から熱をもらい，その一部を仕事にし，残りを低温部に捨てることでくり返し動く．捨てる熱 $Q_{\\text{out}}$ を $0$ にはできないので $e<1$ である．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "熱効率 $e=\\dfrac{W}{Q_{\\text{in}}}$，捨てる熱 $Q_{\\text{out}}=Q_{\\text{in}}-W$．排熱は $Q=mc\\Delta T$ で冷却水の量と結びつく．"
+ },
+ "concepts": [
+  "heat-engine",
+  "heat-temperature"
+ ],
+ "laws": [
+  "thermal-efficiency",
+  "heat-capacity"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "熱効率",
+  "熱機関",
+  "排熱",
+  "熱力学第2法則"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "id": "MEC-RIG-501",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "スパナでボルトを回す力のモーメント（力の向きと腕の長さ）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "スパナでボルトを回す．ボルトの中心 O から $0.25\\,\\mathrm m$ 離れたスパナの点 P に，スパナを含む平面内で大きさ $20\\,\\mathrm N$ の力を加える．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "力をスパナに垂直に加えたとき，O のまわりの力のモーメントの大きさは何 $\\mathrm{N\\cdot m}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "図のように，力の向きをスパナの延長線から $30^\\circ$ 傾けたとき，O のまわりの力のモーメントの大きさは何 $\\mathrm{N\\cdot m}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "O から $0.20\\,\\mathrm m$ の点を，スパナに垂直に押して (1) と同じ大きさのモーメントを得るには，何 $\\mathrm N$ の力が必要か．"
+     },
+     {
+      "id": "4",
+      "tex": "かたく締まったボルトを回すとき，スパナの柄にパイプをかぶせて長くすることがある．その理由を力のモーメントを用いて説明せよ．また，同じ大きさの力ならどの向きに加えるのがもっともよいか答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "ボルトの中心 O から 0.25 m の点 P に、スパナの延長線から 30° 傾いた向きに力 F を加える",
+   "caption": "",
+   "physics": {
+    "forces": [
+     {
+      "name": "F",
+      "dir_deg": 30
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$5.0\\,\\mathrm{N\\cdot m}$",
+    "grading": "モーメント（N·m）：5"
+   },
+   {
+    "id": "2",
+    "tex": "$2.5\\,\\mathrm{N\\cdot m}$",
+    "grading": "モーメント（N·m）：2.5"
+   },
+   {
+    "id": "3",
+    "tex": "$25\\,\\mathrm N$",
+    "grading": "25 [N]"
+   },
+   {
+    "id": "4",
+    "tex": "力のモーメントは（力の大きさ）×（回転軸から力の作用線までの距離）なので，柄を長くして遠くを押せば，同じモーメントを小さな力で得られる．力はスパナに垂直に加えるのがもっともよい．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "力のモーメントの大きさは $M=Fl\\sin\\theta$（$l$ は O から作用点までの距離，$\\theta$ は O から作用点に向かう向きと力のなす角）．$l\\sin\\theta$ は O から力の作用線までの距離（うでの長さ）である．\n\n(1) $M=20\\times0.25=5.0\\,\\mathrm{N\\cdot m}$．\n\n(2) うでの長さは $0.25\\sin30^\\circ=0.125\\,\\mathrm m$ なので $M=20\\times0.125=2.5\\,\\mathrm{N\\cdot m}$．力の成分で考えると，スパナに垂直な成分 $20\\sin30^\\circ=10\\,\\mathrm N$ だけが回転にきき，スパナに沿った成分は O を通るのできかない．\n\n(3) $F\\times0.20=5.0$ より $F=25\\,\\mathrm N$．\n\n(4) 回す効果は力の大きさだけでなく，うでの長さとの積で決まる．パイプで柄を長くし，O から遠い点を押すと，うでの長さが大きくなるので，小さな力で必要なモーメントが得られる．同じ大きさの力なら，うでの長さが最大になる，スパナに垂直な向きに加えるとよい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "力のモーメント＝力の大きさ×うでの長さ（回転軸から作用線までの距離）．回転にきくのは，うでに垂直な成分だけ．"
+ },
+ "concepts": [
+  "torque"
+ ],
+ "laws": [
+  "torque-equilibrium"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力のモーメント",
+  "うでの長さ",
+  "道具"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

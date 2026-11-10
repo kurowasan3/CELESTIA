@@ -1,0 +1,195 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  540,
+  240
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    20,
+    30
+   ],
+   "dir": 0,
+   "len": 490,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    20,
+    90
+   ],
+   "dir": 0,
+   "len": 490,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    20,
+    150
+   ],
+   "dir": 0,
+   "len": 490,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    20,
+    210
+   ],
+   "dir": 0,
+   "len": 490,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    522,
+    30
+   ],
+   "text": "B",
+   "italic": true
+  },
+  {
+   "t": "line",
+   "from": [
+    110,
+    200
+   ],
+   "to": [
+    110,
+    60
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    110,
+    140
+   ],
+   "dir": 90,
+   "len": 34,
+   "style": "current",
+   "label": "I",
+   "labelPos": "mid",
+   "labelOffset": [
+    -26,
+    0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    222
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 15
+  },
+  {
+   "t": "line",
+   "from": [
+    215,
+    200
+   ],
+   "to": [
+    344.9038105676658,
+    125.00000000000001
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    275.6217782649107,
+    165.0
+   ],
+   "dir": 30,
+   "len": 34,
+   "style": "current",
+   "label": "I",
+   "labelPos": "mid",
+   "labelOffset": [
+    -16,
+    -14
+   ]
+  },
+  {
+   "t": "arc",
+   "at": [
+    215,
+    200
+   ],
+   "r": 34,
+   "from": 0,
+   "to": 30,
+   "label": "30°",
+   "labelGap": 16
+  },
+  {
+   "t": "line",
+   "from": [
+    215,
+    200
+   ],
+   "to": [
+    275,
+    200
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    203,
+    214
+   ],
+   "text": "Q",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    370,
+    60
+   ],
+   "to": [
+    500,
+    60
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    415,
+    60
+   ],
+   "dir": 0,
+   "len": 34,
+   "style": "current",
+   "label": "I",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -26
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    360,
+    60
+   ],
+   "text": "R",
+   "italic": false,
+   "anchor": "end"
+  }
+ ]
+}

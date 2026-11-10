@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 175" width="430" height="175" font-family="'Times New Roman', serif">
+<line x1="30" y1="50" x2="170" y2="50" stroke="currentColor" stroke-width="2.4"/>
+<line x1="30" y1="130" x2="170" y2="130" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="30,52 100,52 100,128 30,128" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<text x="65" y="90" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">εᵣ</text>
+<text x="100" y="160" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">図1</text>
+<text x="100" y="30" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">面積の半分に厚さ d</text>
+<line x1="180" y1="50" x2="180" y2="130" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="188" y="90" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d</text>
+<line x1="240" y1="50" x2="380" y2="50" stroke="currentColor" stroke-width="2.4"/>
+<line x1="240" y1="130" x2="380" y2="130" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="240,90 380,90 380,128 240,128" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<text x="310" y="109" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">εᵣ</text>
+<text x="310" y="160" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">図2</text>
+<text x="310" y="30" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">全面に厚さ d/2</text>
+<text x="390" y="109" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d/2</text>
+</svg>

@@ -1,0 +1,155 @@
+{
+ "id": "MEC-MOM-405",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "衝突する2台の台車の速度–時刻グラフ（質量・反発係数・平均の力・加速度の比を読む）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "graph-read",
+  "experiment",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平なレールの上で，質量 $1.0\\,\\mathrm{kg}$ の台車 A を，静止している台車 B に正面衝突させた．速度センサーで測った A，B の速度 $v$（右向きを正）と時刻 $t$ の関係を図に示す．衝突は $t=0.20\\,\\mathrm s$ から $t=0.25\\,\\mathrm s$ の間に起こり，その間の速度の変化は直線とみなせる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "台車 B の質量 $m_{\\rm B}$ は何 $\\mathrm{kg}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "A と B の間の反発係数 $e$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "衝突の間に B が A から受けた力の平均の大きさ $F$ は何 $\\mathrm N$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "衝突の間の A の加速度の大きさは，B の加速度の大きさの何倍か．また，そのことはグラフのどこに表れているか．"
+     },
+     {
+      "id": "5",
+      "tex": "衝突によって失われた力学的エネルギーは何 $\\mathrm J$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "速度 v と時刻 t のグラフ。A は 0.60 m/s で一定に進み、0.20 s から 0.25 s の間に直線的に −0.10 m/s まで変わり、その後一定。B は 0 のまま、0.20 s から 0.25 s の間に直線的に 0.35 m/s まで増え、その後一定",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$m_{\\rm B}=2.0\\,\\mathrm{kg}$",
+    "grading": "m_B：2 [kg]"
+   },
+   {
+    "id": "2",
+    "tex": "$e=0.75$",
+    "grading": "e：0.75"
+   },
+   {
+    "id": "3",
+    "tex": "$F=14\\,\\mathrm N$",
+    "grading": "F：14 [N]"
+   },
+   {
+    "id": "4",
+    "tex": "$2$ 倍．衝突の間の2本の直線の傾き（$-14\\,\\mathrm{m/s^2}$ と $7.0\\,\\mathrm{m/s^2}$）の大きさの比に表れている．",
+    "grading": "2倍"
+   },
+   {
+    "id": "5",
+    "tex": "$5.25\\times10^{-2}\\,\\mathrm J$",
+    "grading": "0.0525 [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "グラフから，衝突前 A $0.60\\,\\mathrm{m/s}$，B $0$；衝突後 A $-0.10\\,\\mathrm{m/s}$（はね返った），B $0.35\\,\\mathrm{m/s}$．\n\n(1) 運動量保存：\\[1.0\\times0.60=1.0\\times(-0.10)+m_{\\rm B}\\times0.35\\quad\\Longrightarrow\\quad m_{\\rm B}=\\frac{0.70}{0.35}=2.0\\,\\mathrm{kg}\\]\n\n(2) \\[e=-\\frac{v_{\\rm A}'-v_{\\rm B}'}{v_{\\rm A}-v_{\\rm B}}=-\\frac{-0.10-0.35}{0.60-0}=0.75\\]\n\n(3) B の運動量の変化は $2.0\\times0.35=0.70\\,\\mathrm{N\\cdot s}$．これが $0.050\\,\\mathrm s$ の間に受けた力積なので $F=\\dfrac{0.70}{0.050}=14\\,\\mathrm N$．\n\n(4) 衝突の間の加速度はグラフの傾き：A は $\\dfrac{-0.10-0.60}{0.050}=-14\\,\\mathrm{m/s^2}$，B は $\\dfrac{0.35}{0.050}=7.0\\,\\mathrm{m/s^2}$．大きさの比は $2$ 倍．作用・反作用で A と B が受ける力の大きさは等しいので，加速度の大きさは質量に反比例し，$\\dfrac{m_{\\rm B}}{m_{\\rm A}}=2$ 倍になる（傾きの比から質量比がわかる）．\n\n(5) 衝突前 $\\dfrac12\\times1.0\\times0.60^2=0.18\\,\\mathrm J$，衝突後 $\\dfrac12\\times1.0\\times0.10^2+\\dfrac12\\times2.0\\times0.35^2=0.005+0.1225=0.1275\\,\\mathrm J$．失われたのは $0.18-0.1275=0.0525\\,\\mathrm J$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$v$–$t$ グラフの水平部分から衝突前後の速度，衝突中の傾きから加速度（作用・反作用で質量に反比例）を読む．"
+ },
+ "simulation": {
+  "id": "mech.collision",
+  "preset": {
+   "m1": 1,
+   "m2": 2,
+   "v1": 0.6,
+   "v2": 0,
+   "e": 0.75
+  },
+  "locked": [
+   "v2"
+  ],
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "momentum-conservation",
+  "restitution"
+ ],
+ "laws": [
+  "momentum-conservation",
+  "restitution",
+  "impulse-momentum",
+  "newton-3rd"
+ ],
+ "misconceptions": [
+  "MC-KE-ALWAYS-CONSERVED"
+ ],
+ "tags": [
+  "運動量保存",
+  "反発係数",
+  "グラフ読解",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

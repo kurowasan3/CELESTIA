@@ -1,0 +1,138 @@
+{
+ "id": "WAV-SEI-208",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "P波とS波の到着時刻の差から震源の位置・深さと発生時刻を決める（S波が液体を伝わらないこと）",
+ "course": "物理基礎",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "地震が起こると，震源から P 波と S 波が同時に出て，地中を一定の速さで直進して伝わるものとする．P 波の速さを $V_{\\mathrm P}$，S 波の速さを $V_{\\mathrm S}$（$V_{\\mathrm S}<V_{\\mathrm P}$）とする．観測点に P 波が届いてから S 波が届くまでの時間 $\\tau$ を初期微動継続時間という．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "P 波・S 波はそれぞれ縦波・横波のどちらか．"
+     },
+     {
+      "id": "2",
+      "tex": "震源から観測点までの距離 $D$ は $D=k\\tau$ と表される．$k$ を $V_{\\mathrm P}$，$V_{\\mathrm S}$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$V_{\\mathrm P}=6.0\\,\\mathrm{km/s}$，$V_{\\mathrm S}=3.6\\,\\mathrm{km/s}$ のとき，$k$ の値は何 $\\mathrm{km/s}$ か．"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "tex": "以下，(3) の値を用いる．平らな地表に $xy$ 座標（単位 $\\mathrm{km}$）をとり，3つの観測点 A$(0,\\,0)$，B$(54,\\,0)$，C$(0,\\,54)$ で同じ地震を観測した．初期微動継続時間は A で $8.0\\,\\mathrm s$，B と C でともに $6.0\\,\\mathrm s$ であった．震源の真上の地表の点を震央という．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "4",
+      "tex": "震央の座標 $(x,\\,y)$ と震源の深さを求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "B で P 波が観測されたのは地震の発生から何秒後か．また，A で S 波が観測されたのは地震の発生から何秒後か．"
+     },
+     {
+      "id": "6",
+      "tex": "地球の中心をはさんで震源と反対側の広い地域では，P 波は観測されるが S 波は観測されない．このことから地球の内部について何が分かるか．S 波の性質と結びつけて説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "P 波は縦波，S 波は横波"
+   },
+   {
+    "id": "2",
+    "tex": "$k=\\dfrac{V_{\\mathrm P}V_{\\mathrm S}}{V_{\\mathrm P}-V_{\\mathrm S}}$",
+    "grading": "k：V_P V_S/(V_P-V_S)"
+   },
+   {
+    "id": "3",
+    "tex": "$9.0\\,\\mathrm{km/s}$",
+    "grading": "9"
+   },
+   {
+    "id": "4",
+    "tex": "震央 $(48,\\,48)$，深さ $24\\,\\mathrm{km}$",
+    "grading": "震央：(48, 48) ; 深さ：24 [km]"
+   },
+   {
+    "id": "5",
+    "tex": "P 波（B）：$9.0\\,\\mathrm s$ 後，S 波（A）：$20\\,\\mathrm s$ 後",
+    "grading": "B の P 波：9 [s] ; A の S 波：20 [s]"
+   },
+   {
+    "id": "6",
+    "tex": "S 波は横波で，ずれ（せん断）の変形に対する復元力がない液体中は伝わらない．地球の内部に液体の層（外核）があり，S 波がそこでさえぎられると考えられる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} P 波（Primary，先に届く）は進む向きに振動する\\textbf{縦波}，S 波（Secondary）は進む向きに垂直に振動する\\textbf{横波}．\n\n\\textbf{(2)} $\\tau=\\dfrac D{V_{\\mathrm S}}-\\dfrac D{V_{\\mathrm P}}=D\\,\\dfrac{V_{\\mathrm P}-V_{\\mathrm S}}{V_{\\mathrm P}V_{\\mathrm S}}$ より\n\\[ D=\\boldsymbol{\\frac{V_{\\mathrm P}V_{\\mathrm S}}{V_{\\mathrm P}-V_{\\mathrm S}}}\\,\\tau \\]\n\n\\textbf{(3)} $k=\\dfrac{6.0\\times3.6}{6.0-3.6}=\\dfrac{21.6}{2.4}=\\boldsymbol{9.0\\,\\mathrm{km/s}}$．\n\n\\textbf{(4)} 震源までの距離は $D_{\\mathrm A}=9.0\\times8.0=72\\,\\mathrm{km}$，$D_{\\mathrm B}=D_{\\mathrm C}=9.0\\times6.0=54\\,\\mathrm{km}$．震央を $(x,\\,y)$，深さを $d$ とすると\n\\[ x^2+y^2+d^2=72^2,\\quad (x-54)^2+y^2+d^2=54^2,\\quad x^2+(y-54)^2+d^2=54^2 \\]\n1式から2式を引くと $108x-54^2=72^2-54^2$ より $108x=72^2$，$x=48$．同様に1式から3式を引いて $y=48$．1式に代入して $d^2=72^2-2\\times48^2=5184-4608=576$，$d=24$．\n震央 $\\boldsymbol{(48,\\,48)}$，深さ $\\boldsymbol{24\\,\\mathrm{km}}$．（2乗の差をとると未知数について1次式になるのが要点．）\n\n\\textbf{(5)} B の P 波：$\\dfrac{54}{6.0}=\\boldsymbol{9.0\\,\\mathrm s}$ 後．A の S 波：$\\dfrac{72}{3.6}=\\boldsymbol{20\\,\\mathrm s}$ 後．（A の P 波は $12\\,\\mathrm s$ 後で，差はたしかに $8.0\\,\\mathrm s$．）\n\n\\textbf{(6)} 横波は，媒質を横にずらす（せん断）変形に対して元にもどそうとする力がはたらくことで伝わる．液体や気体は形を保てず，ずれの変形に対する復元力がないので，横波（S 波）は伝わらない．一方，縦波（P 波）は圧縮に対する復元力で伝わるので，液体中も伝わる．\n反対側で S 波だけが観測されないことから，地球の中心付近に\\textbf{液体の層}（外核）があり，そこを通る S 波がさえぎられていると考えられる．空気中を音（縦波）は伝わるが横波は伝わらないのと同じ理由である．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "速さの違う2つの波の到着時刻の差は距離に比例する．距離が3つ分かれば，2乗の差をとって震源の位置が決まる．横波は形を保つ（ずれに逆らう）媒質の中しか伝わらない．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [
+  "wave-speed"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "縦波",
+  "横波",
+  "地震波",
+  "初期微動継続時間",
+  "測定"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

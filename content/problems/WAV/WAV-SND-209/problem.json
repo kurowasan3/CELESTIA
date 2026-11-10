@@ -1,0 +1,133 @@
+{
+ "id": "WAV-SND-209",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "オシロスコープの波形で比べる音の高さ・大きさ・音色",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "graph-read",
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "3つの音 A，B，C をマイクで電気信号に変え，オシロスコープで同じ設定のまま観察したところ，図のような波形が得られた．横軸は時間で，1目盛りは $1.0\\,\\mathrm{ms}$ である．縦軸は音の振幅に比例し，3つの図で目盛りは共通である．空気中の音の速さを $340\\,\\mathrm{m/s}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-scope"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A の振動数を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "A，B，C のうち，最も高い音はどれか．"
+     },
+     {
+      "id": "3",
+      "tex": "A と C は，音の高さ・大きさ・音色のうち，どれが同じでどれが違うか．"
+     },
+     {
+      "id": "4",
+      "tex": "B の音の空気中での波長を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "人に聞こえる音の振動数はおよそ $20\\,\\mathrm{Hz}$ から $20000\\,\\mathrm{Hz}$ である．振動数 $40\\,\\mathrm{kHz}$ の超音波の空気中での波長は何 $\\mathrm{mm}$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-scope",
+   "role": "question",
+   "kind": "waveform",
+   "format": "svg",
+   "src": "q-scope.svg",
+   "alt": "3つの波形。A：縦 ±2 目盛りの正弦波で、周期 4 目盛り（12 目盛りに 3 周期）。B：縦 ±1 目盛りの正弦波で、周期 2 目盛り（12 目盛りに 6 周期）。C：A と同じ周期 4 目盛り・同じ振幅 ±2 目盛りだが、山と谷がへこんだ角ばった形の波形",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$250\\,\\mathrm{Hz}$",
+    "grading": "250 [Hz]"
+   },
+   {
+    "id": "2",
+    "tex": "B"
+   },
+   {
+    "id": "3",
+    "tex": "高さと大きさは同じで，音色が違う"
+   },
+   {
+    "id": "4",
+    "tex": "$0.68\\,\\mathrm m$",
+    "grading": "0.68 [m]"
+   },
+   {
+    "id": "5",
+    "tex": "$8.5\\,\\mathrm{mm}$",
+    "grading": "8.5 [mm]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) A は4目盛り（$4.0\\,\\mathrm{ms}$）ごとに同じ形をくり返すので，周期 $T=4.0\\times10^{-3}\\,\\mathrm s$，$f=\\dfrac1T=\\boldsymbol{250\\,\\mathrm{Hz}}$．\n\n(2) 音の高さは振動数で決まる．B は周期 $2.0\\,\\mathrm{ms}$（$500\\,\\mathrm{Hz}$）で最も振動数が大きいので，最も高いのは \\textbf{B}．\n\n(3) A と C は周期（振動数）も振幅も等しいので，\\textbf{高さと大きさは同じ}．波形（振動の形）が違うので\\textbf{音色が違う}．（音の大きさは振幅，高さは振動数，音色は波形で決まる．）\n\n(4) $\\lambda=\\dfrac Vf=\\dfrac{340}{500}=\\boldsymbol{0.68\\,\\mathrm m}$．\n\n(5) $\\lambda=\\dfrac{340}{40\\times10^3}=8.5\\times10^{-3}\\,\\mathrm m=\\boldsymbol{8.5\\,\\mathrm{mm}}$．波長が短いので，超音波は細いビームにしやすく，小さな物体からも反射される．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "音の3要素：大きさ ↔ 振幅，高さ ↔ 振動数，音色 ↔ 波形．オシロスコープの横軸から周期を読み，$f=\\dfrac1T$．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [
+  "wave-speed"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "音の3要素",
+  "オシロスコープ",
+  "波形",
+  "超音波"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

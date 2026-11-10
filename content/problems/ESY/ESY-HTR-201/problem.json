@@ -1,0 +1,125 @@
+{
+ "id": "ESY-HTR-201",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "電気ポットの電流・抵抗・熱効率と電圧低下の影響",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "calc",
+  "experiment"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "定格「$100\\ \\mathrm V$，$1000\\ \\mathrm W$」の電気ポットに，質量 $1.0\\ \\mathrm{kg}$，温度 $20\\ {}^\\circ\\mathrm C$ の水を入れ，$100\\ \\mathrm V$ の電源につないで加熱した．水の比熱を $4.2\\ \\mathrm{J/(g\\cdot K)}$ とし，電熱線の抵抗値は温度によらず一定とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電熱線を流れる電流 $I$ は何 A か．"
+     },
+     {
+      "id": "2",
+      "tex": "電熱線の抵抗値 $R$ は何 $\\Omega$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "水を $100\\ {}^\\circ\\mathrm C$ まで温めるのに必要な熱量 $Q$ は何 J か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "実際には，電源を入れてから水が $100\\ {}^\\circ\\mathrm C$ になるまでに 7 分かかった．この間に電気ポットが消費した電力量 $W$ は何 J か．また，$W$ のうち水の温度上昇に使われた割合（熱効率）は何 % か．"
+     },
+     {
+      "id": "5",
+      "tex": "電源の電圧が $90\\ \\mathrm V$ に下がった．このときの消費電力 $P'$ は何 W か．また，熱効率が (4) と同じだとすると，同じ水を $100\\ {}^\\circ\\mathrm C$ まで温めるのにかかる時間は (4) の何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I=10\\ \\mathrm A$",
+    "grading": "10 [A]"
+   },
+   {
+    "id": "2",
+    "tex": "$R=10\\ \\Omega$",
+    "grading": "10 [Ω]"
+   },
+   {
+    "id": "3",
+    "tex": "$Q=3.4\\times10^5\\ \\mathrm J$",
+    "grading": "3.4*10^5 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$W=4.2\\times10^5\\ \\mathrm J$，熱効率 $80\\ \\%$",
+    "grading": "W：4.2*10^5 [J] ; 熱効率（%）：80"
+   },
+   {
+    "id": "5",
+    "tex": "$P'=810\\ \\mathrm W$，$\\dfrac{100}{81}$ 倍（約 1.2 倍）",
+    "grading": "P：810 [W] ; (100/81)倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $P=VI$ より $I=\\dfrac PV=\\dfrac{1000}{100}=10\\ \\mathrm A$．\n\n(2) $R=\\dfrac VI=\\dfrac{100}{10}=10\\ \\Omega$．（$R=\\dfrac{V^2}P$ からも求まる．）\n\n(3) $Q=mc\\Delta T=1.0\\times10^3\\ \\mathrm g\\times4.2\\ \\mathrm{J/(g\\cdot K)}\\times80\\ \\mathrm K=3.36\\times10^5\\fallingdotseq3.4\\times10^5\\ \\mathrm J$．\n\n(4) $W=Pt=1000\\ \\mathrm W\\times420\\ \\mathrm s=4.2\\times10^5\\ \\mathrm J$．熱効率は $\\dfrac QW=\\dfrac{3.36\\times10^5}{4.2\\times10^5}=0.80$，つまり $80\\ \\%$．残りは容器や周りの空気を温めるのに使われた．\n\n(5) 抵抗値は変わらないので $P'=\\dfrac{V'^2}R=\\dfrac{90^2}{10}=810\\ \\mathrm W$（$\\left(\\dfrac{90}{100}\\right)^2=0.81$ 倍）．同じ熱量を得るのに必要な時間は電力に反比例するので $\\dfrac{1000}{810}=\\dfrac{100}{81}\\fallingdotseq1.2$ 倍．電圧が 1 割下がっただけで，電力は約 2 割下がる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "消費電力 $P=VI=\\dfrac{V^2}R$，電力量 $W=Pt$，熱量 $Q=mc\\Delta T$．抵抗が一定なら $P\\propto V^2$．"
+ },
+ "concepts": [
+  "electric-power",
+  "ohm-law-use",
+  "heat-temperature"
+ ],
+ "laws": [
+  "joule-heat",
+  "ohm-law",
+  "heat-capacity"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電力",
+  "ジュール熱",
+  "比熱",
+  "熱効率"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "id": "ELM-FLD-301",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-01",
+ "topic": "接触させた2つの帯電金属球（電気量の保存とクーロン力の変化）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "同じ大きさの小さな金属球 A，B に，それぞれ電気量 $+6.0\\times10^{-8}\\,\\mathrm C$，$-2.0\\times10^{-8}\\,\\mathrm C$ を与え，真空中で中心間の距離を $0.30\\,\\mathrm m$ にして置いた．クーロンの法則の比例定数を $k=9.0\\times10^{9}\\,\\mathrm{N\\cdot m^2/C^2}$ とし，金属球の大きさは距離に比べて十分小さいとする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A，B の間にはたらく静電気力の大きさを求めよ．また，それは引力か斥力か．"
+     },
+     {
+      "id": "2",
+      "tex": "A と B をいったん接触させてから離した．接触後の A，B の電気量をそれぞれ求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の後，A，B を再び中心間の距離 $0.30\\,\\mathrm m$ に置いた．はたらく静電気力の大きさを求めよ．また，それは引力か斥力か．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の静電気力の大きさを (1) と同じにするには，A，B の中心間の距離を何 m にすればよいか．有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F_1=1.2\\times10^{-4}\\,\\mathrm N$，引力",
+    "grading": "F_1：1.2*10^(-4) [N]"
+   },
+   {
+    "id": "2",
+    "tex": "A，B ともに $+2.0\\times10^{-8}\\,\\mathrm C$",
+    "grading": "A：2*10^(-8) [C] ; B：2*10^(-8) [C]"
+   },
+   {
+    "id": "3",
+    "tex": "$F_2=4.0\\times10^{-5}\\,\\mathrm N$，斥力",
+    "grading": "F_2：4*10^(-5) [N]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{0.30}{\\sqrt3}\\fallingdotseq0.17\\,\\mathrm m$",
+    "grading": "r：0.17 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) クーロンの法則 $F=k\\dfrac{|q_1q_2|}{r^2}$ より\n\\[F_1=9.0\\times10^{9}\\times\\frac{(6.0\\times10^{-8})\\times(2.0\\times10^{-8})}{0.30^2}=1.2\\times10^{-4}\\,\\mathrm N．\\]\n異符号の電荷なので引力．\n\n(2) 接触している間，2つの球は1つの導体になり，電荷は移動するが全体の電気量は保存される：$(+6.0)+(-2.0)=+4.0\\ (\\times10^{-8}\\,\\mathrm C)$．同じ大きさの球なので等しく分かれ，A，B ともに $+2.0\\times10^{-8}\\,\\mathrm C$．\n\n(3) $F_2=9.0\\times10^{9}\\times\\dfrac{(2.0\\times10^{-8})^2}{0.30^2}=4.0\\times10^{-5}\\,\\mathrm N$．同符号なので斥力．（電気量の積が $12\\to4$ と $\\dfrac13$ 倍になったので，力も $\\dfrac13$ 倍．）\n\n(4) 力は $\\dfrac1{r^2}$ に比例するので，$\\dfrac13$ 倍になった力を3倍にもどすには $r^2$ を $\\dfrac13$ 倍，つまり $r$ を $\\dfrac1{\\sqrt3}$ 倍にする：$r=\\dfrac{0.30}{\\sqrt3}\\fallingdotseq0.17\\,\\mathrm m$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "接触させると電荷は移動するが，電気量の総和は保存される．クーロン力は電気量の積に比例し，距離の2乗に反比例する．"
+ },
+ "concepts": [
+  "coulomb-field"
+ ],
+ "laws": [
+  "coulomb-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "クーロンの法則",
+  "電気量保存",
+  "金属球の接触"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  370,
+  235
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    190
+   ],
+   "dir": 0,
+   "len": 250,
+   "style": "velocity",
+   "phys": "momentum:p",
+   "label": "衝突前の A",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    18
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    190
+   ],
+   "dir": 53.13,
+   "len": 150,
+   "style": "velocity",
+   "phys": "momentum:pA2",
+   "label": "衝突後の A",
+   "labelPos": "mid",
+   "labelOffset": [
+    -40,
+    6
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    140.0,
+    70.0
+   ],
+   "dir": 323.13,
+   "len": 200,
+   "style": "velocity",
+   "phys": "momentum:pB2",
+   "label": "衝突後の B",
+   "labelPos": "mid",
+   "labelOffset": [
+    44,
+    -4
+   ],
+   "italic": false
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     134.0,
+     78.0
+    ],
+    [
+     142.0,
+     84.0
+    ],
+    [
+     148.0,
+     76.0
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    140.0,
+    56.0
+   ],
+   "text": "直角",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

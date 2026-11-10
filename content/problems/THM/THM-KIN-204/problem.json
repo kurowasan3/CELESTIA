@@ -1,0 +1,126 @@
+{
+ "id": "THM-KIN-204",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "分子の速さの2乗平均と温度のグラフから気体の種類を決める",
+ "course": "物理",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "graph-read",
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ある気体について，いろいろな絶対温度 $T$ で分子の速さを測定し，速さの2乗の平均 $\\overline{v^2}$ を求めたところ，図のように原点を通る直線上にのった（図の縦軸は $\\overline{v^2}$）．気体定数を $R=8.3\\,\\mathrm{J/(mol\\cdot K)}$ とし，この気体のモル質量（$1\\,\\mathrm{mol}$ あたりの質量）を $M$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "グラフの傾き（$\\overline{v^2}$ を $T$ で割った値）を，$\\mathrm{m^2/(s^2\\cdot K)}$ を単位として求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "分子運動論の結果 $\\dfrac12m\\overline{v^2}=\\dfrac32kT$ を使って，傾きを $R$ と $M$ で表せ．また，$M$ を $\\mathrm{g/mol}$ を単位として有効数字2桁で求め，この気体はヘリウム（$4.0$），窒素（$28$），酸素（$32$），アルゴン（$40$），二酸化炭素（$44$）（数値は $\\mathrm{g/mol}$ 単位のモル質量）のどれと考えられるか答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "この気体の $300\\,\\mathrm K$ での二乗平均速度 $\\sqrt{\\overline{v^2}}$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "同じ実験をヘリウム（$4.0\\,\\mathrm{g/mol}$）で行うと，グラフの傾きはいくらになるか．有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "横軸 T [K]，縦軸 ⟨v²⟩ [×10⁵ m²/s²] のグラフ。T=100, 200, 300, 400 K の測定点（0.75, 1.5, 2.25, 3.0）が原点を通る直線上にある。T=400 K で 3.0 の位置に破線の目印",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$750\\,\\mathrm{m^2/(s^2\\cdot K)}$",
+    "grading": "750"
+   },
+   {
+    "id": "2",
+    "tex": "傾き $=\\dfrac{3R}{M}$．$M=33\\,\\mathrm{g/mol}$ で，酸素．",
+    "grading": "M：33"
+   },
+   {
+    "id": "3",
+    "tex": "$4.7\\times10^2\\,\\mathrm{m/s}$",
+    "grading": "4.7*10^2 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$6.2\\times10^3\\,\\mathrm{m^2/(s^2\\cdot K)}$",
+    "grading": "6.2*10^3"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 直線は $(400\\,\\mathrm K,\\ 3.0\\times10^5\\,\\mathrm{m^2/s^2})$ を通るので，傾きは $\\dfrac{3.0\\times10^5}{400}=750\\,\\mathrm{m^2/(s^2\\cdot K)}$．\n\n(2) 分子1個の質量を $m$，アボガドロ定数を $N_{\\mathrm A}$ とすると $M=mN_{\\mathrm A}$，$R=kN_{\\mathrm A}$．$\\overline{v^2}=\\dfrac{3kT}{m}=\\dfrac{3RT}{M}$ なので，傾きは $\\dfrac{3R}{M}$．\\[M=\\frac{3R}{750}=\\frac{3\\times8.3}{750}=3.32\\times10^{-2}\\,\\mathrm{kg/mol}\\approx33\\,\\mathrm{g/mol}\\] 候補のうち最も近いのは酸素（$32\\,\\mathrm{g/mol}$）．\n\n(3) $\\overline{v^2}=750\\times300=2.25\\times10^5\\,\\mathrm{m^2/s^2}$ より $\\sqrt{\\overline{v^2}}=474\\cdots\\approx4.7\\times10^2\\,\\mathrm{m/s}$．\n\n(4) 傾きは $M$ に反比例する：$\\dfrac{3\\times8.3}{4.0\\times10^{-3}}=6.2\\times10^3\\,\\mathrm{m^2/(s^2\\cdot K)}$（酸素の約 $8$ 倍）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$\\overline{v^2}=\\dfrac{3RT}{M}$ なので $\\overline{v^2}$–$T$ グラフは原点を通る直線で，傾き $\\dfrac{3R}{M}$ からモル質量がわかる．"
+ },
+ "concepts": [
+  "kinetic-theory"
+ ],
+ "laws": [
+  "kinetic-temperature"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "分子の速さ",
+  "モル質量",
+  "グラフ",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" width="420" height="200" font-family="'Times New Roman', serif">
+<line x1="20" y1="170" x2="400" y2="170" stroke="currentColor" stroke-width="2"/>
+<polygon points="20,170 400,170 400,177 20,177" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(90,170) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-25" y="-36" width="50" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<g class="f-vel" data-phys="velocity:v0" data-dir="0" data-len="48">
+<line x1="66" y1="116" x2="104" y2="116" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="114,116 104,120.66 104,111.34" fill="currentColor"/>
+<text x="138" y="116" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₀</text>
+</g>
+<line x1="200" y1="140" x2="200" y2="164" stroke="currentColor" stroke-width="2.4"/>
+<polyline points="200,152 212,152 214.38,160 219.12,144 223.88,160 228.62,144 233.38,160 238.12,144 242.88,160 247.62,144 252.38,160 257.12,144 261.88,160 266.62,144 271.38,160 276.12,144 280.88,160 285.62,144 288,152 300,152" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<g transform="translate(330,170) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-30" y="-44" width="60" height="44" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-22" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<text x="250" y="126" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">k</text>
+</svg>

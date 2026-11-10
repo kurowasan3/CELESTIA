@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 275" width="380" height="275" font-family="'Times New Roman', serif">
+<line x1="140" y1="30" x2="220" y2="30" stroke="currentColor" stroke-width="2"/>
+<polygon points="280,140 278.48,143.82 273.97,147.52 266.6,151 256.6,154.14 244.28,156.85 230,159.05 214.2,160.67 197.36,161.67 180,162 162.64,161.67 145.8,160.67 130,159.05 115.72,156.85 103.4,154.14 93.4,151 86.03,147.52 81.52,143.82 80,140 81.52,136.18 86.03,132.48 93.4,129 103.4,125.86 115.72,123.15 130,120.95 145.8,119.33 162.64,118.33 180,118 197.36,118.33 214.2,119.33 230,120.95 244.28,123.15 256.6,125.86 266.6,129 273.97,132.48 278.48,136.18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="180" y1="30" x2="280" y2="140" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="280" cy="140" r="8" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<text x="294" y="142" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+<line x1="180" y1="30" x2="180" y2="250" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="180" cy="250" r="3" fill="currentColor"/>
+<text x="174" y="264" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">O′</text>
+<path d="M200.18,52.2 A30,30 0 0 1 180,60" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="194.42" y="67.31" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<line x1="20" y1="250" x2="360" y2="250" stroke="currentColor" stroke-width="2"/>
+<line x1="40" y1="140" x2="40" y2="250" stroke="currentColor" stroke-width="1.2"/>
+<line x1="34" y1="140" x2="46" y2="140" stroke="currentColor" stroke-width="1.2"/>
+<line x1="34" y1="250" x2="46" y2="250" stroke="currentColor" stroke-width="1.2"/>
+<text x="30" y="195" font-size="14" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">H</text>
+<line x1="76" y1="140" x2="50" y2="140" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="242" y="77" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">l</text>
+</svg>

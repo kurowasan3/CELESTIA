@@ -1,0 +1,185 @@
+{
+ "id": "MEC-RIG-508",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "糸巻きを糸で引く：転がる向きが変わる角度と，すべり出しの条件",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "concept",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "半径 $R$ の2枚の円板の中心を，半径 $r$（$r<R$）の軸でつないだ糸巻きがある．質量は $m$ で，重心は中心軸上にある．軸に巻いた軽い糸を，軸の下側から引き出し，図のように水平から角 $\\theta$ 上向きに，大きさ $T$ の力で引く．糸巻きは粗い水平な床の上に置かれ，床との接点を P，静止摩擦係数を $\\mu$，重力加速度の大きさを $g$ とする．糸は円板の面に平行な鉛直面内にあり，糸巻きが動き出すときはすべらずに転がり始めるものとする（(4) を除く）．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "糸を水平（$\\theta=0$）に引いて $T$ を少しずつ大きくすると，糸巻きはどちら向きに転がり始めるか．P のまわりの力のモーメントを用いて理由とともに答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\theta$ をある値 $\\theta_0$ にすると，$T$ を少し大きくしても糸巻きは転がり出さない．$\\cos\\theta_0$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\theta=\\theta_0$ で糸巻きが静止しているとき，床が糸巻きに及ぼす摩擦力の大きさ $f$ と垂直抗力の大きさ $N$ を，$T$，$m$，$g$，$r$，$R$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\theta=\\theta_0$ のまま $T$ を大きくしていくと，ある値 $T_1$ で糸巻きは床の上をすべり出す．$T_1$ を求めよ．また，糸巻きが床から浮き上がるより先に必ずすべり出すことを示せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\theta>\\theta_0$ にして引くと，糸巻きはどちら向きに転がるか．また，そのとき糸は軸に巻き取られるか，軸からほどけるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "半径 R の円板と半径 r の軸からなる糸巻きが床の上にあり、軸の下側から引き出した糸を水平から角 θ 上向きに力 T で引く。床との接点は P",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "θ=θ0 で静止している糸巻きにはたらく力：中心の重力 mg、糸の張力 T（作用線が接点 P を通る）、P の垂直抗力 N と、引く向きと逆向きの摩擦力 f",
+   "caption": "$r=\\dfrac R2$（$\\theta_0=60^\\circ$），$T=0.8mg$ の場合．すべての力の作用線が P を通る",
+   "physics": {
+    "equilibrium": true,
+    "torque": {
+     "about": [
+      160,
+      220
+     ]
+    },
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "T",
+      "dir_deg": 60
+     },
+     {
+      "name": "N",
+      "dir_deg": 90
+     },
+     {
+      "name": "f",
+      "dir_deg": 180
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "引く向き（糸を引く人に近づく向き）に転がる．糸の張力は P より $R-r$ 高い位置で水平にはたらき，P のまわりに糸巻きを引く向きへ転がす向きのモーメントをもつ（重力と垂直抗力，摩擦力は P のまわりのモーメントが $0$）．"
+   },
+   {
+    "id": "2",
+    "tex": "$\\cos\\theta_0=\\dfrac rR$",
+    "grading": "cos(θ_0)：r/R"
+   },
+   {
+    "id": "3",
+    "tex": "$f=\\dfrac{rT}{R}$，$N=mg-\\dfrac{T\\sqrt{R^2-r^2}}{R}$",
+    "grading": "f：r T/R ; N：m g-T sqrt(R^2-r^2)/R"
+   },
+   {
+    "id": "4",
+    "tex": "$T_1=\\dfrac{\\mu mgR}{r+\\mu\\sqrt{R^2-r^2}}$．浮き上がる張力は $T_2=\\dfrac{mgR}{\\sqrt{R^2-r^2}}$ で，$T_1<T_2$ がつねに成り立つ．",
+    "grading": "T_1：μ m g R/(r+μ sqrt(R^2-r^2))"
+   },
+   {
+    "id": "5",
+    "tex": "引く向きと逆向き（遠ざかる向き）に転がり，糸は軸からほどける．張力の作用線が P より上を通るようになり，P のまわりのモーメントの向きが逆になるから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "糸は軸に接して引き出されるので，張力の作用線は中心から距離 $r$ だけ離れ，中心より下側を通る．P のまわりのモーメントを考えると，重力と垂直抗力（P の真上の中心と P を通る鉛直線上）と摩擦力（P に作用）は $0$ で，張力だけが残る．\n\n(1) $\\theta=0$ では張力は P から高さ $R-r$ の点で水平に引く．P のまわりのモーメントは，糸巻きを引く向き（右）へ転がす向き（図で時計回り）である．したがって糸巻きは引く人に近づく向きに転がり，糸は軸に巻き取られる．「下側から引くので逆に回る」と思いがちだが，回転の中心は中心軸ではなく接点 P である．\n\n(2) P から張力の作用線までの距離は $R\\cos\\theta-r$（中心から P へのベクトルを作用線に垂直な向きに射影したものから $r$ を引く）．これが $0$，つまり作用線が P を通るとき，P のまわりのモーメントが $0$ になって転がり出さない： \\[\\cos\\theta_0=\\frac rR\\]"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(3) 水平方向のつり合い $f=T\\cos\\theta_0=\\dfrac{rT}{R}$（引く向きと逆向き）．鉛直方向のつり合い $N+T\\sin\\theta_0=mg$ で，$\\sin\\theta_0=\\dfrac{\\sqrt{R^2-r^2}}{R}$ より \\[N=mg-\\frac{T\\sqrt{R^2-r^2}}{R}\\] 中心のまわりのモーメント $Tr=fR$ も同じ $f$ を与える．\n\n(4) すべり出すのは $f=\\mu N$ のとき： \\[\\frac{rT_1}{R}=\\mu\\left(mg-\\frac{T_1\\sqrt{R^2-r^2}}{R}\\right)\\quad\\Longrightarrow\\quad T_1=\\frac{\\mu mgR}{r+\\mu\\sqrt{R^2-r^2}}\\] 一方，浮き上がるのは $N=0$ のときで $T_2=\\dfrac{mgR}{\\sqrt{R^2-r^2}}$．$s=\\sqrt{R^2-r^2}$ とおくと \\[T_1<T_2\\iff\\mu s<r+\\mu s\\iff r>0\\] はつねに成り立つ．$N$ が $0$ に近づくと最大静止摩擦力 $\\mu N$ も $0$ に近づくが，必要な摩擦力 $\\dfrac{rT}{R}$ は $0$ にならないので，浮き上がる前に必ずすべり出す．\n\n(5) $\\theta>\\theta_0$ では $R\\cos\\theta-r<0$ で，作用線は P より上側（引く向きの前方）を通る．P のまわりのモーメントの向きが (1) と逆になり，糸巻きは引く向きと逆向きに転がる．このとき中心は糸から遠ざかり，軸の下側の点は中心に対して引く向きに動くので，糸は軸からほどける．$\\theta=\\theta_0$ は，巻き取る向きとほどける向きの境目である．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "接点 P を軸とする回転を考える．張力の作用線が P のどちら側を通るかで転がる向きが決まり，P を通るときは転がらない．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium",
+  "static-friction",
+  "normal-force"
+ ],
+ "laws": [
+  "torque-equilibrium",
+  "friction-law"
+ ],
+ "misconceptions": [
+  "MC-TORQUE-FORCE-ONLY",
+  "MC-NORMAL-EQ-MG"
+ ],
+ "tags": [
+  "剛体",
+  "糸巻き",
+  "力のモーメント",
+  "静止摩擦",
+  "転がり"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

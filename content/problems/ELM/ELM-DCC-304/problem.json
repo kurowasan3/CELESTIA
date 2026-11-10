@@ -1,0 +1,129 @@
+{
+ "id": "ELM-DCC-304",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "接地点を変えたときの各点の電位と，変わらない電流（2点を接地すると何が起こるか）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "concept",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "起電力 $12\\,\\mathrm V$ の電池（内部抵抗は無視できる）と，抵抗値 $R_1=2.0\\,\\Omega$，$R_2=4.0\\,\\Omega$ の抵抗を図のようにつなぎ，点 D を接地した．A は電池の正極，D は電池の負極側の点，B は $R_1$ と $R_2$ の間の点である．接地した点の電位を $0$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$R_1$ を流れる電流 $I_1$ と，$R_2$ を流れる電流 $I_2$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "点 A，B の電位 $V_{\\mathrm A}$，$V_{\\mathrm B}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "D の接地を外し，かわりに B を接地した．点 A，D の電位 $V_{\\mathrm A}$，$V_{\\mathrm D}$ と，$R_1$ を流れる電流 $I_1$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の状態で，さらに D も接地した（B と D の両方が接地されている）．$R_1$ を流れる電流 $I$ を求めよ．大地は抵抗の無視できる導体とみなせるものとする．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "電池（12 V）の正極 A から抵抗 R₁（2.0 Ω）を通って点 B、B から抵抗 R₂（4.0 Ω）を通って点 D、D から電池の負極にもどる回路。D が接地されている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I_1=I_2=2.0\\,\\mathrm A$",
+    "grading": "I_1：2 [A] ; I_2：2 [A]"
+   },
+   {
+    "id": "2",
+    "tex": "$V_{\\mathrm A}=12\\,\\mathrm V$，$V_{\\mathrm B}=8.0\\,\\mathrm V$",
+    "grading": "V_A：12 [V] ; V_B：8 [V]"
+   },
+   {
+    "id": "3",
+    "tex": "$V_{\\mathrm A}=4.0\\,\\mathrm V$，$V_{\\mathrm D}=-8.0\\,\\mathrm V$，$I_1=2.0\\,\\mathrm A$（変わらない）",
+    "grading": "V_A：4 [V] ; V_D：-8 [V] ; I_1：2 [A]"
+   },
+   {
+    "id": "4",
+    "tex": "$I=6.0\\,\\mathrm A$",
+    "grading": "I：6 [A]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 直列なので，$R_1$ と $R_2$ には同じ電流が流れる：$I_1=I_2=\\dfrac{12}{2.0+4.0}=2.0\\,\\mathrm A$．電流は抵抗を通っても減らない（抵抗で失われるのは電位＝電気量あたりのエネルギーで，電荷の流れの量ではない）．\n\n(2) D の電位が $0$．A は電池の正極で D より $12\\,\\mathrm V$ 高い：$V_{\\mathrm A}=12\\,\\mathrm V$．$R_1$ で $2.0\\times2.0=4.0\\,\\mathrm V$ 下がるので $V_{\\mathrm B}=8.0\\,\\mathrm V$（$R_2$ でさらに $8.0\\,\\mathrm V$ 下がって D で $0$）．\n\n(3) 接地は「電位の基準をどこにとるか」を決めるだけで，1点だけの接地なら大地に電流は流れず，回路の電流は変わらない：$I_1=2.0\\,\\mathrm A$．電位差も変わらないので，B を $0$ として $V_{\\mathrm A}=+4.0\\,\\mathrm V$，$V_{\\mathrm D}=-8.0\\,\\mathrm V$．すべての点の電位が一様に $8.0\\,\\mathrm V$ 下がっただけ．\n\n(4) B と D が大地を通して（抵抗 $0$ の導線で）つながったことになり，$R_2$ が短絡される．回路は電池と $R_1$ だけになり $I=\\dfrac{12}{2.0}=6.0\\,\\mathrm A$．$R_2$ には電流が流れず，電流は B から大地を通って D へもどる．2点以上を接地すると，大地が回路の一部になることに注意．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "接地は電位の基準を決めるだけ（1点なら電流は変わらない）．直列の電流はどこでも同じ．2点を接地すると大地が導線になる．"
+ },
+ "concepts": [
+  "ohm-law-use",
+  "current-conservation"
+ ],
+ "laws": [
+  "ohm-law",
+  "kirchhoff-2nd"
+ ],
+ "misconceptions": [
+  "MC-CURRENT-USED-UP"
+ ],
+ "tags": [
+  "電位",
+  "接地",
+  "直列回路",
+  "概念"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

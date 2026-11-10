@@ -1,0 +1,109 @@
+{
+ "id": "THM-FST-201",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "ボイル・シャルルの法則（注射器・タイヤ・上昇する気球，温度は絶対温度で）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "一定量の理想気体では，圧力 $P$，体積 $V$，絶対温度 $T$ の間に $\\dfrac{PV}{T}=$一定 の関係（ボイル・シャルルの法則）が成り立つ．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "注射器に $1.0\\times10^5\\,\\mathrm{Pa}$，$60\\,\\mathrm{cm^3}$ の空気を閉じこめ，温度を一定に保ったまま $40\\,\\mathrm{cm^3}$ まで押し縮めた．空気の圧力を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "容積が変わらないタイヤの中の空気の圧力は，$7^\\circ\\mathrm C$ で $2.8\\times10^5\\,\\mathrm{Pa}$ であった．日なたで空気の温度が $47^\\circ\\mathrm C$ になったときの圧力を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) で，ある生徒は「温度が $7$ から $47$ になったので，圧力は $\\dfrac{47}{7}$ 倍になる」と考えた．この考えの誤りを指摘せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$27^\\circ\\mathrm C$，$1.0\\times10^5\\,\\mathrm{Pa}$ で体積 $3.0\\,\\mathrm L$ の気体を入れた（伸び縮みが自由な）袋を上空に運ぶと，周囲の圧力が $6.0\\times10^4\\,\\mathrm{Pa}$，気体の温度が $-3^\\circ\\mathrm C$ になった．このときの袋の中の気体の体積を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1.5\\times10^5\\,\\mathrm{Pa}$",
+    "grading": "1.5*10^5 [Pa]"
+   },
+   {
+    "id": "2",
+    "tex": "$3.2\\times10^5\\,\\mathrm{Pa}$",
+    "grading": "3.2*10^5 [Pa]"
+   },
+   {
+    "id": "3",
+    "tex": "圧力が比例するのは絶対温度であり，セルシウス温度ではない．$280\\,\\mathrm K$ から $320\\,\\mathrm K$ なので $\\dfrac{320}{280}=\\dfrac87$ 倍が正しい．"
+   },
+   {
+    "id": "4",
+    "tex": "$4.5\\,\\mathrm L$",
+    "grading": "4.5 [L]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 温度一定なので $PV=$一定（ボイルの法則）：$1.0\\times10^5\\times60=P\\times40$ より $P=1.5\\times10^5\\,\\mathrm{Pa}$．\n\n(2) 体積一定なので $\\dfrac PT=$一定（$T$ は絶対温度）．$7^\\circ\\mathrm C=280\\,\\mathrm K$，$47^\\circ\\mathrm C=320\\,\\mathrm K$ より $P=2.8\\times10^5\\times\\dfrac{320}{280}=3.2\\times10^5\\,\\mathrm{Pa}$．\n\n(3) $P\\propto T$ の $T$ は絶対温度である．セルシウス温度の $0$ は水の凝固点にすぎず，その比をとっても意味がない（たとえば $0^\\circ\\mathrm C$ から $1^\\circ\\mathrm C$ で圧力が無限大倍になってしまう）．\n\n(4) $\\dfrac{1.0\\times10^5\\times3.0}{300}=\\dfrac{6.0\\times10^4\\times V}{270}$ より $V=3.0\\times\\dfrac{1.0\\times10^5}{6.0\\times10^4}\\times\\dfrac{270}{300}=4.5\\,\\mathrm L$．圧力の低下で膨らむ効果のほうが，温度の低下で縮む効果より大きい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$\\dfrac{PV}{T}=$一定 の $T$ は必ず絶対温度．一定に保たれる量を見きわめて，変わる量だけの比で計算する．"
+ },
+ "concepts": [
+  "ideal-gas"
+ ],
+ "laws": [
+  "ideal-gas-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ボイル・シャルルの法則",
+  "絶対温度",
+  "状態方程式"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

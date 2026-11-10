@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 255" width="430" height="255" font-family="'Times New Roman', serif">
+<g class="f-ink" data-phys="axis:V" data-dir="0" data-len="350">
+<line x1="60" y1="230" x2="400" y2="230" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="410,230 400,234.66 400,225.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-phys="axis:P" data-dir="90" data-len="210">
+<line x1="60" y1="230" x2="60" y2="30" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,20 64.66,30 55.34,30" fill="currentColor"/>
+</g>
+<text x="60" y="244" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<text x="52" y="18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">P</text>
+<text x="418" y="244" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">V</text>
+<line x1="90" y1="50" x2="150" y2="50" stroke="currentColor" stroke-width="2.4"/>
+<line x1="380" y1="210" x2="220" y2="210" stroke="currentColor" stroke-width="2.4"/>
+<polyline points="150,50 153.89,62.71 157.94,74.53 162.17,85.51 166.59,95.71 171.19,105.19 175.99,114.01 181,122.2 186.23,129.81 191.68,136.89 197.37,143.47 203.3,149.58 209.49,155.26 215.94,160.53 222.68,165.44 229.71,170 237.04,174.24 244.68,178.18 252.66,181.84 260.98,185.24 269.66,188.4 278.71,191.34 288.16,194.07 298.02,196.6 308.3,198.96 319.02,201.16 330.21,203.19 341.88,205.09 354.05,206.84 366.75,208.48 380,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="90,50 91.72,62.71 93.54,74.53 95.47,85.51 97.5,95.71 99.65,105.19 101.93,114.01 104.34,122.2 106.88,129.81 109.57,136.89 112.41,143.47 115.42,149.58 118.6,155.26 121.97,160.53 125.52,165.44 129.28,170 133.26,174.24 137.46,178.18 141.91,181.84 146.61,185.24 151.58,188.4 156.83,191.34 162.39,194.07 168.26,196.6 174.48,198.96 181.05,201.16 187.99,203.19 195.34,205.09 203.1,206.84 211.32,208.48 220,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="60" y1="50" x2="90" y2="50" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="60" y1="210" x2="220" y2="210" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="38" y="50" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">32P₀</text>
+<text x="42" y="210" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">P₀</text>
+<g class="f-vel" data-phys="step:BC" data-dir="0" data-len="16">
+<line x1="112" y1="50" x2="122.4" y2="50" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="128,50 122.4,52.61 122.4,47.39" fill="currentColor"/>
+</g>
+<g class="f-vel" data-phys="step:DA" data-dir="180" data-len="16">
+<line x1="310" y1="210" x2="299.6" y2="210" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="294,210 299.6,207.39 299.6,212.61" fill="currentColor"/>
+</g>
+<text x="262" y="120" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">断熱</text>
+<text x="80" y="172" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">断熱</text>
+<circle cx="220" cy="210" r="3" fill="currentColor"/>
+<text x="220" y="224" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<circle cx="90" cy="50" r="3" fill="currentColor"/>
+<text x="84" y="36" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<circle cx="150" cy="50" r="3" fill="currentColor"/>
+<text x="156" y="36" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">C</text>
+<circle cx="380" cy="210" r="3" fill="currentColor"/>
+<text x="390" y="200" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">D</text>
+</svg>

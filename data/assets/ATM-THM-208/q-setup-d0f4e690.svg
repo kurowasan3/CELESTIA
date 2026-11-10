@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="400" height="220" font-family="'Times New Roman', serif">
+<line x1="90" y1="72" x2="190" y2="72" stroke="currentColor" stroke-width="2.4"/>
+<line x1="90" y1="128" x2="190" y2="128" stroke="currentColor" stroke-width="2.4"/>
+<text x="78" y="72" font-size="16" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">−</text>
+<text x="78" y="128" font-size="16" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">+</text>
+<line x1="20" y1="100" x2="90" y2="100" stroke="currentColor" stroke-width="1.2"/>
+<g class="f-vel" data-dir="0" data-len="30">
+<line x1="30" y1="100" x2="50" y2="100" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,100 50,104.66 50,95.34" fill="currentColor"/>
+<text x="72" y="86" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₀</text>
+</g>
+<polyline points="90,100 92,100 94,100.02 96,100.04 98,100.08 100,100.12 102,100.17 104,100.24 106,100.31 108,100.39 110,100.48 112,100.58 114,100.69 116,100.81 118,100.94 120,101.08 122,101.23 124,101.39 126,101.56 128,101.73 130,101.92 132,102.12 134,102.32 136,102.54 138,102.76 140,103 142,103.24 144,103.5 146,103.76 148,104.04 150,104.32 152,104.61 154,104.92 156,105.23 158,105.55 160,105.88 162,106.22 164,106.57 166,106.93 168,107.3 170,107.68 172,108.07 174,108.47 176,108.88 178,109.29 180,109.72 182,110.16 184,110.6 186,111.06 188,111.52 190,112" fill="none" stroke="currentColor" stroke-width="1.2" data-phys="trajectory"/>
+<line x1="190" y1="112" x2="350" y2="150.4" stroke="currentColor" stroke-width="1.2"/>
+<line x1="190" y1="100" x2="350" y2="100" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="350" y1="20" x2="350" y2="200" stroke="currentColor" stroke-width="2"/>
+<text x="358" y="30" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">蛍光面</text>
+<circle cx="350" cy="100" r="3" fill="currentColor"/>
+<circle cx="350" cy="150.4" r="3" fill="currentColor"/>
+<text x="360" y="100" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">O′</text>
+<line x1="372" y1="100" x2="372" y2="150.4" stroke="currentColor" stroke-width="1.2"/>
+<text x="382" y="125.2" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">Y</text>
+<line x1="90" y1="150" x2="190" y2="150" stroke="currentColor" stroke-width="1.2"/>
+<text x="140" y="162" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">l</text>
+<line x1="190" y1="185" x2="350" y2="185" stroke="currentColor" stroke-width="1.2"/>
+<text x="270" y="198" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+</svg>

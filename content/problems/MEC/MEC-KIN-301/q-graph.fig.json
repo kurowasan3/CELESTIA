@@ -1,0 +1,178 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  230
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    200
+   ],
+   "dir": 0,
+   "len": 270,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    200
+   ],
+   "dir": 90,
+   "len": 170,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    214
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    56,
+    26
+   ],
+   "text": "x [m]",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    188
+   ],
+   "text": "t [s]",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     50,
+     200
+    ],
+    [
+     290,
+     87.5
+    ]
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     50,
+     50
+    ],
+    [
+     290,
+     162.5
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    125
+   ],
+   "to": [
+    210,
+    125
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    210,
+    125
+   ],
+   "to": [
+    210,
+    200
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    50
+   ],
+   "text": "120",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    125
+   ],
+   "text": "60",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    214
+   ],
+   "text": "40",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    214
+   ],
+   "text": "60",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    298,
+    84
+   ],
+   "text": "A",
+   "italic": true,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    298,
+    164
+   ],
+   "text": "B",
+   "italic": true,
+   "size": 14,
+   "anchor": "start"
+  }
+ ]
+}

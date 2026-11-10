@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" font-family="'Times New Roman', serif">
+<line x1="20" y1="225" x2="380" y2="225" stroke="currentColor" stroke-width="2"/>
+<line x1="200" y1="32.5" x2="200" y2="225" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="200" y1="54.5" x2="200" y2="142.5" stroke="currentColor" stroke-width="2.4" data-phys="mirror"/>
+<line x1="80" y1="49" x2="80" y2="225" stroke="currentColor" stroke-width="2.4"/>
+<circle cx="80" cy="60" r="3" fill="currentColor"/>
+<text x="64" y="60" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">目</text>
+<line x1="320" y1="49" x2="320" y2="225" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="336" y="137" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">像</text>
+<line x1="80" y1="49" x2="200" y2="54.5" stroke="currentColor" stroke-width="1.2"/>
+<line x1="200" y1="54.5" x2="80" y2="60" stroke="currentColor" stroke-width="1.2"/>
+<line x1="80" y1="225" x2="200" y2="142.5" stroke="currentColor" stroke-width="1.2"/>
+<line x1="200" y1="142.5" x2="80" y2="60" stroke="currentColor" stroke-width="1.2"/>
+<line x1="200" y1="142.5" x2="320" y2="225" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="200" y1="54.5" x2="320" y2="49" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="208" y="130.5" font-size="11" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">0.75 m</text>
+<text x="208" y="68.5" font-size="11" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">1.55 m</text>
+<text x="200" y="239" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">鏡（壁）</text>
+</svg>

@@ -1,0 +1,173 @@
+{
+ "id": "MEC-NEW-305",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "あらい斜面上の物体と滑車でつるしたおもり（静止する範囲，滑り上がる・滑り下りるときの加速度）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平と角 $\\theta$ をなすあらい斜面上に質量 $M$ の物体 A を置き，A につけた軽い糸を斜面と平行に張って，斜面の上端のなめらかに回る軽い滑車にかけ，他端に質量 $m$ のおもり B をつるす．A と斜面の間の静止摩擦係数を $\\mu_0$，動摩擦係数を $\\mu$ とし，重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A を静かに放したとき，A が静止したままでいるための $m$ の範囲を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$m$ が (1) の範囲より大きいとき，A は斜面を滑り上がる．A の加速度の大きさ $a$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\theta=30^\\circ$，$M=2.0\\,\\mathrm{kg}$，$m=3.0\\,\\mathrm{kg}$，$\\mu=0.20$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，A の加速度の大きさと糸の張力の大きさを，それぞれ有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$m$ が (1) の範囲より小さいとき，A は斜面を滑り下りる．A の加速度の大きさ $a'$ を求めよ．(2) の式と比べて，摩擦力の項の符号が変わる理由を述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "傾きの角 θ のあらい斜面上の物体 A（質量 M）から糸を斜面に平行に張り、上端の滑車にかけておもり B（質量 m）をつるす",
+   "caption": "",
+   "physics": {
+    "angle_deg": 30
+   }
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "A にはたらく力（滑り上がるとき）：斜面に沿って上向きの張力 T、鉛直下向きの重力 Mg、斜面に垂直な垂直抗力 N、斜面に沿って下向きの動摩擦力 μN。合力は斜面に沿って上向き",
+   "caption": "(3) の場合の A にはたらく力．合力は斜面に沿って上向き",
+   "physics": {
+    "angle_deg": 30,
+    "netForce": {
+     "dir_deg": 30
+    },
+    "forces": [
+     {
+      "name": "T",
+      "dir_deg": 30
+     },
+     {
+      "name": "Mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "N",
+      "dir_deg": 120
+     },
+     {
+      "name": "f",
+      "dir_deg": 210
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$M(\\sin\\theta-\\mu_0\\cos\\theta)\\le m\\le M(\\sin\\theta+\\mu_0\\cos\\theta)$（$\\sin\\theta-\\mu_0\\cos\\theta\\le0$ なら下限はなく $0<m\\le M(\\sin\\theta+\\mu_0\\cos\\theta)$）"
+   },
+   {
+    "id": "2",
+    "tex": "$a=\\dfrac{m-M(\\sin\\theta+\\mu\\cos\\theta)}{M+m}g$",
+    "grading": "a：(m-M(sin(θ)+μ cos(θ)))g/(M+m)"
+   },
+   {
+    "id": "3",
+    "tex": "加速度 $3.2\\,\\mathrm{m/s^2}$，張力 $20\\,\\mathrm N$",
+    "grading": "加速度：3.2 [m/s^2] ; 張力：20 [N]"
+   },
+   {
+    "id": "4",
+    "tex": "$a'=\\dfrac{M(\\sin\\theta-\\mu\\cos\\theta)-m}{M+m}g$．動摩擦力は常に滑る向きと逆にはたらくので，A が滑り下りるときは斜面に沿って上向きになるから．",
+    "grading": "a'：(M(sin(θ)-μ cos(θ))-m)g/(M+m)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "A の垂直抗力は，斜面に垂直な方向のつり合いから $N=Mg\\cos\\theta$．糸の張力を $T$ とする．\n\n\\textbf{(1)} A が静止していれば B も静止し，$T=mg$．A を斜面に沿って引き上げようとする力 $mg$ と，滑り下ろそうとする力 $Mg\\sin\\theta$ の差を静止摩擦力が支える．その大きさが最大摩擦力 $\\mu_0 Mg\\cos\\theta$ 以下であればよい：\n\\[ |mg-Mg\\sin\\theta|\\le\\mu_0 Mg\\cos\\theta \\iff M(\\sin\\theta-\\mu_0\\cos\\theta)\\le m\\le M(\\sin\\theta+\\mu_0\\cos\\theta). \\]\n\n\\textbf{(2)} A は斜面に沿って上向き，B は下向きに加速度 $a$．A が滑り上がるので動摩擦力 $\\mu Mg\\cos\\theta$ は斜面に沿って下向き．\n\\[ \\text{A}：Ma=T-Mg\\sin\\theta-\\mu Mg\\cos\\theta,\\qquad \\text{B}：ma=mg-T. \\]\n辺々加えて $T$ を消去すると\n\\[ a=\\frac{m-M(\\sin\\theta+\\mu\\cos\\theta)}{M+m}g. \\]\n\n\\textbf{(3)} $a=\\dfrac{3.0-2.0\\times(0.50+0.20\\times0.866)}{5.0}\\times9.8=\\dfrac{3.0-1.346}{5.0}\\times9.8\\approx3.2\\,\\mathrm{m/s^2}$．\n$T=m(g-a)=3.0\\times(9.8-3.24)\\approx20\\,\\mathrm N$（B が加速しながら下がるので，張力は B の重さ $29.4\\,\\mathrm N$ より小さい）．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(4)} A は斜面に沿って下向き，B は上向きに加速度 $a'$．動摩擦力は A の滑る向きと逆，つまり斜面に沿って上向きになる．\n\\[ \\text{A}：Ma'=Mg\\sin\\theta-T-\\mu Mg\\cos\\theta,\\qquad \\text{B}：ma'=T-mg \\]\nより\n\\[ a'=\\frac{M(\\sin\\theta-\\mu\\cos\\theta)-m}{M+m}g. \\]\n(2) では摩擦力が重力の斜面成分と同じ向き（下向き）に，(4) では張力と同じ向き（上向き）にはたらく．摩擦力の向きは「斜面のどちら向きか」ではなく「滑る向きの逆」で決まるので，運動の向きが変わると符号が変わる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "静止の条件は「静止摩擦力の大きさ ≤ 最大摩擦力」．滑り出した後は，滑る向きと逆向きに動摩擦力を入れて，2物体の運動方程式を連立する．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "static-friction",
+  "force-decomposition"
+ ],
+ "laws": [
+  "newton-2nd",
+  "friction-law"
+ ],
+ "misconceptions": [
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "斜面",
+  "滑車",
+  "摩擦",
+  "運動方程式"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

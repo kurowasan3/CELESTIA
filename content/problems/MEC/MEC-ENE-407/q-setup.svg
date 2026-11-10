@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200" font-family="'Times New Roman', serif">
+<line x1="30" y1="170" x2="370" y2="170" stroke="currentColor" stroke-width="2"/>
+<polygon points="30,170 370,170 370,177 30,177" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(90,170) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-30" y="-40" width="60" height="40" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-20" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<polyline points="120,150 132,150 134.11,159 138.33,141 142.56,159 146.78,141 151,159 155.22,141 159.44,159 163.67,141 167.89,159 172.11,141 176.33,159 180.56,141 184.78,159 189,141 193.22,159 197.44,141 201.67,159 205.89,141 208,150 220,150" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<g transform="translate(250,170) rotate(0)" data-phys="body:block" data-angle="0">
+<rect x="-30" y="-40" width="60" height="40" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-20" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<g class="f-force" data-phys="force:F" data-dir="0" data-len="60">
+<line x1="280" y1="150" x2="330" y2="150" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="340,150 330,154.66 330,145.34" fill="currentColor"/>
+<text x="360" y="150" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F</text>
+</g>
+<text x="170" y="124" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">k</text>
+</svg>

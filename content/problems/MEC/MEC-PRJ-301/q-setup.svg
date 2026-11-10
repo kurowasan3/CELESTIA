@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 190" width="370" height="190" font-family="'Times New Roman', serif">
+<line x1="20" y1="170" x2="360" y2="170" stroke="currentColor" stroke-width="2"/>
+<g transform="translate(150,160) rotate(0)" data-phys="body:cart" data-angle="0">
+<rect x="-45" y="-28" width="90" height="28" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<circle cx="122" cy="165" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="178" cy="165" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="150" cy="125" r="7" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4" data-phys="body:ball"/>
+<g class="f-vel" data-dir="90" data-len="48">
+<line x1="150" y1="117" x2="150" y2="79" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="150,69 154.66,79 145.34,79" fill="currentColor"/>
+<text x="162" y="65" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">u</text>
+</g>
+<g class="f-vel" data-dir="0" data-len="52">
+<line x1="200" y1="146" x2="242" y2="146" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="252,146 242,150.66 242,141.34" fill="currentColor"/>
+<text x="264" y="146" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">V</text>
+</g>
+</svg>

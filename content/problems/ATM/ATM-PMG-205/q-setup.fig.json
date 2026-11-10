@@ -1,0 +1,170 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  245
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    80,
+    4
+   ],
+   "to": [
+    80,
+    236
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    72,
+    30
+   ],
+   "text": "金属板",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "arc",
+   "at": [
+    80,
+    180
+   ],
+   "r": 30,
+   "from": -90,
+   "to": 90
+  },
+  {
+   "t": "arc",
+   "at": [
+    80,
+    155
+   ],
+   "r": 55,
+   "from": -90,
+   "to": 90
+  },
+  {
+   "t": "arc",
+   "at": [
+    80,
+    130
+   ],
+   "r": 80,
+   "from": -90,
+   "to": 90
+  },
+  {
+   "t": "arc",
+   "at": [
+    80,
+    110
+   ],
+   "r": 100,
+   "from": -90,
+   "to": 90
+  },
+  {
+   "t": "arrow",
+   "from": [
+    80,
+    210
+   ],
+   "dir": 0,
+   "len": 30,
+   "style": "velocity"
+  },
+  {
+   "t": "line",
+   "from": [
+    80,
+    110
+   ],
+   "to": [
+    180,
+    110
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    130,
+    100
+   ],
+   "text": "r"
+  },
+  {
+   "t": "dot",
+   "at": [
+    80,
+    110
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    230,
+    232
+   ],
+   "dir": 170,
+   "len": 105,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    245,
+    232
+   ],
+   "text": "光",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    60
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    210,
+    160
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    110
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    20
+   ],
+   "text": "磁場 B（紙面の裏から表）",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

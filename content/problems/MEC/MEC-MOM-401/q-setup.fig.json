@@ -1,0 +1,137 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  200
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    180
+   ],
+   "to": [
+    380,
+    180
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     180
+    ],
+    [
+     380,
+     180
+    ],
+    [
+     380,
+     187
+    ],
+    [
+     20,
+     187
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "block",
+   "at": [
+    120,
+    172
+   ],
+   "w": 80,
+   "h": 36,
+   "label": "A",
+   "phys": "body:block"
+  },
+  {
+   "t": "circle",
+   "at": [
+    92.0,
+    175
+   ],
+   "r": 5,
+   "style": "solid"
+  },
+  {
+   "t": "circle",
+   "at": [
+    148.0,
+    175
+   ],
+   "r": 5,
+   "style": "solid"
+  },
+  {
+   "t": "block",
+   "at": [
+    260,
+    172
+   ],
+   "w": 80,
+   "h": 36,
+   "label": "B",
+   "phys": "body:block"
+  },
+  {
+   "t": "circle",
+   "at": [
+    232.0,
+    175
+   ],
+   "r": 5,
+   "style": "solid"
+  },
+  {
+   "t": "circle",
+   "at": [
+    288.0,
+    175
+   ],
+   "r": 5,
+   "style": "solid"
+  },
+  {
+   "t": "spring",
+   "from": [
+    160,
+    154
+   ],
+   "to": [
+    220,
+    154
+   ],
+   "coils": 6,
+   "amp": 7
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    130
+   ],
+   "to": [
+    230,
+    130
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    190,
+    118
+   ],
+   "text": "糸",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

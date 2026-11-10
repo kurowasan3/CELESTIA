@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 240" width="540" height="240" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="490">
+<line x1="20" y1="30" x2="500" y2="30" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="510,30 500,34.66 500,25.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="0" data-len="490">
+<line x1="20" y1="90" x2="500" y2="90" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="510,90 500,94.66 500,85.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="0" data-len="490">
+<line x1="20" y1="150" x2="500" y2="150" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="510,150 500,154.66 500,145.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="0" data-len="490">
+<line x1="20" y1="210" x2="500" y2="210" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="510,210 500,214.66 500,205.34" fill="currentColor"/>
+</g>
+<text x="522" y="30" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+<line x1="110" y1="200" x2="110" y2="60" stroke="currentColor" stroke-width="2.4"/>
+<g class="f-cur" data-dir="90" data-len="34">
+<line x1="110" y1="140" x2="110" y2="116" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="110,106 114.66,116 105.34,116" fill="currentColor"/>
+<text x="96" y="123" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">I</text>
+</g>
+<text x="110" y="222" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<line x1="215" y1="200" x2="344.9" y2="125" stroke="currentColor" stroke-width="2.4"/>
+<g class="f-cur" data-dir="30" data-len="34">
+<line x1="275.62" y1="165" x2="296.41" y2="153" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="305.07,148 298.74,157.04 294.07,148.96" fill="currentColor"/>
+<text x="280.34" y="152.89" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">I</text>
+</g>
+<path d="M249,200 A34,34 0 0 0 244.44,183" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="263.3" y="187.06" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">30°</text>
+<line x1="215" y1="200" x2="275" y2="200" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="203" y="214" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">Q</text>
+<line x1="370" y1="60" x2="500" y2="60" stroke="currentColor" stroke-width="2.4"/>
+<g class="f-cur" data-dir="0" data-len="34">
+<line x1="415" y1="60" x2="439" y2="60" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="449,60 439,64.66 439,55.34" fill="currentColor"/>
+<text x="432" y="46" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">I</text>
+</g>
+<text x="360" y="60" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">R</text>
+</svg>

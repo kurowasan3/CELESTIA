@@ -1,0 +1,145 @@
+{
+ "id": "WAV-LNS-219",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "凹レンズがつくる虚像の位置・大きさと，物体を遠ざけたときの像",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "construct",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "焦点距離 $20\\,\\mathrm{cm}$ の凹レンズの前方 $30\\,\\mathrm{cm}$ の位置に，高さ $10\\,\\mathrm{cm}$ の物体を光軸に垂直に置いた．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "像はレンズから何 $\\mathrm{cm}$ の位置にできるか．また，像はレンズの前方（物体と同じ側）・後方のどちらにできるか．"
+     },
+     {
+      "id": "2",
+      "tex": "像の倍率と像の高さを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "この像は実像か虚像か．また，正立か倒立か．"
+     },
+     {
+      "id": "4",
+      "tex": "物体をレンズから十分遠くまで遠ざけていくと，像の位置はどこに近づくか．"
+     },
+     {
+      "id": "5",
+      "tex": "凹レンズで，物体の像をスクリーンに映すことはできるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "a-rays",
+   "role": "answer",
+   "kind": "ray",
+   "format": "svg",
+   "src": "a-rays.svg",
+   "alt": "凹レンズの作図。物体の先端から光軸に平行に進んだ光は、レンズで前方の焦点 F から出たように広がる。レンズの中心を通る光は直進する。2本の光を逆に延ばした線の交点に、物体の前方の小さな正立の像ができる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "レンズの前方 $12\\,\\mathrm{cm}$",
+    "grading": "12 [cm]"
+   },
+   {
+    "id": "2",
+    "tex": "倍率 $0.40$ 倍，高さ $4.0\\,\\mathrm{cm}$",
+    "grading": "倍率：0.4倍 ; 高さ：4 [cm]"
+   },
+   {
+    "id": "3",
+    "tex": "虚像，正立"
+   },
+   {
+    "id": "4",
+    "tex": "レンズの前方の焦点（レンズから $20\\,\\mathrm{cm}$）"
+   },
+   {
+    "id": "5",
+    "tex": "できない．凹レンズを通った光は広がっていき1点に集まらないので，実像ができない（像は常に虚像）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) レンズの式 $\\dfrac1a+\\dfrac1b=\\dfrac1f$ で，凹レンズは $f=-20\\,\\mathrm{cm}$：\n\\[ \\frac1b=\\frac1{-20}-\\frac1{30}=-\\frac{5}{60}\\qquad\\therefore\\ b=-12\\,\\mathrm{cm} \\]\n$b<0$ なので，像はレンズの\\textbf{前方} $\\boldsymbol{12\\,\\mathrm{cm}}$ にできる．\n\n(2) 倍率 $m=\\left|\\dfrac ba\\right|=\\dfrac{12}{30}=\\boldsymbol{0.40}$ 倍，像の高さ $10\\times0.40=\\boldsymbol{4.0\\,\\mathrm{cm}}$．\n\n(3) 光が実際に集まってできる像ではなく，広がる光を逆に延ばした交点に見える像なので\\textbf{虚像}．$b<0$ の像は\\textbf{正立}．作図は次の通り（光軸に平行な光は前方の焦点から出たように広がり，中心を通る光は直進する）．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-rays"
+    },
+    {
+     "type": "text",
+     "tex": "(4) $a\\to\\infty$ で $\\dfrac1b\\to-\\dfrac1{20}$，$b\\to-20\\,\\mathrm{cm}$．像は\\textbf{前方の焦点}に近づく（小さくなっていく）．凹レンズの虚像は，物体の位置によらず，レンズと前方の焦点の間にできる．\n\n(5) \\textbf{できない}．凹レンズは光を広げるので，実在する物体から出た光が1点に集まることはなく，スクリーンに映る実像はできない．凹レンズの像は，レンズを通して目で見る虚像だけである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "凹レンズは焦点距離を負としてレンズの式を使う．$b<0$ なら前方の虚像（正立）．凹レンズの像はいつも，物体より小さい正立の虚像で，レンズと焦点の間にできる．"
+ },
+ "simulation": {
+  "id": "optics.lens",
+  "preset": {
+   "f": -0.2,
+   "a": 0.3,
+   "h": 0.1
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "lens-imaging"
+ ],
+ "laws": [
+  "lens-equation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "凹レンズ",
+  "虚像",
+  "作図",
+  "倍率"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

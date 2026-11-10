@@ -1,0 +1,71 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  300,
+  200
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    110
+   ],
+   "dir": 330,
+   "len": 140,
+   "style": "velocity",
+   "phys": "vel:c",
+   "label": "c",
+   "labelPos": "mid",
+   "labelOffset": [
+    -14,
+    6
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    181.24,
+    180.0
+   ],
+   "dir": 90,
+   "len": 70,
+   "style": "velocity",
+   "phys": "vel:w",
+   "label": "w",
+   "labelPos": "mid",
+   "labelOffset": [
+    10,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    110
+   ],
+   "dir": 0,
+   "len": 121.24,
+   "style": "velocity",
+   "phys": "vel:V",
+   "label": "V",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -26
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    110
+   ],
+   "text": "A",
+   "italic": true,
+   "size": 13,
+   "anchor": "end"
+  }
+ ]
+}

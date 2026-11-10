@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 235" width="370" height="235" font-family="'Times New Roman', serif">
+<g class="f-vel" data-phys="momentum:p" data-dir="0" data-len="250">
+<line x1="50" y1="190" x2="290" y2="190" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="300,190 290,194.66 290,185.34" fill="currentColor"/>
+<text x="175" y="220" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">衝突前の A</text>
+</g>
+<g class="f-vel" data-phys="momentum:pA2" data-dir="53.13" data-len="150">
+<line x1="50" y1="190" x2="134" y2="78" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="140,70 137.73,80.8 130.27,75.2" fill="currentColor"/>
+<text x="64.6" y="143.2" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">衝突後の A</text>
+</g>
+<g class="f-vel" data-phys="momentum:pB2" data-dir="323.13" data-len="200">
+<line x1="140" y1="70" x2="292" y2="184" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="300,190 289.2,187.73 294.8,180.27" fill="currentColor"/>
+<text x="256.8" y="135.6" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">衝突後の B</text>
+</g>
+<polyline points="134,78 142,84 148,76" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="140" y="56" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">直角</text>
+</svg>

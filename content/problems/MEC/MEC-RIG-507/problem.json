@@ -1,0 +1,208 @@
+{
+ "id": "MEC-RIG-507",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "加速する自動車の前輪・後輪にかかる力と，駆動方式による最大加速度の違い",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation",
+  "synthesis",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $m$ の自動車が水平な道路を走る．前輪の軸と後輪の軸の水平距離（ホイールベース）を $L$ とし，自動車の重心 G は，前輪の軸から水平距離 $a$，後輪の軸から水平距離 $b$（$a+b=L$）の位置で，地面からの高さ $h$ にある．タイヤと路面の間の静止摩擦係数を $\\mu$，重力加速度の大きさを $g$ とする．車輪の質量と回転の効果，空気抵抗は無視し，左右の車輪にかかる力はまとめて扱う．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "自動車が静止しているとき，路面が前輪，後輪を押す垂直抗力の大きさ $N_{\\mathrm f}$，$N_{\\mathrm r}$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "自動車が前向きに一定の加速度 $\\alpha$ で加速しているとき，$N_{\\mathrm f}$，$N_{\\mathrm r}$ を求めよ．車とともに動く立場で考えてよい．"
+     },
+     {
+      "id": "3",
+      "tex": "後輪だけにエンジンの力が伝わる自動車（後輪駆動）では，加速のための力は後輪にはたらく路面からの摩擦力だけである．タイヤがすべらずに出せる最大の加速度 $\\alpha_{\\mathrm R}$ を求めよ．前輪にはたらく摩擦力は無視する．"
+     },
+     {
+      "id": "4",
+      "tex": "前輪だけにエンジンの力が伝わる自動車（前輪駆動）について，同様に最大の加速度 $\\alpha_{\\mathrm F}$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$L=2.5\\,\\mathrm m$，$a=b=1.25\\,\\mathrm m$，$h=0.50\\,\\mathrm m$，$\\mu=0.80$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，$\\alpha_{\\mathrm R}$ と $\\alpha_{\\mathrm F}$ を有効数字2桁で求めよ．また，重心が前後の中央にあるのに両者が異なる理由を説明せよ．"
+     },
+     {
+      "id": "6",
+      "tex": "後輪駆動の自動車で強く加速しようとしたとき，タイヤがすべり出す前に前輪が浮き上がってしまう条件を，$\\mu$，$b$，$h$ で表せ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平な道路を右向きに走る自動車。重心 G は前輪の軸から水平距離 a、後輪の軸から水平距離 b、地面からの高さ h",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "車とともに動く立場で見た、後輪駆動で最大の加速度のときの力：重力 mg、慣性力 mα（後ろ向き）、後輪の垂直抗力 N_r と前向きの摩擦力 f、前輪の垂直抗力 N_f",
+   "caption": "$a=b$，$h=0.2L$，$\\mu=0.80$ の場合．後輪の垂直抗力が前輪より大きい",
+   "physics": {
+    "equilibrium": true,
+    "torque": {
+     "about": [
+      180,
+      90.0
+     ]
+    },
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "ma",
+      "dir_deg": 180
+     },
+     {
+      "name": "Nr",
+      "dir_deg": 90
+     },
+     {
+      "name": "Nf",
+      "dir_deg": 90
+     },
+     {
+      "name": "f",
+      "dir_deg": 0
+     }
+    ],
+    "equalLength": [
+     [
+      "force:ma",
+      "force:f"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$N_{\\mathrm f}=\\dfrac{mgb}{L}$，$N_{\\mathrm r}=\\dfrac{mga}{L}$",
+    "grading": "N_f：m g b/L ; N_r：m g a/L"
+   },
+   {
+    "id": "2",
+    "tex": "$N_{\\mathrm f}=\\dfrac{m(gb-\\alpha h)}{L}$，$N_{\\mathrm r}=\\dfrac{m(ga+\\alpha h)}{L}$",
+    "grading": "N_f：m(g b-α h)/L ; N_r：m(g a+α h)/L"
+   },
+   {
+    "id": "3",
+    "tex": "$\\alpha_{\\mathrm R}=\\dfrac{\\mu ga}{L-\\mu h}$",
+    "grading": "α_R：μ g a/(L-μ h)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\alpha_{\\mathrm F}=\\dfrac{\\mu gb}{L+\\mu h}$",
+    "grading": "α_F：μ g b/(L+μ h)"
+   },
+   {
+    "id": "5",
+    "tex": "$\\alpha_{\\mathrm R}\\approx4.7\\,\\mathrm{m/s^2}$，$\\alpha_{\\mathrm F}\\approx3.4\\,\\mathrm{m/s^2}$．加速中は重心が高いため車体を後ろに回そうとするモーメントがはたらき，垂直抗力が後輪側に移る．後輪の最大静止摩擦力が大きくなり，前輪の最大静止摩擦力は小さくなるから．",
+    "grading": "α_R：4.7 [m/s^2] ; α_F：3.4 [m/s^2]"
+   },
+   {
+    "id": "6",
+    "tex": "$\\mu\\ge\\dfrac bh$"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 力のつり合い $N_{\\mathrm f}+N_{\\mathrm r}=mg$ と，G のまわりのモーメントのつり合い $N_{\\mathrm f}a=N_{\\mathrm r}b$ より \\[N_{\\mathrm f}=\\frac{mgb}{L},\\qquad N_{\\mathrm r}=\\frac{mga}{L}\\] 重心に近い車輪ほど大きな力で支える．\n\n(2) 車とともに動く立場では，G に後ろ向きの慣性力 $m\\alpha$ がはたらき，自動車は静止しているとみなせる．路面からの摩擦力の和を $F$（前向き）とすると $F=m\\alpha$．摩擦力は地面の高さにはたらくので，G のまわりのモーメントを考えるとうでの長さ $h$ をもつ．後輪の接地点のまわりのモーメントのつり合い（摩擦力は通る）： \\[N_{\\mathrm f}L+m\\alpha h=mgb\\quad\\Longrightarrow\\quad N_{\\mathrm f}=\\frac{m(gb-\\alpha h)}{L}\\] $N_{\\mathrm r}=mg-N_{\\mathrm f}=\\dfrac{m(ga+\\alpha h)}{L}$．加速中は $\\dfrac{m\\alpha h}{L}$ だけ前輪から後輪へ移る．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(3) 摩擦力は後輪だけで $F=m\\alpha\\le\\mu N_{\\mathrm r}$．限界では \\[m\\alpha=\\mu\\frac{m(ga+\\alpha h)}{L}\\quad\\Longrightarrow\\quad\\alpha_{\\mathrm R}=\\frac{\\mu ga}{L-\\mu h}\\]\n\n(4) 摩擦力は前輪だけで $m\\alpha\\le\\mu N_{\\mathrm f}$．限界では \\[m\\alpha=\\mu\\frac{m(gb-\\alpha h)}{L}\\quad\\Longrightarrow\\quad\\alpha_{\\mathrm F}=\\frac{\\mu gb}{L+\\mu h}\\]\n\n(5) \\[\\alpha_{\\mathrm R}=\\frac{0.80\\times9.8\\times1.25}{2.5-0.40}\\approx4.7\\,\\mathrm{m/s^2},\\qquad\\alpha_{\\mathrm F}=\\frac{0.80\\times9.8\\times1.25}{2.5+0.40}\\approx3.4\\,\\mathrm{m/s^2}\\] 摩擦力が地面ではたらき，重心が地面より高いので，加速中は車体を後ろへ回そうとするモーメントが生じ，それを打ち消すように後輪の垂直抗力が増え，前輪の垂直抗力が減る．最大静止摩擦力は垂直抗力に比例するので，荷重が増える後輪で駆動するほうが大きな加速度を出せる．（逆に，ブレーキで減速するときは荷重が前輪に移るので，前輪のブレーキが重要になる．）\n\n(6) 前輪が浮き上がるのは $N_{\\mathrm f}=0$，つまり $\\alpha=\\dfrac{gb}{h}$ のとき．これがすべり出す限界 $\\alpha_{\\mathrm R}$ 以下ならば，すべる前に前輪が浮く： \\[\\frac{gb}h\\le\\frac{\\mu ga}{L-\\mu h}\\iff b(L-\\mu h)\\le\\mu ah\\iff bL\\le\\mu h(a+b)=\\mu hL\\] よって $\\mu\\ge\\dfrac bh$（$L>\\mu h$ とする）．重心が高く後輪に近いほど（$b$ が小さく $h$ が大きいほど）前輪が浮きやすい．(5) の数値では $\\dfrac bh=2.5>\\mu$ なので浮き上がらない．オートバイのように $b$ が小さく $h$ が大きい乗り物では，この条件が満たされやすい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "加速中は，地面ではたらく摩擦力と重心の高さのために垂直抗力が後輪へ移る．最大加速度は「駆動輪の垂直抗力 × μ」で決まる．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium",
+  "static-friction",
+  "normal-force",
+  "equation-of-motion"
+ ],
+ "laws": [
+  "torque-equilibrium",
+  "friction-law",
+  "newton-2nd"
+ ],
+ "misconceptions": [
+  "MC-NORMAL-EQ-MG",
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "剛体",
+  "自動車",
+  "慣性力",
+  "静止摩擦",
+  "力のモーメント"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

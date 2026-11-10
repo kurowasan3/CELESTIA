@@ -1,0 +1,202 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  470,
+  185
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     120,
+     70
+    ],
+    [
+     350,
+     70
+    ],
+    [
+     350,
+     150
+    ],
+    [
+     120,
+     150
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    90
+   ],
+   "to": [
+    430,
+    90
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    130
+   ],
+   "to": [
+    430,
+    130
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "spring",
+   "from": [
+    160,
+    110
+   ],
+   "to": [
+    310,
+    110
+   ],
+   "coils": 9,
+   "amp": 9
+  },
+  {
+   "t": "line",
+   "from": [
+    160,
+    110
+   ],
+   "to": [
+    160,
+    40
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    310,
+    110
+   ],
+   "to": [
+    310,
+    40
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    235,
+    30
+   ],
+   "text": "ヒーター（電力 P）",
+   "size": 13,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    110
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "velocity",
+   "phys": "flow:in"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    380,
+    110
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "velocity",
+   "phys": "flow:out"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     72,
+     60
+    ],
+    [
+     80,
+     60
+    ],
+    [
+     80,
+     104
+    ],
+    [
+     72,
+     104
+    ]
+   ],
+   "style": "solid"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     392,
+     60
+    ],
+    [
+     400,
+     60
+    ],
+    [
+     400,
+     104
+    ],
+    [
+     392,
+     104
+    ]
+   ],
+   "style": "solid"
+  },
+  {
+   "t": "text",
+   "at": [
+    76,
+    48
+   ],
+   "text": "T₁",
+   "size": 14,
+   "italic": true,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    396,
+    48
+   ],
+   "text": "T₂",
+   "size": 14,
+   "italic": true,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    235,
+    168
+   ],
+   "text": "断熱材でおおった管（水が流れる）",
+   "size": 13,
+   "italic": false,
+   "anchor": "middle"
+  }
+ ]
+}

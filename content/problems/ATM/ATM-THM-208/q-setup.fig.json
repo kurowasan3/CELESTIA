@@ -1,0 +1,228 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  220
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    90,
+    72
+   ],
+   "to": [
+    190,
+    72
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    90,
+    128
+   ],
+   "to": [
+    190,
+    128
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    78,
+    72
+   ],
+   "text": "−",
+   "italic": false,
+   "size": 16,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    78,
+    128
+   ],
+   "text": "+",
+   "italic": false,
+   "size": 16,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    100
+   ],
+   "to": [
+    90,
+    100
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    30,
+    100
+   ],
+   "dir": 0,
+   "len": 30,
+   "style": "velocity",
+   "label": "v₀",
+   "labelOffset": [
+    0,
+    -14
+   ]
+  },
+  {
+   "t": "curve",
+   "f": "parabola",
+   "from": [
+    90,
+    100
+   ],
+   "dir": 0,
+   "speed": 100,
+   "g": 24,
+   "until_y": 112,
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    112
+   ],
+   "to": [
+    350,
+    150.4
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    100
+   ],
+   "to": [
+    350,
+    100
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    350,
+    20
+   ],
+   "to": [
+    350,
+    200
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "text",
+   "at": [
+    358,
+    30
+   ],
+   "text": "蛍光面",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "dot",
+   "at": [
+    350,
+    100
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    350,
+    150.4
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    360,
+    100
+   ],
+   "text": "O′",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    372,
+    100
+   ],
+   "to": [
+    372,
+    150.4
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    382,
+    125.2
+   ],
+   "text": "Y",
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    90,
+    150
+   ],
+   "to": [
+    190,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    140.0,
+    162
+   ],
+   "text": "l"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    185
+   ],
+   "to": [
+    350,
+    185
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    270.0,
+    198
+   ],
+   "text": "L"
+  }
+ ]
+}

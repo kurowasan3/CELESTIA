@@ -1,0 +1,103 @@
+{
+ "id": "MEC-GRV-501",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "宇宙ステーションの中の「無重量」と軌道の高さでの重力",
+ "course": "物理",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "地球を半径 $R=6.4\\times10^{3}\\,\\mathrm{km}$ の一様な球とし，地表での重力加速度の大きさを $g=9.8\\,\\mathrm{m/s^2}$ とする．地球の自転の影響は考えない．宇宙ステーションが，地表から高さ $h=4.0\\times10^{2}\\,\\mathrm{km}$ の円軌道を等速で回っている．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "宇宙ステーションの位置での重力加速度の大きさは，地表での値の何倍か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "ステーションの中では宇宙飛行士が浮いて見える．これを「ステーションのある高さでは，地球の重力がほとんどはたらかないから」と説明した人がいる．この説明の誤りを指摘し，浮いて見える理由を正しく説明せよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ステーションの速さは何 $\\mathrm{m/s}$ か．有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "約 $0.89$ 倍",
+    "grading": "0.89倍"
+   },
+   {
+    "id": "2",
+    "tex": "(1) のとおり重力は地表の約 $0.89$ 倍もはたらいている．ステーションも飛行士も，同じ重力加速度で地球に向かって「落ち続けている」（重力だけを受けて円運動している）ので，飛行士は床から力を受けず，ステーションに対して浮いて見える．"
+   },
+   {
+    "id": "3",
+    "tex": "$7.7\\times10^{3}\\,\\mathrm{m/s}$",
+    "grading": "7.7*10^3 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "地球の質量を $M$，万有引力定数を $G$ とすると，地表では $g=\\dfrac{GM}{R^2}$，中心から距離 $r$ の点では $g'=\\dfrac{GM}{r^2}=g\\left(\\dfrac Rr\\right)^2$ である．\n\n(1) $r=R+h=6.8\\times10^{3}\\,\\mathrm{km}$ なので \\[\\frac{g'}{g}=\\left(\\frac{6.4}{6.8}\\right)^2=\\left(\\frac{16}{17}\\right)^2\\approx0.886\\] より約 $0.89$ 倍．地表の重力の9割近くがはたらいている．\n\n(2) 重力は $0$ ではない．ステーションも中の飛行士も，地球の重力だけを受けて同じ加速度 $g'$（地球の中心向き）で運動している．飛行士とステーションの加速度が同じなので，飛行士は床から垂直抗力を受けなくてよく，ステーションの中から見ると重さがないように見える（無重量状態）．エレベーターのロープが切れて自由落下するときと同じ状態である．\n\n(3) 重力が向心力になるので $\\dfrac{v^2}{r}=g'=\\dfrac{gR^2}{r^2}$．\\[v=R\\sqrt{\\frac gr}=6.4\\times10^{6}\\times\\sqrt{\\frac{9.8}{6.8\\times10^{6}}}\\approx7.7\\times10^{3}\\,\\mathrm{m/s}\\] 地表すれすれの円軌道の速さ（第1宇宙速度）$7.9\\times10^3\\,\\mathrm{m/s}$ より少し遅い．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "軌道上でも重力はほとんど減っていない．無重量状態は，物体と乗り物が同じ加速度で落ち続けているために起こる．"
+ },
+ "concepts": [
+  "universal-gravitation",
+  "circular-motion"
+ ],
+ "laws": [
+  "universal-gravitation",
+  "centripetal-acceleration"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "万有引力",
+  "無重量状態",
+  "人工衛星",
+  "重力加速度"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

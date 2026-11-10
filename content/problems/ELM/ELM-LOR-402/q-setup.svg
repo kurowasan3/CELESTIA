@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 270" width="500" height="270" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="440">
+<line x1="20" y1="40" x2="450" y2="40" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="460,40 450,44.66 450,35.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="0" data-len="440">
+<line x1="20" y1="250" x2="450" y2="250" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="460,250 450,254.66 450,245.34" fill="currentColor"/>
+</g>
+<text x="472" y="40" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+<line x1="70" y1="150" x2="420" y2="150" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="70" cy="150" r="5" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<text x="62" y="166" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<g class="f-vel" data-dir="35" data-len="80">
+<line x1="70" y1="150" x2="127.34" y2="109.85" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="135.53,104.11 130.02,113.67 124.67,106.03" fill="currentColor"/>
+<text x="145.36" y="97.23" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+</g>
+<path d="M110,150 A40,40 0 0 0 102.77,127.06" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="119.59" y="134.36" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<line x1="420" y1="70" x2="420" y2="230" stroke="currentColor" stroke-width="2"/>
+<text x="432" y="220" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">スクリーン</text>
+<line x1="70" y1="205" x2="420" y2="205" stroke="currentColor" stroke-width="1.2"/>
+<line x1="70" y1="198" x2="70" y2="212" stroke="currentColor" stroke-width="1.2"/>
+<line x1="420" y1="198" x2="420" y2="212" stroke="currentColor" stroke-width="1.2"/>
+<text x="245" y="220" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">D</text>
+</svg>

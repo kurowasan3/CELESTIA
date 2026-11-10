@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 170" width="400" height="170" font-family="'Times New Roman', serif">
+<circle cx="80" cy="100" r="14" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="80" cy="100" r="5" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<line x1="94" y1="100" x2="290" y2="100" stroke="currentColor" stroke-width="2.4"/>
+<circle cx="280" cy="100" r="3" fill="currentColor"/>
+<line x1="280" y1="100" x2="360" y2="100" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<g class="f-force" data-phys="force:F" data-dir="30" data-len="80">
+<line x1="280" y1="100" x2="340.62" y2="65" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="349.28,60 342.95,69.04 338.29,60.96" fill="currentColor"/>
+<text x="363.67" y="54" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F</text>
+</g>
+<path d="M310,100 A30,30 0 0 0 305.98,85" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="342" y="91" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">30°</text>
+<text x="76" y="130" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<text x="278" y="118" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">P</text>
+<line x1="80" y1="144" x2="280" y2="144" stroke="currentColor" stroke-width="1.2"/>
+<line x1="80" y1="138" x2="80" y2="150" stroke="currentColor" stroke-width="1.2"/>
+<line x1="280" y1="138" x2="280" y2="150" stroke="currentColor" stroke-width="1.2"/>
+<text x="180" y="158" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.25 m</text>
+</svg>

@@ -1,0 +1,151 @@
+{
+ "id": "ELM-FLD-305",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-01",
+ "topic": "偏向電極を通る電子の運動とスクリーン上の変位（比電荷によらないこと）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止していた電子（質量 $m$，電気量 $-e$）を電圧 $V_0$ で加速し，長さ $l$，間隔 $d$ の平行な2枚の電極の中央に，電極と平行に入射させた．電極の間には，上側の電極の電位が $V$ だけ高くなるように電圧をかけてあり，電極の間の電場は一様で，電極の外には電場はないものとする．電極の右端から距離 $L$ のところに電極に垂直なスクリーンがあり，電子は点 P に当たった．重力は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電極に入る直前の電子の速さ $v_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "電極の間で電子が受ける加速度の大きさ $a$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "電極を出るときの，入射方向からの電子の変位 $y_1$ を $V$，$V_0$，$l$，$d$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "電極を出るときの電子の速度が入射方向となす角を $\\theta$ とする．$\\tan\\theta$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "スクリーン上で，電場がないときに当たる点から P までの距離 $Y$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "電子が電極に当たらずに通り抜けるための $V$ の条件を求めよ．"
+     },
+     {
+      "id": "7",
+      "tex": "電子のかわりに，同じ電圧 $V_0$ で静止から加速した負イオン（質量も電気量の大きさも電子と異なる）を入射させた．イオンの当たる点は P と比べてどうなるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "長さ l、間隔 d の水平な平行平板電極（上側の電位が高い）。電子が電極の中央に左から速さ v_0 で入射し、電極内では放物線を描いて上へ曲がり、電極を出てからは直進して、右端から距離 L のスクリーン上の点 P に当たる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_0=\\sqrt{\\dfrac{2eV_0}{m}}$"
+   },
+   {
+    "id": "2",
+    "tex": "$a=\\dfrac{eV}{md}$（上向き）"
+   },
+   {
+    "id": "3",
+    "tex": "$y_1=\\dfrac{Vl^2}{4dV_0}$",
+    "grading": "y_1：V l^2/(4d V_0)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\tan\\theta=\\dfrac{Vl}{2dV_0}$",
+    "grading": "tanθ：V l/(2d V_0)"
+   },
+   {
+    "id": "5",
+    "tex": "$Y=\\dfrac{Vl(l+2L)}{4dV_0}$",
+    "grading": "Y：V l(l+2L)/(4d V_0)"
+   },
+   {
+    "id": "6",
+    "tex": "$y_1<\\dfrac d2$ より $V<\\dfrac{2d^2V_0}{l^2}$"
+   },
+   {
+    "id": "7",
+    "tex": "P と同じ点に当たる．$Y$ は $V$，$V_0$ と装置の寸法だけで決まり，粒子の質量・電気量によらないから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 加速電圧で電場がする仕事 $eV_0$ が運動エネルギーになる：$\\dfrac12mv_0^2=eV_0$ より $v_0=\\sqrt{\\dfrac{2eV_0}{m}}$．\n\n(2) 電場の強さは $\\dfrac Vd$ で下向き（高電位の上から低電位の下へ）．電子は負なので上向きに $\\dfrac{eV}d$ の力を受ける：$a=\\dfrac{eV}{md}$．\n\n(3) 入射方向には等速なので，電極を通る時間は $t_1=\\dfrac l{v_0}$．上向きには初速 $0$ の等加速度運動：\n\\[y_1=\\frac12at_1^2=\\frac{eVl^2}{2mdv_0^2}=\\frac{eVl^2}{2md}\\cdot\\frac{m}{2eV_0}=\\frac{Vl^2}{4dV_0}．\\]\n\n(4) $\\tan\\theta=\\dfrac{at_1}{v_0}=\\dfrac{eVl}{mdv_0^2}=\\dfrac{Vl}{2dV_0}$．\n\n(5) 電極を出た後は直進し，スクリーンまでにさらに $L\\tan\\theta$ ずれる：\n\\[Y=y_1+L\\tan\\theta=\\frac{Vl^2}{4dV_0}+\\frac{VlL}{2dV_0}=\\frac{Vl(l+2L)}{4dV_0}．\\]\n（$Y=\\left(\\dfrac l2+L\\right)\\tan\\theta$ と書ける．電極を出た後の直線をさかのぼると，電極の中央 $\\dfrac l2$ の点から出てきたように見える．）\n\n(6) 電子は中央から入るので，電極の右端までの変位が $\\dfrac d2$ 未満なら当たらない：$\\dfrac{Vl^2}{4dV_0}<\\dfrac d2$，すなわち $V<\\dfrac{2d^2V_0}{l^2}$．\n\n(7) (3)〜(5) の結果には $e$ も $m$ も入っていない．電気量 $q$，質量 $M$ の粒子でも，$\\dfrac12Mv_0^2=qV_0$ と $a=\\dfrac{qV}{Md}$ から $\\dfrac{a}{v_0^2}=\\dfrac{V}{2dV_0}$ となり，$q$，$M$ が消える．加速電圧と偏向電圧が共通なら，同じ符号の電荷をもつ粒子はすべて同じ軌道を通り，P に当たる．（このため，静電的な偏向だけでは比電荷 $\\dfrac{q}{M}$ を測れない．比電荷の測定には磁場による偏向を組み合わせる．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電極の中は「入射方向に等速＋垂直方向に等加速度」の放物運動．$v_0^2$ を $V_0$ で表すと $e$，$m$ が消える．"
+ },
+ "concepts": [
+  "coulomb-field"
+ ],
+ "laws": [
+  "uniform-field-potential",
+  "newton-2nd",
+  "uniform-acceleration-eq",
+  "work-energy-theorem"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "偏向電極",
+  "電子",
+  "放物運動",
+  "比電荷"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

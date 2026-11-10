@@ -1,0 +1,282 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  205
+ ],
+ "items": [
+  {
+   "t": "text",
+   "at": [
+    14,
+    20
+   ],
+   "text": "(a)",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    30
+   ],
+   "to": [
+    30,
+    80
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     22,
+     30
+    ],
+    [
+     30,
+     30
+    ],
+    [
+     30,
+     80
+    ],
+    [
+     22,
+     80
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    330,
+    30
+   ],
+   "to": [
+    330,
+    80
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     330,
+     30
+    ],
+    [
+     338,
+     30
+    ],
+    [
+     338,
+     80
+    ],
+    [
+     330,
+     80
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    80
+   ],
+   "to": [
+    330,
+    80
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "spring",
+   "from": [
+    30,
+    60
+   ],
+   "to": [
+    150,
+    60
+   ],
+   "coils": 7,
+   "amp": 7
+  },
+  {
+   "t": "block",
+   "at": [
+    180,
+    80
+   ],
+   "w": 60,
+   "h": 40,
+   "label": "m",
+   "phys": "body:block"
+  },
+  {
+   "t": "spring",
+   "from": [
+    210,
+    60
+   ],
+   "to": [
+    330,
+    60
+   ],
+   "coils": 7,
+   "amp": 7
+  },
+  {
+   "t": "text",
+   "at": [
+    90,
+    42
+   ],
+   "text": "k₁",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    42
+   ],
+   "text": "k₂",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    14,
+    130
+   ],
+   "text": "(b)",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    140
+   ],
+   "to": [
+    30,
+    190
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     22,
+     140
+    ],
+    [
+     30,
+     140
+    ],
+    [
+     30,
+     190
+    ],
+    [
+     22,
+     190
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    190
+   ],
+   "to": [
+    330,
+    190
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "spring",
+   "from": [
+    30,
+    170
+   ],
+   "to": [
+    130,
+    170
+   ],
+   "coils": 6,
+   "amp": 7
+  },
+  {
+   "t": "dot",
+   "at": [
+    130,
+    170
+   ]
+  },
+  {
+   "t": "spring",
+   "from": [
+    130,
+    170
+   ],
+   "to": [
+    230,
+    170
+   ],
+   "coils": 6,
+   "amp": 7
+  },
+  {
+   "t": "block",
+   "at": [
+    260,
+    190
+   ],
+   "w": 60,
+   "h": 40,
+   "label": "m",
+   "phys": "body:block"
+  },
+  {
+   "t": "text",
+   "at": [
+    80,
+    152
+   ],
+   "text": "k₁",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    180,
+    152
+   ],
+   "text": "k₂",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "id": "MSY-PLY-202",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "机の上の台車と滑車でつるしたおもり：運動方程式とエネルギーで確かめる",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平な机の上に質量 $M=0.80\\,\\mathrm{kg}$ の台車を置き，軽い糸の一端をつけた．糸を机の端の軽くなめらかな滑車にかけ，他端に質量 $m=0.20\\,\\mathrm{kg}$ のおもりをつるした．台車を静かに放すと，台車とおもりは動き始めた．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "台車の加速度の大きさは何 $\\mathrm{m/s^2}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "糸の張力の大きさは何 $\\mathrm N$ か．有効数字3桁で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "おもりが $0.50\\,\\mathrm m$ 下がったときの速さは何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の間に，糸の張力が台車にした仕事 $W_1$ と，おもりにした仕事 $W_2$ はそれぞれ何 $\\mathrm J$ か．"
+     },
+     {
+      "id": "5",
+      "tex": "(3) のときの台車とおもりの運動エネルギーの和は何 $\\mathrm J$ か．また，その値がおもりの位置エネルギーの減少量に等しいことを確かめよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな机の上の質量 M の台車に糸をつけ、机の端の滑車にかけて質量 m のおもりをつるしている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$1.96\\,\\mathrm{m/s^2}$",
+    "grading": "1.96 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$1.57\\,\\mathrm N$",
+    "grading": "1.57 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "$1.4\\,\\mathrm{m/s}$",
+    "grading": "1.4 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$W_1=0.784\\,\\mathrm J$，$W_2=-0.784\\,\\mathrm J$",
+    "grading": "W_1：0.784 [J] ; W_2：-0.784 [J]"
+   },
+   {
+    "id": "5",
+    "tex": "$0.98\\,\\mathrm J$（おもりの位置エネルギーの減少 $0.20\\times9.8\\times0.50=0.98\\,\\mathrm J$ に等しい）",
+    "grading": "0.98 [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "台車とおもりの加速度の大きさを $a$，糸の張力を $T$ とする．\n\n(1) 運動方程式：台車 $Ma=T$，おもり $ma=mg-T$．辺々加えて $(M+m)a=mg$， \\[a=\\frac{mg}{M+m}=\\frac{0.20\\times9.8}{1.00}=1.96\\,\\mathrm{m/s^2}\\]\n\n(2) $T=Ma=0.80\\times1.96=1.568\\approx1.57\\,\\mathrm N$．おもりの重さ $1.96\\,\\mathrm N$ より小さい．\n\n(3) $v^2=2ax=2\\times1.96\\times0.50=1.96$ より $v=1.4\\,\\mathrm{m/s}$．\n\n(4) 台車は張力の向きに $0.50\\,\\mathrm m$ 動くので $W_1=1.568\\times0.50=0.784\\,\\mathrm J$．おもりは張力（上向き）と逆向きに動くので $W_2=-0.784\\,\\mathrm J$．張力の仕事の和は $0$ で，張力はおもりから台車へエネルギーを受け渡す役目をしている．\n\n(5) $\\dfrac12(M+m)v^2=\\dfrac12\\times1.00\\times1.96=0.98\\,\\mathrm J$．おもりの位置エネルギーの減少 $mgx=0.20\\times9.8\\times0.50=0.98\\,\\mathrm J$ と等しく，全体の力学的エネルギーは保存している．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "2物体それぞれの運動方程式を立てて加速度と張力．糸の張力の仕事は2物体で打ち消し合い，全体の力学的エネルギーは保存する．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "work-energy",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "newton-2nd",
+  "work-energy-theorem",
+  "energy-conservation",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動方程式",
+  "仕事",
+  "力学的エネルギー",
+  "滑車",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

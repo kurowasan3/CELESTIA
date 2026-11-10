@@ -1,0 +1,148 @@
+{
+ "id": "ELM-DCC-307",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "負荷をつないだすべり抵抗器による分圧（出力電圧の直線からのずれと効率のかね合い）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "全抵抗 $R_0$ のすべり抵抗器 AB（抵抗線は一様）の両端に，起電力 $E$ の電池（内部抵抗は無視できる）をつないだ．すべり接点 P と B の間の抵抗値が $xR_0\\ (0\\leqq x\\leqq1)$ になる位置に P を置き，P と B の間に抵抗値 $R_L$ の抵抗（負荷）をつないだ．負荷にかかる電圧を出力電圧 $V$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "負荷をつながない（$R_L\\to\\infty$）とき，$V$ を $x$，$E$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "負荷をつないだときの $V$ を，$x$，$E$，$R_0$，$R_L$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$R_L=R_0$，$x=\\dfrac12$ のときの $V$ を $E$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\dfrac{V}{xE}$ は $x$ によって変わり，$x=\\dfrac12$ で最も小さくなる．すべての $x$ で $V$ が $xE$ から $1\\,\\%$ 以内に収まるために必要な $R_L$ の最小値を $R_0$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$R_L=R_0$，$x=\\dfrac12$ のとき，電池が供給する電力のうち負荷で消費される割合（効率）$\\eta$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(4)，(5) をふまえ，負荷 $R_L$ が決まっているとき，すべり抵抗器の全抵抗 $R_0$ を小さくすることの利点と欠点を述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "電池 E の両端にすべり抵抗器 AB（全抵抗 R₀）をつなぐ。すべり接点 P と下端 B の間に負荷（抵抗値 RL）をつなぐ",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V=xE$",
+    "grading": "V：x E"
+   },
+   {
+    "id": "2",
+    "tex": "$V=\\dfrac{xER_L}{R_L+x(1-x)R_0}$",
+    "grading": "V：x E R_L/(R_L+x(1-x)R_0)"
+   },
+   {
+    "id": "3",
+    "tex": "$V=\\dfrac25E$",
+    "grading": "V：2E/5"
+   },
+   {
+    "id": "4",
+    "tex": "$R_L=\\dfrac{99}{4}R_0\\ (\\fallingdotseq25R_0)$",
+    "grading": "R_L：99R_0/4"
+   },
+   {
+    "id": "5",
+    "tex": "$\\eta=\\dfrac2{15}$",
+    "grading": "η：2/15"
+   },
+   {
+    "id": "6",
+    "tex": "利点：$R_0$ が $R_L$ に比べて小さいほど，$V$ が $xE$ に比例する（目盛りどおりの電圧が取り出せる）．欠点：電池から抵抗器に流れる電流 $\\fallingdotseq\\dfrac E{R_0}$ が大きくなり，抵抗器での発熱が増えて効率が下がる（電池の消耗も速い）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 負荷がなければ AB を流れる電流は $\\dfrac{E}{R_0}$ で一定．PB 間の電圧は $xR_0\\times\\dfrac{E}{R_0}=xE$（$x$ に比例）．\n\n(2) PB 間は $xR_0$ と $R_L$ の並列：$R_{\\mathrm{PB}}=\\dfrac{xR_0R_L}{xR_0+R_L}$．これと AP 間の $(1-x)R_0$ の直列に $E$ がかかるので\n\\[V=E\\frac{R_{\\mathrm{PB}}}{R_{\\mathrm{PB}}+(1-x)R_0}．\\]\n分母分子に $(xR_0+R_L)$ をかけて整理すると\n\\[V=\\frac{xER_0R_L}{xR_0R_L+(1-x)R_0(xR_0+R_L)}=\\frac{xER_L}{R_L+x(1-x)R_0}．\\]\n$R_L\\to\\infty$ で (1) にもどる．\n\n(3) $V=\\dfrac{\\frac12ER_0}{R_0+\\frac14R_0}=\\dfrac25E$．負荷がなければ $\\dfrac12E$ なので，$20\\,\\%$ も小さい．\n\n(4) $\\dfrac V{xE}=\\dfrac{1}{1+x(1-x)\\dfrac{R_0}{R_L}}$．$x(1-x)$ は $x=\\dfrac12$ で最大 $\\dfrac14$．条件は $\\dfrac{1}{1+\\frac{R_0}{4R_L}}\\geqq0.99$，すなわち $\\dfrac{R_0}{4R_L}\\leqq\\dfrac1{99}$，$R_L\\geqq\\dfrac{99}4R_0\\fallingdotseq25R_0$．負荷の抵抗はすべり抵抗器の全抵抗の約 $25$ 倍以上必要．\n\n(5) 全体の抵抗は $\\dfrac{R_0}2+\\dfrac{R_0}{3}=\\dfrac{5R_0}6$（PB 間は $\\dfrac{R_0}2$ と $R_0$ の並列で $\\dfrac{R_0}3$）．電池の電力 $\\dfrac{E^2}{5R_0/6}=\\dfrac{6E^2}{5R_0}$．負荷の電力 $\\dfrac{V^2}{R_L}=\\dfrac{4E^2}{25R_0}$．\n\\[\\eta=\\frac{4/25}{6/5}=\\frac{2}{15}\\fallingdotseq13\\,\\%．\\]\n残りの大部分はすべり抵抗器での発熱になる．\n\n(6) (4) より，$\\dfrac{R_0}{R_L}$ を小さくするほど出力は $xE$ に比例し，目盛りどおりの電圧が得られる．一方，抵抗器に常に流れる電流は約 $\\dfrac E{R_0}$ で，抵抗器での消費電力は約 $\\dfrac{E^2}{R_0}$．負荷の電力は高々 $\\dfrac{E^2}{R_L}$ 程度なので，効率はおよそ $\\dfrac{R_0}{R_L}$ 程度以下になる．直線性と効率は両立せず，用途に応じて $R_0$ を選ぶ必要がある（精密な電圧を少しの電流で取り出す測定用なら $R_0$ 小，電力を送るなら別の方法を使う）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "負荷は PB 間の抵抗と並列．$x(1-x)\\dfrac{R_0}{R_L}$ が直線からのずれを決める．小さい $R_0$ は直線性に有利だが，抵抗器の発熱が増える．"
+ },
+ "concepts": [
+  "ohm-law-use",
+  "series-parallel",
+  "electric-power"
+ ],
+ "laws": [
+  "ohm-law",
+  "resistor-combination",
+  "kirchhoff-2nd",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "分圧回路",
+  "すべり抵抗器",
+  "負荷",
+  "効率",
+  "近似"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "id": "MEC-RIG-504",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "2台の体重計にのせた板の上を歩く人：表示のグラフから重心を読む",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $3.0\\,\\mathrm m$ の板の両端を，2台の体重計 A，B の上にのせた．板は一様とは限らない．質量のわからない人が板の上を A 側の端から B 側の端までゆっくり歩き，A 側の端から人までの距離 $x$ と，A，B の表示を記録した．体重計は，のせた物体から受ける力を質量に換算した値（$\\mathrm{kg}$）で表示する．結果は図2のグラフのように，どちらも直線になった．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "人の質量は何 $\\mathrm{kg}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "板の質量は何 $\\mathrm{kg}$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "板の重心は，A 側の端から何 $\\mathrm m$ の位置にあるか．"
+     },
+     {
+      "id": "4",
+      "tex": "A，B の表示が等しくなるのは，人が A 側の端から何 $\\mathrm m$ の位置にいるときか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "図1：2台の体重計 A、B の上に長さ 3.0 m の板をのせ、A 側の端から距離 x の位置に人が立っている",
+   "caption": ""
+  },
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "図2：横軸 x（0 から 3.0 m）、縦軸 体重計の表示（kg）。A の表示は x=0 で 72、x=3.0 で 12 の直線。B の表示は x=0 で 8、x=3.0 で 68 の直線",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$60\\,\\mathrm{kg}$",
+    "grading": "60 [kg]"
+   },
+   {
+    "id": "2",
+    "tex": "$20\\,\\mathrm{kg}$",
+    "grading": "20 [kg]"
+   },
+   {
+    "id": "3",
+    "tex": "$1.2\\,\\mathrm m$",
+    "grading": "1.2 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$1.6\\,\\mathrm m$",
+    "grading": "1.6 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "板の質量を $M$，重心の A 側の端からの距離を $c$，人の質量を $m$ とする．A，B の表示を $N_{\\mathrm A}$，$N_{\\mathrm B}$（kg）とし，重力加速度を $g$ とすると，力のつり合いと B 端のまわりのモーメントのつり合いから \\[(N_{\\mathrm A}+N_{\\mathrm B})g=(M+m)g,\\qquad N_{\\mathrm A}g\\times3.0=Mg(3.0-c)+mg(3.0-x)\\] よって $N_{\\mathrm A}=M\\left(1-\\dfrac c{3.0}\\right)+m\\left(1-\\dfrac x{3.0}\\right)$ は $x$ の1次式で，傾きは $-\\dfrac m{3.0}$．\n\n(1) A の表示は $x$ が $0$ から $3.0\\,\\mathrm m$ になる間に $72-12=60\\,\\mathrm{kg}$ 減る．$x=3.0$ で人の重さはすべて B にかかるので，この減少分が人の質量 $60\\,\\mathrm{kg}$．\n\n(2) どの $x$ でも $N_{\\mathrm A}+N_{\\mathrm B}=72+8=80\\,\\mathrm{kg}$ が全体の質量．板は $80-60=20\\,\\mathrm{kg}$．\n\n(3) $x=0$（人が A の真上）のとき，B の表示 $8\\,\\mathrm{kg}$ は板だけによる．A 端のまわりのモーメントのつり合い $8g\\times3.0=20g\\times c$ より $c=1.2\\,\\mathrm m$．板の重心は中央より A 側にある．\n\n(4) $N_{\\mathrm A}=72-20x$，$N_{\\mathrm B}=8+20x$．等しくなるのは $72-20x=8+20x$ より $x=1.6\\,\\mathrm m$．各 $40\\,\\mathrm{kg}$ で，人と板の全体の重心がちょうど中央（$1.5\\,\\mathrm m$）にくる位置である（$\\dfrac{20\\times1.2+60\\times1.6}{80}=1.5$）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "支える力の和＝全体の重さ，端のまわりのモーメントのつり合いで重心の位置．人が動くと表示は位置の1次式で変わる．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium",
+  "normal-force"
+ ],
+ "laws": [
+  "torque-equilibrium",
+  "center-of-mass"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力のモーメント",
+  "重心",
+  "グラフ",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "id": "ELM-ACC-401",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "送電線での電力損失と，変圧器で電圧を上げて送る理由",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "発電所から，$1.0\\times10^4\\ \\mathrm W$ の電力を，抵抗が合計 $2.0\\ \\Omega$ の送電線で送る．電圧・電流は実効値で表し，変圧器での損失と，送電線の抵抗以外の影響は無視する．また，送電線での電圧降下は送る電圧に比べて十分に小さいとする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$200\\ \\mathrm V$ の電圧で送るとき，送電線を流れる電流 $I_1$ と，送電線で失われる電力 $P_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "変圧器で電圧を $2000\\ \\mathrm V$ に上げて送るとき，送電線を流れる電流 $I_2$ と，送電線で失われる電力 $P_2$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の変圧器で，2次コイルの巻数は1次コイルの巻数の何倍か．"
+     },
+     {
+      "id": "4",
+      "tex": "同じ電力を送るとき，送る電圧を $k$ 倍にすると，送電線で失われる電力は何倍になるか．"
+     },
+     {
+      "id": "5",
+      "tex": "送電に直流ではなく交流が広く使われている主な理由を述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I_1=50\\ \\mathrm A$，$P_1=5.0\\times10^3\\ \\mathrm W$",
+    "grading": "I_1：50 [A] ; P_1：5000 [W]"
+   },
+   {
+    "id": "2",
+    "tex": "$I_2=5.0\\ \\mathrm A$，$P_2=50\\ \\mathrm W$",
+    "grading": "I_2：5.0 [A] ; P_2：50 [W]"
+   },
+   {
+    "id": "3",
+    "tex": "$10$ 倍",
+    "grading": "10倍"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{1}{k^2}$ 倍",
+    "grading": "1/k^2倍"
+   },
+   {
+    "id": "5",
+    "tex": "変圧器を使って，電圧を簡単に（効率よく）上げ下げできるから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "送る電力 $P$ と電圧 $V$ が決まると，電流は $I=\\dfrac PV$．送電線の損失は $I^2r$（$r$ は送電線の抵抗）．\n\n\\textbf{(1)} $I_1=\\dfrac{1.0\\times10^4}{200}=50\\ \\mathrm A$．$P_1=50^2\\times2.0=5.0\\times10^3\\ \\mathrm W$．送る電力の半分が失われてしまう．\n\n\\textbf{(2)} $I_2=\\dfrac{1.0\\times10^4}{2000}=5.0\\ \\mathrm A$．$P_2=5.0^2\\times2.0=50\\ \\mathrm W$．\n\n\\textbf{(3)} 電圧の比は巻数の比に等しい：$\\dfrac{N_2}{N_1}=\\dfrac{2000}{200}=10$．\n\n\\textbf{(4)} $I\\propto\\dfrac1V$ なので $I^2r\\propto\\dfrac1{V^2}$．$k$ 倍の電圧で $\\dfrac1{k^2}$ 倍．（(1)→(2) で $10$ 倍にすると $\\dfrac1{100}$ 倍．）\n注意：損失を $\\dfrac{V^2}{r}$ と計算するのは誤り．$V$ は送る電圧で，送電線の両端の電圧（電圧降下 $Ir$）ではない．\n\n\\textbf{(5)} 交流は変圧器で電圧を変えられる．高電圧で送って損失を減らし，使う場所の近くで安全な低い電圧に下げることができる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "送る電力が一定なら電流は電圧に反比例し，損失 $I^2r$ は電圧の2乗に反比例する．"
+ },
+ "concepts": [
+  "ac-circuit",
+  "electric-power"
+ ],
+ "laws": [
+  "transformer",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "変圧器",
+  "送電",
+  "電力損失",
+  "数値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

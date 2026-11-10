@@ -1,0 +1,177 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  450,
+  230
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    70,
+    200
+   ],
+   "dir": 0,
+   "len": 340,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    70,
+    200
+   ],
+   "dir": 90,
+   "len": 185,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    416,
+    200
+   ],
+   "text": "t [s]",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    62,
+    14
+   ],
+   "text": "ln V（V の単位は V）",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    62,
+    212
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    70,
+    56.656000000000006
+   ],
+   "to": [
+    370,
+    176.656
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    70,
+    136.656
+   ],
+   "to": [
+    270,
+    136.656
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    270,
+    200
+   ],
+   "to": [
+    270,
+    136.656
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    64,
+    56.656000000000006
+   ],
+   "text": "1.79",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    64,
+    136.656
+   ],
+   "text": "0.79",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    214
+   ],
+   "text": "10",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    214
+   ],
+   "text": "20",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    370,
+    214
+   ],
+   "text": "30",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    200
+   ],
+   "to": [
+    170,
+    195
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    370,
+    200
+   ],
+   "to": [
+    370,
+    195
+   ],
+   "style": "thin"
+  }
+ ]
+}

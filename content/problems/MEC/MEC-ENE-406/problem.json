@@ -1,0 +1,127 @@
+{
+ "id": "MEC-ENE-406",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "滑車でつながれた2物体の力学的エネルギーの減少と摩擦の仕事（張力の仕事は打ち消し合う）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平であらい机の上に質量 $2.0\\,\\mathrm{kg}$ の物体 A を置き，A に付けた軽い糸を机の端にあるなめらかな軽い滑車に通して，他端に質量 $1.0\\,\\mathrm{kg}$ の物体 B をつるす．B の下面は床から $0.50\\,\\mathrm m$ の高さにある．全体を静止させてから静かにはなすと，A は机の上をすべり，B は下降した．A と机の間の動摩擦係数を $0.20$，重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，A は滑車に達しないものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "B が床に達する直前の B の速さ $v$ は何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "B が床に達するまでに，糸の張力が A にした仕事 $W_{\\rm A}$ と，B にした仕事 $W_{\\rm B}$ はそれぞれ何 $\\mathrm J$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "B が床に達するまでに，A，B と地球からなる系の力学的エネルギーは何 $\\mathrm J$ 減少したか．"
+     },
+     {
+      "id": "4",
+      "tex": "B は床に達すると静止し，糸はたるんだ．その後，A が机の上をすべって止まるまでの距離 $s$ は何 $\\mathrm m$ か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "あらい机の上の物体 A が、机の端の滑車を通した糸で、床から 0.50 m の高さにつるした物体 B とつながっている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=1.4\\,\\mathrm{m/s}$",
+    "grading": "v：1.4 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$W_{\\rm A}=3.92\\,\\mathrm J$，$W_{\\rm B}=-3.92\\,\\mathrm J$（和は $0$）",
+    "grading": "W_A：3.92 [J] ; W_B：-3.92 [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$1.96\\,\\mathrm J$",
+    "grading": "1.96 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "$s=0.50\\,\\mathrm m$",
+    "grading": "s：0.5 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "A の動摩擦力の大きさは $0.20\\times2.0\\times9.8=3.92\\,\\mathrm N$．\n\n(1) A，B を1つの系と見ると，糸の張力は A を引く仕事と B を引き止める仕事が打ち消し合う（(2) で確かめる）．系の運動エネルギーの変化＝重力の仕事＋動摩擦力の仕事：\\[\\frac12(2.0+1.0)v^2=1.0\\times9.8\\times0.50-3.92\\times0.50=2.94\\] より $v^2=1.96$，$v=1.4\\,\\mathrm{m/s}$．\n\n(2) 加速度の大きさ $a$ は，$\\dfrac{v^2}{2\\times0.50}=1.96\\,\\mathrm{m/s^2}$．B の運動方程式 $1.0\\times1.96=1.0\\times9.8-T$ より $T=7.84\\,\\mathrm N$．A は張力の向きに $0.50\\,\\mathrm m$ 動き，B は張力と逆向きに $0.50\\,\\mathrm m$ 動くので\\[W_{\\rm A}=7.84\\times0.50=3.92\\,\\mathrm J,\\qquad W_{\\rm B}=-3.92\\,\\mathrm J\\] 和は $0$．糸が伸び縮みしないので，張力は B から A へエネルギーを運ぶだけで，系全体の力学的エネルギーは変えない．\n\n(3) 系の力学的エネルギーを変えるのは動摩擦力の仕事だけ：$3.92\\times0.50=1.96\\,\\mathrm J$ 減少（熱になる）．確かめ：重力の位置エネルギーの減少 $4.9\\,\\mathrm J$ のうち，運動エネルギーになったのは $\\dfrac12\\times3.0\\times1.96=2.94\\,\\mathrm J$．\n\n(4) 糸がたるむと A には動摩擦力だけがはたらく．A の運動エネルギーがすべて摩擦の仕事で失われる：\\[\\frac12\\times2.0\\times1.4^2=3.92\\times s\\quad\\Longrightarrow\\quad s=0.50\\,\\mathrm m\\]"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "糸でつながれた物体を1つの系と見ると，張力の仕事は打ち消し合う．系の力学的エネルギーの変化は，非保存力（動摩擦力）の仕事に等しい．"
+ },
+ "concepts": [
+  "work-energy",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "work-energy-theorem",
+  "friction-law",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "仕事と運動エネルギー",
+  "摩擦",
+  "滑車",
+  "系のエネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

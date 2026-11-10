@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 245" width="400" height="245" font-family="'Times New Roman', serif">
+<polygon points="160,205 192,205 192,170 208,170 208,205 240,205 240,235 160,235" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="200" cy="196" r="3" fill="currentColor"/>
+<text x="250" y="222" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">鉛の容器と線源</text>
+<text x="70" y="50" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="70" y="110" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="140" y="50" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="140" y="110" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="260" y="50" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="260" y="110" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="330" y="50" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="330" y="110" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="70" y="165" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="330" y="165" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊗</text>
+<text x="200" y="16" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">磁場（紙面の表から裏）</text>
+<line x1="200" y1="170" x2="200" y2="35" stroke="currentColor" stroke-width="2.4"/>
+<path d="M200,170 A320,320 0 0 0 172.33,39.84" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<path d="M200,170 A85,85 0 0 1 277.59,85.32" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="166.34" y="31.84" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">α</text>
+<text x="210" y="32" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">γ</text>
+<text x="287.59" y="79.32" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">β</text>
+</svg>

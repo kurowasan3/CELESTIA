@@ -1,0 +1,317 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  300
+ ],
+ "items": [
+  {
+   "t": "circle",
+   "at": [
+    210,
+    150
+   ],
+   "r": 100,
+   "width": 2.2
+  },
+  {
+   "t": "text",
+   "at": [
+    135,
+    135
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    135,
+    165
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    165,
+    105
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    165,
+    135
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    165,
+    165
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    165,
+    195
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    195,
+    75
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    195,
+    105
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    195,
+    195
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    195,
+    225
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    225,
+    75
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    225,
+    195
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    225,
+    225
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    255,
+    165
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    255,
+    195
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    285,
+    135
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    285,
+    165
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "line",
+   "from": [
+    210,
+    150
+   ],
+   "to": [
+    296.6025403784439,
+    100.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "dot",
+   "at": [
+    210,
+    150
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    296.6025403784439,
+    100.0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    138
+   ],
+   "text": "O",
+   "italic": true,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    306.6025403784439,
+    90.0
+   ],
+   "text": "P",
+   "italic": true,
+   "anchor": "start"
+  },
+  {
+   "t": "arc",
+   "at": [
+    210,
+    150
+   ],
+   "r": 40,
+   "from": 35,
+   "to": 80,
+   "label": "ω",
+   "labelGap": 12
+  },
+  {
+   "t": "arrow",
+   "from": [
+    216.9459271066772,
+    110.60768987951168
+   ],
+   "dir": 170,
+   "len": 9,
+   "style": "thin"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     210,
+     150
+    ],
+    [
+     50,
+     150
+    ]
+   ]
+  },
+  {
+   "t": "resistor",
+   "from": [
+    50,
+    150
+   ],
+   "to": [
+    50,
+    280
+   ],
+   "label": "R",
+   "labelSide": -1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     50,
+     280
+    ],
+    [
+     210,
+     280
+    ],
+    [
+     210,
+     250
+    ]
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    210,
+    250
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    270
+   ],
+   "text": "円形のレール",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  }
+ ]
+}

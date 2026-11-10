@@ -1,0 +1,109 @@
+{
+ "id": "MEC-KIN-303",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-01",
+ "topic": "石を落として水音が聞こえるまでの時間から井戸の深さを求める（音の伝わる時間の補正）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "experiment"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "井戸の口から小石を静かに放したところ，放してから $3.0\\,\\mathrm s$ 後に，小石が水面に当たる音が聞こえた．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$，音の速さを $340\\,\\mathrm{m/s}$ とし，空気抵抗は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "音が伝わる時間を無視して，井戸の口から水面までの深さを求めよ．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "音が伝わる時間も考えて，井戸の口から水面までの深さ $h$ を求めよ．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(1) の値は真の深さより大きいか，小さいか．理由とともに答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "音の伝わる時間を無視できるのは，井戸がどのような場合か．(2) で求めた深さについて，小石の落下時間と音の伝わる時間をそれぞれ求めて比べ，説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$44\\,\\mathrm m$",
+    "grading": "44 [m]"
+   },
+   {
+    "id": "2",
+    "tex": "$41\\,\\mathrm m$",
+    "grading": "41 [m]"
+   },
+   {
+    "id": "3",
+    "tex": "大きい．$3.0\\,\\mathrm s$ には音が上ってくる時間も含まれ，実際の落下時間は $3.0\\,\\mathrm s$ より短いから．"
+   },
+   {
+    "id": "4",
+    "tex": "落下時間は約 $2.88\\,\\mathrm s$，音の時間は約 $0.12\\,\\mathrm s$．音の時間が全体に比べて十分小さい，つまり浅い井戸ほど無視できる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 自由落下の時間が $3.0\\,\\mathrm s$ とみなすと $h_0=\\dfrac12gt^2=\\dfrac12\\times9.8\\times3.0^2=44.1$，有効数字2桁で $44\\,\\mathrm m$．\n\n(2) 落下時間を $t_1$，音が上ってくる時間を $t_2$ とすると\n\\[ h=\\frac12\\cdot9.8\\,t_1^2,\\qquad h=340\\,t_2,\\qquad t_1+t_2=3.0. \\]\n$t_1=\\sqrt{\\dfrac{2h}{9.8}}$ を使い，$x=\\sqrt h$ とおくと\n\\[ \\frac{x^2}{340}+\\sqrt{\\frac{2}{9.8}}\\,x-3.0=0. \\]\n正の解は $x\\approx6.376$，$h=x^2\\approx40.7$，有効数字2桁で $41\\,\\mathrm m$．\n（確かめ：$t_1=\\sqrt{2\\times40.7/9.8}\\approx2.88\\,\\mathrm s$，$t_2=40.7/340\\approx0.12\\,\\mathrm s$，和 $3.0\\,\\mathrm s$．）\n\n(3) 測った $3.0\\,\\mathrm s$ は「落下時間＋音の時間」．(1) はこれを全部落下時間とみなしたので，落下時間を長く見積もり，深さも大きく見積もっている（$44>41$）．\n\n(4) この井戸では $t_1\\approx2.88\\,\\mathrm s$ に対し $t_2\\approx0.12\\,\\mathrm s$ で，全体の約 $4\\%$．深さ $h$ に対して $t_1\\propto\\sqrt h$，$t_2\\propto h$ なので，浅いほど $t_2/t_1$ は小さくなり，音の時間を無視できる．深い井戸では補正が必要になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "測った時間は「落下時間＋音が伝わる時間」．2つの時間を同じ深さ $h$ で表して和の条件を解く．"
+ },
+ "concepts": [
+  "uniform-acceleration"
+ ],
+ "laws": [
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "自由落下",
+  "等加速度運動",
+  "測定",
+  "近似"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

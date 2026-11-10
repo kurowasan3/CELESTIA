@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385 280" width="385" height="280" font-family="'Times New Roman', serif">
+<line x1="70" y1="250" x2="289.6" y2="250" stroke="currentColor" stroke-width="1.2"/>
+<line x1="70" y1="250" x2="70" y2="30.4" stroke="currentColor" stroke-width="1.2"/>
+<text x="295.6" y="250" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">1/a [cm⁻¹]</text>
+<text x="60" y="18.4" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">1/b [cm⁻¹]</text>
+<line x1="70" y1="70" x2="250" y2="250" stroke="currentColor" stroke-width="1.2"/>
+<line x1="106" y1="250" x2="106" y2="34" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="70" y1="214" x2="286" y2="214" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="106" y="264" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.02</text>
+<text x="64" y="214" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.02</text>
+<line x1="142" y1="250" x2="142" y2="34" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="70" y1="178" x2="286" y2="178" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="142" y="264" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.04</text>
+<text x="64" y="178" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.04</text>
+<line x1="178" y1="250" x2="178" y2="34" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="70" y1="142" x2="286" y2="142" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="178" y="264" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.06</text>
+<text x="64" y="142" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.06</text>
+<line x1="214" y1="250" x2="214" y2="34" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="70" y1="106" x2="286" y2="106" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="214" y="264" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.08</text>
+<text x="64" y="106" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.08</text>
+<line x1="250" y1="250" x2="250" y2="34" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="70" y1="70" x2="286" y2="70" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="250" y="264" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.10</text>
+<text x="64" y="70" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.10</text>
+<text x="64" y="264" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0</text>
+<circle cx="190" cy="188.98" r="3.5" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="160" cy="161.33" r="3.5" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="142" cy="140.91" r="3.5" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="130" cy="131.58" r="3.5" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="115" cy="115.67" r="3.5" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+</svg>

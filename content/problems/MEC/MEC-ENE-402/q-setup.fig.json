@@ -1,0 +1,203 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  250
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     60
+    ],
+    [
+     120,
+     60
+    ],
+    [
+     120,
+     230
+    ],
+    [
+     20,
+     230
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    230
+   ],
+   "to": [
+    370,
+    230
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "ball",
+   "at": [
+    126,
+    56
+   ],
+   "r": 5,
+   "label": "",
+   "phys": "body:ball"
+  },
+  {
+   "t": "curve",
+   "f": "parabola",
+   "from": [
+    126,
+    56
+   ],
+   "dir": 0,
+   "speed": 85.0,
+   "g": 83.30000000000001,
+   "until_y": 230,
+   "style": "dash"
+  },
+  {
+   "t": "curve",
+   "f": "parabola",
+   "from": [
+    126,
+    56
+   ],
+   "dir": 45,
+   "speed": 85.0,
+   "g": 83.30000000000001,
+   "until_y": 230,
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    126,
+    106
+   ],
+   "to": [
+    126,
+    230
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    126,
+    56
+   ],
+   "dir": 0,
+   "len": 46,
+   "style": "velocity",
+   "phys": "velocity:vA",
+   "label": "A",
+   "labelPos": "end",
+   "labelOffset": [
+    4,
+    0
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    126,
+    56
+   ],
+   "dir": 45,
+   "len": 46,
+   "style": "velocity",
+   "phys": "velocity:vB",
+   "label": "B",
+   "labelPos": "end",
+   "labelOffset": [
+    2,
+    -2
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    126,
+    56
+   ],
+   "dir": 270,
+   "len": 46,
+   "style": "velocity",
+   "phys": "velocity:vC",
+   "label": "C",
+   "labelPos": "end",
+   "labelOffset": [
+    12,
+    0
+   ],
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    32,
+    60
+   ],
+   "to": [
+    32,
+    230
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    26,
+    60
+   ],
+   "to": [
+    38,
+    60
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    26,
+    230
+   ],
+   "to": [
+    38,
+    230
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    70,
+    150
+   ],
+   "text": "20 m",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    372,
+    24
+   ],
+   "text": "3個とも速さ 10 m/s",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  }
+ ]
+}

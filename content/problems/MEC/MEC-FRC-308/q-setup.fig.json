@@ -1,0 +1,179 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  265
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     110,
+     10
+    ],
+    [
+     250,
+     10
+    ],
+    [
+     250,
+     20
+    ],
+    [
+     110,
+     20
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    110,
+    20
+   ],
+   "to": [
+    250,
+    20
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "spring",
+   "from": [
+    180,
+    20
+   ],
+   "to": [
+    180,
+    80
+   ],
+   "coils": 6,
+   "amp": 7
+  },
+  {
+   "t": "text",
+   "at": [
+    196,
+    50
+   ],
+   "text": "ばねばかり",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    180,
+    80
+   ],
+   "to": [
+    180,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "block",
+   "at": [
+    180,
+    180
+   ],
+   "w": 30,
+   "h": 30,
+   "label": "",
+   "phys": "body:metal"
+  },
+  {
+   "t": "text",
+   "at": [
+    202,
+    166
+   ],
+   "text": "物体",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     120,
+     100
+    ],
+    [
+     120,
+     230
+    ],
+    [
+     240,
+     230
+    ],
+    [
+     240,
+     100
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    120,
+    120
+   ],
+   "to": [
+    240,
+    120
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    132,
+    214
+   ],
+   "text": "水",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "block",
+   "at": [
+    180,
+    250
+   ],
+   "w": 200,
+   "h": 20,
+   "label": "",
+   "phys": "body:scale"
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    240
+   ],
+   "text": "台ばかり",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    250
+   ],
+   "to": [
+    340,
+    250
+   ],
+   "style": "ground"
+  }
+ ]
+}

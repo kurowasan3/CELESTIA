@@ -1,0 +1,87 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  370,
+  190
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    170
+   ],
+   "to": [
+    360,
+    170
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    150,
+    160
+   ],
+   "w": 90,
+   "h": 28,
+   "label": "",
+   "phys": "body:cart"
+  },
+  {
+   "t": "circle",
+   "at": [
+    122,
+    165
+   ],
+   "r": 5,
+   "style": "solid"
+  },
+  {
+   "t": "circle",
+   "at": [
+    178,
+    165
+   ],
+   "r": 5,
+   "style": "solid"
+  },
+  {
+   "t": "ball",
+   "at": [
+    150,
+    125
+   ],
+   "r": 7,
+   "label": "",
+   "phys": "body:ball"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    150,
+    117
+   ],
+   "dir": 90,
+   "len": 48,
+   "style": "velocity",
+   "label": "u",
+   "labelPos": "end",
+   "labelOffset": [
+    12,
+    8
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    200,
+    146
+   ],
+   "dir": 0,
+   "len": 52,
+   "style": "velocity",
+   "label": "V"
+  }
+ ]
+}

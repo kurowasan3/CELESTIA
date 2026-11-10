@@ -1,0 +1,135 @@
+{
+ "id": "MEC-FRC-304",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-02",
+ "topic": "おもりの質量とばねの長さの測定グラフからばね定数と自然の長さを読む",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "graph-read",
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "軽いばねの上端を固定し，下端にいろいろな質量 $m$ のおもりをつるして，静止したときのばねの全長 $L$ を測定した．図は測定値を点で表し，それらに最もよく合う直線を引いたものである．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "このばねの自然の長さを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "ばね定数を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "このばねにある物体をつるすと，全長が $20.0\\,\\mathrm{cm}$ になった．物体の質量を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "ばね定数を求めるのに，1つの測定点だけを使わず，すべての点に合う直線の傾きを使うのはなぜか．"
+     },
+     {
+      "id": "5",
+      "tex": "このばねを長さが半分になるように切ったとき，そのばね定数を有効数字2桁で求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "おもりの質量 m [g]（横軸）とばねの全長 L [cm]（縦軸）の測定点と直線。直線は m=0 で L=12.0 cm、m=250 g で L=24.5 cm を通る。測定点は 0、50、100、150、200、250 g で、ほぼ直線上にある",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$12.0\\,\\mathrm{cm}$",
+    "grading": "12 [cm]"
+   },
+   {
+    "id": "2",
+    "tex": "$20\\,\\mathrm{N/m}$",
+    "grading": "20 [N/m]"
+   },
+   {
+    "id": "3",
+    "tex": "$160\\,\\mathrm g$",
+    "grading": "160 [g]"
+   },
+   {
+    "id": "4",
+    "tex": "個々の測定値には誤差があるので，多くの点の傾向を表す直線の傾きを使うと，誤差の影響が平均されて小さくなるから．"
+   },
+   {
+    "id": "5",
+    "tex": "$39\\,\\mathrm{N/m}$",
+    "grading": "39 [N/m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "つり合いより $kx=mg$（$x=L-L_0$ は伸び）．$L=L_0+\\dfrac{g}{k}m$ なので，グラフは直線で，縦軸の切片が自然の長さ $L_0$，傾きが $\\dfrac gk$．\n\n(1) $m=0$ での $L$ を読んで $L_0=12.0\\,\\mathrm{cm}$．\n\n(2) 直線は $m=250\\,\\mathrm g$ で $L=24.5\\,\\mathrm{cm}$．伸び $12.5\\,\\mathrm{cm}=0.125\\,\\mathrm m$ に対し力は $0.250\\times9.8=2.45\\,\\mathrm N$ なので\n\\[ k=\\frac{2.45}{0.125}=19.6\\approx20\\,\\mathrm{N/m}. \\]\n\n(3) 伸びは $20.0-12.0=8.0\\,\\mathrm{cm}$．直線の傾きは $\\dfrac{12.5\\,\\mathrm{cm}}{250\\,\\mathrm g}=0.050\\,\\mathrm{cm/g}$ なので，$m=\\dfrac{8.0}{0.050}=160\\,\\mathrm g$．\n\n(4) 1点だけでは，その点の測定誤差がそのまま結果に入る．多くの点に合う直線は誤差がならされているうえ，切片（自然の長さ）の測定誤差の影響も受けない．\n\n(5) 同じ力で引くと，半分の長さのばねの伸びは元の半分になる（ばねの各部分が同じだけ伸びるため）．ばね定数は2倍の $39.2\\approx39\\,\\mathrm{N/m}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$L=L_0+\\dfrac gk m$：縦軸の切片が自然の長さ，傾きの逆数から $k$．"
+ },
+ "concepts": [
+  "force-concept",
+  "equilibrium"
+ ],
+ "laws": [
+  "hooke-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "フックの法則",
+  "ばね",
+  "測定",
+  "グラフの読み取り"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

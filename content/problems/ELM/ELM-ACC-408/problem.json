@@ -1,0 +1,166 @@
+{
+ "id": "ELM-ACC-408",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "RLC 直列回路の共振の鋭さ（Q 値）：帯域幅・コンデンサーの電圧・蓄えられるエネルギー",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，抵抗値 $R$ の抵抗，自己インダクタンス $L$ のコイル，電気容量 $C$ のコンデンサーを直列にし，電圧の実効値 $V$ の交流電源につないだ．電源の角周波数 $\\omega$ は変えることができる．コイルの抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "回路を流れる電流の実効値 $I$ を $\\omega$ の関数として表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "回路の消費電力の時間平均 $P$ が最大になる角周波数 $\\omega_0$ と，そのときの消費電力 $P_0$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$P=\\dfrac{P_0}{2}$ となる角周波数は2つある．小さい方を $\\omega_1$，大きい方を $\\omega_2$ とするとき，$\\omega_2-\\omega_1$ を求めよ．また，$\\omega_1\\omega_2=\\omega_0^2$ となることを示せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$\\omega=\\omega_0$ のとき，コンデンサーの両端の電圧の実効値 $V_C$ は電源電圧の何倍か．$R$，$L$，$C$ で表し，それが $\\dfrac{\\omega_0}{\\omega_2-\\omega_1}$ に等しいことを示せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$L=10\\ \\mathrm{mH}$，$C=0.10\\ \\mu\\mathrm F$，$R=10\\ \\Omega$，$V=1.0\\ \\mathrm V$ のとき，$\\omega=\\omega_0$ での $V_C$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(5) のように $V_C$ は電源電圧よりはるかに大きくなりうる．$\\omega=\\omega_0$ のとき，コイルとコンデンサーに蓄えられているエネルギーの和 $U$ は時間によらず一定であることを示し，$U$ を $L$，$V$，$R$ で表せ．さらに，1周期の間に抵抗で消費されるエネルギーを $W$ として，$\\dfrac{2\\pi U}{W}$ を $R$，$L$，$C$ で表し，(4) の結果と比べて何がいえるか述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "交流電源に、抵抗 R、コイル L、コンデンサー C が直列につながっている",
+   "caption": ""
+  },
+  {
+   "id": "a-curve",
+   "role": "answer",
+   "kind": "graph",
+   "format": "svg",
+   "src": "a-curve.svg",
+   "alt": "消費電力 P と角周波数 ω のグラフ（共振曲線）。ω₀ で最大値 P₀ をとる山形で、P₀/2 となる角周波数 ω₁ と ω₂ が ω₀ の両側にある",
+   "caption": "共振曲線と，消費電力が半分になる角周波数"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I=\\dfrac{V}{\\sqrt{R^2+\\left(\\omega L-\\dfrac{1}{\\omega C}\\right)^2}}$",
+    "grading": "I：V/sqrt(R^2+(ω L-1/(ω C))^2)"
+   },
+   {
+    "id": "2",
+    "tex": "$\\omega_0=\\dfrac1{\\sqrt{LC}}$，$P_0=\\dfrac{V^2}{R}$",
+    "grading": "ω_0：1/sqrt(L C) ; P_0：V^2/R"
+   },
+   {
+    "id": "3",
+    "tex": "$\\omega_2-\\omega_1=\\dfrac RL$",
+    "grading": "R/L"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{1}{R}\\sqrt{\\dfrac LC}$ 倍",
+    "grading": "sqrt(L/C)/R"
+   },
+   {
+    "id": "5",
+    "tex": "$V_C\\fallingdotseq32\\ \\mathrm V$",
+    "grading": "V_C：32 [V]"
+   },
+   {
+    "id": "6",
+    "tex": "$U=\\dfrac{LV^2}{R^2}$（一定），$\\dfrac{2\\pi U}{W}=\\dfrac1R\\sqrt{\\dfrac LC}$．(4) の電圧の倍率と一致し，共振が鋭いほど（帯域が狭いほど），1周期に失うエネルギーに比べて多くのエネルギーが L と C の間を行き来している．",
+    "grading": "U：L V^2/R^2 ; sqrt(L/C)/R"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} インピーダンスは $Z=\\sqrt{R^2+\\left(\\omega L-\\dfrac1{\\omega C}\\right)^2}$．$I=\\dfrac VZ$．\n\n\\textbf{(2)} $P=I^2R$．$Z$ が最小，つまり $\\omega L=\\dfrac1{\\omega C}$ のとき最大：$\\omega_0=\\dfrac1{\\sqrt{LC}}$．このとき $Z=R$，$P_0=\\dfrac{V^2}{R}$．\n\n\\textbf{(3)} $P=\\dfrac{V^2R}{Z^2}=\\dfrac{P_0}{2}$ となるのは $Z^2=2R^2$，つまり $\\left|\\omega L-\\dfrac1{\\omega C}\\right|=R$．\n$\\omega L-\\dfrac1{\\omega C}=R$ の正の解：$\\omega_2=\\dfrac{R+\\sqrt{R^2+4L/C}}{2L}$．\n$\\omega L-\\dfrac1{\\omega C}=-R$ の正の解：$\\omega_1=\\dfrac{-R+\\sqrt{R^2+4L/C}}{2L}$．\n\\[\\omega_2-\\omega_1=\\frac RL,\\qquad\\omega_1\\omega_2=\\frac{(R^2+4L/C)-R^2}{4L^2}=\\frac{1}{LC}=\\omega_0^2\\]"
+    },
+    {
+     "type": "figure",
+     "ref": "a-curve"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(4)} 共振時 $I=\\dfrac VR$．$V_C=\\dfrac{I}{\\omega_0C}=\\dfrac{V}{R\\omega_0C}=\\dfrac{V}{R}\\sqrt{\\dfrac LC}$．倍率は $\\dfrac1R\\sqrt{\\dfrac LC}$．\n一方 $\\dfrac{\\omega_0}{\\omega_2-\\omega_1}=\\dfrac{\\omega_0L}{R}=\\dfrac{L}{R\\sqrt{LC}}=\\dfrac1R\\sqrt{\\dfrac LC}$ で一致する．（コイルの電圧 $\\omega_0LI$ も同じ大きさで，$V_C$ と逆位相なので打ち消し合い，電源電圧は抵抗だけにかかる．）\n\n\\textbf{(5)} $\\sqrt{\\dfrac LC}=\\sqrt{\\dfrac{1.0\\times10^{-2}}{1.0\\times10^{-7}}}=\\sqrt{1.0\\times10^5}\\fallingdotseq316\\ \\Omega$．倍率 $\\dfrac{316}{10}\\fallingdotseq32$．$V_C\\fallingdotseq32\\ \\mathrm V$．$1.0\\ \\mathrm V$ の電源でコンデンサーに $32\\ \\mathrm V$（最大値は約 $45\\ \\mathrm V$）がかかるので，コンデンサーの耐電圧に注意が必要になる．\n\n\\textbf{(6)} 共振時の電流を $i=\\sqrt2I\\sin\\omega_0t$（$I=\\dfrac VR$）とする．コンデンサーの電荷は $q=-\\dfrac{\\sqrt2I}{\\omega_0}\\cos\\omega_0t$（$\\dfrac{\\Delta q}{\\Delta t}=i$）．\n\\[U=\\frac12Li^2+\\frac{q^2}{2C}=LI^2\\sin^2\\omega_0t+\\frac{I^2}{\\omega_0^2C}\\cos^2\\omega_0t=LI^2\\]\n（$\\dfrac1{\\omega_0^2C}=L$ を用いた．）$U$ は一定で $U=\\dfrac{LV^2}{R^2}$．エネルギーは L と C の間を行き来するだけで，電源は抵抗で失われる分だけを補う．\n1周期 $\\dfrac{2\\pi}{\\omega_0}$ に抵抗で消費されるエネルギーは $W=I^2R\\cdot\\dfrac{2\\pi}{\\omega_0}$．\n\\[\\frac{2\\pi U}{W}=\\frac{2\\pi LI^2}{2\\pi I^2R/\\omega_0}=\\frac{\\omega_0L}{R}=\\frac1R\\sqrt{\\frac LC}\\]\nこれは (4) の倍率と同じ量（共振の Q 値）である．Q 値は「蓄えているエネルギー」と「1周期に失うエネルギー」の比を表し，Q が大きいほど共振曲線は鋭く（帯域幅 $\\omega_2-\\omega_1=\\omega_0/Q$ が狭く），L と C には電源電圧の Q 倍の電圧がかかる．$V_C$ が大きくてもエネルギー保存に反しないのは，電源が毎周期供給するのは失われる分だけで，大きなエネルギーは何周期もかけて蓄えられたものだからである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "共振の鋭さ・L と C の電圧の倍率・「蓄えたエネルギー／1周期の損失」は，どれも同じ量 $Q=\\dfrac{\\omega_0L}{R}=\\dfrac1R\\sqrt{\\dfrac LC}$ で表される．"
+ },
+ "concepts": [
+  "ac-circuit",
+  "electric-power"
+ ],
+ "laws": [
+  "ac-reactance",
+  "resonance-frequency",
+  "rms-value",
+  "joule-heat",
+  "capacitor-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流",
+  "RLC 直列回路",
+  "共振",
+  "Q 値",
+  "エネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

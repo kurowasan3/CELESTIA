@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 240" width="460" height="240" font-family="'Times New Roman', serif">
+<line x1="110" y1="60" x2="390" y2="60" stroke="currentColor" stroke-width="2.4"/>
+<line x1="110" y1="180" x2="390" y2="180" stroke="currentColor" stroke-width="2.4"/>
+<text x="250" y="44" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">＋＋＋＋＋＋</text>
+<text x="250" y="198" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">－－－－－－</text>
+<text x="140" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="140" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="140" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="170" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="170" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="170" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="200" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="200" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="200" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="230" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="230" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="230" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="260" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="260" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="260" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="290" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="290" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="290" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="320" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="320" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="320" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="350" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="350" y="120" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="350" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<circle cx="50" cy="120" r="6" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-vel" data-dir="0" data-len="40">
+<line x1="58" y1="120" x2="88" y2="120" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="98,120 88,124.66 88,115.34" fill="currentColor"/>
+<text x="78" y="106" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+</g>
+<line x1="410" y1="60" x2="410" y2="180" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="420" y="120" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d</text>
+<text x="250" y="225" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">極板間の電圧 V，磁場 B は紙面の表から裏の向き</text>
+</svg>

@@ -1,0 +1,181 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  420,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    190,
+    40
+   ],
+   "to": [
+    100.0,
+    195.88457268119896
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    100.0,
+    195.88457268119896
+   ],
+   "to": [
+    280.0,
+    195.88457268119896
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    280.0,
+    195.88457268119896
+   ],
+   "to": [
+    190,
+    40
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "dot",
+   "at": [
+    190,
+    40
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    100.0,
+    195.88457268119896
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    280.0,
+    195.88457268119896
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    190,
+    143.92304845413264
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    190,
+    24
+   ],
+   "text": "A（−q）",
+   "italic": false,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    92.0,
+    213.88457268119896
+   ],
+   "text": "B（+q）",
+   "italic": false,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    288.0,
+    213.88457268119896
+   ],
+   "text": "C（+q）",
+   "italic": false,
+   "size": 14,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    186,
+    161.92304845413264
+   ],
+   "text": "G",
+   "italic": true,
+   "size": 14,
+   "anchor": "end"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    190,
+    143.92304845413264
+   ],
+   "dir": 30,
+   "len": 56,
+   "style": "force",
+   "phys": "field:EB",
+   "label": "B による",
+   "labelOffset": [
+    24,
+    0
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    190,
+    143.92304845413264
+   ],
+   "dir": 150,
+   "len": 56,
+   "style": "force",
+   "phys": "field:EC",
+   "label": "C による",
+   "labelOffset": [
+    -24,
+    0
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    190,
+    143.92304845413264
+   ],
+   "dir": 90,
+   "len": 56,
+   "style": "force",
+   "phys": "field:EA",
+   "label": "A による",
+   "labelOffset": [
+    -34,
+    8
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    350,
+    173.92304845413264
+   ],
+   "dir": 90,
+   "len": 112,
+   "style": "force",
+   "phys": "field:E",
+   "label": "合成した電場",
+   "italic": false
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "id": "MEC-RIG-503",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "ものさしとおもりで棒の質量をはかる（てこのつり合いの実験）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $1.00\\,\\mathrm m$ の一様な棒に，端からの距離を表す目盛りがついている．棒だけをナイフの刃（支点）にのせると，$0.50\\,\\mathrm m$ の目盛りの位置でつり合った．次に，$0\\,\\mathrm m$ の端に質量 $0.20\\,\\mathrm{kg}$ のおもりをつるすと，支点を $0.40\\,\\mathrm m$ の目盛りの位置にしたとき，棒は水平につり合った．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，糸の質量は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "棒の質量 $m$ は何 $\\mathrm{kg}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "このとき支点が棒を支える力の大きさは何 $\\mathrm N$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "同じおもりを $0.10\\,\\mathrm m$ の目盛りの位置につるしかえた．棒が水平につり合う支点の位置は何 $\\mathrm m$ の目盛りか．"
+     },
+     {
+      "id": "4",
+      "tex": "棒が一様でない（重心の位置がわからない）場合でも，この方法で棒の質量を求めることができる．最初に棒だけでつり合わせる操作は，何を調べるために必要か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "長さ 1.00 m の棒の 0 m の端に 0.20 kg のおもりをつるし、0.40 m の目盛りの位置の支点で水平につり合わせている",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$m=0.80\\,\\mathrm{kg}$",
+    "grading": "0.8 [kg]"
+   },
+   {
+    "id": "2",
+    "tex": "$9.8\\,\\mathrm N$",
+    "grading": "9.8 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "$0.42\\,\\mathrm m$ の目盛り",
+    "grading": "0.42 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "棒の重心の位置．重力は重心にはたらくとみなせるので，支点から重心までの距離（棒の重力のうでの長さ）を知る必要がある．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 最初のつり合いから，一様な棒の重心は $0.50\\,\\mathrm m$ の位置．支点（$0.40\\,\\mathrm m$）のまわりの力のモーメントのつり合い： \\[0.20\\times9.8\\times0.40=m\\times9.8\\times(0.50-0.40)\\] よって $m=0.80\\,\\mathrm{kg}$．\n\n(2) 支点の力は，棒とおもりの重力の和とつり合う．$(0.80+0.20)\\times9.8=9.8\\,\\mathrm N$．\n\n(3) 支点の位置を $p$［m］とすると \\[0.20\\times(p-0.10)=0.80\\times(0.50-p)\\] $p=0.42\\,\\mathrm m$．\n\n(4) 棒の重力は重心にはたらくとみなせる．棒だけでつり合う点が重心なので，最初の操作で重心の位置（$0.50\\,\\mathrm m$）を確かめ，支点から重心までのうでの長さを決めている．一様でない棒でも，つり合う位置を重心として同じ計算ができる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "支点のまわりの力のモーメントのつり合い．棒自身の重力は重心にはたらく．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium"
+ ],
+ "laws": [
+  "torque-equilibrium",
+  "center-of-mass"
+ ],
+ "misconceptions": [
+  "MC-TORQUE-FORCE-ONLY"
+ ],
+ "tags": [
+  "力のモーメント",
+  "てこ",
+  "重心",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

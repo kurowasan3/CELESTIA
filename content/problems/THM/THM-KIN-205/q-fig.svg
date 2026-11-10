@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" font-family="'Times New Roman', serif">
+<line x1="277.5" y1="42.73" x2="182.5" y2="207.27" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<g class="f-vel" data-phys="v-in" data-dir="0" data-len="120">
+<line x1="110" y1="125" x2="220" y2="125" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="230,125 220,129.66 220,120.34" fill="currentColor"/>
+</g>
+<g class="f-vel" data-dir="0" data-len="133.32">
+<line x1="110" y1="95" x2="233.32" y2="95" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="243.32,95 233.32,99.66 233.32,90.34" fill="currentColor"/>
+</g>
+<g class="f-vel" data-dir="0" data-len="98.68">
+<line x1="110" y1="155" x2="198.68" y2="155" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="208.68,155 198.68,159.66 198.68,150.34" fill="currentColor"/>
+</g>
+<text x="88" y="125" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+<g class="f-vel" data-phys="v-out" data-dir="120" data-len="75">
+<line x1="230" y1="125" x2="197.5" y2="68.71" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="192.5,60.05 201.54,66.38 193.46,71.04" fill="currentColor"/>
+<text x="186.5" y="49.66" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v</text>
+</g>
+<line x1="230" y1="125" x2="152.06" y2="80" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="139.93" y="73" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">法線</text>
+<path d="M200.56,108 A34,34 0 0 0 196,125" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="186.53" y="113.35" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<g class="f-force" data-phys="force:F" data-dir="330" data-len="60">
+<line x1="230" y1="125" x2="273.3" y2="150" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="281.96,155 270.97,154.04 275.63,145.96" fill="currentColor"/>
+<text x="292.35" y="161" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F</text>
+</g>
+<text x="292" y="40" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">板（面積 S）</text>
+</svg>

@@ -1,0 +1,127 @@
+{
+ "id": "THM-FST-202",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "4つの基本的な状態変化での Q・ΔU・W の符号（等温膨張で熱を吸収しても温度が上がらない理由）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "concept",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "一定量の単原子分子理想気体に，次の (ア)〜(エ) の変化をさせる．気体が吸収した熱量を $Q$，内部エネルギーの変化を $\\Delta U$，気体が外にした仕事を $W$ とすると，熱力学第1法則は $Q=\\Delta U+W$ である．"
+   },
+   {
+    "type": "text",
+    "tex": "(ア) 体積一定で加熱する　(イ) 圧力一定で膨張させる　(ウ) 温度一定で膨張させる　(エ) 断熱的に膨張させる"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "(ア)〜(エ) のそれぞれについて，$Q$，$\\Delta U$，$W$ が正・$0$・負のどれになるかを答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(ウ) の変化で気体が $500\\,\\mathrm J$ の熱を吸収した．気体が外にした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ある生徒は「(ウ) では熱を吸収しているのに温度が上がらないのはおかしい」と考えた．吸収した熱はどうなったのかを説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(イ) の変化で気体が外に $200\\,\\mathrm J$ の仕事をした．内部エネルギーの変化 $\\Delta U$ と吸収した熱量 $Q$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "(ア) $Q$：正，$\\Delta U$：正，$W$：$0$．(イ) $Q$：正，$\\Delta U$：正，$W$：正．(ウ) $Q$：正，$\\Delta U$：$0$，$W$：正．(エ) $Q$：$0$，$\\Delta U$：負，$W$：正．"
+   },
+   {
+    "id": "2",
+    "tex": "$W=500\\,\\mathrm J$",
+    "grading": "W：500 [J]"
+   },
+   {
+    "id": "3",
+    "tex": "吸収した熱はすべて，気体が外にする仕事（ピストンを押す仕事）として出ていき，内部エネルギー（温度）は変わらない．"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta U=300\\,\\mathrm J$，$Q=500\\,\\mathrm J$",
+    "grading": "ΔU：300 [J] ; Q：500 [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 理想気体の内部エネルギーは温度だけで決まる（単原子分子では $\\Delta U=\\dfrac32nR\\Delta T$）．膨張すれば $W>0$，体積一定なら $W=0$．\n(ア) $W=0$，温度が上がるので $\\Delta U>0$，$Q=\\Delta U>0$．\n(イ) $PV=nRT$ で $P$ 一定・$V$ 増加なので温度が上がり $\\Delta U>0$，$W>0$，$Q=\\Delta U+W>0$．\n(ウ) 温度一定で $\\Delta U=0$，$W>0$，$Q=W>0$．\n(エ) $Q=0$，$W>0$ なので $\\Delta U=-W<0$（温度が下がる）．\n\n(2) 等温なので $\\Delta U=0$，$W=Q=500\\,\\mathrm J$．\n\n(3) 「熱を加える」ことと「温度が上がる」ことは別である．等温膨張では，気体は熱を受け取りながら同時にピストンを押して外へ同じだけのエネルギーを仕事として渡している．受け取ったエネルギーがたまらずに素通りするので，内部エネルギー，つまり温度は変わらない．\n\n(4) 定圧では $W=P\\Delta V=200\\,\\mathrm J$．$\\Delta U=\\dfrac32nR\\Delta T=\\dfrac32P\\Delta V=300\\,\\mathrm J$，$Q=\\Delta U+W=500\\,\\mathrm J$（$=\\dfrac52P\\Delta V$）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$\\Delta U$ は温度の変化だけで決まり，$W$ は体積の変化の向きで符号が決まる．$Q$ は第1法則 $Q=\\Delta U+W$ から求める．"
+ },
+ "simulation": {
+  "id": "thermo.pv",
+  "preset": {
+   "proc": 0,
+   "ratio": 2
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "first-law",
+  "ideal-gas"
+ ],
+ "laws": [
+  "first-law",
+  "internal-energy"
+ ],
+ "misconceptions": [
+  "MC-HEAT-TEMP",
+  "MC-ADIABATIC-TEMP"
+ ],
+ "tags": [
+  "熱力学第1法則",
+  "等温変化",
+  "定圧変化",
+  "断熱変化",
+  "定積変化"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,204 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  420,
+  220
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    30,
+    130
+   ],
+   "to": [
+    400,
+    130
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    250,
+    55
+   ],
+   "to": [
+    250,
+    205
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    244,
+    49
+   ],
+   "to": [
+    250,
+    55
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    256,
+    49
+   ],
+   "to": [
+    250,
+    55
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    244,
+    211
+   ],
+   "to": [
+    250,
+    205
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    256,
+    211
+   ],
+   "to": [
+    250,
+    205
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    150,
+    130
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    350,
+    130
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    146
+   ],
+   "text": "F",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    350,
+    146
+   ],
+   "text": "F",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "arrow",
+   "from": [
+    100,
+    130
+   ],
+   "dir": 90,
+   "len": 50,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    86,
+    100
+   ],
+   "text": "物体",
+   "italic": false,
+   "size": 11,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    80
+   ],
+   "to": [
+    250,
+    80
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    250,
+    80
+   ],
+   "to": [
+    400,
+    5
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    250,
+    80
+   ],
+   "to": [
+    150,
+    130
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    80
+   ],
+   "to": [
+    400,
+    180
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    190,
+    130
+   ],
+   "dir": 90,
+   "len": 20,
+   "style": "component"
+  },
+  {
+   "t": "text",
+   "at": [
+    194,
+    98
+   ],
+   "text": "像",
+   "italic": false,
+   "size": 11
+  }
+ ]
+}

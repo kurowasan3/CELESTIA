@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150" font-family="'Times New Roman', serif">
+<g transform="translate(190,55) rotate(0)" data-angle="0">
+<rect x="-150" y="-10" width="300" height="10" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<polygon points="160,55 148,80 172,80" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="120" y1="80" x2="200" y2="80" stroke="currentColor" stroke-width="2"/>
+<line x1="46" y1="55" x2="46" y2="90" stroke="currentColor" stroke-width="1.2"/>
+<g transform="translate(46,114) rotate(0)" data-angle="0">
+<rect x="-13" y="-24" width="26" height="24" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="64" y="104" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">0.20 kg</text>
+<text x="40" y="34" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0</text>
+<text x="160" y="34" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.40 m</text>
+<text x="340" y="34" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">1.00 m</text>
+<line x1="160" y1="42" x2="160" y2="48" stroke="currentColor" stroke-width="1.2"/>
+</svg>

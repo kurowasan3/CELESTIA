@@ -1,0 +1,153 @@
+{
+ "id": "MEC-NEW-304",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "なめらかな斜面を滑り下りる物体（質量によらない時間と，底辺を固定したときに最も早く下りる傾き）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "傾きの角 $30^\\circ$ のなめらかな斜面の上端に物体を置き，静かに手をはなした．斜面に沿った長さは $L=2.45\\,\\mathrm m$ である．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "物体の加速度の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "物体が斜面の下端に達するまでの時間を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "下端での物体の速さを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "物体の質量を2倍にすると，(2) の時間はどうなるか．理由とともに答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "斜面の水平方向の長さ（底辺）を $d$ に保ったまま傾きの角 $\\theta$ を変える．上端から下端まで滑り下りる時間 $t$ を $d$，$g$，$\\theta$ で表し，$t$ が最小になる $\\theta$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "傾きの角 30° のなめらかな斜面の上端近くに物体がある。斜面に沿った長さは L",
+   "caption": "",
+   "physics": {
+    "angle_deg": 30
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$4.9\\,\\mathrm{m/s^2}$",
+    "grading": "4.9 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$1.0\\,\\mathrm s$",
+    "grading": "1 [s]"
+   },
+   {
+    "id": "3",
+    "tex": "$4.9\\,\\mathrm{m/s}$",
+    "grading": "4.9 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "変わらない．加速度 $g\\sin30^\\circ$ が質量によらないから（重力も慣性も質量に比例する）．"
+   },
+   {
+    "id": "5",
+    "tex": "$t=\\sqrt{\\dfrac{4d}{g\\sin2\\theta}}$．最小になるのは $\\theta=45^\\circ$",
+    "grading": "t：sqrt(4d/(g sin(2θ))) ; θ：45°"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 斜面方向の運動方程式 $ma=mg\\sin30^\\circ$ より $a=g\\sin30^\\circ=9.8\\times\\dfrac12=4.9\\,\\mathrm{m/s^2}$．\n\n(2) $L=\\dfrac12at^2$ より $t=\\sqrt{\\dfrac{2L}{a}}=\\sqrt{\\dfrac{2\\times2.45}{4.9}}=1.0\\,\\mathrm s$．\n\n(3) $v=at=4.9\\times1.0=4.9\\,\\mathrm{m/s}$．\n\n(4) 運動方程式の両辺に $m$ があるので，$a=g\\sin\\theta$ は $m$ によらない．重い物体ほど大きな重力を受けるが，その分動かしにくい（慣性が大きい）ので，加速度は同じになる．時間は $1.0\\,\\mathrm s$ のまま．\n\n(5) 斜面に沿った長さは $\\dfrac{d}{\\cos\\theta}$，加速度は $g\\sin\\theta$ なので\n\\[ \\frac{d}{\\cos\\theta}=\\frac12g\\sin\\theta\\,t^2,\\qquad t=\\sqrt{\\frac{2d}{g\\sin\\theta\\cos\\theta}}=\\sqrt{\\frac{4d}{g\\sin2\\theta}}. \\]\n$\\sin2\\theta$ が最大の $1$ になる $2\\theta=90^\\circ$，つまり $\\theta=45^\\circ$ で $t$ は最小．傾きを急にすると加速度は大きくなるが，斜面が長くなる．その兼ね合いで $45^\\circ$ が最も早い．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "なめらかな斜面の加速度は $g\\sin\\theta$ で質量によらない．底辺一定なら $t\\propto1/\\sqrt{\\sin2\\theta}$．"
+ },
+ "simulation": {
+  "id": "mech.incline",
+  "preset": {
+   "theta": 30,
+   "mu": 0,
+   "muk": 0,
+   "m": 1
+  },
+  "locked": [
+   "g"
+  ],
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "force-decomposition",
+  "uniform-acceleration"
+ ],
+ "laws": [
+  "newton-2nd",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "斜面",
+  "運動方程式",
+  "等加速度運動",
+  "最小値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

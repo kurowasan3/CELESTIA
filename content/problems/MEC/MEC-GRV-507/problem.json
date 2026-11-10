@@ -1,0 +1,140 @@
+{
+ "id": "MEC-GRV-507",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "大気の抵抗を受ける人工衛星はなぜ速くなるか",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "synthesis",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $M$ の地球の中心 O から距離 $r$ の円軌道を，質量 $m$ の人工衛星が回っている．万有引力定数を $G$ とし，万有引力による位置エネルギーは無限遠を基準とする．"
+   },
+   {
+    "type": "text",
+    "tex": "高度の低い人工衛星は，薄い大気から運動の向きと逆向きに一定の大きさ $f$ の抵抗力を受けるとする．$f$ は万有引力に比べて十分小さく，人工衛星はほぼ円軌道を保ったまま，ゆっくりと半径を小さくしていく．したがって，各時刻の運動は，そのときの半径の円軌道の運動とみなしてよい．また，1周する間の半径の変化は $r$ に比べて十分小さい．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "半径 $r$ の円軌道での人工衛星の速さ $v$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "半径 $r$ の円軌道での人工衛星の力学的エネルギー $E$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "人工衛星が1周する間に抵抗力がする仕事は $-W$ と表せる．$W$ を $r$，$f$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "1周する間に軌道半径が小さくなる量 $\\delta$ を求めよ．ただし，$\\delta$ が小さいとき $\\dfrac1{r-\\delta}\\approx\\dfrac1r\\left(1+\\dfrac\\delta r\\right)$ を用いてよい．"
+     },
+     {
+      "id": "5",
+      "tex": "1周する間に人工衛星の速さはどれだけ変化するか．増加量を $\\Delta v$ として，$G$，$M$，$m$，$r$，$f$ で表せ．$\\Delta v$ は $v$ に比べて十分小さいとする．"
+     },
+     {
+      "id": "6",
+      "tex": "1周する間に万有引力が人工衛星にした仕事 $W_{\\mathrm G}$ を，$r$，$f$ で表せ．さらに，運動と逆向きの抵抗力を受けているのに人工衛星の速さが増す理由を，人工衛星の道すじと万有引力の向きの関係に注目して説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=\\sqrt{\\dfrac{GM}{r}}$",
+    "grading": "v：sqrt(G M/r)"
+   },
+   {
+    "id": "2",
+    "tex": "$E=-\\dfrac{GMm}{2r}$",
+    "grading": "E：-G M m/(2r)"
+   },
+   {
+    "id": "3",
+    "tex": "$W=2\\pi rf$",
+    "grading": "W：2π r f"
+   },
+   {
+    "id": "4",
+    "tex": "$\\delta=\\dfrac{4\\pi r^3f}{GMm}$",
+    "grading": "δ：4π r^3 f/(G M m)"
+   },
+   {
+    "id": "5",
+    "tex": "$\\Delta v=\\dfrac{2\\pi f}{m}\\sqrt{\\dfrac{r^3}{GM}}$",
+    "grading": "Δv：(2π f/m)sqrt(r^3/(G M))"
+   },
+   {
+    "id": "6",
+    "tex": "$W_{\\mathrm G}=4\\pi rf$．道すじは内向きに少しずつ傾いたらせんなので，万有引力には速度の向きの成分（抵抗力の2倍の大きさ）があり，正の仕事をする．",
+    "grading": "W_G：4π r f"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $m\\dfrac{v^2}{r}=\\dfrac{GMm}{r^2}$ より $v=\\sqrt{\\dfrac{GM}{r}}$．\n\n(2) $E=\\dfrac12mv^2-\\dfrac{GMm}{r}=\\dfrac{GMm}{2r}-\\dfrac{GMm}{r}=-\\dfrac{GMm}{2r}$．運動エネルギーは $K=\\dfrac{GMm}{2r}=-E$ である．\n\n(3) 抵抗力はつねに運動と逆向きで大きさ $f$，1周の道のりはほぼ $2\\pi r$ なので，抵抗力の仕事は $-f\\cdot2\\pi r$．$W=2\\pi rf$．\n\n(4) 力学的エネルギーの変化は，保存力以外の力（抵抗力）の仕事に等しい：$E(r-\\delta)-E(r)=-W$． \\[-\\frac{GMm}{2r}\\left(1+\\frac{\\delta}{r}\\right)+\\frac{GMm}{2r}=-\\frac{GMm\\,\\delta}{2r^2}=-2\\pi rf\\] よって $\\delta=\\dfrac{4\\pi r^3f}{GMm}$．\n\n(5) $K=-E$ なので，$E$ が $W$ だけ減ると $K$ は $W$ だけ増える．$\\Delta K\\approx mv\\Delta v=W$ より \\[\\Delta v=\\frac{W}{mv}=\\frac{2\\pi rf}{m}\\sqrt{\\frac{r}{GM}}=\\frac{2\\pi f}{m}\\sqrt{\\frac{r^3}{GM}}\\] 抵抗を受けて，人工衛星は速くなる．\n\n(6) 運動エネルギーの変化は，すべての力の仕事の和に等しい：$\\Delta K=W_{\\mathrm G}+(-W)$．$\\Delta K=W$ なので $W_{\\mathrm G}=2W=4\\pi rf$．（位置エネルギーの変化 $\\Delta U=-W_{\\mathrm G}=-2W$ からも同じ結果になる．）\n\n完全な円軌道なら万有引力は速度につねに垂直で仕事をしない．しかし実際の道すじは，半径が少しずつ小さくなる内向きのらせんであり，速度は円の接線から少しだけ内側（O の側）に傾いている．そのため万有引力には速度の向きの成分があり，その大きさは1周の平均で $\\dfrac{W_{\\mathrm G}}{2\\pi r}=2f$ と，抵抗力の2倍になる．速度の向きの合力は $2f-f=f$ で前向きなので，人工衛星は加速される．\n\n抵抗力は力学的エネルギーを減らすが，その結果として軌道が下がり，位置エネルギーの減少 $2W$ の半分が運動エネルギーに，残りの半分が抵抗による熱などになる．「抵抗力を受けると遅くなる」という直観は，ほかの力が仕事をしない場合にしか成り立たない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "円軌道では $K=-E$．抵抗で $E$ が減ると軌道が下がって $K$ は増える．万有引力は内向きのらせんに沿って正の仕事 $2W$ をする．"
+ },
+ "concepts": [
+  "universal-gravitation",
+  "circular-motion",
+  "mechanical-energy",
+  "work-energy"
+ ],
+ "laws": [
+  "universal-gravitation",
+  "gravitational-potential",
+  "work-energy-theorem",
+  "centripetal-acceleration"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "人工衛星",
+  "大気抵抗",
+  "力学的エネルギー",
+  "仕事"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

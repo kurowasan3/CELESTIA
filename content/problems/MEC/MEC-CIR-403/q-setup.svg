@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 230" width="340" height="230" font-family="'Times New Roman', serif">
+<polygon points="60,200 304.32,111.07 304.32,200" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="60" y1="200" x2="304.32" y2="111.07" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<line x1="40" y1="200" x2="330" y2="200" stroke="currentColor" stroke-width="2"/>
+<path d="M104,200 A44,44 0 0 0 101.35,184.95" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="114.16" y="190.45" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<g transform="translate(191.56,152.12) rotate(-20)" data-phys="body:car" data-angle="20">
+<rect x="-25" y="-26" width="50" height="26" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<g class="f-ink" data-dir="180" data-len="80">
+<line x1="150" y1="60" x2="80" y2="60" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="70,60 80,55.34 80,64.66" fill="currentColor"/>
+</g>
+<text x="150" y="44" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">カーブの中心の向き</text>
+</svg>

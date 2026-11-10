@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 290" width="340" height="290" font-family="'Times New Roman', serif">
+<polygon points="70,250 270,250 270,200 120,200 120,50 70,50" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g class="f-ink" data-dir="0" data-len="240">
+<line x1="70" y1="250" x2="300" y2="250" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="310,250 300,254.66 300,245.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="230">
+<line x1="70" y1="250" x2="70" y2="30" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="70,20 74.66,30 65.34,30" fill="currentColor"/>
+</g>
+<text x="314" y="264" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">x</text>
+<text x="58" y="22" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">y</text>
+<text x="58" y="262" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<text x="270" y="264" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">40</text>
+<text x="120" y="264" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">10</text>
+<line x1="120" y1="250" x2="120" y2="254" stroke="currentColor" stroke-width="1.2"/>
+<text x="62" y="200" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">10</text>
+<text x="62" y="50" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">40</text>
+<line x1="70" y1="200" x2="66" y2="200" stroke="currentColor" stroke-width="1.2"/>
+<text x="195" y="225" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<text x="95" y="125" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<text x="320" y="40" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">（単位 cm）</text>
+<circle cx="137.86" cy="182.14" r="3" fill="currentColor"/>
+<text x="146.86" y="191.14" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">G</text>
+<line x1="70" y1="250" x2="195" y2="125" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+</svg>

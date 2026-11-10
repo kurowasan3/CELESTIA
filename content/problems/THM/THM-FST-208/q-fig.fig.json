@@ -1,0 +1,228 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  420,
+  250
+ ],
+ "items": [
+  {
+   "t": "circle",
+   "at": [
+    150,
+    175
+   ],
+   "r": 62,
+   "style": "solid",
+   "width": 2
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     138,
+     115
+    ],
+    [
+     162,
+     115
+    ],
+    [
+     162,
+     117
+    ],
+    [
+     138,
+     117
+    ]
+   ],
+   "style": "none"
+  },
+  {
+   "t": "line",
+   "from": [
+    138,
+    20
+   ],
+   "to": [
+    138,
+    116
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    162,
+    20
+   ],
+   "to": [
+    162,
+    116
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "ball",
+   "at": [
+    150,
+    62
+   ],
+   "r": 11
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    180
+   ],
+   "text": "気体",
+   "size": 13,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    198
+   ],
+   "text": "（体積 V₀）",
+   "size": 12,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    172,
+    40
+   ],
+   "text": "S",
+   "size": 14,
+   "italic": true,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    118,
+    62
+   ],
+   "text": "m",
+   "size": 15,
+   "italic": true,
+   "anchor": "middle"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    222,
+    62
+   ],
+   "dir": 90,
+   "len": 26,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    222,
+    62
+   ],
+   "dir": 270,
+   "len": 26,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    236,
+    62
+   ],
+   "text": "x",
+   "size": 14,
+   "italic": true,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    10
+   ],
+   "text": "大気（圧力 P₀）",
+   "size": 12,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    345,
+    22
+   ],
+   "text": "小球にはたらく力",
+   "size": 12,
+   "italic": false,
+   "anchor": "middle"
+  },
+  {
+   "t": "ball",
+   "at": [
+    345,
+    110
+   ],
+   "r": 12
+  },
+  {
+   "t": "arrow",
+   "from": [
+    338,
+    40
+   ],
+   "dir": 270,
+   "len": 58.5,
+   "style": "force",
+   "phys": "force:P0S",
+   "label": "P₀S",
+   "labelPos": "mid",
+   "labelOffset": [
+    -28,
+    -16
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    352,
+    110
+   ],
+   "dir": 270,
+   "len": 27,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg",
+   "labelOffset": [
+    16,
+    -6
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    338,
+    196
+   ],
+   "dir": 90,
+   "len": 85.5,
+   "style": "force",
+   "phys": "force:PS",
+   "label": "P₁S",
+   "labelPos": "mid",
+   "labelOffset": [
+    -28,
+    18
+   ]
+  }
+ ]
+}

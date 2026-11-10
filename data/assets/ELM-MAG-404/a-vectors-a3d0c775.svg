@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 230" width="320" height="230" font-family="'Times New Roman', serif">
+<g class="f-comp" data-phys="vec:BH" data-dir="90" data-len="110">
+<line x1="90" y1="190" x2="90" y2="90" stroke="currentColor" stroke-width="2.2" stroke-dasharray="5 4"/>
+<polygon points="90,80 94.66,90 85.34,90" fill="currentColor"/>
+<text x="80" y="68" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">地磁気 Bʜ</text>
+</g>
+<g class="f-comp" data-phys="vec:Bc" data-dir="0" data-len="77">
+<line x1="90" y1="190" x2="157" y2="190" stroke="currentColor" stroke-width="2.2" stroke-dasharray="5 4"/>
+<polygon points="167,190 157,194.66 157,185.34" fill="currentColor"/>
+<text x="189" y="206" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">コイルの磁場 Bc</text>
+</g>
+<g class="f-ink" data-phys="vec:B" data-dir="55.01" data-len="134.27">
+<line x1="90" y1="190" x2="161.27" y2="88.19" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="167,80 165.09,90.87 157.45,85.52" fill="currentColor"/>
+<text x="203.88" y="70.17" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">合成磁場</text>
+</g>
+<line x1="167" y1="190" x2="167" y2="80" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="90" y1="80" x2="167" y2="80" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M116.38,152.32 A46,46 0 0 0 90,144" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="106.84" y="136.59" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<text x="80" y="200" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+</svg>

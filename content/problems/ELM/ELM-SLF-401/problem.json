@@ -1,0 +1,119 @@
+{
+ "id": "ELM-SLF-401",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "自己誘導起電力の大きさ・向きとコイルのエネルギー",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "自己インダクタンス $L=0.30\\ \\mathrm H$ のコイル（抵抗は無視できる）に流す電流を，いろいろに変化させる．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電流を $0$ から $2.0\\ \\mathrm A$ まで，$0.040\\ \\mathrm s$ の間に一定の割合で増やした．この間にコイルに生じる自己誘導起電力の大きさ $V_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) の起電力は，電流と同じ向きか，逆向きか．"
+     },
+     {
+      "id": "3",
+      "tex": "電流を $2.0\\ \\mathrm A$ のまま一定に保っているとき，自己誘導起電力の大きさを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "電流が $2.0\\ \\mathrm A$ のとき，コイルに蓄えられているエネルギー $U$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "電流を $2.0\\ \\mathrm A$ から $0$ まで，$1.0\\times10^{-3}\\ \\mathrm s$ の間に一定の割合で減らした．この間の自己誘導起電力の大きさ $V_2$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V_1=15\\ \\mathrm V$",
+    "grading": "V_1：15 [V]"
+   },
+   {
+    "id": "2",
+    "tex": "逆向き（電流の増加を妨げる向き）"
+   },
+   {
+    "id": "3",
+    "tex": "$0$",
+    "grading": "0 [V]"
+   },
+   {
+    "id": "4",
+    "tex": "$U=0.60\\ \\mathrm J$",
+    "grading": "U：0.60 [J]"
+   },
+   {
+    "id": "5",
+    "tex": "$V_2=6.0\\times10^{2}\\ \\mathrm V$",
+    "grading": "V_2：600 [V]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "自己誘導起電力の大きさは $V=L\\left|\\dfrac{\\Delta I}{\\Delta t}\\right|$．向きは電流の\\textbf{変化}を妨げる向き．\n\n\\textbf{(1)} $\\dfrac{\\Delta I}{\\Delta t}=\\dfrac{2.0}{0.040}=50\\ \\mathrm{A/s}$．$V_1=0.30\\times50=15\\ \\mathrm V$．\n\n\\textbf{(2)} 電流が増えるのを妨げるので，電流と\\textbf{逆向き}（電流を押し戻す向き）の起電力．\n\n\\textbf{(3)} 電流が変化しなければ $\\dfrac{\\Delta I}{\\Delta t}=0$ なので，起電力は $0$．大きな電流が流れていても同じ．\n\n\\textbf{(4)} $U=\\dfrac12LI^2=\\dfrac12\\times0.30\\times2.0^2=0.60\\ \\mathrm J$．\n\n\\textbf{(5)} $\\dfrac{\\Delta I}{\\Delta t}$ の大きさは $\\dfrac{2.0}{1.0\\times10^{-3}}=2.0\\times10^3\\ \\mathrm{A/s}$．$V_2=0.30\\times2.0\\times10^3=6.0\\times10^2\\ \\mathrm V$．このときの起電力は電流と\\textbf{同じ}向き（減少を妨げる向き）．スイッチを急に切ると，電源の電圧と関係なく大きな電圧が生じ，接点に火花が飛ぶことがある．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "自己誘導起電力は $L\\dfrac{\\Delta I}{\\Delta t}$．電流の大きさではなく，変化の速さで決まる．"
+ },
+ "concepts": [
+  "electromagnetic-induction"
+ ],
+ "laws": [
+  "faraday-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "自己誘導",
+  "コイル",
+  "エネルギー",
+  "数値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

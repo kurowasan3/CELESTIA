@@ -1,0 +1,55 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  200
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    40,
+    180
+   ],
+   "to": [
+    330,
+    180
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    180,
+    180
+   ],
+   "w": 180,
+   "h": 36,
+   "label": "B",
+   "phys": "body:B"
+  },
+  {
+   "t": "block",
+   "at": [
+    180,
+    144
+   ],
+   "w": 70,
+   "h": 36,
+   "label": "A",
+   "phys": "body:A"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    215,
+    126
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F"
+  }
+ ]
+}

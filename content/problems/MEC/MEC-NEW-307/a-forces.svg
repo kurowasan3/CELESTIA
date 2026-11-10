@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 230" width="280" height="230" font-family="'Times New Roman', serif">
+<circle cx="150" cy="130" r="7" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4" data-phys="body:bob"/>
+<g class="f-force" data-phys="force:T" data-dir="76.1" data-len="72.11">
+<line x1="150" y1="130" x2="164.92" y2="69.71" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="167.32,60 169.45,70.83 160.39,68.59" fill="currentColor"/>
+<text x="170.21" y="48.35" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">T</text>
+</g>
+<g class="f-force" data-phys="force:mg" data-dir="270" data-len="80">
+<line x1="150" y1="130" x2="150" y2="200" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="150,210 145.34,200 154.66,200" fill="currentColor"/>
+<text x="168" y="216" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">mg</text>
+</g>
+<g class="f-ink" data-dir="-30" data-len="20">
+<line x1="150" y1="130" x2="161.26" y2="136.5" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="167.32,140 159.63,139.33 162.89,133.67" fill="currentColor"/>
+<text x="191.71" y="150" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">ma</text>
+</g>
+</svg>

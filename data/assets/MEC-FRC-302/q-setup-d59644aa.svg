@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 245" width="300" height="245" font-family="'Times New Roman', serif">
+<polygon points="110,10 250,10 250,20 110,20" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="110" y1="20" x2="250" y2="20" stroke="currentColor" stroke-width="2"/>
+<polyline points="180,20 180,27.2 173,29.1 187,32.9 173,36.7 187,40.5 173,44.3 187,48.1 173,51.9 187,55.7 173,59.5 187,63.3 173,67.1 187,70.9 180,72.8 180,80" fill="none" stroke="currentColor" stroke-width="1.5" data-phys="spring"/>
+<text x="196" y="50" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">ばねばかり</text>
+<line x1="180" y1="80" x2="180" y2="150" stroke="currentColor" stroke-width="1.2"/>
+<g transform="translate(180,180) rotate(0)" data-phys="body:metal" data-angle="0">
+<rect x="-15" y="-30" width="30" height="30" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="202" y="170" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">おもり</text>
+<polyline points="120,100 120,230 240,230 240,100" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="120" y1="120" x2="240" y2="120" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="132" y="210" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">水</text>
+</svg>

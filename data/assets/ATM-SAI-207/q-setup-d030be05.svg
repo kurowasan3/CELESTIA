@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 250" width="380" height="250" font-family="'Times New Roman', serif">
+<line x1="277.5" y1="207.27" x2="182.5" y2="42.73" stroke="currentColor" stroke-width="2.4"/>
+<line x1="230" y1="125" x2="325.26" y2="70" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="230" y1="125" x2="340" y2="125" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M285,125 A55,55 0 0 0 277.63,97.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="293.75" y="107.92" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<text x="338.25" y="62.5" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">法線</text>
+<text x="60" y="230" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">太陽光</text>
+<text x="204.5" y="48.73" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">帆</text>
+<g class="f-ink" data-dir="0" data-len="158.47">
+<line x1="30" y1="60" x2="178.47" y2="60" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="188.47,60 178.47,64.66 178.47,55.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="0" data-len="181.57">
+<line x1="30" y1="100" x2="201.57" y2="100" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="211.57,100 201.57,104.66 201.57,95.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="0" data-len="210.43">
+<line x1="30" y1="150" x2="230.43" y2="150" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="240.43,150 230.43,154.66 230.43,145.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="0" data-len="233.53">
+<line x1="30" y1="190" x2="253.53" y2="190" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="263.53,190 253.53,194.66 253.53,185.34" fill="currentColor"/>
+</g>
+</svg>

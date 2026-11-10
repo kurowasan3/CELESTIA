@@ -1,0 +1,218 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  245
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    220
+   ],
+   "dir": 0,
+   "len": 320,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    220
+   ],
+   "dir": 90,
+   "len": 200,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    234
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    56,
+    16
+   ],
+   "text": "L [cm]",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    370,
+    208
+   ],
+   "text": "m [g]",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     50,
+     148.0
+    ],
+    [
+     350,
+     58.0
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    73.0
+   ],
+   "to": [
+    300,
+    73.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    300,
+    73.0
+   ],
+   "to": [
+    300,
+    220
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    148.0
+   ],
+   "text": "12.0",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    73.0
+   ],
+   "text": "24.5",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "dot",
+   "at": [
+    50,
+    148.0
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    100,
+    132.4
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    150,
+    118.60000000000001
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    200,
+    102.39999999999999
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    250,
+    88.60000000000002
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    300,
+    73.0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    100,
+    234
+   ],
+   "text": "50",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    234
+   ],
+   "text": "100",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    234
+   ],
+   "text": "150",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    234
+   ],
+   "text": "200",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    234
+   ],
+   "text": "250",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

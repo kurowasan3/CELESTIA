@@ -1,0 +1,117 @@
+{
+ "id": "ELM-MAG-401",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "ソレノイド内部の磁場と磁束（数値）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中に，長さ $0.40\\ \\mathrm{m}$，巻数 $800$，断面積 $2.0\\times10^{-4}\\ \\mathrm{m^2}$ の十分に細長いソレノイドがあり，$0.50\\ \\mathrm{A}$ の電流を流した．真空の透磁率を $\\mu_0=4\\pi\\times10^{-7}\\ \\mathrm{N/A^2}$ とし，ソレノイドの内部の磁場は一様とみなす．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "単位長さあたりの巻数 $n$ [回/m] を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "ソレノイドの内部の磁束密度の大きさ $B$ を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "3",
+      "tex": "ソレノイドの断面（1巻き）を貫く磁束 $\\Phi$ を求めよ（$\\pi$ を残してよい）．"
+     },
+     {
+      "id": "4",
+      "tex": "導線の巻数と電流はそのままにして，ソレノイドを引き伸ばして長さを $2$ 倍にした．内部の磁束密度は何倍になるか．"
+     },
+     {
+      "id": "5",
+      "tex": "ソレノイドの外側（中央付近の側面のすぐ外）の磁場は，内部の磁場と比べてどうか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$n=2.0\\times10^{3}$ 回/m",
+    "grading": "n：2000"
+   },
+   {
+    "id": "2",
+    "tex": "$B=4\\pi\\times10^{-4}\\ \\mathrm{T}\\ (\\fallingdotseq1.3\\times10^{-3}\\ \\mathrm{T})$",
+    "grading": "B：4π×10^(-4) [T]"
+   },
+   {
+    "id": "3",
+    "tex": "$\\Phi=8\\pi\\times10^{-8}\\ \\mathrm{Wb}\\ (\\fallingdotseq2.5\\times10^{-7}\\ \\mathrm{Wb})$",
+    "grading": "Φ：8π×10^(-8) [Wb]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac12$ 倍",
+    "grading": "1/2倍"
+   },
+   {
+    "id": "5",
+    "tex": "ほとんど $0$（内部に比べて無視できるほど弱い）"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} $n=\\dfrac{800}{0.40}=2.0\\times10^{3}$ 回/m．\n\n\\textbf{(2)} ソレノイド内部の磁束密度は $B=\\mu_0nI$．\n\\[B=4\\pi\\times10^{-7}\\times2.0\\times10^{3}\\times0.50=4\\pi\\times10^{-4}\\ \\mathrm{T}\\fallingdotseq1.3\\times10^{-3}\\ \\mathrm{T}\\]\n$B$ は巻数そのものではなく，単位長さあたりの巻数 $n$ で決まる．\n\n\\textbf{(3)} 磁場は断面に垂直で一様なので $\\Phi=BS=4\\pi\\times10^{-4}\\times2.0\\times10^{-4}=8\\pi\\times10^{-8}\\ \\mathrm{Wb}$．\n\n\\textbf{(4)} 巻数 $800$ のまま長さが $2$ 倍になると，$n$ は $\\dfrac12$ 倍．$B=\\mu_0nI$ も $\\dfrac12$ 倍．（巻き方が「まばら」になるほど弱くなる．）\n\n\\textbf{(5)} 細長いソレノイドの磁力線は内部を一様に通り，外では端から大きく広がって戻る．側面のすぐ外の磁場はほとんど $0$ とみなせる（$B=\\mu_0nI$ は内部だけの式）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "ソレノイドの内部の磁場は $B=\\mu_0nI$．効くのは全体の巻数ではなく，単位長さあたりの巻数 $n$．"
+ },
+ "concepts": [
+  "lorentz-force"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "ソレノイド",
+  "磁束密度",
+  "磁束",
+  "数値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" width="360" height="230" font-family="'Times New Roman', serif">
+<polygon points="40,150 300,150 300,162 40,162" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="40" y1="150" x2="300" y2="150" stroke="currentColor" stroke-width="2"/>
+<line x1="60" y1="162" x2="60" y2="220" stroke="currentColor" stroke-width="2.4"/>
+<line x1="280" y1="162" x2="280" y2="220" stroke="currentColor" stroke-width="2.4"/>
+<g transform="translate(170,150) rotate(0)" data-phys="body:book" data-angle="0">
+<rect x="-60" y="-24" width="120" height="24" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="236" y="138" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">本（質量 M）</text>
+<g transform="translate(170,126) rotate(0)" data-phys="body:cup" data-angle="0">
+<rect x="-20" y="-36" width="40" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="196" y="108" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">コップ（質量 m）</text>
+<text x="300" y="176" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">机</text>
+</svg>

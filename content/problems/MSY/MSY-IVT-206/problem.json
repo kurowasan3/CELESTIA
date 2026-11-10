@@ -1,0 +1,144 @@
+{
+ "id": "MSY-IVT-206",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "あらい斜面を上り下りする物体の v-t グラフから傾きと動摩擦係数を求める",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "graph-read",
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "傾きの角 $\\theta$ の一様にあらい斜面の下端から，物体に斜面に沿って上向きの初速度を与えた．物体は斜面を上って一瞬止まり，その後すべり降りた．運動センサーで記録した速度 $v$（斜面に沿って上向きを正）と時刻 $t$ の関係は図のようになった．グラフは，物体が下端に戻る前までの記録である．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "上るときと下るときの加速度の大きさ $a_1$，$a_2$ はそれぞれ何 $\\mathrm{m/s^2}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "斜面の傾きの角 $\\theta$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "物体と斜面の間の動摩擦係数 $\\mu'$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "物体が下端に戻ったときの速さは何 $\\mathrm{m/s}$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "物体が下端から上って下端に戻るまでに失った力学的エネルギーは，はじめの運動エネルギーの何倍か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "横軸 t（s）、縦軸 v（m/s）のグラフ。t=0 で v=2.94 から直線的に減って t=0.40 で 0 になり、そのあと傾きがゆるやかな直線で減り続けて t=1.00 で v=−1.47 になる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$a_1=7.35\\,\\mathrm{m/s^2}$，$a_2=2.45\\,\\mathrm{m/s^2}$",
+    "grading": "a_1：7.35 [m/s^2] ; a_2：2.45 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\theta=30^\\circ$",
+    "grading": "30°"
+   },
+   {
+    "id": "3",
+    "tex": "$\\mu'\\approx0.29$",
+    "grading": "0.29"
+   },
+   {
+    "id": "4",
+    "tex": "$1.7\\,\\mathrm{m/s}$",
+    "grading": "1.7 [m/s]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac23$ 倍",
+    "grading": "(2/3)倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) グラフの傾きが加速度．上り：$a_1=\\dfrac{2.94}{0.40}=7.35\\,\\mathrm{m/s^2}$．下り：$a_2=\\dfrac{1.47}{1.00-0.40}=2.45\\,\\mathrm{m/s^2}$．$t=0.40\\,\\mathrm s$ で速度は $0$ になるが，グラフの傾き（加速度）は $0$ ではなく，物体は止まり続けずにすべり降りる．\n\n(2)(3) 動摩擦力はつねに運動と逆向きにはたらく．上るときは重力の斜面成分と摩擦力がともに下向き，下るときは摩擦力が上向きになる． \\[a_1=g(\\sin\\theta+\\mu'\\cos\\theta),\\qquad a_2=g(\\sin\\theta-\\mu'\\cos\\theta)\\] 辺々加えて $\\sin\\theta=\\dfrac{a_1+a_2}{2g}=\\dfrac{9.8}{19.6}=0.5$，$\\theta=30^\\circ$．辺々引いて \\[\\mu'=\\frac{a_1-a_2}{2g\\cos\\theta}=\\frac{4.9}{2\\times9.8\\times0.866}\\approx0.29\\]\n\n(4) 上った距離はグラフの面積 $s=\\dfrac12\\times2.94\\times0.40=0.588\\,\\mathrm m$．下りで $v^2=2a_2s=2\\times2.45\\times0.588$ より $v\\approx1.7\\,\\mathrm{m/s}$．\n\n(5) 同じ距離 $s$ を，上りは加速度 $a_1$ で止まり，下りは $a_2$ で加速するので，運動エネルギーの比は $\\dfrac{v^2}{v_0^2}=\\dfrac{2a_2s}{2a_1s}=\\dfrac{a_2}{a_1}=\\dfrac13$．下端の高さは同じなので，失った力学的エネルギーははじめの運動エネルギーの $1-\\dfrac13=\\dfrac23$ 倍．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "v-t グラフの傾きが加速度，面積が変位．上りと下りで動摩擦力の向きが逆になるので，加速度の和と差から $\\sin\\theta$ と $\\mu'$ が分かれる．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "kinematics-components",
+  "work-energy",
+  "force-decomposition"
+ ],
+ "laws": [
+  "newton-2nd",
+  "friction-law",
+  "uniform-acceleration-eq",
+  "work-energy-theorem"
+ ],
+ "misconceptions": [
+  "MC-ACCEL-ZERO-AT-TOP"
+ ],
+ "tags": [
+  "v-t グラフ",
+  "斜面",
+  "動摩擦",
+  "実験",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

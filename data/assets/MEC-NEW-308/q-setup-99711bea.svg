@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" width="360" height="200" font-family="'Times New Roman', serif">
+<line x1="40" y1="180" x2="330" y2="180" stroke="currentColor" stroke-width="2"/>
+<g transform="translate(180,180) rotate(0)" data-phys="body:B" data-angle="0">
+<rect x="-90" y="-36" width="180" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+</g>
+<g transform="translate(180,144) rotate(0)" data-phys="body:A" data-angle="0">
+<rect x="-35" y="-36" width="70" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+</g>
+<g class="f-force" data-phys="force:F" data-dir="0" data-len="50">
+<line x1="215" y1="126" x2="255" y2="126" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="265,126 255,130.66 255,121.34" fill="currentColor"/>
+<text x="277" y="126" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">F</text>
+</g>
+</svg>

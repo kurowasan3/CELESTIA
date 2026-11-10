@@ -1,0 +1,176 @@
+{
+ "id": "MEC-CIR-401",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "回転台の上で一緒に回る硬貨（静止摩擦力が向心力になる・すべり出す角速度）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "calc",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な回転台の上の，回転軸から $0.10\\,\\mathrm m$ はなれた位置に，質量 $0.050\\,\\mathrm{kg}$ の硬貨を置き，回転台を一定の角速度で回した．硬貨は回転台に対してすべらずに，回転台と一緒に等速円運動をした．硬貨と回転台の間の静止摩擦係数を $0.40$，重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "角速度が $3.0\\,\\mathrm{rad/s}$ のとき，硬貨の速さ $v$ と加速度の大きさ $a$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) のとき，硬貨にはたらく静止摩擦力の大きさ $f$ は何 $\\mathrm N$ か．また，その向きを答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "角速度を少しずつ大きくしていくと，やがて硬貨はすべり出した．すべり出さずに回れる最大の角速度 $\\omega_0$ は何 $\\mathrm{rad/s}$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "硬貨を回転軸から $0.20\\,\\mathrm m$ の位置に置いた場合，すべり出さずに回れる最大の角速度は $\\omega_0$ の何倍か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "横から見た図。水平な回転台の上、回転軸から 0.10 m の位置に硬貨がのっている",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "硬貨にはたらく力：鉛直下向きの重力 mg、鉛直上向きの垂直抗力 N、回転軸に向かう水平な静止摩擦力 f。合力は f で、回転の中心を向く",
+   "caption": "鉛直方向はつり合い，水平な静止摩擦力 $f$ が向心力（矢印の長さは正確ではない）",
+   "physics": {
+    "forces": [
+     {
+      "name": "N",
+      "dir_deg": 90
+     },
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "f",
+      "dir_deg": 180
+     }
+    ],
+    "netForce": {
+     "dir_deg": 180
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=0.30\\,\\mathrm{m/s}$，$a=0.90\\,\\mathrm{m/s^2}$",
+    "grading": "v：0.3 [m/s] ; a：0.9 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$f=0.045\\,\\mathrm N$，回転軸（円の中心）に向かう向き",
+    "grading": "f：0.045 [N]",
+    "wrong": [
+     {
+      "value": "0.196",
+      "misconception": "MC-FRICTION-MAX"
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "tex": "$\\omega_0=6.3\\,\\mathrm{rad/s}$",
+    "grading": "6.3 [rad/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac{1}{\\sqrt2}$ 倍（約 $0.71$ 倍）",
+    "grading": "1/sqrt(2)倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "(1) $v=r\\omega=0.10\\times3.0=0.30\\,\\mathrm{m/s}$，$a=r\\omega^2=0.10\\times3.0^2=0.90\\,\\mathrm{m/s^2}$（向きは回転の中心向き）．\n\n(2) 硬貨にはたらく力は，重力，垂直抗力，静止摩擦力．鉛直方向はつり合うので，中心向きの加速度を生むのは水平な静止摩擦力だけである．運動方程式（中心向き）：\\[f=ma=0.050\\times0.90=0.045\\,\\mathrm N\\] 向きは回転軸に向かう向き．最大摩擦力 $0.40\\times0.050\\times9.8=0.196\\,\\mathrm N$ ではない点に注意：静止摩擦力は，必要な大きさ（ここでは向心力 $mr\\omega^2$）だけはたらく．\n\n(3) 必要な静止摩擦力 $mr\\omega^2$ が最大摩擦力 $\\mu mg$ に達するとすべり出す：\\[mr\\omega_0^2=\\mu mg\\quad\\Longrightarrow\\quad\\omega_0=\\sqrt{\\frac{\\mu g}{r}}=\\sqrt{\\frac{0.40\\times9.8}{0.10}}=\\sqrt{39.2}\\fallingdotseq6.3\\,\\mathrm{rad/s}\\]\n\n(4) $\\omega_0=\\sqrt{\\dfrac{\\mu g}{r}}$ で $r$ が $2$ 倍なので $\\dfrac{1}{\\sqrt2}$ 倍．外側ほど，同じ角速度でも大きな向心力が必要になり，すべり出しやすい（質量にはよらない）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "等速円運動では「中心向きの合力＝$mr\\omega^2$」．回転台の上では静止摩擦力が向心力になり，その大きさは必要な分だけ（最大摩擦力とは限らない）．"
+ },
+ "simulation": {
+  "id": "mech.circular",
+  "preset": {
+   "r": 0.1,
+   "v": 0.3
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "circular-motion",
+  "static-friction"
+ ],
+ "laws": [
+  "centripetal-acceleration",
+  "newton-2nd",
+  "friction-law"
+ ],
+ "misconceptions": [
+  "MC-FRICTION-MAX"
+ ],
+ "tags": [
+  "等速円運動",
+  "向心力",
+  "静止摩擦力",
+  "誤概念"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

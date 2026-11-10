@@ -1,0 +1,120 @@
+{
+ "id": "ELM-ACC-404",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "ラジオの同調回路：共振周波数と可変コンデンサーの範囲",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ラジオは，自己インダクタンス $L$ のコイルと電気容量 $C$ を変えられるコンデンサー（可変コンデンサー）を組み合わせた回路の共振（電気振動の固有周波数）を利用して，受信する放送局の周波数を選ぶ．$L=0.20\\ \\mathrm{mH}$ とし，$\\pi^2=10$ として計算せよ．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "この回路の固有周波数（共振周波数）$f_0$ を $L$，$C$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$f_0=500\\ \\mathrm{kHz}$ の放送を受信するための $C$ は何 pF か．"
+     },
+     {
+      "id": "3",
+      "tex": "$f_0=1500\\ \\mathrm{kHz}$ の放送を受信するための $C$ は何 pF か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$500\\ \\mathrm{kHz}$ から $1500\\ \\mathrm{kHz}$ まで受信するには，$C$ の最大値は最小値の何倍以上必要か．"
+     },
+     {
+      "id": "5",
+      "tex": "$C$ を (2) の値に保ったまま，コイルを自己インダクタンスが $4$ 倍のものに替えると，受信する周波数は何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f_0=\\dfrac{1}{2\\pi\\sqrt{LC}}$",
+    "grading": "f_0：1/(2π sqrt(L C))"
+   },
+   {
+    "id": "2",
+    "tex": "$C=5.0\\times10^2\\ \\mathrm{pF}$",
+    "grading": "C：500 [pF]"
+   },
+   {
+    "id": "3",
+    "tex": "$C\\fallingdotseq56\\ \\mathrm{pF}$",
+    "grading": "C：56 [pF]"
+   },
+   {
+    "id": "4",
+    "tex": "$9$ 倍",
+    "grading": "9倍"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac12$ 倍",
+    "grading": "1/2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} コイルとコンデンサーのリアクタンスが等しくなる $\\omega L=\\dfrac1{\\omega C}$ のとき共振する．$\\omega_0=\\dfrac1{\\sqrt{LC}}$，$f_0=\\dfrac{1}{2\\pi\\sqrt{LC}}$．\n\n\\textbf{(2)} $C=\\dfrac{1}{4\\pi^2f_0^2L}=\\dfrac{1}{40\\times(5.0\\times10^5)^2\\times2.0\\times10^{-4}}=\\dfrac{1}{2.0\\times10^{9}}=5.0\\times10^{-10}\\ \\mathrm F=5.0\\times10^2\\ \\mathrm{pF}$．\n\n\\textbf{(3)} $C\\propto\\dfrac1{f_0^2}$ なので，周波数が $3$ 倍なら $C$ は $\\dfrac19$ 倍．$\\dfrac{500}{9}\\fallingdotseq56\\ \\mathrm{pF}$．\n\n\\textbf{(4)} $\\dfrac{C_{\\max}}{C_{\\min}}=\\left(\\dfrac{1500}{500}\\right)^2=9$ 倍．周波数の範囲を $3$ 倍に広げるには，容量は $9$ 倍の範囲で変えられなければならない．\n\n\\textbf{(5)} $f_0\\propto\\dfrac{1}{\\sqrt L}$．$L$ を $4$ 倍にすると $\\dfrac12$ 倍（$250\\ \\mathrm{kHz}$）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "共振周波数は $f_0=\\dfrac1{2\\pi\\sqrt{LC}}$．$C\\propto1/f_0^2$ なので，周波数の比の2乗が容量の比になる．"
+ },
+ "concepts": [
+  "ac-circuit"
+ ],
+ "laws": [
+  "resonance-frequency"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電気振動",
+  "共振",
+  "ラジオ",
+  "数値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

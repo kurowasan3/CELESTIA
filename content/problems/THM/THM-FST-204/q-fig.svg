@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" width="440" height="200" font-family="'Times New Roman', serif">
+<polygon points="40,60 160,60 160,160 40,160" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="240,45 400,45 400,175 240,175" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="160" y1="104" x2="240" y2="104" stroke="currentColor" stroke-width="2"/>
+<line x1="160" y1="116" x2="240" y2="116" stroke="currentColor" stroke-width="2"/>
+<circle cx="200" cy="110" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="200" y1="98" x2="200" y2="122" stroke="currentColor" stroke-width="2.4"/>
+<text x="200" y="82" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">コック</text>
+<text x="100" y="92" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<text x="100" y="116" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">2.0 L</text>
+<text x="100" y="136" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">3.0×10⁵ Pa</text>
+<text x="320" y="88" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<text x="320" y="112" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">3.0 L</text>
+<text x="320" y="132" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">1.0×10⁵ Pa</text>
+</svg>

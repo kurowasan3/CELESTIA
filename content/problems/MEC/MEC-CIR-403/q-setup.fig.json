@@ -1,0 +1,96 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  230
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     60,
+     200
+    ],
+    [
+     304.32,
+     111.07
+    ],
+    [
+     304.32,
+     200
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    200
+   ],
+   "to": [
+    304.3200814043362,
+    111.07476273532613
+   ],
+   "style": "ground",
+   "phys": "surface"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    200
+   ],
+   "to": [
+    330,
+    200
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "arc",
+   "at": [
+    60,
+    200
+   ],
+   "r": 44,
+   "from": 0,
+   "to": 20,
+   "label": "θ"
+  },
+  {
+   "t": "block",
+   "at": [
+    191.56,
+    152.12
+   ],
+   "w": 50,
+   "h": 26,
+   "label": "",
+   "phys": "body:car",
+   "angle": 20
+  },
+  {
+   "t": "arrow",
+   "from": [
+    150,
+    60
+   ],
+   "dir": 180,
+   "len": 80,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    44
+   ],
+   "text": "カーブの中心の向き",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

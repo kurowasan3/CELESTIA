@@ -1,0 +1,116 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  210
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    110,
+    30
+   ],
+   "to": [
+    290,
+    30
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     110,
+     22
+    ],
+    [
+     290,
+     22
+    ],
+    [
+     290,
+     30
+    ],
+    [
+     110,
+     30
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    160,
+    30
+   ],
+   "to": [
+    160,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    240,
+    30
+   ],
+   "to": [
+    240,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "block",
+   "at": [
+    200,
+    180
+   ],
+   "w": 100,
+   "h": 30,
+   "label": "M",
+   "phys": "body:block"
+  },
+  {
+   "t": "ball",
+   "at": [
+    60,
+    165
+   ],
+   "r": 4,
+   "label": "",
+   "phys": "body:ball"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    70,
+    165
+   ],
+   "dir": 0,
+   "len": 40,
+   "style": "velocity",
+   "phys": "velocity:v",
+   "label": "v",
+   "labelPos": "end",
+   "labelOffset": [
+    6,
+    -2
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    90
+   ],
+   "text": "糸",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  }
+ ]
+}

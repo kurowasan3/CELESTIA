@@ -1,0 +1,157 @@
+{
+ "id": "ELM-CAP-307",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "同心球コンデンサーの電気容量（平行板への近似と孤立導体球，地球の電気容量）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中に，中心 O，半径 $a$ の導体球と，それを囲む中心 O，半径 $b\\ (b>a)$ の薄い導体球殻がある．導体球に電気量 $+Q$，球殻に電気量 $-Q$ を与えた．クーロンの法則の比例定数を $k=\\dfrac{1}{4\\pi\\varepsilon_0}$（$\\varepsilon_0$ は真空の誘電率）とし，電位の基準は無限遠とする．球対称に分布した電荷は，その外側には全電荷が中心に集まった点電荷と同じ電場をつくり，内側には電場をつくらない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "O からの距離 $r$ が $a<r<b$ の点の電場の強さ $E$ を求めよ．また，$r>b$ では電場はどうなるか．"
+     },
+     {
+      "id": "2",
+      "tex": "導体球と球殻の電位差 $V$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "この組（同心球コンデンサー）の電気容量 $C$ を $a$，$b$，$k$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$b=a+d$ とし，$d$ が $a$ に比べて十分小さいとき，$C$ を $\\varepsilon_0$，導体球の表面積 $S=4\\pi a^2$，$d$ で近似的に表せ．また，その結果の意味を述べよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$b\\to\\infty$ の極限での $C$ の値 $C_\\infty$ を求めよ．これは何を表すか．"
+     },
+     {
+      "id": "6",
+      "tex": "地球を半径 $6.4\\times10^{6}\\,\\mathrm m$ の孤立した導体球とみなし，(5) を用いて地球の電気容量を有効数字2桁で求めよ．$k=9.0\\times10^{9}\\,\\mathrm{N\\cdot m^2/C^2}$ とする．"
+     },
+     {
+      "id": "7",
+      "tex": "実験室の帯電体から電気量 $1.0\\times10^{-6}\\,\\mathrm C$ が接地線を通って地球に流れこんだとき，地球の電位はどれだけ変化するか．有効数字2桁で求めよ．また，この結果から「接地した点の電位を $0$ とみなしてよい」理由を述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "中心 O、半径 a の導体球（+Q）を、同じ中心で半径 b の薄い導体球殻（−Q）が囲んでいる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$E=\\dfrac{kQ}{r^2}$．$r>b$ では $E=0$．",
+    "grading": "E：k Q/r^2"
+   },
+   {
+    "id": "2",
+    "tex": "$V=kQ\\left(\\dfrac1a-\\dfrac1b\\right)=\\dfrac{kQ(b-a)}{ab}$",
+    "grading": "V：k Q(b-a)/(a b)"
+   },
+   {
+    "id": "3",
+    "tex": "$C=\\dfrac{ab}{k(b-a)}$",
+    "grading": "C：a b/(k(b-a))"
+   },
+   {
+    "id": "4",
+    "tex": "$C\\fallingdotseq\\dfrac{\\varepsilon_0S}{d}$．面積 $S$，間隔 $d$ の平行板コンデンサーと同じになる．",
+    "grading": "C：ε_0 S/d"
+   },
+   {
+    "id": "5",
+    "tex": "$C_\\infty=\\dfrac ak$（$=4\\pi\\varepsilon_0a$）．孤立した半径 $a$ の導体球の電気容量（無限遠を相手の極板とみなしたもの）．",
+    "grading": "C_∞：a/k"
+   },
+   {
+    "id": "6",
+    "tex": "$7.1\\times10^{-4}\\,\\mathrm F$",
+    "grading": "7.1*10^(-4) [F]"
+   },
+   {
+    "id": "7",
+    "tex": "$1.4\\times10^{-3}\\,\\mathrm V$．地球の電気容量は大きく，実験で扱う程度の電気量の出入りでは電位がほとんど変わらないので，地球（接地点）を電位の基準 $0$ にとれる．",
+    "grading": "1.4*10^(-3) [V]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $a<r<b$ では，半径 $r$ の球面の内側にある電荷は導体球の $+Q$ だけ．球殻の $-Q$ は内側に電場をつくらないので $E=\\dfrac{kQ}{r^2}$（外向き）．$r>b$ では内側の電荷の合計が $0$ なので $E=0$．\n\n(2) 球殻の電位：外側の点と同様に，$+Q$ と $-Q$ の寄与が打ち消して $0$．導体球の電位：$+Q$ による $\\dfrac{kQ}{a}$ と，球殻の $-Q$ が内側につくる一定の電位 $-\\dfrac{kQ}{b}$ の和．よって\n\\[V=\\frac{kQ}{a}-\\frac{kQ}{b}=\\frac{kQ(b-a)}{ab}．\\]\n\n(3) $C=\\dfrac QV=\\dfrac{ab}{k(b-a)}$．\n\n(4) $b=a+d$ で $d\\ll a$ なら $ab=a(a+d)\\fallingdotseq a^2$．\n\\[C\\fallingdotseq\\frac{a^2}{kd}=\\frac{4\\pi\\varepsilon_0a^2}{d}=\\frac{\\varepsilon_0S}{d}．\\]\n極板の間隔が曲率半径に比べて十分小さければ，曲がった極板でも局所的には平行板とみなせ，平行板コンデンサーの式が成り立つ．\n\n(5) $b\\to\\infty$ で $\\dfrac{ab}{b-a}\\to a$ なので $C_\\infty=\\dfrac ak=4\\pi\\varepsilon_0a$．相手の極板を無限遠に置いたもので，孤立した導体球の電気容量（電気量 $Q$ を与えると電位が $\\dfrac{Q}{C_\\infty}=\\dfrac{kQ}{a}$ になる）．\n\n(6) $C=\\dfrac{6.4\\times10^6}{9.0\\times10^9}=7.11\\times10^{-4}\\fallingdotseq7.1\\times10^{-4}\\,\\mathrm F$．地球全体でも $1\\,\\mathrm F$ に遠く及ばない（$1\\,\\mathrm F$ は非常に大きな単位）．\n\n(7) $\\Delta V=\\dfrac{Q}{C}=\\dfrac{1.0\\times10^{-6}}{7.11\\times10^{-4}}=1.41\\times10^{-3}\\fallingdotseq1.4\\times10^{-3}\\,\\mathrm V$．\n実験で扱う電圧（数 V〜数千 V）に比べて無視できるほど小さい．地球は電気量を出し入れしても電位がほとんど変わらない「電荷の巨大なたくわえ」なので，接地した点の電位を一定（$0$）とみなせる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電位差を求めて $C=\\dfrac QV$．$d\\ll a$ の極限で平行板の式，$b\\to\\infty$ の極限で孤立導体球の容量 $4\\pi\\varepsilon_0a$ が出てくる．"
+ },
+ "concepts": [
+  "capacitor",
+  "coulomb-field"
+ ],
+ "laws": [
+  "point-charge-field",
+  "point-charge-potential",
+  "capacitance"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "球形コンデンサー",
+  "電気容量",
+  "極限",
+  "接地",
+  "地球"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

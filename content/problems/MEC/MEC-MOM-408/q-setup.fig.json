@@ -1,0 +1,192 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  215
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    120,
+    40
+   ],
+   "to": [
+    260,
+    40
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     120,
+     32
+    ],
+    [
+     260,
+     32
+    ],
+    [
+     260,
+     40
+    ],
+    [
+     120,
+     40
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "dot",
+   "at": [
+    190,
+    40
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    178,
+    52
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    40
+   ],
+   "to": [
+    330,
+    40
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "circle",
+   "at": [
+    330,
+    40
+   ],
+   "r": 7,
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    190,
+    40
+   ],
+   "r": 140,
+   "from": -90,
+   "to": -2
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    40
+   ],
+   "to": [
+    190,
+    173
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "ball",
+   "at": [
+    190,
+    180
+   ],
+   "r": 7,
+   "label": "",
+   "phys": "body:ball"
+  },
+  {
+   "t": "text",
+   "at": [
+    208,
+    182
+   ],
+   "text": "m",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    180,
+    110
+   ],
+   "text": "l",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    187
+   ],
+   "to": [
+    380,
+    187
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     60,
+     187
+    ],
+    [
+     380,
+     187
+    ],
+    [
+     380,
+     195
+    ],
+    [
+     60,
+     195
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "block",
+   "at": [
+    161,
+    187
+   ],
+   "w": 44,
+   "h": 26,
+   "label": "M",
+   "phys": "body:block"
+  },
+  {
+   "t": "text",
+   "at": [
+    100,
+    173
+   ],
+   "text": "あらい床",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

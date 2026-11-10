@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" width="420" height="220" font-family="'Times New Roman', serif">
+<line x1="30" y1="130" x2="400" y2="130" stroke="currentColor" stroke-width="1.2"/>
+<line x1="250" y1="55" x2="250" y2="205" stroke="currentColor" stroke-width="2.4"/>
+<line x1="244" y1="49" x2="250" y2="55" stroke="currentColor" stroke-width="1.2"/>
+<line x1="256" y1="49" x2="250" y2="55" stroke="currentColor" stroke-width="1.2"/>
+<line x1="244" y1="211" x2="250" y2="205" stroke="currentColor" stroke-width="1.2"/>
+<line x1="256" y1="211" x2="250" y2="205" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="150" cy="130" r="3" fill="currentColor"/>
+<circle cx="350" cy="130" r="3" fill="currentColor"/>
+<text x="150" y="146" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">F</text>
+<text x="350" y="146" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">F</text>
+<g class="f-ink" data-dir="90" data-len="50">
+<line x1="100" y1="130" x2="100" y2="90" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="100,80 104.66,90 95.34,90" fill="currentColor"/>
+</g>
+<text x="86" y="100" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">物体</text>
+<line x1="100" y1="80" x2="250" y2="80" stroke="currentColor" stroke-width="1.2"/>
+<line x1="250" y1="80" x2="400" y2="5" stroke="currentColor" stroke-width="1.2"/>
+<line x1="250" y1="80" x2="150" y2="130" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100" y1="80" x2="400" y2="180" stroke="currentColor" stroke-width="1.2"/>
+<g class="f-comp" data-dir="90" data-len="20">
+<line x1="190" y1="130" x2="190" y2="117" stroke="currentColor" stroke-width="2.2" stroke-dasharray="5 4"/>
+<polygon points="190,110 193.26,117 186.74,117" fill="currentColor"/>
+</g>
+<text x="194" y="98" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">像</text>
+</svg>

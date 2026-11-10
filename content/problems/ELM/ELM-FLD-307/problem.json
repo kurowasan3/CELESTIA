@@ -1,0 +1,183 @@
+{
+ "id": "ELM-FLD-307",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-01",
+ "topic": "水平な一様電場の中の帯電振り子（等価な重力・電場を急にかけたときの振れと糸の張力）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $l$ の軽い絶縁体の糸の一端を点 O に固定し，他端に質量 $m$，電気量 $q\\ (q>0)$ の小球をつけた．この空間には，水平右向きに強さ $E$ の一様な電場をかけたり切ったりできる．重力加速度の大きさを $g$ とし，小球の運動は O を含む鉛直面内で起こるものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電場をかけた状態で，小球は糸が鉛直と角 $\\theta_0$ をなす位置で静止した．$\\tan\\theta_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "このときの糸の張力の大きさ $S_0$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "この静止位置のまわりで小球を小さく振動させた．周期 $T$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "次に，電場を切って小球を O の真下で静止させた．時刻 $0$ に電場を急にかけたところ，小球は振れ始めた．糸と鉛直のなす角の最大値 $\\theta_{\\max}$ を $\\theta_0$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の運動で，小球の速さの最大値 $v_{\\max}$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "(5) の瞬間の糸の張力の大きさ $S_1$ を求めよ．"
+     },
+     {
+      "id": "7",
+      "tex": "(4) の運動で，$E$ をどれほど大きくしても糸がたるむことはない．その理由を説明せよ．また，$\\theta_{\\max}$ が $90^\\circ$ を超えるのは，$E$ がどのような範囲にあるときか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "点 O からつるした長さ l の糸の先に質量 m、電気量 q の小球。水平右向きの一様な電場 E の中で、糸は鉛直から右へ角 θ₀ 傾いて静止している",
+   "caption": ""
+  },
+  {
+   "id": "a-forces",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-forces.svg",
+   "alt": "静止した小球にはたらく力：鉛直下向きの重力 mg、水平右向きの静電気力 qE、糸の向き（O へ向かう向き）の張力 S₀。3力はつり合う",
+   "caption": "",
+   "physics": {
+    "equilibrium": true,
+    "forces": [
+     {
+      "name": "mg",
+      "dir_deg": 270
+     },
+     {
+      "name": "qE",
+      "dir_deg": 0
+     },
+     {
+      "name": "S",
+      "dir_deg": 124.992
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\tan\\theta_0=\\dfrac{qE}{mg}$",
+    "grading": "tanθ_0：q E/(m g)"
+   },
+   {
+    "id": "2",
+    "tex": "$S_0=\\sqrt{(mg)^2+(qE)^2}$",
+    "grading": "S_0：sqrt((m g)^2+(q E)^2)"
+   },
+   {
+    "id": "3",
+    "tex": "$T=2\\pi\\sqrt{\\dfrac{l}{g_1}}$，$g_1=\\sqrt{g^2+\\left(\\dfrac{qE}{m}\\right)^2}$",
+    "grading": "T：2π sqrt(m l/sqrt((m g)^2+(q E)^2))"
+   },
+   {
+    "id": "4",
+    "tex": "$\\theta_{\\max}=2\\theta_0$",
+    "grading": "θ_max：2θ_0"
+   },
+   {
+    "id": "5",
+    "tex": "$v_{\\max}=\\sqrt{2l\\left\\{\\sqrt{g^2+\\left(\\dfrac{qE}m\\right)^2}-g\\right\\}}$",
+    "grading": "v_max：sqrt(2l(sqrt(g^2+(q E/m)^2)-g))"
+   },
+   {
+    "id": "6",
+    "tex": "$S_1=3\\sqrt{(mg)^2+(qE)^2}-2mg$",
+    "grading": "S_1：3sqrt((m g)^2+(q E)^2)-2m g"
+   },
+   {
+    "id": "7",
+    "tex": "等価な重力で見ると，小球は「等価な鉛直線」から角 $\\theta_0\\ (<90^\\circ)$ だけ傾けて静かに放した振り子で，O の高さ（等価な水平）より上には上がらないので，張力は常に正．$\\theta_{\\max}>90^\\circ$ となるのは $qE>mg$，すなわち $E>\\dfrac{mg}{q}$ のとき．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-forces"
+    },
+    {
+     "type": "text",
+     "tex": "重力 $m\\vec g$ と静電気力 $q\\vec E$ はどちらも一定の力なので，合わせて1つの「等価な重力」$m\\vec g_1$ とみなせる．その大きさは $g_1=\\sqrt{g^2+\\left(\\dfrac{qE}m\\right)^2}$，向きは鉛直から電場の向きへ $\\theta_0$ 傾いた向き．\n\n(1) 3力のつり合い（解答図）．水平：$S_0\\sin\\theta_0=qE$，鉛直：$S_0\\cos\\theta_0=mg$．よって $\\tan\\theta_0=\\dfrac{qE}{mg}$．\n\n(2) $S_0=\\sqrt{(mg)^2+(qE)^2}=mg_1$．\n\n(3) 等価な重力 $g_1$ のもとの単振り子なので $T=2\\pi\\sqrt{\\dfrac l{g_1}}=2\\pi\\sqrt{\\dfrac{ml}{\\sqrt{(mg)^2+(qE)^2}}}$．\n\n(4) 電場をかけた瞬間，小球は真下（＝等価な鉛直線から $\\theta_0$ 傾いた位置）で静止している．これは等価な重力のもとで「振れ角 $\\theta_0$ で静かに放した振り子」である．振り子はつり合いの位置（$\\theta_0$）の反対側へ同じ角度 $\\theta_0$ まで振れるので，$\\theta_{\\max}=\\theta_0+\\theta_0=2\\theta_0$．\n（確認：$\\theta=2\\theta_0$ まで振れたとき，重力のした仕事 $-mgl(1-\\cos2\\theta_0)$ と電場のした仕事 $qEl\\sin2\\theta_0$ の和は，$qE=mg\\tan\\theta_0$ を使うと $mgl\\{-2\\sin^2\\theta_0+2\\sin^2\\theta_0\\}=0$ となり，速さは $0$．）\n\n(5) 速さが最大になるのは，等価な重力の「最下点」すなわちつり合いの位置 $\\theta=\\theta_0$．等価な重力の向きの高さの差は $l(1-\\cos\\theta_0)$ なので\n\\[\\frac12mv_{\\max}^2=mg_1l(1-\\cos\\theta_0)=ml(g_1-g)\\quad（g_1\\cos\\theta_0=g）．\\]\nよって $v_{\\max}=\\sqrt{2l(g_1-g)}=\\sqrt{2l\\left\\{\\sqrt{g^2+\\left(\\dfrac{qE}m\\right)^2}-g\\right\\}}$．\n\n(6) この位置で糸の方向の運動方程式（等速円運動の向心方向）：$S_1-mg_1=m\\dfrac{v_{\\max}^2}{l}=2m(g_1-g)$．よって $S_1=3mg_1-2mg=3\\sqrt{(mg)^2+(qE)^2}-2mg$．\n\n(7) 等価な鉛直線からの振れ角を $\\varphi$ とすると，$\\varphi=\\pm\\theta_0$ の間を往復する．張力は $S=mg_1(3\\cos\\varphi-2\\cos\\theta_0)$ で，$|\\varphi|\\leqq\\theta_0$ では $S\\geqq mg_1\\cos\\theta_0=mg>0$．$\\theta_0<90^\\circ$ はどんな $E$ でも成り立つので，糸はたるまない（等価な水平面より上に上がることがない）．\n$\\theta_{\\max}=2\\theta_0>90^\\circ\\iff\\theta_0>45^\\circ\\iff\\tan\\theta_0=\\dfrac{qE}{mg}>1$，すなわち $E>\\dfrac{mg}q$．このとき小球は O より高く上がるが，それでも糸はたるまない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "一定の力である重力と静電気力をまとめて「等価な重力」$mg_1$ とみなすと，単振り子の結果（周期・振れの対称性・張力）がそのまま使える．"
+ },
+ "concepts": [
+  "coulomb-field"
+ ],
+ "laws": [
+  "newton-2nd",
+  "energy-conservation",
+  "pendulum-period"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "一様な電場",
+  "振り子",
+  "見かけの重力",
+  "張力"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

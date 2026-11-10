@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 250" width="430" height="250" font-family="'Times New Roman', serif">
+<g class="f-ink" data-phys="axis:t" data-dir="0" data-len="360">
+<line x1="60" y1="222" x2="410" y2="222" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="420,222 410,226.66 410,217.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-phys="axis:T" data-dir="90" data-len="205">
+<line x1="60" y1="222" x2="60" y2="27" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,17 64.66,27 55.34,27" fill="currentColor"/>
+</g>
+<text x="68" y="12" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">温度 [℃]</text>
+<text x="416" y="240" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">時間 [s]</text>
+<line x1="60" y1="180" x2="400" y2="180" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="60" y1="40" x2="345" y2="40" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="60" y1="208" x2="60" y2="208" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="75" y1="180" x2="75" y2="222" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="195" y1="180" x2="195" y2="222" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="345" y1="40" x2="345" y2="222" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="44" y="40" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">100</text>
+<text x="44" y="180" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0</text>
+<text x="42" y="212" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">−20</text>
+<text x="75" y="236" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">20</text>
+<text x="195" y="236" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">180</text>
+<text x="345" y="236" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">380</text>
+<line x1="60" y1="208" x2="75" y2="180" stroke="currentColor" stroke-width="2.4"/>
+<line x1="75" y1="180" x2="195" y2="180" stroke="currentColor" stroke-width="2.4"/>
+<line x1="195" y1="180" x2="345" y2="40" stroke="currentColor" stroke-width="2.4"/>
+<line x1="345" y1="40" x2="390" y2="40" stroke="currentColor" stroke-width="2.4"/>
+<circle cx="60" cy="208" r="3" fill="currentColor"/>
+<text x="49" y="193" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<circle cx="75" cy="180" r="3" fill="currentColor"/>
+<text x="73" y="168" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<circle cx="195" cy="180" r="3" fill="currentColor"/>
+<text x="199" y="168" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">C</text>
+<circle cx="345" cy="40" r="3" fill="currentColor"/>
+<text x="337" y="28" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">D</text>
+<circle cx="390" cy="40" r="3" fill="currentColor"/>
+<text x="396" y="28" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">E</text>
+</svg>

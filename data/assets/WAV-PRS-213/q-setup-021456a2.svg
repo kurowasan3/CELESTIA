@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 175" width="400" height="175" font-family="'Times New Roman', serif">
+<line x1="60" y1="60" x2="340" y2="60" stroke="currentColor" stroke-width="2.4"/>
+<line x1="60" y1="120" x2="340" y2="120" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="50,56 60,56 60,124 50,124" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="362,76 374,68 374,112 362,104" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="366" y="130" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">スピーカー</text>
+<line x1="60" y1="145" x2="350" y2="145" stroke="currentColor" stroke-width="1.2"/>
+<g class="f-ink" data-dir="0" data-len="14">
+<line x1="350" y1="145" x2="359.1" y2="145" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="364,145 359.1,147.28 359.1,142.72" fill="currentColor"/>
+</g>
+<text x="374" y="145" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">x</text>
+<line x1="60" y1="140" x2="60" y2="150" stroke="currentColor" stroke-width="1.2"/>
+<line x1="340" y1="140" x2="340" y2="150" stroke="currentColor" stroke-width="1.2"/>
+<text x="60" y="164" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0</text>
+<text x="340" y="164" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+<text x="56" y="42" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">閉じた端</text>
+<text x="320" y="42" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">開いた端</text>
+</svg>

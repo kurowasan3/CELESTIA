@@ -1,0 +1,121 @@
+{
+ "id": "THM-KIN-206",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "分子運動論からアボガドロの法則と分圧の法則を導く（ヘリウムとアルゴンの混合気体）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "理想気体について，分子運動論から得られる次の2つの結果を使う：分子 $N$ 個（質量 $m$）が体積 $V$ の容器の中にあるときの圧力 $P=\\dfrac{Nm\\overline{v^2}}{3V}$，および分子1個の平均運動エネルギー $\\dfrac12m\\overline{v^2}=\\dfrac32kT$（$k$ はボルツマン定数，$T$ は絶対温度）．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "同じ体積の2つの容器に，分子の質量が $m_{\\mathrm A}$ の気体 A と $m_{\\mathrm B}$ の気体 B が，同じ圧力・同じ温度で入っている．2つの容器の中の分子の数は等しいことを示せ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) で，気体 A の二乗平均速度は気体 B の何倍か．$m_{\\mathrm A}$，$m_{\\mathrm B}$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "1つの容器（体積 $V$，温度 $T$）に気体 A の分子 $N_{\\mathrm A}$ 個と気体 B の分子 $N_{\\mathrm B}$ 個を混ぜて入れた．容器の壁が受ける圧力は，それぞれの気体が単独で容器全体を占めるときの圧力（分圧）の和になることを示せ．"
+     },
+     {
+      "id": "4",
+      "tex": "体積 $8.31\\times10^{-3}\\,\\mathrm{m^3}$ の容器にヘリウム $0.20\\,\\mathrm{mol}$ とアルゴン $0.10\\,\\mathrm{mol}$ を入れ，$300\\,\\mathrm K$ に保った．ヘリウムとアルゴンの分圧 $P_{\\mathrm{He}}$，$P_{\\mathrm{Ar}}$ と全圧 $P$ を求めよ．気体定数を $8.31\\,\\mathrm{J/(mol\\cdot K)}$ とする．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の混合気体で，ヘリウム原子の二乗平均速度はアルゴン原子の何倍か．また，気体全体の分子の運動エネルギーの総和のうち，ヘリウムがもつ割合はいくらか．ヘリウム，アルゴンのモル質量をそれぞれ $4.0\\,\\mathrm{g/mol}$，$40\\,\\mathrm{g/mol}$ とする．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$P=\\dfrac{N}{V}\\cdot\\dfrac23\\cdot\\dfrac12m\\overline{v^2}=\\dfrac{NkT}{V}$ より $N=\\dfrac{PV}{kT}$ で，分子の質量によらない．$P$，$V$，$T$ が等しければ $N$ も等しい．"
+   },
+   {
+    "id": "2",
+    "tex": "$\\sqrt{\\dfrac{m_{\\mathrm B}}{m_{\\mathrm A}}}$ 倍",
+    "grading": "sqrt(m_B/m_A)倍"
+   },
+   {
+    "id": "3",
+    "tex": "壁が受ける力は，A の分子の衝突による力と B の分子の衝突による力の和．$P=\\dfrac{N_{\\mathrm A}m_{\\mathrm A}\\overline{v_{\\mathrm A}^2}}{3V}+\\dfrac{N_{\\mathrm B}m_{\\mathrm B}\\overline{v_{\\mathrm B}^2}}{3V}=\\dfrac{N_{\\mathrm A}kT}{V}+\\dfrac{N_{\\mathrm B}kT}{V}$ で，各項はそれぞれの気体が単独で入っているときの圧力に等しい．"
+   },
+   {
+    "id": "4",
+    "tex": "$P_{\\mathrm{He}}=6.0\\times10^4\\,\\mathrm{Pa}$，$P_{\\mathrm{Ar}}=3.0\\times10^4\\,\\mathrm{Pa}$，$P=9.0\\times10^4\\,\\mathrm{Pa}$",
+    "grading": "P_{He}：6.0*10^4 [Pa] ; P_{Ar}：3.0*10^4 [Pa] ; P：9.0*10^4 [Pa]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\sqrt{10}$ 倍（約 $3.2$ 倍）．割合は $\\dfrac23$．",
+    "grading": "速さの比：sqrt(10) ; 割合：2/3"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\dfrac12m\\overline{v^2}=\\dfrac32kT$ より $m\\overline{v^2}=3kT$．これを圧力の式に入れると $P=\\dfrac{N\\cdot3kT}{3V}=\\dfrac{NkT}{V}$，すなわち $N=\\dfrac{PV}{kT}$．右辺に分子の質量は含まれないので，$P$，$V$，$T$ が同じなら気体の種類によらず分子の数は等しい（アボガドロの法則）．重い分子は1回の衝突の力積が大きいが，その分ゆっくり動いて衝突の回数が少なく，ちょうど打ち消し合う．\n\n(2) $\\overline{v^2}=\\dfrac{3kT}{m}$ なので $\\dfrac{\\sqrt{\\overline{v_{\\mathrm A}^2}}}{\\sqrt{\\overline{v_{\\mathrm B}^2}}}=\\sqrt{\\dfrac{m_{\\mathrm B}}{m_{\\mathrm A}}}$．\n\n(3) 分子どうしの衝突を無視すると，A の分子と B の分子はそれぞれ独立に壁に当たる．壁が受ける力積は両方の和なので，圧力も和になる．どちらも温度 $T$ なので $m_{\\mathrm A}\\overline{v_{\\mathrm A}^2}=m_{\\mathrm B}\\overline{v_{\\mathrm B}^2}=3kT$ であり，\\[P=\\frac{N_{\\mathrm A}kT}{V}+\\frac{N_{\\mathrm B}kT}{V}=P_{\\mathrm A}+P_{\\mathrm B}\\] 各項は，その気体だけが体積 $V$，温度 $T$ で入っているときの圧力に等しい（ドルトンの分圧の法則）．\n\n(4) $P_{\\mathrm{He}}=\\dfrac{nRT}{V}=\\dfrac{0.20\\times8.31\\times300}{8.31\\times10^{-3}}=6.0\\times10^4\\,\\mathrm{Pa}$，$P_{\\mathrm{Ar}}=3.0\\times10^4\\,\\mathrm{Pa}$，全圧 $P=9.0\\times10^4\\,\\mathrm{Pa}$．\n\n(5) 原子の質量比は $1:10$ なので，(2) より速さはヘリウムがアルゴンの $\\sqrt{10}\\approx3.2$ 倍．一方，1個あたりの平均運動エネルギーは同じ $\\dfrac32kT$ なので，運動エネルギーの総和は分子数（物質量）に比例して配分され，ヘリウムの割合は $\\dfrac{0.20}{0.20+0.10}=\\dfrac23$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$m\\overline{v^2}=3kT$ を使うと $P=\\dfrac{NkT}{V}$ となり，分子の質量が消える．これがアボガドロの法則と分圧の法則のもと．"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "ideal-gas"
+ ],
+ "laws": [
+  "kinetic-pressure",
+  "kinetic-temperature",
+  "ideal-gas-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "アボガドロの法則",
+  "分圧",
+  "混合気体",
+  "分子運動論"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

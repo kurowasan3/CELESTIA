@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 270" width="460" height="270" font-family="'Times New Roman', serif">
+<g transform="translate(170,240) rotate(0)" data-angle="0">
+<rect x="-100" y="-30" width="200" height="30" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-15" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">電子天秤</text>
+</g>
+<g transform="translate(170,210) rotate(0)" data-angle="0">
+<rect x="-8" y="-60" width="16" height="60" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="186" y="182" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">絶縁台</text>
+<line x1="100" y1="150" x2="240" y2="150" stroke="currentColor" stroke-width="2.4"/>
+<text x="250" y="150" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<line x1="100" y1="110" x2="240" y2="110" stroke="currentColor" stroke-width="2.4"/>
+<text x="250" y="110" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<line x1="170" y1="110" x2="170" y2="60" stroke="currentColor" stroke-width="1.2"/>
+<line x1="170" y1="60" x2="330" y2="60" stroke="currentColor" stroke-width="2"/>
+<line x1="330" y1="60" x2="330" y2="250" stroke="currentColor" stroke-width="2"/>
+<text x="340" y="70" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">スタンド（絶縁）</text>
+<line x1="112" y1="110" x2="112" y2="150" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="118" y="130" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">d</text>
+<polyline points="100,110 40,110 40,112" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="battery:V">
+<line x1="40" y1="112" x2="40" y2="125" stroke="currentColor" stroke-width="1.6"/>
+<line x1="40" y1="135" x2="40" y2="148" stroke="currentColor" stroke-width="1.6"/>
+<line x1="26" y1="125" x2="54" y2="125" stroke="currentColor" stroke-width="1.6"/>
+<line x1="33" y1="135" x2="47" y2="135" stroke="currentColor" stroke-width="3"/>
+<text x="60" y="130" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">V</text>
+</g>
+<polyline points="40,148 40,150 100,150" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</svg>

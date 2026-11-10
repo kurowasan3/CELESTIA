@@ -1,0 +1,142 @@
+{
+ "id": "MSY-NAL-208",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "くぎに引っかかる振り子：小さな円を1周する条件と糸がたるむ点",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "synthesis",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $l$ の軽い糸の一端を点 O に固定し，他端に質量 $m$ の小球をつけた．O の真下，距離 $d$（$0<d<l$）の点 N に細いくぎが打ってある．糸を水平に張った状態から小球を静かに放すと，小球が最下点を通過する瞬間に糸がくぎに引っかかり，その後小球は N を中心とする半径 $l-d$ の円運動を始めた．重力加速度の大きさを $g$ とし，空気抵抗とくぎの太さは無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "最下点での小球の速さ $v$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "糸がくぎに引っかかる直前と直後の，糸の張力の大きさ $S_1$，$S_2$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "小球が N のまわりの円を1周するための，$d$ の最小値 $d_0$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$d=\\dfrac l2$ のとき，小球は N のまわりの円の途中で糸がたるむ．糸がたるむ点の最下点からの高さ $h_1$ と，そのときの小球の速さ $v_1$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の場合，糸がたるんだ後に小球が達する最高点の最下点からの高さ $h_{\\max}$ を求めよ．また，力学的エネルギーが保存しているのに，小球がはじめの高さ $l$ まで上がらない理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "点 O から水平に張った長さ l の糸の先に小球がある。O の真下距離 d の点 N にくぎがあり、最下点を過ぎると小球は N を中心とする半径 l−d の円を描く",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v=\\sqrt{2gl}$",
+    "grading": "v：sqrt(2g l)"
+   },
+   {
+    "id": "2",
+    "tex": "$S_1=3mg$，$S_2=\\dfrac{(3l-d)mg}{l-d}$",
+    "grading": "S_1：3m g ; S_2：m g(3l-d)/(l-d)"
+   },
+   {
+    "id": "3",
+    "tex": "$d_0=\\dfrac{3l}5$",
+    "grading": "d_0：3l/5"
+   },
+   {
+    "id": "4",
+    "tex": "$h_1=\\dfrac{5l}6$，$v_1=\\sqrt{\\dfrac{gl}3}$",
+    "grading": "h_1：5l/6 ; v_1：sqrt(g l/3)"
+   },
+   {
+    "id": "5",
+    "tex": "$h_{\\max}=\\dfrac{25l}{27}$．最高点でも水平方向の速度が残り，運動エネルギーが $0$ にならないから．",
+    "grading": "h_max：25l/27"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 力学的エネルギー保存：$mgl=\\dfrac12mv^2$ より $v=\\sqrt{2gl}$．\n\n(2) 最下点では，張力と重力の合力が向心力．直前は半径 $l$，直後は半径 $l-d$ の円運動で，速さは変わらない（くぎの力は糸の向きで，小球の速度に垂直）． \\[S_1-mg=\\frac{mv^2}{l}=2mg\\ \\Rightarrow\\ S_1=3mg,\\qquad S_2-mg=\\frac{mv^2}{l-d}=\\frac{2mgl}{l-d}\\ \\Rightarrow\\ S_2=\\frac{(3l-d)mg}{l-d}\\] 速さが同じでも半径が小さくなるので，張力は急に大きくなる．\n\n(3) $\\rho=l-d$ とする．小円の最高点（最下点から高さ $2\\rho$）での速さを $u$ とすると $u^2=v^2-4g\\rho=2gl-4g\\rho$．最高点で糸がたるまない条件は張力 $\\ge0$，つまり $\\dfrac{mu^2}{\\rho}\\ge mg$： \\[2gl-4g\\rho\\ge g\\rho\\iff\\rho\\le\\frac{2l}5\\iff d\\ge\\frac{3l}5\\] よって $d_0=\\dfrac{3l}{5}$．\n\n(4) $\\rho=\\dfrac l2$．N を通る水平線から角 $\\varphi$ だけ上の点（最下点からの高さ $\\rho(1+\\sin\\varphi)$）で糸がたるむとする．その点での速さ $u$ は $u^2=2gl-2g\\rho(1+\\sin\\varphi)=gl(1-\\sin\\varphi)$．中心 N 向きの運動方程式 $\\dfrac{mu^2}{\\rho}=S+mg\\sin\\varphi$ で $S=0$ とおくと $u^2=g\\rho\\sin\\varphi=\\dfrac{gl}2\\sin\\varphi$．2式から \\[1-\\sin\\varphi=\\frac12\\sin\\varphi\\quad\\Longrightarrow\\quad\\sin\\varphi=\\frac23\\] よって $h_1=\\dfrac l2\\left(1+\\dfrac23\\right)=\\dfrac{5l}{6}$，$v_1=\\sqrt{\\dfrac{gl}2\\cdot\\dfrac23}=\\sqrt{\\dfrac{gl}{3}}$．\n\n(5) 糸がたるんだ後は放物運動．速度は糸（半径）に垂直なので，鉛直と角 $\\varphi$ をなし，鉛直成分は $v_1\\cos\\varphi$（上向き），水平成分は $v_1\\sin\\varphi$．$\\cos^2\\varphi=1-\\dfrac49=\\dfrac59$ より，さらに上がる高さは \\[\\frac{(v_1\\cos\\varphi)^2}{2g}=\\frac{gl}{3}\\cdot\\frac59\\cdot\\frac{1}{2g}=\\frac{5l}{54}\\] $h_{\\max}=\\dfrac{5l}6+\\dfrac{5l}{54}=\\dfrac{25l}{27}$．\n\n力学的エネルギーは保存しているが，最高点でも水平方向の速度 $v_1\\sin\\varphi$ が残るので，運動エネルギーは $0$ にならない．その分 $\\dfrac12m(v_1\\sin\\varphi)^2=mg\\cdot\\dfrac{2l}{27}$ だけ，位置エネルギーに変わりきらず，はじめの高さ $l$ より $\\dfrac{2l}{27}$ 低いところで折り返す．糸が張っていれば速さが $0$ になるまで上がれるが，たるむと上がりきれない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "円運動の各点で「エネルギー保存で速さ」「中心向きの運動方程式で張力」．糸がたるむのは張力が $0$ になる点で，その後は放物運動．"
+ },
+ "concepts": [
+  "circular-motion",
+  "mechanical-energy",
+  "projectile-motion",
+  "equation-of-motion"
+ ],
+ "laws": [
+  "energy-conservation",
+  "centripetal-acceleration",
+  "newton-2nd",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "振り子",
+  "円運動",
+  "力学的エネルギー",
+  "糸のたるみ",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

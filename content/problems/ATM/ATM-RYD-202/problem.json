@@ -1,0 +1,123 @@
+{
+ "id": "ATM-RYD-202",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-02",
+ "topic": "水素原子のスペクトル（リュードベリの式でバルマー系列・ライマン系列を計算）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水素原子が出す光の波長 $\\lambda$ は，正の整数 $n'$，$n\\ (n>n')$ を用いて \\[ \\frac1\\lambda=R\\left(\\frac1{n'^2}-\\frac1{n^2}\\right) \\] と表される（リュードベリの式）．$R=1.1\\times10^7\\ /\\mathrm m$ とする．$n'=2$ の光の系列をバルマー系列，$n'=1$ の系列をライマン系列という．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "バルマー系列で最も波長の長い光（$n=3$）の波長は何 m か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "バルマー系列の $n=4$ の光の波長は何 m か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "バルマー系列の光の波長は，$n$ を大きくすると，ある値に近づく．その値（系列の極限）は何 m か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "ライマン系列で最も波長の長い光（$n=2$）の波長は何 m か．有効数字2桁で答えよ．また，この光は可視光・紫外線・赤外線のどれか．"
+     },
+     {
+      "id": "5",
+      "tex": "(1) の光の光子1個のエネルギーは何 eV か．$h=6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$，$c=3.0\\times10^8\\ \\mathrm{m/s}$，$e=1.6\\times10^{-19}\\ \\mathrm C$ とし，(1) の結果を用いて有効数字2桁で答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$6.5\\times10^{-7}\\ \\mathrm m$",
+    "grading": "6.5*10^(-7) [m]"
+   },
+   {
+    "id": "2",
+    "tex": "$4.8\\times10^{-7}\\ \\mathrm m$",
+    "grading": "4.8*10^(-7) [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$3.6\\times10^{-7}\\ \\mathrm m$",
+    "grading": "3.6*10^(-7) [m]"
+   },
+   {
+    "id": "4",
+    "tex": "$1.2\\times10^{-7}\\ \\mathrm m$，紫外線",
+    "grading": "1.2*10^(-7) [m]"
+   },
+   {
+    "id": "5",
+    "tex": "$1.9\\ \\mathrm{eV}$",
+    "grading": "1.9 [eV]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\dfrac1\\lambda=R\\left(\\dfrac14-\\dfrac19\\right)=\\dfrac{5R}{36}$，$\\lambda=\\dfrac{36}{5R}=\\dfrac{36}{5.5\\times10^7}=6.55\\times10^{-7}\\fallingdotseq6.5\\times10^{-7}\\ \\mathrm m$（赤色．H$\\alpha$ 線）．\n\n(2) $\\dfrac1\\lambda=R\\left(\\dfrac14-\\dfrac1{16}\\right)=\\dfrac{3R}{16}$，$\\lambda=\\dfrac{16}{3R}=4.85\\times10^{-7}\\fallingdotseq4.8\\times10^{-7}\\ \\mathrm m$（青緑色）．\n\n(3) $n\\to\\infty$ で $\\dfrac1{n^2}\\to0$：$\\lambda\\to\\dfrac4R=3.64\\times10^{-7}\\fallingdotseq3.6\\times10^{-7}\\ \\mathrm m$．$n$ が大きくなるほど線どうしの間隔が詰まり，この波長に集まる．\n\n(4) $\\dfrac1\\lambda=R\\left(1-\\dfrac14\\right)=\\dfrac{3R}4$，$\\lambda=\\dfrac4{3R}=1.21\\times10^{-7}\\fallingdotseq1.2\\times10^{-7}\\ \\mathrm m$．可視光（約 $3.8\\times10^{-7}$〜$7.7\\times10^{-7}\\ \\mathrm m$）より短いので紫外線．ライマン系列はすべて紫外線で，可視光の線が見えるのはバルマー系列．\n\n(5) $E=\\dfrac{hc}\\lambda=\\dfrac{6.6\\times10^{-34}\\times3.0\\times10^8}{6.5\\times10^{-7}}=3.05\\times10^{-19}\\ \\mathrm J$，$\\dfrac{3.05\\times10^{-19}}{1.6\\times10^{-19}}\\fallingdotseq1.9\\ \\mathrm{eV}$．これは水素原子のエネルギー準位 $n=3$ と $n=2$ の差 $13.6\\times\\left(\\dfrac14-\\dfrac19\\right)\\fallingdotseq1.9\\ \\mathrm{eV}$ に一致する．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "リュードベリの式の $n'$ が系列（光を出した後の準位），$n$ が出す前の準位．$n\\to\\infty$ が系列の極限で，最も短い波長．"
+ },
+ "concepts": [
+  "bohr-model",
+  "photon"
+ ],
+ "laws": [
+  "bohr-levels",
+  "photon-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "水素原子",
+  "スペクトル",
+  "リュードベリの式",
+  "バルマー系列",
+  "ライマン系列"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

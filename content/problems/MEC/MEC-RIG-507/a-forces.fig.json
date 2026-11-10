@@ -1,0 +1,182 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  225
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    130
+   ],
+   "to": [
+    360,
+    130
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     40,
+     104
+    ],
+    [
+     40,
+     68
+    ],
+    [
+     110,
+     68
+    ],
+    [
+     140,
+     38
+    ],
+    [
+     240,
+     38
+    ],
+    [
+     265,
+     68
+    ],
+    [
+     320,
+     68
+    ],
+    [
+     320,
+     104
+    ]
+   ],
+   "style": "solid"
+  },
+  {
+   "t": "circle",
+   "at": [
+    80,
+    116
+   ],
+   "r": 14,
+   "style": "solid"
+  },
+  {
+   "t": "circle",
+   "at": [
+    280,
+    116
+   ],
+   "r": 14,
+   "style": "solid"
+  },
+  {
+   "t": "circle",
+   "at": [
+    180,
+    90.0
+   ],
+   "r": 4,
+   "style": "fill"
+  },
+  {
+   "t": "text",
+   "at": [
+    188,
+    78.0
+   ],
+   "text": "G",
+   "italic": true,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    180,
+    90.0
+   ],
+   "dir": 270,
+   "len": 100,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg",
+   "labelPos": "end",
+   "labelOffset": [
+    16,
+    -4
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    180,
+    90.0
+   ],
+   "dir": 180,
+   "len": 47.62,
+   "style": "force",
+   "phys": "force:ma",
+   "label": "mα",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -4
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    80,
+    130
+   ],
+   "dir": 90,
+   "len": 59.52,
+   "style": "force",
+   "phys": "force:Nr",
+   "label": "Nr",
+   "labelPos": "end",
+   "labelOffset": [
+    -14,
+    4
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    280,
+    130
+   ],
+   "dir": 90,
+   "len": 40.48,
+   "style": "force",
+   "phys": "force:Nf",
+   "label": "Nf",
+   "labelPos": "end",
+   "labelOffset": [
+    14,
+    8
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    80,
+    130
+   ],
+   "dir": 0,
+   "len": 47.62,
+   "style": "force",
+   "phys": "force:f",
+   "label": "f",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    4
+   ]
+  }
+ ]
+}

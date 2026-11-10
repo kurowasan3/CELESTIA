@@ -1,0 +1,146 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  200
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    10,
+    95
+   ],
+   "to": [
+    370,
+    95
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    10,
+    175
+   ],
+   "to": [
+    370,
+    175
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    10,
+    135
+   ],
+   "to": [
+    370,
+    135
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "block",
+   "at": [
+    70,
+    95
+   ],
+   "w": 40,
+   "h": 22,
+   "label": "A",
+   "phys": "body:A"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    92,
+    84
+   ],
+   "dir": 0,
+   "len": 42,
+   "style": "velocity",
+   "label": "20 m/s",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -24
+   ],
+   "italic": false
+  },
+  {
+   "t": "block",
+   "at": [
+    240,
+    95
+   ],
+   "w": 56,
+   "h": 28,
+   "label": "B",
+   "phys": "body:B"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    270,
+    81
+   ],
+   "dir": 0,
+   "len": 34,
+   "style": "velocity",
+   "label": "15 m/s",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -24
+   ],
+   "italic": false
+  },
+  {
+   "t": "block",
+   "at": [
+    300,
+    175
+   ],
+   "w": 40,
+   "h": 22,
+   "label": "C",
+   "phys": "body:C"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    278,
+    164
+   ],
+   "dir": 180,
+   "len": 48,
+   "style": "velocity",
+   "label": "25 m/s",
+   "labelPos": "mid",
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    300,
+    22
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    296,
+    22
+   ],
+   "text": "東",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  }
+ ]
+}

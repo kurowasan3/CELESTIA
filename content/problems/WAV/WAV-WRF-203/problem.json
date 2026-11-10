@@ -1,0 +1,143 @@
+{
+ "id": "WAV-WRF-203",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "深さの違う水面での水面波の屈折（波長・速さ・振動数と屈折率）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "figure-read"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水槽の水面を，深い領域 A と浅い領域 B が直線の境界で接するようにした．A で振動数 $10\\,\\mathrm{Hz}$ の平面波を起こすと，A での波長は $3.0\\,\\mathrm{cm}$ であった．図のように，波の進む向き（射線）は境界の法線と $60^\\circ$ の角をなして境界に入射し，B では法線と $30^\\circ$ の角をなす向きに進んだ．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "領域 A での波の速さを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "領域 A に対する領域 B の屈折率を求めよ（根号のままでよい）．"
+     },
+     {
+      "id": "3",
+      "tex": "領域 B での波長を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "領域 B での振動数を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "B から A へ向かって進む波では，入射角を大きくしていくと，ある角 $\\theta_{\\mathrm c}$ より大きいところで A に屈折して進む波がなくなる．$\\sin\\theta_{\\mathrm c}$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "ray",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "水平な境界の上側が深い領域 A、下側が浅い領域 B。波の射線が A から法線と 60° の角で境界に入射し、B では法線と 30° の角をなす向きに進む",
+   "caption": "",
+   "physics": {
+    "refraction": {
+     "n1": 1,
+     "n2": 1.7320508,
+     "in": "ray:in",
+     "out": "ray:out"
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$0.30\\,\\mathrm{m/s}$（$30\\,\\mathrm{cm/s}$）",
+    "grading": "0.3 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\sqrt3$",
+    "grading": "sqrt(3)"
+   },
+   {
+    "id": "3",
+    "tex": "$1.7\\,\\mathrm{cm}$",
+    "grading": "1.7 [cm]"
+   },
+   {
+    "id": "4",
+    "tex": "$10\\,\\mathrm{Hz}$",
+    "grading": "10 [Hz]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac{1}{\\sqrt3}$",
+    "grading": "1/sqrt(3)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $v_{\\mathrm A}=f\\lambda_{\\mathrm A}=10\\times3.0=30\\,\\mathrm{cm/s}=\\boldsymbol{0.30\\,\\mathrm{m/s}}$．\n\n(2) 屈折の法則 $n_{\\mathrm{AB}}=\\dfrac{\\sin\\theta_1}{\\sin\\theta_2}=\\dfrac{v_{\\mathrm A}}{v_{\\mathrm B}}=\\dfrac{\\lambda_{\\mathrm A}}{\\lambda_{\\mathrm B}}$ より\n\\[ n_{\\mathrm{AB}}=\\frac{\\sin60^\\circ}{\\sin30^\\circ}=\\frac{\\sqrt3/2}{1/2}=\\boldsymbol{\\sqrt3} \\]\n\n(3) $\\lambda_{\\mathrm B}=\\dfrac{\\lambda_{\\mathrm A}}{n_{\\mathrm{AB}}}=\\dfrac{3.0}{\\sqrt3}=\\sqrt3\\fallingdotseq\\boldsymbol{1.7\\,\\mathrm{cm}}$．浅い水では波が遅く，波長が短くなる．\n\n(4) 境界の両側の水面は同じリズムで振動するので，振動数は変わらず $\\boldsymbol{10\\,\\mathrm{Hz}}$．（B での速さは $f\\lambda_{\\mathrm B}=10\\sqrt3\\fallingdotseq17\\,\\mathrm{cm/s}$．）\n\n(5) B から A へ進むときは，遅い領域から速い領域へ進むので屈折角が入射角より大きい．屈折角が $90^\\circ$ になる入射角が $\\theta_{\\mathrm c}$ で，\n\\[ \\frac{\\sin\\theta_{\\mathrm c}}{\\sin90^\\circ}=\\frac{v_{\\mathrm B}}{v_{\\mathrm A}}=\\frac1{\\sqrt3}\\qquad\\therefore\\ \\sin\\theta_{\\mathrm c}=\\boldsymbol{\\frac1{\\sqrt3}} \\]\n（$\\theta_{\\mathrm c}\\fallingdotseq35^\\circ$）．これより大きい入射角では，波はすべて反射される（全反射）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "屈折しても振動数は変わらない．$\\dfrac{\\sin\\theta_1}{\\sin\\theta_2}=\\dfrac{v_1}{v_2}=\\dfrac{\\lambda_1}{\\lambda_2}$ がすべての波に共通の屈折の法則．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [
+  "refraction-law",
+  "wave-speed"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "水面波",
+  "屈折",
+  "屈折率",
+  "全反射"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

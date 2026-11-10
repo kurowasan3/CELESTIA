@@ -1,0 +1,150 @@
+{
+ "id": "MEC-MOM-408",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "振り子の小球とあらい床上の物体の衝突（すべった距離から反発係数を求める・はね返る条件）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 18,
+ "format": [
+  "derivation",
+  "experiment",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $l$ の軽い糸の一端を点 O に固定し，他端に質量 $m$ の小球をつける．糸を水平に張った位置から小球を静かにはなすと，小球は O の真下の最下点で，あらい水平な床の上に静止している質量 $M$ の小物体に水平に正面衝突した．衝突は瞬間的に終わり，小球と小物体の間の反発係数を $e$（$0<e\\le1$），小物体と床の間の動摩擦係数を $\\mu$，重力加速度の大きさを $g$ とする．小球は床に触れず，2回目の衝突は考えない．衝突直前の小球の速度の向きを正とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "衝突直前の小球の速さ $v_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "衝突直後の小球の速度 $v_1$ と小物体の速度 $V$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "小物体が床の上をすべって止まるまでの距離 $s$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "この装置で $s$ を測定すれば $e$ を求めることができる．$e$ を $s$，$l$，$\\mu$，$m$，$M$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "衝突後に小球がはね返る（負の向きに動く）ための条件を求めよ．また，そのとき小球が上がる最高点の，最下点からの高さ $H$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "$m=M$ のとき，$s$ は $e=1$ の場合が $e\\to0$ の場合の何倍か．また，$m=M$，$e=1$ のとき衝突後の小球はどうなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "点 O から長さ l の糸でつるした小球を、糸を水平に張った位置からはなす。最下点で、あらい床の上に静止した質量 M の小物体に衝突する",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_0=\\sqrt{2gl}$",
+    "grading": "v_0：sqrt(2g l)"
+   },
+   {
+    "id": "2",
+    "tex": "$v_1=\\dfrac{m-eM}{m+M}\\sqrt{2gl}$，$V=\\dfrac{(1+e)m}{m+M}\\sqrt{2gl}$",
+    "grading": "v_1：(m-e M)sqrt(2g l)/(m+M) ; V：(1+e)m sqrt(2g l)/(m+M)"
+   },
+   {
+    "id": "3",
+    "tex": "$s=\\dfrac{(1+e)^2m^2l}{\\mu(m+M)^2}$",
+    "grading": "s：(1+e)^2 m^2 l/(μ(m+M)^2)"
+   },
+   {
+    "id": "4",
+    "tex": "$e=\\dfrac{m+M}{m}\\sqrt{\\dfrac{\\mu s}{l}}-1$",
+    "grading": "e：(m+M)/m sqrt(μ s/l)-1"
+   },
+   {
+    "id": "5",
+    "tex": "$m<eM$．$H=\\dfrac{(eM-m)^2}{(m+M)^2}l$",
+    "grading": "H：(e M-m)^2 l/(m+M)^2"
+   },
+   {
+    "id": "6",
+    "tex": "$4$ 倍．$e=1$ では小球は衝突後に静止する（速度の交換）．",
+    "grading": "4倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 糸の張力は仕事をしないので力学的エネルギー保存：$\\dfrac12mv_0^2=mgl$ より $v_0=\\sqrt{2gl}$．\n\n(2) 衝突は瞬間的なので，その間の動摩擦力や張力（最下点では鉛直）の水平方向の力積は無視でき，水平方向の運動量が保存する：\\[mv_0=mv_1+MV,\\qquad V-v_1=ev_0\\] これを解いて\\[V=\\frac{(1+e)m}{m+M}v_0,\\qquad v_1=V-ev_0=\\frac{m-eM}{m+M}v_0\\]\n\n(3) 小物体の運動エネルギーが動摩擦力の仕事で失われる：$\\dfrac12MV^2=\\mu Mgs$ より\\[s=\\frac{V^2}{2\\mu g}=\\frac{(1+e)^2m^2}{(m+M)^2}\\cdot\\frac{2gl}{2\\mu g}=\\frac{(1+e)^2m^2l}{\\mu(m+M)^2}\\]\n\n(4) (3) より $(1+e)=\\dfrac{m+M}{m}\\sqrt{\\dfrac{\\mu s}{l}}$，\\[e=\\frac{m+M}{m}\\sqrt{\\frac{\\mu s}{l}}-1\\] $g$ を含まないので，測るのは長さ $s$，$l$ と質量，$\\mu$ だけでよい．\n\n(5) $v_1<0$ より $m-eM<0$，すなわち $m<eM$．はね返った小球は最下点から速さ $|v_1|$ で振れ上がるので，力学的エネルギー保存より\\[H=\\frac{v_1^2}{2g}=\\frac{(eM-m)^2}{(m+M)^2}l\\]\n\n(6) $m=M$ のとき $s=\\dfrac{(1+e)^2l}{4\\mu}$．$e=1$ で $\\dfrac{l}{\\mu}$，$e\\to0$ で $\\dfrac{l}{4\\mu}$ なので $4$ 倍．$e$ が大きいほど，小球が小物体を「押し返される反動」の分まで強く押すので，小物体が受ける力積が大きくなる（力積は $(1+e)$ に比例）．$m=M$，$e=1$ では $v_1=0$，$V=v_0$ で，小球は最下点で静止し，運動量と運動エネルギーをすべて小物体に渡す（速度の交換）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "振り子（エネルギー保存）→ 衝突（運動量保存＋反発係数）→ すべり（摩擦の仕事），と段階ごとに使う法則を切りかえる．逆にたどれば，測定した距離から $e$ がわかる．"
+ },
+ "concepts": [
+  "momentum-conservation",
+  "restitution",
+  "work-energy"
+ ],
+ "laws": [
+  "restitution",
+  "momentum-conservation",
+  "energy-conservation",
+  "friction-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "反発係数",
+  "運動量保存",
+  "振り子",
+  "摩擦",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

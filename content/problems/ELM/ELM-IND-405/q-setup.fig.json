@@ -1,0 +1,307 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  520,
+  335
+ ],
+ "items": [
+  {
+   "t": "wire",
+   "points": [
+    [
+     150,
+     40
+    ],
+    [
+     234.0,
+     40
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    234.0,
+    24
+   ],
+   "to": [
+    234.0,
+    56
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    246.0,
+    24
+   ],
+   "to": [
+    246.0,
+    56
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     246.0,
+     40
+    ],
+    [
+     330,
+     40
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    240.0,
+    14
+   ],
+   "text": "C",
+   "italic": true
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     150,
+     40
+    ],
+    [
+     150,
+     290
+    ]
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     330,
+     40
+    ],
+    [
+     330,
+     290
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    185,
+    80
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    185,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    185,
+    240
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    225,
+    80
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    225,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    225,
+    240
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    265,
+    80
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    265,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    265,
+    240
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    305,
+    80
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    305,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    305,
+    240
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "line",
+   "from": [
+    138,
+    180
+   ],
+   "to": [
+    342,
+    180
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    240,
+    196
+   ],
+   "text": "導体棒（質量 m）",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    305
+   ],
+   "to": [
+    330,
+    305
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    298
+   ],
+   "to": [
+    150,
+    312
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    330,
+    298
+   ],
+   "to": [
+    330,
+    312
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    240,
+    320
+   ],
+   "text": "l",
+   "italic": true
+  },
+  {
+   "t": "arrow",
+   "from": [
+    390,
+    120
+   ],
+   "dir": 270,
+   "len": 50,
+   "style": "thin",
+   "label": "g",
+   "labelOffset": [
+    12,
+    -10
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    360,
+    250
+   ],
+   "text": "磁場 B（紙面の表から裏）",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  }
+ ]
+}

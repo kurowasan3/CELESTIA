@@ -1,0 +1,135 @@
+{
+ "id": "ESY-BAL-203",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "電流天秤による磁束密度の測定",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "experiment",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，コの字形の導線 abcd を天秤の腕の一端に取り付け，水平な辺 bc（長さ $l=4.0\\ \\mathrm{cm}$）と，辺 ab，cd の下の部分が一様な磁場の中に入るようにした．磁場は水平で，紙面に垂直に裏から表の向きである．導線に電流を流さないとき，天秤はつり合っていた．a から d の向きに $I=2.5\\ \\mathrm A$ の電流を流すと，bc は鉛直下向きの力を受けて天秤が傾いたので，反対側の皿に質量 $\\Delta m=0.50\\ \\mathrm g$ のおもりをのせると，再びつり合った．天秤の腕の長さは左右で等しく，重力加速度の大きさを $g=9.8\\ \\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "bc が磁場から受ける力の大きさ $F$ は何 N か．"
+     },
+     {
+      "id": "2",
+      "tex": "磁束密度の大きさ $B$ は何 T か．"
+     },
+     {
+      "id": "3",
+      "tex": "電流の向きを逆にした．天秤をつり合わせるには，おもりをどうすればよいか．"
+     },
+     {
+      "id": "4",
+      "tex": "辺 ab，cd の磁場の中にある部分にも電流が流れているのに，天秤のつり合いに影響しないのはなぜか．"
+     },
+     {
+      "id": "5",
+      "tex": "bc の長さが $8.0\\ \\mathrm{cm}$ の導線に取りかえ，電流を $1.5\\ \\mathrm A$ にした．天秤をつり合わせるのに必要なおもりの質量は何 g か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "コの字形の導線 abcd．a から下へ b，右へ c，上へ d と電流が流れる．破線の長方形の領域に紙面の裏から表向きの一様な磁場があり，辺 bc と ab・cd の下の部分が磁場の中にある．bc には鉛直下向きの力 F がはたらく．",
+   "caption": "電流天秤（導線の部分）"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F=4.9\\times10^{-3}\\ \\mathrm N$",
+    "grading": "4.9*10^(-3) [N]"
+   },
+   {
+    "id": "2",
+    "tex": "$B=4.9\\times10^{-2}\\ \\mathrm T$",
+    "grading": "4.9*10^(-2) [T]"
+   },
+   {
+    "id": "3",
+    "tex": "bc が受ける力が鉛直上向きになるので，反対側の皿のおもりを取り除き，導線を付けた側の腕に $0.50\\ \\mathrm g$ のおもりをのせる．"
+   },
+   {
+    "id": "4",
+    "tex": "ab と cd の電流は逆向きで，磁場の中にある長さが等しいので，受ける力は水平で大きさが等しく逆向きになり，打ち消し合う（鉛直方向の力をもたない）．"
+   },
+   {
+    "id": "5",
+    "tex": "$0.60\\ \\mathrm g$",
+    "grading": "0.60 [g]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 天秤の腕の長さが等しいので，bc が受ける下向きの力と，おもりの重力がつり合う：$F=\\Delta m\\,g=0.50\\times10^{-3}\\times9.8=4.9\\times10^{-3}\\ \\mathrm N$．\n\n(2) 電流が磁場から受ける力 $F=IBl$ より $B=\\dfrac F{Il}=\\dfrac{4.9\\times10^{-3}}{2.5\\times0.040}=4.9\\times10^{-2}\\ \\mathrm T$．\n\n(3) 電流を逆にすると力も逆向き（鉛直上向き）で，大きさは同じ $4.9\\times10^{-3}\\ \\mathrm N$．導線側の腕が持ち上げられるので，おもりは反対側の皿から取り除き，導線を付けた側に $0.50\\ \\mathrm g$ 分の重さを加える．\n\n(4) 電流が鉛直な ab（下向き）と cd（上向き）では，力 $IBl'$（$l'$ は磁場の中の長さ）は水平で，ab は左向き，cd は右向き．大きさが等しく逆向きなので打ち消し合い，しかも水平なので天秤の傾き（鉛直方向の力のつり合い）に関係しない．だから bc の力だけが測れる．\n\n(5) $\\Delta m'=\\dfrac{IBl}{g}=\\dfrac{1.5\\times4.9\\times10^{-2}\\times0.080}{9.8}=6.0\\times10^{-4}\\ \\mathrm{kg}=0.60\\ \\mathrm g$．（(1) と比べると $\\dfrac{1.5\\times8.0}{2.5\\times4.0}=1.2$ 倍．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電流が磁場から受ける力 $F=IBl$ をおもりの重さとつり合わせて測る．鉛直な辺の力は水平で打ち消し合うので，水平な辺の力だけが測れる．"
+ },
+ "concepts": [
+  "lorentz-force",
+  "equilibrium"
+ ],
+ "laws": [
+  "current-force",
+  "torque-equilibrium"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電流天秤",
+  "電流が受ける力",
+  "磁束密度",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "id": "ELM-DCC-302",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "定格の異なる2つの電球を並列・直列につないだときの明るさ（直列では定格電力の小さい方が明るい）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 10,
+ "format": [
+  "calc",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "「$100\\,\\mathrm V$-$40\\,\\mathrm W$」の電球 $\\mathrm L_1$ と「$100\\,\\mathrm V$-$100\\,\\mathrm W$」の電球 $\\mathrm L_2$ がある．これは，$100\\,\\mathrm V$ の電圧を加えたときの消費電力が，それぞれ $40\\,\\mathrm W$，$100\\,\\mathrm W$ であることを表す．電球の抵抗値は温度によらず一定とみなす．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$\\mathrm L_1$，$\\mathrm L_2$ の抵抗値 $R_1$，$R_2$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$\\mathrm L_1$ と $\\mathrm L_2$ を並列にして $100\\,\\mathrm V$ の電源につないだ．電源から流れ出る電流を求めよ．また，明るいのはどちらか．"
+     },
+     {
+      "id": "3",
+      "tex": "$\\mathrm L_1$ と $\\mathrm L_2$ を直列にして $100\\,\\mathrm V$ の電源につないだ．$\\mathrm L_1$，$\\mathrm L_2$ の消費電力 $P_1$，$P_2$ を，有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) で明るいのはどちらか．その理由を述べよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$\\mathrm L_1$ を $100\\,\\mathrm V$ で $5.0$ 時間点灯したときの電力量は何 J か．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$R_1=250\\,\\Omega$，$R_2=100\\,\\Omega$",
+    "grading": "R_1：250 [Ω] ; R_2：100 [Ω]"
+   },
+   {
+    "id": "2",
+    "tex": "$1.4\\,\\mathrm A$．明るいのは $\\mathrm L_2$",
+    "grading": "1.4 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "$P_1\\fallingdotseq20\\,\\mathrm W$，$P_2\\fallingdotseq8.2\\,\\mathrm W$",
+    "grading": "P_1：20 [W] ; P_2：8.2 [W]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\mathrm L_1$（$40\\,\\mathrm W$ の電球）．直列では電流が共通なので，消費電力 $RI^2$ は抵抗の大きい $\\mathrm L_1$ の方が大きいから．"
+   },
+   {
+    "id": "5",
+    "tex": "$7.2\\times10^{5}\\,\\mathrm J$（$0.20\\,\\mathrm{kWh}$）",
+    "grading": "7.2*10^5 [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $P=\\dfrac{V^2}R$ より $R=\\dfrac{V^2}P$．$R_1=\\dfrac{100^2}{40}=250\\,\\Omega$，$R_2=\\dfrac{100^2}{100}=100\\,\\Omega$．定格電力の大きい電球ほど抵抗は小さい．\n\n(2) 並列ならどちらにも $100\\,\\mathrm V$ がかかり，定格どおり．電流は $\\dfrac{40}{100}+\\dfrac{100}{100}=0.40+1.0=1.4\\,\\mathrm A$．消費電力の大きい $\\mathrm L_2$（$100\\,\\mathrm W$）が明るい．\n\n(3) 直列の合成抵抗 $350\\,\\Omega$，電流 $I=\\dfrac{100}{350}=\\dfrac27\\,\\mathrm A$．\n\\[P_1=R_1I^2=250\\times\\left(\\frac27\\right)^2=20.4\\cdots\\fallingdotseq20\\,\\mathrm W,\\qquad P_2=R_2I^2=100\\times\\left(\\frac27\\right)^2=8.16\\cdots\\fallingdotseq8.2\\,\\mathrm W．\\]\n\n(4) 直列では2つの電球に同じ電流が流れる（電流は電球で消費されて減ったりしない）．$P=RI^2$ なので，抵抗の大きい $\\mathrm L_1$ の方が消費電力が大きく，明るい．「定格 $100\\,\\mathrm W$ の方がいつも明るい」は，どちらにも同じ電圧がかかる並列のときだけ正しい．\n\n(5) $W=Pt=40\\times5.0\\times3600=7.2\\times10^{5}\\,\\mathrm J$．（$0.040\\,\\mathrm{kW}\\times5.0\\,\\mathrm h=0.20\\,\\mathrm{kWh}$，$1\\,\\mathrm{kWh}=3.6\\times10^6\\,\\mathrm J$．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "並列では電圧が共通なので $P=\\dfrac{V^2}{R}$（抵抗が小さいほど明るい），直列では電流が共通なので $P=RI^2$（抵抗が大きいほど明るい）．"
+ },
+ "concepts": [
+  "electric-power",
+  "series-parallel"
+ ],
+ "laws": [
+  "joule-heat",
+  "ohm-law",
+  "resistor-combination"
+ ],
+ "misconceptions": [
+  "MC-CURRENT-USED-UP"
+ ],
+ "tags": [
+  "消費電力",
+  "電球",
+  "直列",
+  "並列",
+  "電力量"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

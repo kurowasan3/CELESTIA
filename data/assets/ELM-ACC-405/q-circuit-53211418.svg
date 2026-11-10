@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 240" width="390" height="240" font-family="'Times New Roman', serif">
+<polyline points="50,50 50,112" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="50" cy="130" r="18" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<polyline points="38.3,130 38.45,129.75 38.59,129.51 38.74,129.26 38.88,129.01 39.03,128.77 39.18,128.53 39.32,128.29 39.47,128.05 39.62,127.82 39.76,127.59 39.91,127.36 40.05,127.14 40.2,126.92 40.35,126.71 40.49,126.5 40.64,126.3 40.79,126.1 40.93,125.91 41.08,125.72 41.22,125.55 41.37,125.37 41.52,125.21 41.66,125.05 41.81,124.9 41.96,124.76 42.1,124.63 42.25,124.5 42.39,124.39 42.54,124.28 42.69,124.18 42.83,124.09 42.98,124.01 43.13,123.94 43.27,123.87 43.42,123.82 43.56,123.78 43.71,123.74 43.86,123.72 44,123.7 44.15,123.7 44.3,123.7 44.44,123.72 44.59,123.74 44.73,123.78 44.88,123.82 45.03,123.87 45.17,123.94 45.32,124.01 45.47,124.09 45.61,124.18 45.76,124.28 45.91,124.39 46.05,124.5 46.2,124.63 46.34,124.76 46.49,124.9 46.64,125.05 46.78,125.21 46.93,125.37 47.08,125.55 47.22,125.72 47.37,125.91 47.51,126.1 47.66,126.3 47.81,126.5 47.95,126.71 48.1,126.92 48.24,127.14 48.39,127.36 48.54,127.59 48.68,127.82 48.83,128.05 48.98,128.29 49.12,128.53 49.27,128.77 49.41,129.01 49.56,129.26 49.71,129.51 49.85,129.75 50,130 50.15,130.25 50.29,130.49 50.44,130.74 50.59,130.99 50.73,131.23 50.88,131.47 51.02,131.71 51.17,131.95 51.32,132.18 51.46,132.41 51.61,132.64 51.76,132.86 51.9,133.08 52.05,133.29 52.19,133.5 52.34,133.7 52.49,133.9 52.63,134.09 52.78,134.28 52.92,134.45 53.07,134.63 53.22,134.79 53.36,134.95 53.51,135.1 53.66,135.24 53.8,135.37 53.95,135.5 54.09,135.61 54.24,135.72 54.39,135.82 54.53,135.91 54.68,135.99 54.83,136.06 54.97,136.13 55.12,136.18 55.27,136.22 55.41,136.26 55.56,136.28 55.7,136.3 55.85,136.3 56,136.3 56.14,136.28 56.29,136.26 56.44,136.22 56.58,136.18 56.73,136.13 56.87,136.06 57.02,135.99 57.17,135.91 57.31,135.82 57.46,135.72 57.61,135.61 57.75,135.5 57.9,135.37 58.04,135.24 58.19,135.1 58.34,134.95 58.48,134.79 58.63,134.63 58.78,134.45 58.92,134.28 59.07,134.09 59.21,133.9 59.36,133.7 59.51,133.5 59.65,133.29 59.8,133.08 59.95,132.86 60.09,132.64 60.24,132.41 60.38,132.18 60.53,131.95 60.68,131.71 60.82,131.47 60.97,131.23 61.12,130.99 61.26,130.74 61.41,130.49 61.55,130.25 61.7,130" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<polyline points="50,148 50,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="24" y="130" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">V</text>
+<polyline points="50,50 330,50" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="50,210 330,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="150" cy="50" r="3" fill="currentColor"/>
+<circle cx="240" cy="50" r="3" fill="currentColor"/>
+<circle cx="150" cy="210" r="3" fill="currentColor"/>
+<circle cx="240" cy="210" r="3" fill="currentColor"/>
+<g data-phys="resistor:R">
+<line x1="150" y1="50" x2="150" y2="107" stroke="currentColor" stroke-width="1.6"/>
+<line x1="150" y1="153" x2="150" y2="210" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="143,107 143,153 157,153 157,107" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="136" y="130" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">R</text>
+</g>
+<polyline points="240,50 240,100" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<path d="M240,100 A7.5,7.5 0 0 1 240,115" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<path d="M240,115 A7.5,7.5 0 0 1 240,130" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<path d="M240,130 A7.5,7.5 0 0 1 240,145" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<path d="M240,145 A7.5,7.5 0 0 1 240,160" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<polyline points="240,160 240,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="256" y="130" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+<polyline points="330,50 330,124" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="314" y1="124" x2="346" y2="124" stroke="currentColor" stroke-width="2.4"/>
+<line x1="314" y1="136" x2="346" y2="136" stroke="currentColor" stroke-width="2.4"/>
+<polyline points="330,136 330,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="352" y="130" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">C</text>
+</svg>

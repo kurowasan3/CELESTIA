@@ -1,0 +1,149 @@
+{
+ "id": "WAV-STS-204",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "糸を伝わるパルスの速さの測定と線密度",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，水平な糸の左端を壁に固定し，右端は滑車を通して質量 $M$ のおもりをつるした．糸の左端近くを指ではじいてパルスを送り，糸の上で $1.20\\,\\mathrm m$ 離れた2点 P，Q にパルスが届く時刻を光センサーで測った．糸を伝わる横波の速さ $v$ は，糸の張力の大きさを $S$，線密度（単位長さあたりの質量）を $\\rho$ として $v=\\sqrt{\\dfrac S\\rho}$ で表される．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "text",
+    "tex": "$M=0.50\\,\\mathrm{kg}$ のとき，パルスが P を通ってから Q に届くまでの時間は $0.060\\,\\mathrm s$ であった．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "パルスの速さを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "糸の張力の大きさを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "糸の線密度を有効数字2桁で求めよ（単位は $\\mathrm{kg/m}$）．"
+     },
+     {
+      "id": "4",
+      "tex": "おもりを $2.0\\,\\mathrm{kg}$ のものに替えると，P から Q までの時間は何 $\\mathrm s$ になるか．"
+     },
+     {
+      "id": "5",
+      "tex": "$M=0.50\\,\\mathrm{kg}$ のまま，糸の左端付近を振動数 $50\\,\\mathrm{Hz}$ で振動させて正弦波を送った．波長を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "線密度が2倍の糸に替えて，パルスの速さをもとの $M=0.50\\,\\mathrm{kg}$ のときと同じにしたい．おもりの質量を何倍にすればよいか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左端を壁に固定した水平な糸の右端が滑車を通り、質量 M のおもりがつるされている。糸の上の 2 点 P、Q は 1.20 m 離れている。左端近くで作ったパルスが右へ進む",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$20\\,\\mathrm{m/s}$",
+    "grading": "20 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$4.9\\,\\mathrm N$",
+    "grading": "4.9 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "$1.2\\times10^{-2}\\,\\mathrm{kg/m}$",
+    "grading": "1.2*10^(-2)"
+   },
+   {
+    "id": "4",
+    "tex": "$0.030\\,\\mathrm s$",
+    "grading": "0.03 [s]"
+   },
+   {
+    "id": "5",
+    "tex": "$0.40\\,\\mathrm m$",
+    "grading": "0.4 [m]"
+   },
+   {
+    "id": "6",
+    "tex": "$2$ 倍",
+    "grading": "2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $v=\\dfrac{1.20}{0.060}=\\boldsymbol{20\\,\\mathrm{m/s}}$．\n\n(2) おもりは静止しているので，糸の張力はおもりの重さに等しい：$S=Mg=0.50\\times9.8=\\boldsymbol{4.9\\,\\mathrm N}$．\n\n(3) $v=\\sqrt{\\dfrac S\\rho}$ より $\\rho=\\dfrac S{v^2}=\\dfrac{4.9}{20^2}=1.225\\times10^{-2}\\fallingdotseq\\boldsymbol{1.2\\times10^{-2}\\,\\mathrm{kg/m}}$．\n\n(4) 張力が $4$ 倍になるので，速さは $\\sqrt4=2$ 倍の $40\\,\\mathrm{m/s}$．時間は $\\dfrac{1.20}{40}=\\boldsymbol{0.030\\,\\mathrm s}$．\n\n(5) 波の速さは糸（媒質）と張力で決まり，振動数によらず $20\\,\\mathrm{m/s}$．$\\lambda=\\dfrac vf=\\dfrac{20}{50}=\\boldsymbol{0.40\\,\\mathrm m}$．\n\n(6) $v=\\sqrt{\\dfrac S\\rho}$ を変えないためには，$\\rho$ を $2$ 倍にしたとき $S$ も $2$ 倍にすればよい．$S=Mg$ なので，おもりの質量を $\\boldsymbol2$ 倍にする．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "弦（糸）を伝わる波の速さは張力と線密度で決まる（$v=\\sqrt{S/\\rho}$）．速さを測れば，見えない線密度が求まる．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [
+  "wave-speed"
+ ],
+ "misconceptions": [
+  "MC-WAVE-SPEED-FREQ"
+ ],
+ "tags": [
+  "弦の波の速さ",
+  "線密度",
+  "張力",
+  "測定"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "id": "ELM-LOR-402",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "磁場に斜めに入射した荷電粒子のらせん運動",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，磁束密度 $B$ の一様な磁場の中で，点 O から質量 $m$，電気量 $q\\ (>0)$ の粒子を，磁場の向きと角 $\\theta\\ (0<\\theta<90^\\circ)$ をなす向きに速さ $v$ で打ち出した．O から磁場の向きに距離 $D$ だけ離れたところに，磁場に垂直なスクリーンがある．重力は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "粒子の速度を磁場に平行な成分と垂直な成分に分けて考える．磁場に垂直な面に投影した粒子の運動は等速円運動になる．その半径 $r$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "この円運動の周期 $T$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "粒子はらせんを描いて進む．らせんの1巻きの間に，粒子が磁場の向きに進む距離（ピッチ）$p$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "粒子の運動エネルギーは時間とともにどう変わるか．理由とともに答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "O を通り磁場に平行な直線を軸とよぶ．粒子がスクリーンに当たる点と軸との距離 $s$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "粒子が軸上の点でスクリーンに当たるような $B$ のうち，最小のものを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "右向きの一様な磁場 B。点 O から粒子が磁場の向きと角 θ をなす向きに速さ v で打ち出される。O から磁場の向きに距離 D のところに、磁場に垂直なスクリーンがある",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$r=\\dfrac{mv\\sin\\theta}{qB}$",
+    "grading": "r：m v sin(θ)/(q B)"
+   },
+   {
+    "id": "2",
+    "tex": "$T=\\dfrac{2\\pi m}{qB}$",
+    "grading": "T：2π m/(q B)"
+   },
+   {
+    "id": "3",
+    "tex": "$p=\\dfrac{2\\pi mv\\cos\\theta}{qB}$",
+    "grading": "p：2π m v cos(θ)/(q B)"
+   },
+   {
+    "id": "4",
+    "tex": "変わらない（一定）．ローレンツ力はつねに速度に垂直で，仕事をしないから．"
+   },
+   {
+    "id": "5",
+    "tex": "$s=\\dfrac{2mv\\sin\\theta}{qB}\\left|\\sin\\dfrac{qBD}{2mv\\cos\\theta}\\right|$",
+    "grading": "s：2 m v sin(θ) abs(sin(q B D/(2 m v cos(θ))))/(q B)"
+   },
+   {
+    "id": "6",
+    "tex": "$B=\\dfrac{2\\pi mv\\cos\\theta}{qD}$",
+    "grading": "B：2π m v cos(θ)/(q D)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "速度を，磁場に平行な成分 $v_\\parallel=v\\cos\\theta$ と垂直な成分 $v_\\perp=v\\sin\\theta$ に分ける．ローレンツ力は $v_\\perp$ だけで決まり（$qv_\\perp B$），磁場に垂直な向きにはたらく．したがって $v_\\parallel$ は変わらず，磁場に垂直な面内では速さ $v_\\perp$ の等速円運動になる．\n\n\\textbf{(1)} $m\\dfrac{v_\\perp^2}{r}=qv_\\perp B$ より $r=\\dfrac{mv_\\perp}{qB}=\\dfrac{mv\\sin\\theta}{qB}$．\n\n\\textbf{(2)} $T=\\dfrac{2\\pi r}{v_\\perp}=\\dfrac{2\\pi m}{qB}$．速さにも角 $\\theta$ にもよらない．\n\n\\textbf{(3)} 1周期の間に磁場の向きに $v_\\parallel$ で進む：$p=v_\\parallel T=\\dfrac{2\\pi mv\\cos\\theta}{qB}$．\n\n\\textbf{(4)} ローレンツ力は速度に垂直なので仕事をしない．運動エネルギー（速さ $v$）は一定．\n\n\\textbf{(5)} スクリーンまでの時間は $t=\\dfrac{D}{v\\cos\\theta}$．その間に円運動で回る角は $\\phi=\\dfrac{2\\pi}{T}t=\\dfrac{qBD}{mv\\cos\\theta}$．\n投影した円は O（軸上）を通る半径 $r$ の円なので，軸からの距離は，円周上で中心角 $\\phi$ だけ離れた2点の間の弦の長さ：\n\\[s=2r\\left|\\sin\\frac\\phi2\\right|=\\frac{2mv\\sin\\theta}{qB}\\left|\\sin\\frac{qBD}{2mv\\cos\\theta}\\right|\\]\n\n\\textbf{(6)} $s=0$ となるのは $\\dfrac\\phi2=n\\pi$，つまり $D$ がピッチの整数倍のとき：$D=np$．最小の $B$ は $n=1$ で，$D=p$ より $B=\\dfrac{2\\pi mv\\cos\\theta}{qD}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "速度を磁場に平行・垂直な成分に分ける．平行成分は等速，垂直成分は等速円運動．周期は速さによらない．"
+ },
+ "concepts": [
+  "lorentz-force"
+ ],
+ "laws": [
+  "lorentz-force",
+  "cyclotron-motion"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ローレンツ力",
+  "らせん運動",
+  "荷電粒子"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

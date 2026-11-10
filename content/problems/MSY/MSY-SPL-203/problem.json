@@ -1,0 +1,135 @@
+{
+ "id": "MSY-SPL-203",
+ "schema": "celestia.problem/1",
+ "field": "MSY",
+ "unit": "MSY-01",
+ "topic": "真上に投げた物体が最高点で2つに分裂する：運動量保存と落下点",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な地面の点 O から，質量 $3m$ の物体を鉛直上向きに速さ $v_0$ で投げ上げた．物体は最高点で，内部の火薬によって瞬間的に質量 $m$ の小片 A と質量 $2m$ の小片 B に分裂し，A，B はどちらも水平に，互いに逆向きに飛び出した．A は O から距離 $d$ の地点に落ちた．重力加速度の大きさを $g$ とし，空気抵抗と火薬の質量は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "最高点の高さ $H$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "分裂した直後の A の速さ $v_{\\mathrm A}$ を，$d$，$g$，$v_0$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "分裂した直後の B の速さ $v_{\\mathrm B}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "A と B の落下点の間の距離 $D$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "分裂によって A，B が得た運動エネルギーの和 $E$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "A，B が地面に落ちた瞬間の，A と B を合わせた全体の重心の位置はどこか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$H=\\dfrac{v_0^2}{2g}$",
+    "grading": "H：v_0^2/(2g)"
+   },
+   {
+    "id": "2",
+    "tex": "$v_{\\mathrm A}=\\dfrac{gd}{v_0}$",
+    "grading": "v_A：g d/v_0"
+   },
+   {
+    "id": "3",
+    "tex": "$v_{\\mathrm B}=\\dfrac{gd}{2v_0}$",
+    "grading": "v_B：g d/(2v_0)"
+   },
+   {
+    "id": "4",
+    "tex": "$D=\\dfrac{3d}2$",
+    "grading": "D：3d/2"
+   },
+   {
+    "id": "5",
+    "tex": "$E=\\dfrac{3mg^2d^2}{4v_0^2}$",
+    "grading": "E：3m g^2 d^2/(4v_0^2)"
+   },
+   {
+    "id": "6",
+    "tex": "点 O．分裂は内力によるので，重心は分裂がなかった場合と同じ運動（O の真上を上下する運動）を続ける．A，B は同時に落ちるので，そのとき重心は O にある．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 最高点では速さ $0$．$0^2-v_0^2=-2gH$ より $H=\\dfrac{v_0^2}{2g}$．\n\n(2) A，B は高さ $H$ から水平に飛び出すので，落下にかかる時間は $t=\\sqrt{\\dfrac{2H}{g}}=\\dfrac{v_0}{g}$（上がるのにかかった時間と同じ）．水平方向は等速なので $d=v_{\\mathrm A}t$， \\[v_{\\mathrm A}=\\frac{d}{t}=\\frac{gd}{v_0}\\]\n\n(3) 分裂の直前，物体は最高点で静止しているので運動量は $0$．分裂は一瞬で，内力（火薬の力）にくらべ重力の力積は無視できるので，水平方向の運動量が保存する：$mv_{\\mathrm A}-2mv_{\\mathrm B}=0$． \\[v_{\\mathrm B}=\\frac{v_{\\mathrm A}}2=\\frac{gd}{2v_0}\\]\n\n(4) B は A と逆向きに，同じ時間 $t$ で $v_{\\mathrm B}t=\\dfrac d2$ だけ進む．$D=d+\\dfrac d2=\\dfrac{3d}{2}$．\n\n(5) \\[E=\\frac12mv_{\\mathrm A}^2+\\frac12(2m)v_{\\mathrm B}^2=\\frac12m\\frac{g^2d^2}{v_0^2}+m\\frac{g^2d^2}{4v_0^2}=\\frac{3mg^2d^2}{4v_0^2}\\] このエネルギーは火薬の化学エネルギーから来ている．運動量は保存するが，運動エネルギーは保存しない．\n\n(6) O を原点に A の向きを正とすると，落下点は A が $d$，B が $-\\dfrac d2$． \\[x_{\\mathrm G}=\\frac{m\\cdot d+2m\\cdot(-\\frac d2)}{3m}=0\\] 外力は重力だけなので，重心は分裂しなかったときと同じく，O の真上を上がって下がる運動をする．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "分裂の直前後で運動量が保存（分裂前は $0$）．同じ高さから水平に飛び出すので落下時間は共通で，水平距離は速さに比例する．"
+ },
+ "concepts": [
+  "momentum-conservation",
+  "projectile-motion",
+  "uniform-acceleration"
+ ],
+ "laws": [
+  "momentum-conservation",
+  "uniform-acceleration-eq",
+  "center-of-mass"
+ ],
+ "misconceptions": [
+  "MC-KE-ALWAYS-CONSERVED"
+ ],
+ "tags": [
+  "運動量保存",
+  "分裂",
+  "水平投射",
+  "重心",
+  "融合"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

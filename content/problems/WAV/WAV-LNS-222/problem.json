@@ -1,0 +1,149 @@
+{
+ "id": "WAV-LNS-222",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "物体とスクリーンの位置の測定値を 1/a－1/b グラフにして凸レンズの焦点距離を求める",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "experiment",
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "光学台の上に，光源つきの物体，凸レンズ，スクリーンを一直線に並べた．物体とレンズの距離 $a$ を変えながら，スクリーン上にはっきりした実像が映るレンズとスクリーンの距離 $b$ を測った．結果は次の通りである．"
+   },
+   {
+    "type": "text",
+    "tex": "\\[ \\begin{array}{c|ccccc} a\\,[\\mathrm{cm}] & 15 & 20 & 25 & 30 & 40\\\\ \\hline b\\,[\\mathrm{cm}] & 29.5 & 20.3 & 16.5 & 15.2 & 13.4 \\end{array} \\]"
+   },
+   {
+    "type": "text",
+    "tex": "図は，$\\dfrac1a$ を横軸，$\\dfrac1b$ を縦軸にとって測定値を記入し，測定点の近くを通る直線を引いたものである．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "レンズの式を用いると，$\\dfrac1b$ と $\\dfrac1a$ の関係は直線で表される．この直線の傾きと，縦軸との交点（切片）の意味を答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "グラフから，このレンズの焦点距離を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) の焦点距離のとき，$a=15\\,\\mathrm{cm}$ でできる像の倍率を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$a=8.0\\,\\mathrm{cm}$ にすると，スクリーンをどこに動かしても像は映らなかった．その理由を，グラフの上でこの測定がどこに対応するかとあわせて説明せよ．"
+     },
+     {
+      "id": "5",
+      "tex": "物体とスクリーンの距離を $35\\,\\mathrm{cm}$ に固定すると，レンズを物体とスクリーンの間のどこに置いても，スクリーンにはっきりした像は映らない．その理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "横軸 1/a、縦軸 1/b（どちらも単位 cm⁻¹、0 から 0.12）のグラフ。5つの測定点がほぼ一直線に並び、その直線は縦軸の 0.10 と横軸の 0.10 を結ぶ傾き −1 の直線",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "傾きは $-1$，切片は $\\dfrac1f$（$f$ は焦点距離）"
+   },
+   {
+    "id": "2",
+    "tex": "$10\\,\\mathrm{cm}$",
+    "grading": "10 [cm]"
+   },
+   {
+    "id": "3",
+    "tex": "$2.0$ 倍",
+    "grading": "2倍"
+   },
+   {
+    "id": "4",
+    "tex": "$a<f$ で，$\\dfrac1a>\\dfrac1f$ となり直線上で $\\dfrac1b<0$（横軸の $0.10$ より右）にあたる．$b<0$ は虚像で，光が集まらないので，スクリーンには映らない．"
+   },
+   {
+    "id": "5",
+    "tex": "実像ができるとき $a+b\\ge4f=40\\,\\mathrm{cm}$ である（等号は $a=b=2f$）．$35\\,\\mathrm{cm}$ はこれより短いので，どこに置いても実像の条件を満たせない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\dfrac1a+\\dfrac1b=\\dfrac1f$ より $\\dfrac1b=-\\dfrac1a+\\dfrac1f$．傾きは $\\boldsymbol{-1}$，縦軸の切片は $\\boldsymbol{\\dfrac1f}$（横軸の切片も $\\dfrac1f$）．\n測定値を逆数にしてグラフにすると，曲線（双曲線）ではなく直線になり，測定のばらつきをならした直線の切片から焦点距離が読める．\n\n(2) 引いた直線は縦軸と $0.10\\,\\mathrm{cm^{-1}}$，横軸と $0.10\\,\\mathrm{cm^{-1}}$ で交わるので $\\dfrac1f=0.10$，$f=\\boldsymbol{10\\,\\mathrm{cm}}$．\n\n(3) $\\dfrac1b=\\dfrac1{10}-\\dfrac1{15}=\\dfrac1{30}$，$b=30\\,\\mathrm{cm}$．倍率 $\\dfrac ba=\\dfrac{30}{15}=\\boldsymbol{2.0}$ 倍（測定値 $29.5\\,\\mathrm{cm}$ ともよく合う）．\n\n(4) $a=8.0\\,\\mathrm{cm}<f$ では $\\dfrac1a=0.125>0.10$ で，直線を延長すると $\\dfrac1b<0$ の領域（横軸の下）になる．$b<0$ はレンズの前方に虚像ができることを表し，光は実際には1点に集まらないので，スクリーンには映らない（レンズを通して見ると拡大された正立の虚像が見える）．\n\n(5) 物体とスクリーンの距離を $s=a+b$ とする．$b=\\dfrac{af}{a-f}$ を代入して $a$ について整理すると $a^2-sa+sf=0$．$a$ が実数（実際にレンズを置ける位置）であるためには，判別式 $s^2-4sf\\ge0$，すなわち $s\\ge4f=40\\,\\mathrm{cm}$ が必要．$s=35\\,\\mathrm{cm}$ では解がなく，実像は映らない．\n（$s>4f$ のときはレンズの位置が2か所あり，拡大像と縮小像が映る．$s=4f$ では $a=b=2f$ の1か所で，倍率は $1$ 倍．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "$\\dfrac1a+\\dfrac1b=\\dfrac1f$ は $\\dfrac1a$，$\\dfrac1b$ について1次式なので，逆数をとってグラフにすると直線になり，切片から $\\dfrac1f$ が読める．実像ができるのは $a>f$ のときで，そのとき $a+b\\ge4f$．"
+ },
+ "simulation": {
+  "id": "optics.lens",
+  "preset": {
+   "f": 0.1,
+   "a": 0.2,
+   "h": 0.1
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "lens-imaging"
+ ],
+ "laws": [
+  "lens-equation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "凸レンズ",
+  "焦点距離の測定",
+  "グラフ",
+  "実像"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

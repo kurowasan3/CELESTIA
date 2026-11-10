@@ -1,0 +1,136 @@
+{
+ "id": "ELM-CAP-305",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "極板間の引力をエネルギーから導き，電子天秤の読みの変化から真空の誘電率を求める",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "experiment",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，面積 $S$ の金属の極板 A を，電子天秤の上に絶縁台を介して水平に置き，その真上に同じ面積の極板 B を，間隔 $d$ で平行に固定した．A，B の間に電圧 $V$ をかけると，極板間の引力によって天秤の読みが減る．極板間は空気で，誘電率は真空の誘電率 $\\varepsilon_0$ と同じとし，極板の端の影響は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A，B に電気量 $+Q$，$-Q$ がたまっていて，電池が外れている（$Q$ 一定）とする．間隔を $d$ から $d+\\Delta d$ にわずかに広げるのに外力がする仕事が静電エネルギーの増加に等しいことから，極板間の引力の大きさ $F$ を $Q$，$S$，$\\varepsilon_0$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "$F$ を $V$，$S$，$d$，$\\varepsilon_0$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$S=1.0\\times10^{-2}\\,\\mathrm{m^2}$，$d=2.0\\,\\mathrm{mm}$，$V=1.0\\times10^{3}\\,\\mathrm V$ のとき，天秤の読みは電圧をかける前より $1.10\\,\\mathrm g$ 減った．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ として，$\\varepsilon_0$ の値を有効数字2桁で求めよ（単位は F/m）．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の装置で電圧を $2.0\\times10^{3}\\,\\mathrm V$ にすると，天秤の読みは電圧をかける前より何 g 減るか．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "極板間の電場の強さは $E=\\dfrac Vd$ なのに，A が受ける力は $QE$ ではなく $\\dfrac12QE$ である．その理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "電子天秤の上の絶縁台に水平な極板 A を置き、その真上に間隔 d で極板 B を絶縁体のスタンドで固定。A と B の間に電圧 V の電池をつないでいる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F=\\dfrac{Q^2}{2\\varepsilon_0S}$",
+    "grading": "F：Q^2/(2ε_0 S)"
+   },
+   {
+    "id": "2",
+    "tex": "$F=\\dfrac{\\varepsilon_0SV^2}{2d^2}$",
+    "grading": "F：ε_0 S V^2/(2d^2)"
+   },
+   {
+    "id": "3",
+    "tex": "$\\varepsilon_0=8.6\\times10^{-12}\\,\\mathrm{F/m}$",
+    "grading": "ε_0：8.6*10^(-12)"
+   },
+   {
+    "id": "4",
+    "tex": "$4.4\\,\\mathrm g$",
+    "grading": "4.4 [g]"
+   },
+   {
+    "id": "5",
+    "tex": "A の電荷が受ける力は，B の電荷がつくる電場によるもの．B の電荷だけがつくる電場は $\\dfrac{E}{2}$（極板間の電場 $E$ は A と B の電荷がつくる電場の和で，それぞれ半分ずつ）なので，$F=Q\\cdot\\dfrac E2$．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 電荷一定のとき $U=\\dfrac{Q^2}{2C}=\\dfrac{Q^2d}{2\\varepsilon_0S}$．間隔を $\\Delta d$ 広げると $\\Delta U=\\dfrac{Q^2}{2\\varepsilon_0S}\\Delta d$．ゆっくり広げる外力は引力 $F$ とつり合うので，外力の仕事は $F\\Delta d$．これが $\\Delta U$ に等しいので\n\\[F=\\frac{Q^2}{2\\varepsilon_0S}．\\]\n（$d$ によらない一定の力．）\n\n(2) $Q=CV=\\dfrac{\\varepsilon_0SV}{d}$ を代入して $F=\\dfrac{\\varepsilon_0SV^2}{2d^2}$．\n\n(3) 天秤の読みの減少は，引力 $F$ が A を上に引くため．$F=1.10\\times10^{-3}\\times9.8=1.078\\times10^{-2}\\,\\mathrm N$．\n\\[\\varepsilon_0=\\frac{2Fd^2}{SV^2}=\\frac{2\\times1.078\\times10^{-2}\\times(2.0\\times10^{-3})^2}{1.0\\times10^{-2}\\times(1.0\\times10^{3})^2}=8.62\\times10^{-12}\\fallingdotseq8.6\\times10^{-12}\\,\\mathrm{F/m}．\\]\n\n(4) $F\\propto V^2$ なので，電圧2倍で力は4倍：$4\\times1.10=4.40\\fallingdotseq4.4\\,\\mathrm g$ 減る．\n\n(5) 極板間の電場 $E=\\dfrac{Q}{\\varepsilon_0S}$ は，A の電荷がつくる電場 $\\dfrac{Q}{2\\varepsilon_0S}$ と B の電荷がつくる電場 $\\dfrac{Q}{2\\varepsilon_0S}$ の和である．A の電荷が A 自身の電場から力を受けることはないので，A が受けるのは B の電荷の電場 $\\dfrac E2$ による力 $F=\\dfrac12QE=\\dfrac{Q^2}{2\\varepsilon_0S}$ で，(1) と一致する．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "電荷一定で極板を動かすと，外力の仕事＝静電エネルギーの変化．極板が受ける力は相手の極板の電場（全体の半分）による：$F=\\dfrac12QE$．"
+ },
+ "concepts": [
+  "capacitor"
+ ],
+ "laws": [
+  "capacitance",
+  "capacitor-energy",
+  "coulomb-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "極板間の引力",
+  "静電エネルギー",
+  "実験",
+  "真空の誘電率"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

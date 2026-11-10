@@ -1,0 +1,177 @@
+{
+ "id": "ELM-ACC-407",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-06",
+ "topic": "ダイオードによる半波整流と平滑コンデンサー（リプルとダイオードの電流）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，電圧 $v=V_0\\sin\\omega t$ の交流電源，ダイオード D，抵抗値 $R$ の抵抗をつないだ．D は理想的なもので，順方向（図の左から右）には抵抗 $0$ で電流を通し，逆方向には電流を通さない．交流の周期を $T=\\dfrac{2\\pi}{\\omega}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "text",
+    "tex": "\\textbf{A.} スイッチ S を開いたままにする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "抵抗で消費される電力の時間平均 $\\overline P$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "抵抗の両端の電圧の実効値（$\\overline P=\\dfrac{V_{\\rm e}^2}{R}$ を満たす $V_{\\rm e}$）を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "抵抗を流れる電流の時間平均 $\\overline I$ を求めよ．"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "tex": "\\textbf{B.} 次に S を閉じ，電気容量 $C$ のコンデンサーを抵抗と並列につなぐ．$RC$ は $T$ に比べて十分に大きく，十分に時間がたった後の状態を考える．このとき抵抗の電圧はほぼ $V_0$ に保たれ，1周期ごとに，電源電圧が最大値 $V_0$ に近いわずかな時間だけ D に電流が流れてコンデンサーが $V_0$ まで充電され，残りの時間はコンデンサーが抵抗を通して放電する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "4",
+      "tex": "放電の間に抵抗を流れる電流はほぼ $\\dfrac{V_0}{R}$ で一定とみなせる．1周期の間の抵抗の電圧の変動幅（リプル）$\\Delta V$ を，$V_0$，$R$，$C$，$T$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$V_0=10\\ \\mathrm V$，周波数 $50\\ \\mathrm{Hz}$，$R=1.0\\ \\mathrm{k\\Omega}$ のとき，$\\Delta V$ を $0.50\\ \\mathrm V$ 以下にするために必要な $C$ の最小値を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "D に電流が流れ始めるのは，電源電圧がコンデンサーの電圧 $V_0-\\Delta V$ に追いついたときであり，D の電流は電源電圧が最大になる時刻にほぼ $0$ になるとする．$\\Delta V\\ll V_0$ として，1周期のうち D に電流が流れる時間の割合を $\\Delta V$ と $V_0$ で表せ．また (5) の条件で値を求め，D を流れる電流についてわかることを述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "交流電源 v、ダイオード D（左から右が順方向）、抵抗 R が直列の回路。抵抗と並列に、スイッチ S とコンデンサー C の直列部分がつながっている",
+   "caption": ""
+  },
+  {
+   "id": "a-wave",
+   "role": "answer",
+   "kind": "waveform",
+   "format": "svg",
+   "src": "a-wave.svg",
+   "alt": "抵抗の電圧 v_R の時間変化。C なしでは正弦波の正の半分だけが現れ、負の半周期は 0。C ありでは最大値 V₀ 近くで充電され、その後わずかに下がってはまた V₀ まで戻る、ほぼ一定の波形",
+   "caption": "抵抗の電圧（C ありの変動は誇張して描いている）"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\overline P=\\dfrac{V_0^2}{4R}$",
+    "grading": "P：V_0^2/(4R)"
+   },
+   {
+    "id": "2",
+    "tex": "$V_{\\rm e}=\\dfrac{V_0}{2}$",
+    "grading": "V_e：V_0/2"
+   },
+   {
+    "id": "3",
+    "tex": "$\\overline I=\\dfrac{V_0}{\\pi R}$",
+    "grading": "I：V_0/(π R)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta V=\\dfrac{V_0T}{RC}$",
+    "grading": "ΔV：V_0 T/(R C)"
+   },
+   {
+    "id": "5",
+    "tex": "$C=4.0\\times10^2\\ \\mu\\mathrm F$",
+    "grading": "C：400 [μF]"
+   },
+   {
+    "id": "6",
+    "tex": "$\\dfrac{1}{2\\pi}\\sqrt{\\dfrac{2\\Delta V}{V_0}}$．(5) の条件で約 $0.050$（$5\\%$）．1周期分の電荷をこの短い時間で補給するので，D には負荷の電流のおよそ $20$ 倍の大きな電流がパルス状に流れる．",
+    "grading": "sqrt(2ΔV/V_0)/(2π)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{A.} D は $v>0$ の半周期だけ電流を通す．抵抗の電圧は $v>0$ で $v$，$v<0$ で $0$（解答の図の「C なし」）．\n\n\\textbf{(1)} 電流が流れる半周期の電力は，ふつうの交流と同じ形 $\\dfrac{v^2}{R}$．1周期の平均は，ふつうの交流の平均 $\\dfrac{V_0^2}{2R}$ の半分：$\\overline P=\\dfrac{V_0^2}{4R}$．\n\n\\textbf{(2)} $\\dfrac{V_{\\rm e}^2}{R}=\\dfrac{V_0^2}{4R}$ より $V_{\\rm e}=\\dfrac{V_0}{2}$（$\\dfrac{V_0}{\\sqrt2}$ ではない）．\n\n\\textbf{(3)} 1周期に流れる電気量は\n\\[\\int_0^{T/2}\\frac{V_0}{R}\\sin\\omega t\\,dt=\\frac{V_0}{R}\\cdot\\frac{2}{\\omega}\\]\nこれを $T=\\dfrac{2\\pi}\\omega$ で割って $\\overline I=\\dfrac{V_0}{\\pi R}$．（電流計（直流用）が示すのはこの値．）"
+    },
+    {
+     "type": "figure",
+     "ref": "a-wave"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{B.}\n\\textbf{(4)} 放電の時間はほぼ1周期 $T$．その間にコンデンサーから抵抗へ流れ出る電気量は $\\dfrac{V_0}{R}T$．コンデンサーの電圧の低下は\n\\[\\Delta V=\\frac{1}{C}\\cdot\\frac{V_0T}{R}=\\frac{V_0T}{RC}\\]\n（$RC\\gg T$ のとき $\\Delta V\\ll V_0$．）\n\n\\textbf{(5)} $\\dfrac{V_0T}{RC}\\le0.50$ より $C\\ge\\dfrac{V_0T}{0.50R}=\\dfrac{10\\times0.020}{0.50\\times1.0\\times10^3}=4.0\\times10^{-4}\\ \\mathrm F=4.0\\times10^2\\ \\mu\\mathrm F$．\n\n\\textbf{(6)} 電源電圧が最大になる時刻から $t'$ 前の電源電圧は $V_0\\cos\\omega t'\\fallingdotseq V_0\\left(1-\\dfrac{(\\omega t')^2}{2}\\right)$．これが $V_0-\\Delta V$ に等しくなるのは $\\omega t'=\\sqrt{\\dfrac{2\\Delta V}{V_0}}$ のとき．D に電流が流れるのはこの $t'$ の間なので，1周期に対する割合は\n\\[\\frac{t'}{T}=\\frac{\\omega t'}{2\\pi}=\\frac{1}{2\\pi}\\sqrt{\\frac{2\\Delta V}{V_0}}\\]\n(5) の条件では $\\dfrac{\\Delta V}{V_0}=0.050$ で，$\\dfrac{1}{2\\pi}\\sqrt{0.10}\\fallingdotseq0.050$．\n抵抗には1周期を通してほぼ $\\dfrac{V_0}{R}$ の電流が流れ続けるが，その電荷はすべて，1周期のわずか $5\\%$ の間に D を通って補給される．D を流れる電流の平均はその間 $\\dfrac{V_0}{R}\\times\\dfrac{T}{t'}\\fallingdotseq20\\times\\dfrac{V_0}{R}$ にもなる．リプルを小さくしようと $C$ を大きくするほど $t'$ は短くなり，D や電源には短く大きな電流のパルスが流れる．整流回路の部品を選ぶときに，平均の電流だけで考えてはいけない理由がここにある．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "半波整流の電力はふつうの交流の半分．平滑コンデンサーは「ほぼ1周期かけて放電，ピーク付近の短時間で充電」なので，リプルは $V_0T/(RC)$，充電の電流は大きなパルスになる．"
+ },
+ "concepts": [
+  "ac-circuit",
+  "capacitor",
+  "electric-power"
+ ],
+ "laws": [
+  "rms-value",
+  "joule-heat"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "交流",
+  "整流",
+  "ダイオード",
+  "コンデンサー",
+  "実効値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

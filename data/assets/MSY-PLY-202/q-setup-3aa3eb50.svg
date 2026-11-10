@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 150" width="340" height="150" font-family="'Times New Roman', serif">
+<polygon points="20,50 280,50 280,140 20,140" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<g transform="translate(150,50) rotate(0)" data-angle="0">
+<rect x="-40" y="-36" width="80" height="36" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-18" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">M</text>
+</g>
+<circle cx="290" cy="40" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<line x1="280" y1="50" x2="290" y2="40" stroke="currentColor" stroke-width="1.2"/>
+<line x1="190" y1="30" x2="290" y2="30" stroke="currentColor" stroke-width="1.2"/>
+<line x1="300" y1="40" x2="300" y2="110" stroke="currentColor" stroke-width="1.2"/>
+<g transform="translate(300,140) rotate(0)" data-angle="0">
+<rect x="-13" y="-30" width="26" height="30" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-15" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+</g>
+</svg>

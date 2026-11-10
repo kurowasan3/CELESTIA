@@ -1,0 +1,120 @@
+{
+ "id": "WAV-TSU-206",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "浅い水の波（津波）の速さ・波長と海岸での屈折",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水深 $h$ が波長に比べて十分に浅い水面を伝わる波の速さは，重力加速度の大きさを $g$ として $v=\\sqrt{gh}$ で表される．津波は波長が数十〜数百 $\\mathrm{km}$ もあるので，深さ数 $\\mathrm{km}$ の外洋でもこの式に従う．$g=9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "深さ $4000\\,\\mathrm m$ の海での津波の速さを有効数字2桁で求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "深さ $4000\\,\\mathrm m$ の一様な海を，津波が $1800\\,\\mathrm{km}$ 伝わるのにかかる時間は何時間か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "この津波の周期は $10$ 分であった．深さ $4000\\,\\mathrm m$ の海での波長は何 $\\mathrm{km}$ か．有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "津波が海岸に近づき，深さ $10\\,\\mathrm m$ の所に来た．波長は深さ $4000\\,\\mathrm m$ のときの何倍になるか．"
+     },
+     {
+      "id": "5",
+      "tex": "沖から海岸線に斜めに近づく波も，海岸の近くでは波の山の線（波面）が海岸線とほぼ平行になる．この理由を説明せよ．海底は海岸に近いほど浅いものとする．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2.0\\times10^2\\,\\mathrm{m/s}$",
+    "grading": "200 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$2.5$ 時間",
+    "grading": "2.5 [h]"
+   },
+   {
+    "id": "3",
+    "tex": "$1.2\\times10^2\\,\\mathrm{km}$",
+    "grading": "120 [km]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac1{20}$ 倍",
+    "grading": "(1/20)倍"
+   },
+   {
+    "id": "5",
+    "tex": "浅いほど波が遅いので，波面のうち先に浅い所に入った部分ほど遅れ，波の進む向きが浅い方（海岸に垂直な向き）へ曲がる（屈折）．そのため波面は海岸線に平行に近づく．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $v=\\sqrt{9.8\\times4000}=\\sqrt{39200}=198\\fallingdotseq\\boldsymbol{2.0\\times10^2\\,\\mathrm{m/s}}$（時速約 $710\\,\\mathrm{km}$，ジェット機なみ）．\n\n(2) $t=\\dfrac{1.8\\times10^6}{198}=9.09\\times10^3\\,\\mathrm s=\\dfrac{9.09\\times10^3}{3600}\\fallingdotseq\\boldsymbol{2.5}$ 時間．\n\n(3) $\\lambda=vT=198\\times600=1.19\\times10^5\\,\\mathrm m\\fallingdotseq\\boldsymbol{1.2\\times10^2\\,\\mathrm{km}}$．深さ $4\\,\\mathrm{km}$ よりはるかに長いので，$v=\\sqrt{gh}$ を使ってよい．\n\n(4) 振動数（周期）は変わらないので，波長は速さに比例する：\n\\[ \\frac{\\lambda'}{\\lambda}=\\frac{v'}{v}=\\sqrt{\\frac{10}{4000}}=\\sqrt{\\frac1{400}}=\\boldsymbol{\\frac1{20}} \\]\n（速さ $9.9\\,\\mathrm{m/s}$，波長約 $6\\,\\mathrm{km}$．）波が詰まって後ろから追いつく形になり，波高も大きくなる．\n\n(5) 波面の一部が先に浅い所に入ると，その部分は遅くなり，まだ深い所にある部分は速いまま進む．そのため波面は，浅い方へ向きを変えるように曲がる（屈折）．海岸に近いほど浅いので，進む向きは海岸線に垂直な向きに近づき，波面は海岸線とほぼ平行になる．光が屈折率の大きい（遅い）媒質に入ると法線に近づくように曲がるのと同じ．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "水面波の速さは水深で決まる（浅い水では $v=\\sqrt{gh}$）．振動数は変わらないので，浅くなると波長が縮み，進む向きは浅い方へ曲がる．"
+ },
+ "concepts": [
+  "wave-basics"
+ ],
+ "laws": [
+  "wave-speed",
+  "refraction-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "水面波",
+  "津波",
+  "波の速さ",
+  "屈折"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

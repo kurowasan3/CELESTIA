@@ -1,0 +1,132 @@
+{
+ "id": "ESY-HLX-205",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "磁場に斜めに入射した荷電粒子のらせん運動と磁気収束",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "derivation",
+  "calc"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "$z$ 軸の正の向きに磁束密度 $B$ の一様な磁場がある．原点 O から，質量 $m$，電気量 $q\\ (>0)$ の粒子を，速さ $v$ で，$z$ 軸と角 $\\theta\\ (0<\\theta<90^\\circ)$ をなす向きに打ち出した．重力は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "速度の $z$ 成分の大きさと，$z$ 軸に垂直な成分の大きさは，その後どうなるか．理由とともに答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "粒子を $z$ 軸の正の向きから見ると，円運動をしている．その半径 $r$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "この円運動の周期 $T$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "粒子は $z$ 軸に平行な直線（O を通る磁力線）の上に周期 $T$ ごとに戻ってくる．1周する間に $z$ 方向に進む距離（ピッチ）$p$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "陽子（質量 $1.7\\times10^{-27}\\ \\mathrm{kg}$，電気量 $1.6\\times10^{-19}\\ \\mathrm C$）を $v=2.0\\times10^6\\ \\mathrm{m/s}$，$\\theta=30^\\circ$，$B=0.50\\ \\mathrm T$ で打ち出したとき，$r$ と $p$ はそれぞれ何 m か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "6",
+      "tex": "O から，同じ速さ $v$ で，$\\theta$ が少しずつ異なる（どれも十分小さい）向きに多数の粒子を打ち出す．これらの粒子は，O を通る磁力線上のある点にほぼ同時に集まる．O からその点までの距離 $L$ と，そうなる理由を答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$z$ 成分 $v\\cos\\theta$ も，垂直な成分 $v\\sin\\theta$ も一定（ローレンツ力は $z$ 成分をもたず，仕事もしない）"
+   },
+   {
+    "id": "2",
+    "tex": "$r=\\dfrac{mv\\sin\\theta}{qB}$",
+    "grading": "r：m v sin(θ)/(q B)"
+   },
+   {
+    "id": "3",
+    "tex": "$T=\\dfrac{2\\pi m}{qB}$",
+    "grading": "T：2π m/(q B)"
+   },
+   {
+    "id": "4",
+    "tex": "$p=\\dfrac{2\\pi mv\\cos\\theta}{qB}$",
+    "grading": "p：2π m v cos(θ)/(q B)"
+   },
+   {
+    "id": "5",
+    "tex": "$r=2.1\\times10^{-2}\\ \\mathrm m$，$p=0.23\\ \\mathrm m$",
+    "grading": "r：2.1*10^(-2) [m] ; p：0.23 [m]"
+   },
+   {
+    "id": "6",
+    "tex": "$L=\\dfrac{2\\pi mv}{qB}$．周期 $T$ は $\\theta$ によらず，$\\theta$ が小さければ $z$ 方向の速さ $v\\cos\\theta\\fallingdotseq v$ もほぼ同じなので，1周して磁力線に戻る位置がそろう．",
+    "grading": "L：2π m v/(q B)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} ローレンツ力 $q\\vec v\\times\\vec B$ は $\\vec B$（$z$ 方向）に垂直なので $z$ 成分をもたず，$v_z=v\\cos\\theta$ は一定．また，ローレンツ力は速度に垂直で仕事をしないので速さ $v$ は一定．よって垂直な成分 $v_\\perp=\\sqrt{v^2-v_z^2}=v\\sin\\theta$ も一定．\n\n\\textbf{(2)} $z$ 軸に垂直な面内では，大きさ $qv_\\perp B$ の力が向心力になる：$m\\dfrac{v_\\perp^2}r=qv_\\perp B$，$r=\\dfrac{mv\\sin\\theta}{qB}$．\n\n\\textbf{(3)} $T=\\dfrac{2\\pi r}{v_\\perp}=\\dfrac{2\\pi m}{qB}$．速さにも $\\theta$ にもよらない．\n\n\\textbf{(4)} 円運動と $z$ 方向の等速運動を合わせたらせん運動になる．$p=v_zT=\\dfrac{2\\pi mv\\cos\\theta}{qB}$．\n\n\\textbf{(5)} $r=\\dfrac{1.7\\times10^{-27}\\times2.0\\times10^6\\times0.50}{1.6\\times10^{-19}\\times0.50}=2.1\\times10^{-2}\\ \\mathrm m$．$p=\\dfrac{2\\pi\\times1.7\\times10^{-27}\\times2.0\\times10^6\\times0.866}{1.6\\times10^{-19}\\times0.50}\\fallingdotseq0.231\\fallingdotseq0.23\\ \\mathrm m$．（ピッチは半径の約 11 倍で，細長いらせんになる．）．\n\n\\textbf{(6)} どの粒子も時刻 $T$ に O を通る磁力線（$z$ 軸）上に戻り，そのときの $z$ 座標は $v\\cos\\theta\\cdot T$．$\\theta$ が小さいと $\\cos\\theta\\fallingdotseq1-\\dfrac{\\theta^2}2$ で，$\\theta$ の違いによるずれは2次の微小量にすぎないので，ほぼ $L=vT=\\dfrac{2\\pi mv}{qB}$ の1点に集まる（磁場による収束）．広がって出た粒子線を，レンズのように1点に集められる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "速度を磁場に平行な成分と垂直な成分に分ける．平行な成分は変わらず，垂直な成分は周期 $\\dfrac{2\\pi m}{qB}$ の円運動．合わせるとらせん運動．"
+ },
+ "concepts": [
+  "lorentz-force",
+  "circular-motion",
+  "kinematics-components"
+ ],
+ "laws": [
+  "lorentz-force",
+  "cyclotron-motion",
+  "centripetal-acceleration"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ローレンツ力",
+  "らせん運動",
+  "ピッチ",
+  "磁気収束"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="440" height="250" font-family="'Times New Roman', serif">
+<line x1="150" y1="20" x2="250" y2="20" stroke="currentColor" stroke-width="2"/>
+<circle cx="200" cy="20" r="3" fill="currentColor"/>
+<line x1="200" y1="20" x2="136.61" y2="155.95" stroke="currentColor" stroke-width="1.2"/>
+<polygon points="108.61,155.95 164.61,155.95 164.61,205.95 108.61,205.95" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<text x="100.61" y="180.95" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">アルミニウム板</text>
+<polygon points="165,175 235,175 235,235 165,235" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="178" y="188" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="178" y="210" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="200" y="188" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="200" y="210" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="222" y="188" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="222" y="210" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">×</text>
+<text x="250" y="205" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">磁極の間（磁場は紙面に垂直）</text>
+<path d="M126.04,178.6 A175,175 0 0 0 273.96,178.6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+</svg>

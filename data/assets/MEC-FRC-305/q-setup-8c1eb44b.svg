@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 215" width="340" height="215" font-family="'Times New Roman', serif">
+<line x1="20" y1="190" x2="330" y2="190" stroke="currentColor" stroke-width="2"/>
+<polygon points="40,190 300,190 300,60" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6" data-phys="incline"/>
+<line x1="40" y1="190" x2="300" y2="60" stroke="currentColor" stroke-width="2" data-phys="surface"/>
+<path d="M76,190 A36,36 0 0 0 72.2,173.9" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="88.66" y="178.51" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ₀</text>
+<g transform="translate(170,125) rotate(-26.57)" data-phys="body:block" data-angle="26.57">
+<rect x="-20" y="-24" width="40" height="24" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<text x="170" y="206" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">80 cm</text>
+<text x="308" y="125" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">40 cm</text>
+</svg>

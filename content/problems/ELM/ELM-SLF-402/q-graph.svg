@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" width="480" height="250" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="410">
+<line x1="50" y1="220" x2="450" y2="220" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="460,220 450,224.66 450,215.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="215">
+<line x1="60" y1="230" x2="60" y2="25" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,15 64.66,25 55.34,25" fill="currentColor"/>
+</g>
+<text x="462" y="236" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">t [ms]</text>
+<text x="68" y="13" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">I [A]</text>
+<text x="54" y="232" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<line x1="130" y1="216" x2="130" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="130" y="236" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">5</text>
+<line x1="200" y1="216" x2="200" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="200" y="236" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">10</text>
+<line x1="270" y1="216" x2="270" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="270" y="236" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">15</text>
+<line x1="340" y1="216" x2="340" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="340" y="236" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">20</text>
+<line x1="410" y1="216" x2="410" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="410" y="236" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">25</text>
+<line x1="56" y1="160" x2="64" y2="160" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="160" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.10</text>
+<line x1="56" y1="100" x2="64" y2="100" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="100" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.20</text>
+<line x1="56" y1="40" x2="64" y2="40" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="40" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.30</text>
+<polyline points="60,220 63.5,211.22 67,202.87 70.5,194.93 74,187.37 77.5,180.18 81,173.35 84.5,166.84 88,160.66 91.5,154.77 95,149.18 98.5,143.85 102,138.79 105.5,133.97 109,129.39 112.5,125.03 116,120.88 119.5,116.93 123,113.18 126.5,109.61 130,106.22 133.5,102.99 137,99.92 140.5,96.99 144,94.21 147.5,91.57 151,89.06 154.5,86.66 158,84.39 161.5,82.22 165,80.16 168.5,78.2 172,76.34 175.5,74.57 179,72.88 182.5,71.28 186,69.75 189.5,68.3 193,66.92 196.5,65.61 200,64.36 203.5,63.17 207,62.04 210.5,60.97 214,59.94 217.5,58.97 221,58.05 224.5,57.17 228,56.33 231.5,55.53 235,54.78 238.5,54.05 242,53.37 245.5,52.72 249,52.1 252.5,51.51 256,50.95 259.5,50.41 263,49.9 266.5,49.42 270,48.96 273.5,48.52 277,48.11 280.5,47.71 284,47.34 287.5,46.98 291,46.64 294.5,46.32 298,46.01 301.5,45.71 305,45.44 308.5,45.17 312,44.92 315.5,44.68 319,44.45 322.5,44.23 326,44.03 329.5,43.83 333,43.64 336.5,43.47 340,43.3 343.5,43.14 347,42.98 350.5,42.84 354,42.7 357.5,42.57 361,42.44 364.5,42.32 368,42.21 371.5,42.1 375,42 378.5,41.9 382,41.81 385.5,41.72 389,41.64 392.5,41.56 396,41.48 399.5,41.41 403,41.34 406.5,41.28 410,41.21 413.5,41.15 417,41.1 420.5,41.04 424,40.99 427.5,40.94 431,40.9 434.5,40.85 438,40.81 441.5,40.77 445,40.74 448.5,40.7 452,40.67" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="60" y1="220" x2="138.4" y2="18.4" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="60" y1="40" x2="452" y2="40" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="130" y1="220" x2="130" y2="40" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+</svg>

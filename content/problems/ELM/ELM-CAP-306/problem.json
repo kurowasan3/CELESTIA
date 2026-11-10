@@ -1,0 +1,150 @@
+{
+ "id": "ELM-CAP-306",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-02",
+ "topic": "抵抗とコンデンサーを含む回路のスイッチを閉じた直後・十分時間後・開いた後",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "calc",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "起電力 $E=12\\,\\mathrm V$ の電池（内部抵抗は無視できる），抵抗値 $R_1=20\\,\\Omega$，$R_2=30\\,\\Omega$，$R_3=60\\,\\Omega$ の抵抗，電気容量 $C=50\\,\\mu\\mathrm F$ のコンデンサー，スイッチ S を図のようにつないだ．はじめ S は開いていて，コンデンサーに電荷はない．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-circuit"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "S を閉じた直後に $R_1$ を流れる電流 $I_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "S を閉じた直後に $R_3$ を流れる電流 $I_3$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "S を閉じて十分時間がたったときに $R_1$ を流れる電流 $I_1$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "このときコンデンサーにたくわえられている電気量 $Q$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "次に S を開いた．開いた直後に $R_2$ を流れる電流の大きさ $I_2$ を求めよ．また，その向きは S を開く前と同じか逆か（P→Q か Q→P か）．"
+     },
+     {
+      "id": "6",
+      "tex": "S を開いてから十分時間がたつまでに $R_3$ で発生するジュール熱 $H$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-circuit",
+   "role": "question",
+   "kind": "circuit",
+   "format": "svg",
+   "src": "q-circuit.svg",
+   "alt": "電池 E（12 V）、スイッチ S、抵抗 R₁ が直列で点 P につながる。P と Q の間に、抵抗 R₂ の枝と、抵抗 R₃ とコンデンサー C を直列にした枝が並列につながり、Q は電池の負極に戻る",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I_0=0.30\\,\\mathrm A$",
+    "grading": "I_0：0.3 [A]"
+   },
+   {
+    "id": "2",
+    "tex": "$I_3=0.10\\,\\mathrm A$",
+    "grading": "I_3：0.1 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "$I_1=0.24\\,\\mathrm A$",
+    "grading": "I_1：0.24 [A]"
+   },
+   {
+    "id": "4",
+    "tex": "$Q=3.6\\times10^{-4}\\,\\mathrm C$",
+    "grading": "Q：3.6*10^(-4) [C]"
+   },
+   {
+    "id": "5",
+    "tex": "$I_2=0.080\\,\\mathrm A$，向きは開く前と同じ（P→Q）",
+    "grading": "I_2：0.08 [A]"
+   },
+   {
+    "id": "6",
+    "tex": "$H=8.64\\times10^{-4}\\,\\mathrm J$",
+    "grading": "H：8.64*10^(-4) [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "コンデンサーは，電荷が $0$ のとき（電圧 $0$）は導線と同じ，十分時間後（電流 $0$）は切れた導線と同じとみなせる．\n\n(1) 直後は C の電圧が $0$ なので，$R_2$ と $R_3$ は並列：$\\dfrac{30\\times60}{30+60}=20\\,\\Omega$．全体 $20+20=40\\,\\Omega$ で $I_0=\\dfrac{12}{40}=0.30\\,\\mathrm A$．\n\n(2) PQ 間の電圧は $0.30\\times20=6.0\\,\\mathrm V$．$R_3$ の電圧も $6.0\\,\\mathrm V$（C の電圧は $0$）なので $I_3=\\dfrac{6.0}{60}=0.10\\,\\mathrm A$．\n\n(3) 十分時間後は C の枝に電流が流れないので，$R_1$ と $R_2$ の直列：$I_1=\\dfrac{12}{20+30}=0.24\\,\\mathrm A$．\n\n(4) $R_3$ に電流がないので $R_3$ の電圧は $0$，C の電圧は PQ 間の電圧 $R_2I_1=30\\times0.24=7.2\\,\\mathrm V$．$Q=CV=50\\times10^{-6}\\times7.2=3.6\\times10^{-4}\\,\\mathrm C$（P 側の極板が正）．\n\n(5) S を開くと電池の枝は切れ，C・$R_3$・$R_2$ のループで C が放電する．開いた直後の C の電圧は $7.2\\,\\mathrm V$ のままなので $I_2=\\dfrac{7.2}{60+30}=0.080\\,\\mathrm A$．C の正の極板（P 側）から出た電流は $R_3$ を通って P に行き，$R_2$ を P→Q の向きに流れる．$R_2$ では開く前と同じ向き（$R_3$ では充電のときと逆向き）．\n\n(6) C の静電エネルギー $\\dfrac12CV^2=\\dfrac12\\times50\\times10^{-6}\\times7.2^2=1.296\\times10^{-3}\\,\\mathrm J$ が $R_2$ と $R_3$ で熱になる．直列なので電流は常に共通で，発熱は抵抗値に比例して分かれる：\n\\[H=\\frac{60}{60+30}\\times1.296\\times10^{-3}=8.64\\times10^{-4}\\,\\mathrm J．\\]"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "直後：コンデンサーは電圧 $0$（導線と同じ）．十分時間後：電流 $0$（切れた導線と同じ）．放電の熱は，直列の抵抗に抵抗値の比で分かれる．"
+ },
+ "concepts": [
+  "capacitor",
+  "ohm-law-use",
+  "electric-power"
+ ],
+ "laws": [
+  "ohm-law",
+  "kirchhoff-2nd",
+  "capacitor-energy",
+  "joule-heat"
+ ],
+ "misconceptions": [
+  "MC-CAP-CURRENT"
+ ],
+ "tags": [
+  "RC 回路",
+  "直後と十分時間後",
+  "放電",
+  "ジュール熱"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

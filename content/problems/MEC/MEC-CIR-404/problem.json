@@ -1,0 +1,138 @@
+{
+ "id": "MEC-CIR-404",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "くぎに掛かる振り子の糸（張力の急変，くぎのまわりを一周する条件，糸がたるむ位置とその後の最高点）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 18,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "長さ $l$ の軽い糸の一端を点 O に固定し，他端に質量 $m$ の小球をつける．O の真下で O から距離 $d$（$0<d<l$）の点 P に，細いくぎを水平に打つ．糸を水平に張った位置から小球を静かにはなすと，小球が最下点を通過する瞬間に糸がくぎに掛かり，以後，小球は P を中心とする半径 $r=l-d$ の円周に沿って運動しはじめた．重力加速度の大きさを $g$ とし，糸がくぎに掛かるときに小球の速さは変わらないものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "最下点での小球の速さ $v_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "糸がくぎに掛かる直前の糸の張力 $T_1$ と，直後の張力 $T_2$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "小球が，糸をたるませずに P のまわりを一周するための $d$ の最小値 $d_0$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$d=\\dfrac l2$ とする．P を通る水平線と糸のなす角を $\\alpha$ とし，小球が P より上にあるときを考える．糸がたるむときの $\\sin\\alpha$ の値と，そのときの小球の速さ $v$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の場合，糸がたるんだ後に小球が達する最高点は，はなした位置（O の高さ）より低い．その理由を説明し，最高点が O の高さより何だけ低いかを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "点 O から長さ l の糸でつるした小球を、糸を水平に張った位置からはなす。O の真下、距離 d の点 P にくぎがあり、最下点で糸がくぎに掛かって、小球は P を中心とする円周（点線）に沿って運動する",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_0=\\sqrt{2gl}$",
+    "grading": "v_0：sqrt(2g l)"
+   },
+   {
+    "id": "2",
+    "tex": "$T_1=3mg$，$T_2=mg\\left(1+\\dfrac{2l}{l-d}\\right)$",
+    "grading": "T_1：3m g ; T_2：m g(1+2l/(l-d))"
+   },
+   {
+    "id": "3",
+    "tex": "$d_0=\\dfrac35l$",
+    "grading": "d_0：3l/5"
+   },
+   {
+    "id": "4",
+    "tex": "$\\sin\\alpha=\\dfrac23$，$v=\\sqrt{\\dfrac{gl}{3}}$",
+    "grading": "sinα：2/3 ; v：sqrt(g l/3)"
+   },
+   {
+    "id": "5",
+    "tex": "糸がたるむと小球は放物運動をし，最高点でも水平方向の速度が残る（運動エネルギーが $0$ にならない）ので，その分だけ高く上がれない．$\\dfrac{2}{27}l$ 低い．",
+    "grading": "2l/27"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 糸の張力は速度に垂直で仕事をしないので，力学的エネルギー保存：$\\dfrac12mv_0^2=mgl$ より $v_0=\\sqrt{2gl}$．\n\n(2) 最下点では張力（上向き）と重力の合力が向心力．円運動の半径が $l$ から $r=l-d$ に急に変わる：\\[T_1-mg=m\\frac{v_0^2}{l}\\ \\Rightarrow\\ T_1=3mg,\\qquad T_2-mg=m\\frac{v_0^2}{l-d}\\ \\Rightarrow\\ T_2=mg\\left(1+\\frac{2l}{l-d}\\right)\\] 速さは同じでも半径が小さくなるので，張力は急に大きくなる（$d$ が $l$ に近いほど大きい）．\n\n(3) P の真上（最高点，最下点から高さ $2r$）での速さを $v_{\\rm t}$ とすると $v_{\\rm t}^2=v_0^2-4gr=2gl-4gr$．最高点で糸がたるまない条件は張力 $\\ge0$，すなわち $mg\\le m\\dfrac{v_{\\rm t}^2}{r}$：\\[gr\\le2gl-4gr\\quad\\Longrightarrow\\quad r\\le\\frac25l\\quad\\Longrightarrow\\quad d\\ge\\frac35l\\] 最高点で張力が最小になるので，ここで条件を満たせば一周できる．$d_0=\\dfrac35l$．\n\n(4) $r=\\dfrac l2$．角 $\\alpha$ の位置の高さは最下点から $r(1+\\sin\\alpha)$ なので $v^2=2gl-2gr(1+\\sin\\alpha)$．中心 P 向きの運動方程式は，重力の中心向き成分が $mg\\sin\\alpha$ なので\\[T+mg\\sin\\alpha=m\\frac{v^2}{r}\\quad\\Longrightarrow\\quad T=mg\\left(\\frac{2l}{r}-2-3\\sin\\alpha\\right)=mg(2-3\\sin\\alpha)\\] $T=0$ より $\\sin\\alpha=\\dfrac23$．このとき\\[v^2=2gl-gl\\left(1+\\frac23\\right)=\\frac{gl}{3},\\qquad v=\\sqrt{\\frac{gl}{3}}\\] （確かめ：$T=0$ のとき $mg\\sin\\alpha=m\\dfrac{v^2}{r}$ より $v^2=g\\cdot\\dfrac l2\\cdot\\dfrac23=\\dfrac{gl}3$．）\n\n(5) 糸がたるんだ瞬間，速度は糸に垂直で，水平と角 $90^\\circ-\\alpha$ をなす斜め上向き．以後は重力だけを受ける放物運動で，最高点でも水平成分 $v\\sin\\alpha$ が残る．最高点の運動エネルギーは\\[\\frac12m(v\\sin\\alpha)^2=\\frac12m\\cdot\\frac{gl}{3}\\cdot\\frac49=\\frac{2}{27}mgl\\] 力学的エネルギー保存より，その分だけ O の高さより低い：$\\dfrac{2}{27}l$．（直接計算しても，たるむ点の高さ $\\dfrac56l$ に $\\dfrac{(v\\cos\\alpha)^2}{2g}=\\dfrac{5}{54}l$ を加えて $\\dfrac{25}{27}l$．）エネルギーが保存しても，速度がすべて鉛直上向きにならない限り，はじめの高さまでは上がれない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "糸の円運動では「張力 $\\ge0$」が糸がたるまない条件．最高点で最も厳しい．たるんだ後は放物運動で，水平方向の速さが残る分だけはじめの高さに届かない．"
+ },
+ "concepts": [
+  "circular-motion",
+  "mechanical-energy",
+  "projectile-motion"
+ ],
+ "laws": [
+  "centripetal-acceleration",
+  "energy-conservation",
+  "newton-2nd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "鉛直面内の円運動",
+  "張力",
+  "糸がたるむ条件",
+  "力学的エネルギー保存"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

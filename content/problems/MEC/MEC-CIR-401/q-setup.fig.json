@@ -1,0 +1,143 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  225
+ ],
+ "items": [
+  {
+   "t": "block",
+   "at": [
+    200,
+    170
+   ],
+   "w": 240,
+   "h": 12,
+   "label": "",
+   "phys": "body:table"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    170
+   ],
+   "to": [
+    200,
+    215
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    158
+   ],
+   "to": [
+    200,
+    60
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    200,
+    70
+   ],
+   "r": 26,
+   "from": 200,
+   "to": 340
+  },
+  {
+   "t": "arrow",
+   "from": [
+    224.43,
+    78.89
+   ],
+   "dir": 70,
+   "len": 10,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    238,
+    92
+   ],
+   "text": "ω",
+   "italic": true,
+   "size": 15,
+   "anchor": "middle"
+  },
+  {
+   "t": "block",
+   "at": [
+    280,
+    158
+   ],
+   "w": 26,
+   "h": 8,
+   "label": "",
+   "phys": "body:coin"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    192
+   ],
+   "to": [
+    280,
+    192
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    280,
+    186
+   ],
+   "to": [
+    280,
+    198
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    240,
+    204
+   ],
+   "text": "0.10 m",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    132
+   ],
+   "text": "硬貨",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    76,
+    164
+   ],
+   "text": "回転台",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 250" width="380" height="250" font-family="'Times New Roman', serif">
+<g data-phys="battery:12 V">
+<line x1="40" y1="210" x2="40" y2="145" stroke="currentColor" stroke-width="1.6"/>
+<line x1="40" y1="135" x2="40" y2="70" stroke="currentColor" stroke-width="1.6"/>
+<line x1="54" y1="135" x2="26" y2="135" stroke="currentColor" stroke-width="1.6"/>
+<line x1="47" y1="145" x2="33" y2="145" stroke="currentColor" stroke-width="3"/>
+<text x="60" y="140" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">12 V</text>
+</g>
+<polyline points="40,70 40,40 100,40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="40" cy="40" r="3" fill="currentColor"/>
+<text x="30" y="30" font-size="14" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<g data-phys="resistor:R₁ = 2.0 Ω">
+<line x1="100" y1="40" x2="117" y2="40" stroke="currentColor" stroke-width="1.6"/>
+<line x1="163" y1="40" x2="180" y2="40" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="117,47 163,47 163,33 117,33" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="140" y="22" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">R₁ = 2.0 Ω</text>
+</g>
+<polyline points="180,40 260,40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="260" cy="40" r="3" fill="currentColor"/>
+<text x="272" y="30" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<polyline points="260,40 260,85" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:R₂ = 4.0 Ω">
+<line x1="260" y1="85" x2="260" y2="102" stroke="currentColor" stroke-width="1.6"/>
+<line x1="260" y1="148" x2="260" y2="165" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="253,102 253,148 267,148 267,102" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="274" y="125" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">R₂ = 4.0 Ω</text>
+</g>
+<polyline points="260,165 260,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="260" cy="210" r="3" fill="currentColor"/>
+<text x="272" y="204" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">D</text>
+<polyline points="260,210 40,210" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="260" y1="210" x2="260" y2="218" stroke="currentColor" stroke-width="1.2"/>
+<line x1="248" y1="218" x2="272" y2="218" stroke="currentColor" stroke-width="2"/>
+<line x1="252" y1="223" x2="268" y2="223" stroke="currentColor" stroke-width="1.2"/>
+<line x1="256" y1="228" x2="264" y2="228" stroke="currentColor" stroke-width="1.2"/>
+</svg>

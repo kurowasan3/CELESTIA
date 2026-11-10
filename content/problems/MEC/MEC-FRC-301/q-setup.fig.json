@@ -1,0 +1,122 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  230
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     40,
+     150
+    ],
+    [
+     300,
+     150
+    ],
+    [
+     300,
+     162
+    ],
+    [
+     40,
+     162
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    150
+   ],
+   "to": [
+    300,
+    150
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    162
+   ],
+   "to": [
+    60,
+    220
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    280,
+    162
+   ],
+   "to": [
+    280,
+    220
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "block",
+   "at": [
+    170,
+    150
+   ],
+   "w": 120,
+   "h": 24,
+   "label": "",
+   "phys": "body:book"
+  },
+  {
+   "t": "text",
+   "at": [
+    236,
+    138
+   ],
+   "text": "本（質量 M）",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "block",
+   "at": [
+    170,
+    126
+   ],
+   "w": 40,
+   "h": 36,
+   "label": "",
+   "phys": "body:cup"
+  },
+  {
+   "t": "text",
+   "at": [
+    196,
+    108
+   ],
+   "text": "コップ（質量 m）",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    176
+   ],
+   "text": "机",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  }
+ ]
+}

@@ -1,0 +1,157 @@
+{
+ "id": "THM-FST-207",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-03",
+ "topic": "2つの断熱変化と2つの定圧変化からなるサイクル（熱効率が圧力比だけで決まることと，最高温度を固定したときの仕事と効率の兼ね合い）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "synthesis",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "物質量 $n$ の単原子分子理想気体に，図のサイクル A→B→C→D→A をゆっくり行わせる熱機関を考える（ガスタービンの基本となるサイクル）．A→B は断熱圧縮，B→C は定圧加熱，C→D は断熱膨張，D→A は定圧冷却である．状態 A の圧力を $P_0$，絶対温度を $T_0$ とし，B，C の圧力は $32P_0$ である．状態 C の温度は $16T_0$ とする．気体定数を $R$ とし，断熱変化では $PV^{\\frac53}=$一定 が成り立つ．図は模式図である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-fig"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "状態 B の温度 $T_{\\rm B}$ を $T_0$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "状態 D の温度 $T_{\\rm D}$ を $T_0$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "B→C で気体が吸収する熱量 $Q_{\\text{入}}$ と，D→A で気体が放出する熱量 $Q_{\\text{出}}$（正の量）を $n$，$R$，$T_0$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "1サイクルで気体が外にする正味の仕事 $W$ と，熱効率 $e$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "圧力比 $r=\\dfrac{P_{\\rm B}}{P_{\\rm A}}$ を一般の値にしたとき（A の状態は同じで，C の温度は $T_{\\rm B}$ より高いとする），熱効率を $r$ で表せ．"
+     },
+     {
+      "id": "6",
+      "tex": "A の温度 $T_0$ と C の温度 $16T_0$ を固定したまま，圧力比 $r$ だけを変える．1サイクルの仕事 $W$ を $T_{\\rm B}$ の関数として表し，$W$ が最大になる $T_{\\rm B}$ を求めよ．"
+     },
+     {
+      "id": "7",
+      "tex": "(6) の条件のもとで $r$ を大きくして $T_{\\rm B}$ を $16T_0$ に近づけると，熱効率 $e$ と仕事 $W$ はそれぞれどうなるか．その熱効率の値の意味とあわせて，実際の機関で圧力比をむやみに大きくしない理由を述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-fig",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-fig.svg",
+   "alt": "P-V 図の模式図。圧力 32P₀ の水平線上を B から C へ右に進み，C から断熱曲線に沿って D（圧力 P₀）へ，圧力 P₀ の水平線上を D から A へ左に進み，A から断熱曲線に沿って B へ戻る時計回りのサイクル",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_{\\rm B}=4T_0$",
+    "grading": "T_B：4T_0"
+   },
+   {
+    "id": "2",
+    "tex": "$T_{\\rm D}=4T_0$",
+    "grading": "T_D：4T_0"
+   },
+   {
+    "id": "3",
+    "tex": "$Q_{\\text{入}}=30nRT_0$，$Q_{\\text{出}}=\\dfrac{15}{2}nRT_0$",
+    "grading": "Q_{in}：30n R T_0 ; Q_{out}：15n R T_0/2"
+   },
+   {
+    "id": "4",
+    "tex": "$W=\\dfrac{45}{2}nRT_0$，$e=\\dfrac34$",
+    "grading": "W：45n R T_0/2 ; e：3/4"
+   },
+   {
+    "id": "5",
+    "tex": "$e=1-r^{-\\frac25}$",
+    "grading": "e：1-r^(-2/5)"
+   },
+   {
+    "id": "6",
+    "tex": "$W=\\dfrac52nR\\left(17T_0-T_{\\rm B}-\\dfrac{16T_0^2}{T_{\\rm B}}\\right)$，最大になるのは $T_{\\rm B}=4T_0$",
+    "grading": "T_B：4T_0"
+   },
+   {
+    "id": "7",
+    "tex": "$e$ は大きくなって $\\dfrac{15}{16}$ に近づき，$W$ は $0$ に近づく．$\\dfrac{15}{16}=1-\\dfrac{T_0}{16T_0}$ は，最高温度 $16T_0$ と最低温度 $T_0$ の間で働く熱機関の効率の上限（カルノー効率）である．効率は上限に近づくが，1サイクルで取り出せる仕事がなくなるので，同じ出力を得るには装置を大きくしなければならず，実用的でない．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　$PV^{\\frac53}=$一定 と $PV=nRT$ から $V$ を消すと $\\dfrac{T^{5/2}}{P}=$一定，すなわち $T\\propto P^{\\frac25}$．$T_{\\rm B}=T_0\\cdot32^{\\frac25}=4T_0$．\n\n\\textbf{(2)}　C→D も同じ圧力比 $\\dfrac{1}{32}$ の断熱膨張なので $T_{\\rm D}=16T_0\\cdot32^{-\\frac25}=4T_0$．\n\n\\textbf{(3)}　定圧モル比熱 $\\dfrac52R$ を使う：$Q_{\\text{入}}=\\dfrac52nR(16T_0-4T_0)=30nRT_0$，$Q_{\\text{出}}=\\dfrac52nR(4T_0-T_0)=\\dfrac{15}{2}nRT_0$．断熱過程では熱の出入りがない．\n\n\\textbf{(4)}　1サイクルで $\\Delta U=0$ なので $W=Q_{\\text{入}}-Q_{\\text{出}}=\\dfrac{45}{2}nRT_0$，$e=\\dfrac{W}{Q_{\\text{入}}}=\\dfrac34$．\n\n\\textbf{(5)}　2つの断熱過程の圧力比が等しいので $\\dfrac{T_{\\rm B}}{T_{\\rm A}}=\\dfrac{T_{\\rm C}}{T_{\\rm D}}=r^{\\frac25}$．\\[e=1-\\frac{Q_{\\text{出}}}{Q_{\\text{入}}}=1-\\frac{T_{\\rm D}-T_{\\rm A}}{T_{\\rm C}-T_{\\rm B}}=1-\\frac{T_{\\rm D}-T_{\\rm A}}{r^{\\frac25}(T_{\\rm D}-T_{\\rm A})}=1-r^{-\\frac25}\\] 熱効率は最高温度 $T_{\\rm C}$ によらず，圧力比だけで決まる（$=1-\\dfrac{T_{\\rm A}}{T_{\\rm B}}$）．\n\n\\textbf{(6)}　$T_{\\rm A}=T_0$，$T_{\\rm C}=16T_0$ で，$T_{\\rm D}=\\dfrac{T_{\\rm A}T_{\\rm C}}{T_{\\rm B}}=\\dfrac{16T_0^2}{T_{\\rm B}}$．\\[W=\\frac52nR\\{(T_{\\rm C}-T_{\\rm B})-(T_{\\rm D}-T_{\\rm A})\\}=\\frac52nR\\left(17T_0-T_{\\rm B}-\\frac{16T_0^2}{T_{\\rm B}}\\right)\\] 相加平均と相乗平均の関係より $T_{\\rm B}+\\dfrac{16T_0^2}{T_{\\rm B}}\\geqq2\\sqrt{16T_0^2}=8T_0$ で，等号は $T_{\\rm B}=4T_0$（$r=32$）のとき．このとき $W=\\dfrac52nR\\cdot9T_0=\\dfrac{45}{2}nRT_0$ で最大となり，(4) の場合がちょうど仕事最大の条件になっている（$T_{\\rm B}=\\sqrt{T_{\\rm A}T_{\\rm C}}$，このとき $T_{\\rm B}=T_{\\rm D}$）．\n\n\\textbf{(7)}　$e=1-\\dfrac{T_0}{T_{\\rm B}}$ は $T_{\\rm B}$ とともに増え，$T_{\\rm B}\\to16T_0$ で $1-\\dfrac1{16}=\\dfrac{15}{16}$ に近づく．一方，(6) の式で $T_{\\rm B}=16T_0$ とすると $W=\\dfrac52nR(17-16-1)T_0=0$．このとき B→C の加熱はほとんどなくなり（$Q_{\\text{入}}\\to0$），サイクルは $P$-$V$ 図で面積のない細い形につぶれる．$\\dfrac{15}{16}$ は，最高温度 $16T_0$，最低温度 $T_0$ の熱源の間で働く熱機関が原理的に到達できる最大の効率（カルノー効率 $1-\\dfrac{T_{\\text{低}}}{T_{\\text{高}}}$）である．効率を上限に近づけることと，1サイクルあたりの仕事（出力）を大きくすることは両立しない．材料が耐えられる最高温度が決まっている実際の機関では，効率と出力の兼ね合いから，仕事が最大になる付近の圧力比が選ばれる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "断熱変化では $T\\propto P^{\\frac{\\gamma-1}{\\gamma}}$．2つの断熱過程の圧力比が同じなので温度比も同じで，効率は圧力比だけで決まる．最高温度を固定すると，効率と仕事は兼ね合いの関係になる．"
+ },
+ "concepts": [
+  "heat-engine",
+  "first-law"
+ ],
+ "laws": [
+  "adiabatic",
+  "thermal-efficiency",
+  "molar-heat",
+  "first-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ブレイトンサイクル",
+  "熱効率",
+  "断熱変化",
+  "カルノー効率",
+  "定圧変化"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

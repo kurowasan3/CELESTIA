@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 240" width="380" height="240" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="330">
+<line x1="30" y1="170" x2="350" y2="170" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="360,170 350,174.66 350,165.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="205">
+<line x1="200" y1="225" x2="200" y2="30" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="200,20 204.66,30 195.34,30" fill="currentColor"/>
+</g>
+<text x="352" y="184" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">x</text>
+<text x="212" y="26" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">y</text>
+<circle cx="80" cy="170" r="11" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<text x="80" y="150" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A</text>
+<g class="f-vel" data-phys="velocity:vA" data-dir="0" data-len="60">
+<line x1="93" y1="170" x2="143" y2="170" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="153,170 143,174.66 143,165.34" fill="currentColor"/>
+<text x="123" y="160" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">5.0 m/s</text>
+</g>
+<circle cx="200" cy="170" r="11" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<text x="186" y="190" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B</text>
+<g class="f-vel" data-phys="velocity:vA2" data-dir="53.13" data-len="90">
+<line x1="200" y1="170" x2="248" y2="106" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="254,98 251.73,108.8 244.27,103.2" fill="currentColor"/>
+<text x="287.2" y="92.4" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">3.0 m/s</text>
+</g>
+<path d="M234,170 A34,34 0 0 0 220.4,142.8" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="240.25" y="149.88" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<text x="300" y="70" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">衝突後の A の速度</text>
+</svg>

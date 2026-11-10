@@ -1,0 +1,114 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  260
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    180,
+    50
+   ],
+   "to": [
+    180,
+    210
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    196,
+    40
+   ],
+   "text": "コイル（真上から見たもの）",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "circle",
+   "at": [
+    180,
+    130
+   ],
+   "r": 22,
+   "style": "dash"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     180,
+     112
+    ],
+    [
+     184,
+     130
+    ],
+    [
+     180,
+     148
+    ],
+    [
+     176,
+     130
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "text",
+   "at": [
+    212,
+    152
+   ],
+   "text": "方位磁針",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    40,
+    200
+   ],
+   "dir": 90,
+   "len": 50,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    136
+   ],
+   "text": "北",
+   "italic": false,
+   "size": 14
+  },
+  {
+   "t": "arrow",
+   "from": [
+    40,
+    200
+   ],
+   "dir": 0,
+   "len": 40,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    96,
+    200
+   ],
+   "text": "東",
+   "italic": false,
+   "size": 14
+  }
+ ]
+}

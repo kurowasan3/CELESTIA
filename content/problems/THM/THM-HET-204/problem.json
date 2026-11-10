@@ -1,0 +1,108 @@
+{
+ "id": "THM-HET-204",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-01",
+ "topic": "固体の熱膨張（レールのすき間・鋼の巻き尺の測定誤差・バイメタル・穴の広がり）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept",
+  "experiment"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "固体の長さ $L$ は，温度が $\\Delta T$ 上がると $\\Delta L=\\alpha L\\Delta T$ だけ伸びる（$\\alpha$ は線膨張率）．鋼の線膨張率を $1.2\\times10^{-5}\\,\\mathrm{/K}$，黄銅の線膨張率を $1.9\\times10^{-5}\\,\\mathrm{/K}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "長さ $25\\,\\mathrm m$ の鋼のレールを $0^\\circ\\mathrm C$ で敷く．夏に $40^\\circ\\mathrm C$ になってもレールどうしが押し合わないためには，つなぎ目のすき間を少なくとも何 $\\mathrm{mm}$ にしておけばよいか．"
+     },
+     {
+      "id": "2",
+      "tex": "$20^\\circ\\mathrm C$ で正しく目盛られた鋼の巻き尺で，$40^\\circ\\mathrm C$ の屋外である長さを測ると，読みは $10.000\\,\\mathrm m$ であった．真の長さは読みより長いか短いか．また，読みとの差は何 $\\mathrm{mm}$ か．ただし，測られる物体の伸びは考えない．"
+     },
+     {
+      "id": "3",
+      "tex": "黄銅と鋼の薄い板をはり合わせたもの（バイメタル）を加熱すると，どちら側に曲がるか．理由とともに答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "中央に円形の穴をあけた鋼の板を一様に加熱すると，穴の直径は大きくなるか，小さくなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$12\\,\\mathrm{mm}$",
+    "grading": "12 [mm]"
+   },
+   {
+    "id": "2",
+    "tex": "真の長さのほうが長い．差は $2.4\\,\\mathrm{mm}$．",
+    "grading": "2.4 [mm]"
+   },
+   {
+    "id": "3",
+    "tex": "鋼の側（内側が鋼，外側が黄銅になる向き）に曲がる．黄銅のほうがよく伸びるので，黄銅の側が外側（長い弧）になるから．"
+   },
+   {
+    "id": "4",
+    "tex": "大きくなる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\Delta L=1.2\\times10^{-5}\\times25\\times40=1.2\\times10^{-2}\\,\\mathrm m=12\\,\\mathrm{mm}$．すき間を $12\\,\\mathrm{mm}$ 以上にしておけばよい．\n\n(2) 巻き尺の目盛りの間隔も $1+\\alpha\\Delta T$ 倍に伸びるので，「$1\\,\\mathrm m$」の目盛りの間の実際の長さは $1\\,\\mathrm m$ より長い．したがって真の長さは \\[10.000\\times(1+1.2\\times10^{-5}\\times20)=10.0024\\,\\mathrm m\\] で，読みより $2.4\\,\\mathrm{mm}$ 長い（巻き尺は短めに読ませる）．\n\n(3) 同じ温度上昇で黄銅は鋼より大きく伸びる．はり合わせた2枚の長さの差は，板が曲がって黄銅が外側の長い弧，鋼が内側の短い弧になることで吸収される．よって鋼の側に曲がる．\n\n(4) 一様な加熱では，板のどの部分も同じ割合で拡大する（写真を引き伸ばすのと同じ）．穴のまわりの板が穴の内側にはみ出すのではなく，穴の縁の円周そのものが $1+\\alpha\\Delta T$ 倍に伸びるので，穴の直径も同じ割合で大きくなる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "線膨張は $\\Delta L=\\alpha L\\Delta T$．一様に温めると，物体は（穴も含めて）相似に拡大する．"
+ },
+ "concepts": [
+  "heat-temperature"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "熱膨張",
+  "線膨張率",
+  "バイメタル",
+  "測定誤差"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

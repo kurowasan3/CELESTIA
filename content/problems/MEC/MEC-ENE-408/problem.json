@@ -1,0 +1,144 @@
+{
+ "id": "MEC-ENE-408",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "進むほど動摩擦係数が大きくなる面で止まる物体（F–x グラフの面積と，速さによらない停止時間）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 16,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上を速さ $v_0$ で右向きに進んできた質量 $m$ の小物体が，点 O からあらい水平面に入った．図のように O を原点として右向きに $x$ 軸をとると，あらい面と小物体の間の動摩擦係数は $\\mu=cx$（$c$ は正の定数）と表され，O から離れるほど大きくなる．重力加速度の大きさを $g$ とし，小物体の大きさは無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小物体が O から位置 $x$ に達するまでに，動摩擦力が小物体にした仕事 $W$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "小物体が止まる位置 $L$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "小物体が O に入ってから止まるまでの時間 $t_1$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "あらい面の動摩擦係数がどこでも一定の値 $\\mu_0$ であったとすると，小物体は同じ位置 $L$ に止まった．$\\mu_0$ を $v_0$，$c$，$g$ で表せ．また，このとき O に入ってから止まるまでの時間 $t_2$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$t_1$ が $v_0$ によらない理由を，小物体の運動方程式の形に着目して説明せよ．また，$t_1<t_2$ となる理由を，2つの場合の速さの減り方を比べて説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな面を速さ v0 で進む小物体が、点 O から動摩擦係数 μ=cx のあらい面に入る。O を原点に右向きに x 軸をとる",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "velocity:v0",
+      "dir_deg": 0
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$W=-\\dfrac12cmgx^2$",
+    "grading": "W：-c m g x^2/2"
+   },
+   {
+    "id": "2",
+    "tex": "$L=\\dfrac{v_0}{\\sqrt{cg}}$",
+    "grading": "L：v_0/sqrt(c g)"
+   },
+   {
+    "id": "3",
+    "tex": "$t_1=\\dfrac{\\pi}{2\\sqrt{cg}}$",
+    "grading": "t_1：π/(2sqrt(c g))"
+   },
+   {
+    "id": "4",
+    "tex": "$\\mu_0=\\dfrac{v_0}{2}\\sqrt{\\dfrac{c}{g}}$，$t_2=\\dfrac{2}{\\sqrt{cg}}$",
+    "grading": "μ_0：v_0 sqrt(c/g)/2 ; t_2：2/sqrt(c g)"
+   },
+   {
+    "id": "5",
+    "tex": "運動方程式が $ma=-cmgx$ で，ばね振り子と同じ形（角振動数 $\\sqrt{cg}$ の単振動）になる．止まるまでは単振動の $\\dfrac14$ 周期で，周期は振幅（$v_0$ で決まる）によらない．摩擦が一定の場合と比べて，$\\mu=cx$ では入ってすぐは摩擦が小さく，速さが大きいまま進むので，同じ距離を短い時間で進む．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 位置 $x$ での動摩擦力の大きさは $cxmg$ で，$x$ に比例する．横軸 $x$，縦軸に動摩擦力の大きさをとったグラフは原点を通る直線で，仕事の大きさはその下の三角形の面積．力は運動と逆向きなので\\[W=-\\frac12\\cdot x\\cdot cmgx=-\\frac12cmgx^2\\]\n\n(2) 止まる位置で，運動エネルギーがすべて失われる：\\[0-\\frac12mv_0^2=-\\frac12cmgL^2\\quad\\Longrightarrow\\quad L=\\frac{v_0}{\\sqrt{cg}}\\] （ばね定数 $cmg$ のばねを $L$ だけ縮める場合と同じ形．）\n\n(3) 小物体が動いている間の運動方程式は $ma=-cmgx$，すなわち $a=-cg\\,x$．これは角振動数 $\\omega=\\sqrt{cg}$ の単振動の式である．$x=0$ で速さ $v_0$（振動の中心を通過），$x=L$ で速さ $0$（振動の端）なので，止まるまでの時間は $\\dfrac14$ 周期：\\[t_1=\\frac14\\cdot\\frac{2\\pi}{\\sqrt{cg}}=\\frac{\\pi}{2\\sqrt{cg}}\\] 実際，$x=\\dfrac{v_0}{\\omega}\\sin\\omega t$ で，振幅は $\\dfrac{v_0}{\\omega}=L$ と (2) に一致する．止まった後は，動摩擦力がなくなり，ほかに水平な力もはたらかないので，その場に静止する（単振動は続かない）．\n\n(4) 一様な場合，動摩擦力の仕事は $-\\mu_0mgL$ なので $\\dfrac12mv_0^2=\\mu_0mgL$．$L=\\dfrac{v_0}{\\sqrt{cg}}$ を代入して\\[\\mu_0=\\frac{v_0^2}{2gL}=\\frac{v_0}{2}\\sqrt{\\frac{c}{g}}\\] （$\\mu_0=\\dfrac{cL}{2}$：$\\mu=cx$ の $0\\le x\\le L$ での平均値．）一定の減速度で止まるので平均の速さは $\\dfrac{v_0}{2}$，\\[t_2=\\frac{L}{v_0/2}=\\frac{2}{\\sqrt{cg}}\\]\n\n(5) $\\mu=cx$ の面では，減速の大きさが「O からの距離」に比例する．$v_0$ を2倍にすると止まる距離も2倍になり，途中のどの段階でも速さと距離がともに2倍になるので，時間は変わらない（ばね振り子の周期が振幅によらないのと同じ）．一方，$t_1/t_2=\\dfrac{\\pi}{4}<1$．一様な場合は入ってすぐから一定の割合で減速するが，$\\mu=cx$ の場合は O の近くでほとんど減速せず，速いまま進んでから最後に急に減速する．$v$–$t$ グラフの面積（移動距離 $L$）が同じなら，速さが大きい状態を長く保つほうが早く $L$ に達する．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "位置に比例する力は「ばね」と同じ．仕事は $F$–$x$ グラフの三角形の面積，運動は単振動で，止まるまでの時間は振幅によらない $\\dfrac14$ 周期．"
+ },
+ "concepts": [
+  "work-energy",
+  "simple-harmonic-motion"
+ ],
+ "laws": [
+  "work-energy-theorem",
+  "friction-law",
+  "shm-period"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "仕事と運動エネルギー",
+  "摩擦",
+  "単振動",
+  "グラフの面積"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

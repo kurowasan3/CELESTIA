@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 225" width="360" height="225" font-family="'Times New Roman', serif">
+<g transform="translate(200,170) rotate(0)" data-phys="body:table" data-angle="0">
+<rect x="-120" y="-12" width="240" height="12" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<line x1="200" y1="170" x2="200" y2="215" stroke="currentColor" stroke-width="2.4"/>
+<line x1="200" y1="158" x2="200" y2="60" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M175.57,78.89 A26,26 0 0 0 224.43,78.89" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<g class="f-ink" data-dir="70" data-len="10">
+<line x1="224.43" y1="78.89" x2="226.65" y2="72.78" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="227.85,69.49 228.19,73.34 225.12,72.22" fill="currentColor"/>
+</g>
+<text x="238" y="92" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">ω</text>
+<g transform="translate(280,158) rotate(0)" data-phys="body:coin" data-angle="0">
+<rect x="-13" y="-8" width="26" height="8" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+</g>
+<line x1="200" y1="192" x2="280" y2="192" stroke="currentColor" stroke-width="1.2"/>
+<line x1="280" y1="186" x2="280" y2="198" stroke="currentColor" stroke-width="1.2"/>
+<text x="240" y="204" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.10 m</text>
+<text x="300" y="132" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">硬貨</text>
+<text x="76" y="164" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">回転台</text>
+</svg>

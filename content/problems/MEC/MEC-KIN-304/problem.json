@@ -1,0 +1,125 @@
+{
+ "id": "MEC-KIN-304",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-01",
+ "topic": "等速の車を静止から加速して追う車（v-t グラフの面積で最大の差と追いつく時刻を読む）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "まっすぐな道路上の地点 O を，自動車 A が一定の速さ $20\\,\\mathrm{m/s}$ で通過した．同じ時刻 $t=0$ に，O で止まっていた自動車 B が A と同じ向きに一定の加速度で発進し，$t=15\\,\\mathrm s$ に速さ $30\\,\\mathrm{m/s}$ に達した後は，その速さで走り続けた．図は，A と B の速度 $v$ と時刻 $t$ の関係を表す．車の大きさは無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "B の加速度の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "B が A に追いつくまでの間で，A と B の間の距離が最大になる時刻と，その距離を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "B が A に追いつく時刻と，そのときの O からの距離を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(2) で距離が最大になる時刻が，2台の速度が等しくなる時刻と一致する理由を，グラフを用いて説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "速度 v と時刻 t のグラフ。A は v=20 m/s の水平な直線。B は原点から直線的に増えて t=15 s で 30 m/s になり、その後 30 m/s で一定。2本は t=10 s で交わる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2.0\\,\\mathrm{m/s^2}$",
+    "grading": "2 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$t=10\\,\\mathrm s$，距離 $100\\,\\mathrm m$",
+    "grading": "t：10 [s] ; 100 [m]"
+   },
+   {
+    "id": "3",
+    "tex": "$t=22.5\\,\\mathrm s$，O から $450\\,\\mathrm m$",
+    "grading": "t：22.5 [s] ; 450 [m]"
+   },
+   {
+    "id": "4",
+    "tex": "距離の差は2本のグラフで挟まれた部分の面積で，A の速度が大きい間（$t<10\\,\\mathrm s$）は差が広がり，B の速度が大きくなると縮み始める．広がるのが止まるのは速度が等しい瞬間である．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "$v$-$t$ グラフと $t$ 軸の間の面積が進んだ距離．2台の距離の差は，2本のグラフの間の面積で表される．\n\n(1) 傾き $\\dfrac{30}{15}=2.0\\,\\mathrm{m/s^2}$．\n\n(2) B の速度が A より小さい間（$v_{\\mathrm B}=2.0t<20$，$t<10\\,\\mathrm s$）は差が広がり，その後は縮む．最大は $t=10\\,\\mathrm s$．このとき A は $20\\times10=200\\,\\mathrm m$，B は $\\dfrac12\\times10\\times20=100\\,\\mathrm m$ 進んでいるので，差は $100\\,\\mathrm m$（$0\\le t\\le10$ の三角形の面積）．\n\n(3) $t=15\\,\\mathrm s$ で A は $300\\,\\mathrm m$，B は $\\dfrac12\\times15\\times30=225\\,\\mathrm m$ で，まだ追いついていない．$t\\ge15\\,\\mathrm s$ では\n\\[ 20t=225+30(t-15) \\]\nより $10t=225$，$t=22.5\\,\\mathrm s$．位置は $20\\times22.5=450\\,\\mathrm m$．\n（面積で見ると，$10\\le t\\le 22.5$ で B が A を上回る部分の面積 $\\dfrac12\\times5\\times10+(22.5-15)\\times10=25+75=100\\,\\mathrm m$ が，(2) の差 $100\\,\\mathrm m$ を取り戻している．）\n\n(4) 差 $x_{\\mathrm A}-x_{\\mathrm B}$ の時間変化の割合は $v_{\\mathrm A}-v_{\\mathrm B}$．これが正の間は差が増え，負になると減る．符号が変わる瞬間，つまり2本のグラフが交わる（速度が等しい）$t=10\\,\\mathrm s$ で差は最大になる．「B が追いつき始めるのは B が A より速くなってから」と考えてもよい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "距離の差は2本の $v$-$t$ グラフに挟まれた面積．差が最大になるのは速度が等しい瞬間．"
+ },
+ "concepts": [
+  "uniform-acceleration",
+  "acceleration-concept"
+ ],
+ "laws": [
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "v-tグラフ",
+  "等加速度運動",
+  "追いつき",
+  "グラフの読み取り"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

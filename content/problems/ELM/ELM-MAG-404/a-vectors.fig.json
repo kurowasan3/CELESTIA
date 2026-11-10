@@ -1,0 +1,106 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  320,
+  230
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    90,
+    190
+   ],
+   "dir": 90,
+   "len": 110,
+   "style": "component",
+   "label": "地磁気 Bʜ",
+   "phys": "vec:BH",
+   "labelOffset": [
+    -10,
+    0
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    90,
+    190
+   ],
+   "dir": 0,
+   "len": 77,
+   "style": "component",
+   "label": "コイルの磁場 Bc",
+   "phys": "vec:Bc",
+   "labelOffset": [
+    10,
+    16
+   ],
+   "italic": false
+  },
+  {
+   "t": "arrow",
+   "from": [
+    90,
+    190
+   ],
+   "dir": 55.00797980144134,
+   "len": 134.27211177307072,
+   "style": "thin",
+   "label": "合成磁場",
+   "phys": "vec:B",
+   "labelOffset": [
+    30,
+    0
+   ],
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    167,
+    190
+   ],
+   "to": [
+    167,
+    80
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    90,
+    80
+   ],
+   "to": [
+    167,
+    80
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "arc",
+   "at": [
+    90,
+    190
+   ],
+   "r": 46,
+   "from": 55.00797980144134,
+   "to": 90,
+   "label": "θ",
+   "labelGap": 10
+  },
+  {
+   "t": "text",
+   "at": [
+    80,
+    200
+   ],
+   "text": "O",
+   "italic": true,
+   "anchor": "end"
+  }
+ ]
+}

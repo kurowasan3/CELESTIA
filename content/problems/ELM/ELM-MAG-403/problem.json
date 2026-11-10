@@ -1,0 +1,135 @@
+{
+ "id": "ELM-MAG-403",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "電子てんびんで電流が受ける力を測り，磁束密度を求める実験",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "experiment",
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "電子てんびんの上に U 字形磁石を置いた．磁極の間には水平な一様な磁場がある．磁極の間に，長さ $L=4.0\\ \\mathrm{cm}$ の部分が磁場に垂直になるように水平な導線を通し，導線はてんびんとは別のスタンドに固定した．導線に電流 $I$ を流し，てんびんの表示の増加 $\\Delta m$ を測ると，図のようになった．図の直線は，測定値に合うように原点を通して引いたものである．重力加速度の大きさを $g=9.8\\ \\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "磁束密度の大きさを $B$ とするとき，導線が磁場から受ける力の大きさ $F$ を $I$，$B$，$L$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "表示が増加したとき，導線が磁場から受けた力の向きは上向きか，下向きか．理由も述べよ．"
+     },
+     {
+      "id": "3",
+      "tex": "図の直線の傾きから，磁束密度の大きさ $B$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$I=2.5\\ \\mathrm{A}$ のとき，表示の増加 $\\Delta m$ は何 g と予想されるか．"
+     },
+     {
+      "id": "5",
+      "tex": "導線を水平面内で回して，磁場と $30^\\circ$ をなすようにして同じ測定をすると，直線の傾きは何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "電流 I [A]（横軸、0〜3）と、てんびんの表示の増加 Δm [g]（縦軸、0〜1.2）のグラフ。6個の測定点がほぼ原点を通る直線に乗り、直線は I=3.0 A で Δm=1.20 g を通る",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$F=IBL$",
+    "grading": "F：I B L"
+   },
+   {
+    "id": "2",
+    "tex": "上向き．（導線が磁石から受ける力の反作用として，磁石が導線から下向きの力を受け，表示が増える．）"
+   },
+   {
+    "id": "3",
+    "tex": "$B=9.8\\times10^{-2}\\ \\mathrm{T}$",
+    "grading": "B：0.098 [T]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta m=1.0\\ \\mathrm{g}$",
+    "grading": "Δm：1.0 [g]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\dfrac12$ 倍",
+    "grading": "1/2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 磁場に垂直な長さ $L$ の電流が受ける力：$F=IBL$．\n\n\\textbf{(2)} 導線が磁場（磁石）から力 $F$ を受けると，作用・反作用の法則により，磁石は導線から逆向きで同じ大きさの力を受ける．てんびんの表示が増えたのは磁石が\\textbf{下向き}に押されたからで，導線が受けた力は\\textbf{上向き}．\n表示の増加分 $\\Delta m$ の重さが，この力の大きさに等しい：$\\Delta m\\,g=IBL$．\n\n\\textbf{(3)} グラフの直線は $I=3.0\\ \\mathrm{A}$ で $\\Delta m=1.20\\ \\mathrm g$ を通るので，傾きは $\\dfrac{\\Delta m}{I}=0.40\\ \\mathrm{g/A}=4.0\\times10^{-4}\\ \\mathrm{kg/A}$．\n\\[B=\\frac{\\Delta m}{I}\\cdot\\frac{g}{L}=\\frac{4.0\\times10^{-4}\\times9.8}{4.0\\times10^{-2}}=9.8\\times10^{-2}\\ \\mathrm{T}\\]\n個々の測定点ではなく，直線の傾きを使うと測定のばらつきの影響が小さくなる．\n\n\\textbf{(4)} $\\Delta m=0.40\\times2.5=1.0\\ \\mathrm g$．\n\n\\textbf{(5)} 力は導線の磁場に垂直な成分の長さ $L\\sin30^\\circ$ に比例する．傾きは $\\sin30^\\circ=\\dfrac12$ 倍．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "てんびんが測るのは磁石が受ける力 ＝ 導線が受ける力の反作用．$\\Delta m\\,g=IBL$ のグラフの傾きから $B$ が決まる．"
+ },
+ "concepts": [
+  "lorentz-force"
+ ],
+ "laws": [
+  "current-force",
+  "newton-3rd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "電流が磁場から受ける力",
+  "実験",
+  "グラフ",
+  "作用・反作用"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

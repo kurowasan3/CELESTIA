@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 215" width="390" height="215" font-family="'Times New Roman', serif">
+<polygon points="20,70 90,70 90,200 20,200" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="20" y1="70" x2="90" y2="70" stroke="currentColor" stroke-width="2"/>
+<line x1="90" y1="70" x2="90" y2="200" stroke="currentColor" stroke-width="2"/>
+<line x1="90" y1="200" x2="380" y2="200" stroke="currentColor" stroke-width="2"/>
+<polyline points="90,70 91.97,68.65 93.93,67.34 95.9,66.09 97.86,64.88 99.83,63.72 101.8,62.6 103.76,61.54 105.73,60.52 107.69,59.55 109.66,58.63 111.63,57.76 113.59,56.94 115.56,56.16 117.52,55.43 119.49,54.75 121.46,54.12 123.42,53.53 125.39,53 127.35,52.51 129.32,52.07 131.29,51.68 133.25,51.33 135.22,51.03 137.18,50.79 139.15,50.59 141.12,50.43 143.08,50.33 145.05,50.27 147.01,50.26 148.98,50.3 150.94,50.39 152.91,50.53 154.88,50.71 156.84,50.94 158.81,51.22 160.77,51.55 162.74,51.92 164.71,52.35 166.67,52.82 168.64,53.34 170.6,53.9 172.57,54.52 174.54,55.18 176.5,55.89 178.47,56.65 180.43,57.46 182.4,58.32 184.37,59.22 186.33,60.17 188.3,61.17 190.26,62.22 192.23,63.31 194.2,64.46 196.16,65.65 198.13,66.89 200.09,68.18 202.06,69.51 204.03,70.89 205.99,72.33 207.96,73.8 209.92,75.33 211.89,76.91 213.86,78.53 215.82,80.2 217.79,81.92 219.75,83.69 221.72,85.5 223.69,87.37 225.65,89.28 227.62,91.24 229.58,93.25 231.55,95.3 233.52,97.41 235.48,99.56 237.45,101.76 239.41,104 241.38,106.3 243.35,108.64 245.31,111.03 247.28,113.47 249.24,115.96 251.21,118.5 253.18,121.08 255.14,123.71 257.11,126.39 259.07,129.12 261.04,131.89 263,134.72 264.97,137.59 266.94,140.51 268.9,143.47 270.87,146.49 272.83,149.55 274.8,152.67 276.77,155.82 278.73,159.03 280.7,162.29 282.66,165.59 284.63,168.94 286.6,172.34 288.56,175.79 290.53,179.28 292.49,182.83 294.46,186.42 296.43,190.06 298.39,193.75 300.36,197.48 301.67,200" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" data-phys="trajectory"/>
+<g class="f-vel" data-dir="35" data-len="52">
+<line x1="90" y1="70" x2="124.4" y2="45.91" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="132.6,40.17 127.08,49.73 121.73,42.09" fill="currentColor"/>
+<text x="142.43" y="33.29" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v₀</text>
+</g>
+<line x1="90" y1="70" x2="160" y2="70" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M114,70 A24,24 0 0 0 109.66,56.23" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="126" y="63" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">θ</text>
+<g class="f-ink" data-dir="90" data-len="65">
+<line x1="106" y1="135" x2="106" y2="80" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="106,70 110.66,80 101.34,80" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="270" data-len="65">
+<line x1="106" y1="135" x2="106" y2="190" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="106,200 101.34,190 110.66,190" fill="currentColor"/>
+</g>
+<text x="114" y="135" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">h</text>
+<text x="90" y="58" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">P</text>
+</svg>

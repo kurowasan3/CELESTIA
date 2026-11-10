@@ -1,0 +1,201 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  450,
+  260
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    140
+   ],
+   "dir": 0,
+   "len": 330,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    250
+   ],
+   "dir": 90,
+   "len": 230,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    396,
+    140
+   ],
+   "text": "x [m]",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    24
+   ],
+   "text": "E [V/m]",
+   "italic": false,
+   "size": 14,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    50,
+    152
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60,
+     80.0
+    ],
+    [
+     130.0,
+     80.0
+    ],
+    [
+     270.0,
+     200.0
+    ],
+    [
+     340.0,
+     140.0
+    ],
+    [
+     375.0,
+     140.0
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    140
+   ],
+   "to": [
+    60,
+    80.0
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    200.0
+   ],
+   "to": [
+    270.0,
+    200.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    270.0,
+    140
+   ],
+   "to": [
+    270.0,
+    200.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    130.0,
+    140
+   ],
+   "to": [
+    130.0,
+    80.0
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    54,
+    80.0
+   ],
+   "text": "2.0×10³",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    54,
+    200.0
+   ],
+   "text": "−2.0×10³",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    130.0,
+    154
+   ],
+   "text": "0.10",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    186.0,
+    154
+   ],
+   "text": "0.20",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    270.0,
+    128
+   ],
+   "text": "0.30",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    344.0,
+    128
+   ],
+   "text": "0.40",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

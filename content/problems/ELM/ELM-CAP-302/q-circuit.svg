@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" width="440" height="220" font-family="'Times New Roman', serif">
+<g data-phys="battery:3.0 V">
+<line x1="50" y1="190" x2="50" y2="135" stroke="currentColor" stroke-width="1.6"/>
+<line x1="50" y1="125" x2="50" y2="70" stroke="currentColor" stroke-width="1.6"/>
+<line x1="64" y1="125" x2="36" y2="125" stroke="currentColor" stroke-width="1.6"/>
+<line x1="57" y1="135" x2="43" y2="135" stroke="currentColor" stroke-width="3"/>
+<text x="70" y="130" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">3.0 V</text>
+</g>
+<polyline points="50,70 50,40 130,40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="130" cy="40" r="3" fill="currentColor"/>
+<circle cx="170" cy="40" r="3" fill="currentColor"/>
+<line x1="130" y1="40" x2="166" y2="24" stroke="currentColor" stroke-width="1.2"/>
+<text x="150" y="16" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">S</text>
+<polyline points="170,40 227,40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="240" cy="40" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<line x1="231" y1="31" x2="249" y2="49" stroke="currentColor" stroke-width="1.2"/>
+<line x1="231" y1="49" x2="249" y2="31" stroke="currentColor" stroke-width="1.2"/>
+<text x="240" y="18" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">L</text>
+<polyline points="253,40 320,40 320,106" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="302" y1="106" x2="338" y2="106" stroke="currentColor" stroke-width="2.4"/>
+<line x1="302" y1="124" x2="338" y2="124" stroke="currentColor" stroke-width="2.4"/>
+<text x="344" y="115" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">C（1000 μF）</text>
+<polyline points="320,124 320,190 50,190" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</svg>

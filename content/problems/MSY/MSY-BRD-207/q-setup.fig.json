@@ -1,0 +1,113 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  370,
+  135
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    120
+   ],
+   "to": [
+    330,
+    120
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    330,
+    120
+   ],
+   "to": [
+    330,
+    40
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     330,
+     40
+    ],
+    [
+     345,
+     40
+    ],
+    [
+     345,
+     120
+    ],
+    [
+     330,
+     120
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "block",
+   "at": [
+    170,
+    120
+   ],
+   "w": 220,
+   "h": 16,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    230,
+    112
+   ],
+   "text": "M",
+   "italic": true,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "block",
+   "at": [
+    76,
+    104
+   ],
+   "w": 28,
+   "h": 22,
+   "label": "m"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    90,
+    70
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "velocity",
+   "label": "v₀",
+   "labelPos": "end",
+   "labelOffset": [
+    4,
+    0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    338,
+    32
+   ],
+   "text": "壁",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

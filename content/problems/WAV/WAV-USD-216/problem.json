@@ -1,0 +1,139 @@
+{
+ "id": "WAV-USD-216",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "超音波のパルスエコーで測る深さと，血流による反射波のドップラー効果",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation",
+  "numeric",
+  "experiment"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "医療用の超音波診断装置は，体の表面に当てたプローブ（超音波の送信器と受信器を兼ねる）から超音波を出し，体内で反射して戻ってきた超音波を受信する．体内の組織や血液中の超音波の速さはどこでも $V=1.5\\times10^3\\,\\mathrm{m/s}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "短い超音波のパルスを出したところ，ある臓器の表面で反射したパルスが $52\\,\\mu\\mathrm s$ 後に戻ってきた．臓器の表面はプローブから何 $\\mathrm{cm}$ の深さにあるか．"
+     },
+     {
+      "id": "2",
+      "tex": "超音波の振動数が $5.0\\,\\mathrm{MHz}$ のとき，体内での波長は何 $\\mathrm{mm}$ か．"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "tex": "次に，振動数 $f$ の超音波を連続して出し，血管の中を流れる血液（赤血球）で反射した超音波を受信する．はじめは，血液がプローブに向かって超音波の進む向きと平行に速さ $u$ で近づいているとする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "3",
+      "tex": "プローブで受信する反射波の振動数 $f_{\\mathrm R}$ を，$f$，$V$，$u$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "$u\\ll V$ のとき，振動数の差 $\\Delta f=f_{\\mathrm R}-f$ は近似的に $\\Delta f\\fallingdotseq\\dfrac{2u}{V}f$ となることを示せ．"
+     },
+     {
+      "id": "5",
+      "tex": "実際の測定では，血液の流れる向きと超音波の進む向き（プローブへ戻る向き）は角 $\\theta$ をなす．このとき $\\Delta f\\fallingdotseq\\dfrac{2u\\cos\\theta}{V}f$ となる．$f=5.0\\,\\mathrm{MHz}$，$\\theta=60^\\circ$ で $\\Delta f=2.0\\,\\mathrm{kHz}$ であった．血液の速さ $u$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "$\\theta$ を $90^\\circ$ に近づけると，血液の速さを正確に求めにくくなる．その理由を説明せよ．また，$\\Delta f$ の大きさがどのような範囲の振動数にあり，そのことが測定にどう利用できるか述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$3.9\\,\\mathrm{cm}$",
+    "grading": "3.9 [cm]"
+   },
+   {
+    "id": "2",
+    "tex": "$0.30\\,\\mathrm{mm}$",
+    "grading": "0.3 [mm]"
+   },
+   {
+    "id": "3",
+    "tex": "$f_{\\mathrm R}=\\dfrac{V+u}{V-u}f$",
+    "grading": "f_R：(V+u)/(V-u) f"
+   },
+   {
+    "id": "4",
+    "tex": "$\\Delta f=\\dfrac{2u}{V-u}f\\fallingdotseq\\dfrac{2u}{V}f$（$u\\ll V$）"
+   },
+   {
+    "id": "5",
+    "tex": "$0.60\\,\\mathrm{m/s}$",
+    "grading": "0.6 [m/s]"
+   },
+   {
+    "id": "6",
+    "tex": "$\\cos\\theta$ が $0$ に近いと $\\Delta f$ が小さくなり，$\\theta$ や $\\Delta f$ のわずかな誤差で $u=\\dfrac{V\\Delta f}{2f\\cos\\theta}$ が大きく変わる（$\\theta=90^\\circ$ では $\\Delta f=0$ で $u$ が求まらない）．$\\Delta f$ は数 $\\mathrm{kHz}$ で人の可聴域にあるので，スピーカーで音として聞いて血流のようすを確かめられる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} パルスは深さ $d$ を往復するので $2d=Vt$：$d=\\dfrac{1.5\\times10^3\\times52\\times10^{-6}}2=3.9\\times10^{-2}\\,\\mathrm m=\\boldsymbol{3.9\\,\\mathrm{cm}}$．\n\n\\textbf{(2)} $\\lambda=\\dfrac Vf=\\dfrac{1.5\\times10^3}{5.0\\times10^6}=3.0\\times10^{-4}\\,\\mathrm m=\\boldsymbol{0.30\\,\\mathrm{mm}}$．波長が短いほど細かい構造まで見分けられる．\n\n\\textbf{(3)} 2段階に分けて考える．\n① 血液を「動く観測者」とみると，音源（プローブ）に速さ $u$ で近づくので，血液が受ける振動数は $f_1=\\dfrac{V+u}Vf$．\n② 血液は振動数 $f_1$ の超音波を反射する「動く音源」となり，プローブに速さ $u$ で近づくので，プローブが受ける振動数は\n\\[ f_{\\mathrm R}=\\frac{V}{V-u}f_1=\\boldsymbol{\\frac{V+u}{V-u}f} \\]\n\n\\textbf{(4)} $\\Delta f=f_{\\mathrm R}-f=\\dfrac{(V+u)-(V-u)}{V-u}f=\\dfrac{2u}{V-u}f$．$u\\ll V$ では分母の $V-u\\fallingdotseq V$ として $\\Delta f\\fallingdotseq\\dfrac{2u}Vf$．（往復するので，片道の場合の約2倍になる．）\n\n\\textbf{(5)} $u=\\dfrac{V\\Delta f}{2f\\cos\\theta}=\\dfrac{1.5\\times10^3\\times2.0\\times10^3}{2\\times5.0\\times10^6\\times0.50}=\\boldsymbol{0.60\\,\\mathrm{m/s}}$．$\\dfrac uV=4\\times10^{-4}$ なので，(4) の近似は十分よい．\n\n\\textbf{(6)} ドップラー効果に効くのは，血液の速度のうち超音波の進む向きの成分 $u\\cos\\theta$ だけである．$\\theta\\to90^\\circ$ では $\\cos\\theta\\to0$ となって $\\Delta f$ が小さくなり，$u=\\dfrac{V\\Delta f}{2f\\cos\\theta}$ は，$\\Delta f$ の測定誤差や $\\theta$ のわずかな誤差で大きく変わる（$\\theta=90^\\circ$ ではまったく測れない）．そのため，プローブを斜めに当てて $\\theta$ を $60^\\circ$ 程度以下にして測る．\nまた，$\\Delta f$ は数 $\\mathrm{kHz}$ 程度で，$5\\,\\mathrm{MHz}$ の超音波そのものは聞こえないのに対し，$\\Delta f$ は人の可聴域（約 $20\\,\\mathrm{Hz}$〜$20\\,\\mathrm{kHz}$）に入る．受信した反射波ともとの超音波の差の振動数（うなり）を取り出してスピーカーで鳴らせば，血流のようすを音で聞くことができる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "動く反射体のドップラー効果は「動く観測者として受け取り，動く音源として送り返す」の2段階．速さが小さければ $\\Delta f\\fallingdotseq\\dfrac{2u\\cos\\theta}Vf$ で，効くのは波の進む向きの速度成分．"
+ },
+ "concepts": [
+  "doppler",
+  "wave-basics"
+ ],
+ "laws": [
+  "doppler",
+  "wave-speed"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "超音波",
+  "反射体",
+  "測定"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

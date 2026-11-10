@@ -1,0 +1,118 @@
+{
+ "id": "WAV-DOP-211",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "動く観測者のドップラー効果（近づくとき・遠ざかるとき）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "静止した音源が振動数 $680\\,\\mathrm{Hz}$ の音を出している．観測者が自転車に乗り，音源を通る直線上を一定の速さ $10\\,\\mathrm{m/s}$ で音源に近づき，音源の横を通り過ぎた後，同じ速さで遠ざかった．音の速さを $340\\,\\mathrm{m/s}$ とし，風はないものとする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "音源のまわりの空気中での音の波長を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "近づいているときに観測者が聞く音の振動数を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "遠ざかっているときに観測者が聞く音の振動数を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "近づいているとき，観測者のすぐ前の空気中での音の波長はいくらか．"
+     },
+     {
+      "id": "5",
+      "tex": "別の速さで同じように通り過ぎたところ，近づくときと遠ざかるときの振動数の差は $20\\,\\mathrm{Hz}$ であった．観測者の速さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$0.50\\,\\mathrm m$",
+    "grading": "0.5 [m]"
+   },
+   {
+    "id": "2",
+    "tex": "$700\\,\\mathrm{Hz}$",
+    "grading": "700 [Hz]"
+   },
+   {
+    "id": "3",
+    "tex": "$660\\,\\mathrm{Hz}$",
+    "grading": "660 [Hz]"
+   },
+   {
+    "id": "4",
+    "tex": "$0.50\\,\\mathrm m$（変わらない）",
+    "grading": "0.5 [m]"
+   },
+   {
+    "id": "5",
+    "tex": "$5.0\\,\\mathrm{m/s}$",
+    "grading": "5 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $\\lambda=\\dfrac{340}{680}=\\boldsymbol{0.50\\,\\mathrm m}$．音源が静止しているので，波長はどの向きにも同じ．\n\n(2) 観測者から見ると，音は速さ $340+10=350\\,\\mathrm{m/s}$ で向かってくる．間隔 $0.50\\,\\mathrm m$ の波面に単位時間に出会う数は\n\\[ f_1=\\frac{350}{0.50}=\\boldsymbol{700\\,\\mathrm{Hz}}\\qquad\\left(=680\\times\\frac{340+10}{340}\\right) \\]\n\n(3) 遠ざかるときは相対的な速さが $340-10=330\\,\\mathrm{m/s}$ で，$f_2=\\dfrac{330}{0.50}=\\boldsymbol{660\\,\\mathrm{Hz}}$．\n\n(4) 観測者が動いても，空気中の波面の間隔（波長）は音源が決めたまま $\\boldsymbol{0.50\\,\\mathrm m}$．振動数が変わるのは，観測者が波面に出会う割合が変わるため．（音源が動く場合は，空気中の波長そのものが変わる．）\n\n(5) 速さ $u$ のとき $f_1-f_2=\\dfrac{(340+u)-(340-u)}{0.50}=\\dfrac{2u}{0.50}=4u$．$4u=20$ より $u=\\boldsymbol{5.0\\,\\mathrm{m/s}}$．（$u=10\\,\\mathrm{m/s}$ のとき差 $40\\,\\mathrm{Hz}$ で，(2)(3) と合う．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "観測者が動くと，波長は変わらず，波面に出会う割合（相対的な音の速さ ÷ 波長）が変わる．"
+ },
+ "concepts": [
+  "doppler"
+ ],
+ "laws": [
+  "doppler"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ドップラー効果",
+  "動く観測者"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

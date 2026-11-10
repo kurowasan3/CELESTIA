@@ -1,0 +1,110 @@
+{
+ "id": "THM-HET-201",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-01",
+ "topic": "絶対温度と温度差・熱平衡（熱運動による温度の見方）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 5,
+ "format": [
+  "concept",
+  "numeric",
+  "written"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "温度と熱運動について，次の問いに答えよ．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$27^\\circ\\mathrm C$ を絶対温度で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "水温が $15^\\circ\\mathrm C$ から $40^\\circ\\mathrm C$ に上がった．温度の上昇は何 $\\mathrm K$ か．"
+     },
+     {
+      "id": "3",
+      "tex": "「$-300^\\circ\\mathrm C$ の物体」は存在しない．その理由を，物質をつくる粒子の熱運動の考えを使って説明せよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$80^\\circ\\mathrm C$ の金属球を $20^\\circ\\mathrm C$ の水に入れた．（a）熱はどちらからどちらへ移るか．（b）十分に時間がたつと，金属球と水の温度はどうなるか．（c）そのとき，熱の移動はどうなっているか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$300\\,\\mathrm K$",
+    "grading": "300 [K]"
+   },
+   {
+    "id": "2",
+    "tex": "$25\\,\\mathrm K$",
+    "grading": "25 [K]"
+   },
+   {
+    "id": "3",
+    "tex": "温度は粒子の熱運動の激しさを表す量で，熱運動が最も穏やかになった状態（絶対零度，$-273^\\circ\\mathrm C$）より低い温度はないから．"
+   },
+   {
+    "id": "4",
+    "tex": "（a）金属球から水へ．（b）等しい温度になる（熱平衡）．（c）見かけ上，熱の移動は止まる（正味の移動が $0$ になる）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 絶対温度 $T\\,[\\mathrm K]$ とセルシウス温度 $t\\,[^\\circ\\mathrm C]$ の関係は $T=t+273$．$27+273=300\\,\\mathrm K$．\n\n(2) $1\\,\\mathrm K$ と $1^\\circ\\mathrm C$ の目盛りの間隔は同じなので，温度差は $40-15=25\\,\\mathrm K$．温度差に $273$ を足して $298\\,\\mathrm K$ とするのは誤り（$273$ を足すのは「温度そのもの」を換算するときだけで，差をとると打ち消し合う：$(40+273)-(15+273)=25$）．\n\n(3) 温度は，物質をつくる原子・分子の熱運動の激しさの目安である．温度が下がるほど熱運動は穏やかになり，これ以上穏やかにならない限界が絶対零度 $0\\,\\mathrm K=-273^\\circ\\mathrm C$ である．したがって $-273^\\circ\\mathrm C$ より低い温度は存在しない．\n\n(4) 熱は高温の物体から低温の物体へ移る．金属球は温度が下がり，水は温度が上がって，やがて両者は同じ温度になる（熱平衡）．熱平衡では，粒子どうしの衝突でエネルギーのやりとりは続いているが，両方向の移動がつり合って，正味の熱の移動は $0$ になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "温度は熱運動の激しさ．温度「差」は $\\mathrm K$ と $^\\circ\\mathrm C$ で同じ数値．熱は高温から低温へ移り，温度が等しくなると正味の移動が止まる．"
+ },
+ "concepts": [
+  "heat-temperature"
+ ],
+ "laws": [
+  "heat-capacity"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "絶対温度",
+  "熱運動",
+  "熱平衡",
+  "温度差"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

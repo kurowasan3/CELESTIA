@@ -1,0 +1,155 @@
+{
+ "id": "ELM-DCC-308",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-03",
+ "topic": "電熱線で水を温める実験（温度変化のグラフの接線と最終温度から熱容量と熱の逃げを求める）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "experiment",
+  "graph-read",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "起電力 $E=12\\,\\mathrm V$，内部抵抗 $r=1.0\\,\\Omega$ の直流電源に，抵抗値 $R=2.0\\,\\Omega$ の電熱線をつなぎ，電熱線を容器の水に入れて加熱した．電熱線の抵抗値は温度によらないとする．水・容器・電熱線の温度は常に等しく $T$ とみなせ，それら全体の熱容量を $C_h$ とする．また，容器から周囲（温度 $T_0=20\\,^\\circ\\mathrm C$ で一定）へ逃げる熱は，単位時間あたり $k(T-T_0)$（$k$ は正の定数）であるとする．"
+   },
+   {
+    "type": "text",
+    "tex": "時刻 $t=0$（$T=T_0$）に加熱を始めたところ，$T$ は図の曲線のように変化し，十分時間がたつと $60\\,^\\circ\\mathrm C$ に近づいた．図の破線は，$t=0$ での曲線の接線である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電熱線を流れる電流 $I$ と，電熱線の消費電力 $P$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$t=0$ の瞬間は熱が逃げていない．図の接線の傾きから，$C_h$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "十分時間がたった後の温度から，$k$ の値を求めよ（単位は W/K）．"
+     },
+     {
+      "id": "4",
+      "tex": "$T=40\\,^\\circ\\mathrm C$ の瞬間の，温度の上がる速さ（K/s）を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "電源はそのままで，電熱線の抵抗値 $R$ だけを変えて，最終温度をできるだけ高くしたい．$R$ をいくらにすればよいか．また，そのときの最終温度を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "$t=0$ での接線が最終温度の水平線と交わる時刻 $t_1$ を $C_h$，$k$ で表せ．また，$t_1$ はこの実験で何を表す目安になっているか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "温度 T [℃] と時刻 t [s] のグラフ。T は t=0 で 20 ℃ から上がりはじめ、しだいにゆるやかになって 60 ℃ に近づく曲線。t=0 での接線（破線）は t=2000 s で 60 ℃ の水平線（破線）と交わる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$I=4.0\\,\\mathrm A$，$P=32\\,\\mathrm W$",
+    "grading": "I：4 [A] ; P：32 [W]"
+   },
+   {
+    "id": "2",
+    "tex": "$C_h=1.6\\times10^{3}\\,\\mathrm{J/K}$",
+    "grading": "C_h：1600 [J/K]"
+   },
+   {
+    "id": "3",
+    "tex": "$k=0.80\\,\\mathrm{W/K}$",
+    "grading": "k：0.8"
+   },
+   {
+    "id": "4",
+    "tex": "$1.0\\times10^{-2}\\,\\mathrm{K/s}$",
+    "grading": "0.01"
+   },
+   {
+    "id": "5",
+    "tex": "$R=1.0\\,\\Omega$，最終温度 $65\\,^\\circ\\mathrm C$",
+    "grading": "R：1 [Ω] ; T：65 [℃]"
+   },
+   {
+    "id": "6",
+    "tex": "$t_1=\\dfrac{C_h}{k}$（$=2000\\,\\mathrm s$）．温度が最終温度に近づくのにかかる時間の目安（時定数）．",
+    "grading": "t_1：C_h/k"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "熱のつり合い：時間 $\\Delta t$ の間に，電熱線の発熱 $P\\Delta t$ のうち $k(T-T_0)\\Delta t$ が逃げ，残りが温度を上げる：\n\\[C_h\\frac{\\Delta T}{\\Delta t}=P-k(T-T_0)．\\]\n\n(1) $I=\\dfrac{E}{R+r}=\\dfrac{12}{3.0}=4.0\\,\\mathrm A$，$P=RI^2=2.0\\times4.0^2=32\\,\\mathrm W$．\n\n(2) $t=0$ では $T=T_0$ で熱は逃げないので $C_h\\dfrac{\\Delta T}{\\Delta t}=P$．接線は $2000\\,\\mathrm s$ で $40\\,\\mathrm K$ 上がるので傾き $0.020\\,\\mathrm{K/s}$．$C_h=\\dfrac{32}{0.020}=1.6\\times10^{3}\\,\\mathrm{J/K}$．\n\n(3) 十分時間後は温度が変わらず，発熱と逃げる熱がつり合う：$P=k(T_\\infty-T_0)$．$k=\\dfrac{32}{60-20}=0.80\\,\\mathrm{W/K}$．\n\n(4) $\\dfrac{\\Delta T}{\\Delta t}=\\dfrac{P-k(T-T_0)}{C_h}=\\dfrac{32-0.80\\times20}{1600}=1.0\\times10^{-2}\\,\\mathrm{K/s}$（はじめの半分）．\n\n(5) 最終温度 $T_0+\\dfrac Pk$ は $P$ が最大のとき最も高い．$P=\\dfrac{E^2R}{(R+r)^2}$ は $R=r=1.0\\,\\Omega$ で最大値 $\\dfrac{E^2}{4r}=36\\,\\mathrm W$．最終温度は $20+\\dfrac{36}{0.80}=65\\,^\\circ\\mathrm C$．\n\n(6) 接線は $T=T_0+\\dfrac{P}{C_h}t$，最終温度は $T_0+\\dfrac Pk$．等しくおくと $t_1=\\dfrac{C_h}{k}=\\dfrac{1600}{0.80}=2000\\,\\mathrm s$ で，$P$ によらない．\n温度差 $\\theta=T_\\infty-T$ は $C_h\\dfrac{\\Delta\\theta}{\\Delta t}=-k\\theta$ を満たし，一定時間ごとに一定の割合で減る（$\\theta\\propto e^{-t/t_1}$）．$t_1$ はこの減り方の時定数で，$t_1$ ごとに残りの温度差が $\\dfrac1e\\fallingdotseq0.37$ 倍になる．$t_1$ の数倍の時間がたつと，ほぼ最終温度とみなせる．熱容量が大きいほど，また熱が逃げにくいほど，最終温度に近づくのに時間がかかる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "熱の収支 $C_h\\dfrac{\\Delta T}{\\Delta t}=P-k(T-T_0)$．はじめの傾きは熱容量，最終温度は熱の逃げやすさを決める．外部抵抗の電力は $R=r$ で最大．"
+ },
+ "concepts": [
+  "electric-power",
+  "ohm-law-use"
+ ],
+ "laws": [
+  "joule-heat",
+  "ohm-law",
+  "heat-capacity"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "ジュール熱",
+  "熱容量",
+  "内部抵抗",
+  "最大電力",
+  "グラフ",
+  "実験",
+  "時定数"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

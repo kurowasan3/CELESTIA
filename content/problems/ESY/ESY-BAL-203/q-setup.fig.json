@@ -1,0 +1,251 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  250
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    40,
+    100
+   ],
+   "to": [
+    300,
+    100
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    100
+   ],
+   "to": [
+    40,
+    210
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    300,
+    100
+   ],
+   "to": [
+    300,
+    210
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    210
+   ],
+   "to": [
+    300,
+    210
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     110,
+     20
+    ],
+    [
+     110,
+     160
+    ],
+    [
+     230,
+     160
+    ],
+    [
+     230,
+     20
+    ]
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    110,
+    50
+   ],
+   "dir": 270,
+   "len": 26,
+   "style": "current",
+   "label": "I",
+   "labelPos": "mid",
+   "labelOffset": [
+    -14,
+    0
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    150,
+    160
+   ],
+   "dir": 0,
+   "len": 40,
+   "style": "current"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    230,
+    76
+   ],
+   "dir": 90,
+   "len": 26,
+   "style": "current"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    170,
+    160
+   ],
+   "dir": 270,
+   "len": 45,
+   "style": "force",
+   "label": "F",
+   "labelPos": "end",
+   "phys": "force:F",
+   "labelOffset": [
+    16,
+    -14
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    98,
+    22
+   ],
+   "text": "a"
+  },
+  {
+   "t": "text",
+   "at": [
+    98,
+    168
+   ],
+   "text": "b"
+  },
+  {
+   "t": "text",
+   "at": [
+    242,
+    168
+   ],
+   "text": "c"
+  },
+  {
+   "t": "text",
+   "at": [
+    242,
+    22
+   ],
+   "text": "d"
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    148
+   ],
+   "text": "l"
+  },
+  {
+   "t": "text",
+   "at": [
+    65,
+    125
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    275,
+    125
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    65,
+    190
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    275,
+    190
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    125,
+    190
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    215,
+    190
+   ],
+   "text": "⊙",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    236
+   ],
+   "text": "破線の中に一様な磁場 B（紙面の裏から表）",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    10
+   ],
+   "text": "（天秤の腕へ）",
+   "italic": false,
+   "size": 11
+  }
+ ]
+}

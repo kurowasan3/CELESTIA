@@ -1,0 +1,138 @@
+{
+ "id": "MEC-SHM-404",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "単振動している物体に粘土を落としてのせる（付着する位置による振幅・エネルギーの変化）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 18,
+ "format": [
+  "derivation",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上で，ばね定数 $k$ の軽いばねの一端を壁に固定し，他端に質量 $M$ の物体を付ける．物体は，つり合いの位置 O を中心に振幅 $A$ で単振動している．物体の真上から質量 $m$ の粘土を静かに落とすと，粘土は物体の上面に付着して一体となった．付着は瞬間的に起こり，付着する直前の粘土の速度は鉛直下向きであった．O を原点として，ばねが伸びる向きに $x$ 軸をとる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "粘土が付着する前の，物体の単振動の周期 $T_0$ と速さの最大値 $V_0$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "物体が O を通過する瞬間に粘土が付着した．付着直後の速さ $v_1$ と，その後の振幅 $A_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "物体が $x=A$ に達した瞬間に粘土が付着した．その後の振幅 $A_2$ と周期 $T_2$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "物体が位置 $x=x_0$（$-A\\le x_0\\le A$）を通過する瞬間に粘土が付着した場合について，その後の振幅 $A'$ と，付着によって失われた力学的エネルギー $\\Delta E$ を求めよ．ただし $A'$ は $A$ と $\\dfrac{m}{M+m}$，$x_0$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "(4) の結果で $x_0=0$，$x_0=A$ とすると (2)，(3) に一致することを確かめよ．また，$\\Delta E$ が付着する位置によって異なる理由を，付着の瞬間の物体と粘土の水平方向の速度に着目して説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな水平面上で、壁にばね定数 k のばねで付けた質量 M の物体が O を中心に振幅 A で単振動している。真上から質量 m の粘土を落とす",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$T_0=2\\pi\\sqrt{\\dfrac Mk}$，$V_0=A\\sqrt{\\dfrac kM}$",
+    "grading": "T_0：2π sqrt(M/k) ; V_0：A sqrt(k/M)"
+   },
+   {
+    "id": "2",
+    "tex": "$v_1=\\dfrac{\\sqrt{kM}}{M+m}A$，$A_1=\\sqrt{\\dfrac{M}{M+m}}\\,A$",
+    "grading": "v_1：sqrt(k M)A/(M+m) ; A_1：sqrt(M/(M+m))A"
+   },
+   {
+    "id": "3",
+    "tex": "$A_2=A$，$T_2=2\\pi\\sqrt{\\dfrac{M+m}{k}}$",
+    "grading": "A_2：A ; T_2：2π sqrt((M+m)/k)"
+   },
+   {
+    "id": "4",
+    "tex": "$A'=\\sqrt{A^2-\\dfrac{m}{M+m}(A^2-x_0^2)}$，$\\Delta E=\\dfrac{km(A^2-x_0^2)}{2(M+m)}$",
+    "grading": "振幅：sqrt(A^2-m(A^2-x_0^2)/(M+m)) ; ΔE：k m(A^2-x_0^2)/(2(M+m))"
+   },
+   {
+    "id": "5",
+    "tex": "$x_0=0$ で $A'=\\sqrt{\\dfrac{M}{M+m}}A$，$x_0=A$ で $A'=A$．付着は水平方向には完全非弾性衝突で，失われるエネルギーは付着直前の水平方向の相対速度の2乗に比例する．粘土の水平速度は $0$ なので，相対速度は物体の速さで，速さが最大の O で付着すると損失が最大，端（速さ $0$）では損失が $0$．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "付着の瞬間，水平方向には外力の力積がない（ばねの力は有限で，付着は瞬間的．鉛直方向の撃力は床からの垂直抗力が受けもつ）ので，物体と粘土の水平方向の運動量の和が保存する．付着の前後で位置は変わらない．\n\n(1) $T_0=2\\pi\\sqrt{\\dfrac Mk}$，$V_0=A\\omega_0=A\\sqrt{\\dfrac kM}$．\n\n(2) 水平方向の運動量保存：\\[MV_0=(M+m)v_1\\quad\\Longrightarrow\\quad v_1=\\frac{M}{M+m}A\\sqrt{\\frac kM}=\\frac{\\sqrt{kM}}{M+m}A\\] 付着後は質量 $M+m$ の単振動で，角振動数 $\\omega_1=\\sqrt{\\dfrac{k}{M+m}}$．O で速さ $v_1$ なので\\[A_1=\\frac{v_1}{\\omega_1}=\\frac{\\sqrt{kM}}{M+m}A\\sqrt{\\frac{M+m}{k}}=\\sqrt{\\frac{M}{M+m}}\\,A\\]\n\n(3) 端では物体の速さが $0$ なので，付着しても速さは $0$ のまま．位置 $x=A$ で速さ $0$ だから，その後も振幅は $A_2=A$．周期は質量 $M+m$ で決まり $T_2=2\\pi\\sqrt{\\dfrac{M+m}{k}}$．\n\n(4) 付着直前の速さ $v$ は，エネルギー保存 $\\dfrac12Mv^2+\\dfrac12kx_0^2=\\dfrac12kA^2$ より $v^2=\\dfrac kM(A^2-x_0^2)$．付着直後の速さは $v'=\\dfrac{M}{M+m}v$．その後のエネルギー保存：\\[\\frac12kA'^2=\\frac12kx_0^2+\\frac12(M+m)v'^2=\\frac12kx_0^2+\\frac12\\cdot\\frac{M}{M+m}\\cdot k(A^2-x_0^2)\\] よって\\[A'^2=x_0^2+\\frac{M}{M+m}(A^2-x_0^2)=A^2-\\frac{m}{M+m}(A^2-x_0^2)\\] 失われた力学的エネルギーは\\[\\Delta E=\\frac12kA^2-\\frac12kA'^2=\\frac{km(A^2-x_0^2)}{2(M+m)}\\]\n\n(5) $x_0=0$：$A'^2=A^2\\cdot\\dfrac{M}{M+m}$ で (2) と一致．$x_0=A$：$A'=A$ で (3) と一致．\n\n水平方向に見ると，付着は「速さ $v$ の物体 $M$ と静止した粘土 $m$ の完全非弾性衝突」で，失われる運動エネルギーは\\[\\frac12Mv^2-\\frac12(M+m)v'^2=\\frac12\\cdot\\frac{Mm}{M+m}v^2\\] すなわち付着直前の相対速度 $v$ の2乗に比例する（$v^2$ に (4) の式を入れると $\\Delta E$ に一致）．物体の速さは O で最大，両端で $0$ なので，O で付着すると損失が最大（振幅が最も小さくなる），端で付着すると損失はなく振幅は変わらない．どの場合も周期は $2\\pi\\sqrt{\\dfrac{M+m}{k}}$ になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "付着の瞬間は水平方向の運動量保存，その前後は単振動のエネルギー保存．失われるエネルギーは付着直前の相対速度の2乗に比例する．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "momentum-conservation"
+ ],
+ "laws": [
+  "shm-period",
+  "momentum-conservation",
+  "energy-conservation"
+ ],
+ "misconceptions": [
+  "MC-KE-ALWAYS-CONSERVED"
+ ],
+ "tags": [
+  "単振動",
+  "完全非弾性衝突",
+  "振幅",
+  "力学的エネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

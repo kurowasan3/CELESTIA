@@ -1,0 +1,149 @@
+{
+ "id": "ATM-SAI-207",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "太陽光の圧力で進むソーラーセイル（傾けた帆の力と，重力に勝つ条件）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "calc",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "宇宙空間で，太陽光の光子が帆に当たってはね返るときに帆に与える力を利用して進む宇宙船（ソーラーセイル）を考える．帆は面積 $S$ の平らな鏡で，当たった光をすべて鏡面反射する．太陽光は平行光線で，光線に垂直な面が単位面積・単位時間あたりに受ける光のエネルギー（光の強さ）を $I$ とする．光はすべて波長 $\\lambda$ の光子からなるとし，プランク定数を $h$，真空中の光速を $c$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "帆を光線に垂直に向けたとき，単位時間あたりに帆に当たる光子の数 $n$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "このとき帆が光から受ける力の大きさ $F_0$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "帆の法線を光線の向きから角 $\\theta$ だけ傾けた（図）．帆が光から受ける力の大きさ $F(\\theta)$ を求めよ．また，その向きを答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "地球の公転軌道の付近では $I=1.4\\times10^3\\ \\mathrm{W/m^2}$ である．$S=1.0\\times10^4\\ \\mathrm{m^2}$ の帆を光線に垂直に向けたとき，$F_0$ は何 N か．また，帆を含む宇宙船全体の質量が $50\\ \\mathrm{kg}$ のとき，光の力による加速度の大きさは何 $\\mathrm{m/s^2}$ か．$c=3.0\\times10^8\\ \\mathrm{m/s}$ とし，有効数字2桁で答えよ．"
+     },
+     {
+      "id": "5",
+      "tex": "光の強さ $I$ も，太陽の万有引力による加速度の大きさも，太陽からの距離の2乗に反比例する．地球の公転軌道の付近で，太陽の万有引力による加速度の大きさは $g_0=5.9\\times10^{-3}\\ \\mathrm{m/s^2}$ である．帆を光線に垂直に向けた宇宙船が，太陽からの距離によらず太陽の引力より大きい光の力を受けるためには，宇宙船の質量 $M$ と帆の面積 $S$ の比 $\\sigma=\\dfrac MS$ がある値 $\\sigma_{\\rm c}$ より小さければよい．$\\sigma_{\\rm c}$ を $I,\\ c,\\ g_0$ で表し，その値を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "太陽のまわりの軌道を変えるには，光線に垂直な向きの力が必要になる．$F(\\theta)$ の光線に垂直な成分が最大になる $\\theta$ について，$\\sin\\theta$ の値を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左から右へ平行な太陽光の光線が進み，傾いた平らな帆（鏡）に当たる．帆の法線（破線）は光線の向き（水平右向きの破線）から角 θ 傾いている．",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$n=\\dfrac{IS\\lambda}{hc}$",
+    "grading": "n：I S λ/(h c)"
+   },
+   {
+    "id": "2",
+    "tex": "$F_0=\\dfrac{2IS}c$",
+    "grading": "F_0：2I S/c"
+   },
+   {
+    "id": "3",
+    "tex": "$F(\\theta)=\\dfrac{2IS\\cos^2\\theta}c$．向きは帆の法線の向き（帆の面に垂直で，太陽から遠ざかる側）",
+    "grading": "F：2I S cos(θ)^2/c"
+   },
+   {
+    "id": "4",
+    "tex": "$F_0=9.3\\times10^{-2}\\ \\mathrm N$，加速度 $1.9\\times10^{-3}\\ \\mathrm{m/s^2}$",
+    "grading": "F_0：9.3*10^(-2) [N] ; a：1.9*10^(-3) [m/s^2]"
+   },
+   {
+    "id": "5",
+    "tex": "$\\sigma_{\\rm c}=\\dfrac{2I}{cg_0}=1.6\\times10^{-3}\\ \\mathrm{kg/m^2}$",
+    "grading": "σ_c：1.6*10^(-3)"
+   },
+   {
+    "id": "6",
+    "tex": "$\\sin\\theta=\\dfrac1{\\sqrt3}$（$\\theta\\fallingdotseq35^\\circ$）",
+    "grading": "sin(θ)：1/sqrt(3)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 光子1個のエネルギーは $\\dfrac{hc}\\lambda$．帆に単位時間に届くエネルギーは $IS$ なので $n=\\dfrac{IS}{hc/\\lambda}=\\dfrac{IS\\lambda}{hc}$．\n\n\\textbf{(2)} 光子1個の運動量は $\\dfrac h\\lambda$．垂直に当たってはね返ると，運動量の変化の大きさは $\\dfrac{2h}\\lambda$．帆が受ける力は単位時間に受け取る運動量なので $F_0=n\\cdot\\dfrac{2h}\\lambda=\\dfrac{2IS}c$．（吸収するだけなら $\\dfrac{IS}c$ で，反射する帆の半分．）\n\n\\textbf{(3)} 帆が傾くと，光線に垂直な断面積は $S\\cos\\theta$ になり，当たる光子の数は $n\\cos\\theta$．鏡面反射では，運動量の帆に平行な成分は変わらず，法線方向の成分 $\\dfrac h\\lambda\\cos\\theta$ だけが逆向きになるので，1個あたりの変化は $\\dfrac{2h}\\lambda\\cos\\theta$ で，向きは法線方向．よって $F(\\theta)=n\\cos\\theta\\cdot\\dfrac{2h\\cos\\theta}\\lambda=\\dfrac{2IS\\cos^2\\theta}c$，向きは帆の面に垂直で太陽から遠ざかる側．\n\n\\textbf{(4)} $F_0=\\dfrac{2\\times1.4\\times10^3\\times1.0\\times10^4}{3.0\\times10^8}=9.33\\times10^{-2}\\fallingdotseq9.3\\times10^{-2}\\ \\mathrm N$．加速度は $\\dfrac{9.33\\times10^{-2}}{50}=1.87\\times10^{-3}\\fallingdotseq1.9\\times10^{-3}\\ \\mathrm{m/s^2}$．力は小さいが，燃料なしで長い時間加速し続けられる．\n\n\\textbf{(5)} 太陽からの距離を $r$，地球の軌道の半径を $r_0$ とすると，光の力 $\\dfrac{2IS}c\\left(\\dfrac{r_0}r\\right)^2$，引力 $Mg_0\\left(\\dfrac{r_0}r\\right)^2$．どちらも $\\dfrac1{r^2}$ に比例するので，比は距離によらない．光の力が大きい条件は $\\dfrac{2IS}c>Mg_0$，つまり $\\sigma=\\dfrac MS<\\dfrac{2I}{cg_0}=\\sigma_{\\rm c}$．$\\sigma_{\\rm c}=\\dfrac{2\\times1.4\\times10^3}{3.0\\times10^8\\times5.9\\times10^{-3}}=1.58\\times10^{-3}\\fallingdotseq1.6\\times10^{-3}\\ \\mathrm{kg/m^2}$（$1\\ \\mathrm{m^2}$ あたり $1.6\\ \\mathrm g$）．宇宙船全体をこれより薄く軽くするのは非常に難しい．\n\n\\textbf{(6)} 光線に垂直な成分は $F(\\theta)\\sin\\theta=\\dfrac{2IS}c\\cos^2\\theta\\sin\\theta$．$s=\\sin\\theta$ とおくと $f(s)=s-s^3$，$f'(s)=1-3s^2=0$ より $s=\\dfrac1{\\sqrt3}$（$\\theta\\fallingdotseq35^\\circ$）．傾けすぎると当たる光（$\\cos\\theta$）と1個あたりの法線方向の力積（$\\cos\\theta$）が減り，傾けなければ横向きの成分がない．ヨットが帆の角度で進路を変えるのと同じように，帆の傾きで太陽のまわりの軌道を広げたり縮めたりできる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "力は単位時間に受け取る運動量．光子1個の運動量 $\\dfrac h\\lambda$ のうち鏡面反射で反転するのは法線成分だけ．傾けると，当たる光子数と1個あたりの力積の両方に $\\cos\\theta$ が掛かる．"
+ },
+ "concepts": [
+  "photon",
+  "momentum-conservation",
+  "universal-gravitation"
+ ],
+ "laws": [
+  "photon-energy",
+  "impulse-momentum",
+  "universal-gravitation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "光子",
+  "運動量",
+  "光の圧力",
+  "ソーラーセイル",
+  "万有引力"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

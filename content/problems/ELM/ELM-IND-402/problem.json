@@ -1,0 +1,151 @@
+{
+ "id": "ELM-IND-402",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "相互誘導：1次コイルの電流のグラフから2次コイルの電圧を描く",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "graph-read",
+  "construct",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "鉄心に巻いた1次コイルと2次コイルがあり，相互インダクタンスは $M=0.050\\ \\mathrm H$ である．1次コイルに流す電流 $I_1$ を図のように変化させ，2次コイルの両端の電圧 $V_2$ を測った．2次コイルには電流はほとんど流れないものとする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$0<t<20\\ \\mathrm{ms}$ での $V_2$ の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$20\\ \\mathrm{ms}<t<40\\ \\mathrm{ms}$ での $V_2$ の大きさを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$40\\ \\mathrm{ms}<t<50\\ \\mathrm{ms}$ での $V_2$ の大きさを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$0<t<20\\ \\mathrm{ms}$ での $V_2$ の向きを正として，$0\\le t\\le60\\ \\mathrm{ms}$ の $V_2$ のグラフをかけ．"
+     },
+     {
+      "id": "5",
+      "tex": "2次コイルに生じる電圧の大きさを $2$ 倍にするには，1次コイルの電流の変化をどうすればよいか．$I_1$ の最大値 $2.0\\ \\mathrm A$ を変えずに行う方法を答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "1次コイルの電流 I₁ [A] と時刻 t [ms] のグラフ。0 から 20 ms で 0 から 2.0 A まで一定の割合で増え、40 ms まで 2.0 A で一定、50 ms で 0 まで一定の割合で減り、60 ms まで 0",
+   "caption": ""
+  },
+  {
+   "id": "a-graph",
+   "role": "answer",
+   "kind": "graph",
+   "format": "svg",
+   "src": "a-graph.svg",
+   "alt": "2次コイルの電圧 V₂ [V] のグラフ。0〜20 ms は +5.0 V、20〜40 ms は 0、40〜50 ms は −10 V、50〜60 ms は 0",
+   "caption": "2次コイルの電圧"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$5.0\\ \\mathrm V$",
+    "grading": "5.0 [V]"
+   },
+   {
+    "id": "2",
+    "tex": "$0$",
+    "grading": "0 [V]"
+   },
+   {
+    "id": "3",
+    "tex": "$10\\ \\mathrm V$",
+    "grading": "10 [V]"
+   },
+   {
+    "id": "4",
+    "tex": "$0\\sim20\\ \\mathrm{ms}$ で $+5.0\\ \\mathrm V$，$20\\sim40\\ \\mathrm{ms}$ で $0$，$40\\sim50\\ \\mathrm{ms}$ で $-10\\ \\mathrm V$，$50\\sim60\\ \\mathrm{ms}$ で $0$（解答の図）"
+   },
+   {
+    "id": "5",
+    "tex": "電流を変化させる時間を半分にして，変化の割合を $2$ 倍にする（例：$0$ から $2.0\\ \\mathrm A$ まで $10\\ \\mathrm{ms}$ で増やす）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "相互誘導：2次コイルの起電力は $V_2=M\\left|\\dfrac{\\Delta I_1}{\\Delta t}\\right|$．$I_1$ のグラフの\\textbf{傾き}で決まる．\n\n\\textbf{(1)} $\\dfrac{\\Delta I_1}{\\Delta t}=\\dfrac{2.0}{20\\times10^{-3}}=1.0\\times10^2\\ \\mathrm{A/s}$．$V_2=0.050\\times1.0\\times10^2=5.0\\ \\mathrm V$．\n\n\\textbf{(2)} $I_1$ は一定なので，2次コイルを貫く磁束が変化しない．$V_2=0$．\n\n\\textbf{(3)} $\\left|\\dfrac{\\Delta I_1}{\\Delta t}\\right|=\\dfrac{2.0}{10\\times10^{-3}}=2.0\\times10^2\\ \\mathrm{A/s}$．$V_2=0.050\\times2.0\\times10^2=10\\ \\mathrm V$．\n\n\\textbf{(4)} 増えるときと減るときで，磁束の変化が逆なので電圧も逆向き．$40\\sim50\\ \\mathrm{ms}$ は $-10\\ \\mathrm V$．グラフは下の図のような階段状になる（$V_2$ のグラフは $I_1$ のグラフの傾きのグラフ）．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-graph"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(5)} $V_2$ は電流の大きさではなく変化の割合に比例する．同じ $2.0\\ \\mathrm A$ まで，半分の時間で変化させればよい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "2次側の電圧は1次側の電流の\\textbf{変化の割合}に比例：$V_2=M\\dfrac{\\Delta I_1}{\\Delta t}$．電流が一定の間は $0$．"
+ },
+ "concepts": [
+  "electromagnetic-induction"
+ ],
+ "laws": [
+  "faraday-law"
+ ],
+ "misconceptions": [
+  "MC-INDUCTION-FLUX"
+ ],
+ "tags": [
+  "相互誘導",
+  "グラフ",
+  "作図"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

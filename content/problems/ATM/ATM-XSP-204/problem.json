@@ -1,0 +1,137 @@
+{
+ "id": "ATM-XSP-204",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "X線のスペクトルのグラフ（最短波長からプランク定数，固有X線）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "graph-read",
+  "experiment",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "X線管で，陰極から出た電子（初速 0）を電圧 $V=30\\ \\mathrm{kV}$ で加速して金属の陽極に当てたところ，発生したX線の強さと波長の関係は図のようになった．なめらかな連続スペクトル（連続X線）は波長 $4.1\\times10^{-11}\\ \\mathrm m$ から始まり，それに鋭いピーク A（$6.3\\times10^{-11}\\ \\mathrm m$），B（$7.1\\times10^{-11}\\ \\mathrm m$）が重なっている．電気素量を $e=1.6\\times10^{-19}\\ \\mathrm C$，真空中の光速を $c=3.0\\times10^8\\ \\mathrm{m/s}$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "連続X線に最短波長があるのはなぜか．"
+     },
+     {
+      "id": "2",
+      "tex": "グラフの最短波長の値から，プランク定数 $h$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ピーク B の波長のX線光子1個のエネルギーは何 eV か．(2) の $h$ を用いて，有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "加速電圧を $40\\ \\mathrm{kV}$ にすると，最短波長は何倍になるか．また，ピーク A，B の波長はどうなるか．"
+     },
+     {
+      "id": "5",
+      "tex": "加速電圧を $10\\ \\mathrm{kV}$ に下げると，ピーク B は現れるか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "横軸が波長（×10⁻¹¹ m），縦軸がX線の強さのグラフ．強さは波長 4.1 から立ち上がる山形の連続スペクトルで，波長 6.3 に鋭いピーク A，7.1 にさらに高い鋭いピーク B が重なっている．",
+   "caption": "加速電圧 30 kV のときのX線のスペクトル"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "電子1個の運動エネルギー $eV$ が，すべて1個の光子のエネルギーになった場合が最大のエネルギー，つまり最短波長になるから．"
+   },
+   {
+    "id": "2",
+    "tex": "$h=6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$",
+    "grading": "6.6*10^(-34)"
+   },
+   {
+    "id": "3",
+    "tex": "$1.7\\times10^4\\ \\mathrm{eV}$",
+    "grading": "1.7*10^4 [eV]"
+   },
+   {
+    "id": "4",
+    "tex": "最短波長は $\\dfrac34$ 倍．ピーク A，B の波長は変わらない．",
+    "grading": "(3/4)倍"
+   },
+   {
+    "id": "5",
+    "tex": "現れない．光子1個のエネルギー（約 $1.7\\times10^4\\ \\mathrm{eV}$）が，電子1個の運動エネルギー $1.0\\times10^4\\ \\mathrm{eV}$ より大きいから．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 連続X線は，電子が陽極の原子の近くで急に減速されるときに出る（制動放射）．1個の電子が1回で失うエネルギーは，持っていた運動エネルギー $eV$ が上限で，それがすべて1個の光子になった場合 $h\\nu_{\\max}=eV$ が最大．波長は $\\lambda=\\dfrac c\\nu$ なので，最短波長 $\\lambda_{\\min}=\\dfrac{hc}{eV}$ がある．\n\n(2) $h=\\dfrac{eV\\lambda_{\\min}}c=\\dfrac{1.6\\times10^{-19}\\times3.0\\times10^4\\times4.1\\times10^{-11}}{3.0\\times10^8}=6.56\\times10^{-34}\\fallingdotseq6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$．\n\n(3) $E=\\dfrac{hc}\\lambda=\\dfrac{6.6\\times10^{-34}\\times3.0\\times10^8}{7.1\\times10^{-11}}=2.79\\times10^{-15}\\ \\mathrm J$，$\\dfrac{2.79\\times10^{-15}}{1.6\\times10^{-19}}\\fallingdotseq1.7\\times10^4\\ \\mathrm{eV}$．\n\n(4) $\\lambda_{\\min}\\propto\\dfrac1V$ なので $\\dfrac{30}{40}=\\dfrac34$ 倍（$3.1\\times10^{-11}\\ \\mathrm m$）．ピーク A，B は固有X線（特性X線）で，陽極の原子の内側の電子のエネルギー準位の差で決まるので，加速電圧によらず，陽極の金属の種類だけで決まる．\n\n(5) 電子の運動エネルギーは $1.0\\times10^4\\ \\mathrm{eV}$ で，B の光子のエネルギー $1.7\\times10^4\\ \\mathrm{eV}$ に届かない．エネルギー保存則から，このような光子は出せない（そもそも固有X線を出すには，内側の電子をはじき出すのにさらに大きなエネルギーが必要）．よってピーク B は現れない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "連続X線の最短波長 $\\lambda_{\\min}=\\dfrac{hc}{eV}$ は加速電圧で決まり，固有X線の波長は陽極の原子のエネルギー準位で決まる．"
+ },
+ "concepts": [
+  "photon",
+  "bohr-model"
+ ],
+ "laws": [
+  "photon-energy"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "X線",
+  "連続X線",
+  "固有X線",
+  "プランク定数",
+  "グラフ",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

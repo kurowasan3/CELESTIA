@@ -1,0 +1,349 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  460,
+  240
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    110,
+    60
+   ],
+   "to": [
+    390,
+    60
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    110,
+    180
+   ],
+   "to": [
+    390,
+    180
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    44
+   ],
+   "text": "＋＋＋＋＋＋",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    198
+   ],
+   "text": "－－－－－－",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    150
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    150
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    200,
+    150
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    230,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    230,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    230,
+    150
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    260,
+    150
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    290,
+    150
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    320,
+    150
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    350,
+    90
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    350,
+    120
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    350,
+    150
+   ],
+   "text": "×",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "ball",
+   "at": [
+    50,
+    120
+   ],
+   "r": 6
+  },
+  {
+   "t": "arrow",
+   "from": [
+    58,
+    120
+   ],
+   "dir": 0,
+   "len": 40,
+   "style": "velocity",
+   "label": "v",
+   "labelPos": "mid",
+   "labelOffset": [
+    0,
+    -26
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    410,
+    60
+   ],
+   "to": [
+    410,
+    180
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    420,
+    120
+   ],
+   "text": "d",
+   "italic": true,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    225
+   ],
+   "text": "極板間の電圧 V，磁場 B は紙面の表から裏の向き",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

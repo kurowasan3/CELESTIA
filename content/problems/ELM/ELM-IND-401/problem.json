@@ -1,0 +1,162 @@
+{
+ "id": "ELM-IND-401",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "磁束密度のグラフから誘導起電力と電流を読む",
+ "course": "物理",
+ "level": 0,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "numeric"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "断面積 $4.0\\times10^{-3}\\ \\mathrm{m^2}$，巻数 $100$ のコイルの両端に抵抗値 $2.0\\ \\Omega$ の抵抗をつなぎ，コイルの断面に垂直に一様な磁場をかけた．磁束密度 $B$ を図のように変化させた．コイルの抵抗と自己誘導は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$0\\ \\mathrm s<t<0.10\\ \\mathrm s$ でコイルに生じる誘導起電力の大きさ $V_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "このとき抵抗を流れる電流の大きさ $I_1$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "$0.10\\ \\mathrm s<t<0.30\\ \\mathrm s$ でコイルに生じる誘導起電力の大きさを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$0.30\\ \\mathrm s<t<0.50\\ \\mathrm s$ でコイルに生じる誘導起電力の大きさ $V_3$ を求めよ．また，抵抗を流れる電流の向きは (2) と同じか，逆か．"
+     },
+     {
+      "id": "5",
+      "tex": "$0\\ \\mathrm s<t<0.10\\ \\mathrm s$ の間に抵抗を通過する電気量 $Q$ を求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "磁束密度 B [T] と時刻 t [s] のグラフ。t=0 から 0.10 s まで 0 から 0.20 T まで一定の割合で増え、0.30 s まで 0.20 T で一定、0.50 s で 0 まで一定の割合で減り、その後 0",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V_1=0.80\\ \\mathrm V$",
+    "grading": "V_1：0.80 [V]"
+   },
+   {
+    "id": "2",
+    "tex": "$I_1=0.40\\ \\mathrm A$",
+    "grading": "I_1：0.40 [A]"
+   },
+   {
+    "id": "3",
+    "tex": "$0$",
+    "grading": "0 [V]"
+   },
+   {
+    "id": "4",
+    "tex": "$V_3=0.40\\ \\mathrm V$，逆向き",
+    "grading": "V_3：0.40 [V]"
+   },
+   {
+    "id": "5",
+    "tex": "$Q=4.0\\times10^{-2}\\ \\mathrm C$",
+    "grading": "Q：0.040 [C]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "ファラデーの電磁誘導の法則：$V=N\\left|\\dfrac{\\Delta\\Phi}{\\Delta t}\\right|=NS\\left|\\dfrac{\\Delta B}{\\Delta t}\\right|$．グラフの\\textbf{傾き}が起電力を決める（$B$ の大きさではない）．\n\n\\textbf{(1)} 傾きは $\\dfrac{0.20}{0.10}=2.0\\ \\mathrm{T/s}$．$V_1=100\\times4.0\\times10^{-3}\\times2.0=0.80\\ \\mathrm V$．\n\n\\textbf{(2)} $I_1=\\dfrac{0.80}{2.0}=0.40\\ \\mathrm A$．\n\n\\textbf{(3)} $B$ は $0.20\\ \\mathrm T$ と大きいが一定なので，磁束は変化しない．起電力は $0$．\n\n\\textbf{(4)} 傾きの大きさは $\\dfrac{0.20}{0.20}=1.0\\ \\mathrm{T/s}$．$V_3=100\\times4.0\\times10^{-3}\\times1.0=0.40\\ \\mathrm V$．磁束が増えるときと減るときで，レンツの法則により誘導電流は\\textbf{逆向き}．\n\n\\textbf{(5)} $Q=I_1\\times0.10=0.040\\ \\mathrm C$．（$Q=\\dfrac{N\\Delta\\Phi}{R}=\\dfrac{100\\times0.20\\times4.0\\times10^{-3}}{2.0}$ と同じで，変化にかかる時間によらない．）"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "起電力は $B$-$t$ グラフの\\textbf{傾き}に比例する．$B$ が大きくても一定なら起電力は $0$．"
+ },
+ "predict": {
+  "prompt": "$0.10\\ \\mathrm s<t<0.30\\ \\mathrm s$ では，コイルを $0.20\\ \\mathrm T$ の強い磁場が貫いている．このとき抵抗に電流は流れると思う？",
+  "choices": [
+   {
+    "id": "a",
+    "tex": "磁場が最も強いので，最も大きな電流が流れる",
+    "misconception": "MC-INDUCTION-FLUX"
+   },
+   {
+    "id": "b",
+    "tex": "(1) のときと同じ大きさの電流が流れ続ける",
+    "misconception": "MC-INDUCTION-FLUX"
+   },
+   {
+    "id": "c",
+    "tex": "流れない"
+   }
+  ],
+  "answer": "c",
+  "explain": {
+   "laws": [
+    "faraday-law"
+   ],
+   "tex": "起電力は磁束の\\textbf{変化の割合}で決まる．$B$ が一定なら，どれほど大きくても起電力は $0$．"
+  }
+ },
+ "concepts": [
+  "electromagnetic-induction"
+ ],
+ "laws": [
+  "faraday-law",
+  "ohm-law"
+ ],
+ "misconceptions": [
+  "MC-INDUCTION-FLUX"
+ ],
+ "tags": [
+  "電磁誘導",
+  "グラフ",
+  "数値"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "id": "MEC-ENE-405",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "鉛直なばねの上に落とした小球の最大の縮みと，速さが最大になる位置（つり合いの位置を行き過ぎる）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "derivation"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "ばね定数 $k$ の軽いばねを鉛直に立てて，下端を床に固定する．ばねの上端から高さ $h$ の位置で質量 $m$ の小球を静かに放すと，小球はばねの上端に当たってばねを押し縮め，やがて最下点に達した．小球はばねの上端に当たった後，ばねから離れずに鉛直方向に運動するものとし，空気の抵抗は無視する．重力加速度の大きさを $g$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "小球がばねに当たる直前の速さ $v_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "ばねの最大の縮み $d$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "小球の速さが最大になるのは，ばねの縮みがいくらのときか．その縮み $x_0$ と，速さの最大値 $v_{\\rm max}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "小球をばねの上端にのせ，ばねが自然長の状態から静かに手をはなした場合（$h=0$），ばねの最大の縮みは，小球をのせて静止させたときの縮みの何倍か．また，そうなる理由を簡単に説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "床に立てたばね定数 k のばねの上端から高さ h の位置に質量 m の小球がある",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_1=\\sqrt{2gh}$",
+    "grading": "v_1：sqrt(2g h)"
+   },
+   {
+    "id": "2",
+    "tex": "$d=\\dfrac{mg}{k}+\\sqrt{\\left(\\dfrac{mg}{k}\\right)^2+\\dfrac{2mgh}{k}}$",
+    "grading": "d：m g/k+sqrt((m g/k)^2+2m g h/k)"
+   },
+   {
+    "id": "3",
+    "tex": "$x_0=\\dfrac{mg}{k}$，$v_{\\rm max}=\\sqrt{2gh+\\dfrac{mg^2}{k}}$",
+    "grading": "x_0：m g/k ; v_max：sqrt(2g h+m g^2/k)"
+   },
+   {
+    "id": "4",
+    "tex": "$2$ 倍．つり合いの位置では速さが最大で，そこを行き過ぎてから止まるため（つり合いの位置を中心に上下対称に往復する）．",
+    "grading": "2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 自由落下なので $\\dfrac12mv_1^2=mgh$ より $v_1=\\sqrt{2gh}$．\n\n(2) 最下点では速さが $0$．放した位置と最下点で力学的エネルギー保存（重力と弾性力だけが仕事をする）．最下点を高さの基準にとると\\[mg(h+d)=\\frac12kd^2\\] $d>0$ の解は\\[d=\\frac{mg}{k}+\\sqrt{\\left(\\frac{mg}{k}\\right)^2+\\frac{2mgh}{k}}\\]\n\n(3) 縮みが $x$ のとき，小球にはたらく力は下向きに $mg-kx$．$x<\\dfrac{mg}{k}$ では合力が下向きで速さは増え続け，$x>\\dfrac{mg}{k}$ では上向きで減っていく．よって速さが最大になるのは合力が $0$ になるつり合いの位置 $x_0=\\dfrac{mg}{k}$．このとき\\[\\frac12mv_{\\rm max}^2=mg(h+x_0)-\\frac12kx_0^2=mgh+\\frac{m^2g^2}{2k}\\] より $v_{\\rm max}=\\sqrt{2gh+\\dfrac{mg^2}{k}}$．\n\n(4) (2) で $h=0$ とおくと $d=\\dfrac{2mg}{k}$．のせて静止させたときの縮みは $x_0=\\dfrac{mg}{k}$ なので $2$ 倍．ばねが自然長のとき小球には重力だけがはたらいて加速し，つり合いの位置で速さが最大になる．そこから先は減速しながら縮み，つり合いの位置について対称な位置（$2x_0$）で止まる（つり合いの位置を中心とする単振動）．ゆっくり下ろせば手が負の仕事をするので $x_0$ で止まるが，手をはなすとその分のエネルギーが運動エネルギーとして残る．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "速さが最大になるのは加速度が $0$（つり合いの位置）のとき．最大の縮みは，速さ $0$ の2点で力学的エネルギー保存の式を立てて求める．"
+ },
+ "concepts": [
+  "mechanical-energy",
+  "work-energy"
+ ],
+ "laws": [
+  "energy-conservation",
+  "hooke-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "弾性エネルギー",
+  "力学的エネルギー保存",
+  "鉛直ばね"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

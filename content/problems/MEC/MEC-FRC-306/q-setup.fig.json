@@ -1,0 +1,102 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  370,
+  215
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     20,
+     40
+    ],
+    [
+     40,
+     40
+    ],
+    [
+     40,
+     200
+    ],
+    [
+     20,
+     200
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    40
+   ],
+   "to": [
+    40,
+    200
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    200
+   ],
+   "to": [
+    360,
+    200
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "block",
+   "at": [
+    200,
+    200
+   ],
+   "w": 160,
+   "h": 40,
+   "label": "B",
+   "phys": "body:B"
+  },
+  {
+   "t": "block",
+   "at": [
+    180,
+    160
+   ],
+   "w": 60,
+   "h": 34,
+   "label": "A",
+   "phys": "body:A"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     40,
+     143
+    ],
+    [
+     150,
+     143
+    ]
+   ]
+  },
+  {
+   "t": "arrow",
+   "from": [
+    280,
+    180
+   ],
+   "dir": 0,
+   "len": 50,
+   "style": "force",
+   "phys": "force:F",
+   "label": "F"
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "id": "ELM-SLF-403",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-05",
+ "topic": "ソレノイドの自己インダクタンスの導出と磁場のエネルギー",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "真空中に，長さ $l$，断面積 $S$，巻数 $N$ の細長いソレノイドがある．内部の磁場は一様で，外部の磁場と端の効果は無視できるものとする．真空の透磁率を $\\mu_0$ とし，導線の抵抗は無視する．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "電流 $I$ を流したとき，内部の磁束密度の大きさ $B$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "電流が $\\Delta t$ の間に $\\Delta I$ だけ変化するとき，ソレノイド全体に生じる自己誘導起電力の大きさを求め，それから自己インダクタンス $L$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ソレノイドを電源につなぎ，電流を $0$ から一定の割合で増やして $I$ にした．この間に電源がした仕事 $W$ を，$L$ と $I$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の仕事は，ソレノイドの内部の磁場のエネルギーとして蓄えられると考える．内部の単位体積あたりのエネルギー $u$ を，$B$ と $\\mu_0$ で表せ．"
+     },
+     {
+      "id": "5",
+      "tex": "$l=0.50\\ \\mathrm m$，$S=4.0\\times10^{-4}\\ \\mathrm{m^2}$，$N=1000$，$\\mu_0=4\\pi\\times10^{-7}\\ \\mathrm{N/A^2}$ のとき，$L$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "単位長さあたりの巻数 $n=\\dfrac Nl$ を一定に保ったまま，ソレノイドの長さを $2$ 倍にする（巻数も $2$ 倍になる）と，$L$ は何倍になるか．また，この結果を (4) の考え方を用いて説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$B=\\dfrac{\\mu_0NI}{l}$",
+    "grading": "B：μ_0 N I/l"
+   },
+   {
+    "id": "2",
+    "tex": "起電力の大きさ $\\dfrac{\\mu_0N^2S}{l}\\left|\\dfrac{\\Delta I}{\\Delta t}\\right|$，$L=\\dfrac{\\mu_0N^2S}{l}$",
+    "grading": "L：μ_0 N^2 S/l"
+   },
+   {
+    "id": "3",
+    "tex": "$W=\\dfrac12LI^2$",
+    "grading": "W：L I^2/2"
+   },
+   {
+    "id": "4",
+    "tex": "$u=\\dfrac{B^2}{2\\mu_0}$",
+    "grading": "u：B^2/(2μ_0)"
+   },
+   {
+    "id": "5",
+    "tex": "$L\\fallingdotseq1.0\\times10^{-3}\\ \\mathrm H$",
+    "grading": "L：1.0×10^(-3) [H]"
+   },
+   {
+    "id": "6",
+    "tex": "$2$ 倍．$n$ と $I$ が同じなら $B=\\mu_0nI$ は変わらず，エネルギー密度 $u$ も同じ．蓄えられるエネルギー $u\\times Sl$ は体積に比例して $2$ 倍になり，$\\dfrac12LI^2$ も $2$ 倍，つまり $L$ が $2$ 倍．",
+    "grading": "2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 単位長さあたりの巻数 $\\dfrac Nl$ を用いて $B=\\mu_0\\dfrac{N}{l}I$．\n\n\\textbf{(2)} 1巻きを貫く磁束は $\\Phi=BS=\\dfrac{\\mu_0NSI}{l}$．$N$ 巻き全体の起電力の大きさは\n\\[N\\left|\\frac{\\Delta\\Phi}{\\Delta t}\\right|=\\frac{\\mu_0N^2S}{l}\\left|\\frac{\\Delta I}{\\Delta t}\\right|\\]\nこれを $L\\left|\\dfrac{\\Delta I}{\\Delta t}\\right|$ と比べて $L=\\dfrac{\\mu_0N^2S}{l}$．\n\n\\textbf{(3)} 電流の増加の割合を $k$ とすると，電源は自己誘導起電力にさからって電圧 $Lk$ を加え続ける．時刻 $t$ での電流 $kt$ に対して仕事率は $Lk\\cdot kt$．$I=kT$ となるまでの仕事は，仕事率のグラフ（直線）の下の三角形の面積で\n\\[W=\\frac12\\cdot T\\cdot Lk^2T=\\frac12L(kT)^2=\\frac12LI^2\\]\n（増やし方の速さ $k$ によらない．）\n\n\\textbf{(4)} 体積は $Sl$．\n\\[u=\\frac{\\frac12LI^2}{Sl}=\\frac{\\mu_0N^2I^2}{2l^2}=\\frac{1}{2\\mu_0}\\left(\\frac{\\mu_0NI}{l}\\right)^2=\\frac{B^2}{2\\mu_0}\\]\nコンデンサーの電場のエネルギー密度 $\\dfrac12\\varepsilon_0E^2$ に対応する式で，エネルギーは導線ではなく磁場の空間に蓄えられていると考えられる．\n\n\\textbf{(5)} $L=\\dfrac{4\\pi\\times10^{-7}\\times(1000)^2\\times4.0\\times10^{-4}}{0.50}=3.2\\pi\\times10^{-4}\\fallingdotseq1.0\\times10^{-3}\\ \\mathrm H$．\n\n\\textbf{(6)} $L=\\dfrac{\\mu_0N^2S}{l}=\\mu_0n^2Sl$．$n$ が一定なら $L\\propto l$ で $2$ 倍．\n$L=\\dfrac{\\mu_0N^2S}l$ だけを見ると「$l$ が大きいほど $L$ は小さい」ように見えるが，それは $N$ を一定にした場合である．$n$ を一定にすると，内部の $B$ は変わらず，$u=\\dfrac{B^2}{2\\mu_0}$ も変わらない．エネルギー $\\dfrac12LI^2=u\\,Sl$ は磁場のある体積に比例するので，同じ $I$ で比べると $L$ は体積に比例する．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "磁束を数えて $L=\\mu_0N^2S/l$．電源の仕事 $\\frac12LI^2$ を体積で割ると $B^2/(2\\mu_0)$：エネルギーは磁場の空間に蓄えられる．"
+ },
+ "concepts": [
+  "electromagnetic-induction"
+ ],
+ "laws": [
+  "faraday-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "自己インダクタンス",
+  "ソレノイド",
+  "磁場のエネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

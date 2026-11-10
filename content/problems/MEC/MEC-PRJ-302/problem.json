@@ -1,0 +1,197 @@
+{
+ "id": "MEC-PRJ-302",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-01",
+ "topic": "崖の上から投げた小球の到達距離を最大にする角度（着地速度との直交と，高さ 0 の極限）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 25,
+ "format": [
+  "derivation",
+  "numeric",
+  "synthesis"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な地面から高さ $h$ の崖の上の点 P から，小球を水平と角 $\\theta$ $(0<\\theta<90^\\circ)$ をなす斜め上向きに，速さ $v_0$ で投げ出した．小球は崖に当たらずに地面に落ちた．重力加速度の大きさを $g$ とし，空気抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "投げ出してから地面に落ちるまでの時間 $t_1$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "地面に落ちる直前の小球の速さ $V$ を求めよ．$V$ が $\\theta$ によらないことに注意せよ．"
+     },
+     {
+      "id": "3",
+      "tex": "P から落下点までの水平距離を $R$ とする．投げ出したときの速度 $\\vec v_0$ と落ちる直前の速度 $\\vec V$ のなす角を $\\psi$ とすると，$gR=v_0V\\sin\\psi$ が成り立つことを示せ．（ヒント：$\\vec V=\\vec v_0+\\vec g\\,t_1$ を表す三角形の面積を2通りに表す．）"
+     },
+     {
+      "id": "4",
+      "tex": "$\\theta$ を変えたときの $R$ の最大値 $R_{\\max}$ と，そのときの $\\tan\\theta$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "$v_0=14\\,\\mathrm{m/s}$，$h=30\\,\\mathrm m$，$g=9.8\\,\\mathrm{m/s^2}$ のとき，$R_{\\max}$ を求めよ．"
+     },
+     {
+      "id": "6",
+      "tex": "$R$ を最大にする角は $45^\\circ$ より大きいか小さいか．また，$h\\to0$ と $h\\to\\infty$ の極限で，その角はそれぞれどうなるか．物理的な理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "高さ h の崖の上の点 P から、水平と角 θ の向きに速さ v₀ で小球を投げ出し、小球は放物線を描いて崖の下の地面に落ちる",
+   "caption": ""
+  },
+  {
+   "id": "a-tri",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-tri.svg",
+   "alt": "速度の三角形。初速度 v₀ に鉛直下向きの gt を足すと着地速度 V になる。R が最大のとき v₀ と V は直交する",
+   "caption": "$\\vec V=\\vec v_0+\\vec g\\,t_1$．$R$ 最大のとき $\\vec v_0\\perp\\vec V$",
+   "physics": {
+    "vectors": [
+     {
+      "name": "vel:v0",
+      "dir_deg": 30
+     },
+     {
+      "name": "vel:gt",
+      "dir_deg": 270
+     },
+     {
+      "name": "vel:V",
+      "dir_deg": 300
+     }
+    ],
+    "decompositions": [
+     {
+      "of": "vel:V",
+      "into": [
+       "vel:v0",
+       "vel:gt"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$t_1=\\dfrac{v_0\\sin\\theta+\\sqrt{v_0^2\\sin^2\\theta+2gh}}{g}$",
+    "grading": "t_1：(v_0 sin(θ)+sqrt(v_0^2 sin(θ)^2+2g h))/g"
+   },
+   {
+    "id": "2",
+    "tex": "$V=\\sqrt{v_0^2+2gh}$",
+    "grading": "V：sqrt(v_0^2+2g h)"
+   },
+   {
+    "id": "3",
+    "tex": "証明は解答参照．"
+   },
+   {
+    "id": "4",
+    "tex": "$R_{\\max}=\\dfrac{v_0\\sqrt{v_0^2+2gh}}{g}$，$\\tan\\theta=\\dfrac{v_0}{\\sqrt{v_0^2+2gh}}$",
+    "grading": "R_max：v_0 sqrt(v_0^2+2g h)/g ; tan(θ)：v_0/sqrt(v_0^2+2g h)"
+   },
+   {
+    "id": "5",
+    "tex": "$40\\,\\mathrm m$",
+    "grading": "40 [m]"
+   },
+   {
+    "id": "6",
+    "tex": "$45^\\circ$ より小さい．$h\\to0$ で $45^\\circ$，$h\\to\\infty$ で $0^\\circ$（水平投射）に近づく．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "水平右向きに $x$ 軸，鉛直上向きに $y$ 軸をとり，P を原点とする．\n\n\\textbf{(1)} $y=v_0\\sin\\theta\\,t-\\dfrac12gt^2=-h$ の正の解：\n\\[ t_1=\\boldsymbol{\\frac{v_0\\sin\\theta+\\sqrt{v_0^2\\sin^2\\theta+2gh}}{g}}. \\]\n\n\\textbf{(2)} $V_x=v_0\\cos\\theta$，$V_y=v_0\\sin\\theta-gt_1=-\\sqrt{v_0^2\\sin^2\\theta+2gh}$ より\n\\[ V^2=v_0^2\\cos^2\\theta+v_0^2\\sin^2\\theta+2gh=v_0^2+2gh,\\qquad V=\\boldsymbol{\\sqrt{v_0^2+2gh}}. \\]\n（$v^2-v_0^2=2a\\Delta y$ を鉛直方向に使っても同じ．水平成分は変わらないので，速さは落ちた高さだけで決まる．）\n\n\\textbf{(3)} $\\vec V=\\vec v_0+\\vec g\\,t_1$ なので，$\\vec v_0$，$\\vec g\\,t_1$（鉛直下向き），$\\vec V$ は三角形をつくる．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-tri"
+    },
+    {
+     "type": "text",
+     "tex": "この三角形の面積 $S$ は，2辺 $v_0$，$V$ とその間の角 $\\psi$ を使うと $S=\\dfrac12v_0V\\sin\\psi$．一方，鉛直な辺 $gt_1$ を底辺とみると，高さは $\\vec v_0$ の水平成分 $v_0\\cos\\theta$ なので $S=\\dfrac12\\,gt_1\\,v_0\\cos\\theta=\\dfrac12gR$（$R=v_0\\cos\\theta\\,t_1$）．よって $gR=v_0V\\sin\\psi$．\n\n\\textbf{(4)} $v_0$ と $V$ は $\\theta$ によらないので，$R$ が最大になるのは $\\sin\\psi=1$，つまり $\\vec v_0\\perp\\vec V$ のとき：\n\\[ R_{\\max}=\\frac{v_0V}{g}=\\boldsymbol{\\frac{v_0\\sqrt{v_0^2+2gh}}{g}}. \\]\nこのとき直角三角形の斜辺は $gt_1$ で，$\\vec v_0$ と鉛直線のなす角は $90^\\circ-\\theta$．直角三角形で $\\tan(90^\\circ-\\theta)=\\dfrac{V}{v_0}$，すなわち\n\\[ \\tan\\theta=\\boldsymbol{\\frac{v_0}{\\sqrt{v_0^2+2gh}}}. \\]\n（どの $\\theta$ でも $\\psi$ は $90^\\circ$ にでき，$\\sin\\psi\\le1$ が実際に等号で達成される．）\n\n\\textbf{(5)} $v_0^2+2gh=196+588=784=28^2$ より $V=28\\,\\mathrm{m/s}$，$R_{\\max}=\\dfrac{14\\times28}{9.8}=\\boldsymbol{40\\,\\mathrm m}$．このとき $\\tan\\theta=\\dfrac{14}{28}=\\dfrac12$（$\\theta\\approx27^\\circ$）．\n\n\\textbf{(6)} $\\tan\\theta=\\dfrac{v_0}{\\sqrt{v_0^2+2gh}}<1$ なので $\\theta<45^\\circ$．$h\\to0$ では $\\tan\\theta\\to1$ で $45^\\circ$（同じ高さに落ちる斜方投射の結果），$h\\to\\infty$ では $\\tan\\theta\\to0$ で水平投射に近づく．\n理由：高い所から投げると，落ちるまでの時間の大部分は「投げた高さより下を落ちる時間」で，これは上向きの初速度をあまり必要としない．滞空時間を稼ぐために上向きの成分を増やすより，水平成分 $v_0\\cos\\theta$ を大きくする方が得になり，最適な角が小さくなる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "着地の速さは $\\theta$ によらない．速度の三角形 $\\vec V=\\vec v_0+\\vec g t$ の面積が $\\frac12 gR$ になることから，$R$ 最大 ⇔ $\\vec v_0\\perp\\vec V$．"
+ },
+ "simulation": {
+  "id": "mech.projectile",
+  "preset": {
+   "v0": 14,
+   "theta": 27,
+   "h0": 30
+  },
+  "locked": [
+   "g"
+  ],
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "projectile-motion",
+  "kinematics-components"
+ ],
+ "laws": [
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "放物運動",
+  "最大到達距離",
+  "速度の三角形",
+  "極限・場合の確認"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

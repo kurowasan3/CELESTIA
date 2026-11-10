@@ -1,0 +1,140 @@
+{
+ "id": "ESY-MTR-204",
+ "schema": "celestia.problem/1",
+ "field": "ESY",
+ "unit": "ESY-01",
+ "topic": "直流モーターの電流–回転数のグラフ（逆起電力・効率）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "graph-read",
+  "experiment",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "直流モーターに，電圧 $V=6.0\\ \\mathrm V$ の電源（内部抵抗は無視）をつなぎ，軸にかける負荷（ブレーキ）を変えながら，1秒あたりの回転数 $n$ とモーターに流れる電流 $I$ を測ったところ，図のような直線のグラフが得られた．回転しているモーターのコイルには，回転数に比例する誘導起電力（逆起電力）$kn$ が電流を妨げる向きに生じる．コイルの抵抗値を $R$ とし，摩擦などによる損失は無視する．モーターが負荷にする仕事の仕事率は，逆起電力と電流の積 $knI$ に等しい．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "負荷を大きくしてモーターを止めたとき（$n=0$）の電流から，コイルの抵抗値 $R$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "$n=60$ 回/s のときの逆起電力の大きさは何 V か．"
+     },
+     {
+      "id": "3",
+      "tex": "比例定数 $k$（単位 $\\mathrm{V\\cdot s}$）を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "電流が $1.0\\ \\mathrm A$ になるように負荷を調節した．このときの回転数 $n$（回/s），モーターが負荷にする仕事の仕事率 $P$，および電源が供給する電力のうち $P$ の割合（効率）を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "モーターに大きな負荷がかかって回転が止まると，コイルが焼けやすい．その理由を，このモーターの数値を用いて説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "横軸が1秒あたりの回転数 n（回/s），縦軸がモーターの電流 I（A）のグラフ．右下がりの直線で，n=0 で I=2.0 A，n=60 で I=0.50 A を通る．",
+   "caption": "モーターの電流と回転数"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$R=3.0\\ \\Omega$",
+    "grading": "3.0 [Ω]"
+   },
+   {
+    "id": "2",
+    "tex": "$4.5\\ \\mathrm V$",
+    "grading": "4.5 [V]"
+   },
+   {
+    "id": "3",
+    "tex": "$k=0.075\\ \\mathrm{V\\cdot s}$",
+    "grading": "k：0.075"
+   },
+   {
+    "id": "4",
+    "tex": "$n=40$ 回/s，$P=3.0\\ \\mathrm W$，効率 $50\\ \\%$",
+    "grading": "n：40 ; P：3.0 [W] ; 効率（%）：50"
+   },
+   {
+    "id": "5",
+    "tex": "止まると逆起電力が 0 になり，電流が最大の $2.0\\ \\mathrm A$ になる．電源の電力 $12\\ \\mathrm W$ がすべてコイルのジュール熱になる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "回路の式は $V=RI+kn$（電源の電圧 ＝ コイルの電圧降下 ＋ 逆起電力）．$I=\\dfrac{V-kn}R$ は $n$ の1次関数で，グラフが直線になる．\n\n(1) $n=0$ では逆起電力が 0 なので $V=RI_0$．グラフの縦軸の切片 $I_0=2.0\\ \\mathrm A$ より $R=\\dfrac{6.0}{2.0}=3.0\\ \\Omega$．\n\n(2) $n=60$ 回/s で $I=0.50\\ \\mathrm A$：逆起電力 $=V-RI=6.0-3.0\\times0.50=4.5\\ \\mathrm V$．\n\n(3) $k=\\dfrac{4.5}{60}=0.075\\ \\mathrm{V\\cdot s}$．（グラフの傾き $-\\dfrac kR=-\\dfrac{1.5}{60}\\ \\mathrm{A\\cdot s}$ からも求まる．）\n\n(4) $I=1.0\\ \\mathrm A$ のとき，逆起電力 $=6.0-3.0\\times1.0=3.0\\ \\mathrm V$，$n=\\dfrac{3.0}{0.075}=40$ 回/s．$P=knI=3.0\\times1.0=3.0\\ \\mathrm W$．電源の電力は $VI=6.0\\ \\mathrm W$，ジュール熱は $RI^2=3.0\\ \\mathrm W$ で，$VI=RI^2+knI$ が成り立つ．効率 $\\dfrac{3.0}{6.0}=50\\ \\%$．\n\n(5) 止まると $n=0$ で逆起電力がなくなり，電流は $\\dfrac VR=2.0\\ \\mathrm A$ と最大になる．このとき電源の電力 $VI=12\\ \\mathrm W$ がすべてコイルのジュール熱 $RI^2=12\\ \\mathrm W$ になり，仕事は取り出されない．回っているときは逆起電力が電流をおさえている（(4) ではジュール熱 $3.0\\ \\mathrm W$）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "モーターも発電機と同じく誘導起電力（逆起電力）を生じる．$V=RI+kn$ で，電力の収支は $VI=RI^2+knI$．"
+ },
+ "concepts": [
+  "electromagnetic-induction",
+  "electric-power",
+  "ohm-law-use"
+ ],
+ "laws": [
+  "faraday-law",
+  "ohm-law",
+  "joule-heat",
+  "current-force"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "モーター",
+  "逆起電力",
+  "グラフ",
+  "効率",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

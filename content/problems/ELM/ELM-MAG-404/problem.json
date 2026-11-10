@@ -1,0 +1,167 @@
+{
+ "id": "ELM-MAG-404",
+ "schema": "celestia.problem/1",
+ "field": "ELM",
+ "unit": "ELM-04",
+ "topic": "円形コイルと方位磁針で地磁気の水平成分を測る（正接検流計）",
+ "course": "物理",
+ "level": 2,
+ "minutes": 15,
+ "format": [
+  "experiment",
+  "derivation",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "半径 $a$，巻数 $N$ の円形コイルを，コイルの面が鉛直で南北を向くように立て，コイルの中心に小さな方位磁針を置いた．図はこれを真上から見たものである．電流を流さないとき，方位磁針は北を指していた．地磁気の水平成分（北向き）の大きさを $B_{\\rm H}$，真空の透磁率を $\\mu_0$ とし，方位磁針の大きさや磁針がつくる磁場は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "コイルに電流 $I$ を流したとき，コイルの中心にコイルの電流がつくる磁場の大きさ $B_{\\rm c}$ を求めよ．また，その向きは東西・南北のどちらに沿うか．"
+     },
+     {
+      "id": "2",
+      "tex": "このとき方位磁針は北から角 $\\theta$ だけ振れて静止した．$B_{\\rm H}$ を $\\mu_0$，$N$，$I$，$a$，$\\theta$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$N=10$，$a=0.10\\ \\mathrm m$，$I=0.50\\ \\mathrm A$ のとき $\\theta=45^\\circ$ であった．$\\mu_0=4\\pi\\times10^{-7}\\ \\mathrm{N/A^2}$，$\\pi=3.14$ として，$B_{\\rm H}$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "角 $\\theta$ の読み取りには，いつも同じ程度の誤差 $\\Delta\\theta$ がある．$\\Delta\\theta$ による $B_{\\rm H}$ の相対誤差 $\\dfrac{\\Delta B_{\\rm H}}{B_{\\rm H}}$ がもっとも小さくなる $\\theta$ を求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "誤ってコイルの面を東西に向けて立てると，電流を流したとき方位磁針はどうなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "真上から見た図。南北に沿って立てたコイルが縦の線として見え、その中心に方位磁針がある。左下に北（上）と東（右）の向きの矢印",
+   "caption": ""
+  },
+  {
+   "id": "a-vectors",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-vectors.svg",
+   "alt": "コイルの中心での磁場：地磁気の水平成分 B_H は北向き、コイルの電流の磁場 B_c は東向き。合成磁場は北から東へ角 θ 傾き、tanθ = B_c/B_H",
+   "caption": "コイルの中心での磁場の合成",
+   "physics": {
+    "vectors": [
+     {
+      "name": "vec:BH",
+      "dir_deg": 90
+     },
+     {
+      "name": "vec:Bc",
+      "dir_deg": 0
+     }
+    ],
+    "decompositions": [
+     {
+      "of": "vec:B",
+      "into": [
+       "vec:BH",
+       "vec:Bc"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$B_{\\rm c}=\\dfrac{\\mu_0NI}{2a}$，東西に沿う（コイルの面に垂直）",
+    "grading": "B_c：μ_0 N I/(2a)"
+   },
+   {
+    "id": "2",
+    "tex": "$B_{\\rm H}=\\dfrac{\\mu_0NI}{2a\\tan\\theta}$",
+    "grading": "B_H：μ_0 N I/(2a tan(θ))"
+   },
+   {
+    "id": "3",
+    "tex": "$B_{\\rm H}\\fallingdotseq3.1\\times10^{-5}\\ \\mathrm T$",
+    "grading": "B_H：3.1×10^(-5) [T]"
+   },
+   {
+    "id": "4",
+    "tex": "$\\theta=45^\\circ$",
+    "grading": "θ：45°"
+   },
+   {
+    "id": "5",
+    "tex": "振れない（北を向いたまま）．ただし電流がつくる磁場が南向きで $B_{\\rm H}$ より強いと，向きが反転して南を指す．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-vectors"
+    },
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 半径 $a$ の1巻きの円形電流が中心につくる磁場は $\\dfrac{\\mu_0I}{2a}$．$N$ 巻きなら $B_{\\rm c}=\\dfrac{\\mu_0NI}{2a}$．向きはコイルの面に垂直で，面が南北を向いているので\\textbf{東西}に沿う（右ねじの法則で東か西かが決まる）．\n\n\\textbf{(2)} 方位磁針は合成磁場の向きを指す．北向きの $B_{\\rm H}$ と東西向きの $B_{\\rm c}$ は垂直なので，図のように $\\tan\\theta=\\dfrac{B_{\\rm c}}{B_{\\rm H}}$．\n\\[B_{\\rm H}=\\frac{B_{\\rm c}}{\\tan\\theta}=\\frac{\\mu_0NI}{2a\\tan\\theta}\\]\n\n\\textbf{(3)} $B_{\\rm c}=\\dfrac{4\\pi\\times10^{-7}\\times10\\times0.50}{2\\times0.10}=\\pi\\times10^{-5}\\ \\mathrm T$．$\\tan45^\\circ=1$ なので $B_{\\rm H}=\\pi\\times10^{-5}\\fallingdotseq3.1\\times10^{-5}\\ \\mathrm T$．\n\n\\textbf{(4)} $B_{\\rm H}\\propto\\dfrac1{\\tan\\theta}$ なので，$\\theta$ が $\\Delta\\theta$ ずれたときの相対誤差は\n\\[\\frac{\\Delta B_{\\rm H}}{B_{\\rm H}}=\\frac{1}{\\tan\\theta}\\cdot\\frac{\\Delta\\theta}{\\cos^2\\theta}=\\frac{\\Delta\\theta}{\\sin\\theta\\cos\\theta}=\\frac{2\\Delta\\theta}{\\sin2\\theta}\\]\nこれは $\\sin2\\theta=1$，つまり $\\theta=45^\\circ$ で最小．振れが小さすぎても（$\\tan\\theta$ が小さく読みにくい），大きすぎても（$\\tan\\theta$ が急に変わる）誤差が大きくなる．電流を調整して $45^\\circ$ 付近で測るのがよい．\n\n\\textbf{(5)} コイルの面が東西を向くと，$B_{\\rm c}$ は南北に沿い，$B_{\\rm H}$ と同じ直線上にある．合成磁場は北向きか南向きのままなので，方位磁針は振れない（南向きで $B_{\\rm c}>B_{\\rm H}$ のときだけ反転する）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "方位磁針は合成磁場の向きを指す．地磁気とコイルの磁場が直交するように置けば $\\tan\\theta=B_{\\rm c}/B_{\\rm H}$．"
+ },
+ "concepts": [
+  "lorentz-force"
+ ],
+ "laws": [],
+ "misconceptions": [],
+ "tags": [
+  "円形電流",
+  "地磁気",
+  "実験",
+  "磁場の合成",
+  "誤差"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "id": "MEC-MOM-403",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "平面上での円板の斜め衝突（運動量の成分ごとの保存と，運動量のベクトルの三角形）",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "calc",
+  "figure-read"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上で，質量 $0.50\\,\\mathrm{kg}$ の円板 A が $x$ 軸の正の向きに速さ $5.0\\,\\mathrm{m/s}$ で進み，静止している同じ質量の円板 B に衝突した．衝突後，A は図のように $x$ 軸と角 $\\theta$（$\\cos\\theta=0.60$，$\\sin\\theta=0.80$）をなす向きに，速さ $3.0\\,\\mathrm{m/s}$ で進んだ．図は真上から見たもので，$y$ 軸は $x$ 軸に垂直である．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "衝突後の B の速度の $x$ 成分 $v_x$ と $y$ 成分 $v_y$ はそれぞれ何 $\\mathrm{m/s}$ か．"
+     },
+     {
+      "id": "2",
+      "tex": "衝突後の B の速さ $V$ は何 $\\mathrm{m/s}$ か．また，B の進む向きが $x$ 軸となす角を $\\varphi$ とするとき，$\\tan\\varphi$ の値を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "衝突後の A と B の進む向きのなす角は何度か．"
+     },
+     {
+      "id": "4",
+      "tex": "衝突の前と後の，A と B の運動エネルギーの和はそれぞれ何 $\\mathrm J$ か．この結果からわかることを述べよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "真上から見た図。円板 A が x 軸の正の向きに 5.0 m/s で原点の円板 B に近づく。衝突後の A の速度は 3.0 m/s で、x 軸と角 θ をなす",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "velocity:vA",
+      "dir_deg": 0
+     },
+     {
+      "name": "velocity:vA2",
+      "dir_deg": 53.13
+     }
+    ]
+   }
+  },
+  {
+   "id": "a-momentum",
+   "role": "answer",
+   "kind": "vector",
+   "format": "svg",
+   "src": "a-momentum.svg",
+   "alt": "運動量のベクトルの三角形。衝突前の A の運動量 2.5 kg·m/s（x 軸方向）が、衝突後の A の運動量 1.5 kg·m/s と B の運動量 2.0 kg·m/s の和になる。2つは直角をなす",
+   "caption": "衝突前の運動量 $=$ 衝突後の運動量の和（3:4:5 の直角三角形）",
+   "physics": {
+    "vectors": [
+     {
+      "name": "momentum:p",
+      "dir_deg": 0
+     },
+     {
+      "name": "momentum:pA2",
+      "dir_deg": 53.13
+     },
+     {
+      "name": "momentum:pB2",
+      "dir_deg": 323.13
+     }
+    ],
+    "decompositions": [
+     {
+      "of": "momentum:p",
+      "into": [
+       "momentum:pA2",
+       "momentum:pB2"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_x=3.2\\,\\mathrm{m/s}$，$v_y=-2.4\\,\\mathrm{m/s}$",
+    "grading": "v_x：3.2 [m/s] ; v_y：-2.4 [m/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$V=4.0\\,\\mathrm{m/s}$，$\\tan\\varphi=0.75$（$x$ 軸から $y$ 軸の負の側へ）",
+    "grading": "V：4 [m/s] ; tanφ：0.75"
+   },
+   {
+    "id": "3",
+    "tex": "$90^\\circ$",
+    "grading": "90 [°]"
+   },
+   {
+    "id": "4",
+    "tex": "衝突前 $6.25\\,\\mathrm J$，衝突後 $6.25\\,\\mathrm J$．運動エネルギーが保存されているので，弾性衝突である．",
+    "grading": "衝突前：6.25 [J] ; 衝突後：6.25 [J]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "figure",
+     "ref": "a-momentum"
+    },
+    {
+     "type": "text",
+     "tex": "(1) 水平面内で外力ははたらかないので，運動量の $x$ 成分，$y$ 成分がそれぞれ保存する．衝突後の A の速度は $(3.0\\cos\\theta,\\ 3.0\\sin\\theta)=(1.8,\\ 2.4)\\,\\mathrm{m/s}$．質量が等しいので，質量で割って\\[x:\\ 5.0=1.8+v_x\\ \\Rightarrow\\ v_x=3.2\\,\\mathrm{m/s},\\qquad y:\\ 0=2.4+v_y\\ \\Rightarrow\\ v_y=-2.4\\,\\mathrm{m/s}\\]\n\n(2) $V=\\sqrt{3.2^2+2.4^2}=4.0\\,\\mathrm{m/s}$，$\\tan\\varphi=\\dfrac{2.4}{3.2}=0.75$（B は $x$ 軸より $y$ の負の側へ進む）．\n\n(3) A の速度と B の速度の内積は $1.8\\times3.2+2.4\\times(-2.4)=0$ なので，なす角は $90^\\circ$．図のように，運動量のベクトルで三角形をつくると，辺の長さの比が $3:4:5$ の直角三角形になっている．\n\n(4) 衝突前 $\\dfrac12\\times0.50\\times5.0^2=6.25\\,\\mathrm J$，衝突後 $\\dfrac12\\times0.50\\times(3.0^2+4.0^2)=6.25\\,\\mathrm J$．等しいので弾性衝突．質量の等しい2物体の弾性衝突では，$\\vec v_0=\\vec v_{\\rm A}+\\vec v_{\\rm B}$ と $v_0^2=v_{\\rm A}^2+v_{\\rm B}^2$ が同時に成り立つ（三平方の定理）ので，衝突後の2つの速度は必ず直交する．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "平面の衝突では運動量の保存を成分ごとに（またはベクトルの三角形で）考える．運動エネルギーまで保存すれば，等質量では衝突後の速度が直交する．"
+ },
+ "concepts": [
+  "momentum-conservation",
+  "restitution"
+ ],
+ "laws": [
+  "momentum-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動量保存",
+  "2次元の衝突",
+  "ベクトル",
+  "弾性衝突"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

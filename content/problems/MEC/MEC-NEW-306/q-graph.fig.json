@@ -1,0 +1,180 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  360,
+  210
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    180
+   ],
+   "dir": 0,
+   "len": 290,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    180
+   ],
+   "dir": 90,
+   "len": 140,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    194
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    56,
+    36
+   ],
+   "text": "F [N]",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    340,
+    168
+   ],
+   "text": "t [s]",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     50,
+     62.4
+    ],
+    [
+     110,
+     62.4
+    ]
+   ]
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     110,
+     140.8
+    ],
+    [
+     170,
+     140.8
+    ]
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    180
+   ],
+   "to": [
+    320,
+    180
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    110,
+    62.4
+   ],
+   "to": [
+    110,
+    180
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    140.8
+   ],
+   "to": [
+    170,
+    180
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    140.8
+   ],
+   "to": [
+    110,
+    140.8
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    62.4
+   ],
+   "text": "14.7",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    40,
+    140.8
+   ],
+   "text": "4.9",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    194
+   ],
+   "text": "2.0",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    170,
+    194
+   ],
+   "text": "4.0",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

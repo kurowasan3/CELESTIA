@@ -1,0 +1,140 @@
+{
+ "id": "WAV-ENC-207",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-01",
+ "topic": "水面を進む船が出会う波の数から波長と波の速さを決める（向きを変えたときの出会う頻度）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 22,
+ "format": [
+  "derivation",
+  "numeric",
+  "experiment"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "広く静かな海面を，波の山が互いに平行な直線となった一様な正弦波（波長 $\\lambda$，速さ $V$）が一定の向きに進んでいる．この海面上を，船が海水に対して一定の速さ $u$ でまっすぐ進む．船の上の観測者は，船首が波の山を通過する回数を数え，単位時間あたりの回数（出会う頻度）$f$ を測る．波は船によって乱されないものとする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "船が波の進む向きと逆向きに（波に向かって）進むときの $f$ を，$V$，$u$，$\\lambda$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "船が波の進む向きと同じ向きに進むとき（$u<V$）の $f$ を，$V$，$u$，$\\lambda$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "$u=2.0\\,\\mathrm{m/s}$ で実験したところ，(1) の場合は $f=0.50\\,\\mathrm{Hz}$，(2) の場合は $f=0.10\\,\\mathrm{Hz}$ であった．波長 $\\lambda$ と波の速さ $V$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の波を，海面に固定されたブイの上で観測すると，ブイは何 $\\mathrm{Hz}$ で上下に振動するか．"
+     },
+     {
+      "id": "5",
+      "tex": "次に，船の進む向きが波の進む向きと角 $\\theta$ をなすようにした．$u\\cos\\theta<V$ のとき，$f$ を $V$，$u$，$\\lambda$，$\\theta$ で表せ．"
+     },
+     {
+      "id": "6",
+      "tex": "(3) の波の中を，船が $u=6.0\\,\\mathrm{m/s}$ で進む．$\\theta$ を $0^\\circ$ から $180^\\circ$ まで変えるとき，出会う頻度が $0$ になる角 $\\theta$（$0^\\circ\\le\\theta\\le180^\\circ$）を求めよ．"
+     },
+     {
+      "id": "7",
+      "tex": "(6) の角では，船は波より速く進んでいるのに，同じ山の上にとどまり続ける．その理由を説明せよ．また，$\\theta=0^\\circ$ と $\\theta=180^\\circ$ での出会う頻度を求め，$\\theta=0^\\circ$ のとき船首には山が前・後ろのどちらからやって来るかを答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$f=\\dfrac{V+u}{\\lambda}$",
+    "grading": "f：(V+u)/λ"
+   },
+   {
+    "id": "2",
+    "tex": "$f=\\dfrac{V-u}{\\lambda}$",
+    "grading": "f：(V-u)/λ"
+   },
+   {
+    "id": "3",
+    "tex": "$\\lambda=10\\,\\mathrm m$，$V=3.0\\,\\mathrm{m/s}$",
+    "grading": "λ：10 [m] ; V：3 [m/s]"
+   },
+   {
+    "id": "4",
+    "tex": "$0.30\\,\\mathrm{Hz}$",
+    "grading": "0.3 [Hz]"
+   },
+   {
+    "id": "5",
+    "tex": "$f=\\dfrac{V-u\\cos\\theta}{\\lambda}$",
+    "grading": "f：(V-u cos(θ))/λ"
+   },
+   {
+    "id": "6",
+    "tex": "$60^\\circ$",
+    "grading": "60°"
+   },
+   {
+    "id": "7",
+    "tex": "山は直線で，その上を横にすべっても同じ山の上にいる．船の速度の，波の進む向きの成分 $u\\cos60^\\circ=3.0\\,\\mathrm{m/s}$ が波の速さ $V$ と等しいので，山に対して船は山の線に沿って動くだけになる．$\\theta=0^\\circ$ で $0.30\\,\\mathrm{Hz}$（船が山を追い越すので，山は前からやって来る），$\\theta=180^\\circ$ で $0.90\\,\\mathrm{Hz}$．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)} 波の山の間隔（波の進む向きに測った距離）は $\\lambda$．船とともに動く観測者から見ると，山は速さ $V+u$ で近づいてくるので，単位時間に通過する山の数は\n\\[ f=\\boldsymbol{\\frac{V+u}{\\lambda}} \\]\n\n\\textbf{(2)} 船から見た山の相対速度は $V-u$（後ろから追いついてくる）なので $f=\\boldsymbol{\\dfrac{V-u}{\\lambda}}$．\n\n\\textbf{(3)} $V+u=0.50\\lambda$，$V-u=0.10\\lambda$．辺々引くと $2u=0.40\\lambda$ より $\\lambda=\\dfrac{2\\times2.0}{0.40}=\\boldsymbol{10\\,\\mathrm m}$．足すと $2V=0.60\\lambda=6.0$ より $V=\\boldsymbol{3.0\\,\\mathrm{m/s}}$．\n\n\\textbf{(4)} 静止した点では $f_0=\\dfrac V\\lambda=\\dfrac{3.0}{10}=\\boldsymbol{0.30\\,\\mathrm{Hz}}$．$f_0$ は (3) の2つの値の平均になっている（音のドップラー効果で観測者が動く場合と同じ形）．\n\n\\textbf{(5)} 山の線に平行な方向の運動は，山との出会いに関係しない．山に垂直な方向（波の進む向き）の船の速度成分は $u\\cos\\theta$ なので，山の船に対する相対速度は $V-u\\cos\\theta$：\n\\[ f=\\boldsymbol{\\frac{V-u\\cos\\theta}{\\lambda}} \\]\n$\\theta=180^\\circ$ で (1)，$\\theta=0^\\circ$ で (2) にもどる．\n\n\\textbf{(6)} $f=0$ となるのは $u\\cos\\theta=V$，$\\cos\\theta=\\dfrac{3.0}{6.0}=\\dfrac12$ より $\\theta=\\boldsymbol{60^\\circ}$．\n\n\\textbf{(7)} 波の山は無限に長い直線なので，山の線に沿って動いても同じ山の上にいる．$\\theta=60^\\circ$ では，船の速度を「波の進む向きの成分 $u\\cos\\theta=3.0\\,\\mathrm{m/s}$」と「山の線に沿う成分 $u\\sin\\theta$」に分けると，前者がちょうど波の速さに等しく，山に対しては山の線に沿ってすべっているだけになる（サーファーが斜めに波に乗るのと同じ）．\n\n$u\\cos\\theta>V$ のときは $V-u\\cos\\theta<0$ で，船が山を追い越す．出会う頻度は大きさ $\\dfrac{|V-u\\cos\\theta|}{\\lambda}$ で，\n\\[ \\theta=0^\\circ:\\ \\frac{|3.0-6.0|}{10}=0.30\\,\\mathrm{Hz},\\qquad \\theta=180^\\circ:\\ \\frac{3.0+6.0}{10}=0.90\\,\\mathrm{Hz} \\]\n$\\theta=0^\\circ$ では船の方が速いので，船首は前方の山に追いつき，山は\\textbf{前から}やって来る（同じ向きに進んでいても，$u>V$ なら山は前から来る）．$\\theta$ を $0^\\circ$ から増やすと，頻度は $0.30\\,\\mathrm{Hz}$ から減って $60^\\circ$ で $0$ になる．$60^\\circ<\\theta<90^\\circ$ では波の方が速く（$u\\cos\\theta<V$），山は後ろから追いついてくる．$90^\\circ$ を超えると船は波に向かう向きの成分をもち，山とは前から出会うようになって，$180^\\circ$ で最大の $0.90\\,\\mathrm{Hz}$ になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "出会う頻度は「山の観測者に対する相対速度 ÷ 山の間隔」．直線状の山に平行な運動は効かないので，効くのは波の進む向きの速度成分だけ．"
+ },
+ "concepts": [
+  "wave-basics",
+  "doppler"
+ ],
+ "laws": [
+  "wave-speed",
+  "doppler"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "水面波",
+  "相対速度",
+  "出会う頻度",
+  "測定"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 215" width="380" height="215" font-family="'Times New Roman', serif">
+<polygon points="60,80 300,80 300,200 60,200" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<line x1="60" y1="80" x2="300" y2="80" stroke="currentColor" stroke-width="2" data-phys="boundary"/>
+<line x1="60" y1="200" x2="300" y2="200" stroke="currentColor" stroke-width="2"/>
+<line x1="158" y1="198" x2="182" y2="198" stroke="currentColor" stroke-width="2.4"/>
+<text x="140" y="190" font-size="11" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">コイン</text>
+<g class="f-cur" data-phys="ray:in" data-dir="75" data-len="121.13">
+<line x1="170" y1="197" x2="198.76" y2="89.66" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="201.35,80 203.27,90.87 194.26,88.45" fill="currentColor"/>
+</g>
+<g class="f-cur" data-phys="ray:out" data-dir="69.81" data-len="60">
+<line x1="201.35" y1="80" x2="218.6" y2="33.07" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="222.06,23.69 222.98,34.68 214.23,31.46" fill="currentColor"/>
+</g>
+<line x1="170" y1="30" x2="170" y2="200" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="202.15" y1="80" x2="170" y2="167.45" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="170" cy="167.45" r="3" fill="currentColor"/>
+<text x="162" y="167.45" font-size="11" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">見かけの位置</text>
+<text x="330" y="50" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">空気</text>
+<text x="330" y="110" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">水</text>
+</svg>

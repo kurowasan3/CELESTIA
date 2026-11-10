@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 290" width="380" height="290" font-family="'Times New Roman', serif">
+<circle cx="150" cy="135" r="95" fill="none" stroke="currentColor" stroke-width="2.4"/>
+<line x1="150" y1="135" x2="236.1" y2="94.85" stroke="currentColor" stroke-width="2.4"/>
+<circle cx="150" cy="135" r="3" fill="currentColor"/>
+<circle cx="236.1" cy="94.85" r="3" fill="currentColor"/>
+<text x="146" y="151" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<text x="250.1" y="86.85" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">P</text>
+<text x="198" y="127" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">a</text>
+<path d="M180.64,109.29 A40,40 0 0 0 136.32,97.41" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="163.2" y="85.74" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">ω</text>
+<text x="100" y="90" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="100" y="180" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="195" y="180" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="200" y="85" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="190" y="258" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">上から見た図（磁場 B は紙面の裏から表）</text>
+<text x="190" y="278" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">抵抗・滑車・おもりは省略</text>
+<g class="f-ink" data-dir="194" data-len="9">
+<line x1="140.32" y1="96.19" x2="134.65" y2="97.6" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="131.59,98.37 134.29,96.18 135,99.03" fill="currentColor"/>
+</g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 220" width="380" height="220" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="300">
+<line x1="50" y1="190" x2="340" y2="190" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="350,190 340,194.66 340,185.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="175">
+<line x1="50" y1="190" x2="50" y2="25" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="50,15 54.66,25 45.34,25" fill="currentColor"/>
+</g>
+<text x="42" y="202" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<text x="346" y="208" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">r</text>
+<text x="58" y="17" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">g(r)</text>
+<polyline points="50,190 140,60" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="140,60 144.5,72.09 149,82.56 153.5,91.7 158,99.72 162.5,106.8 167,113.08 171.5,118.67 176,123.67 180.5,128.17 185,132.22 189.5,135.89 194,139.22 198.5,142.25 203,145.02 207.5,147.55 212,149.88 216.5,152.02 221,153.99 225.5,155.81 230,157.5 234.5,159.07 239,160.52 243.5,161.88 248,163.14 252.5,164.32 257,165.43 261.5,166.46 266,167.43 270.5,168.34 275,169.2 279.5,170.01 284,170.77 288.5,171.49 293,172.17 297.5,172.81 302,173.42 306.5,174 311,174.54 315.5,175.06 320,175.56" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="140" y1="60" x2="140" y2="190" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="50" y1="60" x2="140" y2="60" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="50" y1="125" x2="177.28" y2="125" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="95" y1="125" x2="95" y2="190" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="177.28" y1="125" x2="177.28" y2="190" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="140" y="204" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">R</text>
+<text x="230" y="204" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">2R</text>
+<text x="320" y="204" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">3R</text>
+<line x1="230" y1="186" x2="230" y2="194" stroke="currentColor" stroke-width="1.2"/>
+<line x1="320" y1="186" x2="320" y2="194" stroke="currentColor" stroke-width="1.2"/>
+<text x="95" y="204" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">R/2</text>
+<text x="181.28" y="204" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">√2R</text>
+<text x="44" y="60" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">g</text>
+<text x="44" y="125" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">g/2</text>
+</svg>

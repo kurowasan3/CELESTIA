@@ -1,0 +1,457 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  400,
+  135
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    30,
+    95
+   ],
+   "to": [
+    360.0,
+    95
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    374.0,
+    95
+   ],
+   "text": "x"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    92
+   ],
+   "to": [
+    30,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    50,
+    92
+   ],
+   "to": [
+    50,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    70,
+    92
+   ],
+   "to": [
+    70,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    90,
+    92
+   ],
+   "to": [
+    90,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    110,
+    92
+   ],
+   "to": [
+    110,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    130,
+    92
+   ],
+   "to": [
+    130,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    92
+   ],
+   "to": [
+    150,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    92
+   ],
+   "to": [
+    170,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    190,
+    92
+   ],
+   "to": [
+    190,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    210,
+    92
+   ],
+   "to": [
+    210,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    92
+   ],
+   "to": [
+    230,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    250,
+    92
+   ],
+   "to": [
+    250,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    270,
+    92
+   ],
+   "to": [
+    270,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    290,
+    92
+   ],
+   "to": [
+    290,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    310,
+    92
+   ],
+   "to": [
+    310,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    330,
+    92
+   ],
+   "to": [
+    330,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    350,
+    92
+   ],
+   "to": [
+    350,
+    98
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    30,
+    111
+   ],
+   "text": "0",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    111
+   ],
+   "text": "4",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    190,
+    111
+   ],
+   "text": "8",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    111
+   ],
+   "text": "12",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    350,
+    111
+   ],
+   "text": "16",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    368.0,
+    111
+   ],
+   "text": "[cm]",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    107.0
+   ],
+   "to": [
+    30,
+    39.0
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    18,
+    39.0
+   ],
+   "text": "y"
+  },
+  {
+   "t": "line",
+   "from": [
+    27,
+    75
+   ],
+   "to": [
+    33,
+    75
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    75
+   ],
+   "to": [
+    330,
+    75
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    18,
+    75
+   ],
+   "text": "1",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "line",
+   "from": [
+    27,
+    55
+   ],
+   "to": [
+    33,
+    55
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    30,
+    55
+   ],
+   "to": [
+    330,
+    55
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    18,
+    55
+   ],
+   "text": "2",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     70,
+     95
+    ],
+    [
+     110,
+     55
+    ],
+    [
+     150,
+     95
+    ]
+   ],
+   "style": "none"
+  },
+  {
+   "t": "poly",
+   "points": [
+    [
+     230,
+     95
+    ],
+    [
+     270,
+     75
+    ],
+    [
+     310,
+     95
+    ]
+   ],
+   "style": "none"
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    41
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    270,
+    61
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "arrow",
+   "from": [
+    130,
+    51.0
+   ],
+   "dir": 0,
+   "len": 34,
+   "style": "velocity"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    250,
+    63.0
+   ],
+   "dir": 180,
+   "len": 34,
+   "style": "velocity"
+  }
+ ]
+}

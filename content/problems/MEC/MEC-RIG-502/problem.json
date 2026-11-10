@@ -1,0 +1,142 @@
+{
+ "id": "MEC-RIG-502",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-08",
+ "topic": "L字形の板の重心と，1点でつるしたときの傾き",
+ "course": "物理",
+ "level": 0,
+ "minutes": 8,
+ "format": [
+  "numeric",
+  "concept",
+  "experiment"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "厚さと密度が一様な板から，図のような L 字形の板を切り出した．長方形 A（横 $40\\,\\mathrm{cm}$，縦 $10\\,\\mathrm{cm}$）と長方形 B（横 $10\\,\\mathrm{cm}$，縦 $30\\,\\mathrm{cm}$）を合わせた形で，角 O を原点として図のように $x$ 軸，$y$ 軸をとる．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-plate"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "板の重心 G の座標 $(x_{\\mathrm G},\\,y_{\\mathrm G})$ を $\\mathrm{cm}$ の単位で求めよ．分数で答えてよい．"
+     },
+     {
+      "id": "2",
+      "tex": "重心 G は板の上にあるか．理由とともに答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "角 O に糸をつけて板をつるし，静止させた．このとき，辺 OA（$x$ 軸）は鉛直線と何度の角をなすか．"
+     },
+     {
+      "id": "4",
+      "tex": "形が複雑で計算できない板の重心を，実験で見つける方法を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-plate",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-plate.svg",
+   "alt": "原点 O を角とする L 字形の板。下側の長方形 A は x が 0 から 40、y が 0 から 10、左側の長方形 B は x が 0 から 10、y が 10 から 40（単位 cm）",
+   "caption": ""
+  },
+  {
+   "id": "a-plate",
+   "role": "answer",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "a-plate.svg",
+   "alt": "L 字形の板の重心 G は (95/7, 95/7) で、板の外の、直線 y=x 上の点にある",
+   "caption": "重心 G は板の外にある"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\left(\\dfrac{95}{7},\\,\\dfrac{95}{7}\\right)$（約 $(13.6,\\,13.6)$）",
+    "grading": "x_G：95/7 [cm] ; y_G：95/7 [cm]"
+   },
+   {
+    "id": "2",
+    "tex": "ない．G は $x>10$，$y>10$ の点で，板のない部分（L 字の内側のくぼみ）にある．"
+   },
+   {
+    "id": "3",
+    "tex": "$45^\\circ$",
+    "grading": "45°"
+   },
+   {
+    "id": "4",
+    "tex": "板の1点に糸をつけてつるし，糸の延長線（鉛直線）を板に引く．別の点でつるして同じことを行い，2本の線の交点が重心である．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "重心は，各部分の重力（質量）の重みをつけた位置の平均である．一様な板なので，質量は面積に比例する．\n\n(1) A の面積は $400\\,\\mathrm{cm^2}$，重心は $(20,\\,5)$．B の面積は $300\\,\\mathrm{cm^2}$，重心は $(5,\\,25)$． \\[x_{\\mathrm G}=\\frac{400\\times20+300\\times5}{400+300}=\\frac{95}{7},\\qquad y_{\\mathrm G}=\\frac{400\\times5+300\\times25}{700}=\\frac{95}{7}\\] およそ $(13.6,\\,13.6)$ で，形が直線 $y=x$ について対称なので，$x_{\\mathrm G}=y_{\\mathrm G}$ となるのは当然である．\n\n(2) $x_{\\mathrm G}>10$ かつ $y_{\\mathrm G}>10$ の点は，L 字の内側の板のない部分である．重心は物体の外にあることもある（ドーナツ形の重心は穴の中心）．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-plate"
+    },
+    {
+     "type": "text",
+     "tex": "(3) 1点でつるして静止すると，重心はつるした点の真下にくる（そうでないと重力のモーメントで回る）．直線 OG は $y=x$ で $x$ 軸と $45^\\circ$ をなし，これが鉛直になるので，辺 OA は鉛直線と $45^\\circ$ をなす．\n\n(4) つるした点を通る鉛直線の上に必ず重心があることを使う．2つの異なる点でつるしてそれぞれ鉛直線を引けば，交点が重心になる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "一様な板の重心は，各部分の面積を重みとした重心の平均．1点でつるすと，重心はその点の真下にくる．"
+ },
+ "concepts": [
+  "torque",
+  "equilibrium"
+ ],
+ "laws": [
+  "center-of-mass",
+  "torque-equilibrium"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "重心",
+  "剛体",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

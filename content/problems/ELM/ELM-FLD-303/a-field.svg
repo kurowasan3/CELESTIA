@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 250" width="420" height="250" font-family="'Times New Roman', serif">
+<line x1="190" y1="40" x2="100" y2="195.88" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100" y1="195.88" x2="280" y2="195.88" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="280" y1="195.88" x2="190" y2="40" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="190" cy="40" r="3" fill="currentColor"/>
+<circle cx="100" cy="195.88" r="3" fill="currentColor"/>
+<circle cx="280" cy="195.88" r="3" fill="currentColor"/>
+<circle cx="190" cy="143.92" r="3" fill="currentColor"/>
+<text x="190" y="24" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A（−q）</text>
+<text x="92" y="213.88" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B（+q）</text>
+<text x="288" y="213.88" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">C（+q）</text>
+<text x="186" y="161.92" font-size="14" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">G</text>
+<g class="f-force" data-phys="field:EB" data-dir="30" data-len="56">
+<line x1="190" y1="143.92" x2="229.84" y2="120.92" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="238.5,115.92 232.17,124.96 227.51,116.88" fill="currentColor"/>
+<text x="272.89" y="109.92" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">B による</text>
+</g>
+<g class="f-force" data-phys="field:EC" data-dir="150" data-len="56">
+<line x1="190" y1="143.92" x2="150.16" y2="120.92" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="141.5,115.92 152.49,116.88 147.83,124.96" fill="currentColor"/>
+<text x="107.11" y="109.92" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">C による</text>
+</g>
+<g class="f-force" data-phys="field:EA" data-dir="90" data-len="56">
+<line x1="190" y1="143.92" x2="190" y2="97.92" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="190,87.92 194.66,97.92 185.34,97.92" fill="currentColor"/>
+<text x="156" y="83.92" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">A による</text>
+</g>
+<g class="f-force" data-phys="field:E" data-dir="90" data-len="112">
+<line x1="350" y1="173.92" x2="350" y2="71.92" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="350,61.92 354.66,71.92 345.34,71.92" fill="currentColor"/>
+<text x="350" y="49.92" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">合成した電場</text>
+</g>
+</svg>

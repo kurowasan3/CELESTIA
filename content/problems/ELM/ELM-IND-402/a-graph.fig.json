@@ -1,0 +1,245 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  480,
+  275
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    150
+   ],
+   "dir": 0,
+   "len": 410,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    60,
+    255
+   ],
+   "dir": 90,
+   "len": 225,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    462,
+    166
+   ],
+   "text": "t [ms]",
+   "italic": true,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    68,
+    28
+   ],
+   "text": "V₂ [V]",
+   "italic": true,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    54,
+    162
+   ],
+   "text": "O",
+   "italic": true,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    115.0,
+    146
+   ],
+   "to": [
+    115.0,
+    154
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    115.0,
+    166
+   ],
+   "text": "10",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    170.0,
+    146
+   ],
+   "to": [
+    170.0,
+    154
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    170.0,
+    166
+   ],
+   "text": "20",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    225.0,
+    146
+   ],
+   "to": [
+    225.0,
+    154
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    225.0,
+    166
+   ],
+   "text": "30",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    280.0,
+    146
+   ],
+   "to": [
+    280.0,
+    154
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    280.0,
+    166
+   ],
+   "text": "40",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    390.0,
+    146
+   ],
+   "to": [
+    390.0,
+    154
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    390.0,
+    166
+   ],
+   "text": "60",
+   "italic": false
+  },
+  {
+   "t": "line",
+   "from": [
+    56,
+    110
+   ],
+   "to": [
+    64,
+    110
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    110
+   ],
+   "text": "5.0",
+   "italic": false,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    56,
+    230
+   ],
+   "to": [
+    64,
+    230
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    52,
+    230
+   ],
+   "text": "−10",
+   "italic": false,
+   "anchor": "end"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60.0,
+     110
+    ],
+    [
+     170.0,
+     110
+    ],
+    [
+     170.0,
+     150
+    ],
+    [
+     280.0,
+     150
+    ],
+    [
+     280.0,
+     230
+    ],
+    [
+     335.0,
+     230
+    ],
+    [
+     335.0,
+     150
+    ],
+    [
+     390.0,
+     150
+    ]
+   ]
+  }
+ ]
+}

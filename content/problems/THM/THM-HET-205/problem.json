@@ -1,0 +1,110 @@
+{
+ "id": "THM-HET-205",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-01",
+ "topic": "水に水蒸気を吹きこむ混合（凝縮熱の大きさと，熱湯を注ぐ場合との比較）",
+ "course": "物理基礎",
+ "level": 2,
+ "minutes": 12,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "断熱容器に $20^\\circ\\mathrm C$ の水 $400\\,\\mathrm g$ が入っている．容器の熱容量は無視でき，熱は外部に逃げないものとする．水の比熱を $4.2\\,\\mathrm{J/(g\\cdot K)}$，$100^\\circ\\mathrm C$ における水の蒸発熱（$1\\,\\mathrm g$ の水を同じ温度の水蒸気にするのに必要な熱量）を $2.26\\times10^3\\,\\mathrm{J/g}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$100^\\circ\\mathrm C$ の水蒸気 $10\\,\\mathrm g$ を水の中に吹きこんだところ，水蒸気はすべて凝縮した．全体の温度は何 $^\\circ\\mathrm C$ になるか．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) の水蒸気のかわりに，$100^\\circ\\mathrm C$ の湯 $10\\,\\mathrm g$ を注いだとすると，全体の温度は何 $^\\circ\\mathrm C$ になるか．有効数字2桁で答えよ．また，(1) との違いから，$100^\\circ\\mathrm C$ の水蒸気によるやけどが $100^\\circ\\mathrm C$ の湯によるやけどより重くなりやすい理由を説明せよ．"
+     },
+     {
+      "id": "3",
+      "tex": "はじめの状態（$20^\\circ\\mathrm C$ の水 $400\\,\\mathrm g$）から，$100^\\circ\\mathrm C$ の水蒸気を吹きこみ続ける．全体がちょうど $100^\\circ\\mathrm C$ になるまでに凝縮する水蒸気は何 $\\mathrm g$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "(3) の後もさらに水蒸気を吹きこみ続けると，容器の中の水の量と温度はどうなるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$35^\\circ\\mathrm C$",
+    "grading": "35 [℃]"
+   },
+   {
+    "id": "2",
+    "tex": "$22^\\circ\\mathrm C$．水蒸気は凝縮するときに $1\\,\\mathrm g$ あたり $2.26\\times10^3\\,\\mathrm J$ もの熱を出し，これは $1\\,\\mathrm g$ の湯が $100^\\circ\\mathrm C$ から冷えるときに出す熱（最大 $420\\,\\mathrm J$ 程度）よりはるかに大きいから．",
+    "grading": "22 [℃]"
+   },
+   {
+    "id": "3",
+    "tex": "$59\\,\\mathrm g$",
+    "grading": "59 [g]"
+   },
+   {
+    "id": "4",
+    "tex": "水の温度は $100^\\circ\\mathrm C$ のまま変わらず，水の量も増えない（吹きこんだ水蒸気は凝縮せず，そのまま出ていく）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 全体の温度を $t$ とする．水蒸気 $10\\,\\mathrm g$ が出す熱は，凝縮（$10\\times2.26\\times10^3=2.26\\times10^4\\,\\mathrm J$）と，できた $100^\\circ\\mathrm C$ の水が $t$ まで冷える分（$10\\times4.2\\times(100-t)$）の和．これが $400\\,\\mathrm g$ の水が得た熱 $400\\times4.2\\times(t-20)$ に等しい：\\[22600+42(100-t)=1680(t-20)\\] \\[1722\\,t=22600+4200+33600=60400\\qquad t=35.07\\cdots\\approx35^\\circ\\mathrm C\\]\n\n(2) 凝縮熱の項がなくなる：$42(100-t)=1680(t-20)$ より $t=\\dfrac{4200+33600}{1722}=21.9\\cdots\\approx22^\\circ\\mathrm C$．同じ $10\\,\\mathrm g$，同じ $100^\\circ\\mathrm C$ でも，水蒸気は凝縮で多量の熱を放つので，水温を $15\\,\\mathrm K$ も上げる．皮膚についた水蒸気も皮膚の上で凝縮して大量の熱を与える．\n\n(3) 凝縮した水は $100^\\circ\\mathrm C$ のままなので，凝縮熱だけで $400\\,\\mathrm g$ の水を $80\\,\\mathrm K$ 上げる：$m\\times2.26\\times10^3=400\\times4.2\\times80=1.344\\times10^5$ より $m=59.4\\cdots\\approx59\\,\\mathrm g$．\n\n(4) 水と水蒸気の温度がともに $100^\\circ\\mathrm C$ になると，その間で熱は移らない．水蒸気は凝縮しなくなり，水の温度も量も変わらない（熱が外へ逃げない限り）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "失った熱量＝得た熱量．状態変化（凝縮）の熱は温度変化の熱よりずっと大きい．状態変化の熱と温度変化の熱を分けて数える．"
+ },
+ "concepts": [
+  "heat-temperature"
+ ],
+ "laws": [
+  "heat-capacity"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "蒸発熱",
+  "凝縮",
+  "熱量の保存",
+  "混合"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

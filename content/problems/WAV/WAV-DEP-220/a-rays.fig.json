@@ -1,0 +1,162 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  215
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     60,
+     80
+    ],
+    [
+     300,
+     80
+    ],
+    [
+     300,
+     200
+    ],
+    [
+     60,
+     200
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    80
+   ],
+   "to": [
+    300,
+    80
+   ],
+   "style": "ground",
+   "phys": "boundary"
+  },
+  {
+   "t": "line",
+   "from": [
+    60,
+    200
+   ],
+   "to": [
+    300,
+    200
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    158,
+    198
+   ],
+   "to": [
+    182,
+    198
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    140,
+    190
+   ],
+   "text": "コイン",
+   "italic": false,
+   "size": 11
+  },
+  {
+   "t": "arrow",
+   "from": [
+    170,
+    197
+   ],
+   "dir": 75.0,
+   "len": 121.127,
+   "style": "current",
+   "phys": "ray:in"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    201.35,
+    80
+   ],
+   "dir": 69.8126,
+   "len": 60,
+   "style": "current",
+   "phys": "ray:out"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    30
+   ],
+   "to": [
+    170,
+    200
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    202.15,
+    80
+   ],
+   "to": [
+    170,
+    167.45
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "dot",
+   "at": [
+    170,
+    167.45
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    162,
+    167.45
+   ],
+   "text": "見かけの位置",
+   "italic": false,
+   "size": 11,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    50
+   ],
+   "text": "空気",
+   "italic": false,
+   "size": 12
+  },
+  {
+   "t": "text",
+   "at": [
+    330,
+    110
+   ],
+   "text": "水",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

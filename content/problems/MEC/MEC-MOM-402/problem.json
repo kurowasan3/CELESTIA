@@ -1,0 +1,101 @@
+{
+ "id": "MEC-MOM-402",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-05",
+ "topic": "卵を受け止めるクッション（同じ力積でも，止まるまでの時間が長いと力は小さい）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "concept",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $0.060\\,\\mathrm{kg}$ の卵が，鉛直下向きに速さ $4.0\\,\\mathrm{m/s}$ で落ちてきて，はね返らずに止まった．(a) かたい床に落ちた場合は，接触してから止まるまでの時間が $2.0\\times10^{-3}\\,\\mathrm s$ であった．(b) 厚いクッションに落ちた場合は，$0.10\\,\\mathrm s$ であった．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "接触してから止まるまでに，卵が受けた力（重力も含めたすべての力）の力積の大きさは何 $\\mathrm{N\\cdot s}$ か．また，その向きを答えよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(a)，(b) それぞれの場合について，床，クッションが卵におよぼす力の平均の大きさ $F_{\\rm a}$，$F_{\\rm b}$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "ある生徒は「クッションは，卵が受ける力積を小さくするので，卵が割れにくくなる」と説明した．この説明の誤りを正し，クッションの上で卵が割れにくい理由を説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$0.24\\,\\mathrm{N\\cdot s}$，鉛直上向き",
+    "grading": "0.24 [N·s]"
+   },
+   {
+    "id": "2",
+    "tex": "$F_{\\rm a}=1.2\\times10^2\\,\\mathrm N$，$F_{\\rm b}=3.0\\,\\mathrm N$",
+    "grading": "F_a：120 [N] ; F_b：3 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "力積は (a)(b) で同じ $0.24\\,\\mathrm{N\\cdot s}$（運動量の変化で決まる）．クッションは止まるまでの時間を長くするので，同じ力積でも力の平均の大きさが小さくなり，割れにくい．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "鉛直上向きを正とする．\n\n(1) 運動量の変化＝力積．はじめの運動量は $0.060\\times(-4.0)=-0.24\\,\\mathrm{kg\\cdot m/s}$，あとは $0$ なので，力積は $0-(-0.24)=+0.24\\,\\mathrm{N\\cdot s}$（鉛直上向き）．止まり方によらず同じである．\n\n(2) 床（クッション）からの力の平均を $F$，接触時間を $\\Delta t$ とすると，卵が受ける力は $F$（上向き）と重力 $mg=0.588\\,\\mathrm N$（下向き）なので\\[(F-mg)\\Delta t=0.24\\quad\\Longrightarrow\\quad F=\\frac{0.24}{\\Delta t}+mg\\]\n(a) $F_{\\rm a}=\\dfrac{0.24}{2.0\\times10^{-3}}+0.588=120.6\\cdots\\fallingdotseq1.2\\times10^2\\,\\mathrm N$（重力は無視できるほど小さい）．\n\n(b) $F_{\\rm b}=\\dfrac{0.24}{0.10}+0.588=2.988\\fallingdotseq3.0\\,\\mathrm N$．\n\n(3) 力積は運動量の変化で決まるので，(a) でも (b) でも同じ $0.24\\,\\mathrm{N\\cdot s}$ で，クッションは力積を小さくしない．クッションが変えるのは止まるまでの時間で，時間が $50$ 倍になると，力の平均は約 $\\dfrac{1}{50}$（重力の分を除いて）になる．卵が割れるかどうかは力の大きさで決まるので，クッションの上では割れにくい．自動車のエアバッグや，飛び降りるときにひざを曲げるのも同じしくみである．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "止め方によらず力積（＝運動量の変化）は同じ．力の平均＝力積÷時間なので，時間を長くすれば力は小さくなる．"
+ },
+ "concepts": [
+  "momentum-conservation"
+ ],
+ "laws": [
+  "impulse-momentum"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力積",
+  "運動量",
+  "平均の力",
+  "概念"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

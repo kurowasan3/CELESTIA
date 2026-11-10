@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" font-family="'Times New Roman', serif">
+<g class="f-ink" data-phys="axis:n" data-dir="0" data-len="320">
+<line x1="60" y1="200" x2="370" y2="200" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="380,200 370,204.66 370,195.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-phys="axis:I" data-dir="90" data-len="185">
+<line x1="60" y1="200" x2="60" y2="25" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,15 64.66,25 55.34,25" fill="currentColor"/>
+</g>
+<text x="385" y="222" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">n [回/s]</text>
+<text x="68" y="14" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">I [A]</text>
+<text x="50" y="212" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<line x1="60" y1="50" x2="340" y2="200" stroke="currentColor" stroke-width="2.4"/>
+<circle cx="60" cy="50" r="3" fill="currentColor"/>
+<circle cx="270" cy="162.5" r="3" fill="currentColor"/>
+<line x1="270" y1="200" x2="270" y2="162.5" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="60" y1="162.5" x2="270" y2="162.5" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="48" y="50" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">2.0</text>
+<text x="48" y="162.5" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.50</text>
+<text x="270" y="216" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">60</text>
+</svg>

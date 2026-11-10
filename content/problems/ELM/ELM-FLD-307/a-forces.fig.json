@@ -1,0 +1,105 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  340,
+  260
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    90,
+    40
+   ],
+   "to": [
+    210,
+    40
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    40
+   ],
+   "to": [
+    236.01935165449925,
+    162.88478807785606
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "line",
+   "from": [
+    150,
+    40
+   ],
+   "to": [
+    150,
+    200
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "ball",
+   "at": [
+    236.02,
+    162.88
+   ],
+   "r": 8,
+   "label": ""
+  },
+  {
+   "t": "arrow",
+   "from": [
+    236.02,
+    162.88
+   ],
+   "dir": 270,
+   "len": 70,
+   "style": "force",
+   "phys": "force:mg",
+   "label": "mg"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    236.02,
+    162.88
+   ],
+   "dir": 0,
+   "len": 49.0,
+   "style": "force",
+   "phys": "force:qE",
+   "label": "qE"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    236.02,
+    162.88
+   ],
+   "dir": 124.99202019855866,
+   "len": 85.44588931013593,
+   "style": "force",
+   "phys": "force:S",
+   "label": "S₀",
+   "labelOffset": [
+    -18,
+    2
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    142,
+    30
+   ],
+   "text": "O",
+   "italic": true,
+   "size": 14,
+   "anchor": "middle"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" width="360" height="160" font-family="'Times New Roman', serif">
+<circle cx="60" cy="120" r="3" fill="currentColor"/>
+<circle cx="300" cy="120" r="3" fill="currentColor"/>
+<line x1="60" y1="120" x2="300" y2="120" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="60" y="138" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">A</text>
+<text x="300" y="138" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">B</text>
+<text x="180" y="136" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">L</text>
+<g class="f-vel" data-dir="30" data-len="70">
+<line x1="140" y1="60" x2="191.96" y2="30" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="200.62,25 194.29,34.04 189.63,25.96" fill="currentColor"/>
+<text x="211.01" y="19" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">w</text>
+</g>
+<line x1="140" y1="60" x2="215" y2="60" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M170,60 A30,30 0 0 0 165.98,45" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="180.57" y="49.13" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">φ</text>
+<text x="120" y="52" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">風</text>
+</svg>

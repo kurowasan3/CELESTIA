@@ -1,0 +1,131 @@
+{
+ "id": "MEC-GRV-504",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-07",
+ "topic": "円軌道の人工衛星のエネルギー：高い軌道に上げると遅くなる",
+ "course": "物理",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "derivation",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "質量 $M$ の地球の中心から距離 $r$ の円軌道を，質量 $m$ の人工衛星が等速で回っている．万有引力定数を $G$，地球の半径を $R$ とし，万有引力による位置エネルギーは無限遠を基準とする．地球の自転と空気抵抗は考えない．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "人工衛星の運動エネルギー $K$ を $G$，$M$，$m$，$r$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "人工衛星の力学的エネルギー $E$ を $G$，$M$，$m$，$r$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "半径 $2R$ の円軌道を回る人工衛星を，半径 $4R$ の円軌道に移すには，少なくともどれだけのエネルギー $W$ を与える必要があるか．"
+     },
+     {
+      "id": "4",
+      "tex": "半径 $4R$ の円軌道での速さは，半径 $2R$ の円軌道での速さの何倍か．"
+     },
+     {
+      "id": "5",
+      "tex": "(3) の移動での運動エネルギーの変化 $\\Delta K$ と，位置エネルギーの変化 $\\Delta U$ をそれぞれ求めよ．また，「エネルギーを与えたのに遅くなる」ことを，これらを用いて説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$K=\\dfrac{GMm}{2r}$",
+    "grading": "K：G M m/(2r)"
+   },
+   {
+    "id": "2",
+    "tex": "$E=-\\dfrac{GMm}{2r}$",
+    "grading": "E：-G M m/(2r)"
+   },
+   {
+    "id": "3",
+    "tex": "$W=\\dfrac{GMm}{8R}$",
+    "grading": "W：G M m/(8R)"
+   },
+   {
+    "id": "4",
+    "tex": "$\\dfrac1{\\sqrt2}$ 倍",
+    "grading": "(1/sqrt(2))倍"
+   },
+   {
+    "id": "5",
+    "tex": "$\\Delta K=-\\dfrac{GMm}{8R}$，$\\Delta U=\\dfrac{GMm}{4R}$．位置エネルギーの増加は与えたエネルギーの2倍で，不足分は運動エネルギーが減って補うので遅くなる．",
+    "grading": "ΔK：-G M m/(8R) ; ΔU：G M m/(4R)"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 円運動の運動方程式 $m\\dfrac{v^2}r=G\\dfrac{Mm}{r^2}$ より $mv^2=\\dfrac{GMm}r$，よって \\[K=\\frac12mv^2=\\frac{GMm}{2r}\\]\n\n(2) 位置エネルギーは $U=-\\dfrac{GMm}r$ なので \\[E=K+U=\\frac{GMm}{2r}-\\frac{GMm}{r}=-\\frac{GMm}{2r}\\] 円軌道では $U=-2K$，$E=-K$ という関係がある．\n\n(3) \\[W=E(4R)-E(2R)=-\\frac{GMm}{8R}+\\frac{GMm}{4R}=\\frac{GMm}{8R}\\]\n\n(4) $v=\\sqrt{\\dfrac{GM}r}$ なので，$r$ が2倍になると速さは $\\dfrac1{\\sqrt2}$ 倍．\n\n(5) $K$ は $\\dfrac{GMm}{4R}$ から $\\dfrac{GMm}{8R}$ に変わるので $\\Delta K=-\\dfrac{GMm}{8R}$．$U$ は $-\\dfrac{GMm}{2R}$ から $-\\dfrac{GMm}{4R}$ に変わるので $\\Delta U=+\\dfrac{GMm}{4R}$．\n\n与えたエネルギー $W=\\dfrac{GMm}{8R}$ に対して，高く上がることで位置エネルギーはその2倍の $\\dfrac{GMm}{4R}$ だけ増える．足りない分 $\\dfrac{GMm}{8R}$ は運動エネルギーが減ることでまかなわれるので，外側の円軌道では遅くなる．「エネルギーを与えれば速くなる」とは限らない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "円軌道では $K=\\dfrac{GMm}{2r}$，$U=-2K$，$E=-K$．エネルギーを与えて半径を大きくすると，$U$ が $2W$ 増え，$K$ は $W$ 減る．"
+ },
+ "simulation": {
+  "id": "mech.gravitation",
+  "preset": {
+   "r0": 2,
+   "vratio": 1
+  },
+  "show": "after-attempt"
+ },
+ "concepts": [
+  "universal-gravitation",
+  "circular-motion",
+  "mechanical-energy"
+ ],
+ "laws": [
+  "universal-gravitation",
+  "gravitational-potential",
+  "centripetal-acceleration"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "人工衛星",
+  "力学的エネルギー",
+  "万有引力の位置エネルギー"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": false,
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

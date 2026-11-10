@@ -1,0 +1,122 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  230
+ ],
+ "items": [
+  {
+   "t": "arrow",
+   "from": [
+    50,
+    180
+   ],
+   "dir": 0,
+   "len": 310,
+   "style": "thin",
+   "phys": "axis:V"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    200,
+    210
+   ],
+   "dir": 90,
+   "len": 195,
+   "style": "thin",
+   "phys": "axis:I"
+  },
+  {
+   "t": "text",
+   "at": [
+    368,
+    200
+   ],
+   "text": "V [V]",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    208,
+    14
+   ],
+   "text": "I [μA]",
+   "italic": false,
+   "size": 13,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    192,
+    194
+   ],
+   "text": "O",
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     60.0,
+     180
+    ],
+    [
+     140.0,
+     180
+    ],
+    [
+     200,
+     68.0
+    ],
+    [
+     340.0,
+     68.0
+    ]
+   ]
+  },
+  {
+   "t": "dot",
+   "at": [
+    140.0,
+    180
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    140.0,
+    196
+   ],
+   "text": "−1.5",
+   "italic": false,
+   "size": 13
+  },
+  {
+   "t": "text",
+   "at": [
+    192,
+    58.0
+   ],
+   "text": "3.2",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    54.0
+   ],
+   "text": "飽和電流",
+   "italic": false,
+   "size": 12
+  }
+ ]
+}

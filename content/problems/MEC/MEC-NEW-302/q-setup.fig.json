@@ -1,0 +1,245 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  180
+ ],
+ "items": [
+  {
+   "t": "line",
+   "from": [
+    20,
+    140
+   ],
+   "to": [
+    200,
+    140
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    140
+   ],
+   "to": [
+    360,
+    140
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "line",
+   "from": [
+    210,
+    140
+   ],
+   "to": [
+    202,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    222,
+    140
+   ],
+   "to": [
+    214,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    234,
+    140
+   ],
+   "to": [
+    226,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    246,
+    140
+   ],
+   "to": [
+    238,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    258,
+    140
+   ],
+   "to": [
+    250,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    270,
+    140
+   ],
+   "to": [
+    262,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    282,
+    140
+   ],
+   "to": [
+    274,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    294,
+    140
+   ],
+   "to": [
+    286,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    306,
+    140
+   ],
+   "to": [
+    298,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    318,
+    140
+   ],
+   "to": [
+    310,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    330,
+    140
+   ],
+   "to": [
+    322,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    342,
+    140
+   ],
+   "to": [
+    334,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    354,
+    140
+   ],
+   "to": [
+    346,
+    150
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "block",
+   "at": [
+    90,
+    140
+   ],
+   "w": 44,
+   "h": 26,
+   "label": "",
+   "phys": "body:puck"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    116,
+    127
+   ],
+   "dir": 0,
+   "len": 46,
+   "style": "velocity",
+   "label": "v₀"
+  },
+  {
+   "t": "text",
+   "at": [
+    110,
+    166
+   ],
+   "text": "なめらかな面",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    280,
+    166
+   ],
+   "text": "あらい面",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    200,
+    100
+   ],
+   "to": [
+    200,
+    150
+   ],
+   "style": "dash"
+  }
+ ]
+}

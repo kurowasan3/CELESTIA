@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 210" width="380" height="210" font-family="'Times New Roman', serif">
+<polyline points="350,82 170,82 163.4,82.58 157,84.29 151,87.09 145.57,90.89 140.89,95.57 137.09,101 134.29,107 132.58,113.4 132,120 132.58,126.6 134.29,133 137.09,139 140.89,144.43 145.57,149.11 151,152.91 157,155.71 163.4,157.42 170,158 350,158" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="170" cy="120" r="15" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-vel" data-dir="0" data-len="46">
+<line x1="185" y1="120" x2="221" y2="120" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="231,120 221,124.66 221,115.34" fill="currentColor"/>
+<text x="243" y="120" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">V</text>
+</g>
+<g class="f-vel" data-dir="180" data-len="44">
+<line x1="340" y1="82" x2="306" y2="82" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="296,82 306,77.34 306,86.66" fill="currentColor"/>
+<text x="318" y="64" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v + V</text>
+</g>
+<g class="f-vel" data-dir="0" data-len="44">
+<line x1="290" y1="158" x2="324" y2="158" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="334,158 324,162.66 324,153.34" fill="currentColor"/>
+<text x="312" y="178" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">v + V</text>
+</g>
+<text x="170" y="194" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">木星</text>
+<text x="192" y="138" font-size="10" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">（太陽に対する速度）</text>
+<line x1="170" y1="182" x2="170" y2="138" stroke="currentColor" stroke-width="1.2"/>
+<text x="22" y="20" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">木星とともに動く立場から見た経路</text>
+</svg>

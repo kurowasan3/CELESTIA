@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 215" width="420" height="215" font-family="'Times New Roman', serif">
+<line x1="40" y1="150" x2="340" y2="150" stroke="currentColor" stroke-width="2.4"/>
+<polygon points="40,150 340,150 340,170 40,170" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="40,150 340,122 340,104 40,132" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="320" cy="137" r="13" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.4"/>
+<text x="356" y="135" font-size="11" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">髪の毛</text>
+<line x1="40" y1="190" x2="320" y2="190" stroke="currentColor" stroke-width="1.2"/>
+<line x1="40" y1="183" x2="40" y2="197" stroke="currentColor" stroke-width="1.2"/>
+<line x1="320" y1="183" x2="320" y2="197" stroke="currentColor" stroke-width="1.2"/>
+<text x="180" y="205" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">L = 10.0 cm</text>
+<g class="f-cur" data-dir="270" data-len="60">
+<line x1="120" y1="30" x2="120" y2="80" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="120,90 115.34,80 124.66,80" fill="currentColor"/>
+</g>
+<g class="f-cur" data-dir="90" data-len="60">
+<line x1="140" y1="90" x2="140" y2="40" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="140,30 144.66,40 135.34,40" fill="currentColor"/>
+</g>
+<text x="210" y="50" font-size="11" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">単色光（λ = 600 nm）</text>
+<text x="30" y="150" font-size="13" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+</svg>

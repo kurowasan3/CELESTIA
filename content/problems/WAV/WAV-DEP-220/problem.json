@@ -1,0 +1,137 @@
+{
+ "id": "WAV-DEP-220",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-03",
+ "topic": "真上から見た見かけの深さと，顕微鏡のピント合わせによる屈折率の測定",
+ "course": "物理",
+ "level": 1,
+ "minutes": 12,
+ "format": [
+  "numeric",
+  "experiment"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水の屈折率を $\\dfrac43$，空気の屈折率を $1$ とする．真上の近くから見る場合を考え，角 $\\theta$ が小さいとき $\\sin\\theta\\fallingdotseq\\tan\\theta$ と近似してよい．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "深さ $12\\,\\mathrm{cm}$ の水の底にあるコインを真上から見ると，水面から何 $\\mathrm{cm}$ の深さにあるように見えるか．"
+     },
+     {
+      "id": "2",
+      "tex": "厚さ $6.0\\,\\mathrm{cm}$ のガラス板を水平に置き，顕微鏡で真上から見る．はじめにガラス板の上面の印にピントを合わせ，次に下面の印にピントを合わせ直すと，顕微鏡を $4.0\\,\\mathrm{cm}$ だけ下げればよかった．このガラスの屈折率を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "(2) のガラス板の上に深さ $4.0\\,\\mathrm{cm}$ の水の層をのせ，ガラス板の下面の印を真上から見る．印は水面から何 $\\mathrm{cm}$ の深さに見えるか．"
+     },
+     {
+      "id": "4",
+      "tex": "水面から $3.0\\,\\mathrm m$ の高さを飛んでいる鳥を，その真下の水中にいる魚が見上げると，鳥は水面から何 $\\mathrm m$ の高さにいるように見えるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "a-rays",
+   "role": "answer",
+   "kind": "ray",
+   "format": "svg",
+   "src": "a-rays.svg",
+   "alt": "水底のコインから出た光が水面で屈折し、法線から遠ざかる向きに曲がって空気中に出る。空気中の光を逆に延ばすと、コインの真上の、実際より浅い点（見かけの位置）を通る",
+   "caption": "",
+   "physics": {
+    "refraction": {
+     "n1": 1.3333333,
+     "n2": 1,
+     "in": "ray:in",
+     "out": "ray:out"
+    }
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$9.0\\,\\mathrm{cm}$",
+    "grading": "9 [cm]"
+   },
+   {
+    "id": "2",
+    "tex": "$1.5$",
+    "grading": "1.5"
+   },
+   {
+    "id": "3",
+    "tex": "$7.0\\,\\mathrm{cm}$",
+    "grading": "7 [cm]"
+   },
+   {
+    "id": "4",
+    "tex": "$4.0\\,\\mathrm m$",
+    "grading": "4 [m]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) コインから出て水面の点（コインの真上から $x$ だけ離れた点）で屈折する光を考える．水中の角を $\\theta_1$，空気中の角を $\\theta_2$ とすると，屈折の法則は $\\dfrac43\\sin\\theta_1=\\sin\\theta_2$．空気中の光を逆に延ばすと，コインの真上の深さ $h'$ の点から出たように見える．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-rays"
+    },
+    {
+     "type": "text",
+     "tex": "$x=h\\tan\\theta_1=h'\\tan\\theta_2$ で，角が小さいときは $\\tan\\theta\\fallingdotseq\\sin\\theta$ なので\n\\[ h'=h\\frac{\\tan\\theta_1}{\\tan\\theta_2}\\fallingdotseq h\\frac{\\sin\\theta_1}{\\sin\\theta_2}=\\frac hn \\]\n$h'=\\dfrac{12}{4/3}=\\boldsymbol{9.0\\,\\mathrm{cm}}$．（$\\theta_1$ によらず同じ点に見えるので，はっきりした像になる．）\n\n(2) 下面の印は深さ $\\dfrac{6.0}{n}$ に見える．顕微鏡はこの見かけの深さだけ下げればピントが合うので，$\\dfrac{6.0}n=4.0$ より $n=\\boldsymbol{1.5}$．（実際の厚さとピントの移動量の比から屈折率が測れる．）\n\n(3) 見かけの深さは，層ごとに「厚さ $\\div$ 屈折率」を足せばよい（各境界で同じ近似を順に使う）：\n\\[ \\frac{4.0}{4/3}+\\frac{6.0}{1.5}=3.0+4.0=\\boldsymbol{7.0\\,\\mathrm{cm}} \\]\n\n(4) 逆向きに光が進む場合で，空気中の点を水中から見ると，距離は $n$ 倍に見える：$3.0\\times\\dfrac43=\\boldsymbol{4.0\\,\\mathrm m}$．屈折率の小さい側にある物体は，屈折率の大きい側から見ると遠く見える．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "真上から見るときの見かけの深さは「実際の深さ $\\div$ 屈折率」．層が重なれば各層の分を足す．顕微鏡のピントの移動量は見かけの深さを測っている．"
+ },
+ "concepts": [
+  "refraction-light"
+ ],
+ "laws": [
+  "refraction-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "見かけの深さ",
+  "屈折",
+  "屈折率の測定",
+  "顕微鏡"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,237 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  310
+ ],
+ "items": [
+  {
+   "t": "circle",
+   "at": [
+    160,
+    160
+   ],
+   "r": 95,
+   "style": "solid"
+  },
+  {
+   "t": "dot",
+   "at": [
+    160,
+    160
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    150,
+    174
+   ],
+   "text": "O",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "line",
+   "from": [
+    160,
+    160
+   ],
+   "to": [
+    213.62311101832847,
+    115.00486732194224
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    213.62,
+    115.0
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    227.62311101832847,
+    119.00486732194224
+   ],
+   "text": "棒",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "arc",
+   "at": [
+    160,
+    160
+   ],
+   "r": 30,
+   "from": 0,
+   "to": 40
+  },
+  {
+   "t": "text",
+   "at": [
+    178,
+    124
+   ],
+   "text": "0.10 m",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    30
+   ],
+   "to": [
+    280,
+    30
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    292,
+    30
+   ],
+   "text": "スクリーン",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    213.62311101832847,
+    111.00486732194224
+   ],
+   "to": [
+    213.62311101832847,
+    34
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "circle",
+   "at": [
+    213.62,
+    30
+   ],
+   "r": 4,
+   "style": "fill"
+  },
+  {
+   "t": "text",
+   "at": [
+    221.62311101832847,
+    18
+   ],
+   "text": "影",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    90,
+    22
+   ],
+   "to": [
+    90,
+    38
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    230,
+    22
+   ],
+   "to": [
+    230,
+    38
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "arc",
+   "at": [
+    160,
+    160
+   ],
+   "r": 110,
+   "from": 60,
+   "to": 100
+  },
+  {
+   "t": "arrow",
+   "from": [
+    141.2,
+    51.67
+   ],
+   "dir": 190,
+   "len": 14,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    80,
+    300
+   ],
+   "dir": 90,
+   "len": 32,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    120,
+    300
+   ],
+   "dir": 90,
+   "len": 32,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    200,
+    300
+   ],
+   "dir": 90,
+   "len": 32,
+   "style": "thin"
+  },
+  {
+   "t": "arrow",
+   "from": [
+    240,
+    300
+   ],
+   "dir": 90,
+   "len": 32,
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    300,
+    290
+   ],
+   "text": "平行光線",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  }
+ ]
+}

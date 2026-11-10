@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 300" width="380" height="300" font-family="'Times New Roman', serif">
+<circle cx="210" cy="150" r="100" fill="none" stroke="currentColor" stroke-width="2.2"/>
+<text x="135" y="135" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="135" y="165" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="165" y="105" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="165" y="135" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="165" y="165" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="165" y="195" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="195" y="75" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="195" y="105" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="195" y="195" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="195" y="225" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="225" y="75" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="225" y="195" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="225" y="225" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="255" y="165" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="255" y="195" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="285" y="135" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<text x="285" y="165" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">⊙</text>
+<line x1="210" y1="150" x2="296.6" y2="100" stroke="currentColor" stroke-width="2.4"/>
+<circle cx="210" cy="150" r="3" fill="currentColor"/>
+<circle cx="296.6" cy="100" r="3" fill="currentColor"/>
+<text x="200" y="138" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<text x="306.6" y="90" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">P</text>
+<path d="M242.77,127.06 A40,40 0 0 0 216.95,110.61" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text x="237.94" y="106.14" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">ω</text>
+<g class="f-ink" data-dir="170" data-len="9">
+<line x1="216.95" y1="110.61" x2="211.18" y2="109.59" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="208.08,109.04 211.44,108.15 210.93,111.04" fill="currentColor"/>
+</g>
+<polyline points="210,150 50,150" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:R">
+<line x1="50" y1="150" x2="50" y2="192" stroke="currentColor" stroke-width="1.6"/>
+<line x1="50" y1="238" x2="50" y2="280" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="43,192 43,238 57,238 57,192" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="64" y="215" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">R</text>
+</g>
+<polyline points="50,280 210,280 210,250" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="210" cy="250" r="3" fill="currentColor"/>
+<text x="270" y="270" font-size="12" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">円形のレール</text>
+</svg>

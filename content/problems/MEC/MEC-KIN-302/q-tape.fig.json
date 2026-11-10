@@ -1,0 +1,266 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  350,
+  110
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     16,
+     30
+    ],
+    [
+     334,
+     30
+    ],
+    [
+     334,
+     60
+    ],
+    [
+     16,
+     60
+    ]
+   ],
+   "style": "solid"
+  },
+  {
+   "t": "line",
+   "from": [
+    20,
+    30
+   ],
+   "to": [
+    20,
+    60
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    20,
+    45
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    36.5,
+    30
+   ],
+   "to": [
+    36.5,
+    60
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    36.5,
+    45
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    75.0,
+    30
+   ],
+   "to": [
+    75.0,
+    60
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    75.0,
+    45
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    135.5,
+    30
+   ],
+   "to": [
+    135.5,
+    60
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    135.5,
+    45
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    218.0,
+    30
+   ],
+   "to": [
+    218.0,
+    60
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    218.0,
+    45
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    322.5,
+    30
+   ],
+   "to": [
+    322.5,
+    60
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "dot",
+   "at": [
+    322.5,
+    45
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    28.25,
+    76
+   ],
+   "text": "1.5",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    28.25,
+    20
+   ],
+   "text": "1",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    55.75,
+    76
+   ],
+   "text": "3.5",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    55.75,
+    20
+   ],
+   "text": "2",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    105.25,
+    76
+   ],
+   "text": "5.5",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    105.25,
+    20
+   ],
+   "text": "3",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    176.75,
+    76
+   ],
+   "text": "7.5",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    176.75,
+    20
+   ],
+   "text": "4",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    270.25,
+    76
+   ],
+   "text": "9.5",
+   "italic": false,
+   "size": 13,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    270.25,
+    20
+   ],
+   "text": "5",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  },
+  {
+   "t": "text",
+   "at": [
+    334,
+    98
+   ],
+   "text": "（単位：cm）",
+   "italic": false,
+   "size": 12,
+   "anchor": "end"
+  }
+ ]
+}

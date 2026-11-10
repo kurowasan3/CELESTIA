@@ -1,0 +1,112 @@
+{
+ "id": "THM-KIN-202",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "単原子分子理想気体の内部エネルギー（温度・PV から求める，分子の種類によらないこと）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 6,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "単原子分子理想気体の内部エネルギーは，分子の運動エネルギーの総和であり，物質量 $n$，絶対温度 $T$ のとき $U=\\dfrac32nRT$ である．気体定数を $R=8.31\\,\\mathrm{J/(mol\\cdot K)}$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "$300\\,\\mathrm K$ のヘリウム $2.0\\,\\mathrm{mol}$ の内部エネルギー $U$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "(1) のヘリウムの温度を $310\\,\\mathrm K$ に上げた．内部エネルギーの増加 $\\Delta U$ を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "圧力 $1.0\\times10^5\\,\\mathrm{Pa}$，体積 $3.0\\times10^{-3}\\,\\mathrm{m^3}$ のヘリウムの内部エネルギーを求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "同じ温度・同じ物質量のヘリウムとアルゴン（原子の質量はヘリウムの約 $10$ 倍）では，内部エネルギーはどちらが大きいか．理由とともに答えよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$U=7.5\\times10^3\\,\\mathrm J$",
+    "grading": "U：7.5*10^3 [J]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\Delta U=2.5\\times10^2\\,\\mathrm J$",
+    "grading": "ΔU：2.5*10^2 [J]"
+   },
+   {
+    "id": "3",
+    "tex": "$450\\,\\mathrm J$",
+    "grading": "U：450 [J]"
+   },
+   {
+    "id": "4",
+    "tex": "等しい．分子1個の平均運動エネルギー $\\dfrac32kT$ は温度だけで決まり，分子の質量によらないから（重い分子はその分ゆっくり動く）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) $U=\\dfrac32\\times2.0\\times8.31\\times300=7479\\,\\mathrm J\\approx7.5\\times10^3\\,\\mathrm J$．\n\n(2) $\\Delta U=\\dfrac32nR\\Delta T=\\dfrac32\\times2.0\\times8.31\\times10=249.3\\,\\mathrm J\\approx2.5\\times10^2\\,\\mathrm J$．\n\n(3) 状態方程式 $PV=nRT$ より $U=\\dfrac32nRT=\\dfrac32PV=\\dfrac32\\times1.0\\times10^5\\times3.0\\times10^{-3}=450\\,\\mathrm J$．温度や物質量がわからなくても，$P$ と $V$ から求められる．\n\n(4) 内部エネルギーは $N$ 個の分子の運動エネルギーの和 $N\\times\\dfrac32kT$ で，分子の数と温度だけで決まる．アルゴン原子はヘリウムより重いが，その分 $\\overline{v^2}$ が小さく（$\\sqrt{\\overline{v^2}}$ は約 $\\dfrac{1}{\\sqrt{10}}$ 倍），平均運動エネルギーは等しい．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "単原子分子理想気体では $U=\\dfrac32nRT=\\dfrac32PV$．分子の種類（質量）にはよらない．"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "ideal-gas"
+ ],
+ "laws": [
+  "internal-energy",
+  "kinetic-temperature",
+  "ideal-gas-law"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "内部エネルギー",
+  "単原子分子",
+  "分子運動論"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

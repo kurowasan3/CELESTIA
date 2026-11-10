@@ -1,0 +1,137 @@
+{
+ "id": "MEC-SHM-401",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-06",
+ "topic": "回転台に立てた棒の影の往復（等速円運動の正射影としての単振動）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "concept",
+  "calc",
+  "experiment"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "水平な回転台の，回転軸から $0.10\\,\\mathrm m$ の位置に細い棒を鉛直に立て，回転台を周期 $2.0\\,\\mathrm s$ で一定の向きに回した．図（真上から見た図）のように，横から平行光線を当てると，光線に垂直に置いたスクリーン上で，棒の影は一直線上を往復した．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "影の運動の振幅 $A$，周期 $T$，角振動数 $\\omega$ を求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "影の速さの最大値 $v_{\\rm max}$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "影の加速度の大きさの最大値 $a_{\\rm max}$ を求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "影の速さが最大になるのは，影がどの位置にあるときか．また，影の加速度の大きさが最大になるのはどの位置にあるときで，その向きはどちらか．"
+     },
+     {
+      "id": "5",
+      "tex": "棒を回転軸から $0.20\\,\\mathrm m$ の位置に立て直し，同じ周期で回した．影の運動の振幅，周期，速さの最大値は，それぞれもとの何倍になるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "真上から見た図。回転台の中心 O から 0.10 m の位置に棒が立ち、下から平行光線を当てて、上のスクリーンに棒の影ができる",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$A=0.10\\,\\mathrm m$，$T=2.0\\,\\mathrm s$，$\\omega=\\pi\\,\\mathrm{rad/s}$",
+    "grading": "A：0.1 [m] ; T：2 [s] ; ω：π [rad/s]"
+   },
+   {
+    "id": "2",
+    "tex": "$v_{\\rm max}=0.10\\pi\\fallingdotseq0.31\\,\\mathrm{m/s}$",
+    "grading": "v_max：0.1π [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "$a_{\\rm max}=0.10\\pi^2\\fallingdotseq0.99\\,\\mathrm{m/s^2}$",
+    "grading": "a_max：0.1π^2 [m/s^2]"
+   },
+   {
+    "id": "4",
+    "tex": "速さは往復の中心で最大．加速度の大きさは往復の両端で最大で，向きは中心向き．"
+   },
+   {
+    "id": "5",
+    "tex": "振幅 $2$ 倍，周期 $1$ 倍（変わらない），速さの最大値 $2$ 倍",
+    "grading": "振幅：2倍 ; 周期：1倍 ; 速さの最大値：2倍"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "棒は半径 $r=0.10\\,\\mathrm m$，周期 $2.0\\,\\mathrm s$ の等速円運動をする．影は，その円運動をスクリーンの方向に射影（正射影）した運動で，単振動になる．\n\n(1) 影は円の直径の範囲を往復するので振幅は半径 $A=0.10\\,\\mathrm m$．1回転で1往復するので $T=2.0\\,\\mathrm s$．$\\omega=\\dfrac{2\\pi}{T}=\\pi\\,\\mathrm{rad/s}$（回転台の角速度と同じ）．\n\n(2) 棒の速さは $r\\omega=0.10\\pi\\,\\mathrm{m/s}$．影の速さは，棒の速度のスクリーン方向の成分で，棒の速度がスクリーンと平行になるとき（影が中心を通るとき）最大で $v_{\\rm max}=A\\omega=0.10\\pi\\fallingdotseq0.31\\,\\mathrm{m/s}$．\n\n(3) 棒の加速度は中心向きで大きさ $r\\omega^2$．影の加速度はその成分で，最大値は $a_{\\rm max}=A\\omega^2=0.10\\pi^2\\fallingdotseq0.99\\,\\mathrm{m/s^2}$．\n\n(4) (2)(3) より，速さが最大になるのは振動の中心．加速度（棒の中心向き加速度の成分）が最大になるのは，棒の加速度がスクリーンと平行になるときで，影は往復の両端にある．向きは中心向き（単振動の加速度 $a=-\\omega^2x$）．\n\n(5) 振幅＝半径なので $2$ 倍．周期は回転台の周期で決まり，$1$ 倍（変わらない）．$v_{\\rm max}=A\\omega$ は $2$ 倍．単振動の周期は振幅によらない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "等速円運動を真横から見た影（正射影）は単振動．振幅＝半径，角振動数＝円運動の角速度で，$v_{\\rm max}=A\\omega$，$a_{\\rm max}=A\\omega^2$．"
+ },
+ "concepts": [
+  "simple-harmonic-motion",
+  "circular-motion"
+ ],
+ "laws": [
+  "centripetal-acceleration"
+ ],
+ "misconceptions": [
+  "MC-SHM-PERIOD-AMPLITUDE"
+ ],
+ "tags": [
+  "単振動",
+  "等速円運動",
+  "正射影",
+  "実験"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

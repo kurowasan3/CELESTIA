@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" width="360" height="250" font-family="'Times New Roman', serif">
+<line x1="110" y1="70" x2="190" y2="70" stroke="currentColor" stroke-width="2.4"/>
+<line x1="150" y1="70" x2="150" y2="170" stroke="currentColor" stroke-width="1.2"/>
+<line x1="150" y1="170" x2="138" y2="210" stroke="currentColor" stroke-width="1.2"/>
+<line x1="150" y1="170" x2="162" y2="210" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="150" cy="175" r="62" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="210" y="66" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">金属板</text>
+<text x="212" y="214" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">はく</text>
+<g transform="translate(150,46) rotate(0)" data-angle="0">
+<rect x="-45" y="-18" width="90" height="18" class="f-body" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+<text x="0" y="-9" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">+ + + +</text>
+</g>
+<text x="205" y="38" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">ガラス棒（正に帯電）</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 230" width="450" height="230" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="340">
+<line x1="70" y1="200" x2="400" y2="200" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="410,200 400,204.66 400,195.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="185">
+<line x1="70" y1="200" x2="70" y2="25" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="70,15 74.66,25 65.34,25" fill="currentColor"/>
+</g>
+<text x="416" y="200" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">t [s]</text>
+<text x="62" y="14" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">ln V（V の単位は V）</text>
+<text x="62" y="212" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">O</text>
+<line x1="70" y1="56.66" x2="370" y2="176.66" stroke="currentColor" stroke-width="2.4"/>
+<line x1="70" y1="136.66" x2="270" y2="136.66" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="270" y1="200" x2="270" y2="136.66" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="64" y="56.66" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">1.79</text>
+<text x="64" y="136.66" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">0.79</text>
+<text x="170" y="214" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">10</text>
+<text x="270" y="214" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">20</text>
+<text x="370" y="214" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">30</text>
+<line x1="170" y1="200" x2="170" y2="195" stroke="currentColor" stroke-width="1.2"/>
+<line x1="370" y1="200" x2="370" y2="195" stroke="currentColor" stroke-width="1.2"/>
+</svg>

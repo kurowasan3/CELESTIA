@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" font-family="'Times New Roman', serif">
+<g class="f-ink" data-dir="0" data-len="330">
+<line x1="60" y1="220" x2="380" y2="220" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="390,220 380,224.66 380,215.34" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="90" data-len="210">
+<line x1="60" y1="220" x2="60" y2="20" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="60,10 64.66,20 55.34,20" fill="currentColor"/>
+</g>
+<line x1="60" y1="220" x2="368" y2="22" stroke="currentColor" stroke-width="1.2"/>
+<circle cx="116" cy="183.1" r="3" fill="currentColor"/>
+<circle cx="172" cy="148.9" r="3" fill="currentColor"/>
+<circle cx="228" cy="110.65" r="3" fill="currentColor"/>
+<circle cx="284" cy="76" r="3" fill="currentColor"/>
+<circle cx="340" cy="38.65" r="3" fill="currentColor"/>
+<line x1="116" y1="216" x2="116" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="116" y="236" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.2</text>
+<line x1="172" y1="216" x2="172" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="172" y="236" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.4</text>
+<line x1="228" y1="216" x2="228" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="228" y="236" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.6</text>
+<line x1="284" y1="216" x2="284" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="284" y="236" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">0.8</text>
+<line x1="340" y1="216" x2="340" y2="224" stroke="currentColor" stroke-width="1.2"/>
+<text x="340" y="236" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">1.0</text>
+<line x1="56" y1="175" x2="64" y2="175" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="175" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">1.0</text>
+<line x1="56" y1="130" x2="64" y2="130" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="130" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">2.0</text>
+<line x1="56" y1="85" x2="64" y2="85" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="85" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">3.0</text>
+<line x1="56" y1="40" x2="64" y2="40" stroke="currentColor" stroke-width="1.2"/>
+<text x="52" y="40" font-size="12" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">4.0</text>
+<line x1="60" y1="40" x2="340" y2="40" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="340" y1="40" x2="340" y2="220" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="50" y="230" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">O</text>
+<text x="380" y="236" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">l [m]</text>
+<text x="70" y="14" font-size="13" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">T² [s²]</text>
+</svg>

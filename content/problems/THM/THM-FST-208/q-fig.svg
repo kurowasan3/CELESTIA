@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 250" width="420" height="250" font-family="'Times New Roman', serif">
+<circle cx="150" cy="175" r="62" fill="none" stroke="currentColor" stroke-width="2"/>
+<polygon points="138,115 162,115 162,117 138,117" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="138" y1="20" x2="138" y2="116" stroke="currentColor" stroke-width="2"/>
+<line x1="162" y1="20" x2="162" y2="116" stroke="currentColor" stroke-width="2"/>
+<circle cx="150" cy="62" r="11" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<text x="150" y="180" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">気体</text>
+<text x="150" y="198" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">（体積 V₀）</text>
+<text x="172" y="40" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">S</text>
+<text x="118" y="62" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">m</text>
+<g class="f-ink" data-dir="90" data-len="26">
+<line x1="222" y1="62" x2="222" y2="45.1" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="222,36 226.24,45.1 217.76,45.1" fill="currentColor"/>
+</g>
+<g class="f-ink" data-dir="270" data-len="26">
+<line x1="222" y1="62" x2="222" y2="78.9" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="222,88 217.76,78.9 226.24,78.9" fill="currentColor"/>
+</g>
+<text x="236" y="62" font-size="14" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">x</text>
+<text x="150" y="10" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">大気（圧力 P₀）</text>
+<text x="345" y="22" font-size="12" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">小球にはたらく力</text>
+<circle cx="345" cy="110" r="12" class="f-body" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.4"/>
+<g class="f-force" data-phys="force:P0S" data-dir="270" data-len="58.5">
+<line x1="338" y1="40" x2="338" y2="88.5" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="338,98.5 333.34,88.5 342.66,88.5" fill="currentColor"/>
+<text x="298" y="53.25" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">P₀S</text>
+</g>
+<g class="f-force" data-phys="force:mg" data-dir="270" data-len="27">
+<line x1="352" y1="110" x2="352" y2="127.55" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="352,137 347.59,127.55 356.41,127.55" fill="currentColor"/>
+<text x="368" y="143" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">mg</text>
+</g>
+<g class="f-force" data-phys="force:PS" data-dir="90" data-len="85.5">
+<line x1="338" y1="196" x2="338" y2="120.5" stroke="currentColor" stroke-width="2.2"/>
+<polygon points="338,110.5 342.66,120.5 333.34,120.5" fill="currentColor"/>
+<text x="322" y="171.25" font-size="15" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor" font-style="italic">P₁S</text>
+</g>
+</svg>

@@ -1,0 +1,131 @@
+{
+ "id": "THM-KIN-207",
+ "schema": "celestia.problem/1",
+ "field": "THM",
+ "unit": "THM-02",
+ "topic": "惑星の大気が逃げ出す条件（分子の速さと脱出速度の比較，地球と月）",
+ "course": "物理",
+ "level": 3,
+ "minutes": 20,
+ "format": [
+  "derivation",
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "national-2nd",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "半径 $a$，表面での重力加速度の大きさ $g$ の天体（自転は無視する）が，大気をいつまでも保つことができるかを考える．大気の上層（大気がきわめて薄く，分子どうしがほとんど衝突しない高さ）の絶対温度を $T$ とし，そこでは分子は天体の表面とほぼ同じ距離にあるとみなす．気体定数を $R$ とし，気体のモル質量を $M$ とする．"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "天体の質量を $m_{\\text p}$，万有引力定数を $G$ とすると $g=\\dfrac{Gm_{\\text p}}{a^2}$ である．天体の表面から，天体の重力を振り切って無限の遠方へ逃げ出すのに必要な最小の速さ $v_{\\text e}$（脱出速度）を，$g$ と $a$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "温度 $T$ の気体分子の二乗平均速度 $v_{\\text{rms}}=\\sqrt{\\overline{v^2}}$ を，$R$，$T$，$M$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "分子の速さには分布があり，$v_{\\text{rms}}$ が $v_{\\text e}$ より小さくても，速い一部の分子が少しずつ逃げ出す．数十億年にわたって大気を保つには，おおよそ $v_{\\text{rms}}\\leqq\\dfrac{v_{\\text e}}{6}$ であることが必要とされる．この条件は，モル質量が $M\\geqq M_{\\min}$ であることと同じである．$M_{\\min}$ を $R$，$T$，$g$，$a$ で表せ．"
+     },
+     {
+      "id": "4",
+      "tex": "地球（$g=9.8\\,\\mathrm{m/s^2}$，$a=6.4\\times10^6\\,\\mathrm m$，上層の温度 $T=1000\\,\\mathrm K$）と月（$g=1.6\\,\\mathrm{m/s^2}$，$a=1.7\\times10^6\\,\\mathrm m$，昼の表面付近の温度 $T=400\\,\\mathrm K$）のそれぞれについて，$M_{\\min}$ を $\\mathrm{g/mol}$ を単位として有効数字2桁で求めよ．$R=8.31\\,\\mathrm{J/(mol\\cdot K)}$ とする．"
+     },
+     {
+      "id": "5",
+      "tex": "水素（$2\\,\\mathrm{g/mol}$），ヘリウム（$4$），窒素（$28$），酸素（$32$），二酸化炭素（$44$）のうち，(3) の条件のもとで地球が保てる気体と月が保てる気体をそれぞれ答えよ．"
+     },
+     {
+      "id": "6",
+      "tex": "同じ天体でも，大気の上層の温度が高いほど大気は失われやすい．また，$v_{\\text{rms}}$ が $v_{\\text e}$ よりかなり小さくても長い時間には大気が失われる．これらの理由を，分子の速さの分布と分子どうしの衝突に着目して説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$v_{\\text e}=\\sqrt{2ga}$",
+    "grading": "v_e：sqrt(2g a)"
+   },
+   {
+    "id": "2",
+    "tex": "$v_{\\text{rms}}=\\sqrt{\\dfrac{3RT}{M}}$",
+    "grading": "v_{rms}：sqrt(3R T/M)"
+   },
+   {
+    "id": "3",
+    "tex": "$M_{\\min}=\\dfrac{54RT}{ga}$",
+    "grading": "M_{min}：54R T/(g a)"
+   },
+   {
+    "id": "4",
+    "tex": "地球：$7.2\\,\\mathrm{g/mol}$，月：$66\\,\\mathrm{g/mol}$",
+    "grading": "地球：7.2 ; 月：66"
+   },
+   {
+    "id": "5",
+    "tex": "地球：窒素・酸素・二酸化炭素（水素とヘリウムは保てない）．月：どれも保てない．"
+   },
+   {
+    "id": "6",
+    "tex": "温度が高いと分子の速さの分布全体が速い側にずれ，$v_{\\text e}$ を超える分子の割合が急に増える．また，速い分子が逃げても，残った分子どうしの衝突で速さの分布がもとの形に戻り，速い分子が絶えず補充されるので，長い時間には少しずつ大気が失われる．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "\\textbf{(1)}　質量 $\\mu$ の物体を速さ $v$ で打ち出し，無限遠に到達する条件は，力学的エネルギー保存より \\[\\frac12\\mu v^2-\\frac{Gm_{\\text p}\\mu}{a}\\geqq0\\] $Gm_{\\text p}=ga^2$ を使うと $v^2\\geqq2ga$．よって $v_{\\text e}=\\sqrt{2ga}$．\n\n\\textbf{(2)}　分子1個の質量を $m$ として $\\dfrac12m\\overline{v^2}=\\dfrac32kT$．$k=\\dfrac{R}{N_{\\mathrm A}}$，$m=\\dfrac{M}{N_{\\mathrm A}}$ より $\\overline{v^2}=\\dfrac{3RT}{M}$，$v_{\\text{rms}}=\\sqrt{\\dfrac{3RT}{M}}$．\n\n\\textbf{(3)}　$\\sqrt{\\dfrac{3RT}{M}}\\leqq\\dfrac{\\sqrt{2ga}}{6}$ の両辺を2乗して $\\dfrac{3RT}{M}\\leqq\\dfrac{2ga}{36}$，よって $M\\geqq\\dfrac{108RT}{2ga}=\\dfrac{54RT}{ga}$．\n\n\\textbf{(4)}　地球：$M_{\\min}=\\dfrac{54\\times8.31\\times1000}{9.8\\times6.4\\times10^6}=7.15\\times10^{-3}\\,\\mathrm{kg/mol}\\approx7.2\\,\\mathrm{g/mol}$．月：$M_{\\min}=\\dfrac{54\\times8.31\\times400}{1.6\\times1.7\\times10^6}=6.60\\times10^{-2}\\,\\mathrm{kg/mol}\\approx66\\,\\mathrm{g/mol}$．\n\n\\textbf{(5)}　地球では $M\\geqq7.2\\,\\mathrm{g/mol}$ の窒素・酸素・二酸化炭素は保たれ，水素・ヘリウムは逃げる（実際，地球の大気には水素分子やヘリウムがほとんどない）．月では $66\\,\\mathrm{g/mol}$ 未満の気体はすべて逃げるので，挙げた気体はどれも保てない（月には大気がほとんどない）．$M_{\\min}\\propto\\dfrac{T}{ga}$ で，月は $ga$ が地球の約 $\\dfrac{1}{23}$ と小さいことが効いている．\n\n\\textbf{(6)}　気体分子の速さは $v_{\\text{rms}}$ のまわりに広く分布しており，$v_{\\text{rms}}$ の数倍の速さの分子もわずかに存在する．$v_{\\text e}$ を超える割合は，$v_{\\text{rms}}$ と $v_{\\text e}$ の比で非常に敏感に変わる（分布の裾は急に小さくなる）ので，温度が少し上がって $v_{\\text{rms}}$ が大きくなるだけで逃げる分子が大きく増える．また，上層で速い分子が逃げると分布の裾が欠けるが，下の層との分子どうしの衝突によって再び速い分子がつくられる（分布がもとに戻る）．このため「逃げる→補充される」がくり返され，わずかな割合でも長い時間にわたって積み重なって大気が失われる．$\\dfrac16$ という係数は，これを数十億年という時間で見積もった目安である．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "大気が保たれるかは，分子の速さ $\\sqrt{\\dfrac{3RT}{M}}$ と脱出速度 $\\sqrt{2ga}$ の比で決まる．軽い分子・高温・小さい天体ほど逃げやすい．"
+ },
+ "concepts": [
+  "kinetic-theory",
+  "universal-gravitation"
+ ],
+ "laws": [
+  "kinetic-temperature",
+  "gravitational-potential",
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "大気の散逸",
+  "脱出速度",
+  "二乗平均速度",
+  "分子の速さの分布"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

@@ -1,0 +1,132 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  380,
+  260
+ ],
+ "items": [
+  {
+   "t": "poly",
+   "points": [
+    [
+     40,
+     67.62
+    ],
+    [
+     350,
+     246.6
+    ],
+    [
+     40,
+     246.6
+    ]
+   ],
+   "style": "hatch"
+  },
+  {
+   "t": "line",
+   "from": [
+    40,
+    67.62
+   ],
+   "to": [
+    350,
+    246.6
+   ],
+   "style": "ground",
+   "phys": "surface"
+  },
+  {
+   "t": "arc",
+   "at": [
+    350,
+    246.60254037844385
+   ],
+   "r": 34,
+   "from": 150,
+   "to": 180,
+   "label": "θ",
+   "labelGap": 10
+  },
+  {
+   "t": "line",
+   "from": [
+    95,
+    99.38
+   ],
+   "to": [
+    95,
+    69.36
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "circle",
+   "at": [
+    220.0,
+    125.36
+   ],
+   "r": 40,
+   "style": "solid"
+  },
+  {
+   "t": "dot",
+   "at": [
+    220.0,
+    125.36
+   ]
+  },
+  {
+   "t": "line",
+   "from": [
+    95,
+    85.36
+   ],
+   "to": [
+    220.0,
+    85.36
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "text",
+   "at": [
+    234.0,
+    129.36
+   ],
+   "text": "m",
+   "italic": true,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "text",
+   "at": [
+    192,
+    174
+   ],
+   "text": "P",
+   "italic": false,
+   "size": 13,
+   "anchor": "end"
+  },
+  {
+   "t": "dot",
+   "at": [
+    200,
+    160
+   ]
+  },
+  {
+   "t": "text",
+   "at": [
+    157.5,
+    75.36
+   ],
+   "text": "糸",
+   "italic": false,
+   "size": 12,
+   "anchor": "middle"
+  }
+ ]
+}

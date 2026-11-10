@@ -1,0 +1,134 @@
+{
+ "id": "MEC-NEW-301",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "接して置いた2物体を押すときの加速度と物体間で押し合う力（押す側を入れかえると変わる）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "numeric",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "なめらかな水平面上に，質量 $3.0\\,\\mathrm{kg}$ の物体 A と質量 $2.0\\,\\mathrm{kg}$ の物体 B を接して置き，A を水平右向きに大きさ $F=10\\,\\mathrm N$ の力で押し続けた．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "A，B の加速度の大きさを求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "A が B を押す力の大きさを求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "B が A を押す力の向きと大きさを答えよ．"
+     },
+     {
+      "id": "4",
+      "tex": "次に，A と B の並びはそのままで，B を左向きに大きさ $10\\,\\mathrm N$ の力で押した．A と B が押し合う力の大きさを求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "(2) と (4) で押し合う力の大きさが違う理由を，簡単に説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "なめらかな水平面上で、物体 A（3.0 kg）の右に物体 B（2.0 kg）が接して置かれ、A を左から右向きの力 F で押す",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$2.0\\,\\mathrm{m/s^2}$",
+    "grading": "2 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$4.0\\,\\mathrm N$",
+    "grading": "4 [N]"
+   },
+   {
+    "id": "3",
+    "tex": "左向きに $4.0\\,\\mathrm N$",
+    "grading": "4 [N]"
+   },
+   {
+    "id": "4",
+    "tex": "$6.0\\,\\mathrm N$",
+    "grading": "6 [N]"
+   },
+   {
+    "id": "5",
+    "tex": "押し合う力は，直接押されていない方の物体だけを加速させる力である．(2) では $2.0\\,\\mathrm{kg}$ の B を，(4) では $3.0\\,\\mathrm{kg}$ の A を，同じ加速度 $2.0\\,\\mathrm{m/s^2}$ で加速させるので，質量の大きい A を加速させる (4) の方が大きい．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "A と B は一緒に動くので，加速度は同じ．\n\n(1) A と B をまとめた質量 $5.0\\,\\mathrm{kg}$ の物体に $10\\,\\mathrm N$ がはたらくと考えて，$a=\\dfrac{10}{5.0}=2.0\\,\\mathrm{m/s^2}$．\n\n(2) B に水平にはたらく力は，A が押す力 $f$ だけ．B の運動方程式 $2.0\\times2.0=f$ より $f=4.0\\,\\mathrm N$．\n\n(3) 作用・反作用の法則より，B は A を左向きに $4.0\\,\\mathrm N$ で押す．（A の運動方程式 $3.0\\times2.0=10-4.0$ で確かめられる．）\n\n(4) 加速度は左向きに $2.0\\,\\mathrm{m/s^2}$ で同じ．今度は A に水平にはたらく力が「B が押す力」だけなので，$3.0\\times2.0=6.0\\,\\mathrm N$．\n\n(5) 押し合う力は「押されていない方の物体」に必要な $ma$ だけで決まる．「押した力 $10\\,\\mathrm N$ がそのまま伝わる」のではない．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "まとめて1つの物体とみて加速度を出し，押し合う力は「力を直接受けない方」の運動方程式から求める．"
+ },
+ "concepts": [
+  "equation-of-motion",
+  "force-concept"
+ ],
+ "laws": [
+  "newton-2nd",
+  "newton-3rd"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "運動方程式",
+  "作用・反作用",
+  "接触した2物体"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

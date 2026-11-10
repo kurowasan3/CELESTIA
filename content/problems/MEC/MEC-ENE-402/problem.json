@@ -1,0 +1,146 @@
+{
+ "id": "MEC-ENE-402",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-04",
+ "topic": "投げる向きが違っても地面に達する速さは同じ（力学的エネルギー保存と所要時間の違い）",
+ "course": "物理基礎",
+ "level": 0,
+ "minutes": 7,
+ "format": [
+  "concept",
+  "choice",
+  "calc"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "高さ $20\\,\\mathrm m$ のがけの上の同じ点から，質量の等しい3個の小球 A，B，C を，同じ速さ $10\\,\\mathrm{m/s}$ で投げた．A は水平に，B は水平と $45^\\circ$ をなす斜め上向きに，C は鉛直下向きに投げた．小球はどれも，がけの下の水平な地面に落ちた．重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし，空気の抵抗は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "地面に達する直前の A，B，C の速さを $v_{\\rm A}$，$v_{\\rm B}$，$v_{\\rm C}$ とする．大小関係として正しいものを，次の①〜④から1つ選べ．\n\n① $v_{\\rm B}>v_{\\rm A}>v_{\\rm C}$　② $v_{\\rm C}>v_{\\rm A}>v_{\\rm B}$　③ $v_{\\rm A}=v_{\\rm B}=v_{\\rm C}$　④ $v_{\\rm C}>v_{\\rm A}=v_{\\rm B}$"
+     },
+     {
+      "id": "2",
+      "tex": "地面に達する直前の速さは何 $\\mathrm{m/s}$ か．有効数字2桁で答えよ．"
+     },
+     {
+      "id": "3",
+      "tex": "投げてから地面に達するまでの時間が最も長いのは A，B，C のどれか．また，最も短いのはどれか．"
+     },
+     {
+      "id": "4",
+      "tex": "ある生徒は「C は下向きに勢いをつけて投げたのだから，地面に着くときも C がいちばん速い」と考えた．この考えの誤りを説明せよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "diagram",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "高さ 20 m のがけの上の点から、3個の小球を同じ速さ 10 m/s で、A は水平、B は斜め上 45°、C は鉛直下向きに投げる。点線は A と B の軌道",
+   "caption": "",
+   "physics": {
+    "vectors": [
+     {
+      "name": "velocity:vA",
+      "dir_deg": 0
+     },
+     {
+      "name": "velocity:vB",
+      "dir_deg": 45
+     },
+     {
+      "name": "velocity:vC",
+      "dir_deg": 270
+     }
+    ],
+    "equalLength": [
+     [
+      "velocity:vA",
+      "velocity:vB",
+      "velocity:vC"
+     ]
+    ]
+   }
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "③"
+   },
+   {
+    "id": "2",
+    "tex": "$22\\,\\mathrm{m/s}$",
+    "grading": "22 [m/s]"
+   },
+   {
+    "id": "3",
+    "tex": "最も長いのは B，最も短いのは C"
+   },
+   {
+    "id": "4",
+    "tex": "重力だけが仕事をするので力学的エネルギーが保存し，地面での速さは「投げたときの速さ」と「落ちた高さ」だけで決まる．投げる向きは速さに影響しない（向きが違うのは着地までの時間や着地点）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1)(2) 小球にはたらく力は重力だけなので，力学的エネルギーが保存する．地面を高さの基準として，質量を $m$，地面での速さを $v$ とすると\\[\\frac12m\\cdot10^2+m\\times9.8\\times20=\\frac12mv^2\\] より $v^2=100+392=492$，$v\\fallingdotseq22\\,\\mathrm{m/s}$．この式には投げる向きが入っていないので，3個とも同じ速さで地面に達する．答えは③．\n\n(3) 時間は鉛直方向の運動で決まる．鉛直下向きの初速度の成分は C が $10\\,\\mathrm{m/s}$，A が $0$，B は上向きに $10\\sin45^\\circ\\,\\mathrm{m/s}$．下向きの初速度が大きいほど早く着くので，最も短いのは C，最も長いのは（いったん上がってから落ちる）B．\n\n(4) 運動エネルギーはスカラーで，速度の向きの情報をもたない．はじめの運動エネルギーは3個とも同じで，落ちる高さも同じなので，重力がする仕事 $mgh$ も同じ．したがって地面での運動エネルギー（速さ）も同じになる．C の「勢い」は，着地までの時間が短いことに表れるだけである（速度の向きは異なる）．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "重力だけが仕事をするとき，速さは「はじめの速さ」と「高さの差」だけで決まり，投げる向きによらない．向きによって変わるのは時間や着地点．"
+ },
+ "concepts": [
+  "mechanical-energy",
+  "projectile-motion"
+ ],
+ "laws": [
+  "energy-conservation"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "力学的エネルギー保存",
+  "放物運動",
+  "概念"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

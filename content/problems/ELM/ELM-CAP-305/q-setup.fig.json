@@ -1,0 +1,204 @@
+{
+ "schema": "celestia.figure/1",
+ "size": [
+  460,
+  270
+ ],
+ "items": [
+  {
+   "t": "block",
+   "at": [
+    170,
+    240
+   ],
+   "w": 200,
+   "h": 30,
+   "label": "電子天秤"
+  },
+  {
+   "t": "block",
+   "at": [
+    170,
+    210
+   ],
+   "w": 16,
+   "h": 60,
+   "label": ""
+  },
+  {
+   "t": "text",
+   "at": [
+    186,
+    182
+   ],
+   "text": "絶縁台",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    150
+   ],
+   "to": [
+    240,
+    150
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    150
+   ],
+   "text": "A",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    100,
+    110
+   ],
+   "to": [
+    240,
+    110
+   ],
+   "style": "thick"
+  },
+  {
+   "t": "text",
+   "at": [
+    250,
+    110
+   ],
+   "text": "B",
+   "italic": false,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    110
+   ],
+   "to": [
+    170,
+    60
+   ],
+   "style": "thin"
+  },
+  {
+   "t": "line",
+   "from": [
+    170,
+    60
+   ],
+   "to": [
+    330,
+    60
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "line",
+   "from": [
+    330,
+    60
+   ],
+   "to": [
+    330,
+    250
+   ],
+   "style": "ground"
+  },
+  {
+   "t": "text",
+   "at": [
+    340,
+    70
+   ],
+   "text": "スタンド（絶縁）",
+   "italic": false,
+   "size": 12,
+   "anchor": "start"
+  },
+  {
+   "t": "line",
+   "from": [
+    112,
+    110
+   ],
+   "to": [
+    112,
+    150
+   ],
+   "style": "dash"
+  },
+  {
+   "t": "text",
+   "at": [
+    118,
+    130
+   ],
+   "text": "d",
+   "italic": true,
+   "size": 14,
+   "anchor": "start"
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     100,
+     110
+    ],
+    [
+     40,
+     110
+    ],
+    [
+     40,
+     112
+    ]
+   ]
+  },
+  {
+   "t": "battery",
+   "from": [
+    40,
+    112
+   ],
+   "to": [
+    40,
+    148
+   ],
+   "label": "V",
+   "plus": "from",
+   "labelSide": -1
+  },
+  {
+   "t": "wire",
+   "points": [
+    [
+     40,
+     148
+    ],
+    [
+     40,
+     150
+    ],
+    [
+     100,
+     150
+    ]
+   ]
+  }
+ ]
+}

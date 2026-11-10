@@ -1,0 +1,134 @@
+{
+ "id": "MEC-NEW-303",
+ "schema": "celestia.problem/1",
+ "field": "MEC",
+ "unit": "MEC-03",
+ "topic": "アトウッドの機械で落下の時間を測って重力加速度を求める（加速度を小さくして測りやすくする工夫）",
+ "course": "物理基礎",
+ "level": 1,
+ "minutes": 10,
+ "format": [
+  "experiment",
+  "numeric"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "天井に固定したなめらかに回る軽い滑車に軽い糸をかけ，両端に質量 $0.55\\,\\mathrm{kg}$ のおもり A と質量 $0.45\\,\\mathrm{kg}$ のおもり B をつるした．A を手で支えて静止させ，静かに手をはなすと，A は床まで $h=0.80\\,\\mathrm m$ を $1.28\\,\\mathrm s$ で下った．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "測定値から，A の加速度の大きさを有効数字2桁で求めよ．"
+     },
+     {
+      "id": "2",
+      "tex": "重力加速度の大きさを $g$ として，A の加速度の大きさを $g$ で表せ．"
+     },
+     {
+      "id": "3",
+      "tex": "(1)，(2) から，この実験で得られる $g$ の値を有効数字2桁で求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "$g=9.8\\,\\mathrm{m/s^2}$ として，A が下っている間の糸の張力の大きさを有効数字2桁で求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "同じ高さから A を単独で自由落下させて $g$ を測るより，この装置の方が測定しやすい理由を述べよ．また，実際の装置では，求めた $g$ が真の値より小さくなりやすい．その原因を1つ挙げよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "天井の滑車に糸をかけ、左に A（0.55 kg）、右に B（0.45 kg）をつるす。A の下端から床までの高さは h",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$0.98\\,\\mathrm{m/s^2}$",
+    "grading": "0.98 [m/s^2]"
+   },
+   {
+    "id": "2",
+    "tex": "$\\dfrac{g}{10}$",
+    "grading": "g/10"
+   },
+   {
+    "id": "3",
+    "tex": "$9.8\\,\\mathrm{m/s^2}$",
+    "grading": "9.8 [m/s^2]"
+   },
+   {
+    "id": "4",
+    "tex": "$4.9\\,\\mathrm N$",
+    "grading": "4.9 [N]"
+   },
+   {
+    "id": "5",
+    "tex": "加速度が $g$ の $\\dfrac1{10}$ になり，落下に時間がかかるので，時間を測るときの誤差の割合が小さくなるから．原因：滑車の軸の摩擦，滑車の質量（滑車を回すのにも力が使われる），空気抵抗など．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 静止から一定の加速度で $h$ 進むので $h=\\dfrac12at^2$：\n\\[ a=\\frac{2h}{t^2}=\\frac{2\\times0.80}{1.28^2}\\approx0.977\\approx0.98\\,\\mathrm{m/s^2}. \\]\n\n(2) 張力を $T$ とし，A は下向き，B は上向きを正とする．\n\\[ \\text{A}：0.55a=0.55g-T,\\qquad \\text{B}：0.45a=T-0.45g. \\]\n辺々加えて $1.00a=0.10g$，$a=\\dfrac{g}{10}$．\n\n(3) $g=10a\\approx9.8\\,\\mathrm{m/s^2}$．\n\n(4) B の式より $T=0.45(g+a)=0.45\\times(9.8+0.98)\\approx4.9\\,\\mathrm N$．（A の重さ $5.39\\,\\mathrm N$ と B の重さ $4.41\\,\\mathrm N$ の間の値になる．）\n\n(5) 自由落下では $0.80\\,\\mathrm m$ を約 $0.40\\,\\mathrm s$ で落ちてしまい，ストップウォッチの操作の遅れ（$0.1\\,\\mathrm s$ 程度）が大きな割合の誤差になる．アトウッドの機械では，2つのおもりの重さの差 $(M-m)g$ が全体の質量 $M+m$ を動かすので，加速度が $\\dfrac{M-m}{M+m}g$ と小さくなり，時間を正確に測りやすい．\n一方，滑車の軸の摩擦や，滑車を回転させるのに必要な力（滑車の質量），空気抵抗があると，実際の加速度は理想の値より小さくなる．$g=\\dfrac{M+m}{M-m}a$ で計算すると，その分 $g$ が小さく求まる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "2つのおもりの重さの差が全体を動かす：$a=\\dfrac{M-m}{M+m}g$．加速度を小さくすれば時間を測りやすい．"
+ },
+ "concepts": [
+  "equation-of-motion"
+ ],
+ "laws": [
+  "newton-2nd",
+  "uniform-acceleration-eq"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "アトウッドの機械",
+  "運動方程式",
+  "実験",
+  "重力加速度"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

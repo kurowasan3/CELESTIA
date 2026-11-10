@@ -1,0 +1,184 @@
+{
+ "id": "ATM-PTC-202",
+ "schema": "celestia.problem/1",
+ "field": "ATM",
+ "unit": "ATM-01",
+ "topic": "光電管の電流–電圧グラフ（阻止電圧・飽和電流と光の強さ）",
+ "course": "物理",
+ "level": 0,
+ "minutes": 10,
+ "format": [
+  "graph-read",
+  "calc",
+  "concept"
+ ],
+ "examStyle": "common-test",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "光電管の陰極に振動数 $\\nu=8.0\\times10^{14}\\ \\mathrm{Hz}$ の単色光を当て，陰極に対する陽極の電位 $V$ を変えながら光電流 $I$ を測ったところ，図のグラフが得られた．$V\\leqq-1.5\\ \\mathrm V$ では $I=0$，$V\\geqq0$ では $I=3.2\\ \\mu\\mathrm A$ で一定であった．プランク定数を $h=6.6\\times10^{-34}\\ \\mathrm{J\\cdot s}$，電気素量を $e=1.6\\times10^{-19}\\ \\mathrm C$ とする．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-graph"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "阻止電圧 $V_0$ は何 V か．また，陰極から飛び出す電子の運動エネルギーの最大値 $K_0$ は何 J か．"
+     },
+     {
+      "id": "2",
+      "tex": "1 秒あたりに陰極から飛び出す電子の数 $N$ を求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "陰極の金属の仕事関数 $W$ は何 eV か．"
+     },
+     {
+      "id": "4",
+      "tex": "光の振動数を変えずに，光の強さだけを 2 倍にした．阻止電圧と飽和電流はそれぞれいくらになるか．"
+     },
+     {
+      "id": "5",
+      "tex": "1 秒あたりに当たる光子の数を変えずに，光の振動数だけを大きくした．グラフはどのように変わるか．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-graph",
+   "role": "question",
+   "kind": "graph",
+   "format": "svg",
+   "src": "q-graph.svg",
+   "alt": "横軸が陽極の電位 V（V），縦軸が光電流 I（μA）のグラフ．V が −1.5 V 以下では I=0，−1.5 V から 0 V まで直線的に増え，V が 0 以上では 3.2 μA で一定（飽和電流）．",
+   "caption": "光電流と陽極の電位"
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$V_0=1.5\\ \\mathrm V$，$K_0=2.4\\times10^{-19}\\ \\mathrm J$",
+    "grading": "V_0：1.5 [V] ; K_0：2.4*10^(-19) [J]"
+   },
+   {
+    "id": "2",
+    "tex": "$N=2.0\\times10^{13}$",
+    "grading": "2.0*10^13"
+   },
+   {
+    "id": "3",
+    "tex": "$W=1.8\\ \\mathrm{eV}$",
+    "grading": "1.8 [eV]"
+   },
+   {
+    "id": "4",
+    "tex": "阻止電圧 $1.5\\ \\mathrm V$（変わらない），飽和電流 $6.4\\ \\mu\\mathrm A$",
+    "grading": "阻止電圧：1.5 [V] ; 飽和電流：6.4 [μA]"
+   },
+   {
+    "id": "5",
+    "tex": "飽和電流は変わらず，阻止電圧が大きくなる（グラフが $I=0$ になる点が左へずれる）．"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 陽極の電位を下げていき，最も速い電子も陽極に届かなくなる電圧が阻止電圧：$V_0=1.5\\ \\mathrm V$．最も速い電子の運動エネルギーは電場がする負の仕事 $eV_0$ と等しいので，$K_0=eV_0=1.6\\times10^{-19}\\times1.5=2.4\\times10^{-19}\\ \\mathrm J$（$=1.5\\ \\mathrm{eV}$）．\n\n(2) $V\\geqq0$ では，飛び出した電子がすべて陽極に届く（飽和電流）．$I=Ne$ より $N=\\dfrac{3.2\\times10^{-6}}{1.6\\times10^{-19}}=2.0\\times10^{13}$ 個．\n\n(3) 光子のエネルギー $h\\nu=\\dfrac{6.6\\times10^{-34}\\times8.0\\times10^{14}}{1.6\\times10^{-19}}=3.3\\ \\mathrm{eV}$．$K_0=h\\nu-W$ より $W=3.3-1.5=1.8\\ \\mathrm{eV}$．\n\n(4) 光を強くすると光子の数が増えるが，光子1個のエネルギー $h\\nu$ は変わらない．よって $K_0$，つまり阻止電圧は $1.5\\ \\mathrm V$ のまま．飛び出す電子の数が 2 倍になるので，飽和電流は $6.4\\ \\mu\\mathrm A$．（「強い光ほど電子のエネルギーが大きい」は誤り．）\n\n(5) 光子の数が同じなので，飛び出す電子の数も同じで飽和電流は変わらない．$h\\nu$ が大きくなるので $K_0$ が増え，阻止電圧が大きくなる．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "阻止電圧は電子の運動エネルギーの最大値 $K_0=eV_0=h\\nu-W$ で決まり（振動数だけによる），飽和電流は 1 秒あたりに飛び出す電子の数（光の強さ）で決まる．"
+ },
+ "simulation": {
+  "id": "atom.photoelectric",
+  "preset": {
+   "f": 8,
+   "W": 1.8,
+   "I": 0.6,
+   "V": 0
+  },
+  "show": "after-attempt"
+ },
+ "predict": {
+  "prompt": "振動数を変えずに光の強さを2倍にすると，阻止電圧はどうなると思う？",
+  "choices": [
+   {
+    "id": "a",
+    "tex": "2倍になる",
+    "misconception": "MC-PHOTO-INTENSITY"
+   },
+   {
+    "id": "b",
+    "tex": "少し大きくなる",
+    "misconception": "MC-PHOTO-INTENSITY"
+   },
+   {
+    "id": "c",
+    "tex": "変わらない"
+   }
+  ],
+  "answer": "c",
+  "experiment": {
+   "sim": "atom.photoelectric",
+   "vary": {
+    "I": [
+     0.3,
+     0.6
+    ]
+   },
+   "measure": "V0"
+  },
+  "explain": {
+   "laws": [
+    "photoelectric-equation"
+   ],
+   "tex": "阻止電圧は $eV_0=h\\nu-W$ で決まり，光の強さによらない．強くすると光子の数（飛び出す電子の数）が増え，飽和電流が大きくなる．"
+  }
+ },
+ "concepts": [
+  "photon"
+ ],
+ "laws": [
+  "photoelectric-equation",
+  "photon-energy"
+ ],
+ "misconceptions": [
+  "MC-PHOTO-INTENSITY"
+ ],
+ "tags": [
+  "光電効果",
+  "光電管",
+  "阻止電圧",
+  "飽和電流",
+  "グラフ"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}

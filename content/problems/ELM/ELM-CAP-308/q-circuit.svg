@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 215" width="360" height="215" font-family="'Times New Roman', serif">
+<g data-phys="battery:6.0 V">
+<line x1="40" y1="190" x2="40" y2="145" stroke="currentColor" stroke-width="1.6"/>
+<line x1="40" y1="135" x2="40" y2="90" stroke="currentColor" stroke-width="1.6"/>
+<line x1="54" y1="135" x2="26" y2="135" stroke="currentColor" stroke-width="1.6"/>
+<line x1="47" y1="145" x2="33" y2="145" stroke="currentColor" stroke-width="3"/>
+<text x="60" y="140" font-size="15" text-anchor="start" dominant-baseline="middle" class="f-label" fill="currentColor">6.0 V</text>
+</g>
+<polyline points="40,90 40,50 110,50" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="110" cy="50" r="3" fill="currentColor"/>
+<text x="110" y="36" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">a</text>
+<circle cx="150" cy="50" r="3" fill="currentColor"/>
+<line x1="150" y1="50" x2="122" y2="38" stroke="currentColor" stroke-width="1.2"/>
+<text x="150" y="36" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">S</text>
+<circle cx="190" cy="50" r="3" fill="currentColor"/>
+<text x="190" y="36" font-size="14" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">b</text>
+<polyline points="150,50 150,105" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<line x1="132" y1="105" x2="168" y2="105" stroke="currentColor" stroke-width="2.4"/>
+<line x1="132" y1="123" x2="168" y2="123" stroke="currentColor" stroke-width="2.4"/>
+<text x="128" y="114" font-size="14" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">C</text>
+<polyline points="150,123 150,190 40,190" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<polyline points="190,50 300,50 300,80" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<g data-phys="resistor:R">
+<line x1="300" y1="80" x2="300" y2="97" stroke="currentColor" stroke-width="1.6"/>
+<line x1="300" y1="143" x2="300" y2="160" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="293,97 293,143 307,143 307,97" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<text x="286" y="120" font-size="15" text-anchor="end" dominant-baseline="middle" class="f-label" fill="currentColor">R</text>
+</g>
+<polyline points="300,160 300,190 150,190" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="150" cy="75" r="3" fill="currentColor"/>
+<circle cx="150" cy="160" r="3" fill="currentColor"/>
+<polyline points="150,75 225,75 225,104" fill="none" stroke="currentColor" stroke-width="1.6"/>
+<circle cx="225" cy="117" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
+<text x="225" y="117" font-size="13" text-anchor="middle" dominant-baseline="middle" class="f-label" fill="currentColor">V</text>
+<polyline points="225,130 225,160 150,160" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</svg>

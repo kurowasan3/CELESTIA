@@ -1,0 +1,162 @@
+{
+ "id": "WAV-PRS-213",
+ "schema": "celestia.problem/1",
+ "field": "WAV",
+ "unit": "WAV-02",
+ "topic": "閉管の3倍振動での空気の変位と密度（圧力）変化の節・腹",
+ "course": "物理",
+ "level": 2,
+ "minutes": 14,
+ "format": [
+  "concept",
+  "derivation",
+  "experiment"
+ ],
+ "examStyle": "original",
+ "statement": {
+  "blocks": [
+   {
+    "type": "text",
+    "tex": "図のように，左端を閉じ右端を開いた長さ $L$ の管があり，開いた端の近くにスピーカーを置いて音を出す．スピーカーの振動数を調節すると，管の中の空気が3倍振動の状態で共鳴した．管の閉じた端を原点とし，管に沿って $x$ 軸をとる．開口端補正は無視する．"
+   },
+   {
+    "type": "figure",
+    "ref": "q-setup"
+   },
+   {
+    "type": "parts",
+    "items": [
+     {
+      "id": "1",
+      "tex": "この音の波長を $L$ で表せ．"
+     },
+     {
+      "id": "2",
+      "tex": "管の中（$0\\le x\\le L$）で，空気の変位が常に $0$ である位置 $x$ をすべて求めよ．"
+     },
+     {
+      "id": "3",
+      "tex": "管の中に小さな圧力センサーを入れて $x$ 軸に沿って動かすと，圧力の変動（振幅）が最も大きくなる位置と，ほとんど $0$ になる位置がある．最も大きくなる位置 $x$ をすべて求めよ．"
+     },
+     {
+      "id": "4",
+      "tex": "圧力の変動がほとんど $0$ になる位置 $x$ をすべて求めよ．"
+     },
+     {
+      "id": "5",
+      "tex": "ある瞬間，$x=\\dfrac L3$ の空気が $x$ 軸の正の向きに最も大きく変位していた．この瞬間，$x=0$ と $x=\\dfrac{2L}3$ の位置の空気は，それぞれ密か疎か．"
+     },
+     {
+      "id": "6",
+      "tex": "$L=0.60\\,\\mathrm m$ のとき，この3倍振動の振動数は $425\\,\\mathrm{Hz}$ であった．音の速さを求めよ．"
+     }
+    ]
+   }
+  ]
+ },
+ "figures": [
+  {
+   "id": "q-setup",
+   "role": "question",
+   "kind": "apparatus",
+   "format": "svg",
+   "src": "q-setup.svg",
+   "alt": "左端を閉じ右端を開いた長さ L の水平な管。右端の外にスピーカーがある。管の閉じた端が x=0、開いた端が x=L",
+   "caption": ""
+  },
+  {
+   "id": "a-mode",
+   "role": "answer",
+   "kind": "waveform",
+   "format": "svg",
+   "src": "a-mode.svg",
+   "alt": "管の中の空気の変位の振幅の分布。閉じた端 x=0 と x=2L/3 が変位の節（密度変化の腹）、x=L/3 と開いた端 x=L が変位の腹",
+   "caption": ""
+  }
+ ],
+ "answer": {
+  "parts": [
+   {
+    "id": "1",
+    "tex": "$\\dfrac{4L}3$",
+    "grading": "4L/3"
+   },
+   {
+    "id": "2",
+    "tex": "$x=0,\\ \\dfrac{2L}3$",
+    "grading": "{0, 2L/3}"
+   },
+   {
+    "id": "3",
+    "tex": "$x=0,\\ \\dfrac{2L}3$",
+    "grading": "{0, 2L/3}"
+   },
+   {
+    "id": "4",
+    "tex": "$x=\\dfrac L3,\\ L$",
+    "grading": "{L/3, L}"
+   },
+   {
+    "id": "5",
+    "tex": "$x=0$ は疎，$x=\\dfrac{2L}3$ は密"
+   },
+   {
+    "id": "6",
+    "tex": "$340\\,\\mathrm{m/s}$",
+    "grading": "340 [m/s]"
+   }
+  ]
+ },
+ "solutions": [
+  {
+   "id": "main",
+   "kind": "main",
+   "blocks": [
+    {
+     "type": "text",
+     "tex": "(1) 閉管では閉じた端が変位の節，開いた端が変位の腹．3倍振動では管の長さが $\\dfrac34\\lambda$ になるので $\\lambda=\\boldsymbol{\\dfrac{4L}3}$．\n\n(2) 変位の節は閉じた端から $\\dfrac\\lambda2=\\dfrac{2L}3$ おきに並ぶ：$x=\\boldsymbol{0,\\ \\dfrac{2L}3}$．腹は $x=\\dfrac L3,\\ L$．"
+    },
+    {
+     "type": "figure",
+     "ref": "a-mode"
+    },
+    {
+     "type": "text",
+     "tex": "(3)(4) 変位の節では，両側の空気が「同時に寄ってくる」か「同時に離れていく」ので，密度（圧力）が最も大きく変動する．変位の腹では両側の空気が同じ向きに同じだけ動くので，密度はほとんど変わらない．すなわち\n\\[ \\text{変位の節}=\\text{密度・圧力変化の腹},\\qquad \\text{変位の腹}=\\text{密度・圧力変化の節} \\]\n圧力の変動が最大：$x=\\boldsymbol{0,\\ \\dfrac{2L}3}$，ほとんど $0$：$x=\\boldsymbol{\\dfrac L3,\\ L}$．\n開いた端で圧力が変動しないのは，外の大気につながっていて圧力が大気圧に保たれるためで，「開いた端が変位の腹」と同じことを表している．\n\n(5) 変位は $u=u_0\\sin\\dfrac{2\\pi x}\\lambda\\cos\\omega t$ の形で，$0<x<\\dfrac{2L}3$ の空気はすべて同じ向き，$\\dfrac{2L}3<x\\le L$ の空気は逆向きに変位する．この瞬間，$0<x<\\dfrac{2L}3$ の空気は正の向き（閉じた端から離れる向き），$\\dfrac{2L}3<x\\le L$ の空気は負の向きに変位している．\n・$x=0$：右側の空気だけが離れていくので\\textbf{疎}．\n・$x=\\dfrac{2L}3$：左右の空気がともにこの点に寄ってくるので\\textbf{密}．\n変位の節では，密と疎が半周期ごとに入れかわる．\n\n(6) $\\lambda=\\dfrac{4\\times0.60}3=0.80\\,\\mathrm m$，$V=f\\lambda=425\\times0.80=\\boldsymbol{340\\,\\mathrm{m/s}}$．"
+    }
+   ]
+  }
+ ],
+ "idea": {
+  "tex": "空気の変位の節は密度（圧力）変化の腹．閉じた端は変位の節なので圧力が大きく変動し，開いた端は大気につながるので圧力は変動しない（変位の腹）．"
+ },
+ "concepts": [
+  "string-resonance",
+  "superposition"
+ ],
+ "laws": [
+  "pipe-modes"
+ ],
+ "misconceptions": [],
+ "tags": [
+  "気柱",
+  "閉管",
+  "定常波",
+  "疎密",
+  "圧力"
+ ],
+ "provenance": {
+  "created": "2026-11-10"
+ },
+ "quality": {
+  "status": "published",
+  "checks": {
+   "schema": true,
+   "units": true,
+   "figures": "auto",
+   "physics": true,
+   "human": false
+  },
+  "verified": false
+ }
+}
