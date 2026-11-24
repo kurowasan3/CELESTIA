@@ -2,7 +2,7 @@
 //   y1 = A sin 2π(x/λ − f t)、y2 = A sin 2π(x/λ + f t)、y = y1 + y2 = 2A sin(2πx/λ) cos(2πft)
 //   両端が節になるのは λ = 2L/n のとき：振動数 f_n = n v / (2L)
 // p = { L [m], n（倍振動の番号）, v [m/s]（弦を伝わる波の速さ）, A [m] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 const TAU = 2 * Math.PI;
 export default {
   id: 'wave.standing',

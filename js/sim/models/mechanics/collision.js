@@ -2,7 +2,7 @@
 //   衝突後：v1' = (m1v1 + m2v2 − m2 e (v1 − v2)) / (m1 + m2)、v2' = (m1v1 + m2v2 + m1 e (v1 − v2)) / (m1 + m2)
 //   （運動量保存と、反発係数の式 v2' − v1' = −e (v2 − v1) を連立したもの）
 // p = { m1, m2 [kg], v1, v2 [m/s], e }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const X1 = -1.5, X2 = 0.5, W = 0.4;   // 初めの位置（台車の中心）と台車の長さ [m]
 export default {
   id: 'mech.collision',

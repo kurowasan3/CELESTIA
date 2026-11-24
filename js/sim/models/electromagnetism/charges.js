@@ -2,7 +2,7 @@
 //   電場 E = Σ k q / r² （各電荷から外向き/内向き）、電位 V = Σ k q / r
 // 時間によらない。x 軸（2つの電荷を結ぶ直線）上の電位と電場の x 成分を分布として出す
 // p = { q1 [nC], q2 [nC], d [m] }（電荷は x = ∓d/2 に置く）
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const K = 9.0e9;
 export default {
   id: 'elm.charges',

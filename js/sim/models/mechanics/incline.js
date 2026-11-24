@@ -2,7 +2,7 @@
 //   tanθ ≤ μ（静止摩擦係数）なら静止：f = mg sinθ（つり合い）
 //   そうでなければ滑る：a = g (sinθ − μ' cosθ)。a ≤ 0 なら（μ' ≥ tanθ）動き出せず静止とみなす
 // p = { theta [rad], mu, muk, m [kg], g [m/s²] }。斜面の長さは 4 m
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const LENGTH = 4;
 export default {
   id: 'mech.incline',

@@ -3,7 +3,7 @@
 //   数値積分のモデル   … 固定刻み dt で積分し、一定間隔で記録する。巻き戻しは記録を引くだけ（計算し直さない）
 //   イベント（着地・衝突など）… 符号が変わった区間を二分法で詰め、正確な時刻で止める
 import { step } from './integrators.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 const SAMPLE = 1 / 120;   // 記録の間隔（秒）。長い現象（人工衛星など）はモデルの sample(p) で変える
 const MAX_SAMPLES = 20000;

@@ -3,7 +3,7 @@ import { arrow, line, text, fmt } from './draw.js';
 import { XMAX } from '../models/waves/traveling.js';
 import { D as DOP_D } from '../models/waves/doppler.js';   // 観測者のはじめの位置
 import { W as IW, H as IH, SCREEN_Y } from '../models/waves/interference.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 export const WAVES = {
   'wave.traveling': {

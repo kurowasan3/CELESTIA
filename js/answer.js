@@ -15,7 +15,7 @@
 
 import { parse, compile, freeVars, toTeX, toPlain } from './parser.js';
 
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 const SELF_WORDS = /^(証明|図示|記述|略|解答参照)/;
 const UNIT_RE = /(°|個|通り|桁|本|人|回|枚|組|点|色|日|番目|倍|秒|分|円|度|段|列|行|面|辺|頂点|種類)$/;
@@ -152,7 +152,12 @@ function cmp(l, r, op) {
 
 // ---------------------------------------------------------------- 採点
 function rng(seed) { let x = seed >>> 0; return () => { x = (x * 1664525 + 1013904223) >>> 0; return x / 4294967296; }; }
-const close = (a, b) => Math.abs(a - b) <= 1e-7 * Math.max(1, Math.abs(a), Math.abs(b));
+// 数の比較は相対誤差で（v0.6）。以前は 1e-7 の絶対誤差を下限にしていたため、6.24×10^-11 [J] や波長 [m] のような
+//   小さな値では 0 や半分の値まで正解になっていた。floor は「本当の 0」との比較のための絶対の下限で、
+//   定数どうしでは 0（|a|,|b| が 1e-300 未満のときだけ同じとみなす）、乱数を代入した式では、その式の値の大きさから決める。
+const close = (a, b, floor = 0) => a === b || Math.abs(a - b) <= 1e-7 * Math.max(Math.abs(a), Math.abs(b)) + floor || Math.max(Math.abs(a), Math.abs(b)) < 1e-300;
+// 乱数を代入して比べるときの下限：期待する式の値の大きさ（標本の最大）の 1e-10 倍。桁落ちで 0 のはずの値が 1e-16 になる場合に備える
+const floorOf = (vals) => 1e-10 * Math.max(0, ...vals.map(Math.abs).filter(Number.isFinite));
 
 // 組（座標）も含めた比較
 function sameAny(u, e) {
@@ -182,6 +187,7 @@ function sameValue(u, e) {
   for (const mode of ['pos', 'real', 'int']) {
     const r = rng(7 + mode.length);
     let valid = 0, bad = false;
+    const pairs = [];
     for (let k = 0; k < 60 && valid < 10; k++) {
       const s = {};
       for (const v of vars) {
@@ -191,8 +197,11 @@ function sameValue(u, e) {
       const a = e.fn(s), b = u.fn(s);
       if (!Number.isFinite(a)) continue;
       valid++;
-      if (!Number.isFinite(b) || !close(a, b)) { bad = true; break; }
+      pairs.push([a, b]);
+      if (!Number.isFinite(b)) { bad = true; break; }
     }
+    const fl = floorOf(pairs.map(x => x[0]));
+    if (!bad && pairs.some(([a, b]) => !close(a, b, fl))) bad = true;
     if (bad) return { ok: false };
     if (valid >= 4) return { ok: true };
   }
@@ -292,14 +301,18 @@ function checkCases(user, expected) {
   const fe = piecewise(expected), fu = piecewise(user);
   const pts = samplePoints(vars, conds, { avoidBoundary: true });
   let compared = 0;
+  const pairs = [];
   for (const p of pts) {
     const a = fe(p);
     if (a === undefined || !Number.isFinite(a)) continue;
     const b = fu(p);
     if (b === undefined) return { ok: false, error: '場合分けの条件で、すべての場合をつくせていません' };
     compared++;
-    if (!Number.isFinite(b) || !close(a, b)) return { ok: false };
+    if (!Number.isFinite(b)) return { ok: false };
+    pairs.push([a, b]);
   }
+  const fl = floorOf(pairs.map(x => x[0]));
+  if (pairs.some(([a, b]) => !close(a, b, fl))) return { ok: false };
   return compared >= 5 ? { ok: true } : { ok: false, error: '値を確かめられませんでした' };
 }
 

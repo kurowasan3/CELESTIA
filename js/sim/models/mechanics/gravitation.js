@@ -3,7 +3,7 @@
 //   初め：中心から r0 R の点で、動径に垂直に速さ vratio × √(GM / r)（vratio = 1 で円軌道、√2 以上で脱出）
 // p = { r0, vratio }。状態 = [x, y, vx, vy]
 import { measurePeriod } from '../../core/trace.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const R = 6.37e6, G0 = 9.8, GM = G0 * R * R;
 export default {
   id: 'mech.gravitation',

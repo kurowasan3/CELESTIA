@@ -1,6 +1,7 @@
 # 手元だけのもの
 *.xlsx
 .DS_Store
-node_modules/
+node_modules
 __pycache__/
 reports/
+dist/

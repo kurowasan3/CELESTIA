@@ -4,7 +4,7 @@
 //   ΔU = (3/2) nR ΔT。断熱では PV^γ = 一定（γ = 5/3）
 // 変化はゆっくり（準静的）。時刻 0〜4 秒で変化の途中を追う
 // p = { proc, ratio }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const R = 8.31, N = 1, T0 = 300, P0 = 1.0e5, V0 = N * R * T0 / P0, GAMMA = 5 / 3;
 export default {
   id: 'thermo.pv',

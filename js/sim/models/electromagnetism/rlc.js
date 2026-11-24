@@ -4,7 +4,7 @@
 //   共振周波数 f0 = 1 / (2π√(LC)) で Z = R が最小
 // 見やすさのため振動数を小さく（1秒に数回）したので、L と C は大きめの値
 // p = { V0 [V], f [Hz], R [Ω], L [H], C [F] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 const TAU = 2 * Math.PI;
 export default {
   id: 'elm.rlc',

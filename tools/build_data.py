@@ -11,6 +11,14 @@
   data/collections.json  問題セット
   data/assets/<問題ID>/  図のファイル（名前に中身のハッシュを付ける＝内容が変わればキャッシュも変わる）
 
+Lemma（v0.28）と同じ形で足すもの
+  本文の "ch"   選択式の選択肢（content/choices.json から。tools/make_choices.mjs で作る）。入力欄の順の配列で、
+                各欄は [正解の TeX, 誤答の TeX, …]（表示のときに混ぜる）か null（その欄は入力式）。
+                choices.json の spec が今の入力用の答えと同じときだけ出す（違えば古い選択肢なので出さない）
+  一覧の "ch": 1  選択肢がある問題
+  一覧の "v"    頻出度 1=低・3=高（2=中は書かない）。problem.json の "value"、なければ content/values.json の判定
+                （問題文のハッシュが今の問題文と同じときだけ。tools/values.py で点検・更新）
+
 本文の HTML では、図は <figure class="pfig" data-fig="図ID"></figure> の空の枠として置き、
 アプリが表示するときに figs の情報で中身を入れる（解答用の図は答え合わせまで入れない）。
 quality.status が "published" 以外の問題は出さない。
@@ -23,12 +31,12 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from content_lib import CONTENT, ROOT, load_knowledge, load_problems, read  # noqa: E402
+from content_lib import CONTENT, ROOT, load_knowledge, load_problems, read, statement_hash  # noqa: E402
 from latex_html import WARN, render  # noqa: E402
 import tags as TG  # noqa: E402
 
 FORMAT = 'celestia.data/1'
-LEVELS = {0: '基礎', 1: '標準', 2: '入試基礎', 3: '国公立2次', 4: '難関', 5: '最難関'}
+LEVELS = {0: '基礎', 1: '標準', 2: '入試基礎', 3: '入試標準', 4: '入試発展', 5: '物理探究'}
 
 
 def esc(s):
@@ -87,7 +95,7 @@ def plain(tex):
 def data_version(content, problem_dirs):
     h = hashlib.sha256()
     files = [content / n for n in ('taxonomy.json', 'concepts.json', 'laws.json', 'misconceptions.json',
-                                   'simulations.json', 'tags.json')]
+                                   'simulations.json', 'tags.json', 'choices.json', 'values.json')]
     files += sorted((content / 'collections').glob('*.json')) if (content / 'collections').exists() else []
     for d in problem_dirs:
         files += sorted(p for p in d.iterdir() if p.is_file() and not p.name.endswith('.fig.json'))
@@ -112,6 +120,8 @@ def build(content=CONTENT, out=ROOT / 'data'):
     concept_name = {c['id']: c['name'] for c in K['concepts']}
     law_name = {x['id']: x['name'] for x in K['laws']}
     unknown = set()
+    choices = read(content / 'choices.json') if (content / 'choices.json').exists() else {}
+    values = read(content / 'values.json') if (content / 'values.json').exists() else {}
 
     out.mkdir(parents=True, exist_ok=True)
     for old in out.glob('f-*.json'):
@@ -147,6 +157,14 @@ def build(content=CONTENT, out=ROOT / 'data'):
             e['pr'] = 1
         if p['quality'].get('verified'):
             e['ok'] = 1
+        # 頻出度：problem.json の value、なければ判定済みのもの（問題文が同じときだけ）。2（中）は書かない
+        v = p.get('value')
+        if not v:
+            jv = values.get(p['id'])
+            if jv and jv.get('h') == statement_hash(p):
+                v = jv['v']
+        if v and v != 2:
+            e['v'] = v
         # 図：ファイルを data/assets/<ID>/ に写し、本文からは ID で引く
         figs = {}
         for fg in p['figures']:
@@ -181,6 +199,10 @@ def build(content=CONTENT, out=ROOT / 'data'):
         if spec:
             b['in'] = spec
             e['in'] = 1
+            ch = choices.get(p['id'])
+            if ch and ch['spec'] == spec and any(ch['f']):
+                b['ch'] = ch['f']      # 選択式の選択肢（欄の順。先頭が正解、表示のときに混ぜる。null の欄は入力式）
+                e['ch'] = 1
         wrong = {pt['id']: pt['wrong'] for pt in p['answer']['parts'] if pt.get('wrong')}
         if wrong:
             b['wrong'] = wrong
@@ -230,7 +252,8 @@ def build(content=CONTENT, out=ROOT / 'data'):
             cols.append({k: v for k, v in {**c, 'items': items}.items() if k != 'schema'})
     cols.sort(key=lambda c: (c.get('order', 10 ** 6), c['id']))
     dump(out / 'collections.json', {'dataVersion': version, 'collections': cols})
-    return {'count': len(index), 'fields': len(fields), 'hidden': hidden, 'auto': sum(1 for e in index if e.get('in')),
+    return {'count': len(index), 'fields': len(fields), 'choice': sum(1 for e in index if e.get('ch')),
+            'value': {k: sum(1 for e in index if e.get('v', 2) == k) for k in (1, 2, 3)}, 'hidden': hidden, 'auto': sum(1 for e in index if e.get('in')),
             'figures': sum(len(b.get('figs', {})) for v in bodies.values() for k, b in v.items() if k != '_meta'),
             'dataVersion': version, 'unknown': sorted(unknown), 'warn': list(WARN)}
 
@@ -262,8 +285,10 @@ def dump(path, obj):
 def main():
     args = sys.argv[1:]
     r = build(args[0] if args else CONTENT, args[1] if len(args) > 1 else ROOT / 'data')
-    print(f"{r['count']}問を書き出しました（{r['fields']}単元、図 {r['figures']}枚、入力して採点できる問題 {r['auto']}問、"
-          f"非公開 {r['hidden']}問、dataVersion {r['dataVersion']}）")
+    print(f"{r['count']}問を書き出しました（{r['fields']}単元、図 {r['figures']}枚、入力して採点できる問題 {r['auto']}問・"
+          f"うち選択式の選択肢あり {r['choice']}問、非公開 {r['hidden']}問、dataVersion {r['dataVersion']}）")
+    vv = r['value']
+    print(f"頻出度：高 {vv[3]}問・中 {vv[2]}問・低 {vv[1]}問")
     if r['unknown']:
         print('文章中の未対応命令（名前だけ表示）:', ', '.join(r['unknown']))
     for w in r['warn'][:50]:

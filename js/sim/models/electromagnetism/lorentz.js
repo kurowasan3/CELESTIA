@@ -1,7 +1,7 @@
 // 一様な磁場中の荷電粒子（磁場は紙面に垂直・裏から表の向き、速度は磁場に垂直）。
 //   ローレンツ力 qvB が向心力：m v²/r = q v B → r = m v / (q B)、周期 T = 2π m / (q B)（速さによらない）
 // p = { A（質量数：質量 A × 1.67×10⁻²⁷ kg）, Z（電荷 Z × 1.60×10⁻¹⁹ C）, v [×10⁵ m/s], B [T] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const MP = 1.67e-27, E0 = 1.60e-19;
 export default {
   id: 'elm.lorentz',

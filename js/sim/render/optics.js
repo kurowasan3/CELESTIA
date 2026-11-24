@@ -2,7 +2,7 @@
 import { arrow, line, text, fmt } from './draw.js';
 import { refract } from '../models/optics/refraction.js';
 import { XMAX } from '../models/optics/double-slit.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 // 波長 [nm] → 見た目の色（おおよそ）
 export function waveColor(nm) {

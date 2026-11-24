@@ -2,7 +2,7 @@
 //   （スリット間隔 d、スクリーンまでの距離 L ≫ d、x ≪ L の近似：経路差 Δ = d x / L）
 //   明線の間隔 Δx = L λ / d
 // p = { lambda [nm], d [mm], L [m] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const XMAX = 10;   // スクリーンの表示範囲 ±10 mm
 export default {
   id: 'optics.double-slit',

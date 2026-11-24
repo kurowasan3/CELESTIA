@@ -1,7 +1,7 @@
 // 数値積分。状態はふつうの数の配列。
 //   rk4    … 4次のルンゲ＝クッタ（減衰・摩擦のある系、一般の微分方程式）
 //   verlet … 速度ベルレ（シンプレクティック）。保存系（振り子・万有引力）で、長時間でもエネルギーがずれていかない
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 // deriv(s, t) → ds/dt
 export function rk4(deriv, s, t, dt) {

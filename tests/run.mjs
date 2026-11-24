@@ -1,6 +1,7 @@
 // CELESTIA の検査をまとめて実行する（GitHub Actions でも同じものを実行）
 //   node tests/run.mjs          データと単体テスト
 //   node tests/run.mjs --e2e    ブラウザでの通し操作も（Playwright が必要）
+// 必要なもの：npm install --no-save --no-package-lock @electric-sql/pglite playwright（server_guard と e2e）
 // どれか1つでも失敗したら終了コード 1。
 import { spawnSync } from 'child_process';
 import fs from 'fs';
@@ -38,12 +39,22 @@ sys.exit(0 if ok else 1)`]],
   ['入力用の答え（読める・正解を入れると正解になる）', 'node', ['tools/check_answers.mjs', 'data']],
   ['すべての数式を KaTeX で描画できる', 'node', ['tools/check_katex.cjs']],
   ['自動採点の回帰テスト', 'node', ['tests/answer.test.mjs']],
+  ['選択式の選択肢（content/choices.json）が入力用の答えから作り直したものと同じ', 'node', ['tools/make_choices.mjs', 'content', '--check']],
+  ['選択式の選択肢を採点で確かめる（誤答はすべて不正解・正解は正解・重なりなし・KaTeX）', 'node', ['tools/check_choices.mjs']],
+  ['頻出度（content/values.json）が全問・今の問題文に対してそろっている', py, ['tools/values.py']],
+  ['配信用の dist/（必要なファイルだけ・CSP・配信してはいけないものが無い）', py, ['tools/build_dist.py', path.join(tmp, 'dist')]],
   ['catalog.js の単体テスト（共通ビュー・図・概念・検索・問題セット）', 'node', ['tests/catalog.test.mjs']],
   ['同期の単体テスト（記録の合わせ方・にせ Supabase との通信）', 'node', ['tests/sync.test.mjs']],
   ['すべての JS モジュールを読み込める（構文エラーがない）', 'node', ['tests/syntax.test.mjs']],
   ['シミュレーションの物理モデル（解析解・保存則・登録簿・依存の向き）', 'node', ['tests/sim.test.mjs']],
+  // v0.6：Lemma v0.28 の学習記録の保全・推薦を引き継いだもの
+  ['今日の演習の推薦（架空の学習者・境界条件）', 'node', ['tests/recommend.test.mjs']],
+  ['学習記録の保存・点検・バックアップ・移行（store.js。v0.5 の記録の移行を含む）', 'node', ['tests/store.test.mjs']],
+  ['学習記録の保全の境界条件（新しい schema・バックアップ形式・保存先の障害・複数タブ・移行の再試行）', 'node', ['tests/store_edge.test.mjs']],
+  ['学習記録の点検ツール（v0.5 の実際の形の記録にエラーが無い）', 'node', ['tools/audit_state.mjs', 'tests/fixtures/state-v0.5.json']],
+  ['サーバー側の書き込み制限（supabase/guard.sql を PostgreSQL＝PGlite で。Lemma と共通のプロジェクトでも Lemma 側を変えない）', 'node', ['tests/server_guard.test.mjs']],
 ];
-if (process.argv.includes('--e2e')) steps.push(['ブラウザでの通し操作', 'node', ['tests/e2e.mjs']]);
+if (process.argv.includes('--e2e')) steps.push(['ブラウザでの通し操作', 'node', ['tests/e2e.mjs']], ['解答の形式（記述式・選択式・自己採点）', 'node', ['tests/e2e_modes.mjs']], ['配信用の dist/ を CSP つきで動かす', 'node', ['tests/e2e_dist.mjs']]);
 
 let failed = 0;
 for (const [name, cmd, args] of steps) {

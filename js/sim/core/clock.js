@@ -1,5 +1,5 @@
 // 再生の制御：再生・一時停止・速度・時刻の移動。描画は onFrame(t) に任せる（物理の計算はしない）
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 export class Clock {
   constructor({ tEnd, onFrame, onEnd = () => {} }) {

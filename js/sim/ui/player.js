@@ -7,7 +7,7 @@ import { Clock } from '../core/clock.js';
 import { TimePlot } from '../plot/timeplot.js';
 import { RENDERERS } from '../render/index.js';
 import { fitCanvas, viewport, colors, fmt } from '../render/draw.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 // 登録簿のグラフの指定 → TimePlot の段。[x, y] または { x, y | ys: [..], labels, snap, mark, zero, yRange }
 export function plotSeries(sim, spec) {

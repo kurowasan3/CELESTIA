@@ -3,7 +3,7 @@
 //   → t = (D + (V − vs) te) / (V − vo)。届く間隔から、観測される振動数 f' = f (V − vo) / (V − vs)
 // 見やすさのため振動数は小さく（1 秒に数回）示す。関係は実際の音と同じ
 // p = { f [Hz], vs [m/s], vo [m/s], V [m/s] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const D = 900;
 const TAU = 2 * Math.PI;
 export default {

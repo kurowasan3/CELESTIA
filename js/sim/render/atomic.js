@@ -1,7 +1,7 @@
 // 原子の描画
 import { arrow, line, text, fmt } from './draw.js';
 import { waveColor } from './optics.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 export const ATOMIC = {
   'atom.photoelectric': {

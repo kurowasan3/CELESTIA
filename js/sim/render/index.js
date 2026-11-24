@@ -5,5 +5,5 @@ import { OPTICS } from './optics.js';
 import { ELM } from './electromagnetism.js';
 import { THERMO } from './thermo.js';
 import { ATOMIC } from './atomic.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const RENDERERS = { ...MECH, ...WAVES, ...OPTICS, ...ELM, ...THERMO, ...ATOMIC };

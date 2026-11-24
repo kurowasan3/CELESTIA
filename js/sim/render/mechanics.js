@@ -4,7 +4,7 @@ import { arrow, line, text, fmt } from './draw.js';
 import { LENGTH as INCLINE_L } from '../models/mechanics/incline.js';
 import { X1, X2, W as CART_W } from '../models/mechanics/collision.js';
 import { R as EARTH_R } from '../models/mechanics/gravitation.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 const range = (a) => [Math.min(...a), Math.max(...a)];
 // 軌跡のうち時刻 t までの点

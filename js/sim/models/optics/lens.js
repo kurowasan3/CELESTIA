@@ -1,7 +1,7 @@
 // 薄いレンズによる像。レンズの式 1/a + 1/b = 1/f（a：物体の距離、b > 0 なら実像（反対側）、b < 0 なら虚像（同じ側））
 //   f > 0：凸レンズ、f < 0：凹レンズ。倍率 m = |b| / a、像の高さ h' = −(b / a) h（負なら倒立）
 // p = { f [m], a [m], h [m] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export default {
   id: 'optics.lens',
   static: true,

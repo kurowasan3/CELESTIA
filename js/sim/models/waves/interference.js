@@ -2,7 +2,7 @@
 //   y = A sin 2π(f t − r1/λ) + A sin 2π(f t − r2/λ)
 //   |r1 − r2| = mλ の点で強め合い（腹の線）、(m + 1/2)λ で弱め合う（節の線）
 // p = { d [m], lambda [m], f [Hz], phase（0：同位相、1：逆位相） }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const W = 10, H = 7;   // 水面の範囲 [m]（波源は下端の中央付近）
 export const SCREEN_Y = 6;    // 振幅の分布を見る線の高さ
 const TAU = 2 * Math.PI;

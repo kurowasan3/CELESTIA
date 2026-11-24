@@ -2,7 +2,7 @@
 //   残っている数の期待値 N = N0 (1/2)^(t/T)（T：半減期、λ = ln2 / T）
 // 各原子核の崩壊時刻を、決まった乱数の種で前もって選んでおく（t = −ln(u) / λ）
 // p = { N0, T [s] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
 const cache = new Map();
 export default {

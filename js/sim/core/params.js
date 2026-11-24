@@ -1,6 +1,6 @@
 // パラメータの管理：登録簿（content/simulations.json）の定義と、画面の値（度など）↔ モデルの値（SI・ラジアン）
 // 単位の変換はここだけで行う。モデルの中はすべて SI。
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 export function defaults(sim) {
   return Object.fromEntries(Object.entries(sim.params).map(([k, d]) => [k, d.default]));

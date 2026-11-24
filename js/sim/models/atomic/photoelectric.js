@@ -4,7 +4,7 @@
 //   （簡単のため、電子の運動エネルギーは 0〜K0 に一様に分布するとみなす）
 // 時間によらない。振動数ごとの K0 と、電圧ごとの光電流を分布として出す
 // p = { f [×10¹⁴ Hz], W [eV], I（光の強さ・相対値）, V [V] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const H = 6.63e-34, E = 1.60e-19;
 export default {
   id: 'atom.photoelectric',

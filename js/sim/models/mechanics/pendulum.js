@@ -2,7 +2,7 @@
 // （振れ角が大きいと周期が 2π√(l/g) より長くなることを確かめられる）
 // p = { l [m], theta0 [rad], g [m/s²] }。状態 = [θ, ω]
 import { measurePeriod } from '../../core/trace.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export default {
   id: 'mech.pendulum',
   integrator: 'verlet',

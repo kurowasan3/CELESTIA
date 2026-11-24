@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+"""配信用のフォルダ dist/ を作る（アプリが動くのに必要なファイルだけ）。Lemma の tools/build_dist.py の CELESTIA 版。
+
+    python3 tools/build_dist.py            # dist/ を作り直す
+    python3 tools/build_dist.py OUT        # 出力先を変える
+
+リポジトリを非公開にしたあとは、GitHub Pages（リポジトリ全体が配信される）ではなく、
+この dist/ だけを Cloudflare Pages などに置く。content/（正規データ）・tools/・tests/・docs/・supabase/・verify/ は配信しない。
+
+入れるもの：index.html・privacy.html・terms.html（あれば）・manifest.webmanifest・sw.js・css/・js/（sim/・problem/ を含む）・
+            vendor/・icons/（作業用の icons/src は除く）・data/*.json・data/assets/**（問題の図）
+足すもの　：_headers（セキュリティヘッダー。Cloudflare Pages・Netlify の書式）・robots.txt（検索・収集ツールに読ませない）
+確かめること：sw.js の FILES がすべて揃っている、data/index.json の単元ファイルがすべてある、本文が参照する図がすべてある、
+              配信してはいけないものが無い。
+"""
+import json
+import re
+import shutil
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+PAGES = ['index.html', 'manifest.webmanifest', 'sw.js']
+OPTIONAL_PAGES = ['privacy.html', 'terms.html']
+DIRS = ['css', 'js', 'vendor', 'icons']
+FORBIDDEN = ['content', 'tools', 'tests', 'docs', 'supabase', 'verify', '.github', 'README.md', 'icons/src']
+
+
+def supabase_origin():
+    m = re.search(r"SUPABASE_URL\s*=\s*'([^']*)'", (ROOT / 'js' / 'config.js').read_text(encoding='utf-8'))
+    url = (m.group(1) if m else '').rstrip('/')
+    return re.match(r'https://[^/]+', url).group(0) if url else ''
+
+
+def headers_text():
+    supa = supabase_origin()
+    # script-src の 'unsafe-eval'：js/parser.js の compile() が new Function で式を関数にするため（採点・グラフの図）。
+    # style-src の 'unsafe-inline'：画面の HTML・KaTeX・図の SVG が style 属性を使うため。
+    # img-src の data: blob:：シミュレーションの画像の書き出しと、図の SVG を画像として扱う場合のため。
+    csp = '; '.join([
+        "default-src 'self'",
+        "script-src 'self' 'unsafe-eval'",
+        "style-src 'self' 'unsafe-inline'",
+        "img-src 'self' data: blob:",
+        "font-src 'self'",
+        f"connect-src 'self' {supa}".strip(),
+        "manifest-src 'self'",
+        "worker-src 'self'",
+        "frame-ancestors 'none'",
+        "base-uri 'self'",
+        "form-action 'self'",
+        "object-src 'none'",
+    ])
+    return f"""/*
+  Content-Security-Policy: {csp}
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/sw.js
+  Cache-Control: no-cache
+
+/data/*
+  Cache-Control: no-cache
+"""
+
+
+ROBOTS = """# CELESTIA のアプリ本体は検索・収集の対象にしない
+User-agent: *
+Disallow: /
+"""
+
+
+def build(out):
+    out = Path(out)
+    if out.exists():
+        shutil.rmtree(out)
+    out.mkdir(parents=True)
+    for f in PAGES:
+        shutil.copy2(ROOT / f, out / f)
+    for f in OPTIONAL_PAGES:
+        if (ROOT / f).exists():
+            shutil.copy2(ROOT / f, out / f)
+    for d in DIRS:
+        ignore = ['.*', '__pycache__', '*.mjs', '*.py'] + (['src'] if d == 'icons' else [])
+        shutil.copytree(ROOT / d, out / d, ignore=shutil.ignore_patterns(*ignore))
+    (out / 'data').mkdir()
+    for f in sorted((ROOT / 'data').glob('*.json')):
+        shutil.copy2(f, out / 'data' / f.name)
+    if (ROOT / 'data' / 'assets').exists():
+        shutil.copytree(ROOT / 'data' / 'assets', out / 'data' / 'assets', ignore=shutil.ignore_patterns('.*'))
+    (out / '_headers').write_text(headers_text(), encoding='utf-8')
+    (out / 'robots.txt').write_text(ROBOTS, encoding='utf-8')
+    return check(out)
+
+
+def check(out):
+    out = Path(out)
+    bad = []
+    sw = (out / 'sw.js').read_text(encoding='utf-8')
+    files = re.findall(r'"([^"]+)"', sw[sw.index('const FILES'):sw.index('];', sw.index('const FILES'))])
+    for f in files:
+        if f != './' and not (out / f).exists():
+            bad.append(f'sw.js の FILES にある {f} が dist に無い')
+    idx = json.loads((out / 'data' / 'index.json').read_text(encoding='utf-8'))
+    for fld in sorted({p['f'] for p in idx['problems']}):
+        fp = out / 'data' / f'f-{fld}.json'
+        if not fp.exists():
+            bad.append(f'data/f-{fld}.json が無い')
+            continue
+        for pid, b in json.loads(fp.read_text(encoding='utf-8')).items():
+            for fid, fg in (b.get('figs') or {}).items() if pid != '_meta' else []:
+                if fg.get('src') and not (out / fg['src']).exists():
+                    bad.append(f'{pid} の図 {fid}（{fg["src"]}）が dist に無い')
+    for f in FORBIDDEN:
+        if (out / f).exists():
+            bad.append(f'配信してはいけない {f} が入っている')
+    for p in out.rglob('*'):
+        if p.suffix in ('.xlsx', '.py', '.pyc', '.mjs', '.cjs', '.sql', '.md', '.fig'):
+            bad.append(f'配信してはいけない種類のファイル {p.relative_to(out)}')
+        if p.name.endswith('.fig.json'):
+            bad.append(f'作図仕様 {p.relative_to(out)} が入っている')
+    if 'Content-Security-Policy' not in (out / '_headers').read_text(encoding='utf-8'):
+        bad.append('_headers に CSP が無い')
+    n = sum(1 for p in out.rglob('*') if p.is_file())
+    size = sum(p.stat().st_size for p in out.rglob('*') if p.is_file())
+    return {'files': n, 'bytes': size, 'problems': bad}
+
+
+if __name__ == '__main__':
+    out = sys.argv[1] if len(sys.argv) > 1 else ROOT / 'dist'
+    r = build(out)
+    for b in r['problems']:
+        print('✗', b)
+    print(f"dist：{r['files']}ファイル・{r['bytes'] / 1e6:.1f} MB → {out}")
+    sys.exit(1 if r['problems'] else 0)

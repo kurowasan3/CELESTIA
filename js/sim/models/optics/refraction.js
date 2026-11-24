@@ -2,7 +2,7 @@
 //   n1 > n2 で sinθ1 > n2/n1 なら屈折光はなく、全反射（臨界角 θc：sinθc = n2/n1）
 // 時間によらないので、角度ごとの関係（θ2-θ1 の曲線）を分布として出す
 // p = { n1, n2, theta1 [rad] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 const DEG = 180 / Math.PI;
 export function refract(n1, n2, th1) { const s = n1 * Math.sin(th1) / n2; return s <= 1 ? Math.asin(s) : null; }
 export default {

@@ -11,10 +11,18 @@ for (const f of fs.readdirSync(dir).filter((f) => f.startsWith('f-'))) {
   const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
   for (const [id, b] of Object.entries(data)) {
     if (id === '_meta') continue;
+    // 選択式の選択肢（ch）：1つ1つが TeX の数式そのもの（Lemma と同じ）
+    for (const opts of Array.isArray(b.ch) ? b.ch : []) {
+      for (const t of opts || []) {
+        total++;
+        try { katex.renderToString(t, { throwOnError: true, displayMode: true, strict: false }); }
+        catch (e) { bad.push([id, 'ch', e.message.replace(/^KaTeX parse error: /, '').slice(0, 120), t.slice(0, 100)]); }
+      }
+    }
     // 文字列の項目（q・a・s・k）と、図の説明・別解・予測の選択肢などの中の HTML をすべて集める
     const strs = [];
     const walk = (v, k) => { if (typeof v === 'string') { if (k !== 'in' && k !== 'src' && !/^(role|kind|format|alt|id|answer|prompt|measure|show)$/.test(k)) strs.push([k, v]); } else if (v && typeof v === 'object') for (const [kk, vv] of Object.entries(v)) walk(vv, `${k}.${kk}`.replace(/^\./, '').split('.').pop()); };
-    walk(b, '');
+    walk({ ...b, ch: undefined }, '');   // ch は上で確かめた
     for (const [k, html] of strs) {
       // 表示数式 \[...\] と 行内 $...$ を取り出す（\text{} の中の $ を考慮）
       const segs = [];

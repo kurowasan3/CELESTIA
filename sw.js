@@ -5,7 +5,7 @@
 // キャッシュ名は必ず celestia- で始める。同じドメイン（mythos0217.github.io）の Lemma・ぶつりばと
 // キャッシュ置き場を共有しているので、消すときは自分の接頭辞のものだけを消す。
 const PREFIX = 'celestia-';
-const VERSION = PREFIX + 'v0.5.0';
+const VERSION = PREFIX + 'v0.6.0';
 const FILES = [
   "./",
   "index.html",
@@ -18,6 +18,7 @@ const FILES = [
   "js/answer.js",
   "js/ui.js",
   "js/sync.js",
+  "js/store.js",
   "js/problem/figures.js",
   "js/sim/models/atomic/decay.js",
   "js/sim/models/atomic/photoelectric.js",
@@ -59,6 +60,7 @@ const FILES = [
   "js/sim/ui/player.js",
   "js/config.js",
   "privacy.html",
+  "terms.html",
   "vendor/katex.min.js",
   "vendor/katex.min.css",
   "vendor/auto-render.min.js",

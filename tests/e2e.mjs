@@ -4,12 +4,10 @@
 import fs from 'fs';
 import http from 'http';
 import path from 'path';
-import { createRequire } from 'module';
 import { fileURLToPath } from 'url';
 import { createMockSupabase } from './mock-supabase.mjs';
 
-const require = createRequire(import.meta.url);
-const { chromium } = require('playwright');
+import { launchBrowser } from './browser.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
   '.png': 'image/png', '.webmanifest': 'application/manifest+json', '.woff2': 'font/woff2', '.svg': 'image/svg+xml' };
@@ -47,11 +45,11 @@ const U = `http://localhost:${server.address().port}/`;
 
 let fail = 0, pass = 0;
 const ok = (cond, msg) => { if (cond) pass++; else { fail++; console.log('FAIL', msg); } };
-const browser = await chromium.launch();
+const browser = await launchBrowser();
 
-async function newPage({ state = null, route = null, sw = false } = {}) {
+async function newPage({ state = null, raw = null, route = null, sw = false } = {}) {
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, acceptDownloads: true, serviceWorkers: sw ? 'allow' : 'block' });
-  if (state) await ctx.addInitScript((s) => { if (!sessionStorage.getItem('seeded')) { sessionStorage.setItem('seeded', '1'); localStorage.setItem('celestia.v1', s); } }, JSON.stringify(state));
+  if (state || raw) await ctx.addInitScript((s) => { if (!sessionStorage.getItem('seeded')) { sessionStorage.setItem('seeded', '1'); localStorage.setItem('celestia.v1', s); } }, raw || JSON.stringify(state));
   const page = await ctx.newPage();
   page.errors = [];
   page.on('pageerror', e => page.errors.push(String(e)));
@@ -181,7 +179,7 @@ try {
     await page.evaluate("__celestia.open(['MEC-INC-001'])"); await page.waitForTimeout(1500);
     const v = JSON.parse(fs.readFileSync(path.join(root, 'data/index.json'), 'utf8')).dataVersion;
     const keys = await page.evaluate(async () => caches.keys());
-    ok(keys.includes('celestia-data-' + v) && keys.includes('celestia-v0.5.0'), `コード用とデータ用のキャッシュ ${keys}`);
+    ok(keys.includes('celestia-data-' + v) && keys.includes('celestia-v0.6.0'), `コード用とデータ用のキャッシュ ${keys}`);
     ok(keys.includes('lemma-v0.9.0') && keys.includes('butsuriba-v0.4.0'), '同じドメインの他のアプリのキャッシュを消さない');
     await page.context().setOffline(true);
     await page.goto(U + '#today'); await page.waitForTimeout(1200);
@@ -280,12 +278,232 @@ try {
     ok((await A.locator('#acct').innerText()).includes('Lemma と共通'), 'アカウントが Lemma と共通であることを表示');
     const B = await newPage({ state: { ...fixture, log: fixture.log.slice(20) } });
     await login(B);
+    ok(await B.locator('.chooser [data-k="merge"]').count() === 1, 'ログイン時：端末にもアカウントにも記録があるときは、合わせるかを聞く');
+    await B.click('.chooser [data-k="merge"]'); await B.waitForTimeout(1500);
     const nB = (await LS(B)).log.length;
     ok(nB === fixture.log.length, `端末B：両方の端末の記録が合わさる（${nB}件）`);
     ok(await B.evaluate(() => !!localStorage.getItem('celestia.auth') && !localStorage.getItem('lemma.auth')), 'ログイン情報は celestia.auth に保存（Lemma と別）');
     ok([...mock.rows.values()][0] && mock.rows.size === 1, 'サーバーの表 celestia_state に1行');
     const real = (es) => es.filter(e => !/status of 403/.test(e));
     ok(real(A.errors).length === 0 && real(B.errors).length === 0, `ページのエラーなし ${A.errors} ${B.errors}`);
+  }
+  // 9. v0.6（Lemma v0.28 から）：今日の学習・中断と再開・類題・自信度の一言・ブックマーク・検索の絞り込み・頻出度
+  {
+    const page = await newPage();
+    await page.goto(U + '#today'); await page.waitForTimeout(1200);
+    ok((await page.locator('h1').innerText()).includes('今日の学習') && await page.locator('#todaygo').count() === 1, '今日の画面に「今日の演習を始める」');
+    ok(await page.locator('.first-run #firstgo').count() === 1 && await page.locator('#resume').count() === 0, '初めての利用では「まず8問解いてみる」、続きは無い');
+    await page.click('#todaygo'); await page.waitForTimeout(1500);
+    ok(await page.locator('#conf button').count() === 3 && (await page.locator('.why').innerText()).includes('新しい問題'), '今日の演習が始まり、出題の理由が出る');
+    ok((await page.locator('.chip.val').allInnerTexts()).some(t => /頻出度 [高中低]/.test(t)), '頻出度のチップ');
+    const first = await page.evaluate(() => JSON.parse(localStorage.getItem('celestia.session.v1')).steps[0].pid);
+    await page.click('#quit'); await page.waitForTimeout(500);
+    await page.goto(U + '#settings'); await page.waitForTimeout(800);
+    await page.click('#amode [data-m="self"]'); await page.waitForTimeout(300);
+    ok(await page.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).settings.answer) === 'self', '設定：解答の形式を自己採点にできる');
+    await page.goto(U + '#today'); await page.waitForTimeout(1200);
+    ok(await page.locator('#resume').count() === 1, 'まだ答えていなくても、始めた演習は「前回の続き」に出る');
+    await page.click('#resume'); await page.waitForTimeout(1500);
+    const cur = await page.evaluate(() => JSON.parse(localStorage.getItem('celestia.session.v1')));
+    ok(cur.i === 0 && cur.steps[0].pid === first, '再開すると1問目から');
+    ok(await page.locator('#inputs').count() === 0 && await page.locator('.pen').count() === 1, '自己採点の形式では入力欄が出ない');
+    await page.locator('#conf button').nth(0).click();
+    await page.click('#reveal'); await page.waitForTimeout(500);
+    ok((await page.locator('#self button').allInnerTexts()).join() === '不正解,一部正解,完答', '自己採点のボタンは 不正解→一部正解→完答 の順');
+    await page.locator('#self button[data-g="full"]').click(); await page.waitForTimeout(500);
+    const g = await page.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).log.at(-1));
+    ok(g.c === 'low' && g.ok && g.g === 2 && g.md === 'self', `自信なしで正解 → 早めに復習（grade ${g.g}）・形式が記録に残る`);
+    ok((await page.locator('.conf-note').innerText()).includes('早めに復習'), '自信なしで正解したときの一言');
+    ok(await page.locator('.ansrow.big').count() === 1 && await page.locator('.sol .solsec').count() >= 1, '答えの枠と、小問ごとの解説の枠');
+    const nSteps = await page.evaluate(() => JSON.parse(localStorage.getItem('celestia.session.v1')).steps.length);
+    if (await page.locator('#similar').count()) {
+      await page.click('#similar'); await page.waitForTimeout(1200);
+      const s2 = await page.evaluate(() => JSON.parse(localStorage.getItem('celestia.session.v1')));
+      ok(s2.steps.length === nSteps + 1 && s2.i === 1 && /^類題/.test(s2.steps[1].why), '類題を1問追加すると次の問題に入る');
+    } else ok(false, '類題のボタンが出る');
+    await page.click('#quit'); await page.waitForTimeout(800);
+    ok((await page.locator('#resume').innerText()).includes('2問目から'), '中断すると「前回の続き」が2問目から');
+    await page.click('#resume'); await page.waitForTimeout(1500);
+    ok((await page.locator('.why').innerText()).includes('類題'), '前回の続きから類題を再開できる');
+    await page.locator('#conf button').nth(2).click();
+    await page.click('#reveal'); await page.waitForTimeout(400);
+    await page.locator('#self button[data-g="none"]').click(); await page.waitForTimeout(400);
+    ok(await page.locator('.conf-note.warn').count() === 1, '確実なのに不正解のときは思い込みの確認を促す');
+    // ブックマーク
+    const pid = await page.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).log.at(-1).p);
+    await page.click(`[data-bm="${pid}"]`); await page.waitForTimeout(200);
+    ok(await page.locator(`[data-bm="${pid}"].on`).count() === 1, 'ブックマーク：問題画面の ☆ で付けられる');
+    await page.click('#quit'); await page.waitForTimeout(300);
+    await page.goto(U + '#today'); await page.reload(); await page.waitForTimeout(1500);
+    ok((await page.locator('#bmset').innerText()).includes('1問'), 'ブックマーク：ホームに「★ ブックマーク 1問」');
+    await page.click('#bmset'); await page.waitForTimeout(1200);
+    ok(await page.locator(`[data-bm="${pid}"].on`).count() === 1, 'ブックマーク：そこから出題できる');
+    await page.click(`[data-bm="${pid}"]`); await page.waitForTimeout(200);
+    const bm = await page.evaluate((p) => JSON.parse(localStorage.getItem('celestia.v1')).bookmarks[p], pid);
+    ok(bm && bm.on === false && bm.t > 0, 'ブックマーク：外すと on:false の印が残る（同期でよみがえらない）');
+    await page.click(`[data-bm="${pid}"]`); await page.waitForTimeout(200);
+    await page.click('#quit'); await page.waitForTimeout(300);
+    // 検索の絞り込み・並べ方
+    await page.goto(U + '#search=' + encodeURIComponent('力')); await page.waitForTimeout(1500);
+    const allN = await page.locator('.res-row').count();
+    await page.selectOption('#sfilter', 'wrong'); await page.waitForTimeout(1000);
+    const wrongIds = await page.$$eval('.res-row', els => els.map(x => x.dataset.pid));
+    const wrongAll = await page.evaluate(() => { const m = new Map(); for (const l of JSON.parse(localStorage.getItem('celestia.v1')).log) m.set(l.p, l.g); return [...m].filter(([, g]) => g < 3).map(([p]) => p); });
+    ok(wrongIds.every(id => wrongAll.includes(id)), `検索で「間違えた」に絞れる（${wrongIds.length}件）`);
+    await page.selectOption('#sfilter', 'marked'); await page.waitForTimeout(1000);
+    const mk = await page.$$eval('.res-row', els => els.map(x => x.dataset.pid));
+    ok(mk.every(id => id === pid), `検索で「ブックマーク」に絞れる（${mk.length}件）`);
+    await page.selectOption('#sfilter', 'fresh'); await page.waitForTimeout(1000);
+    const fr = await page.$$eval('.res-row', els => els.map(x => x.dataset.pid));
+    const solvedIds = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('celestia.v1')).problems));
+    ok(fr.length > 0 && fr.every(id => !solvedIds.includes(id)), '検索で「未着手」に絞れる');
+    await page.selectOption('#sfilter', 'due'); await page.waitForTimeout(800);
+    ok(await page.locator('#sres').innerText().then(t => t.includes('復習待ち')), '検索で「復習待ち」に絞れる（今は無い）');
+    await page.selectOption('#sfilter', 'all'); await page.waitForTimeout(800);
+    await page.selectOption('#ssort', 'hard'); await page.waitForTimeout(1000);
+    const lvs = await page.$$eval('.res-row .chip[class*="lv"]', els => els.map(x => +x.className.match(/lv(\d)/)[1]));
+    ok(lvs.length > 3 && lvs.every((v, i) => !i || lvs[i - 1] >= v) && await page.locator('.res-row').count() === Math.min(allN, 30), '検索結果を「難しい順」に並べられる');
+    await page.selectOption('#ssort', 'easy'); await page.waitForTimeout(800);
+    const lvs2 = await page.$$eval('.res-row .chip[class*="lv"]', els => els.map(x => +x.className.match(/lv(\d)/)[1]));
+    ok(lvs2.every((v, i) => !i || lvs2[i - 1] <= v), '「やさしい順」');
+    await page.selectOption('#ssort', 'rel'); await page.waitForTimeout(500);
+    await page.goto(U + '#map'); await page.waitForTimeout(800);
+    ok(await page.locator('.next-acts').count() === 1 && (await page.locator('.trend').innerText()).includes('最近の伸び'), '定着度：次にやること・最近の伸び');
+    ok(page.errors.length === 0, `ページのエラーなし ${page.errors}`);
+  }
+  // 10. 記録の保全（v0.6）：v0.5 の記録の移行・書き出しと読み込み・記録の消去・壊れた記録・新しい版・2つのタブ・ログイン時の確認
+  {
+    mock.users.clear(); mock.rows.clear();
+    const v05 = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/state-v0.5.json'), 'utf8'));
+    const P = await newPage({ state: v05 });
+    await P.goto(U + '#today'); await P.waitForTimeout(1500);
+    ok(await P.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).schema) === 1, '起動しただけでは保存しない（v0.5 の記録はそのまま。画面の中では移行した記録を使う）');
+    await P.locator('#lv button').first().click(); await P.locator('#lv button').first().click(); await P.waitForTimeout(300);   // 何か操作すると保存する
+    const mig = await P.evaluate(() => ({ st: JSON.parse(localStorage.getItem('celestia.v1')), snaps: JSON.parse(localStorage.getItem('celestia.snap.v1') || '[]') }));
+    ok(await P.locator('.banner').count() === 0, 'v0.5 の記録で起動しても警告は出ない');
+    ok(mig.st.schema === 5 && mig.st.log.length === v05.log.length && JSON.stringify(mig.st.pstat) === JSON.stringify(v05.pstat) && mig.st.predictions.length === 2 && mig.st.misc['MC-PHOTO-INTENSITY'].n === 2 && mig.st.simPrefs['mech.pendulum'].l === 1.5, 'v0.5 の記録（schema 1）を移行し、解答の記録・復習状態・予測・誤概念・シミュレーションの条件を失わない');
+    ok(mig.st.practice.fields.includes('MSY-01') && !mig.st.practice.fields.includes('SYN-01'), '移行で、選んだ「分野横断」を「力学総合」「電磁気学総合」に読み替える');
+    ok(mig.snaps.length === 1 && /移行の前/.test(mig.snaps[0].reason) && JSON.parse(mig.snaps[0].raw).schema === 1, '移行の前の記録を控え（celestia.snap.v1）に残す');
+    ok(!(await P.locator('.first-run').count()) && (await P.locator('.goal').count()) === 1, '記録のある端末では今日の目標が出る');
+    await P.goto(U + '#sim=mech.pendulum'); await P.waitForTimeout(1200);
+    ok((await P.locator('input[data-k="l"]').inputValue()) === '1.5', 'シミュレーションは前回の条件（simPrefs）で開く');
+    // 書き出し（形式・版・確認用の値つき）
+    await P.goto(U + '#settings'); await P.waitForTimeout(1000);
+    ok((await P.locator('.integrity summary').innerText()).includes('記録の点検') && await P.locator('.snap-back').count() === 1, '設定：記録の点検と自動の控え');
+    const [exp] = await Promise.all([P.waitForEvent('download'), P.click('#exp')]);
+    const bk = JSON.parse(fs.readFileSync(await exp.path(), 'utf8'));
+    ok(bk.format === 'celestia-backup' && bk.version === 1 && bk.schema === 5 && bk.app === '0.6.0' && /^fnv1a32:/.test(bk.hash) && bk.state.log.length === v05.log.length && bk.counts.predictions === 2, '書き出し：形式・版・作成時刻・件数・確認用の値つきのバックアップ');
+    await P.setInputFiles('#imp', { name: 'x.json', mimeType: 'application/json', buffer: Buffer.from('{"hello":1}') });
+    await P.waitForTimeout(400);
+    ok((await P.locator('.toast').innerText()).includes('CELESTIA の学習記録のファイルではありません'), '読み込み：別のファイルは断る');
+    const tampered = JSON.parse(JSON.stringify(bk)); tampered.state.log.pop();
+    await P.setInputFiles('#imp', { name: 't.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(tampered)) });
+    await P.waitForTimeout(400);
+    ok((await P.locator('.toast').innerText()).includes('壊れているか'), '読み込み：中身が欠けたバックアップは断る');
+    await P.setInputFiles('#imp', { name: 'b2.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(bk)) });
+    await P.waitForTimeout(500);
+    await P.click('.chooser [data-k="merge"]'); await P.waitForTimeout(600);
+    ok((await P.locator('.chooser').innerText()).includes('読み込みました'), '読み込み：結果（件数・点検）を表示する');
+    await P.click('.chooser [data-k="ok"]'); await P.waitForTimeout(400);
+    ok((await P.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).log.length)) === v05.log.length, '読み込み：同じバックアップを合わせても記録は重複しない');
+    // 置き換え（v0.5 の書き出し＝記録そのもの、の旧形式）
+    const small = { ...v05, log: v05.log.slice(0, 10) };
+    await P.goto(U + '#settings'); await P.waitForTimeout(800);
+    await P.setInputFiles('#imp', { name: 'old.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(small)) });
+    await P.waitForTimeout(500);
+    await P.click('.chooser [data-k="replace"]'); await P.waitForTimeout(600);
+    await P.click('.chooser [data-k="ok"]'); await P.waitForTimeout(400);
+    const rs = await P.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')));
+    ok(rs.log.length === 10 && rs.resetAt > 0 && rs.schema === 5, '読み込み：v0.5 の書き出し（旧形式）で置き換えると、その記録になり消した印が付く');
+    // 控えに戻す
+    await P.goto(U + '#settings'); await P.waitForTimeout(800);
+    await P.locator('.snap-back').first().click(); await P.waitForTimeout(400);
+    await P.click('.chooser [data-k="replace"]'); await P.waitForTimeout(600);
+    await P.click('.chooser [data-k="ok"]'); await P.waitForTimeout(400);
+    ok((await P.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).log.length)) === v05.log.length, '控えの時点（置き換える前）に戻せる');
+    // 記録をすべて消す（ログインしていない）
+    await P.goto(U + '#settings'); await P.waitForTimeout(800);
+    await P.click('#reset'); await P.waitForTimeout(300);
+    ok(await P.locator('.chooser [data-k="all"]').count() === 1 && await P.locator('.chooser [data-k="device"]').count() === 0, '消去：ログインしていなければ「消す」だけ');
+    await P.click('.chooser [data-k="all"]'); await P.waitForTimeout(800);
+    const wiped = await P.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')));
+    ok(wiped.log.length === 0 && wiped.resetAt > 0 && wiped.settings.theme === 'dark' && wiped.simPrefs['mech.pendulum'], '消去：記録は消え、設定・シミュレーションの条件は残り、消した印が付く');
+    // ログインして同期 → 別の端末でもログイン → 「記録をすべて消す」（アカウントも）でほかの端末の記録も消える
+    const login = async (page, email) => {
+      await page.goto(U + '#settings'); await page.waitForTimeout(1200);
+      await page.fill('#acct-email', email); await page.click('#acct-send'); await page.waitForTimeout(400);
+      await page.fill('#acct-code', '123456'); await page.click('#acct-verify'); await page.waitForTimeout(1500);
+    };
+    const A = await newPage({ state: { ...v05, settings: { ...v05.settings, answer: 'self' } } });
+    await login(A, 'reset@example.com');
+    const srvN = () => { const r = [...mock.rows.values()][0]; return r ? r.state.log.length : -1; };
+    ok(srvN() === v05.log.length && [...mock.rows.values()][0].state.schema === 5, `同期：アカウントに移行後の記録が上がる（${srvN()}件）`);
+    const Q = await newPage({ state: { ...v05, log: v05.log.slice(0, 10) } });
+    await login(Q, 'reset@example.com');
+    if (await Q.locator('.chooser').count()) { await Q.click('.chooser [data-k="merge"]'); await Q.waitForTimeout(1500); }
+    await A.goto(U + '#settings'); await A.waitForTimeout(1000);
+    await A.click('#reset'); await A.waitForTimeout(300);
+    ok(await A.locator('.chooser [data-k="all"]').count() === 1 && await A.locator('.chooser [data-k="device"]').count() === 1, '消去：ログイン中は「アカウントも」「この端末だけ」を選べる');
+    await A.click('.chooser [data-k="all"]'); await A.waitForTimeout(1500);
+    ok(srvN() === 0, `消去：アカウントの記録も消える（${srvN()}件）`);
+    await Q.goto(U + '#settings'); await Q.waitForTimeout(800);
+    await Q.click('#acct-now'); await Q.waitForTimeout(1500);
+    const nQ = await Q.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).log.length);
+    ok(nQ === 0 && srvN() === 0, `消去：ほかの端末の古い記録も、同期で消える（端末 ${nQ}件・サーバー ${srvN()}件）`);
+    // ログイン時に「アカウントの記録だけを使う」：端末の記録は書き出してから消える
+    await A.evaluate("__celestia.open(['MEC-CON-001'])"); await A.waitForTimeout(1000);
+    await A.locator('#conf button').nth(1).click(); await A.click('#reveal'); await A.waitForTimeout(400);
+    await A.locator('#self button[data-g="full"]').click(); await A.waitForTimeout(400);
+    await A.goto(U + '#settings'); await A.waitForTimeout(800);
+    await A.click('#acct-now'); await A.waitForTimeout(1500);
+    const R = await newPage({ state: { ...v05, log: v05.log.slice(0, 5) } });
+    await R.goto(U + '#settings'); await R.waitForTimeout(1200);
+    await R.fill('#acct-email', 'reset@example.com'); await R.click('#acct-send'); await R.waitForTimeout(400);
+    await R.fill('#acct-code', '123456'); await R.click('#acct-verify'); await R.waitForTimeout(1200);
+    const [dl] = await Promise.all([R.waitForEvent('download', { timeout: 5000 }).catch(() => null), R.click('.chooser [data-k="remote"]')]);
+    await R.waitForTimeout(1500);
+    const nR = await R.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).log.map(l => l.p));
+    ok(dl && JSON.stringify(nR) === '["MEC-CON-001"]', `ログイン時「アカウントの記録だけ」：端末の記録を書き出してから、アカウントの記録になる（${nR}）`);
+    await R.goto(U + '#settings'); await R.waitForTimeout(800);
+    await R.click('#acct-out'); await R.waitForTimeout(300);
+    await R.click('.chooser [data-k="wipe"]'); await R.waitForTimeout(1500);
+    const nR2 = await R.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).log.length);
+    ok(nR2 === 0 && await R.locator('#acct-email').count() === 1 && srvN() === 1, 'ログアウト時に端末の記録も消せる（サーバーの記録は残る）');
+    // 壊れた記録：上書きせずに退避する
+    const BR = await newPage({ raw: '{"log":[{"p":"MEC-CON-001","t":1790000000000,"g":3}], こわれた' });
+    await BR.goto(U + '#today'); await BR.waitForTimeout(1200);
+    ok((await BR.locator('.banner').innerText()).includes('読めませんでした'), '壊れた記録：起動時に知らせる');
+    const brk = await BR.evaluate(() => Object.keys(localStorage).filter(k => k.startsWith('celestia.v1.broken.')).map(k => JSON.parse(localStorage.getItem(k)).raw));
+    ok(brk.length === 1 && brk[0].includes('こわれた'), '壊れた記録：元の文字列を消さずに退避する（celestia.v1.broken.）');
+    // 2つのタブで解いても、どちらの記録も残る
+    const T1 = await newPage({ state: { settings: { size: 6, answer: 'self' } } });
+    await T1.goto(U + '#today'); await T1.waitForTimeout(1000);
+    const T2 = await T1.context().newPage(); T2.errors = [];
+    await T2.goto(U + '#today'); await T2.waitForTimeout(1000);
+    const solve = async (pg, pid) => {
+      await pg.evaluate(`__celestia.open(['${pid}'])`); await pg.waitForTimeout(1000);
+      await pg.locator('#conf button').nth(1).click(); await pg.click('#reveal'); await pg.waitForTimeout(400);
+      await pg.locator('#self button[data-g="full"]').click(); await pg.waitForTimeout(300);
+    };
+    await solve(T1, 'MEC-INC-001');
+    await solve(T2, 'MEC-CON-001');
+    const both = await T2.evaluate(() => JSON.parse(localStorage.getItem('celestia.v1')).log.map(l => l.p));
+    ok(both.includes('MEC-INC-001') && both.includes('MEC-CON-001'), `2つのタブ：あとから保存したタブが、先のタブの記録を消さない（${both}）`);
+    // 新しい版（schema 99）の記録は保存しない
+    const newerRaw = JSON.stringify({ ...v05, schema: 99, settings: { ...v05.settings, answer: 'self' }, future: { x: 1 } });
+    const NW = await newPage({ raw: newerRaw });
+    await NW.goto(U + '#today'); await NW.waitForTimeout(1200);
+    ok((await NW.locator('.banner').innerText()).includes('保存も同期もしません'), '新しい schema：起動時に保存しないことを知らせる');
+    await solve(NW, 'MEC-CON-001');
+    ok(await NW.evaluate(() => localStorage.getItem('celestia.v1')) === newerRaw, '新しい schema：解いても保存された記録は書き換わらない');
+    // 同じドメインの Lemma の記録・キャッシュに触れない
+    const LM = await newPage();
+    await LM.addInitScript(() => { if (!sessionStorage.getItem('lm')) { sessionStorage.setItem('lm', '1'); localStorage.setItem('lemma.v2', '{"lemma":1}'); localStorage.setItem('lemma.auth', 'x'); } });
+    await LM.goto(U + '#today'); await LM.waitForTimeout(1000);
+    await solve(LM, 'MEC-CON-001');
+    ok(await LM.evaluate(() => localStorage.getItem('lemma.v2') === '{"lemma":1}' && localStorage.getItem('lemma.auth') === 'x'), '同じドメインの Lemma の記録（lemma.v2・lemma.auth）に触れない');
+    const errs = [...P.errors, ...A.errors, ...Q.errors, ...R.errors, ...BR.errors, ...T1.errors, ...T2.errors, ...NW.errors, ...LM.errors].filter(e => !/status of 40[13]/.test(e));
+    ok(errs.length === 0, `ページのエラーなし ${errs}`);
   }
 } finally {
   await browser.close();

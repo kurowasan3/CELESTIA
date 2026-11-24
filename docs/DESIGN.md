@@ -237,7 +237,7 @@ content/
 
 **ID**：`<分野>-<単元略号>-<3桁>`（例 `MEC-PRJ-001`）。Lemma と同じく、一度使ったら変えない・分野を移しても変えない。分野：`MEC` 力学、`THM` 熱、`WAV` 波動、`ELM` 電磁気、`ATM` 原子。
 
-**難易度**：0 基礎 / 1 標準 / 2 入試基礎 / 3 国公立2次 / 4 難関 / 5 最難関（Lemma と同じ6段階の考え方）。共通テスト型かどうかは難易度ではなく `examStyle`（`common-test` / `national-2nd` / `private` / `original`）で持つ。
+**難易度**：0 基礎 / 1 標準 / 2 入試基礎 / 3 入試標準 / 4 入試発展 / 5 物理探究（Lemma と同じ6段階の考え方）。共通テスト型かどうかは難易度ではなく `examStyle`（`common-test` / `national-2nd` / `private` / `original`）で持つ。
 
 **問題形式 `format`**（複数可）：`choice` 選択、`numeric` 数値、`calc` 計算、`written` 記述、`derivation` 導出、`graph-read` グラフ読解、`figure-read` 図の読み取り、`construct` 作図、`experiment` 実験考察、`concept` 概念、`synthesis` 総合。
 
@@ -335,6 +335,15 @@ simPrefs:    { "mech.projectile": { 最後のパラメータ } }   ← 設定扱
 ```
 
 保存キーを `celestia.v1` にするのは、ぶつりばがすでに `lemma-physics.v1` を使っているため（同じドメインなので名前が重なると記録が混ざる）。
+
+**v0.6 で変えたこと**（Lemma v0.28 の保存・同期の仕組みを引き継いだ。詳しくは [data-integrity.md](data-integrity.md)）：
+
+- 保存・移行・点検・バックアップは `js/store.js`（`schema` 5。v0.5 の記録は schema 1 か 4 で、読み込み時に移行し、移行の前の記録を `celestia.snap.v1` に控える）
+- 足した項目：`bookmarks: { 問題ID: { on, t } }`、`resetAt`（すべて消す・置き換えの印。同期する）、`localResetAt`（この端末だけの印。同期しない）。解答の記録 `log` に `md`（答えた形式 input・choice・self）
+- 解答の記録・予測の記録は 5000件・2000件での切り捨てをやめた。復習状態は2台で別々に復習した分を解答の記録から計算し直して合わせる
+- 中断した演習は `celestia.session.v1`（端末だけ・14日で捨てる）。ログイン情報は `celestia.auth`
+- サーバー側の書き込み制限 `supabase/guard.sql`（`celestia_private`・コード CE001〜CE010。Lemma の `lemma_private`・LM00x とは別で、Lemma の表には触れない）
+- 誤概念の検出 `misc` と予測 `predictions` は、形・合わせ方・サーバーの保護はあるが、v0.6 のアプリはまだ書き込まない（予測 → 実験の画面は未実装）
 
 ---
 

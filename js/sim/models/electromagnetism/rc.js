@@ -3,7 +3,7 @@
 //   放電（はじめ電圧 E）：q = CE e^(−t/τ)、I = −(E/R) e^(−t/τ)
 //   充電が終わるまでに電池がした仕事 QE = CE² のうち、半分 ½CE² がコンデンサーに、残り半分が抵抗の熱になる
 // p = { E [V], R [kΩ], C [μF], mode（1：充電、0：放電） }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export default {
   id: 'elm.rc',
   integrator: 'analytic',

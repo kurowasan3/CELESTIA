@@ -1,5 +1,5 @@
 // Canvas 描画の共通部品：高解像度対応・世界座標（m）→ 画面座標・矢印・文字・色
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 export function colors() {
   const cs = getComputedStyle(document.documentElement);

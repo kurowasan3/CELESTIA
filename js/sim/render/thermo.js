@@ -1,7 +1,7 @@
 // 熱の描画
 import { arrow, line, text, fmt } from './draw.js';
 import { V0 } from '../models/thermo/pv.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 export const THERMO = {
   'thermo.molecules': {

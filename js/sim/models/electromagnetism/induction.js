@@ -2,7 +2,7 @@
 //   誘導起電力 V = vBl、電流 I = vBl/R、棒が磁場から受ける力 IlB（運動を妨げる向き：レンツの法則）
 //   運動方程式 m dv/dt = F − (B²l²/R) v → v = vt + (v0 − vt) e^(−t/τ)、終端速度 vt = FR/(B²l²)、τ = mR/(B²l²)
 // p = { F [N], v0 [m/s], B [T], l [m], R [Ω], m [kg] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export default {
   id: 'elm.induction',
   integrator: 'analytic',

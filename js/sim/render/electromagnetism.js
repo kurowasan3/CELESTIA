@@ -1,6 +1,6 @@
 // 電磁気の描画
 import { arrow, line, text, fmt } from './draw.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 function battery(ctx, x, y, C, label) { line(ctx, [[x - 12, y - 10], [x - 12, y + 10]], C.ink, { width: 1.6 }); line(ctx, [[x - 4, y - 5], [x - 4, y + 5]], C.ink, { width: 3.5 }); if (label) text(ctx, label, x - 8, y - 16, C.ink2, { align: 'center', font: '11px sans-serif' }); }
 function resistor(ctx, x, y, w, C, label) { ctx.strokeStyle = C.ink; ctx.lineWidth = 1.6; ctx.strokeRect(x - w / 2, y - 7, w, 14); if (label) text(ctx, label, x, y - 13, C.ink2, { align: 'center', font: '11px sans-serif' }); }

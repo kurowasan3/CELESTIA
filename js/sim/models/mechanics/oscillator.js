@@ -1,6 +1,6 @@
 // ばね振り子（水平、なめらかな面）。解析解 x = A cos ωt、ω = √(k/m)
 // p = { m [kg], k [N/m], A [m] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export default {
   id: 'mech.spring',
   integrator: 'analytic',

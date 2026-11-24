@@ -5,7 +5,7 @@
 // 1段に複数の量を重ねられる（keys）。例：交流の電圧と電流
 import { fitCanvas, colors, fmt } from '../render/draw.js';
 import { stateAt } from '../core/trace.js';
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 
 // 目盛り：1・2・5 × 10ⁿ の間隔
 export function ticks(lo, hi, n = 4) {

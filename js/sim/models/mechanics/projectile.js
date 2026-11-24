@@ -1,6 +1,6 @@
 // 斜方投射・水平投射（空気抵抗なし）。解析解：x = v0 cosθ t、y = h0 + v0 sinθ t − g t²/2
 // p = { v0 [m/s], theta [rad], h0 [m], g [m/s²] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export default {
   id: 'mech.projectile',
   integrator: 'analytic',

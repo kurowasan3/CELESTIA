@@ -2,7 +2,7 @@
 // 対応：+ - * / ^、暗黙の積（2x, x(x+1), xe^x）、sin x のような括弧なし引数、
 //       sin^2 x、|x|、√、π、θ、{ } を括弧として扱う
 
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 const FUNC_NAMES = ['arcsin', 'arccos', 'arctan', 'asin', 'acos', 'atan', 'sinh', 'cosh', 'tanh',
   'sin', 'cos', 'tan', 'exp', 'log', 'ln', 'sqrt', 'abs', 'floor', 'ceil', 'sign'];
 const CONST_NAMES = ['pi', 'e'];
@@ -294,7 +294,9 @@ export function toTeX(ast) {
         const la = wrap(toTeX(a), prec(a) < 2);
         const rb = wrap(toTeX(b), prec(b) < 2 || b.t === 'neg');
         const juxta = ast.implicit && !(b.t === 'num' || (b.t === 'bin' && b.op === '^' && b.a.t === 'num'));
-        return juxta ? `${la}${rb}` : `${la}\\cdot ${rb}`;
+        // \pi のあとに文字が続くと \pix のような1つの命令に読まれるので、間に空白を入れる
+        const sep = /\\[a-zA-Z]+$/.test(la) && /^[a-zA-Z]/.test(rb) ? ' ' : '';
+        return juxta ? `${la}${sep}${rb}` : `${la}\\cdot ${rb}`;
       }
       const rb = wrap(toTeX(b), op === '-' && prec(b) <= 1 || b.t === 'neg');
       return `${toTeX(a)}${op}${rb}`;
@@ -392,7 +394,7 @@ export function equivalent(userSrc, expectSrc, vars = {}) {
     if (!Number.isFinite(a)) continue;
     if (!Number.isFinite(b)) return { ok: false };
     valid++;
-    if (Math.abs(a - b) > 1e-7 * Math.max(1, Math.abs(a))) return { ok: false };
+    if (Math.abs(a - b) > 1e-7 * Math.max(Math.abs(a), Math.abs(b)) + 1e-12 * Math.max(1, Math.abs(a))) return { ok: false };   // 乱数を代入した式：桁落ちのための小さな下限
   }
   return { ok: valid > 0 };
 }
@@ -402,6 +404,6 @@ export function sameNumberSet(userSrc, expectSrc) {
     const u = userSrc.split(/[,、，]/).map(s => s.trim()).filter(Boolean).map(s => compile(parse(s))({})).sort((a, b) => a - b);
     const e = expectSrc.split(',').map(s => compile(parse(s))({})).sort((a, b) => a - b);
     if (u.length !== e.length) return { ok: false, error: u.length < e.length ? 'まだ足りない値があります' : null };
-    return { ok: u.every((v, i) => Math.abs(v - e[i]) < 1e-7 * Math.max(1, Math.abs(e[i]))) };
+    return { ok: u.every((v, i) => v === e[i] || Math.abs(v - e[i]) <= 1e-7 * Math.max(Math.abs(v), Math.abs(e[i]))) };   // 相対誤差（小さな値でも 0 を正解にしない）
   } catch (err) { return { ok: false, error: err.message }; }
 }

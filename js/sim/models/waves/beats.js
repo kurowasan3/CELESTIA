@@ -2,7 +2,7 @@
 //   = 2A cos(π(f1 − f2)t) sin(π(f1 + f2)t)。大きさ（包絡線）は 1 秒に |f1 − f2| 回大きくなる
 // 見やすさのため、実際の音（数百 Hz）より低い振動数で示す（関係は同じ）
 // p = { f1 [Hz], f2 [Hz], A }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 const TAU = 2 * Math.PI;
 export default {
   id: 'wave.beats',

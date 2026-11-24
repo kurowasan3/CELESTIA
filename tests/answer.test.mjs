@@ -48,5 +48,60 @@ one('(1) v_2：r_1 v_1/r_2', 'r_1v_1/r_2', true);
 one('(1) R：m V/(q B B_2 d)', 'mV/(qBB_2d)', true);
 one('(1) V：m sqrt(2g h/(M(M+m)))', '(m/M)√(2Mgh/(M+m))', true);
 one('(1) U：-G M m/R', 'GMm/R', false);
+// CELESTIA v0.6：とても小さい・大きい値も相対誤差で比べる（以前は 1e-7 の絶対誤差で、10^-11 の答えに 0 や半分の値まで正解になっていた）
+one('(1) 6.24×10^-11 [J]', '6.24×10^-11', true);
+one('(1) 6.24×10^-11 [J]', '6.240*10^(-11)', true);
+one('(1) 6.24×10^-11 [J]', '624*10^(-13)', true);
+one('(1) 6.24×10^-11 [J]', '3.12×10^-11', false);
+one('(1) 6.24×10^-11 [J]', '0', false);
+one('(1) 6.24×10^-11 [J]', '6.25×10^-11', false);
+one('(1) 6.6×10^-34', '6.6×10^-33', false);
+one('(1) 3.0×10^8 [m/s]', '3.0×10^8', true);
+one('(1) 3.0×10^8 [m/s]', '3.0001×10^8', false);
+one('(1) 0', '0', true);
+one('(1) 0', '1-1', true);
+one('(1) 0', '10^-20', false);
+one('(1) E：h c/λ', 'hc/λ', true);
+one('(1) E：h c/λ', '2hc/λ', false);
+one('(1) F：k q^2/r^2', 'kq^2/r^2', true);
+one('(1) F：k q^2/r^2', 'kq^2/(2r^2)', false);
+one('(1) x：v_0 t-g t^2/2', 'v_0t-gt^2/2', true);
+one('(1) x：v_0 t-g t^2/2', 'v_0t-gt^2', false);
+// 全問の自動採点の答え：正解は正解、半分・0 は不正解（数値の答え）／2倍は不正解（式の答え）
+{
+  const fs = await import('fs'); const path = await import('path');
+  const dir = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'data');
+  let n = 0, bad = 0;
+  for (const f of fs.readdirSync(dir).filter(f => f.startsWith('f-'))) {
+    for (const [id, b] of Object.entries(JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))) {
+      if (!b.in) continue;
+      let sp; try { sp = parseSpec(b.in); } catch { continue; }
+      for (const pt of sp.parts) for (const fl of pt.fields) {
+        if (fl.kind !== 'expr') continue;
+        const src = fl.value.src, c = (t) => checkField(fl, { mode: 'plain', text: t }).ok;
+        const constant = !/[a-zA-Zα-ωΑ-Ω]/.test(src.replace(/sqrt|sin|cos|tan|log|exp|π|pi/g, ''));
+        const v = fl.value.fn({});
+        n++;
+        const zero = constant && v === 0;
+        const okRight = c(src), okHalf = !zero && c(`(${src})/2`), okZero = constant && Number.isFinite(v) && v !== 0 ? c('0') : false;
+        const okDouble = !zero && c(`2(${src})`);
+        if (!okRight || okHalf || okZero || okDouble) { bad++; if (bad <= 5) console.log('FAIL 全問', id, src, { okRight, okHalf, okZero, okDouble }); }
+      }
+    }
+  }
+  if (bad) process.exitCode = 1; else passed++;
+  console.log(`  全問の式の答え ${n}欄：正解は正解・半分／2倍／0 は不正解（だめ ${bad}）`);
+}
+// toTeX：TeX の命令のすぐ後に文字が続くとき（4\pik_{0} → 4\pi k_{0}）は空白を入れる（Lemma v0.28 の修正。添字・ギリシャ文字でも）
+{
+  const { exprTeX } = await import('../js/answer.js');
+  const { createRequire } = await import('module');
+  const katex = createRequire(import.meta.url)('../vendor/katex.min.js');
+  for (const [src, want] of [['4πk_0', '4\\pi k_{0}'], ['2πfL', '2\\pi fL'], ['θx', '\\theta x'], ['λ_0x', '\\lambda_{0}x'], ['2πmv/(qB)', null], ['4πε_0r^2', null], ['μ_0nI', null], ['ωLt', null]]) {
+    const t = exprTeX(src);
+    let rendered = true; try { katex.renderToString(t, { throwOnError: true }); } catch { rendered = false; }
+    if ((want && t !== want) || !rendered) { console.log('FAIL toTeX', src, t, rendered); process.exitCode = 1; } else passed++;
+  }
+}
 if (!fieldTeX(P(7)[0]).includes('cases')) { console.log('FAIL fieldTeX'); process.exitCode = 1; }
 console.log(`answer.test: ${passed} 件 OK${process.exitCode ? '（失敗あり）' : ''}`);

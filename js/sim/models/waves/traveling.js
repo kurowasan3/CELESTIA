@@ -1,7 +1,7 @@
 // 正弦波の伝わり方。y(x, t) = A sin 2π(f t − s x / λ)（s = +1 で +x 向き、−1 で −x 向き）
 // 媒質の各点は上下に単振動するだけで、波形（山）は速さ v = fλ で進む。点 P（x = xP）の変位と速度も追う
 // p = { A [m], lambda [m], f [Hz], dir（+1 / −1）, xP [m] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const XMAX = 8;   // 表示する媒質の長さ [m]
 const TAU = 2 * Math.PI;
 export default {

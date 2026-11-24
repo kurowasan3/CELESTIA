@@ -4,7 +4,7 @@
 // 分子の速度は温度 T のマクスウェル分布から（決まった乱数の種で）選ぶ。ヘリウム（m = 6.64×10⁻²⁷ kg）
 // 位置は「折り返し」で正確に求める（数値積分の誤差なし）
 // p = { N（分子数）, T [K], L [mm] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export const KB = 1.38e-23, MHE = 6.64e-27;
 function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
 const fold = (u, L) => { const m = ((u % (2 * L)) + 2 * L) % (2 * L); return m <= L ? m : 2 * L - m; };

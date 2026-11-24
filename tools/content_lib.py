@@ -1,4 +1,5 @@
-"""正規データ（content/）を読む共通処理。build_data.py・validate_content.py・check_schema.py が使う。"""
+"""正規データ（content/）を読む共通処理。build_data.py・validate_content.py・check_schema.py・values.py が使う。"""
+import hashlib
 import json
 from pathlib import Path
 
@@ -45,3 +46,9 @@ def figure_refs(blocks):
 
 def part_ids(blocks):
     return [it['id'] for b in blocks if b['type'] == 'parts' for it in b['items']]
+
+
+def statement_hash(p):
+    """問題文の中身のハッシュ（12桁）。頻出度の判定（content/values.json）が今の問題文に対するものかを確かめる"""
+    s = json.dumps(p['statement'], ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+    return hashlib.sha1(s.encode('utf-8')).hexdigest()[:12]

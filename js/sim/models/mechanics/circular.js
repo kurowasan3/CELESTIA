@@ -1,6 +1,6 @@
 // 等速円運動（反時計回り）。解析解：x = r cos ωt、y = r sin ωt、ω = v / r。加速度は中心向きで大きさ v²/r
 // p = { r [m], v [m/s] }
-export const FILE_VERSION = '0.5.0';
+export const FILE_VERSION = '0.6.0';
 export default {
   id: 'mech.circular',
   integrator: 'analytic',
